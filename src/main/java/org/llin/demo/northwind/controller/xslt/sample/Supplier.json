@@ -1,0 +1,373 @@
+{
+  "_embedded": {
+    "suppliers": [
+      {
+        "lastName": "Andersen",
+        "firstName": "Elizabeth A.",
+        "emailAddress": null,
+        "jobTitle": "Sales Manager",
+        "businessPhone": null,
+        "homePhone": null,
+        "mobilePhone": null,
+        "faxNumber": null,
+        "address1": null,
+        "address2": null,
+        "city": null,
+        "stateProvince": null,
+        "zipPostalCode": null,
+        "countryRegion": null,
+        "notes": null,
+        "webSiteUrl": null,
+        "webSiteTitle": null,
+        "portraitPath": null,
+        "portraitTitle": null,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/1"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/1"
+          },
+          "company": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/1/company"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/1/product"
+          }
+        }
+      },
+      {
+        "lastName": "Weiler",
+        "firstName": "Cornelia",
+        "emailAddress": null,
+        "jobTitle": "Sales Manager",
+        "businessPhone": null,
+        "homePhone": null,
+        "mobilePhone": null,
+        "faxNumber": null,
+        "address1": null,
+        "address2": null,
+        "city": null,
+        "stateProvince": null,
+        "zipPostalCode": null,
+        "countryRegion": null,
+        "notes": null,
+        "webSiteUrl": null,
+        "webSiteTitle": null,
+        "portraitPath": null,
+        "portraitTitle": null,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/2"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/2"
+          },
+          "company": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/2/company"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/2/product"
+          }
+        }
+      },
+      {
+        "lastName": "Kelley",
+        "firstName": "Madeleine",
+        "emailAddress": null,
+        "jobTitle": "Sales Representative",
+        "businessPhone": null,
+        "homePhone": null,
+        "mobilePhone": null,
+        "faxNumber": null,
+        "address1": null,
+        "address2": null,
+        "city": null,
+        "stateProvince": null,
+        "zipPostalCode": null,
+        "countryRegion": null,
+        "notes": null,
+        "webSiteUrl": null,
+        "webSiteTitle": null,
+        "portraitPath": null,
+        "portraitTitle": null,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/3"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/3"
+          },
+          "company": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/3/company"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/3/product"
+          }
+        }
+      },
+      {
+        "lastName": "Sato",
+        "firstName": "Naoki",
+        "emailAddress": null,
+        "jobTitle": "Marketing Manager",
+        "businessPhone": null,
+        "homePhone": null,
+        "mobilePhone": null,
+        "faxNumber": null,
+        "address1": null,
+        "address2": null,
+        "city": null,
+        "stateProvince": null,
+        "zipPostalCode": null,
+        "countryRegion": null,
+        "notes": null,
+        "webSiteUrl": null,
+        "webSiteTitle": null,
+        "portraitPath": null,
+        "portraitTitle": null,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/4"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/4"
+          },
+          "company": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/4/company"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/4/product"
+          }
+        }
+      },
+      {
+        "lastName": "Hernandez-Echevarria",
+        "firstName": "Amaya",
+        "emailAddress": null,
+        "jobTitle": "Sales Manager",
+        "businessPhone": null,
+        "homePhone": null,
+        "mobilePhone": null,
+        "faxNumber": null,
+        "address1": null,
+        "address2": null,
+        "city": null,
+        "stateProvince": null,
+        "zipPostalCode": null,
+        "countryRegion": null,
+        "notes": null,
+        "webSiteUrl": null,
+        "webSiteTitle": null,
+        "portraitPath": null,
+        "portraitTitle": null,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/5"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/5"
+          },
+          "company": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/5/company"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/5/product"
+          }
+        }
+      },
+      {
+        "lastName": "Hayakawa",
+        "firstName": "Satomi",
+        "emailAddress": null,
+        "jobTitle": "Marketing Assistant",
+        "businessPhone": null,
+        "homePhone": null,
+        "mobilePhone": null,
+        "faxNumber": null,
+        "address1": null,
+        "address2": null,
+        "city": null,
+        "stateProvince": null,
+        "zipPostalCode": null,
+        "countryRegion": null,
+        "notes": null,
+        "webSiteUrl": null,
+        "webSiteTitle": null,
+        "portraitPath": null,
+        "portraitTitle": null,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/6"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/6"
+          },
+          "company": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/6/company"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/6/product"
+          }
+        }
+      },
+      {
+        "lastName": "Glasson",
+        "firstName": "Stuart",
+        "emailAddress": null,
+        "jobTitle": "Marketing Manager",
+        "businessPhone": null,
+        "homePhone": null,
+        "mobilePhone": null,
+        "faxNumber": null,
+        "address1": null,
+        "address2": null,
+        "city": null,
+        "stateProvince": null,
+        "zipPostalCode": null,
+        "countryRegion": null,
+        "notes": null,
+        "webSiteUrl": null,
+        "webSiteTitle": null,
+        "portraitPath": null,
+        "portraitTitle": null,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/7"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/7"
+          },
+          "company": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/7/company"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/7/product"
+          }
+        }
+      },
+      {
+        "lastName": "Dunton",
+        "firstName": "Bryn Paul",
+        "emailAddress": null,
+        "jobTitle": "Sales Representative",
+        "businessPhone": null,
+        "homePhone": null,
+        "mobilePhone": null,
+        "faxNumber": null,
+        "address1": null,
+        "address2": null,
+        "city": null,
+        "stateProvince": null,
+        "zipPostalCode": null,
+        "countryRegion": null,
+        "notes": null,
+        "webSiteUrl": null,
+        "webSiteTitle": null,
+        "portraitPath": null,
+        "portraitTitle": null,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/8"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/8"
+          },
+          "company": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/8/company"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/8/product"
+          }
+        }
+      },
+      {
+        "lastName": "Sandberg",
+        "firstName": "Mikael",
+        "emailAddress": null,
+        "jobTitle": "Sales Manager",
+        "businessPhone": null,
+        "homePhone": null,
+        "mobilePhone": null,
+        "faxNumber": null,
+        "address1": null,
+        "address2": null,
+        "city": null,
+        "stateProvince": null,
+        "zipPostalCode": null,
+        "countryRegion": null,
+        "notes": null,
+        "webSiteUrl": null,
+        "webSiteTitle": null,
+        "portraitPath": null,
+        "portraitTitle": null,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/9"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/9"
+          },
+          "company": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/9/company"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/9/product"
+          }
+        }
+      },
+      {
+        "lastName": "Sousa",
+        "firstName": "Luis",
+        "emailAddress": null,
+        "jobTitle": "Sales Manager",
+        "businessPhone": null,
+        "homePhone": null,
+        "mobilePhone": null,
+        "faxNumber": null,
+        "address1": null,
+        "address2": null,
+        "city": null,
+        "stateProvince": null,
+        "zipPostalCode": null,
+        "countryRegion": null,
+        "notes": null,
+        "webSiteUrl": null,
+        "webSiteTitle": null,
+        "portraitPath": null,
+        "portraitTitle": null,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/10"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/10"
+          },
+          "company": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/10/company"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/supplier/10/product"
+          }
+        }
+      }
+    ]
+  },
+  "_links": {
+    "self": {
+      "href": "http://localhost:8080/northwind-data/api/supplier"
+    },
+    "profile": {
+      "href": "http://localhost:8080/northwind-data/api/profile/supplier"
+    },
+    "search": {
+      "href": "http://localhost:8080/northwind-data/api/supplier/search"
+    }
+  },
+  "page": {
+    "size": 500,
+    "totalElements": 10,
+    "totalPages": 1,
+    "number": 0
+  }
+}

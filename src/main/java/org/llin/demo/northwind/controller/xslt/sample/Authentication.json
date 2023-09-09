@@ -1,0 +1,43 @@
+{
+  "_embedded" : {
+    "authentications" : [ {
+      "roleType" : "USER",
+      "userName" : "MyrTkkFOL5AHSQfZhzo74w==",
+      "password" : "o7Q1KoXVrH7WvEMUoMI1gA==",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/authentication/1"
+        },
+        "authentication" : {
+          "href" : "http://localhost:8080/northwind-data/api/authentication/1"
+        }
+      }
+    }, {
+      "roleType" : "USER",
+      "userName" : "VTGN1ljR6fbXlborxtZzBQ==",
+      "password" : "VTGN1ljR6fbXlborxtZzBQ==",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/authentication/2"
+        },
+        "authentication" : {
+          "href" : "http://localhost:8080/northwind-data/api/authentication/2"
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/northwind-data/api/authentication"
+    },
+    "profile" : {
+      "href" : "http://localhost:8080/northwind-data/api/profile/authentication"
+    }
+  },
+  "page" : {
+    "size" : 500,
+    "totalElements" : 2,
+    "totalPages" : 1,
+    "number" : 0
+  }
+}

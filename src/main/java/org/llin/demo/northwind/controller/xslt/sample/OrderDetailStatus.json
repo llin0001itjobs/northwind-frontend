@@ -1,0 +1,79 @@
+{
+  "_embedded" : {
+    "orderDetailStatuses" : [ {
+      "statusName" : "None",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/orderDetailStatus/0"
+        },
+        "orderDetailStatus" : {
+          "href" : "http://localhost:8080/northwind-data/api/orderDetailStatus/0"
+        }
+      }
+    }, {
+      "statusName" : "Allocated",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/orderDetailStatus/1"
+        },
+        "orderDetailStatus" : {
+          "href" : "http://localhost:8080/northwind-data/api/orderDetailStatus/1"
+        }
+      }
+    }, {
+      "statusName" : "Invoiced",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/orderDetailStatus/2"
+        },
+        "orderDetailStatus" : {
+          "href" : "http://localhost:8080/northwind-data/api/orderDetailStatus/2"
+        }
+      }
+    }, {
+      "statusName" : "Shipped",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/orderDetailStatus/3"
+        },
+        "orderDetailStatus" : {
+          "href" : "http://localhost:8080/northwind-data/api/orderDetailStatus/3"
+        }
+      }
+    }, {
+      "statusName" : "On Order",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/orderDetailStatus/4"
+        },
+        "orderDetailStatus" : {
+          "href" : "http://localhost:8080/northwind-data/api/orderDetailStatus/4"
+        }
+      }
+    }, {
+      "statusName" : "No Stock",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/orderDetailStatus/5"
+        },
+        "orderDetailStatus" : {
+          "href" : "http://localhost:8080/northwind-data/api/orderDetailStatus/5"
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/northwind-data/api/orderDetailStatus"
+    },
+    "profile" : {
+      "href" : "http://localhost:8080/northwind-data/api/profile/orderDetailStatus"
+    }
+  },
+  "page" : {
+    "size" : 500,
+    "totalElements" : 6,
+    "totalPages" : 1,
+    "number" : 0
+  }
+}

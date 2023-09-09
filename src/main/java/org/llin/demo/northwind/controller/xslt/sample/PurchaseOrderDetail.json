@@ -1,0 +1,1288 @@
+{
+  "_embedded": {
+    "purchaseOrderDetails": [
+      {
+        "quantity": 40,
+        "unitCost": 14,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/238"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/238"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/238/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/238/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/238/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 100,
+        "unitCost": 8,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/239"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/239"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/239/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/239/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/239/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 40,
+        "unitCost": 16,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/240"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/240"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/240/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/240/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/240/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 40,
+        "unitCost": 16,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/241"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/241"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/241/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/241/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/241/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 100,
+        "unitCost": 19,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/242"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/242"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/242/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/242/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/242/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 40,
+        "unitCost": 22,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/243"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/243"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/243/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/243/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/243/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 40,
+        "unitCost": 30,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/244"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/244"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/244/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/244/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/244/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 40,
+        "unitCost": 17,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/245"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/245"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/245/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/245/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/245/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 40,
+        "unitCost": 29,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/246"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/246"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/246/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/246/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/246/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 20,
+        "unitCost": 7,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/247"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/247"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/247/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/247/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/247/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 40,
+        "unitCost": 61,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/248"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/248"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/248/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/248/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/248/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 20,
+        "unitCost": 8,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/249"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/249"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/249/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/249/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/249/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 60,
+        "unitCost": 10,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/250"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/250"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/250/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/250/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/250/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 120,
+        "unitCost": 14,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/251"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/251"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/251/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/251/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/251/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 40,
+        "unitCost": 7,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/252"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/252"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/252/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/252/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/252/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 100,
+        "unitCost": 34,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/253"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/253"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/253/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/253/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/253/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 100,
+        "unitCost": 10,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/254"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/254"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/254/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/254/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/254/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 40,
+        "unitCost": 40,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/255"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/255"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/255/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/255/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/255/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 100,
+        "unitCost": 5,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/256"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/256"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/256/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/256/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/256/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 120,
+        "unitCost": 28,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/257"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/257"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/257/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/257/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/257/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 80,
+        "unitCost": 15,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/258"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/258"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/258/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/258/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/258/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 40,
+        "unitCost": 16,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/259"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/259"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/259/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/259/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/259/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 80,
+        "unitCost": 13,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/260"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/260"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/260/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/260/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/260/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 40,
+        "unitCost": 26,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/261"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/261"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/261/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/261/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/261/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 20,
+        "unitCost": 8,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/262"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/262"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/262/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/262/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/262/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 60,
+        "unitCost": 10,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/263"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/263"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/263/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/263/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/263/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 75,
+        "unitCost": 3,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/264"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/264"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/264/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/264/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/264/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 125,
+        "unitCost": 2,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/265"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/265"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/265/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/265/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/265/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 100,
+        "unitCost": 10,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/266"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/266"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/266/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/266/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/266/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 30,
+        "unitCost": 7,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/267"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/267"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/267/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/267/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/267/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 200,
+        "unitCost": 7,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/268"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/268"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/268/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/268/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/268/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 300,
+        "unitCost": 34,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/269"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/269"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/269/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/269/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/269/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 100,
+        "unitCost": 10,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/270"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/270"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/270/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/270/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/270/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 200,
+        "unitCost": 2,
+        "dateReceived": "2006-01-21 19:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/271"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/271"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/271/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/271/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/271/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 300,
+        "unitCost": 34,
+        "dateReceived": null,
+        "postedToInventory": false,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/272"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/272"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/272/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/272/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/272/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 10,
+        "unitCost": 7,
+        "dateReceived": "2006-04-16 20:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/273"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/273"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/273/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/273/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/273/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 50,
+        "unitCost": 7,
+        "dateReceived": "2006-04-05 20:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/274"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/274"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/274/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/274/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/274/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 100,
+        "unitCost": 15,
+        "dateReceived": "2006-04-04 20:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/275"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/275"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/275/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/275/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/275/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 50,
+        "unitCost": 26,
+        "dateReceived": "2006-04-04 20:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/276"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/276"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/276/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/276/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/276/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 300,
+        "unitCost": 10,
+        "dateReceived": "2006-04-04 20:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/277"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/277"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/277/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/277/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/277/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 25,
+        "unitCost": 30,
+        "dateReceived": "2006-04-04 20:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/278"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/278"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/278/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/278/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/278/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 25,
+        "unitCost": 7,
+        "dateReceived": "2006-04-04 20:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/279"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/279"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/279/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/279/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/279/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 250,
+        "unitCost": 34,
+        "dateReceived": "2006-04-09 20:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/280"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/280"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/280/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/280/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/280/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 40,
+        "unitCost": 14,
+        "dateReceived": null,
+        "postedToInventory": false,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/281"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/281"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/281/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/281/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/281/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 20,
+        "unitCost": 7,
+        "dateReceived": null,
+        "postedToInventory": false,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/282"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/282"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/282/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/282/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/282/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 50,
+        "unitCost": 10,
+        "dateReceived": "2006-04-03 20:00:00",
+        "postedToInventory": true,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/283"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/283"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/283/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/283/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/283/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 50,
+        "unitCost": 8,
+        "dateReceived": null,
+        "postedToInventory": false,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/285"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/285"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/285/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/285/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/285/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 40,
+        "unitCost": 16,
+        "dateReceived": null,
+        "postedToInventory": false,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/286"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/286"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/286/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/286/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/286/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 10,
+        "unitCost": 9,
+        "dateReceived": null,
+        "postedToInventory": false,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/288"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/288"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/288/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/288/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/288/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 10,
+        "unitCost": 18.75,
+        "dateReceived": null,
+        "postedToInventory": false,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/289"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/289"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/289/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/289/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/289/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 1,
+        "unitCost": 13.5,
+        "dateReceived": null,
+        "postedToInventory": false,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/290"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/290"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/290/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/290/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/290/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 40,
+        "unitCost": 60,
+        "dateReceived": null,
+        "postedToInventory": false,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/292"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/292"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/292/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/292/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/292/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 40,
+        "unitCost": 39,
+        "dateReceived": null,
+        "postedToInventory": false,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/293"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/293"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/293/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/293/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/293/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 120,
+        "unitCost": 13,
+        "dateReceived": null,
+        "postedToInventory": false,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/294"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/294"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/294/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/294/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/294/inventoryTransaction"
+          }
+        }
+      },
+      {
+        "quantity": 40,
+        "unitCost": 26,
+        "dateReceived": null,
+        "postedToInventory": false,
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/295"
+          },
+          "purchaseOrderDetail": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/295"
+          },
+          "purchaseOrder": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/295/purchaseOrder"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/295/product"
+          },
+          "inventoryTransaction": {
+            "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/295/inventoryTransaction"
+          }
+        }
+      }
+    ]
+  },
+  "_links": {
+    "self": {
+      "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail"
+    },
+    "profile": {
+      "href": "http://localhost:8080/northwind-data/api/profile/purchaseOrderDetail"
+    },
+    "search": {
+      "href": "http://localhost:8080/northwind-data/api/purchaseOrderDetail/search"
+    }
+  },
+  "page": {
+    "size": 500,
+    "totalElements": 55,
+    "totalPages": 1,
+    "number": 0
+  }
+}

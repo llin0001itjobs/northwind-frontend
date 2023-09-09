@@ -1,0 +1,2309 @@
+{
+  "_embedded": {
+    "products": [
+      {
+        "productCode": "NWTB-1",
+        "productName": "Northwind Traders Chai",
+        "description": null,
+        "standardCost": 13.5,
+        "listPrice": 18,
+        "reorderLevel": 10,
+        "targetLevel": 40,
+        "quantityPerUnit": "10 boxes x 20 bags",
+        "discontinued": false,
+        "minimumReorderQuantity": 10,
+        "category": "Beverages",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Sato",
+            "firstName": "Naoki",
+            "emailAddress": null,
+            "jobTitle": "Marketing Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/1"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/1"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/1/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTCO-3",
+        "productName": "Northwind Traders Syrup",
+        "description": null,
+        "standardCost": 7.5,
+        "listPrice": 10,
+        "reorderLevel": 25,
+        "targetLevel": 100,
+        "quantityPerUnit": "12 - 550 ml bottles",
+        "discontinued": false,
+        "minimumReorderQuantity": 25,
+        "category": "Condiments",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Sousa",
+            "firstName": "Luis",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/3"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/3"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/3/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTCO-4",
+        "productName": "Northwind Traders Cajun Seasoning",
+        "description": null,
+        "standardCost": 16.5,
+        "listPrice": 22,
+        "reorderLevel": 10,
+        "targetLevel": 40,
+        "quantityPerUnit": "48 - 6 oz jars",
+        "discontinued": false,
+        "minimumReorderQuantity": 10,
+        "category": "Condiments",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Sousa",
+            "firstName": "Luis",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/4"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/4"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/4/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTO-5",
+        "productName": "Northwind Traders Olive Oil",
+        "description": null,
+        "standardCost": 16.0125,
+        "listPrice": 21.35,
+        "reorderLevel": 10,
+        "targetLevel": 40,
+        "quantityPerUnit": "36 boxes",
+        "discontinued": false,
+        "minimumReorderQuantity": 10,
+        "category": "Oil",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Sousa",
+            "firstName": "Luis",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/5"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/5"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/5/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTJP-6",
+        "productName": "Northwind Traders Boysenberry Spread",
+        "description": null,
+        "standardCost": 18.75,
+        "listPrice": 25,
+        "reorderLevel": 25,
+        "targetLevel": 100,
+        "quantityPerUnit": "12 - 8 oz jars",
+        "discontinued": false,
+        "minimumReorderQuantity": 25,
+        "category": "Jams, Preserves",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Weiler",
+            "firstName": "Cornelia",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          },
+          {
+            "lastName": "Hayakawa",
+            "firstName": "Satomi",
+            "emailAddress": null,
+            "jobTitle": "Marketing Assistant",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/6"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/6"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/6/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTDFN-7",
+        "productName": "Northwind Traders Dried Pears",
+        "description": null,
+        "standardCost": 22.5,
+        "listPrice": 30,
+        "reorderLevel": 10,
+        "targetLevel": 40,
+        "quantityPerUnit": "12 - 1 lb pkgs.",
+        "discontinued": false,
+        "minimumReorderQuantity": 10,
+        "category": "Dried Fruit & Nuts",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Weiler",
+            "firstName": "Cornelia",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/7"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/7"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/7/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTS-8",
+        "productName": "Northwind Traders Curry Sauce",
+        "description": null,
+        "standardCost": 30,
+        "listPrice": 40,
+        "reorderLevel": 10,
+        "targetLevel": 40,
+        "quantityPerUnit": "12 - 12 oz jars",
+        "discontinued": false,
+        "minimumReorderQuantity": 10,
+        "category": "Sauces",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Dunton",
+            "firstName": "Bryn Paul",
+            "emailAddress": null,
+            "jobTitle": "Sales Representative",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/8"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/8"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/8/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTDFN-14",
+        "productName": "Northwind Traders Walnuts",
+        "description": null,
+        "standardCost": 17.4375,
+        "listPrice": 23.25,
+        "reorderLevel": 10,
+        "targetLevel": 40,
+        "quantityPerUnit": "40 - 100 g pkgs.",
+        "discontinued": false,
+        "minimumReorderQuantity": 10,
+        "category": "Dried Fruit & Nuts",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Weiler",
+            "firstName": "Cornelia",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/14"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/14"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/14/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTCFV-17",
+        "productName": "Northwind Traders Fruit Cocktail",
+        "description": null,
+        "standardCost": 29.25,
+        "listPrice": 39,
+        "reorderLevel": 10,
+        "targetLevel": 40,
+        "quantityPerUnit": "15.25 OZ",
+        "discontinued": false,
+        "minimumReorderQuantity": 10,
+        "category": "Canned Fruit & Vegetables",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Hayakawa",
+            "firstName": "Satomi",
+            "emailAddress": null,
+            "jobTitle": "Marketing Assistant",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/17"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/17"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/17/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTBGM-19",
+        "productName": "Northwind Traders Chocolate Biscuits Mix",
+        "description": null,
+        "standardCost": 6.9,
+        "listPrice": 9.2,
+        "reorderLevel": 5,
+        "targetLevel": 20,
+        "quantityPerUnit": "10 boxes x 12 pieces",
+        "discontinued": false,
+        "minimumReorderQuantity": 5,
+        "category": "Baked Goods & Mixes",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Andersen",
+            "firstName": "Elizabeth A.",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          },
+          {
+            "lastName": "Weiler",
+            "firstName": "Cornelia",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/19"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/19"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/19/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTJP-6",
+        "productName": "Northwind Traders Marmalade",
+        "description": null,
+        "standardCost": 60.75,
+        "listPrice": 81,
+        "reorderLevel": 10,
+        "targetLevel": 40,
+        "quantityPerUnit": "30 gift boxes",
+        "discontinued": false,
+        "minimumReorderQuantity": 10,
+        "category": "Jams, Preserves",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Weiler",
+            "firstName": "Cornelia",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          },
+          {
+            "lastName": "Hayakawa",
+            "firstName": "Satomi",
+            "emailAddress": null,
+            "jobTitle": "Marketing Assistant",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/20"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/20"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/20/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTBGM-21",
+        "productName": "Northwind Traders Scones",
+        "description": null,
+        "standardCost": 7.5,
+        "listPrice": 10,
+        "reorderLevel": 5,
+        "targetLevel": 20,
+        "quantityPerUnit": "24 pkgs. x 4 pieces",
+        "discontinued": false,
+        "minimumReorderQuantity": 5,
+        "category": "Baked Goods & Mixes",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Andersen",
+            "firstName": "Elizabeth A.",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          },
+          {
+            "lastName": "Weiler",
+            "firstName": "Cornelia",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/21"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/21"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/21/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTB-34",
+        "productName": "Northwind Traders Beer",
+        "description": null,
+        "standardCost": 10.5,
+        "listPrice": 14,
+        "reorderLevel": 15,
+        "targetLevel": 60,
+        "quantityPerUnit": "24 - 12 oz bottles",
+        "discontinued": false,
+        "minimumReorderQuantity": 15,
+        "category": "Beverages",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Sato",
+            "firstName": "Naoki",
+            "emailAddress": null,
+            "jobTitle": "Marketing Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/34"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/34"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/34/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTCM-40",
+        "productName": "Northwind Traders Crab Meat",
+        "description": null,
+        "standardCost": 13.8,
+        "listPrice": 18.4,
+        "reorderLevel": 30,
+        "targetLevel": 120,
+        "quantityPerUnit": "24 - 4 oz tins",
+        "discontinued": false,
+        "minimumReorderQuantity": 30,
+        "category": "Canned Meat",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Glasson",
+            "firstName": "Stuart",
+            "emailAddress": null,
+            "jobTitle": "Marketing Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/40"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/40"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/40/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTSO-41",
+        "productName": "Northwind Traders Clam Chowder",
+        "description": null,
+        "standardCost": 7.2375,
+        "listPrice": 9.65,
+        "reorderLevel": 10,
+        "targetLevel": 40,
+        "quantityPerUnit": "12 - 12 oz cans",
+        "discontinued": false,
+        "minimumReorderQuantity": 10,
+        "category": "Soups",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Hayakawa",
+            "firstName": "Satomi",
+            "emailAddress": null,
+            "jobTitle": "Marketing Assistant",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/41"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/41"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/41/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTB-43",
+        "productName": "Northwind Traders Coffee",
+        "description": null,
+        "standardCost": 34.5,
+        "listPrice": 46,
+        "reorderLevel": 25,
+        "targetLevel": 100,
+        "quantityPerUnit": "16 - 500 g tins",
+        "discontinued": false,
+        "minimumReorderQuantity": 25,
+        "category": "Beverages",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Kelley",
+            "firstName": "Madeleine",
+            "emailAddress": null,
+            "jobTitle": "Sales Representative",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          },
+          {
+            "lastName": "Sato",
+            "firstName": "Naoki",
+            "emailAddress": null,
+            "jobTitle": "Marketing Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/43"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/43"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/43/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTCA-48",
+        "productName": "Northwind Traders Chocolate",
+        "description": null,
+        "standardCost": 9.5625,
+        "listPrice": 12.75,
+        "reorderLevel": 25,
+        "targetLevel": 100,
+        "quantityPerUnit": "10 pkgs",
+        "discontinued": false,
+        "minimumReorderQuantity": 25,
+        "category": "Candy",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Sousa",
+            "firstName": "Luis",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/48"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/48"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/48/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTDFN-51",
+        "productName": "Northwind Traders Dried Apples",
+        "description": null,
+        "standardCost": 39.75,
+        "listPrice": 53,
+        "reorderLevel": 10,
+        "targetLevel": 40,
+        "quantityPerUnit": "50 - 300 g pkgs.",
+        "discontinued": false,
+        "minimumReorderQuantity": 10,
+        "category": "Dried Fruit & Nuts",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Weiler",
+            "firstName": "Cornelia",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/51"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/51"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/51/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTG-52",
+        "productName": "Northwind Traders Long Grain Rice",
+        "description": null,
+        "standardCost": 5.25,
+        "listPrice": 7,
+        "reorderLevel": 25,
+        "targetLevel": 100,
+        "quantityPerUnit": "16 - 2 kg boxes",
+        "discontinued": false,
+        "minimumReorderQuantity": 25,
+        "category": "Grains",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Andersen",
+            "firstName": "Elizabeth A.",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/52"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/52"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/52/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTP-56",
+        "productName": "Northwind Traders Gnocchi",
+        "description": null,
+        "standardCost": 28.5,
+        "listPrice": 38,
+        "reorderLevel": 30,
+        "targetLevel": 120,
+        "quantityPerUnit": "24 - 250 g pkgs.",
+        "discontinued": false,
+        "minimumReorderQuantity": 30,
+        "category": "Pasta",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Andersen",
+            "firstName": "Elizabeth A.",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/56"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/56"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/56/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTP-57",
+        "productName": "Northwind Traders Ravioli",
+        "description": null,
+        "standardCost": 14.625,
+        "listPrice": 19.5,
+        "reorderLevel": 20,
+        "targetLevel": 80,
+        "quantityPerUnit": "24 - 250 g pkgs.",
+        "discontinued": false,
+        "minimumReorderQuantity": 20,
+        "category": "Pasta",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Andersen",
+            "firstName": "Elizabeth A.",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/57"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/57"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/57/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTS-65",
+        "productName": "Northwind Traders Hot Pepper Sauce",
+        "description": null,
+        "standardCost": 15.7875,
+        "listPrice": 21.05,
+        "reorderLevel": 10,
+        "targetLevel": 40,
+        "quantityPerUnit": "32 - 8 oz bottles",
+        "discontinued": false,
+        "minimumReorderQuantity": 10,
+        "category": "Sauces",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Dunton",
+            "firstName": "Bryn Paul",
+            "emailAddress": null,
+            "jobTitle": "Sales Representative",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/65"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/65"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/65/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTS-66",
+        "productName": "Northwind Traders Tomato Sauce",
+        "description": null,
+        "standardCost": 12.75,
+        "listPrice": 17,
+        "reorderLevel": 20,
+        "targetLevel": 80,
+        "quantityPerUnit": "24 - 8 oz jars",
+        "discontinued": false,
+        "minimumReorderQuantity": 20,
+        "category": "Sauces",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Dunton",
+            "firstName": "Bryn Paul",
+            "emailAddress": null,
+            "jobTitle": "Sales Representative",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/66"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/66"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/66/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTD-72",
+        "productName": "Northwind Traders Mozzarella",
+        "description": null,
+        "standardCost": 26.1,
+        "listPrice": 34.8,
+        "reorderLevel": 10,
+        "targetLevel": 40,
+        "quantityPerUnit": "24 - 200 g pkgs.",
+        "discontinued": false,
+        "minimumReorderQuantity": 10,
+        "category": "Dairy product",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Hernandez-Echevarria",
+            "firstName": "Amaya",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/72"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/72"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/72/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTDFN-74",
+        "productName": "Northwind Traders Almonds",
+        "description": null,
+        "standardCost": 7.5,
+        "listPrice": 10,
+        "reorderLevel": 5,
+        "targetLevel": 20,
+        "quantityPerUnit": "5 kg pkg.",
+        "discontinued": false,
+        "minimumReorderQuantity": 5,
+        "category": "Dried Fruit & Nuts",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Weiler",
+            "firstName": "Cornelia",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          },
+          {
+            "lastName": "Hayakawa",
+            "firstName": "Satomi",
+            "emailAddress": null,
+            "jobTitle": "Marketing Assistant",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/74"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/74"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/74/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTCO-77",
+        "productName": "Northwind Traders Mustard",
+        "description": null,
+        "standardCost": 9.75,
+        "listPrice": 13,
+        "reorderLevel": 15,
+        "targetLevel": 60,
+        "quantityPerUnit": "12 boxes",
+        "discontinued": false,
+        "minimumReorderQuantity": 15,
+        "category": "Condiments",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Sousa",
+            "firstName": "Luis",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/77"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/77"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/77/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTDFN-80",
+        "productName": "Northwind Traders Dried Plums",
+        "description": null,
+        "standardCost": 3,
+        "listPrice": 3.5,
+        "reorderLevel": 50,
+        "targetLevel": 75,
+        "quantityPerUnit": "1 lb bag",
+        "discontinued": false,
+        "minimumReorderQuantity": 25,
+        "category": "Dried Fruit & Nuts",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Weiler",
+            "firstName": "Cornelia",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/80"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/80"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/80/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTB-81",
+        "productName": "Northwind Traders Green Tea",
+        "description": null,
+        "standardCost": 2,
+        "listPrice": 2.99,
+        "reorderLevel": 100,
+        "targetLevel": 125,
+        "quantityPerUnit": "20 bags per box",
+        "discontinued": false,
+        "minimumReorderQuantity": 25,
+        "category": "Beverages",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Kelley",
+            "firstName": "Madeleine",
+            "emailAddress": null,
+            "jobTitle": "Sales Representative",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/81"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/81"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/81/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTC-82",
+        "productName": "Northwind Traders Granola",
+        "description": null,
+        "standardCost": 2,
+        "listPrice": 4,
+        "reorderLevel": 20,
+        "targetLevel": 100,
+        "quantityPerUnit": null,
+        "discontinued": false,
+        "minimumReorderQuantity": null,
+        "category": "Cereal",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Andersen",
+            "firstName": "Elizabeth A.",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/82"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/82"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/82/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTCS-83",
+        "productName": "Northwind Traders Potato Chips",
+        "description": null,
+        "standardCost": 0.5,
+        "listPrice": 1.8,
+        "reorderLevel": 30,
+        "targetLevel": 200,
+        "quantityPerUnit": null,
+        "discontinued": false,
+        "minimumReorderQuantity": null,
+        "category": "Chips, Snacks",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Sandberg",
+            "firstName": "Mikael",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/83"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/83"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/83/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTBGM-85",
+        "productName": "Northwind Traders Brownie Mix",
+        "description": null,
+        "standardCost": 9,
+        "listPrice": 12.49,
+        "reorderLevel": 10,
+        "targetLevel": 20,
+        "quantityPerUnit": "3 boxes",
+        "discontinued": false,
+        "minimumReorderQuantity": 5,
+        "category": "Baked Goods & Mixes",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Andersen",
+            "firstName": "Elizabeth A.",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/85"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/85"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/85/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTBGM-86",
+        "productName": "Northwind Traders Cake Mix",
+        "description": null,
+        "standardCost": 10.5,
+        "listPrice": 15.99,
+        "reorderLevel": 10,
+        "targetLevel": 20,
+        "quantityPerUnit": "4 boxes",
+        "discontinued": false,
+        "minimumReorderQuantity": 5,
+        "category": "Baked Goods & Mixes",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Andersen",
+            "firstName": "Elizabeth A.",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/86"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/86"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/86/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTB-87",
+        "productName": "Northwind Traders Tea",
+        "description": null,
+        "standardCost": 2,
+        "listPrice": 4,
+        "reorderLevel": 20,
+        "targetLevel": 50,
+        "quantityPerUnit": "100 count per box",
+        "discontinued": false,
+        "minimumReorderQuantity": null,
+        "category": "Beverages",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Glasson",
+            "firstName": "Stuart",
+            "emailAddress": null,
+            "jobTitle": "Marketing Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/87"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/87"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/87/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTCFV-88",
+        "productName": "Northwind Traders Pears",
+        "description": null,
+        "standardCost": 1,
+        "listPrice": 1.3,
+        "reorderLevel": 10,
+        "targetLevel": 40,
+        "quantityPerUnit": "15.25 OZ",
+        "discontinued": false,
+        "minimumReorderQuantity": null,
+        "category": "Canned Fruit & Vegetables",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Hayakawa",
+            "firstName": "Satomi",
+            "emailAddress": null,
+            "jobTitle": "Marketing Assistant",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/88"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/88"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/88/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTCFV-89",
+        "productName": "Northwind Traders Peaches",
+        "description": null,
+        "standardCost": 1,
+        "listPrice": 1.5,
+        "reorderLevel": 10,
+        "targetLevel": 40,
+        "quantityPerUnit": "15.25 OZ",
+        "discontinued": false,
+        "minimumReorderQuantity": null,
+        "category": "Canned Fruit & Vegetables",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Hayakawa",
+            "firstName": "Satomi",
+            "emailAddress": null,
+            "jobTitle": "Marketing Assistant",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/89"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/89"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/89/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTCFV-90",
+        "productName": "Northwind Traders Pineapple",
+        "description": null,
+        "standardCost": 1,
+        "listPrice": 1.8,
+        "reorderLevel": 10,
+        "targetLevel": 40,
+        "quantityPerUnit": "15.25 OZ",
+        "discontinued": false,
+        "minimumReorderQuantity": null,
+        "category": "Canned Fruit & Vegetables",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Hayakawa",
+            "firstName": "Satomi",
+            "emailAddress": null,
+            "jobTitle": "Marketing Assistant",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/90"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/90"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/90/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTCFV-91",
+        "productName": "Northwind Traders Cherry Pie Filling",
+        "description": null,
+        "standardCost": 1,
+        "listPrice": 2,
+        "reorderLevel": 10,
+        "targetLevel": 40,
+        "quantityPerUnit": "15.25 OZ",
+        "discontinued": false,
+        "minimumReorderQuantity": null,
+        "category": "Canned Fruit & Vegetables",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Hayakawa",
+            "firstName": "Satomi",
+            "emailAddress": null,
+            "jobTitle": "Marketing Assistant",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/91"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/91"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/91/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTCFV-92",
+        "productName": "Northwind Traders Green Beans",
+        "description": null,
+        "standardCost": 1,
+        "listPrice": 1.2,
+        "reorderLevel": 10,
+        "targetLevel": 40,
+        "quantityPerUnit": "14.5 OZ",
+        "discontinued": false,
+        "minimumReorderQuantity": null,
+        "category": "Canned Fruit & Vegetables",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Hayakawa",
+            "firstName": "Satomi",
+            "emailAddress": null,
+            "jobTitle": "Marketing Assistant",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/92"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/92"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/92/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTCFV-93",
+        "productName": "Northwind Traders Corn",
+        "description": null,
+        "standardCost": 1,
+        "listPrice": 1.2,
+        "reorderLevel": 10,
+        "targetLevel": 40,
+        "quantityPerUnit": "14.5 OZ",
+        "discontinued": false,
+        "minimumReorderQuantity": null,
+        "category": "Canned Fruit & Vegetables",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Hayakawa",
+            "firstName": "Satomi",
+            "emailAddress": null,
+            "jobTitle": "Marketing Assistant",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/93"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/93"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/93/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTCFV-94",
+        "productName": "Northwind Traders Peas",
+        "description": null,
+        "standardCost": 1,
+        "listPrice": 1.5,
+        "reorderLevel": 10,
+        "targetLevel": 40,
+        "quantityPerUnit": "14.5 OZ",
+        "discontinued": false,
+        "minimumReorderQuantity": null,
+        "category": "Canned Fruit & Vegetables",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Hayakawa",
+            "firstName": "Satomi",
+            "emailAddress": null,
+            "jobTitle": "Marketing Assistant",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/94"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/94"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/94/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTCM-95",
+        "productName": "Northwind Traders Tuna Fish",
+        "description": null,
+        "standardCost": 0.5,
+        "listPrice": 2,
+        "reorderLevel": 30,
+        "targetLevel": 50,
+        "quantityPerUnit": "5 oz",
+        "discontinued": false,
+        "minimumReorderQuantity": null,
+        "category": "Canned Meat",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Glasson",
+            "firstName": "Stuart",
+            "emailAddress": null,
+            "jobTitle": "Marketing Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/95"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/95"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/95/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTCM-96",
+        "productName": "Northwind Traders Smoked Salmon",
+        "description": null,
+        "standardCost": 2,
+        "listPrice": 4,
+        "reorderLevel": 30,
+        "targetLevel": 50,
+        "quantityPerUnit": "5 oz",
+        "discontinued": false,
+        "minimumReorderQuantity": null,
+        "category": "Canned Meat",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Glasson",
+            "firstName": "Stuart",
+            "emailAddress": null,
+            "jobTitle": "Marketing Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/96"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/96"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/96/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTC-82",
+        "productName": "Northwind Traders Hot Cereal",
+        "description": null,
+        "standardCost": 3,
+        "listPrice": 5,
+        "reorderLevel": 50,
+        "targetLevel": 200,
+        "quantityPerUnit": null,
+        "discontinued": false,
+        "minimumReorderQuantity": null,
+        "category": "Cereal",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Andersen",
+            "firstName": "Elizabeth A.",
+            "emailAddress": null,
+            "jobTitle": "Sales Manager",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/97"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/97"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/97/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTSO-98",
+        "productName": "Northwind Traders Vegetable Soup",
+        "description": null,
+        "standardCost": 1,
+        "listPrice": 1.89,
+        "reorderLevel": 100,
+        "targetLevel": 200,
+        "quantityPerUnit": null,
+        "discontinued": false,
+        "minimumReorderQuantity": null,
+        "category": "Soups",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Hayakawa",
+            "firstName": "Satomi",
+            "emailAddress": null,
+            "jobTitle": "Marketing Assistant",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/98"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/98"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/98/supplier"
+          }
+        }
+      },
+      {
+        "productCode": "NWTSO-99",
+        "productName": "Northwind Traders Chicken Soup",
+        "description": null,
+        "standardCost": 1,
+        "listPrice": 1.95,
+        "reorderLevel": 100,
+        "targetLevel": 200,
+        "quantityPerUnit": null,
+        "discontinued": false,
+        "minimumReorderQuantity": null,
+        "category": "Soups",
+        "resourceId": 0,
+        "suppliers": [
+          {
+            "lastName": "Hayakawa",
+            "firstName": "Satomi",
+            "emailAddress": null,
+            "jobTitle": "Marketing Assistant",
+            "businessPhone": null,
+            "homePhone": null,
+            "mobilePhone": null,
+            "faxNumber": null,
+            "address1": null,
+            "address2": null,
+            "city": null,
+            "stateProvince": null,
+            "zipPostalCode": null,
+            "countryRegion": null,
+            "notes": null,
+            "webSiteUrl": null,
+            "webSiteTitle": null,
+            "portraitPath": null,
+            "portraitTitle": null
+          }
+        ],
+        "_links": {
+          "self": {
+            "href": "http://localhost:8080/northwind-data/api/product/99"
+          },
+          "product": {
+            "href": "http://localhost:8080/northwind-data/api/product/99"
+          },
+          "supplier": {
+            "href": "http://localhost:8080/northwind-data/api/product/99/supplier"
+          }
+        }
+      }
+    ]
+  },
+  "_links": {
+    "self": {
+      "href": "http://localhost:8080/northwind-data/api/product"
+    },
+    "profile": {
+      "href": "http://localhost:8080/northwind-data/api/profile/product"
+    },
+    "search": {
+      "href": "http://localhost:8080/northwind-data/api/product/search"
+    }
+  },
+  "page": {
+    "size": 500,
+    "totalElements": 45,
+    "totalPages": 1,
+    "number": 0
+  }
+}

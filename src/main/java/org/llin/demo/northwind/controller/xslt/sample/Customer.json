@@ -1,0 +1,921 @@
+{
+  "_embedded" : {
+    "customers" : [ {
+      "lastName" : "Bedecs",
+      "firstName" : "Anna",
+      "emailAddress" : null,
+      "jobTitle" : "Owner",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "123 1st Street",
+      "address2" : null,
+      "city" : "Seattle",
+      "stateProvince" : "WA",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/1"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/1"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/1/company"
+        }
+      }
+    }, {
+      "lastName" : "Gratacos Solsona",
+      "firstName" : "Antonio",
+      "emailAddress" : null,
+      "jobTitle" : "Owner",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "123 2nd Street",
+      "address2" : null,
+      "city" : "Boston",
+      "stateProvince" : "MA",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/2"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/2"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/2/company"
+        }
+      }
+    }, {
+      "lastName" : "Axen",
+      "firstName" : "Thomas",
+      "emailAddress" : null,
+      "jobTitle" : "Purchasing Representative",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "123 3rd Street",
+      "address2" : null,
+      "city" : "Los Angelas",
+      "stateProvince" : "CA",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/3"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/3"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/3/company"
+        }
+      }
+    }, {
+      "lastName" : "Lee",
+      "firstName" : "Christina",
+      "emailAddress" : null,
+      "jobTitle" : "Purchasing Manager",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "123 4th Street",
+      "address2" : null,
+      "city" : "New York",
+      "stateProvince" : "NY",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/4"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/4"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/4/company"
+        }
+      }
+    }, {
+      "lastName" : "O’Donnell",
+      "firstName" : "Martin",
+      "emailAddress" : null,
+      "jobTitle" : "Owner",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "123 5th Street",
+      "address2" : null,
+      "city" : "Minneapolis",
+      "stateProvince" : "MN",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/5"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/5"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/5/company"
+        }
+      }
+    }, {
+      "lastName" : "Pérez-Olaeta",
+      "firstName" : "Francisco",
+      "emailAddress" : null,
+      "jobTitle" : "Purchasing Manager",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "123 6th Street",
+      "address2" : null,
+      "city" : "Milwaukee",
+      "stateProvince" : "WI",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/6"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/6"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/6/company"
+        }
+      }
+    }, {
+      "lastName" : "Xie",
+      "firstName" : "Ming-Yang",
+      "emailAddress" : null,
+      "jobTitle" : "Owner",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "123 7th Street",
+      "address2" : null,
+      "city" : "Boise",
+      "stateProvince" : "ID",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/7"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/7"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/7/company"
+        }
+      }
+    }, {
+      "lastName" : "Andersen",
+      "firstName" : "Elizabeth",
+      "emailAddress" : null,
+      "jobTitle" : "Purchasing Representative",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "123 8th Street",
+      "address2" : null,
+      "city" : "Portland",
+      "stateProvince" : "OR",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/8"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/8"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/8/company"
+        }
+      }
+    }, {
+      "lastName" : "Mortensen",
+      "firstName" : "Sven",
+      "emailAddress" : null,
+      "jobTitle" : "Purchasing Manager",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "123 9th Street",
+      "address2" : null,
+      "city" : "Salt Lake City",
+      "stateProvince" : "UT",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/9"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/9"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/9/company"
+        }
+      }
+    }, {
+      "lastName" : "Wacker",
+      "firstName" : "Roland",
+      "emailAddress" : null,
+      "jobTitle" : "Purchasing Manager",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "123 10th Street",
+      "address2" : null,
+      "city" : "Chicago",
+      "stateProvince" : "IL",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/10"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/10"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/10/company"
+        }
+      }
+    }, {
+      "lastName" : "Krschne",
+      "firstName" : "Peter",
+      "emailAddress" : null,
+      "jobTitle" : "Purchasing Manager",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "123 11th Street",
+      "address2" : null,
+      "city" : "Miami",
+      "stateProvince" : "FL",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/11"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/11"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/11/company"
+        }
+      }
+    }, {
+      "lastName" : "Edwards",
+      "firstName" : "John",
+      "emailAddress" : null,
+      "jobTitle" : "Purchasing Manager",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "123 12th Street",
+      "address2" : null,
+      "city" : "Las Vegas",
+      "stateProvince" : "NV",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/12"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/12"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/12/company"
+        }
+      }
+    }, {
+      "lastName" : "Ludick",
+      "firstName" : "Andre",
+      "emailAddress" : null,
+      "jobTitle" : "Purchasing Representative",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "456 13th Street",
+      "address2" : null,
+      "city" : "Memphis",
+      "stateProvince" : "TN",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/13"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/13"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/13/company"
+        }
+      }
+    }, {
+      "lastName" : "Grilo",
+      "firstName" : "Carlos",
+      "emailAddress" : null,
+      "jobTitle" : "Purchasing Representative",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "456 14th Street",
+      "address2" : null,
+      "city" : "Denver",
+      "stateProvince" : "CO",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/14"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/14"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/14/company"
+        }
+      }
+    }, {
+      "lastName" : "Kupkova",
+      "firstName" : "Helena",
+      "emailAddress" : null,
+      "jobTitle" : "Purchasing Manager",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "456 15th Street",
+      "address2" : null,
+      "city" : "Honolulu",
+      "stateProvince" : "HI",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/15"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/15"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/15/company"
+        }
+      }
+    }, {
+      "lastName" : "Goldschmidt",
+      "firstName" : "Daniel",
+      "emailAddress" : null,
+      "jobTitle" : "Purchasing Representative",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "456 16th Street",
+      "address2" : null,
+      "city" : "San Francisco",
+      "stateProvince" : "CA",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/16"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/16"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/16/company"
+        }
+      }
+    }, {
+      "lastName" : "Bagel",
+      "firstName" : "Jean Philippe",
+      "emailAddress" : null,
+      "jobTitle" : "Owner",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "456 17th Street",
+      "address2" : null,
+      "city" : "Seattle",
+      "stateProvince" : "WA",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/17"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/17"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/17/company"
+        }
+      }
+    }, {
+      "lastName" : "Autier Miconi",
+      "firstName" : "Catherine",
+      "emailAddress" : null,
+      "jobTitle" : "Purchasing Representative",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "456 18th Street",
+      "address2" : null,
+      "city" : "Boston",
+      "stateProvince" : "MA",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/18"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/18"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/18/company"
+        }
+      }
+    }, {
+      "lastName" : "Eggerer",
+      "firstName" : "Alexander",
+      "emailAddress" : null,
+      "jobTitle" : "Accounting Assistant",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "789 19th Street",
+      "address2" : null,
+      "city" : "Los Angelas",
+      "stateProvince" : "CA",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/19"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/19"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/19/company"
+        }
+      }
+    }, {
+      "lastName" : "Li",
+      "firstName" : "George",
+      "emailAddress" : null,
+      "jobTitle" : "Purchasing Manager",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "789 20th Street",
+      "address2" : null,
+      "city" : "New York",
+      "stateProvince" : "NY",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/20"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/20"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/20/company"
+        }
+      }
+    }, {
+      "lastName" : "Tham",
+      "firstName" : "Bernard",
+      "emailAddress" : null,
+      "jobTitle" : "Accounting Manager",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "789 21th Street",
+      "address2" : null,
+      "city" : "Minneapolis",
+      "stateProvince" : "MN",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/21"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/21"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/21/company"
+        }
+      }
+    }, {
+      "lastName" : "Ramos",
+      "firstName" : "Luciana",
+      "emailAddress" : null,
+      "jobTitle" : "Purchasing Assistant",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "789 22th Street",
+      "address2" : null,
+      "city" : "Milwaukee",
+      "stateProvince" : "WI",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/22"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/22"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/22/company"
+        }
+      }
+    }, {
+      "lastName" : "Entin",
+      "firstName" : "Michael",
+      "emailAddress" : null,
+      "jobTitle" : "Purchasing Manager",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "789 23th Street",
+      "address2" : null,
+      "city" : "Portland",
+      "stateProvince" : "OR",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/23"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/23"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/23/company"
+        }
+      }
+    }, {
+      "lastName" : "Hasselberg",
+      "firstName" : "Jonas",
+      "emailAddress" : null,
+      "jobTitle" : "Owner",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "789 24th Street",
+      "address2" : null,
+      "city" : "Salt Lake City",
+      "stateProvince" : "UT",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/24"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/24"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/24/company"
+        }
+      }
+    }, {
+      "lastName" : "Rodman",
+      "firstName" : "John",
+      "emailAddress" : null,
+      "jobTitle" : "Purchasing Manager",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "789 25th Street",
+      "address2" : null,
+      "city" : "Chicago",
+      "stateProvince" : "IL",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/25"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/25"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/25/company"
+        }
+      }
+    }, {
+      "lastName" : "Liu",
+      "firstName" : "Run",
+      "emailAddress" : null,
+      "jobTitle" : "Accounting Assistant",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "789 26th Street",
+      "address2" : null,
+      "city" : "Miami",
+      "stateProvince" : "FL",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/26"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/26"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/26/company"
+        }
+      }
+    }, {
+      "lastName" : "Toh",
+      "firstName" : "Karen",
+      "emailAddress" : null,
+      "jobTitle" : "Purchasing Manager",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "789 27th Street",
+      "address2" : null,
+      "city" : "Las Vegas",
+      "stateProvince" : "NV",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/27"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/27"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/27/company"
+        }
+      }
+    }, {
+      "lastName" : "Raghav",
+      "firstName" : "Amritansh",
+      "emailAddress" : null,
+      "jobTitle" : "Purchasing Manager",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "789 28th Street",
+      "address2" : null,
+      "city" : "Memphis",
+      "stateProvince" : "TN",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/28"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/28"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/28/company"
+        }
+      }
+    }, {
+      "lastName" : "Lee",
+      "firstName" : "Soo Jung",
+      "emailAddress" : null,
+      "jobTitle" : "Purchasing Manager",
+      "businessPhone" : "(123)555-0100",
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "(123)555-0101",
+      "address1" : "789 29th Street",
+      "address2" : null,
+      "city" : "Denver",
+      "stateProvince" : "CO",
+      "zipPostalCode" : "99999",
+      "countryRegion" : "USA",
+      "notes" : null,
+      "webSiteTitle" : null,
+      "webSiteUrl" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/29"
+        },
+        "customer" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/29"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/customer/29/company"
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/northwind-data/api/customer"
+    },
+    "profile" : {
+      "href" : "http://localhost:8080/northwind-data/api/profile/customer"
+    },
+    "search" : {
+      "href" : "http://localhost:8080/northwind-data/api/customer/search"
+    }
+  },
+  "page" : {
+    "size" : 500,
+    "totalElements" : 29,
+    "totalPages" : 1,
+    "number" : 0
+  }
+}

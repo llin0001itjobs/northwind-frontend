@@ -1,0 +1,617 @@
+{
+  "_embedded" : {
+    "invoices" : [ {
+      "invoiceDate" : "2006-03-22 11:08:59",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/5"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/5"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/5/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-03-22 11:10:27",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/6"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/6"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/6/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-03-24 05:41:41",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/7"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/7"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/7/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-03-24 05:55:46",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/8"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/8"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/8/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-03-24 05:56:57",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/9"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/9"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/9/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-03-24 05:57:38",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/10"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/10"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/10/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-03-24 05:58:40",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/11"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/11"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/11/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-03-24 05:59:41",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/12"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/12"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/12/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-03-24 06:00:55",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/13"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/13"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/13/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-03-24 06:02:02",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/14"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/14"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/14/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-03-24 06:03:00",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/15"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/15"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/15/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-04-03 09:50:15",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/16"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/16"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/16/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-04-04 07:05:04",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/17"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/17"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/17/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-04-04 07:06:13",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/18"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/18"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/18/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-04-04 07:06:56",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/19"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/19"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/19/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-04-04 07:07:37",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/20"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/20"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/20/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-04-04 07:08:14",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/21"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/21"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/21/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-04-04 07:08:49",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/22"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/22"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/22/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-04-04 07:09:24",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/23"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/23"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/23/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-04-04 07:35:54",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/24"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/24"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/24/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-04-04 07:36:21",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/25"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/25"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/25/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-04-04 07:36:47",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/26"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/26"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/26/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-04-04 07:37:09",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/27"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/27"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/27/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-04-04 07:37:49",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/28"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/28"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/28/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-04-04 07:38:11",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/29"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/29"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/29/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-04-04 07:38:32",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/30"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/30"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/30/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-04-04 07:38:53",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/31"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/31"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/31/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-04-04 07:39:29",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/32"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/32"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/32/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-04-04 07:39:53",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/33"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/33"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/33/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-04-04 07:40:16",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/34"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/34"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/34/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-04-04 07:40:38",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/35"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/35"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/35/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-04-04 07:41:14",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/36"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/36"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/36/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-04-04 07:41:45",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/37"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/37"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/37/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-04-04 07:42:26",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/38"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/38"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/38/customerOrder"
+        }
+      }
+    }, {
+      "invoiceDate" : "2006-04-04 07:43:08",
+      "dueDate" : null,
+      "tax" : 0.0,
+      "shipping" : 0.0,
+      "amountDue" : 0.0,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/39"
+        },
+        "invoice" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/39"
+        },
+        "customerOrder" : {
+          "href" : "http://localhost:8080/northwind-data/api/invoice/39/customerOrder"
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/northwind-data/api/invoice"
+    },
+    "profile" : {
+      "href" : "http://localhost:8080/northwind-data/api/profile/invoice"
+    },
+    "search" : {
+      "href" : "http://localhost:8080/northwind-data/api/invoice/search"
+    }
+  },
+  "page" : {
+    "size" : 500,
+    "totalElements" : 35,
+    "totalPages" : 1,
+    "number" : 0
+  }
+}

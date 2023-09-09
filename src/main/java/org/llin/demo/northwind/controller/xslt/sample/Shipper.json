@@ -1,0 +1,115 @@
+{
+  "_embedded" : {
+    "shippers" : [ {
+      "lastName" : null,
+      "firstName" : null,
+      "emailAddress" : null,
+      "jobTitle" : null,
+      "businessPhone" : null,
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "123 Any Street",
+      "address1" : "Memphis",
+      "address2" : null,
+      "city" : "TN",
+      "stateProvince" : "99999",
+      "zipPostalCode" : "USA",
+      "countryRegion" : null,
+      "notes" : "10",
+      "webSiteUrl" : null,
+      "webSiteTitle" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/shipper/1"
+        },
+        "shipper" : {
+          "href" : "http://localhost:8080/northwind-data/api/shipper/1"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/shipper/1/company"
+        }
+      }
+    }, {
+      "lastName" : null,
+      "firstName" : null,
+      "emailAddress" : null,
+      "jobTitle" : null,
+      "businessPhone" : null,
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "123 Any Street",
+      "address1" : "Memphis",
+      "address2" : null,
+      "city" : "TN",
+      "stateProvince" : "99999",
+      "zipPostalCode" : "USA",
+      "countryRegion" : null,
+      "notes" : "10",
+      "webSiteUrl" : null,
+      "webSiteTitle" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/shipper/2"
+        },
+        "shipper" : {
+          "href" : "http://localhost:8080/northwind-data/api/shipper/2"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/shipper/2/company"
+        }
+      }
+    }, {
+      "lastName" : null,
+      "firstName" : null,
+      "emailAddress" : null,
+      "jobTitle" : null,
+      "businessPhone" : null,
+      "homePhone" : null,
+      "mobilePhone" : null,
+      "faxNumber" : "123 Any Street",
+      "address1" : "Springfield",
+      "address2" : null,
+      "city" : "WA",
+      "stateProvince" : "98106",
+      "zipPostalCode" : "USA",
+      "countryRegion" : null,
+      "notes" : "9",
+      "webSiteUrl" : null,
+      "webSiteTitle" : null,
+      "portraitPath" : null,
+      "portraitTitle" : null,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/shipper/3"
+        },
+        "shipper" : {
+          "href" : "http://localhost:8080/northwind-data/api/shipper/3"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/shipper/3/company"
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/northwind-data/api/shipper"
+    },
+    "profile" : {
+      "href" : "http://localhost:8080/northwind-data/api/profile/shipper"
+    },
+    "search" : {
+      "href" : "http://localhost:8080/northwind-data/api/shipper/search"
+    }
+  },
+  "page" : {
+    "size" : 500,
+    "totalElements" : 3,
+    "totalPages" : 1,
+    "number" : 0
+  }
+}

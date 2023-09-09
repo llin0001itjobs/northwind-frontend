@@ -1,0 +1,139 @@
+{
+  "_embedded" : {
+    "companies" : [ {
+      "name" : "None",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/company/1"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/company/1"
+        }
+      }
+    }, {
+      "name" : "Springfield Elementary School",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/company/2"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/company/2"
+        }
+      }
+    }, {
+      "name" : "Springfield DMV",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/company/3"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/company/3"
+        }
+      }
+    }, {
+      "name" : "Springfield Nuclear Power Plant",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/company/4"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/company/4"
+        }
+      }
+    }, {
+      "name" : "Moe's Tavern",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/company/5"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/company/5"
+        }
+      }
+    }, {
+      "name" : "Kwik-E-Mart",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/company/6"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/company/6"
+        }
+      }
+    }, {
+      "name" : "Planet Express",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/company/7"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/company/7"
+        }
+      }
+    }, {
+      "name" : "The Leftorium",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/company/8"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/company/8"
+        }
+      }
+    }, {
+      "name" : "Spingfield Shippers",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/company/9"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/company/9"
+        }
+      }
+    }, {
+      "name" : "Expert Shipping Solutions",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/company/10"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/company/10"
+        }
+      }
+    }, {
+      "name" : "Democratic Order Of Planets",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/company/11"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/company/11"
+        }
+      }
+    }, {
+      "name" : "The Krusty the Clown Show",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/northwind-data/api/company/12"
+        },
+        "company" : {
+          "href" : "http://localhost:8080/northwind-data/api/company/12"
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/northwind-data/api/company"
+    },
+    "profile" : {
+      "href" : "http://localhost:8080/northwind-data/api/profile/company"
+    }
+  },
+  "page" : {
+    "size" : 500,
+    "totalElements" : 12,
+    "totalPages" : 1,
+    "number" : 0
+  }
+}

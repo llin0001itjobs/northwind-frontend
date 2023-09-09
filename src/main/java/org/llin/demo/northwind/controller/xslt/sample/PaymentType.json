@@ -1,0 +1,53 @@
+{
+    "_embedded": {
+        "paymentTypes": [
+            {
+                "description": "Cash",
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/northwind-data/api/paymentType/CASH"
+                    },
+                    "paymentType": {
+                        "href": "http://localhost:8080/northwind-data/api/paymentType/CASH"
+                    }
+                }
+            },
+            {
+                "description": "Check",
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/northwind-data/api/paymentType/CHECK"
+                    },
+                    "paymentType": {
+                        "href": "http://localhost:8080/northwind-data/api/paymentType/CHECK"
+                    }
+                }
+            },
+            {
+                "description": "Credit Card",
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/northwind-data/api/paymentType/CREDIT"
+                    },
+                    "paymentType": {
+                        "href": "http://localhost:8080/northwind-data/api/paymentType/CREDIT"
+                    }
+                }
+            }
+        ]
+    },
+    "_links": {
+        "self": {
+            "href": "http://localhost:8080/northwind-data/api/paymentType"
+        },
+        "profile": {
+            "href": "http://localhost:8080/northwind-data/api/profile/paymentType"
+        }
+    },
+    "page": {
+        "size": 500,
+        "totalElements": 3,
+        "totalPages": 1,
+        "number": 0
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "_embedded": {
+        "orderTaxStatuses": [
+            {
+                "taxStatusName": "Tax Exempt",
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/northwind-data/api/orderTaxStatus/0"
+                    },
+                    "orderTaxStatus": {
+                        "href": "http://localhost:8080/northwind-data/api/orderTaxStatus/0"
+                    }
+                }
+            },
+            {
+                "taxStatusName": "Taxable",
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/northwind-data/api/orderTaxStatus/1"
+                    },
+                    "orderTaxStatus": {
+                        "href": "http://localhost:8080/northwind-data/api/orderTaxStatus/1"
+                    }
+                }
+            }
+        ]
+    },
+    "_links": {
+        "self": {
+            "href": "http://localhost:8080/northwind-data/api/orderTaxStatus"
+        },
+        "profile": {
+            "href": "http://localhost:8080/northwind-data/api/profile/orderTaxStatus"
+        }
+    },
+    "page": {
+        "size": 500,
+        "totalElements": 2,
+        "totalPages": 1,
+        "number": 0
+    }
+}
