@@ -1,0 +1,49 @@
+C:\WINDOWS\system32>netstat -ano | findstr 8080
+  TCP    0.0.0.0:8080           0.0.0.0:0              LISTENING       16712
+  TCP    [::]:8080              [::]:0                 LISTENING       16712
+
+C:\WINDOWS\system32>taskkill /f /pid 16712
+SUCCESS: The process with PID 16712 has been terminated.
+
+
+Steps
+1) Disable the embedded Tomcat in Spring Boot
+2) Change the package type to WAR
+3) Extend SpringBootServletInitializer in main application class
+4) Upload the WAR file to Tomcat webapps directory
+
+1)
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-tomcat</artifactId>
+      <scope>provided</scope>
+</dependency>
+
+2)
+<packaging>war</packaging>
+
+3)
+
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+
+@SpringBootApplication
+public class Application extends SpringBootServletInitializer {
+
+  @Override
+  protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+    return application.sources(Application.class);
+  }
+
+  public static void main(String[] args) {
+    SpringApplication.run(Application.class, args);
+  }
+}
+
+4)
+mvn clean package
+
