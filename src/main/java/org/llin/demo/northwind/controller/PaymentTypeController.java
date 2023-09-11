@@ -27,7 +27,10 @@ public class PaymentTypeController<T extends PaymentType> extends BaseController
 
 	@GetMapping("/list")
 	public ModelAndView getAllPaymentTypes() {
-		return getAllObjects("paymentType");
+		ModelAndView mv = new ModelAndView(ENTITIES_PAGE);
+		mv.addObject(ENTITIES, getAllObjects("paymentType"));
+		mv.addObject(TITLE, "Payment Type");
+		return mv;
 	}
 
 	@Override

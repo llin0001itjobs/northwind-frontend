@@ -26,7 +26,10 @@ public class EmployeeController<T extends Employee> extends BaseController<T> {
 	}
 	@GetMapping("/list")
 	public ModelAndView getAllEmployees() {
-		return getAllObjects("employee");
+		ModelAndView mv = new ModelAndView(ENTITIES_PAGE);
+		mv.addObject(ENTITIES, getAllObjects("employee"));
+		mv.addObject(TITLE, "Employee");
+		return mv;		
 	}
 	
 	@Override

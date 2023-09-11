@@ -27,7 +27,10 @@ public class PurchaseOrderController<T extends PurchaseOrder> extends BaseContro
 
 	@GetMapping("/list")
 	public ModelAndView getAllPurchaseOrders() {
-		return getAllObjects("purchaseOrder");
+		ModelAndView mv = new ModelAndView(ENTITIES_PAGE);
+		mv.addObject(ENTITIES, getAllObjects("purchaseOrder"));
+		mv.addObject(TITLE, "Purchase Order");
+		return mv;
 	}
 
 	@Override

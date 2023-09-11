@@ -28,7 +28,10 @@ public class ShipperController<T extends Shipper> extends BaseController<T> {
 
 	@GetMapping("/list")
 	public ModelAndView getAllShippers() {
-		return getAllObjects("shipper");
+		ModelAndView mv = new ModelAndView(ENTITIES_PAGE);
+		mv.addObject(ENTITIES, getAllObjects("shipper"));
+		mv.addObject(TITLE, "Shipper");
+		return mv;
 	}
 
 	@Override

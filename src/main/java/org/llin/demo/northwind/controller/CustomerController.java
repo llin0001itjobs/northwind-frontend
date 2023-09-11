@@ -27,7 +27,10 @@ public class CustomerController<T extends Customer> extends BaseController<T> {
 
 	@GetMapping("/list")
 	public ModelAndView getAllCustomers() {
-		return getAllObjects("customer");
+		ModelAndView mv = new ModelAndView(ENTITIES_PAGE);
+		mv.addObject(ENTITIES, getAllObjects("customer"));
+		mv.addObject(TITLE, "Customer");
+		return mv;
 	}
 
 	@Override

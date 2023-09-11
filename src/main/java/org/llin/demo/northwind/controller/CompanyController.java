@@ -27,7 +27,10 @@ public class CompanyController<T extends Company> extends BaseController<T> {
 	
 	@GetMapping("/list")
 	public ModelAndView getAllCompanies() {
-		return getAllObjects("company");
+		ModelAndView mv = new ModelAndView(ENTITIES_PAGE);
+		mv.addObject(ENTITIES, getAllObjects("company"));
+		mv.addObject(TITLE, "Company");
+		return mv;
 	}
 
 	@Override

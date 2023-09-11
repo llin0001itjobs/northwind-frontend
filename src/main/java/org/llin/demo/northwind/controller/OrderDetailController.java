@@ -27,7 +27,10 @@ public class OrderDetailController<T extends OrderDetail> extends BaseController
 
 	@GetMapping("/list")
 	public ModelAndView getAllOrderDetails() {
-		return getAllObjects("orderDetail");
+		ModelAndView mv = new ModelAndView(ENTITIES_PAGE);
+		mv.addObject(ENTITIES, getAllObjects("orderDetail"));
+		mv.addObject(TITLE, "Order Detail");
+		return mv;
 	}
 
 	@Override

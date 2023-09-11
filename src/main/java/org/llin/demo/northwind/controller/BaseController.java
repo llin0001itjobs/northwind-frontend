@@ -29,8 +29,15 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
-public abstract class BaseController<T extends BaseObject> implements _ClientAPIs {
+public abstract class BaseController<T extends BaseObject> implements _Values {
 
+	public static final String NORTHWIND_APIS = "client.api.northwind";
+	public static final String COINBASE_APIS_CURRENCIES = "client.api.coinbase.currencies";
+	public static final String DOG_RANDOM_APIS = "client.api.dogs.images.random";
+	public static final String ENTITIES_PAGE = "entities";
+	public static final String ENTITIES = "ENTITIES";
+	public static final String TITLE = "TITLE";	
+	
 	private static final Logger logger = LogManager.getLogger(BaseController.class);
 
 	private RestTemplate _restTemplate;
@@ -64,21 +71,18 @@ public abstract class BaseController<T extends BaseObject> implements _ClientAPI
 		_restTemplate = new RestTemplate();
 	}
 
-	ModelAndView getAllObjects(String objectName) {		
-		ModelAndView mav = new ModelAndView();
+	List<T> getAllObjects(String objectName) {		
 
+		List<T> list = new ArrayList<>();
 		try {
 			String jsonText = getJsonText(objectName);
-			List<T> list = mapJsonText(jsonText);
-			System.out.println(list);
-			mav.addObject(objectName + "s", list);
+			list = mapJsonText(jsonText);
 		} catch (IOException e) {
 			e.printStackTrace();
 			throw new RuntimeException(e.getMessage());
 		}
 
-		mav.setViewName(objectName);
-		return mav;
+		return list;
 	}
 
 	private String getJsonText(String objectName) throws IOException {

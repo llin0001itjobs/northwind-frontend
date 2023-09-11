@@ -27,7 +27,10 @@ public class SupplierController<T extends Supplier> extends BaseController<T> {
 
 	@GetMapping("/list")
 	public ModelAndView getAllSuppliers() {
-		return getAllObjects("supplier");
+		ModelAndView mv = new ModelAndView(ENTITIES_PAGE);
+		mv.addObject(ENTITIES, getAllObjects("supplier"));
+		mv.addObject(TITLE, "Supplier");
+		return mv;
 	}
 
 	@Override

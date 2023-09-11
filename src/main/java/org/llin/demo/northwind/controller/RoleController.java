@@ -25,7 +25,10 @@ public class RoleController<T extends Role> extends BaseController<T> {
 	}
 	@GetMapping("/list")
 	public ModelAndView getAllRoles() {
-		return getAllObjects("role");
+		ModelAndView mv = new ModelAndView(ENTITIES_PAGE);
+		mv.addObject(ENTITIES, getAllObjects("role"));
+		mv.addObject(TITLE, "Role");
+		return mv;
 	}
 		
 	@Override

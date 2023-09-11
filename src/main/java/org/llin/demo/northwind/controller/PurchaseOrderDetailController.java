@@ -27,7 +27,10 @@ public class PurchaseOrderDetailController<T extends PurchaseOrderDetail> extend
 
 	@GetMapping("/list")
 	public ModelAndView getAllPurchaseOrderDetails() {
-		return getAllObjects("purchaseOrderDetail");
+		ModelAndView mv = new ModelAndView(ENTITIES_PAGE);
+		mv.addObject(ENTITIES, getAllObjects("purchaseOrderDetail"));
+		mv.addObject(TITLE, "Purchase Order Detail");
+		return mv;
 	}                         
 
 	@Override

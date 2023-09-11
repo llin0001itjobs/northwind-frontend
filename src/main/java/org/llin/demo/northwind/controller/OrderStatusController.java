@@ -27,7 +27,10 @@ public class OrderStatusController<T extends OrderStatus> extends BaseController
 
 	@GetMapping("/list")
 	public ModelAndView getAllOrderDetailStatuses() {
-		return getAllObjects("orderStatus");
+		ModelAndView mv = new ModelAndView(ENTITIES_PAGE);
+		mv.addObject(ENTITIES, getAllObjects("orderStatus"));
+		mv.addObject(TITLE, "Order Status");
+		return mv;
 	}
 
 	@Override

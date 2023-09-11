@@ -25,7 +25,10 @@ public class ProductController<T extends Product> extends BaseController<T> {
 	}
 	@GetMapping("/list")
 	public ModelAndView getAllProducts() {
-		return getAllObjects("product");
+		ModelAndView mv = new ModelAndView(ENTITIES_PAGE);
+		mv.addObject(ENTITIES, getAllObjects("product"));
+		mv.addObject(TITLE, "Product");
+		return mv;
 	}
 		
 	@Override

@@ -27,7 +27,10 @@ public class PurchaseOrderStatusController<T extends PurchaseOrderStatus> extend
 
 	@GetMapping("/list")
 	public ModelAndView getAllPurchaseOrderStatuses() {
-		return getAllObjects("purchaseOrderStatus");
+		ModelAndView mv = new ModelAndView(ENTITIES_PAGE);
+		mv.addObject(ENTITIES, getAllObjects("purchaseOrderStatus"));
+		mv.addObject(TITLE, "Purchase Order Status");
+		return mv;
 	}                         
 
 	@Override

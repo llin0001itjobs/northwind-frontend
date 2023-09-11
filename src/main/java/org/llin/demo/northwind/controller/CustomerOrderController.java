@@ -27,7 +27,10 @@ public class CustomerOrderController<T extends CustomerOrder> extends BaseContro
 
 	@GetMapping("/list")
 	public ModelAndView getAllCustomerOrders() {
-		return getAllObjects("customerOrder");
+		ModelAndView mv = new ModelAndView(ENTITIES_PAGE);
+		mv.addObject(ENTITIES, getAllObjects("customerOrder"));
+		mv.addObject(TITLE, "Customer Order");
+		return mv;
 	}
 
 	@Override

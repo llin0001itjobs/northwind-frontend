@@ -27,9 +27,10 @@ public class InventoryTransactionController<T extends InventoryTransaction> exte
 
 	@GetMapping("/list")
 	public ModelAndView getAllInventoryTransaction() {
-		ModelAndView mav = new ModelAndView(); 
-		mav = getAllObjects("inventoryTransaction");	
-		return mav;
+		ModelAndView mv = new ModelAndView(ENTITIES_PAGE);
+		mv.addObject(ENTITIES, getAllObjects("InventoryTransaction"));
+		mv.addObject(TITLE, "Inventory Transaction");
+		return mv;	
 	}
 
 	@Override

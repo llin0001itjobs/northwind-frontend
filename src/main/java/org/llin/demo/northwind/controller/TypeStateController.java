@@ -26,7 +26,10 @@ public class TypeStateController<T extends TypeState> extends BaseController<T> 
 	
 	@GetMapping("/list")
 	public ModelAndView getAllTypeStates() {
-		return getAllObjects("typeState");
+		ModelAndView mv = new ModelAndView(ENTITIES_PAGE);
+		mv.addObject(ENTITIES, getAllObjects("typeState"));
+		mv.addObject(TITLE, "Type State");
+		return mv;
 	}
 		
 	@Override

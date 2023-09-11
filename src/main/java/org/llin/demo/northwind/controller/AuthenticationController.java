@@ -27,7 +27,10 @@ public class AuthenticationController<T extends Authentication> extends BaseCont
 	
 	@GetMapping("/list")
 	public ModelAndView getAllAuthentications() {
-		return getAllObjects("authentication");
+		ModelAndView mv = new ModelAndView(ENTITIES_PAGE);
+		mv.addObject(ENTITIES, getAllObjects("authentication"));
+		mv.addObject(TITLE, "Authentication");
+		return mv;
 	}
 
 	@Override

@@ -27,7 +27,10 @@ public class InvoiceController<T extends Invoice> extends BaseController<T> {
 
 	@GetMapping("/list")
 	public ModelAndView getAllCustomerOrders() {
-		return getAllObjects("invoice");
+		ModelAndView mv = new ModelAndView(ENTITIES_PAGE);
+		mv.addObject(ENTITIES, getAllObjects("invoice"));
+		mv.addObject(TITLE, "Invoice");
+		return mv;
 	}
 
 	@Override

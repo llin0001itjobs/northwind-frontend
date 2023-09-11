@@ -14,8 +14,8 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/orderTaxStatus")
 public class OrderTaxStatusController<T extends OrderTaxStatus> extends BaseController<T> {
 	
-	private static final String XSLT = "./xslt/orderStatus.xslt";
-	private static final String JSON = "./xslt/sample/orderStatus.json";
+	private static final String XSLT = "./xslt/orderTaxStatus.xslt";
+	private static final String JSON = "./xslt/sample/orderTaxStatus.json";
 	private OrderTaxStatus[] orderTaxStatuses = {};
 	
 	@SuppressWarnings("unchecked")
@@ -27,7 +27,10 @@ public class OrderTaxStatusController<T extends OrderTaxStatus> extends BaseCont
 
 	@GetMapping("/list")
 	public ModelAndView getAllOrderTaxStatuses() {
-		return getAllObjects("orderTaxStatus");
+		ModelAndView mv = new ModelAndView(ENTITIES_PAGE);
+		mv.addObject(ENTITIES, getAllObjects("orderTaxStatus"));
+		mv.addObject(TITLE, "Order Tax Status");
+		return mv;
 	}
 
 	@Override
