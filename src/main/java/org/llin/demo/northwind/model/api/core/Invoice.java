@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class Invoice extends BaseObject {
-
+		
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
 	private LocalDateTime invoiceDate;
 
@@ -21,7 +21,6 @@ public class Invoice extends BaseObject {
 	public Invoice() {
 		super();
 		_type = self.getClass();
-		label = "Invoice"; 
 	}
 	
 	public LocalDateTime getInvoiceDate() {

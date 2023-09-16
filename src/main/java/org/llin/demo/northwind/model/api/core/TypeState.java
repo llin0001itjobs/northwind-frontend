@@ -1,10 +1,10 @@
 package org.llin.demo.northwind.model.api.core;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class TypeState extends BaseObject {
-
-	@JsonIgnoreProperties(ignoreUnknown = true)
+	
+	@JsonIgnore
 	private String code;
 
 	private String description;

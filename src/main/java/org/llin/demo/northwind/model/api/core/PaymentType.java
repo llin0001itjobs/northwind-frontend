@@ -1,10 +1,7 @@
 package org.llin.demo.northwind.model.api.core;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 public class PaymentType extends BaseObject {
-
-	@JsonIgnoreProperties(ignoreUnknown = true)
+	
 	private String type;
 	private String description;
 	

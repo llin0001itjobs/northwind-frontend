@@ -1,23 +1,11 @@
 package org.llin.demo.northwind.model.api.core;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 public class PurchaseOrderStatus extends BaseObject {
-
-	@JsonIgnoreProperties(ignoreUnknown = true)
-	private int id;
+	
 	private String status;
 
 	public PurchaseOrderStatus() {
 		super();
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getStatus() {
@@ -30,7 +18,7 @@ public class PurchaseOrderStatus extends BaseObject {
 
 	@Override
 	public String toString() {
-		return "\nPurchaseOrderStatus [id=" + id + " status=" + status + super.toString() + "]";
+		return "\nPurchaseOrderStatus [status=" + status + super.toString() + "]";
 	}
 
 }

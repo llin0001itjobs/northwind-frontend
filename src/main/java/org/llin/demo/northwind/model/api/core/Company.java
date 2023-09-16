@@ -3,13 +3,12 @@ package org.llin.demo.northwind.model.api.core;
 public class Company extends BaseObject {
 	
 	private String name;
-
-	private Company[] self = {};
 	
+	private Company[] self = {};
+		
 	public Company() {
 		super();
 		_type = self.getClass();
-		label = "Company"; 
 	}
 			
 	public String getName() {

@@ -1,23 +1,11 @@
 package org.llin.demo.northwind.model.api.core;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 public class InventoryTransactionType extends BaseObject {
-
-	@JsonIgnoreProperties(ignoreUnknown = true)
-	private int id;	
+	
 	private String typeName;
 
 	public InventoryTransactionType() {
 		super();
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getTypeName() {
@@ -30,7 +18,7 @@ public class InventoryTransactionType extends BaseObject {
 
 	@Override
 	public String toString() {
-		return "\nInventoryTransactionTypes [id=" + id + ", typeName=" + typeName + super.toString() + "]";
+		return "\nInventoryTransactionTypes [typeName=" + typeName + super.toString() + "]";
 	}
 	
 }

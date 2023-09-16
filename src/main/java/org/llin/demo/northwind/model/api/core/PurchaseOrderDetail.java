@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class PurchaseOrderDetail extends BaseObject {
-
+    
 	private int quantity;
 	private double unitCost;
 
@@ -19,7 +19,6 @@ public class PurchaseOrderDetail extends BaseObject {
 	public PurchaseOrderDetail() {
 		super();
 		_type = self.getClass();
-		label = "PurchaseOrderDetail"; 
 	}
 	
 	public int getQuantity() {

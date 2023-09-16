@@ -1,43 +1,66 @@
 package org.llin.demo.northwind.model.api.core;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
-public class BaseObject implements Comparable<Object> {
-	
+public abstract class BaseObject implements Comparable<Object> {
+	@JsonIgnore
 	Class<?> _type;
+		
+	@JsonIgnore
+	String[] excludedFields = {"excludedFields","self"};
 	
-	@JsonIgnoreProperties(ignoreUnknown = true)
-	String label;
+	@JsonIgnore
+	List<String> values = new ArrayList<>();
 	
-	@JsonIgnoreProperties(ignoreUnknown = true)
+	@JsonIgnore
 	private boolean ignore = false;
 	
-	@JsonIgnoreProperties(ignoreUnknown = true)
+	@JsonIgnore
 	private boolean moreThanOne = false;
 	
 	private Link[] links;
 	
 	private List<BaseObject> children = new ArrayList<>();
 		
-	@JsonIgnoreProperties(ignoreUnknown = true)
+	@JsonIgnore
 	private int ellipsisLimit;
 	
-	@JsonIgnoreProperties(ignoreUnknown = true)
+	@JsonIgnore
 	private boolean abridged;
 	
-	@JsonIgnoreProperties(ignoreUnknown = true)
+	@JsonIgnore
 	private String abridgedNotes;
 				
-	public String getLabel() {
-		return label;
+	@JsonIgnore
+	private int id;
+	
+	public BaseObject() {
+		setFieldValues();
+	}
+	
+	void setFieldValues() {
+		values.add("id");
+		for (Field f : this.getClass().getDeclaredFields()) {
+			if (Arrays.asList(excludedFields).contains(f.getName())) {
+				continue;
+			} 
+			values.add(f.getName());
+		}
+		
+		System.out.println(this.getClass().getSimpleName() + ": "+ values);
+	}
+	
+	public List<String> getValues() {
+		return values;
 	}
 
-	public void setLabel(String label) {
-		this.label = label;
+	public void setValues(List<String> values) {
+		this.values = values;
 	}
 
 	public boolean isIgnore() {
@@ -95,11 +118,20 @@ public class BaseObject implements Comparable<Object> {
 	public void setAbridgedNotes(String abridgedNotes) {
 		this.abridgedNotes = abridgedNotes;
 	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	@Override
 	public String toString() {
-		return "\nBaseObject [_type=" + _type + ", label=" + label + ", links=" + Arrays.toString(links) + ", children="
-				+ children + "]";
+		return "BaseObject [ignore=" + ignore + ", moreThanOne=" + moreThanOne + ", links=" + Arrays.toString(links)
+				+ ", children=" + children + ", ellipsisLimit=" + ellipsisLimit + ", abridged=" + abridged
+				+ ", abridgedNotes=" + abridgedNotes + ", id=" + id + "]";
 	}
 
 	@Override

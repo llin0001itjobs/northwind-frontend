@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class InventoryTransaction extends BaseObject {
-	
+		
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
 	private LocalDateTime transactionCreatedDate;
 
@@ -14,13 +14,12 @@ public class InventoryTransaction extends BaseObject {
 
 	private double quantity;
 	private String comments;
-	
+		
 	private InventoryTransaction[] self = {};
-	
+		
 	public InventoryTransaction() {
 		super();
 		_type = self.getClass();
-		label = "InventoryTransaction"; 
 	}
 	
 	public LocalDateTime getTransactionCreatedDate() {
@@ -61,5 +60,5 @@ public class InventoryTransaction extends BaseObject {
 				+ ", transactionModifiedDate=" + transactionModifiedDate + ", quantity=" + quantity + ", comments="
 				+ comments + super.toString() + "]";
 	}
-	
+
 }

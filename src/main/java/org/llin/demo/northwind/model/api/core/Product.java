@@ -1,9 +1,7 @@
 package org.llin.demo.northwind.model.api.core;
 
-import java.util.List;
-
 public class Product extends BaseObject {
-
+	    
 	private String productCode;
 
 	private String productName;
@@ -19,7 +17,7 @@ public class Product extends BaseObject {
 	private Integer targetLevel;
 
 	private String quantityPerUnit;
-
+	
 	private boolean discontinued;
 
 	private Integer minimumReorderQuantity;
@@ -32,8 +30,7 @@ public class Product extends BaseObject {
 	
 	public Product() {
 		super();
-		_type = self.getClass();
-		label = "Product"; 
+		_type = self.getClass();		
 	}
 	
 	public String getProductCode() {
@@ -134,14 +131,12 @@ public class Product extends BaseObject {
 	
 	@Override
 	public String toString() {
-		return "\nProducts [productCode=" + productCode + ", productName="
+		return "\nProduct [productCode=" + productCode + ", productName="
 				+ productName + ", description=" + description + ", standardCost=" + standardCost + ", listPrice="
 				+ listPrice + ", reorderLevel=" + reorderLevel + ", targetLevel=" + targetLevel + ", quantityPerUnit="
 				+ quantityPerUnit + ", discontinued=" + discontinued + ", minimumReorderQuantity="
 				+ minimumReorderQuantity + ", category=" + category + ", resourceId=" + resourceId  
 				+ super.toString() + "]";
 	}
-
-
-
+	
 }

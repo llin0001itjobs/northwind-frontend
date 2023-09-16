@@ -1,27 +1,15 @@
 package org.llin.demo.northwind.model.api.core;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 public class Authentication extends BaseObject {
 
-	@JsonIgnoreProperties(ignoreUnknown = true)
-	private int id;	
 	private String roleType;
 	private String userName;
 	private String password;
-
+	
 	public Authentication() {
 		super();
 	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
+	
 	public String getRoleType() {
 		return roleType;
 	}
@@ -48,7 +36,7 @@ public class Authentication extends BaseObject {
 
 	@Override
 	public String toString() {
-		return "\nAuthentication [id=" + id +" roleType=" + roleType + ", userName=" + userName + ", password="
+		return "\nAuthentication [roleType=" + roleType + ", userName=" + userName + ", password="
 				+ password + "]";
 	}
 

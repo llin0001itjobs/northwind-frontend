@@ -9,10 +9,9 @@ public class CustomerOrder extends BaseObject {
 	
 	public CustomerOrder() {
 		super();
-		_type = self.getClass();
-		label = "CustomerOrder"; 
+		_type = self.getClass();	
 	}
-	
+		     
 	private String shipName;
 
 	private String shipAddress;
@@ -22,7 +21,7 @@ public class CustomerOrder extends BaseObject {
 	private String shipStateProvince;
 
 	private String shipZipPostalCode;
-
+	
 	private String shipCountryRegion;
 
 	private double shippingFee;
@@ -34,7 +33,7 @@ public class CustomerOrder extends BaseObject {
 	private LocalDateTime orderDate;
 
 	private double taxes;
-
+	
 	private String paymentType;
 
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
@@ -164,6 +163,5 @@ public class CustomerOrder extends BaseObject {
 				+ shippedDate + ", orderDate=" + orderDate + ", taxes=" + taxes + ", paymentType=" + paymentType
 				+ ", paidDate=" + paidDate + ", notes=" + notes + ", taxRate=" + taxRate + super.toString() + "]";
 	}
- 
 	
 }
