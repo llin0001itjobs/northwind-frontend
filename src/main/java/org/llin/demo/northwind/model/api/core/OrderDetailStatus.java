@@ -1,12 +1,8 @@
-package org.llin.demo.northwind.model.api.core;
+package org.llin.demo.northwind.model;
 
 public class OrderDetailStatus extends BaseObject {
 	
 	private String statusName;
-
-	public OrderDetailStatus() {
-		super();
-	}
 
 	public String getStatusName() {
 		return statusName;

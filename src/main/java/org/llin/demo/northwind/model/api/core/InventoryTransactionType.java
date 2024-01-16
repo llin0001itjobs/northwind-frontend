@@ -1,12 +1,8 @@
-package org.llin.demo.northwind.model.api.core;
+package org.llin.demo.northwind.model;
 
 public class InventoryTransactionType extends BaseObject {
 	
 	private String typeName;
-
-	public InventoryTransactionType() {
-		super();
-	}
 
 	public String getTypeName() {
 		return typeName;

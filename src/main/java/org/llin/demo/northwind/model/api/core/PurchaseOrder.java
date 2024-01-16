@@ -1,4 +1,4 @@
-package org.llin.demo.northwind.model.api.core;
+package org.llin.demo.northwind.model;
 
 import java.time.LocalDateTime;
 
@@ -31,11 +31,8 @@ public class PurchaseOrder extends BaseObject {
 
 	private String notes;
 	
-	private PurchaseOrder[] self = {};
-	
 	public PurchaseOrder() {
 		super();
-		_type = self.getClass();
 	}
 	
 	public LocalDateTime getApprovedDate() {

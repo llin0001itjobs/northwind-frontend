@@ -1,22 +1,10 @@
-package org.llin.demo.northwind.model.api.core;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+package org.llin.demo.northwind.model;
 
 public class ProductSupplier extends BaseObject {
-
-	@JsonIgnoreProperties(ignoreUnknown = true)
-	private int id;
 
 	private int product_id;
 	private int supplier_id;
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	public int getProduct_id() {
 		return product_id;

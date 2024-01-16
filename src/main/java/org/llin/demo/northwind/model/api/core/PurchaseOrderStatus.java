@@ -1,4 +1,4 @@
-package org.llin.demo.northwind.model.api.core;
+package org.llin.demo.northwind.model;
 
 public class PurchaseOrderStatus extends BaseObject {
 	

@@ -1,4 +1,4 @@
-package org.llin.demo.northwind.model.api.core;
+package org.llin.demo.northwind.model;
 
 public interface _EntityNames {
 	String AUTHENTICATION = "authentication";

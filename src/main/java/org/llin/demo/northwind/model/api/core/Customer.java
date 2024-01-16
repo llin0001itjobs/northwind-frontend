@@ -1,6 +1,4 @@
-package org.llin.demo.northwind.model.api.core;
-
-import java.util.Arrays;
+package org.llin.demo.northwind.model;
 
 public class Customer extends BaseObject {
 
@@ -41,13 +39,6 @@ public class Customer extends BaseObject {
 	private String portraitPath;
 
 	private String portraitTitle;
-
-	private Customer[] self = {};
-
-	public Customer() {
-		super();
-		_type = self.getClass();
-	}
 
 	public String getLastName() {
 		return lastName;
@@ -201,14 +192,6 @@ public class Customer extends BaseObject {
 		this.portraitTitle = portraitTitle;
 	}
 
-	public Customer[] getSelf() {
-		return self;
-	}
-
-	public void setSelf(Customer[] self) {
-		this.self = self;
-	}
-
 	@Override
 	public String toString() {
 		return "Customer [lastName=" + lastName + ", firstName=" + firstName + ", emailAddress=" + emailAddress
@@ -217,7 +200,7 @@ public class Customer extends BaseObject {
 				+ address2 + ", city=" + city + ", stateProvince=" + stateProvince + ", zipPostalCode=" + zipPostalCode
 				+ ", countryRegion=" + countryRegion + ", notes=" + notes + ", webSiteTitle=" + webSiteTitle
 				+ ", webSiteUrl=" + webSiteUrl + ", portraitPath=" + portraitPath + ", portraitTitle=" + portraitTitle
-				+ ", self=" + Arrays.toString(self) + "]";
+				+ "]";
 	}
 
 }

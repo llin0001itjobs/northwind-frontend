@@ -1,4 +1,4 @@
-package org.llin.demo.northwind.model.api.core;
+package org.llin.demo.northwind.model;
 
 import java.time.LocalDateTime;
 
@@ -14,14 +14,7 @@ public class InventoryTransaction extends BaseObject {
 
 	private double quantity;
 	private String comments;
-		
-	private InventoryTransaction[] self = {};
-		
-	public InventoryTransaction() {
-		super();
-		_type = self.getClass();
-	}
-	
+
 	public LocalDateTime getTransactionCreatedDate() {
 		return transactionCreatedDate;
 	}

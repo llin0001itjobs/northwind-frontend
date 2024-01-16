@@ -1,15 +1,8 @@
-package org.llin.demo.northwind.model.api.core;
+package org.llin.demo.northwind.model;
 
 import java.util.Arrays;
 
 public class Supplier extends BaseObject {
-
-	private Supplier[] self = {};
-	
-	public Supplier() {
-		super();
-		_type = self.getClass();
-	}
 	
 	private String lastName;
 
@@ -49,14 +42,6 @@ public class Supplier extends BaseObject {
 
 	private String portraitTitle;
 		
-	public Supplier[] getSelf() {
-		return self;
-	}
-
-	public void setSelf(Supplier[] self) {
-		this.self = self;
-	}
-
 	public String getLastName() {
 		return lastName;
 	}

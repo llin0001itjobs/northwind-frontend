@@ -1,12 +1,9 @@
-package org.llin.demo.northwind.model.api.core;
+package org.llin.demo.northwind.model;
 
 public class Privilege extends BaseObject {
-	
-	private Privilege[] self = {};
-	
+		
 	public Privilege() {
 		super();
-		_type = self.getClass();
 	}
 	
 	private String privilegeName;

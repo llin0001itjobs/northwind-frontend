@@ -1,4 +1,4 @@
-package org.llin.demo.northwind.model.api.core;
+package org.llin.demo.northwind.model;
 
 import java.util.Arrays;
 
@@ -42,11 +42,8 @@ public class Shipper extends BaseObject {
 
 	private String portraitTitle;
 
-	private Shipper[] self = {};
-
 	public Shipper() {
 		super();
-		_type = self.getClass();
 	}
 
 	public String getLastName() {

@@ -1,4 +1,4 @@
-package org.llin.demo.northwind.model.api.core;
+package org.llin.demo.northwind.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -8,10 +8,6 @@ public class TypeState extends BaseObject {
 	private String code;
 
 	private String description;
-
-	public TypeState() {
-		super();
-	}
 
 	public TypeState(String code, String description) {
 		super();

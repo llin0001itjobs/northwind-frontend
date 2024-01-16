@@ -1,17 +1,10 @@
-package org.llin.demo.northwind.model.api.core;
+package org.llin.demo.northwind.model;
 
 import java.time.LocalDateTime;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class CustomerOrder extends BaseObject {
-	
-	private CustomerOrder[] self = {};
-	
-	public CustomerOrder() {
-		super();
-		_type = self.getClass();	
-	}
-		     
+			     
 	private String shipName;
 
 	private String shipAddress;

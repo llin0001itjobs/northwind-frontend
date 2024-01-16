@@ -1,13 +1,9 @@
-package org.llin.demo.northwind.model.api.core;
+package org.llin.demo.northwind.model;
 
 public class PaymentType extends BaseObject {
 	
 	private String type;
 	private String description;
-	
-	public PaymentType() {
-		// TODO Auto-generated constructor stub
-	}
 
 	public String getType() {
 		return type;

@@ -1,4 +1,4 @@
-package org.llin.demo.northwind.model.api.core;
+package org.llin.demo.northwind.model;
 
 import java.time.LocalDateTime;
 
@@ -15,13 +15,6 @@ public class Invoice extends BaseObject {
 	private double tax;
 	private double shipping;
 	private double amountDue;
-	
-	private Invoice[] self = {};
-	
-	public Invoice() {
-		super();
-		_type = self.getClass();
-	}
 	
 	public LocalDateTime getInvoiceDate() {
 		return invoiceDate;

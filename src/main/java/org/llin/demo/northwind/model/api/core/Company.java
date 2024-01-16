@@ -1,16 +1,9 @@
-package org.llin.demo.northwind.model.api.core;
+package org.llin.demo.northwind.model;
 
 public class Company extends BaseObject {
-	
-	private String name;
-	
-	private Company[] self = {};
 		
-	public Company() {
-		super();
-		_type = self.getClass();
-	}
-			
+	private String name;
+				
 	public String getName() {
 		return name;
 	}

@@ -1,4 +1,4 @@
-package org.llin.demo.northwind.model.api.core;
+package org.llin.demo.northwind.model;
 
 public class Product extends BaseObject {
 	    
@@ -25,12 +25,9 @@ public class Product extends BaseObject {
 	private String category;
 
 	private int resourceId;
-	
-	private Product[] self = {};
-	
+		
 	public Product() {
-		super();
-		_type = self.getClass();		
+		super();		
 	}
 	
 	public String getProductCode() {

@@ -1,4 +1,4 @@
-package org.llin.demo.northwind.model.api.core;
+package org.llin.demo.northwind.model;
 
 import java.time.LocalDateTime;
 
@@ -14,14 +14,7 @@ public class OrderDetail extends BaseObject {
 
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
 	private LocalDateTime dateAllocated;
-	
-	private OrderDetail[] self = {};
-	
-	public OrderDetail() {
-		super();
-		_type = self.getClass();
-	}
-	
+		
 	public double getQuantity() {
 		return quantity;
 	}
