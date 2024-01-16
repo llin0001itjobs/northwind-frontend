@@ -4,10 +4,10 @@
 			<status>New</status>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/purchaseOrderStatus/0</href>
+					<href>https://localhost:8443/northwind-data/api/purchaseOrderStatus/0</href>
 				</self>
 				<purchaseOrderStatus>
-					<href>http://localhost:8080/northwind-data/api/purchaseOrderStatus/0</href>
+					<href>https://localhost:8443/northwind-data/api/purchaseOrderStatus/0</href>
 				</purchaseOrderStatus>
 			</_links>
 		</purchaseOrderStatuses>
@@ -15,10 +15,10 @@
 			<status>Submitted</status>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/purchaseOrderStatus/1</href>
+					<href>https://localhost:8443/northwind-data/api/purchaseOrderStatus/1</href>
 				</self>
 				<purchaseOrderStatus>
-					<href>http://localhost:8080/northwind-data/api/purchaseOrderStatus/1</href>
+					<href>https://localhost:8443/northwind-data/api/purchaseOrderStatus/1</href>
 				</purchaseOrderStatus>
 			</_links>
 		</purchaseOrderStatuses>
@@ -26,10 +26,10 @@
 			<status>Approved</status>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/purchaseOrderStatus/2</href>
+					<href>https://localhost:8443/northwind-data/api/purchaseOrderStatus/2</href>
 				</self>
 				<purchaseOrderStatus>
-					<href>http://localhost:8080/northwind-data/api/purchaseOrderStatus/2</href>
+					<href>https://localhost:8443/northwind-data/api/purchaseOrderStatus/2</href>
 				</purchaseOrderStatus>
 			</_links>
 		</purchaseOrderStatuses>
@@ -37,20 +37,20 @@
 			<status>Closed</status>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/purchaseOrderStatus/3</href>
+					<href>https://localhost:8443/northwind-data/api/purchaseOrderStatus/3</href>
 				</self>
 				<purchaseOrderStatus>
-					<href>http://localhost:8080/northwind-data/api/purchaseOrderStatus/3</href>
+					<href>https://localhost:8443/northwind-data/api/purchaseOrderStatus/3</href>
 				</purchaseOrderStatus>
 			</_links>
 		</purchaseOrderStatuses>
 	</_embedded>
 	<_links>
 		<self>
-			<href>http://localhost:8080/northwind-data/api/purchaseOrderStatus</href>
+			<href>https://localhost:8443/northwind-data/api/purchaseOrderStatus</href>
 		</self>
 		<profile>
-			<href>http://localhost:8080/northwind-data/api/profile/purchaseOrderStatus</href>
+			<href>https://localhost:8443/northwind-data/api/profile/purchaseOrderStatus</href>
 		</profile>
 	</_links>
 	<page>

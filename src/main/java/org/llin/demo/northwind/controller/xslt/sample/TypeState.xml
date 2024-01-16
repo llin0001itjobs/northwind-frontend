@@ -4,10 +4,10 @@
 			<description>Alaska</description>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/typeState/AK</href>
+					<href>https://localhost:8443/northwind-data/api/typeState/AK</href>
 				</self>
 				<typeState>
-					<href>http://localhost:8080/northwind-data/api/typeState/AK</href>
+					<href>https://localhost:8443/northwind-data/api/typeState/AK</href>
 				</typeState>
 			</_links>
 		</typeStates>
@@ -15,10 +15,10 @@
 			<description>Alabama</description>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/typeState/AL</href>
+					<href>https://localhost:8443/northwind-data/api/typeState/AL</href>
 				</self>
 				<typeState>
-					<href>http://localhost:8080/northwind-data/api/typeState/AL</href>
+					<href>https://localhost:8443/northwind-data/api/typeState/AL</href>
 				</typeState>
 			</_links>
 		</typeStates>
@@ -26,10 +26,10 @@
 			<description>Arkansas</description>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/typeState/AR</href>
+					<href>https://localhost:8443/northwind-data/api/typeState/AR</href>
 				</self>
 				<typeState>
-					<href>http://localhost:8080/northwind-data/api/typeState/AR</href>
+					<href>https://localhost:8443/northwind-data/api/typeState/AR</href>
 				</typeState>
 			</_links>
 		</typeStates>
@@ -37,10 +37,10 @@
 			<description>Arizona</description>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/typeState/AZ</href>
+					<href>https://localhost:8443/northwind-data/api/typeState/AZ</href>
 				</self>
 				<typeState>
-					<href>http://localhost:8080/northwind-data/api/typeState/AZ</href>
+					<href>https://localhost:8443/northwind-data/api/typeState/AZ</href>
 				</typeState>
 			</_links>
 		</typeStates>
@@ -48,10 +48,10 @@
 		<description>California</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/CA</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/CA</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/CA</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/CA</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -59,10 +59,10 @@
 		<description>Colorado</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/CO</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/CO</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/CO</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/CO</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -70,10 +70,10 @@
 		<description>Connecticut</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/CT</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/CT</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/CT</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/CT</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -81,10 +81,10 @@
 		<description>Delaware</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/DE</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/DE</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/DE</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/DE</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -92,10 +92,10 @@
 		<description>Florida</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/FL</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/FL</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/FL</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/FL</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -103,10 +103,10 @@
 		<description>Georgia</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/GA</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/GA</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/GA</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/GA</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -114,10 +114,10 @@
 		<description>Hawaii</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/HI</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/HI</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/HI</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/HI</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -125,10 +125,10 @@
 		<description>Iowa</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/IA</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/IA</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/IA</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/IA</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -136,10 +136,10 @@
 		<description>Idaho</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/ID</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/ID</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/ID</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/ID</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -147,10 +147,10 @@
 		<description>Illinois</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/IL</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/IL</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/IL</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/IL</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -158,10 +158,10 @@
 		<description>Indiana</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/IN</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/IN</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/IN</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/IN</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -169,10 +169,10 @@
 		<description>Kansas</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/KS</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/KS</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/KS</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/KS</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -184,7 +184,7 @@
 p://localhost:8080/northwind-data/api/typeState/KY</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/KY</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/KY</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -192,10 +192,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>Louisana</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/LA</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/LA</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/LA</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/LA</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -203,10 +203,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>Massacheusetts</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/MA</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/MA</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/MA</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/MA</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -214,10 +214,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>Maryland</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/MD</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/MD</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/MD</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/MD</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -225,10 +225,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>Maine</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/ME</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/ME</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/ME</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/ME</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -236,10 +236,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>Michigan</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/MI</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/MI</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/MI</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/MI</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -247,10 +247,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>Minnesota</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/MN</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/MN</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/MN</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/MN</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -258,10 +258,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>Missouri</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/MO</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/MO</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/MO</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/MO</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -273,7 +273,7 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 /api/typeState/MS</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/MS</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/MS</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -281,10 +281,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>Montana</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/MT</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/MT</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/MT</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/MT</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -292,10 +292,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>North Carolina</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/NC</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/NC</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/NC</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/NC</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -303,10 +303,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>North Dakota</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/ND</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/ND</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/ND</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/ND</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -314,10 +314,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>Nebraska</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/NE</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/NE</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/NE</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/NE</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -325,10 +325,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>New Hampshire</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/NH</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/NH</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/NH</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/NH</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -336,10 +336,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>New Jersey</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/NJ</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/NJ</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/NJ</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/NJ</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -347,10 +347,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>New Mexico</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/NM</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/NM</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/NM</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/NM</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -358,10 +358,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>Nevada</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/NV</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/NV</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/NV</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/NV</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -369,10 +369,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>New York</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/NY</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/NY</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/NY</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/NY</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -380,10 +380,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>Ohio</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/OH</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/OH</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/OH</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/OH</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -391,10 +391,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>Oklahoma</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/OK</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/OK</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/OK</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/OK</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -402,10 +402,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>Oregon</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/OR</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/OR</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/OR</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/OR</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -413,10 +413,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>Pennsylvania</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/PA</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/PA</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/PA</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/PA</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -424,10 +424,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>Rhode Island</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/RI</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/RI</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/RI</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/RI</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -435,10 +435,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>South Carolina</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/SC</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/SC</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/SC</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/SC</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -446,7 +446,7 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>South Dakota</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/SD</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/SD</href>
 			</self>
 			<typeState>
 				<href>http
@@ -458,10 +458,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>Tennessee</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/TN</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/TN</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/TN</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/TN</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -469,10 +469,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>Texas</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/TX</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/TX</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/TX</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/TX</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -480,10 +480,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>Utah</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/UT</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/UT</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/UT</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/UT</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -491,10 +491,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>Virginia</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/VI</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/VI</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/VI</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/VI</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -502,10 +502,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>Vermont</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/VT</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/VT</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/VT</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/VT</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -513,10 +513,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>Washington</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/WA</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/WA</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/WA</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/WA</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -524,10 +524,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>Wisconsin</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/WI</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/WI</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/WI</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/WI</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -535,10 +535,10 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>West Virginia</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/WV</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/WV</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/WV</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/WV</href>
 			</typeState>
 		</_links>
 	</typeStates>
@@ -546,20 +546,20 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 		<description>Wyoming</description>
 		<_links>
 			<self>
-				<href>http://localhost:8080/northwind-data/api/typeState/WY</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/WY</href>
 			</self>
 			<typeState>
-				<href>http://localhost:8080/northwind-data/api/typeState/WY</href>
+				<href>https://localhost:8443/northwind-data/api/typeState/WY</href>
 			</typeState>
 		</_links>
 	</typeStates>
 </_embedded>
 <_links>
 	<self>
-		<href>http://localhost:8080/northwind-data/api/typeState</href>
+		<href>https://localhost:8443/northwind-data/api/typeState</href>
 	</self>
 	<profile>
-		<href>http://localhost:8080/northwind-data/api/profile/typeState</href>
+		<href>https://localhost:8443/northwind-data/api/profile/typeState</href>
 	</profile>
 </_links>
 <page>
@@ -567,4 +567,5 @@ p://localhost:8080/northwind-data/api/typeState/KY</href>
 	<totalElements>50</totalElements>
 	<totalPages>1</totalPages>
 	<number>0</number>
-</page>undefined</ObjectNode>
+</page>
+</ObjectNode>

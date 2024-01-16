@@ -22,16 +22,16 @@
 			<portraitTitle>Patty+Bouvier</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/1</href>
+					<href>https://localhost:8443/northwind-data/api/employees/1</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/1</href>
+					<href>https://localhost:8443/northwind-data/api/employees/1</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/1/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/1/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/1/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/1/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -57,16 +57,16 @@
 			<portraitTitle>Homer+Simpson</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/2</href>
+					<href>https://localhost:8443/northwind-data/api/employees/2</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/2</href>
+					<href>https://localhost:8443/northwind-data/api/employees/2</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/2/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/2/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/2/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/2/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -92,16 +92,16 @@
 			<portraitTitle>Lisa Simpson</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/3</href>
+					<href>https://localhost:8443/northwind-data/api/employees/3</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/3</href>
+					<href>https://localhost:8443/northwind-data/api/employees/3</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/3/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/3/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/3/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/3/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -127,16 +127,16 @@
 			<portraitTitle>Maggie+Simpson</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/4</href>
+					<href>https://localhost:8443/northwind-data/api/employees/4</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/4</href>
+					<href>https://localhost:8443/northwind-data/api/employees/4</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/4/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/4/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/4/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/4/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -162,16 +162,16 @@
 			<portraitTitle>Selma+Bouvier</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/5</href>
+					<href>https://localhost:8443/northwind-data/api/employees/5</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/5</href>
+					<href>https://localhost:8443/northwind-data/api/employees/5</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/5/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/5/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/5/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/5/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -197,16 +197,16 @@
 			<portraitTitle>Ned+Flanders</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/6</href>
+					<href>https://localhost:8443/northwind-data/api/employees/6</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/6</href>
+					<href>https://localhost:8443/northwind-data/api/employees/6</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/6/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/6/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/6/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/6/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -232,16 +232,16 @@
 			<portraitTitle>Edna+Krabappel</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/7</href>
+					<href>https://localhost:8443/northwind-data/api/employees/7</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/7</href>
+					<href>https://localhost:8443/northwind-data/api/employees/7</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/7/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/7/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/7/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/7/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -267,16 +267,16 @@
 			<portraitTitle>Bart+Simpson</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/8</href>
+					<href>https://localhost:8443/northwind-data/api/employees/8</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/8</href>
+					<href>https://localhost:8443/northwind-data/api/employees/8</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/8/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/8/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/8/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/8/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -302,16 +302,16 @@
 			<portraitTitle>Marge+Simpson</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/9</href>
+					<href>https://localhost:8443/northwind-data/api/employees/9</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/9</href>
+					<href>https://localhost:8443/northwind-data/api/employees/9</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/9/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/9/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/9/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/9/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -337,16 +337,16 @@
 			<portraitTitle>Jacqueline+Ingrid+Bouvier</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/10</href>
+					<href>https://localhost:8443/northwind-data/api/employees/10</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/10</href>
+					<href>https://localhost:8443/northwind-data/api/employees/10</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/10/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/10/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/10/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/10/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -372,16 +372,16 @@
 			<portraitTitle></portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/11</href>
+					<href>https://localhost:8443/northwind-data/api/employees/11</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/11</href>
+					<href>https://localhost:8443/northwind-data/api/employees/11</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/11/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/11/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/11/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/11/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -407,16 +407,16 @@
 			<portraitTitle></portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/12</href>
+					<href>https://localhost:8443/northwind-data/api/employees/12</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/12</href>
+					<href>https://localhost:8443/northwind-data/api/employees/12</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/12/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/12/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/12/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/12/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -442,16 +442,16 @@
 			<portraitTitle>Carl+Carlson</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/15</href>
+					<href>https://localhost:8443/northwind-data/api/employees/15</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/15</href>
+					<href>https://localhost:8443/northwind-data/api/employees/15</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/15/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/15/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/15/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/15/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -477,16 +477,16 @@
 			<portraitTitle>Krusty+the+Clown</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/16</href>
+					<href>https://localhost:8443/northwind-data/api/employees/16</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/16</href>
+					<href>https://localhost:8443/northwind-data/api/employees/16</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/16/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/16/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/16/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/16/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -512,16 +512,16 @@
 			<portraitTitle>Lenny+Leonard</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/17</href>
+					<href>https://localhost:8443/northwind-data/api/employees/17</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/17</href>
+					<href>https://localhost:8443/northwind-data/api/employees/17</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/17/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/17/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/17/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/17/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -547,16 +547,16 @@
 			<portraitTitle>Elizabeth+Hoover</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/18</href>
+					<href>https://localhost:8443/northwind-data/api/employees/18</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/18</href>
+					<href>https://localhost:8443/northwind-data/api/employees/18</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/18/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/18/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/18/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/18/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -582,16 +582,16 @@
 			<portraitTitle>Milhouse+Van+Houten</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/19</href>
+					<href>https://localhost:8443/northwind-data/api/employees/19</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/19</href>
+					<href>https://localhost:8443/northwind-data/api/employees/19</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/19/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/19/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/19/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/19/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -617,16 +617,16 @@
 			<portraitTitle>Moe+Szyslak</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/20</href>
+					<href>https://localhost:8443/northwind-data/api/employees/20</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/20</href>
+					<href>https://localhost:8443/northwind-data/api/employees/20</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/20/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/20/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/20/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/20/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -652,16 +652,16 @@
 			<portraitTitle>Mr.+Burns</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/21</href>
+					<href>https://localhost:8443/northwind-data/api/employees/21</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/21</href>
+					<href>https://localhost:8443/northwind-data/api/employees/21</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/21/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/21/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/21/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/21/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -687,16 +687,16 @@
 			<portraitTitle>Nelson+Muntz</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/22</href>
+					<href>https://localhost:8443/northwind-data/api/employees/22</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/22</href>
+					<href>https://localhost:8443/northwind-data/api/employees/22</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/22/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/22/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/22/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/22/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -722,16 +722,16 @@
 			<portraitTitle>Waylon+Smithers</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/23</href>
+					<href>https://localhost:8443/northwind-data/api/employees/23</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/23</href>
+					<href>https://localhost:8443/northwind-data/api/employees/23</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/23/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/23/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/23/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/23/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -757,16 +757,16 @@
 			<portraitTitle>Philip+J+Fry</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/24</href>
+					<href>https://localhost:8443/northwind-data/api/employees/24</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/24</href>
+					<href>https://localhost:8443/northwind-data/api/employees/24</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/24/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/24/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/24/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/24/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -792,16 +792,16 @@
 			<portraitTitle>Leela+Turanga</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/25</href>
+					<href>https://localhost:8443/northwind-data/api/employees/25</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/25</href>
+					<href>https://localhost:8443/northwind-data/api/employees/25</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/25/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/25/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/25/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/25/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -827,16 +827,16 @@
 			<portraitTitle></portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/26</href>
+					<href>https://localhost:8443/northwind-data/api/employees/26</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/26</href>
+					<href>https://localhost:8443/northwind-data/api/employees/26</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/26/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/26/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/26/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/26/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -862,16 +862,16 @@
 			<portraitTitle>Professor+Farnsworth</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/27</href>
+					<href>https://localhost:8443/northwind-data/api/employees/27</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/27</href>
+					<href>https://localhost:8443/northwind-data/api/employees/27</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/27/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/27/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/27/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/27/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -897,16 +897,16 @@
 			<portraitTitle>Dr.+Zoidberg</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/28</href>
+					<href>https://localhost:8443/northwind-data/api/employees/28</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/28</href>
+					<href>https://localhost:8443/northwind-data/api/employees/28</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/28/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/28/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/28/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/28/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -932,16 +932,16 @@
 			<portraitTitle>Amy Wong</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/29</href>
+					<href>https://localhost:8443/northwind-data/api/employees/29</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/29</href>
+					<href>https://localhost:8443/northwind-data/api/employees/29</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/29/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/29/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/29/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/29/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -967,16 +967,16 @@
 			<portraitTitle>Hermes+Conrad</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/30</href>
+					<href>https://localhost:8443/northwind-data/api/employees/30</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/30</href>
+					<href>https://localhost:8443/northwind-data/api/employees/30</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/30/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/30/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/30/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/30/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -1002,16 +1002,16 @@
 			<portraitTitle>Zapp+Brannigan</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/31</href>
+					<href>https://localhost:8443/northwind-data/api/employees/31</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/31</href>
+					<href>https://localhost:8443/northwind-data/api/employees/31</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/31/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/31/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/31/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/31/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -1037,16 +1037,16 @@
 			<portraitTitle>Kif+Koker</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/32</href>
+					<href>https://localhost:8443/northwind-data/api/employees/32</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/32</href>
+					<href>https://localhost:8443/northwind-data/api/employees/32</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/32/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/32/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/32/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/32/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -1072,16 +1072,16 @@
 			<portraitTitle>Lord+Nibbler</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/33</href>
+					<href>https://localhost:8443/northwind-data/api/employees/33</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/33</href>
+					<href>https://localhost:8443/northwind-data/api/employees/33</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/33/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/33/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/33/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/33/company</href>
 				</company>
 			</_links>
 		</employeeses>
@@ -1107,29 +1107,29 @@
 			<portraitTitle>Scruffy</portraitTitle>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/employees/34</href>
+					<href>https://localhost:8443/northwind-data/api/employees/34</href>
 				</self>
 				<employees>
-					<href>http://localhost:8080/northwind-data/api/employees/34</href>
+					<href>https://localhost:8443/northwind-data/api/employees/34</href>
 				</employees>
 				<privileges>
-					<href>http://localhost:8080/northwind-data/api/employees/34/privileges</href>
+					<href>https://localhost:8443/northwind-data/api/employees/34/privileges</href>
 				</privileges>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/employees/34/company</href>
+					<href>https://localhost:8443/northwind-data/api/employees/34/company</href>
 				</company>
 			</_links>
 		</employeeses>
 	</_embedded>
 	<_links>
 		<self>
-			<href>http://localhost:8080/northwind-data/api/employees</href>
+			<href>https://localhost:8443/northwind-data/api/employees</href>
 		</self>
 		<profile>
-			<href>http://localhost:8080/northwind-data/api/profile/employees</href>
+			<href>https://localhost:8443/northwind-data/api/profile/employees</href>
 		</profile>
 		<search>
-			<href>http://localhost:8080/northwind-data/api/employees/search</href>
+			<href>https://localhost:8443/northwind-data/api/employees/search</href>
 		</search>
 	</_links>
 	<page>

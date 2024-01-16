@@ -4,10 +4,10 @@
 			<statusName>New</statusName>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/orderStatus/0</href>
+					<href>https://localhost:8443/northwind-data/api/orderStatus/0</href>
 				</self>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/orderStatus/0</href>
+					<href>https://localhost:8443/northwind-data/api/orderStatus/0</href>
 				</orderStatus>
 			</_links>
 		</orderStatuses>
@@ -15,10 +15,10 @@
 			<statusName>Invoiced</statusName>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/orderStatus/1</href>
+					<href>https://localhost:8443/northwind-data/api/orderStatus/1</href>
 				</self>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/orderStatus/1</href>
+					<href>https://localhost:8443/northwind-data/api/orderStatus/1</href>
 				</orderStatus>
 			</_links>
 		</orderStatuses>
@@ -26,10 +26,10 @@
 			<statusName>Shipped</statusName>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/orderStatus/2</href>
+					<href>https://localhost:8443/northwind-data/api/orderStatus/2</href>
 				</self>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/orderStatus/2</href>
+					<href>https://localhost:8443/northwind-data/api/orderStatus/2</href>
 				</orderStatus>
 			</_links>
 		</orderStatuses>
@@ -37,20 +37,20 @@
 			<statusName>Closed</statusName>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/orderStatus/3</href>
+					<href>https://localhost:8443/northwind-data/api/orderStatus/3</href>
 				</self>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/orderStatus/3</href>
+					<href>https://localhost:8443/northwind-data/api/orderStatus/3</href>
 				</orderStatus>
 			</_links>
 		</orderStatuses>
 	</_embedded>
 	<_links>
 		<self>
-			<href>http://localhost:8080/northwind-data/api/orderStatus</href>
+			<href>https://localhost:8443/northwind-data/api/orderStatus</href>
 		</self>
 		<profile>
-			<href>http://localhost:8080/northwind-data/api/profile/orderStatus</href>
+			<href>https://localhost:8443/northwind-data/api/profile/orderStatus</href>
 		</profile>
 	</_links>
 	<page>

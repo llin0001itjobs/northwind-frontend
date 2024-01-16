@@ -17,25 +17,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/30</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/30</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/30</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/30</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/30/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/30/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/30/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/30/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/30/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/30/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/30/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/30/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/30/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/30/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -56,25 +56,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/31</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/31</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/31</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/31</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/31/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/31/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/31/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/31/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/31/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/31/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/31/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/31/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/31/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/31/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -95,25 +95,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/32</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/32</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/32</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/32</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/32/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/32/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/32/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/32/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/32/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/32/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/32/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/32/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/32/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/32/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -134,25 +134,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/33</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/33</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/33</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/33</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/33/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/33/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/33/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/33/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/33/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/33/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/33/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/33/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/33/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/33/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -173,25 +173,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/34</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/34</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/34</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/34</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/34/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/34/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/34/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/34/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/34/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/34/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/34/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/34/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/34/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/34/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -212,25 +212,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/35</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/35</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/35</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/35</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/35/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/35/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/35/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/35/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/35/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/35/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/35/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/35/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/35/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/35/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -251,25 +251,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/36</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/36</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/36</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/36</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/36/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/36/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/36/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/36/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/36/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/36/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/36/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/36/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/36/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/36/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -290,25 +290,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/37</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/37</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/37</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/37</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/37/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/37/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/37/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/37/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/37/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/37/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/37/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/37/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/37/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/37/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -329,25 +329,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/38</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/38</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/38</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/38</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/38/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/38/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/38/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/38/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/38/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/38/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/38/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/38/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/38/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/38/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -368,25 +368,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/39</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/39</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/39</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/39</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/39/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/39/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/39/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/39/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/39/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/39/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/39/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/39/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/39/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/39/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -407,25 +407,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/40</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/40</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/40</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/40</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/40/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/40/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/40/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/40/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/40/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/40/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/40/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/40/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/40/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/40/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -446,25 +446,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/41</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/41</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/41</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/41</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/41/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/41/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/41/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/41/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/41/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/41/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/41/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/41/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/41/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/41/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -485,25 +485,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/42</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/42</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/42</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/42</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/42/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/42/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/42/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/42/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/42/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/42/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/42/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/42/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/42/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/42/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -525,25 +525,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/43</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/43</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/43</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/43</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/43/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/43/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/43/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/43/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/43/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/43/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/43/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/43/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/43/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/43/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -564,25 +564,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/44</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/44</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/44</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/44</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/44/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/44/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/44/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/44/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/44/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/44/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/44/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/44/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/44/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/44/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -603,25 +603,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/45</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/45</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/45</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/45</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/45/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/45/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/45/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/45/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/45/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/45/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/45/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/45/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/45/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/45/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -642,25 +642,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/46</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/46</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/46</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/46</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/46/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/46/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/46/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/46/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/46/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/46/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/46/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/46/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/46/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/46/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -681,25 +681,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/47</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/47</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/47</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/47</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/47/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/47/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/47/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/47/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/47/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/47/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/47/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/47/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/47/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/47/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -720,25 +720,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/48</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/48</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/48</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/48</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/48/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/48/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/48/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/48/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/48/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/48/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/48/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/48/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/48/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/48/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -760,25 +760,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/50</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/50</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/50</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/50</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/50/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/50/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/50/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/50/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/50/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/50/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/50/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/50/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/50/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/50/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -799,25 +799,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/51</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/51</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/51</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/51</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/51/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/51/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/51/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/51/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/51/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/51/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/51/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/51/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/51/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/51/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -838,25 +838,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/55</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/55</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/55</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/55</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/55/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/55/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/55/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/55/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/55/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/55/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/55/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/55/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/55/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/55/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -877,25 +877,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/56</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/56</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/56</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/56</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/56/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/56/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/56/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/56/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/56/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/56/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/56/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/56/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/56/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/56/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -916,25 +916,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/57</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/57</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/57</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/57</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/57/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/57/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/57/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/57/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/57/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/57/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/57/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/57/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/57/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/57/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -955,25 +955,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/58</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/58</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/58</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/58</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/58/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/58/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/58/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/58/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/58/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/58/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/58/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/58/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/58/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/58/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -994,25 +994,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/59</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/59</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/59</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/59</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/59/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/59/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/59/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/59/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/59/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/59/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/59/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/59/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/59/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/59/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -1034,25 +1034,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/60</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/60</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/60</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/60</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/60/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/60/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/60/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/60/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/60/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/60/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/60/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/60/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/60/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/60/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -1073,25 +1073,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/61</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/61</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/61</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/61</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/61/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/61/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/61/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/61/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/61/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/61/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/61/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/61/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/61/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/61/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -1112,25 +1112,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/62</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/62</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/62</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/62</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/62/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/62/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/62/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/62/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/62/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/62/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/62/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/62/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/62/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/62/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -1151,25 +1151,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/63</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/63</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/63</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/63</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/63/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/63/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/63/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/63/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/63/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/63/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/63/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/63/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/63/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/63/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -1191,25 +1191,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/64</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/64</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/64</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/64</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/64/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/64/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/64/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/64/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/64/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/64/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/64/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/64/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/64/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/64/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -1230,25 +1230,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/65</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/65</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/65</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/65</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/65/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/65/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/65/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/65/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/65/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/65/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/65/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/65/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/65/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/65/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -1269,25 +1269,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/66</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/66</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/66</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/66</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/66/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/66/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/66/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/66/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/66/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/66/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/66/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/66/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/66/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/66/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -1309,25 +1309,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/67</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/67</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/67</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/67</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/67/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/67/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/67/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/67/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/67/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/67/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/67/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/67/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/67/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/67/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -1348,25 +1348,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/68</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/68</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/68</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/68</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/68/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/68/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/68/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/68/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/68/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/68/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/68/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/68/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/68/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/68/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -1387,25 +1387,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/69</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/69</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/69</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/69</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/69/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/69/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/69/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/69/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/69/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/69/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/69/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/69/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/69/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/69/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -1426,25 +1426,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/70</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/70</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/70</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/70</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/70/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/70/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/70/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/70/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/70/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/70/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/70/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/70/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/70/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/70/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -1466,25 +1466,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/71</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/71</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/71</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/71</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/71/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/71/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/71/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/71/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/71/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/71/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/71/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/71/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/71/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/71/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -1505,25 +1505,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/72</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/72</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/72</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/72</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/72/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/72/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/72/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/72/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/72/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/72/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/72/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/72/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/72/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/72/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -1544,25 +1544,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/73</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/73</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/73</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/73</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/73/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/73/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/73/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/73/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/73/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/73/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/73/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/73/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/73/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/73/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -1583,25 +1583,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/74</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/74</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/74</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/74</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/74/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/74/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/74/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/74/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/74/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/74/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/74/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/74/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/74/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/74/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -1622,25 +1622,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/75</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/75</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/75</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/75</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/75/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/75/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/75/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/75/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/75/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/75/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/75/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/75/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/75/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/75/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -1661,25 +1661,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/76</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/76</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/76</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/76</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/76/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/76/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/76/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/76/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/76/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/76/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/76/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/76/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/76/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/76/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -1700,25 +1700,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/77</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/77</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/77</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/77</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/77/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/77/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/77/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/77/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/77/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/77/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/77/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/77/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/77/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/77/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -1740,26 +1740,26 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/78</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/78</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/78</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/78</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/78/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/78/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/78/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/78/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/78/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/78/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/78/customer
+					<href>https://localhost:8443/northwind-data/api/customerOrder/78/customer
 					</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/78/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/78/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -1780,25 +1780,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/79</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/79</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/79</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/79</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/79/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/79/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/79/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/79/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/79/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/79/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/79/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/79/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/79/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/79/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -1819,25 +1819,25 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/80</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/80</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/80</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/80</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/80/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/80/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/80/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/80/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/80/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/80/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/80/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/80/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/80/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/80/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
@@ -1859,36 +1859,36 @@
 			<taxRate>0.0</taxRate>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/81</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/81</href>
 				</self>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/81</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/81</href>
 				</customerOrder>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/81/orderTaxStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/81/orderTaxStatus</href>
 				</orderTaxStatus>
 				<employee>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/81/employee</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/81/employee</href>
 				</employee>
 				<orderStatus>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/81/orderStatus</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/81/orderStatus</href>
 				</orderStatus>
 				<customer>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/81/customer</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/81/customer</href>
 				</customer>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/customerOrder/81/shipper</href>
+					<href>https://localhost:8443/northwind-data/api/customerOrder/81/shipper</href>
 				</shipper>
 			</_links>
 		</customerOrders>
 	</_embedded>
 	<_links>
 		<self>
-			<href>http://localhost:8080/northwind-data/api/customerOrder
+			<href>https://localhost:8443/northwind-data/api/customerOrder
 			</href>
 		</self>
 		<profile>
-			<href>http://localhost:8080/northwind-data/api/profile/customerOrder</href>
+			<href>https://localhost:8443/northwind-data/api/profile/customerOrder</href>
 		</profile>
 	</_links>
 	<page>

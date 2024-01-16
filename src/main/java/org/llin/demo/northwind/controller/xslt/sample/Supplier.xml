@@ -22,16 +22,16 @@
 			<portraitTitle/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/supplier/1</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/1</href>
 				</self>
 				<supplier>
-					<href>http://localhost:8080/northwind-data/api/supplier/1</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/1</href>
 				</supplier>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/supplier/1/company</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/1/company</href>
 				</company>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/supplier/1/product</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/1/product</href>
 				</product>
 			</_links>
 		</suppliers>
@@ -57,16 +57,16 @@
 			<portraitTitle/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/supplier/2</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/2</href>
 				</self>
 				<supplier>
-					<href>http://localhost:8080/northwind-data/api/supplier/2</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/2</href>
 				</supplier>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/supplier/2/company</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/2/company</href>
 				</company>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/supplier/2/product</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/2/product</href>
 				</product>
 			</_links>
 		</suppliers>
@@ -92,16 +92,16 @@
 			<portraitTitle/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/supplier/3</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/3</href>
 				</self>
 				<supplier>
-					<href>http://localhost:8080/northwind-data/api/supplier/3</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/3</href>
 				</supplier>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/supplier/3/company</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/3/company</href>
 				</company>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/supplier/3/product</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/3/product</href>
 				</product>
 			</_links>
 		</suppliers>
@@ -127,16 +127,16 @@
 			<portraitTitle/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/supplier/4</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/4</href>
 				</self>
 				<supplier>
-					<href>http://localhost:8080/northwind-data/api/supplier/4</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/4</href>
 				</supplier>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/supplier/4/company</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/4/company</href>
 				</company>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/supplier/4/product</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/4/product</href>
 				</product>
 			</_links>
 		</suppliers>
@@ -162,16 +162,16 @@
 			<portraitTitle/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/supplier/5</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/5</href>
 				</self>
 				<supplier>
-					<href>http://localhost:8080/northwind-data/api/supplier/5</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/5</href>
 				</supplier>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/supplier/5/company</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/5/company</href>
 				</company>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/supplier/5/product</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/5/product</href>
 				</product>
 			</_links>
 		</suppliers>
@@ -197,16 +197,16 @@
 			<portraitTitle/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/supplier/6</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/6</href>
 				</self>
 				<supplier>
-					<href>http://localhost:8080/northwind-data/api/supplier/6</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/6</href>
 				</supplier>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/supplier/6/company</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/6/company</href>
 				</company>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/supplier/6/product</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/6/product</href>
 				</product>
 			</_links>
 		</suppliers>
@@ -232,16 +232,16 @@
 			<portraitTitle/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/supplier/7</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/7</href>
 				</self>
 				<supplier>
-					<href>http://localhost:8080/northwind-data/api/supplier/7</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/7</href>
 				</supplier>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/supplier/7/company</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/7/company</href>
 				</company>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/supplier/7/product</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/7/product</href>
 				</product>
 			</_links>
 		</suppliers>
@@ -267,16 +267,16 @@
 			<portraitTitle/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/supplier/8</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/8</href>
 				</self>
 				<supplier>
-					<href>http://localhost:8080/northwind-data/api/supplier/8</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/8</href>
 				</supplier>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/supplier/8/company</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/8/company</href>
 				</company>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/supplier/8/product</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/8/product</href>
 				</product>
 			</_links>
 		</suppliers>
@@ -302,16 +302,16 @@
 			<portraitTitle/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/supplier/9</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/9</href>
 				</self>
 				<supplier>
-					<href>http://localhost:8080/northwind-data/api/supplier/9</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/9</href>
 				</supplier>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/supplier/9/company</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/9/company</href>
 				</company>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/supplier/9/product</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/9/product</href>
 				</product>
 			</_links>
 		</suppliers>
@@ -337,29 +337,29 @@
 			<portraitTitle/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/supplier/10</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/10</href>
 				</self>
 				<supplier>
-					<href>http://localhost:8080/northwind-data/api/supplier/10</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/10</href>
 				</supplier>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/supplier/10/company</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/10/company</href>
 				</company>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/supplier/10/product</href>
+					<href>https://localhost:8443/northwind-data/api/supplier/10/product</href>
 				</product>
 			</_links>
 		</suppliers>
 	</_embedded>
 	<_links>
 		<self>
-			<href>http://localhost:8080/northwind-data/api/supplier</href>
+			<href>https://localhost:8443/northwind-data/api/supplier</href>
 		</self>
 		<profile>
-			<href>http://localhost:8080/northwind-data/api/profile/supplier</href>
+			<href>https://localhost:8443/northwind-data/api/profile/supplier</href>
 		</profile>
 		<search>
-			<href>http://localhost:8080/northwind-data/api/supplier/search</href>
+			<href>https://localhost:8443/northwind-data/api/supplier/search</href>
 		</search>
 	</_links>
 	<page>

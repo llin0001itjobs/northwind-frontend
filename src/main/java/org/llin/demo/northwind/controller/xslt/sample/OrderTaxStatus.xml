@@ -4,10 +4,10 @@
 			<taxStatusName>Tax Exempt</taxStatusName>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/orderTaxStatus/0</href>
+					<href>https://localhost:8443/northwind-data/api/orderTaxStatus/0</href>
 				</self>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/orderTaxStatus/0</href>
+					<href>https://localhost:8443/northwind-data/api/orderTaxStatus/0</href>
 				</orderTaxStatus>
 			</_links>
 		</orderTaxStatuses>
@@ -15,20 +15,20 @@
 			<taxStatusName>Taxable</taxStatusName>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/orderTaxStatus/1</href>
+					<href>https://localhost:8443/northwind-data/api/orderTaxStatus/1</href>
 				</self>
 				<orderTaxStatus>
-					<href>http://localhost:8080/northwind-data/api/orderTaxStatus/1</href>
+					<href>https://localhost:8443/northwind-data/api/orderTaxStatus/1</href>
 				</orderTaxStatus>
 			</_links>
 		</orderTaxStatuses>
 	</_embedded>
 	<_links>
 		<self>
-			<href>http://localhost:8080/northwind-data/api/orderTaxStatus</href>
+			<href>https://localhost:8443/northwind-data/api/orderTaxStatus</href>
 		</self>
 		<profile>
-			<href>http://localhost:8080/northwind-data/api/profile/orderTaxStatus</href>
+			<href>https://localhost:8443/northwind-data/api/profile/orderTaxStatus</href>
 		</profile>
 	</_links>
 	<page>

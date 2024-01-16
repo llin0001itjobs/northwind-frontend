@@ -4,10 +4,10 @@
 			<description>Administrator</description>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/role/ADMIN</href>
+					<href>https://localhost:8443/northwind-data/api/role/ADMIN</href>
 				</self>
 				<role>
-					<href>http://localhost:8080/northwind-data/api/role/ADMIN</href>
+					<href>https://localhost:8443/northwind-data/api/role/ADMIN</href>
 				</role>
 			</_links>
 		</roles>
@@ -15,20 +15,20 @@
 			<description>Default User</description>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/role/USER</href>
+					<href>https://localhost:8443/northwind-data/api/role/USER</href>
 				</self>
 				<role>
-					<href>http://localhost:8080/northwind-data/api/role/USER</href>
+					<href>https://localhost:8443/northwind-data/api/role/USER</href>
 				</role>
 			</_links>
 		</roles>
 	</_embedded>
 	<_links>
 		<self>
-			<href>http://localhost:8080/northwind-data/api/role</href>
+			<href>https://localhost:8443/northwind-data/api/role</href>
 		</self>
 		<profile>
-			<href>http://localhost:8080/northwind-data/api/profile/role</href>
+			<href>https://localhost:8443/northwind-data/api/profile/role</href>
 		</profile>
 	</_links>
 	<page>

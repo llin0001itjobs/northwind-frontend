@@ -4,10 +4,10 @@
 			<description>Cash</description>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/paymentType/CASH</href>
+					<href>https://localhost:8443/northwind-data/api/paymentType/CASH</href>
 				</self>
 				<paymentType>
-					<href>http://localhost:8080/northwind-data/api/paymentType/CASH</href>
+					<href>https://localhost:8443/northwind-data/api/paymentType/CASH</href>
 				</paymentType>
 			</_links>
 		</paymentTypes>
@@ -15,10 +15,10 @@
 			<description>Check</description>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/paymentType/CHECK</href>
+					<href>https://localhost:8443/northwind-data/api/paymentType/CHECK</href>
 				</self>
 				<paymentType>
-					<href>http://localhost:8080/northwind-data/api/paymentType/CHECK</href>
+					<href>https://localhost:8443/northwind-data/api/paymentType/CHECK</href>
 				</paymentType>
 			</_links>
 		</paymentTypes>
@@ -26,20 +26,20 @@
 			<description>Credit Card</description>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/paymentType/CREDIT</href>
+					<href>https://localhost:8443/northwind-data/api/paymentType/CREDIT</href>
 				</self>
 				<paymentType>
-					<href>http://localhost:8080/northwind-data/api/paymentType/CREDIT</href>
+					<href>https://localhost:8443/northwind-data/api/paymentType/CREDIT</href>
 				</paymentType>
 			</_links>
 		</paymentTypes>
 	</_embedded>
 	<_links>
 		<self>
-			<href>http://localhost:8080/northwind-data/api/paymentType</href>
+			<href>https://localhost:8443/northwind-data/api/paymentType</href>
 		</self>
 		<profile>
-			<href>http://localhost:8080/northwind-data/api/profile/paymentType</href>
+			<href>https://localhost:8443/northwind-data/api/profile/paymentType</href>
 		</profile>
 	</_links>
 	<page>

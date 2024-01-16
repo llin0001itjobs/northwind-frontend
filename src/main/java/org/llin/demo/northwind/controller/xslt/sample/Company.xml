@@ -4,10 +4,10 @@
 			<name>None</name>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/companies/1</href>
+					<href>https://localhost:8443/northwind-data/api/companies/1</href>
 				</self>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/companies/1</href>
+					<href>https://localhost:8443/northwind-data/api/companies/1</href>
 				</company>
 			</_links>
 		</companies>
@@ -15,10 +15,10 @@
 			<name>Springfield Elementary School</name>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/companies/2</href>
+					<href>https://localhost:8443/northwind-data/api/companies/2</href>
 				</self>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/companies/2</href>
+					<href>https://localhost:8443/northwind-data/api/companies/2</href>
 				</company>
 			</_links>
 		</companies>
@@ -26,10 +26,10 @@
 			<name>Springfield DMV</name>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/companies/3</href>
+					<href>https://localhost:8443/northwind-data/api/companies/3</href>
 				</self>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/companies/3</href>
+					<href>https://localhost:8443/northwind-data/api/companies/3</href>
 				</company>
 			</_links>
 		</companies>
@@ -37,10 +37,10 @@
 			<name>Springfield Nuclear Power Plant</name>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/companies/4</href>
+					<href>https://localhost:8443/northwind-data/api/companies/4</href>
 				</self>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/companies/4</href>
+					<href>https://localhost:8443/northwind-data/api/companies/4</href>
 				</company>
 			</_links>
 		</companies>
@@ -48,10 +48,10 @@
 			<name>Moe's Tavern</name>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/companies/5</href>
+					<href>https://localhost:8443/northwind-data/api/companies/5</href>
 				</self>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/companies/5</href>
+					<href>https://localhost:8443/northwind-data/api/companies/5</href>
 				</company>
 			</_links>
 		</companies>
@@ -59,10 +59,10 @@
 			<name>Kwik-E-Mart</name>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/companies/6</href>
+					<href>https://localhost:8443/northwind-data/api/companies/6</href>
 				</self>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/companies/6</href>
+					<href>https://localhost:8443/northwind-data/api/companies/6</href>
 				</company>
 			</_links>
 		</companies>
@@ -70,10 +70,10 @@
 			<name>Planet Express</name>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/companies/7</href>
+					<href>https://localhost:8443/northwind-data/api/companies/7</href>
 				</self>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/companies/7</href>
+					<href>https://localhost:8443/northwind-data/api/companies/7</href>
 				</company>
 			</_links>
 		</companies>
@@ -81,10 +81,10 @@
 			<name>The Leftorium</name>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/companies/8</href>
+					<href>https://localhost:8443/northwind-data/api/companies/8</href>
 				</self>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/companies/8</href>
+					<href>https://localhost:8443/northwind-data/api/companies/8</href>
 				</company>
 			</_links>
 		</companies>
@@ -92,10 +92,10 @@
 			<name>Spingfield Shippers</name>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/companies/9</href>
+					<href>https://localhost:8443/northwind-data/api/companies/9</href>
 				</self>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/companies/9</href>
+					<href>https://localhost:8443/northwind-data/api/companies/9</href>
 				</company>
 			</_links>
 		</companies>
@@ -103,10 +103,10 @@
 			<name>Expert Shipping Solutions</name>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/companies/10</href>
+					<href>https://localhost:8443/northwind-data/api/companies/10</href>
 				</self>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/companies/10</href>
+					<href>https://localhost:8443/northwind-data/api/companies/10</href>
 				</company>
 			</_links>
 		</companies>
@@ -114,10 +114,10 @@
 			<name>Democratic Order Of Planets</name>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/companies/11</href>
+					<href>https://localhost:8443/northwind-data/api/companies/11</href>
 				</self>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/companies/11</href>
+					<href>https://localhost:8443/northwind-data/api/companies/11</href>
 				</company>
 			</_links>
 		</companies>
@@ -125,20 +125,20 @@
 			<name>The Krusty the Clown Show</name>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/companies/12</href>
+					<href>https://localhost:8443/northwind-data/api/companies/12</href>
 				</self>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/companies/12</href>
+					<href>https://localhost:8443/northwind-data/api/companies/12</href>
 				</company>
 			</_links>
 		</companies>
 	</_embedded>
 	<_links>
 		<self>
-			<href>http://localhost:8080/northwind-data/api/companies</href>
+			<href>https://localhost:8443/northwind-data/api/companies</href>
 		</self>
 		<profile>
-			<href>http://localhost:8080/northwind-data/api/profile/companies</href>
+			<href>https://localhost:8443/northwind-data/api/profile/companies</href>
 		</profile>
 	</_links>
 	<page>

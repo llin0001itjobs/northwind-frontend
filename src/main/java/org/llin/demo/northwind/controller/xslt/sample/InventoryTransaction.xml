@@ -7,22 +7,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/35</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/35</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/35</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/35</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/35/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/35/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/35/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/35/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/35/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/35/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/35/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/35/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -33,22 +33,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/36</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/36</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/36</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/36</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/36/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/36/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/36/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/36/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/36/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/36/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/36/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/36/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -60,22 +60,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/37</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/37</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/37</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/37</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/37/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/37/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/37/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/37/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/37/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/37/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/37/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/37/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -86,22 +86,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/38</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/38</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/38</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/38</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/38/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/38/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/38/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/38/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/38/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/38/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/38/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/38/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -112,22 +112,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/39</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/39</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/39</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/39</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/39/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/39/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/39/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/39/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/39/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/39/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/39/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/39/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -138,22 +138,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/40</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/40</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/40</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/40</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/40/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/40/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/40/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/40/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/40/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/40/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/40/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/40/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -164,22 +164,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/41</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/41</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/41</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/41</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/41/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/41/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/41/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/41/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/41/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/41/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/41/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/41/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -190,22 +190,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/42</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/42</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/42</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/42</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/42/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/42/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/42/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/42/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/42/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/42/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/42/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/42/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -216,22 +216,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/43</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/43</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/43</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/43</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/43/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/43/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/43/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/43/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/43/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/43/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/43/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/43/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -242,22 +242,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/44</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/44</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/44</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/44</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/44/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/44/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/44/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/44/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/44/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/44/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/44/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/44/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -268,22 +268,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/45</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/45</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/45</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/45</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/45/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/45/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/45/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/45/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/45/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/45/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/45/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/45/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -294,22 +294,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/46</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/46</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/46</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/46</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/46/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/46/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/46/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/46/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/46/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/46/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/46/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/46/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -320,22 +320,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/47</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/47</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/47</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/47</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/47/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/47/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/47/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/47/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/47/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/47/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/47/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/47/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -346,22 +346,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/48</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/48</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/48</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/48</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/48/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/48/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/48/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/48/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/48/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/48/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/48/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/48/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -372,22 +372,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/49</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/49</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/49</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/49</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/49/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/49/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/49/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/49/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/49/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/49/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/49/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/49/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -398,22 +398,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/50</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/50</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/50</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/50</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/50/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/50/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/50/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/50/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/50/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/50/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/50/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/50/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -424,22 +424,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/51</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/51</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/51</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/51</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/51/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/51/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/51/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/51/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/51/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/51/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/51/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/51/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -450,22 +450,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/52</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/52</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/52</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/52</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/52/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/52/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/52/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/52/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/52/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/52/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/52/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/52/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -476,22 +476,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/53</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/53</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/53</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/53</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/53/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/53/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/53/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/53/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/53/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/53/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/53/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/53/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -502,22 +502,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/54</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/54</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/54</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/54</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/54/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/54/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/54/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/54/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/54/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/54/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/54/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/54/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -528,22 +528,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/55</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/55</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/55</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/55</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/55/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/55/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/55/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/55/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/55/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/55/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/55/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/55/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -554,22 +554,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/56</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/56</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/56</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/56</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/56/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/56/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/56/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/56/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/56/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/56/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/56/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/56/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -580,22 +580,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/57</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/57</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/57</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/57</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/57/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/57/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/57/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/57/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/57/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/57/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/57/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/57/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -606,22 +606,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/58</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/58</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/58</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/58</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/58/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/58/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/58/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/58/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/58/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/58/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/58/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/58/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -632,22 +632,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/59</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/59</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/59</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/59</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/59/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/59/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/59/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/59/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/59/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/59/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/59/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/59/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -658,22 +658,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/60</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/60</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/60</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/60</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/60/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/60/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/60/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/60/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/60/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/60/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/60/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/60/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -684,22 +684,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/61</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/61</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/61</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/61</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/61/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/61/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/61/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/61/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/61/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/61/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/61/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/61/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -710,22 +710,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/62</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/62</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/62</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/62</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/62/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/62/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/62/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/62/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/62/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/62/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/62/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/62/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -736,22 +736,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/63</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/63</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/63</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/63</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/63/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/63/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/63/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/63/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/63/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/63/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/63/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/63/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -762,22 +762,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/64</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/64</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/64</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/64</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/64/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/64/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/64/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/64/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/64/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/64/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/64/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/64/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -788,22 +788,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/65</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/65</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/65</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/65</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/65/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/65/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/65/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/65/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/65/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/65/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/65/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/65/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -814,22 +814,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/66</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/66</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/66</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/66</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/66/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/66/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/66/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/66/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/66/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/66/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/66/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/66/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -840,22 +840,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/67</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/67</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/67</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/67</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/67/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/67/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/67/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/67/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/67/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/67/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/67/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/67/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -866,22 +866,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/68</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/68</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/68</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/68</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/68/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/68/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/68/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/68/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/68/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/68/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/68/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/68/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -892,23 +892,23 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/69</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/69</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/69</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/69</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/69/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/69/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/69/inventoryTransactionType
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/69/inventoryTransactionType
 				</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/69/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/69/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/69/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/69/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -919,22 +919,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/70</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/70</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/70</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/70</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/70/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/70/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/70/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/70/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/70/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/70/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/70/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/70/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -945,22 +945,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/71</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/71</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/71</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/71</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/71/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/71/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/71/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/71/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/71/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/71/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/71/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/71/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -971,23 +971,23 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/72</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/72</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/72</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/72</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/72/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/72/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/72/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/72/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/72/product
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/72/product
 					</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/72/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/72/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -998,23 +998,23 @@
 			<comments>Fill Back Ordered product, Order #40</comments>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/73</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/73</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/73</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/73</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/73/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/73/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/73/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/73/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/73/product
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/73/product
 					</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/73/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/73/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1025,22 +1025,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/74</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/74</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/74</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/74</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/74/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/74/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/74/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/74/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/74/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/74/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/74/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/74/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1051,22 +1051,22 @@
 			<comments>Fill Back Ordered product, Order #39</comments>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/75</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/75</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/75</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/75</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/75/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/75/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/75/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/75/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/75/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/75/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/75/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/75/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1077,22 +1077,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/76</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/76</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/76</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/76</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/76/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/76/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/76/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/76/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/76/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/76/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/76/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/76/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1103,22 +1103,22 @@
 			<comments>Fill Back Ordered product, Order #38</comments>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/77</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/77</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/77</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/77</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/77/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/77/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/77/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/77/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/77/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/77/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/77/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/77/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1129,22 +1129,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/78</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/78</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/78</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/78</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/78/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/78/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/78/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/78/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/78/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/78/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/78/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/78/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1155,22 +1155,22 @@
 			<comments>Fill Back Ordered product, Order #36</comments>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/79</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/79</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/79</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/79</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/79/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/79/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/79/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/79/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/79/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/79/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/79/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/79/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1181,22 +1181,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/80</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/80</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/80</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/80</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/80/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/80/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/80/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/80/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/80/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/80/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/80/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/80/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1207,22 +1207,22 @@
 			<comments>Fill Back Ordered product, Order #33</comments>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/81</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/81</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/81</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/81</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/81/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/81/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/81/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/81/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/81/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/81/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/81/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/81/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1233,22 +1233,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/82</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/82</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/82</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/82</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/82/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/82/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/82/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/82/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/82/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/82/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/82/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/82/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1259,22 +1259,22 @@
 			<comments>Fill Back Ordered product, Order #30</comments>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/83</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/83</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/83</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/83</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/83/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/83/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/83/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/83/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/83/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/83/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/83/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/83/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1285,22 +1285,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/84</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/84</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/84</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/84</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/84/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/84/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/84/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/84/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/84/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/84/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/84/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/84/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1311,22 +1311,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/85</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/85</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/85</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/85</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/85/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/85/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/85/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/85/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/85/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/85/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/85/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/85/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1337,22 +1337,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/86</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/86</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/86</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/86</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/86/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/86/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/86/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/86/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/86/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/86/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/86/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/86/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1363,22 +1363,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/87</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/87</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/87</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/87</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/87/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/87/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/87/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/87/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/87/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/87/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/87/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/87/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1389,22 +1389,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/88</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/88</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/88</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/88</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/88/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/88/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/88/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/88/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/88/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/88/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/88/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/88/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1415,22 +1415,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/89</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/89</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/89</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/89</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/89/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/89/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/89/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/89/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/89/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/89/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/89/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/89/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1441,22 +1441,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/90</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/90</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/90</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/90</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/90/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/90/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/90/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/90/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/90/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/90/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/90/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/90/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1467,22 +1467,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/91</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/91</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/91</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/91</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/91/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/91/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/91/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/91/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/91/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/91/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/91/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/91/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1493,22 +1493,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/92</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/92</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/92</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/92</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/92/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/92/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/92/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/92/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/92/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/92/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/92/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/92/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1519,22 +1519,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/93</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/93</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/93</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/93</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/93/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/93/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/93/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/93/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/93/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/93/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/93/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/93/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1545,22 +1545,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/94</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/94</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/94</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/94</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/94/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/94/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/94/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/94/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/94/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/94/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/94/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/94/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1571,22 +1571,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/95</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/95</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/95</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/95</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/95/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/95/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/95/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/95/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/95/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/95/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/95/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/95/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1597,22 +1597,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/96</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/96</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/96</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/96</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/96/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/96/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/96/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/96/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/96/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/96/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/96/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/96/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1623,22 +1623,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/97</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/97</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/97</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/97</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/97/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/97/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/97/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/97/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/97/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/97/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/97/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/97/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1649,22 +1649,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/98</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/98</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/98</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/98</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/98/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/98/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/98/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/98/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/98/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/98/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/98/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/98/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1675,22 +1675,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/99</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/99</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/99</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/99</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/99/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/99/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/99/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/99/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/99/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/99/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/99/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/99/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1701,22 +1701,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/100</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/100</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/100</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/100</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/100/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/100/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/100/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/100/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/100/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/100/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/100/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/100/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1727,22 +1727,22 @@
 			<comments>Fill Back Ordered product, Order #46</comments>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/101</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/101</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/101</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/101</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/101/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/101/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/101/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/101/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/101/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/101/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/101/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/101/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1753,22 +1753,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/102</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/102</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/102</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/102</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/102/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/102/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/102/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/102/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/102/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/102/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/102/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/102/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1779,22 +1779,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/103</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/103</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/103</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/103</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/103/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/103/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/103/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/103/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/103/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/103/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/103/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/103/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1805,22 +1805,22 @@
 			<comments>Fill Back Ordered product, Order #41</comments>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/104</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/104</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/104</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/104</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/104/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/104/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/104/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/104/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/104/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/104/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/104/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/104/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1831,22 +1831,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/105</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/105</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/105</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/105</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/105/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/105/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/105/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/105/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/105/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/105/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/105/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/105/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1857,22 +1857,22 @@
 			<comments>Fill Back Ordered product, Order #48</comments>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/106</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/106</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/106</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/106</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/106/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/106/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/106/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/106/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/106/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/106/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/106/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/106/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1883,22 +1883,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/107</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/107</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/107</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/107</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/107/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/107/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/107/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/107/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/107/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/107/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/107/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/107/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1909,22 +1909,22 @@
 			<comments>Fill Back Ordered product, Order #47</comments>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/108</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/108</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/108</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/108</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/108/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/108/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/108/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/108/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/108/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/108/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/108/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/108/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1935,22 +1935,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/109</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/109</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/109</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/109</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/109/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/109/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/109/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/109/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/109/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/109/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/109/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/109/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1961,22 +1961,22 @@
 			<comments>Fill Back Ordered product, Order #42</comments>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/110</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/110</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/110</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/110</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/110/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/110/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/110/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/110/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/110/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/110/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/110/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/110/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -1987,22 +1987,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/111</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/111</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/111</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/111</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/111/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/111/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/111/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/111/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/111/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/111/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/111/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/111/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2013,22 +2013,22 @@
 			<comments>Fill Back Ordered product, Order #48</comments>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/112</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/112</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/112</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/112</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/112/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/112/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/112/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/112/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/112/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/112/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/112/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/112/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2039,22 +2039,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/113</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/113</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/113</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/113</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/113/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/113/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/113/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/113/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/113/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/113/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/113/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/113/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2065,22 +2065,22 @@
 			<comments>Fill Back Ordered product, Order #46</comments>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/114</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/114</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/114</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/114</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/114/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/114/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/114/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/114/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/114/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/114/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/114/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/114/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2091,22 +2091,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/115</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/115</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/115</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/115</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/115/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/115/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/115/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/115/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/115/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/115/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/115/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/115/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2117,22 +2117,22 @@
 			<comments>Fill Back Ordered product, Order #45</comments>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/116</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/116</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/116</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/116</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/116/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/116/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/116/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/116/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/116/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/116/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/116/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/116/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2143,22 +2143,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/117</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/117</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/117</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/117</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/117/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/117/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/117/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/117/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/117/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/117/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/117/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/117/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2169,22 +2169,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/118</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/118</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/118</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/118</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/118/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/118/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/118/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/118/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/118/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/118/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/118/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/118/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2196,22 +2196,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/119</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/119</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/119</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/119</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/119/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/119/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/119/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/119/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/119/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/119/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/119/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/119/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2223,22 +2223,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/120</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/120</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/120</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/120</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/120/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/120/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/120/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/120/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/120/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/120/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/120/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/120/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2249,22 +2249,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/121</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/121</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/121</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/121</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/121/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/121/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/121/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/121/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/121/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/121/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/121/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/121/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2275,22 +2275,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/122</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/122</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/122</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/122</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/122/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/122/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/122/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/122/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/122/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/122/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/122/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/122/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2301,22 +2301,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/123</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/123</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/123</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/123</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/123/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/123/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/123/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/123/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/123/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/123/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/123/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/123/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2327,22 +2327,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/124</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/124</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/124</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/124</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/124/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/124/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/124/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/124/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/124/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/124/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/124/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/124/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2353,22 +2353,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/125</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/125</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/125</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/125</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/125/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/125/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/125/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/125/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/125/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/125/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/125/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/125/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2379,22 +2379,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/126</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/126</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/126</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/126</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/126/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/126/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/126/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/126/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/126/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/126/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/126/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/126/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2405,22 +2405,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/127</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/127</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/127</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/127</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/127/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/127/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/127/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/127/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/127/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/127/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/127/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/127/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2431,22 +2431,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/128</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/128</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/128</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/128</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/128/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/128/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/128/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/128/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/128/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/128/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/128/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/128/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2457,22 +2457,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/129</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/129</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/129</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/129</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/129/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/129/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/129/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/129/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/129/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/129/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/129/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/129/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2483,22 +2483,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/130</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/130</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/130</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/130</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/130/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/130/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/130/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/130/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/130/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/130/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/130/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/130/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2509,22 +2509,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/131</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/131</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/131</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/131</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/131/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/131/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/131/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/131/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/131/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/131/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/131/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/131/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2535,22 +2535,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/132</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/132</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/132</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/132</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/132/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/132/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/132/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/132/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/132/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/132/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/132/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/132/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2561,22 +2561,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/133</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/133</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/133</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/133</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/133/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/133/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/133/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/133/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/133/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/133/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/133/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/133/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2587,22 +2587,22 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/134</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/134</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/134</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/134</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/134/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/134/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/134/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/134/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/134/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/134/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/134/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/134/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2613,23 +2613,23 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/135</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/135</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/135</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/135</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/135/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/135/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/135/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/135/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/135/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/135/product</href>
 				</product
 >
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/135/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/135/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
@@ -2640,35 +2640,35 @@
 			<comments/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/136</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/136</href>
 				</self>
 				<inventoryTransaction>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/136</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/136</href>
 				</inventoryTransaction>
 				<customerOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/136/customerOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/136/customerOrder</href>
 				</customerOrder>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/136/inventoryTransactionType</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/136/inventoryTransactionType</href>
 				</inventoryTransactionType>
 				<product>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/136/product</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/136/product</href>
 				</product>
 				<purchaseOrder>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransaction/136/purchaseOrder</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransaction/136/purchaseOrder</href>
 				</purchaseOrder>
 			</_links>
 		</inventoryTransactions>
 	</_embedded>
 	<_links>
 		<self>
-			<href>http://localhost:8080/northwind-data/api/inventoryTransaction</href>
+			<href>https://localhost:8443/northwind-data/api/inventoryTransaction</href>
 		</self>
 		<profile>
-			<href>http://localhost:8080/northwind-data/api/profile/inventoryTransaction</href>
+			<href>https://localhost:8443/northwind-data/api/profile/inventoryTransaction</href>
 		</profile>
 		<search>
-			<href>http://localhost:8080/northwind-data/api/inventoryTransaction/search</href>
+			<href>https://localhost:8443/northwind-data/api/inventoryTransaction/search</href>
 		</search>
 	</_links>
 	<page>

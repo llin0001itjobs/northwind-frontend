@@ -6,10 +6,10 @@
 			<password>o7Q1KoXVrH7WvEMUoMI1gA==</password>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/authentication/1</href>
+					<href>https://localhost:8443/northwind-data/api/authentication/1</href>
 				</self>
 				<authentication>
-					<href>http://localhost:8080/northwind-data/api/authentication/1</href>
+					<href>https://localhost:8443/northwind-data/api/authentication/1</href>
 				</authentication>
 			</_links>
 		</authentications>
@@ -19,20 +19,20 @@
 			<password>VTGN1ljR6fbXlborxtZzBQ==</password>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/authentication/2</href>
+					<href>https://localhost:8443/northwind-data/api/authentication/2</href>
 				</self>
 				<authentication>
-					<href>http://localhost:8080/northwind-data/api/authentication/2</href>
+					<href>https://localhost:8443/northwind-data/api/authentication/2</href>
 				</authentication>
 			</_links>
 		</authentications>
 	</_embedded>
 	<_links>
 		<self>
-			<href>http://localhost:8080/northwind-data/api/authentication</href>
+			<href>https://localhost:8443/northwind-data/api/authentication</href>
 		</self>
 		<profile>
-			<href>http://localhost:8080/northwind-data/api/profile/authentication</href>
+			<href>https://localhost:8443/northwind-data/api/profile/authentication</href>
 		</profile>
 	</_links>
 	<page>

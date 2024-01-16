@@ -22,13 +22,13 @@
 			<portraitTitle/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/shipper/1</href>
+					<href>https://localhost:8443/northwind-data/api/shipper/1</href>
 				</self>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/shipper/1</href>
+					<href>https://localhost:8443/northwind-data/api/shipper/1</href>
 				</shipper>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/shipper/1/company</href>
+					<href>https://localhost:8443/northwind-data/api/shipper/1/company</href>
 				</company>
 			</_links>
 		</shippers>
@@ -54,13 +54,13 @@
 			<portraitTitle/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/shipper/2</href>
+					<href>https://localhost:8443/northwind-data/api/shipper/2</href>
 				</self>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/shipper/2</href>
+					<href>https://localhost:8443/northwind-data/api/shipper/2</href>
 				</shipper>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/shipper/2/company</href>
+					<href>https://localhost:8443/northwind-data/api/shipper/2/company</href>
 				</company>
 			</_links>
 		</shippers>
@@ -86,26 +86,26 @@
 			<portraitTitle/>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/shipper/3</href>
+					<href>https://localhost:8443/northwind-data/api/shipper/3</href>
 				</self>
 				<shipper>
-					<href>http://localhost:8080/northwind-data/api/shipper/3</href>
+					<href>https://localhost:8443/northwind-data/api/shipper/3</href>
 				</shipper>
 				<company>
-					<href>http://localhost:8080/northwind-data/api/shipper/3/company</href>
+					<href>https://localhost:8443/northwind-data/api/shipper/3/company</href>
 				</company>
 			</_links>
 		</shippers>
 	</_embedded>
 	<_links>
 		<self>
-			<href>http://localhost:8080/northwind-data/api/shipper</href>
+			<href>https://localhost:8443/northwind-data/api/shipper</href>
 		</self>
 		<profile>
-			<href>http://localhost:8080/northwind-data/api/profile/shipper</href>
+			<href>https://localhost:8443/northwind-data/api/profile/shipper</href>
 		</profile>
 		<search>
-			<href>http://localhost:8080/northwind-data/api/shipper/search</href>
+			<href>https://localhost:8443/northwind-data/api/shipper/search</href>
 		</search>
 	</_links>
 	<page>

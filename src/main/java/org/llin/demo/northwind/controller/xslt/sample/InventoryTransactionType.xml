@@ -4,10 +4,10 @@
 			<typeName>Purchased</typeName>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransactionType/1</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransactionType/1</href>
 				</self>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransactionType/1</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransactionType/1</href>
 				</inventoryTransactionType>
 			</_links>
 		</inventoryTransactionTypes>
@@ -15,10 +15,10 @@
 			<typeName>Sold</typeName>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransactionType/2</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransactionType/2</href>
 				</self>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransactionType/2</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransactionType/2</href>
 				</inventoryTransactionType>
 			</_links>
 		</inventoryTransactionTypes>
@@ -26,10 +26,10 @@
 			<typeName>On Hold</typeName>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransactionType/3</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransactionType/3</href>
 				</self>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransactionType/3</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransactionType/3</href>
 				</inventoryTransactionType>
 			</_links>
 		</inventoryTransactionTypes>
@@ -37,20 +37,20 @@
 			<typeName>Waste</typeName>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransactionType/4</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransactionType/4</href>
 				</self>
 				<inventoryTransactionType>
-					<href>http://localhost:8080/northwind-data/api/inventoryTransactionType/4</href>
+					<href>https://localhost:8443/northwind-data/api/inventoryTransactionType/4</href>
 				</inventoryTransactionType>
 			</_links>
 		</inventoryTransactionTypes>
 	</_embedded>
 	<_links>
 		<self>
-			<href>http://localhost:8080/northwind-data/api/inventoryTransactionType</href>
+			<href>https://localhost:8443/northwind-data/api/inventoryTransactionType</href>
 		</self>
 		<profile>
-			<href>http://localhost:8080/northwind-data/api/profile/inventoryTransactionType</href>
+			<href>https://localhost:8443/northwind-data/api/profile/inventoryTransactionType</href>
 		</profile>
 	</_links>
 	<page>

@@ -4,10 +4,10 @@
 			<statusName>None</statusName>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/orderDetailStatus/0</href>
+					<href>https://localhost:8443/northwind-data/api/orderDetailStatus/0</href>
 				</self>
 				<orderDetailStatus>
-					<href>http://localhost:8080/northwind-data/api/orderDetailStatus/0</href>
+					<href>https://localhost:8443/northwind-data/api/orderDetailStatus/0</href>
 				</orderDetailStatus>
 			</_links>
 		</orderDetailStatuses>
@@ -15,10 +15,10 @@
 			<statusName>Allocated</statusName>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/orderDetailStatus/1</href>
+					<href>https://localhost:8443/northwind-data/api/orderDetailStatus/1</href>
 				</self>
 				<orderDetailStatus>
-					<href>http://localhost:8080/northwind-data/api/orderDetailStatus/1</href>
+					<href>https://localhost:8443/northwind-data/api/orderDetailStatus/1</href>
 				</orderDetailStatus>
 			</_links>
 		</orderDetailStatuses>
@@ -26,10 +26,10 @@
 			<statusName>Invoiced</statusName>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/orderDetailStatus/2</href>
+					<href>https://localhost:8443/northwind-data/api/orderDetailStatus/2</href>
 				</self>
 				<orderDetailStatus>
-					<href>http://localhost:8080/northwind-data/api/orderDetailStatus/2</href>
+					<href>https://localhost:8443/northwind-data/api/orderDetailStatus/2</href>
 				</orderDetailStatus>
 			</_links>
 		</orderDetailStatuses>
@@ -37,10 +37,10 @@
 			<statusName>Shipped</statusName>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/orderDetailStatus/3</href>
+					<href>https://localhost:8443/northwind-data/api/orderDetailStatus/3</href>
 				</self>
 				<orderDetailStatus>
-					<href>http://localhost:8080/northwind-data/api/orderDetailStatus/3</href>
+					<href>https://localhost:8443/northwind-data/api/orderDetailStatus/3</href>
 				</orderDetailStatus>
 			</_links>
 		</orderDetailStatuses>
@@ -48,10 +48,10 @@
 			<statusName>On Order</statusName>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/orderDetailStatus/4</href>
+					<href>https://localhost:8443/northwind-data/api/orderDetailStatus/4</href>
 				</self>
 				<orderDetailStatus>
-					<href>http://localhost:8080/northwind-data/api/orderDetailStatus/4</href>
+					<href>https://localhost:8443/northwind-data/api/orderDetailStatus/4</href>
 				</orderDetailStatus>
 			</_links>
 		</orderDetailStatuses>
@@ -59,20 +59,20 @@
 			<statusName>No Stock</statusName>
 			<_links>
 				<self>
-					<href>http://localhost:8080/northwind-data/api/orderDetailStatus/5</href>
+					<href>https://localhost:8443/northwind-data/api/orderDetailStatus/5</href>
 				</self>
 				<orderDetailStatus>
-					<href>http://localhost:8080/northwind-data/api/orderDetailStatus/5</href>
+					<href>https://localhost:8443/northwind-data/api/orderDetailStatus/5</href>
 				</orderDetailStatus>
 			</_links>
 		</orderDetailStatuses>
 	</_embedded>
 	<_links>
 		<self>
-			<href>http://localhost:8080/northwind-data/api/orderDetailStatus</href>
+			<href>https://localhost:8443/northwind-data/api/orderDetailStatus</href>
 		</self>
 		<profile>
-			<href>http://localhost:8080/northwind-data/api/profile/orderDetailStatus</href>
+			<href>https://localhost:8443/northwind-data/api/profile/orderDetailStatus</href>
 		</profile>
 	</_links>
 	<page>
