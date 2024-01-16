@@ -14,6 +14,10 @@
 
 	<xsl:template match="customerOrders">
 		<customerOrder>
+			<id>
+				<xsl:value-of
+					select="substring-after(_links/self/href, 'customerOrder/')" />
+			</id>
 			<xsl:apply-templates />
 		</customerOrder>
 	</xsl:template>
@@ -104,28 +108,12 @@
 
 	<xsl:template match="_links">
 		<links>
-			<xsl:apply-templates />
+			<xsl:apply-templates select="customer|employee|orderStatus|orderTaxStatus|shipper" />
 		</links>
 	</xsl:template>
 
-	<xsl:template match="customerOrder">
-		<link label="customerOrder">
-			<href>
-				<xsl:value-of select="." />
-			</href>
-		</link>
-	</xsl:template>
-
-	<xsl:template match="shipper">
-		<link label="shipper">
-			<href>
-				<xsl:value-of select="." />
-			</href>
-		</link>
-	</xsl:template>
-
-	<xsl:template match="orderStatus">
-		<link label="orderStatus">
+	<xsl:template match="customer">
+		<link label="customer">
 			<href>
 				<xsl:value-of select="." />
 			</href>
@@ -140,16 +128,24 @@
 		</link>
 	</xsl:template>
 
-	<xsl:template match="customer">
-		<link label="customer">
+	<xsl:template match="orderStatus">
+		<link label="orderStatus">
+			<href>
+				<xsl:value-of select="." />
+			</href>
+		</link>
+	</xsl:template>
+	
+	<xsl:template match="orderTaxStatus">
+		<link label="orderTaxStatus">
 			<href>
 				<xsl:value-of select="." />
 			</href>
 		</link>
 	</xsl:template>
 
-	<xsl:template match="orderTaxStatus">
-		<link label="orderTaxStatus">
+	<xsl:template match="shipper">
+		<link label="shipper">
 			<href>
 				<xsl:value-of select="." />
 			</href>

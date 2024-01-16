@@ -14,6 +14,9 @@
 	
 	<xsl:template match="employees">
 		<employee>
+			<id>
+				<xsl:value-of select="substring-after(_links/self/href, 'employees/')" />
+			</id>		
 			<xsl:apply-templates />
 		</employee>
 	</xsl:template>
@@ -116,17 +119,10 @@
 	
 	<xsl:template match="_links">
 		<links>
-			<xsl:apply-templates />
+			<xsl:apply-templates select="privilege|company" />
 		</links>
 	</xsl:template>
 
-	<xsl:template match="employee">
-		<link label="employee">
-			<href>
-				<xsl:value-of select="." />
-			</href>
-		</link>
-	</xsl:template>
 
 	<xsl:template match="privilege">
 		<link label="privilege">

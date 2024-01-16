@@ -14,6 +14,9 @@
 
 	<xsl:template match="inventoryTransactions">
 		<inventoryTransaction>
+			<id>
+				<xsl:value-of select="substring-after(_links/self/href, 'inventoryTransaction/')" />
+			</id>		
 			<xsl:apply-templates />
 		</inventoryTransaction>
 	</xsl:template>
@@ -44,16 +47,8 @@
 	
 	<xsl:template match="_links">
 		<links>
-			<xsl:apply-templates />
+			<xsl:apply-templates select="customerOrder|inventoryTransactionType|product|purchaseOrder" />
 		</links>
-	</xsl:template>
-
-	<xsl:template match="inventoryTransaction">
-		<link label="inventoryTransaction">
-			<href>
-				<xsl:value-of select="." />
-			</href>
-		</link>
 	</xsl:template>
 
 	<xsl:template match="customerOrder">
@@ -63,15 +58,7 @@
 			</href>
 		</link>
 	</xsl:template>
-
-	<xsl:template match="purchaseOrder">
-		<link label="purchaseOrder">
-			<href>
-				<xsl:value-of select="." />
-			</href>
-		</link>
-	</xsl:template>
-
+	
 	<xsl:template match="inventoryTransactionType">
 		<link label="inventoryTransactionType">
 			<href>
@@ -82,6 +69,14 @@
 
 	<xsl:template match="product">
 		<link label="product">
+			<href>
+				<xsl:value-of select="." />
+			</href>
+		</link>
+	</xsl:template>
+	
+	<xsl:template match="purchaseOrder">
+		<link label="purchaseOrder">
 			<href>
 				<xsl:value-of select="." />
 			</href>

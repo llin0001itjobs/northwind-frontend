@@ -14,7 +14,10 @@
 
 	<xsl:template match="orderDetailStatuses">
 		<orderDetailStatus>
-			<xsl:apply-templates />
+			<id>
+				<xsl:value-of select="substring-after(_links/self/href, 'orderDetailStatus/')" />
+			</id>					
+			<xsl:apply-templates select="statusName"/>
 		</orderDetailStatus>
 	</xsl:template>
 
@@ -22,20 +25,6 @@
 		<statusName>
 			<xsl:value-of select="." />
 		</statusName>
-	</xsl:template>
-
-	<xsl:template match="_links">
-		<links>
-			<xsl:apply-templates />
-		</links>
-	</xsl:template>
-
-	<xsl:template match="orderDetailStatus">
-		<link lable="orderDetailStatus">
-			<href>
-				<xsl:value-of select="." />
-			</href>
-		</link>
 	</xsl:template>
 
 	<xsl:template match="self" />

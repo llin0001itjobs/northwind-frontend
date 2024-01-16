@@ -14,6 +14,9 @@
 
 	<xsl:template match="suppliers">
 		<supplier>
+			<id>
+				<xsl:value-of select="substring-after(_links/self/href, 'supplier/')" />
+			</id>			
 			<xsl:apply-templates />
 		</supplier>
 	</xsl:template>
@@ -116,17 +119,9 @@
 	
 	<xsl:template match="_links">
 		<links>
-			<xsl:apply-templates />
+			<xsl:apply-templates select="company|product" />
 		</links>
 	</xsl:template>	
-
-	<xsl:template match="supplier">
-		<link label="supplier">
-			<href>
-				<xsl:value-of select="." />
-			</href>
-		</link>
-	</xsl:template>
 	
 	<xsl:template match="company">
 		<link label="company">

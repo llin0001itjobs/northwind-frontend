@@ -14,7 +14,10 @@
 
 	<xsl:template match="orderTaxStatuses">
 		<orderTaxStatus>
-			<xsl:apply-templates />
+			<id>
+				<xsl:value-of select="substring-after(_links/self/href, 'orderTaxStatus/')" />
+			</id>				
+			<xsl:apply-templates select="taxStatusName"/>
 		</orderTaxStatus>
 	</xsl:template>
 
@@ -22,20 +25,6 @@
 		<taxStatusName>
 			<xsl:value-of select="." />
 		</taxStatusName>
-	</xsl:template>
-
-	<xsl:template match="_links">
-		<links>
-			<xsl:apply-templates />
-		</links>
-	</xsl:template>
-
-	<xsl:template match="orderTaxStatus">
-		<link lable="orderTaxStatus">
-			<href>
-				<xsl:value-of select="." />
-			</href>
-		</link>
 	</xsl:template>
 
 	<xsl:template match="self" />

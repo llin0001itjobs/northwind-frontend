@@ -14,7 +14,10 @@
 
 	<xsl:template match="invoices">
 		<invoice>
-			<xsl:apply-templates />
+			<id>
+				<xsl:value-of select="substring-after(_links/self/href, 'invoice/')" />
+			</id>				
+			<xsl:apply-templates/>
 		</invoice>
 	</xsl:template>
 
@@ -50,16 +53,8 @@
 				
 	<xsl:template match="_links">
 		<links>
-			<xsl:apply-templates />
+			<xsl:apply-templates select="customerOrder"/>
 		</links>
-	</xsl:template>
-
-	<xsl:template match="invoice">
-		<link label="invoice">
-			<href>
-				<xsl:value-of select="." />
-			</href>
-		</link>
 	</xsl:template>
 			
 	<xsl:template match="customerOrder">

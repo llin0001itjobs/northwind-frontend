@@ -14,7 +14,10 @@
 
 	<xsl:template match="privileges">
 		<privilege>
-			<xsl:apply-templates />
+			<id>
+				<xsl:value-of select="substring-after(_links/self/href, 'privilege/')" />
+			</id>				
+			<xsl:apply-templates select="privilegeName" />
 		</privilege>
 	</xsl:template>
 
@@ -24,20 +27,6 @@
 		</privilegeName>
 	</xsl:template>
 	
-	<xsl:template match="_links">
-		<links>
-			<xsl:apply-templates />
-		</links>
-	</xsl:template>
-	
-	<xsl:template match="privilege">
-		<link lable="privilege">
-			<href>
-				<xsl:value-of select="." />
-			</href>
-		</link>
-	</xsl:template>
-
 	<xsl:template match="self" />
 	<xsl:template match="profile" />
 	<xsl:template match="search" />

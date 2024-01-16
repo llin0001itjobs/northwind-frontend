@@ -3,18 +3,21 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 	<xsl:template match="/">
-		<xsl:apply-templates />
+		<xsl:apply-templates/>
 	</xsl:template>
 
 	<xsl:template match="_embedded">
 		<customers>
-			<xsl:apply-templates />
+			<xsl:apply-templates/>
 		</customers>
 	</xsl:template>
 
 	<xsl:template match="customers">
 		<customer>
-			<xsl:apply-templates />
+			<id>
+				<xsl:value-of select="substring-after(_links/self/href, 'customer/')" />
+			</id>
+			<xsl:apply-templates select="*[not(self::_links)]" />
 		</customer>
 	</xsl:template>
 
@@ -114,30 +117,9 @@
 		</portraitTitle>
 	</xsl:template>
 
-	<xsl:template match="_links">
-		<links>
-			<xsl:apply-templates />
-		</links>
-	</xsl:template>
-
-	<xsl:template match="customer">
-		<link label="customer">
-			<href>
-				<xsl:value-of select="." />
-			</href>
-		</link>
-	</xsl:template>
-
-	<xsl:template match="company">
-		<link label="company">
-			<href>
-				<xsl:value-of select="." />
-			</href>
-		</link>
-	</xsl:template>
-
 	<xsl:template match="self" />
 	<xsl:template match="profile" />
 	<xsl:template match="search" />
 	<xsl:template match="page" />
+	
 </xsl:stylesheet>

@@ -14,7 +14,10 @@
 
 	<xsl:template match="typeStates">
 		<typeState>
-			<xsl:apply-templates />
+			<id>
+				<xsl:value-of select="substring-after(_links/self/href, 'typeState/')" />
+			</id>				
+			<xsl:apply-templates select="description"/>
 		</typeState>
 	</xsl:template>
 
@@ -22,20 +25,6 @@
 		<description>
 			<xsl:value-of select="." />
 		</description>
-	</xsl:template>
-
-	<xsl:template match="_links">
-		<links>
-			<xsl:apply-templates />
-		</links>
-	</xsl:template>	
-
-	<xsl:template match="typeState">
-		<link label="typeState">
-			<href>
-				<xsl:value-of select="." />
-			</href>
-		</link>
 	</xsl:template>
 		
 	<xsl:template match="self" />
