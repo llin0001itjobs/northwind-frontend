@@ -7,40 +7,78 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeSet;
 
-import org.llin.demo.northwind.model.api.core.BaseObject;
+import org.llin.demo.northwind.model.BaseObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 @Component
 public class ModelViewCache<T extends BaseObject> {
 
-	private Map<String, List<T>> map = new HashMap<>();
+	private static final Logger logger = LoggerFactory.getLogger(ModelViewCache.class);
+	
+	private Map<String, List<T>> mvCacheSingle = new HashMap<>();
+	
+	private Map<String, List<T>> mvCacheMultiple = new HashMap<>();
 		
-	public ModelViewCache() {
-		// TODO Auto-generated constructor stub
+	/**
+	 * Add to cache with className as key
+	 * @param className
+	 * @param list
+	 */
+	public void addToMultiple(String className, List<T> list) {
+		mvCacheMultiple.put(className, list);
 	}
 
-	public void add(String key, List<T> list) {
-		map.put(key, list);
-	}
-
-	public List<T> get(String key) {
-		return (List<T>) map.get(key);
+	/**
+	 * Add to cache with className as key
+	 * @param className
+	 * @param list
+	 */
+	public void addToSingle(String className, List<T> list) {
+		mvCacheSingle.put(className, list);
 	}
 	
+	/**
+	 * Gets list of T based on className
+	 * @param className
+	 * @return
+	 */
+	public List<T> getFromMultiple(String className) {
+		return (List<T>) mvCacheMultiple.get(className);
+	}
+	
+	/**
+	 * Gets list of T based on className
+	 * @param className
+	 * @return
+	 */
+	public List<T> getFromSingle(String className) {
+		return (List<T>) mvCacheSingle.get(className);
+	}
+	
+	/**
+	 * Returns list of class name of type T in alphabetical order 
+	 * @return
+	 */
 	public List<String> getKeys() {
-		return new ArrayList<String>(new TreeSet<String>(map.keySet()));
+		return new ArrayList<String>(new TreeSet<String>(mvCacheMultiple.keySet()));
 	}
 	
+	/**
+	 * Only prints out when logger set to debug
+	 * Will printOut with class name in alphabetical order
+	 */
 	public void printOut() {
 		List<T> list;
 		String key;
-		Iterator<String> iter = map.keySet().iterator();
+		Iterator<String> iter = mvCacheMultiple.keySet().iterator();
 		while (iter.hasNext()) {
 			key = iter.next();
-			list = map.get(key);
-			System.out.println("{{" + key + "}}");
+			list = mvCacheMultiple.get(key);
+			logger.debug("{{" + key + "}}");
 			for (BaseObject bo : list) {
-				System.out.println("\t" + bo.toString());				
+				logger.debug("\t" + bo.toString());				
 			}
 		}
 	}
