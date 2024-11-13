@@ -1,0 +1,61 @@
+<!doctype html>
+<div class="container mt-5 pt-2" id="leftSideBar">
+	<div class="pt-3">
+		<h3>Entities</h3>
+		<ul class="list-unstyled pt-3">
+			<li class="mb-1">
+				<button class="btn btn-toggle align-items-center rounded collapsed"
+					data-bs-toggle="collapse" data-bs-target="#fo-collapse"
+					aria-controls="fo-collapse" aria-expanded="false">First
+					Order Entities</button>
+				<div class="collapse" id="fo-collapse">
+					<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+						th:each="e: ${MENU_FIRST_ORDER}">
+						<li><a th:href="@{/{path}(path=${e.path})}" class="link-dark rounded"><span
+								th:text="${e.title}"></span></a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="mb-1">
+				<button class="btn btn-toggle align-items-center rounded collapsed"
+					data-bs-toggle="collapse" data-bs-target="#so-collapse"
+					aria-controls="so-collapse" aria-expanded="false">Second Order Entities</button>
+				<div class="collapse" id="so-collapse">
+					<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+						th:each="e: ${MENU_SECOND_ORDER}">
+						<li><a th:href="@{/{path}(path=${e.path})}" class="link-dark rounded"><span
+								th:text="${e.title}"></span></a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="mb-1">
+				<button class="btn btn-toggle align-items-center rounded collapsed"
+					data-bs-toggle="collapse" data-bs-target="#to-collapse"
+					aria-controls="to-collapse" aria-expanded="false">Third
+					Order Entities</button>
+				<div class="collapse" id="to-collapse">
+					<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+						th:each="e: ${MENU_THIRD_ORDER}">
+						<li><a th:href="@{/{path}(path=${e.path})}" class="link-dark rounded"><span
+								th:text="${e.title}"></span></a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="mb-1">
+				<button class="btn btn-toggle align-items-center rounded collapsed"
+					data-bs-toggle="collapse" data-bs-target="#type-collapse"
+					aria-controls="type-collapse" aria-expanded="false">Type Entities</button>
+				<div class="collapse" id="type-collapse">
+					<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
+						th:each="e: ${MENU_TYPE}">
+						<li><a th:href="@{/{path}(path=${e.path})}" class="link-dark rounded"><span
+								th:text="${e.title}"></span></a></li>
+					</ul>
+				</div>
+			</li>			
+		</ul>
+	</div>
+</div>
+
+	<script
+		src="https://getbootstrap.com/docs/5.0/examples/sidebars/sidebars.js"></script>
