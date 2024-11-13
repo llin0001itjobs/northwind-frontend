@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+	<meta name="generator" content="Hugo 0.88.1">
+	<title>Dashboard Template</title>
+
+	<link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
+
+	<!-- Bootstrap core CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+	<style>
+		.bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+		}
+
+		@media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+				font-size: 3.5rem;
+			}
+		}
+	</style>
+
+	<!-- Custom styles for this template -->
+	<link th:href="@{/static/css/base.css}" rel="stylesheet">
+	<link th:href="@{/static/css/navbar-top-fixed.css}" rel="stylesheet">
+</head>
+
+<body class="custom-bg">
+
+	<div th:replace="fragments/navbar :: nav"></div>
+
+	<div class="container">
+		<div class="lead">
+
+			<h3>Join Us!</h3>
+
+			Radiant is an El Segundo, CA-based startup developing Kaleidos, a portable, containerized nuclear
+			microreactor. Portable nuclear power with rapid deploy capability can replace diesel generators used today
+			to provide critical asset support for hospitals, data-centers, and military bases or to power microgrids at
+			remote sites. Radiant’s unique, practical approach to nuclear development utilizes modern software
+			engineering to rapidly achieve safe, factory-constructable microreactors leveraging existing, well-qualified
+			materials. Radiant is on a fast track to demonstrate the first fueled operation of a new commercial nuclear
+			reactor design, just three years from now.
+		</div>
+		<div class="p-3">
+			<h3>Our Technology</h3>
+			Introduction to Kaleidos
+		</div>
+		<div class="p-3">
+			<h3>Benefits and Perks</h3>
+			<div>Radiant provides competitive and fair benefits and perks for full-time employees including:</div>
+			<ul>
+				<li>Equity: Substantial incentive stock plan for all salaried employees</li>
+				<li>Medical: 100% up to base silver level plan for employee + 50% dependents, offers up to Platinum
+					plans</li>
+				<li>Vision: 100% coverage + 50% for dependents </li>
+				<li>Dental: 100% coverage, orthodontia extra, 50% for dependent</li>
+				<li>Flexible PTO policy</li>
+				<li>Voluntary Life, Accident, Hospital, Critical Illness, Commuter and FSA are offered as employee
+					contributed benefits.</li>
+				<li>Team-bonding company outings, happy hours and in-person camaraderie</li>
+				<li>Beautiful El Segundo headquarters close to the Pacific Ocean</li>
+			</ul>
+		</div>
+		<div class="p-3">
+			<h3>Current Job Openings</h3>
+
+		</div>
+
+	</div>
+
+
+	<div th:replace="fragments/script :: div"></div>
+
+	<div class="container " th:replace="fragments/footer :: footer"></div>
+</body>
+
+</html>

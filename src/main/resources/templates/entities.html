@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://getbootstrap.com/docs/5.0/examples/sidebars/ -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author"
+	content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Hugo 0.84.0">
+<title>An Example</title>
+
+<!-- Favicons -->
+<link rel="icon"
+	href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#7952b3">
+
+<style>
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+@media ( min-width : 768px) {
+	.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
+}
+</style>
+
+
+<!-- Custom styles for this template -->
+<!-- Bootstrap core CSS -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+	crossorigin="anonymous">
+
+</head>
+<body>
+	<main>
+		<div class="container-fluid">
+			<div class="row" id="navBarRow">
+				<div class="col-12" id="navBarCol">
+					<div th:replace="fragments/navbar :: nav"></div>
+				</div>
+			</div>
+			<div class="row border">
+				<div class="lead">Lorem ipsum dolor sit amet, consectetur
+					adipiscing elit. Praesent pellentesque sapien tortor, vitae euismod
+					dolor aliquet cursus. Nullam eget diam quam. Donec a ipsum dolor.
+					Vestibulum non ultrices dui. Integer eget quam fermentum, posuere
+					mauris in, luctus eros. Proin convallis semper augue, ut euismod
+					metus mollis ac. Duis id odio viverra, vehicula eros pharetra,
+					malesuada ligula. Curabitur id lectus vitae sapien semper suscipit
+					quis at eros.</div>
+				<div class="p-3">Suspendisse tempus nisi et ligula aliquam
+					lobortis. Aenean metus sapien, porttitor a fermentum in, aliquam ac
+					risus. Nunc viverra est malesuada ullamcorper aliquam. Praesent ut
+					enim tempus neque ornare congue. Duis euismod eget arcu ac
+					imperdiet. Phasellus sollicitudin sit amet velit vitae varius.
+					Integer eu efficitur nisi. Nullam vitae ultricies mauris. Morbi
+					egestas nec turpis sit amet aliquam. Donec blandit mollis urna sed
+					ullamcorper. Vivamus vestibulum vestibulum metus, id aliquet lacus
+					feugiat vel. Vestibulum ante ipsum primis in faucibus orci luctus
+					et ultrices posuere cubilia curae; Duis id ultricies tellus. Donec
+					neque mi, mattis hendrerit vehicula ac, convallis pellentesque
+					ligula.</div>
+				<div class="p-3">Sed quis sem nisi. Nulla volutpat pulvinar
+					libero sit amet ultrices. Vestibulum mauris lacus, commodo quis
+					dictum eget, posuere ut arcu. Donec vitae est velit. Class aptent
+					taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+					himenaeos. Donec varius lacus eget mollis faucibus. Lorem ipsum
+					dolor sit amet, consectetur adipiscing elit. Pellentesque sagittis
+					nisi vitae sem euismod suscipit.</div>
+
+	
+			</div>
+			<div class="row" id="footerRow">
+				<div class="col-12" id="footerCol">
+					<div th:replace="fragments/footer :: footer"></div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
+
+	<script
+		src="https://getbootstrap.com/docs/5.0/examples/sidebars/sidebars.js"></script>
+
+</body>
+</html>
