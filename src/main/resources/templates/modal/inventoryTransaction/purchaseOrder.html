@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<div>
+	<div th:each="p : ${PurchaseOrders}" class="modal fade"
+		data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+		th:attr="id='staticBackdropPurchaseOrder-' + ${p.getId(), aria-labelledby='staticBackdropPurchaseOrderLabel-' + ${p.getId()}"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title"
+						th:attr="id='staticBackdropPurchaseOrderLabel-' + ${p.getId()}">
+						Purchase Order</span>
+					</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-2">Approved Date</div>
+						<div class="col">
+							<span th:text="${p.getApprovedDate()}"></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">Submitted Date</div>
+						<div class="col">
+							<span th:text="${p.getSubmittedDate()}"></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">Creation Date</div>
+						<div class="col">
+							<span th:text="${p.getCreationDate()}"></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">Expected Date</div>
+						<div class="col">
+							<span th:text="${p.getExpectedDate()}"></span>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+

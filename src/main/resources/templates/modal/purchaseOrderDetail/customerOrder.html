@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<div>
+	<div th:each="c : ${CustomerOrders}" class="modal fade"
+		data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+		th:attr="id='staticBackdropCustomerOrder-' + ${c.getId()}, aria-labelledby='staticBackdropCustomerOrderLabel-' + ${c.getId()}"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title"
+						th:attr="id='staticBackdropCustomerOrderLabel-' + ${c.getId()}">
+						Customer Order</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-2">Order Date</div>
+						<div class="col">
+							<span th:text="${c.getOrderDate()}"></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">Paid Date</div>
+						<div class="col">
+							<span th:text="${c.getPaidDate()}"></span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2">Shipped Date</div>
+						<div class="col">
+							<span th:text="${c.getShippedDate()}"></span>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

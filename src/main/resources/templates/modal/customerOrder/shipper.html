@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<div>
+	<div th:each="s : ${Shippers}" class="modal fade"
+		data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+		th:attr="id='staticBackdropShipper-' + ${s.getId()}, aria-labelledby='staticBackdropShipperLabel-' + ${s.getId()}"
+		aria-hidden="true">
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title"
+						th:attr="id='staticBackdropShipperLabel-' + ${s.getId()}">
+						Shipper
+					</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+							<table class="table modal-table">
+								<thead>
+									<tr>
+										<th scope="col">Name</th>
+										<th scope="col">Job Title</th>
+										<th scope="col">Notes</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><span th:text="${s.getFirstName()}"></span> &nbsp; <span
+											th:text="${s.getLastName()}"></span></td>
+										<td><span th:text="${s.getJobTitle()}"></span></td>
+										<td><textarea rows="6" cols="60" style="resize: none;"
+												th:text="${s.getNotes()}"></textarea></td>
+									</tr>
+								</tbody>
+							</table>					
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
