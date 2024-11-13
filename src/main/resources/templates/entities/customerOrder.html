@@ -1,21 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://getbootstrap.com/docs/5.0/examples/sidebars/ -->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
-<meta name="author"
-	content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.88.1">
-<title>Fixed top navbar example · Bootstrap v5.1</title>
 
-<link rel="canonical"
-	href="https://getbootstrap.com/docs/5.1/examples/navbar-fixed/">
-
-<!-- Bootstrap core CSS -->
-<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
-
+<title>Northwind Traders</title>
 
 <style>
 .bd-placeholder-img {
@@ -31,52 +23,112 @@
 		font-size: 3.5rem;
 	}
 }
-
-#intro {
-	background-image:
-		url("/static/images/background/mountain-wallpaper-background-1a.jpg");
-	height: 95vh;
-	margin-top: -5px;
-}
 </style>
 
-<!-- Custom styles for this template -->
-<link rel="stylesheet" th:href="@{/css/navbar-top-fixed.css}">
-<link rel="stylesheet" th:href="@{/css/list-groups.css}">
+
+<div th:replace="fragments/links-css :: linksCss"></div>
+
 </head>
 <body>
+	<main>
+		<div class="container-fluid">
+			<div th:replace="modal/customerOrder/customer :: div"></div>
+			<div th:replace="modal/customerOrder/employee :: div"></div>			
+			<div th:replace="modal/customerOrder/orderStatus :: div"></div>
+			<div th:replace="modal/customerOrder/orderTaxStatus :: div"></div>
+			<div th:replace="modal/customerOrder/shipper :: div"></div>			
+			<div class="row" id="navBarRow">
+				<div class="col-12" id="navBarCol">
+					<div th:replace="fragments/navbar :: nav"></div>
+				</div>
+			</div>
+			<div class="row border">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-2 bg-light border border-primary pb-3"
+							id="leftSideBar">
+							<div th:replace="fragments/sideMenuLeft :: div"></div>
+						</div>
+						<div class="col-8 border border-primary mt-5 pt-4">
+							<h3>
+								<span th:text="${TITLE}"></span>
+							</h3>
+							<table class="table" id="dataTable">
+								<thead>
+									<tr>
+										<th scope="col-2">Order Date</th>
+										<th scope="col-2">Paid Date</th>
+										<th scope="col-2">Shipped Date</th>
+										<th scope="col">Links</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="c : ${CustomerOrders}">
+										<td><span th:text="${c.getOrderDate()}"></span></td>
+										<td><span th:text="${c.getPaidDate()}"></span></td>
+										<td><span th:text="${c.getShippedDate()}"></span></td>
+										<td>
+											<div>
+												<a
+													th:href="'/modal/show?entity=customer&id=' + ${c.getLinks().getLink('customer').getId()}"
+													data-bs-toggle="modal"
+													th:attr="data-bs-target='#staticBackdropCustomer-' + ${c.getLinks().getLink('customer').getId()}"><span
+													th:text="${c.getLinks().getLink('customer').getLabel()}"></span></a>
+											</div>
+											<div
+												th:with="isNullId=${c.getLinks().getLink('employee').getId() == null}">
+												<a th:if="${!isNullId}"
+													th:href="'/modal/show?entity=employee&id=' + ${c.getLinks().getLink('employee').getId()}"
+													data-bs-toggle="modal"
+													th:attr="data-bs-target='#staticBackdropEmployee-' + ${c.getLinks().getLink('employee').getId()}"><span
+													th:text="${c.getLinks().getLink('employee').getLabel()}"></span></a>
+											</div>
+											<div
+												th:with="isNullId=${c.getLinks().getLink('shipper').getId() == null}">
+												<a th:if="${!isNullId}"
+													th:href="'/modal/show?entity=shipper&id=' + ${c.getLinks().getLink('shipper').getId()}"
+													data-bs-toggle="modal"
+													th:attr="data-bs-target='#staticBackdropShipper-' + ${c.getLinks().getLink('shipper').getId()}"><span
+													th:text="${c.getLinks().getLink('shipper').getLabel()}"></span></a>
+											</div>
+											<div>
+												<a
+													th:href="'/modal/show?entity=orderStatus&id=' + ${c.getLinks().getLink('orderStatus').getId()}"
+													data-bs-toggle="modal"
+													th:attr="data-bs-target='#staticBackdropOrderStatus-' + ${c.getLinks().getLink('orderStatus').getId()}"><span
+													th:text="${c.getLinks().getLink('orderStatus').getLabel()}"></span></a>
+											</div>
+											<div
+												th:with="isNullId=${c.getLinks().getLink('orderTaxStatus').getId() == null}">
+												<a th:if="${!isNullId}"
+													th:href="'/modal/show?entity=orderTaxStatus&id=' + ${c.getLinks().getLink('orderTaxStatus').getId()}"
+													data-bs-toggle="modal"
+													th:attr="data-bs-target='#staticBackdropOrderTaxStatus-' + ${c.getLinks().getLink('orderTaxStatus').getId()}"><span
+													th:text="${c.getLinks().getLink('orderTaxStatus').getLabel()}"></span></a>
+											</div>
+										</td>
 
-	<div th:replace="fragments/navbar :: nav"></div>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="col-2 bg-light border border-primary pb-3"
+							id="rightSideBar">
+							<div th:replace="fragments/sideMenuRight :: div"></div>
+						</div>
+					</div>
 
-	<main class="flex-shrink-0">
 
-		<div class="container-lg">
-
-			<table class="table">
-				<thead>
-					<tr>
-						<th scope="col"></th>
-						<th scope="col">Order Date</th>
-						<th scope="col">Paid Date</th>
-						<th scope="col">Shipped Date</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr th:each="c : ${customerOrders}">
-						<td><span th:text="${c.getOrderDate()}"></span>
-						</td>
-						<td>
-							<span th:text="${c.getPaidDate()}"></span>
-						</td>
-						<td th:text="${c.getShippedDate()}"></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
+				</div>
+				<div class="row" id="footerRow">
+					<div class="col-12" id="footerCol">
+						<div th:replace="fragments/footer :: footer"></div>
+					</div>
+				</div>
+			</div>
 	</main>
 
-	<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+	<div th:replace="fragments/links-js :: linksJs"></div>
 
-	<div class="container " th:replace="fragments/footer :: footer"></div>
 </body>
 </html>

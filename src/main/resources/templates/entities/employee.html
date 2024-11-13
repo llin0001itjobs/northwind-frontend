@@ -1,21 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://getbootstrap.com/docs/5.0/examples/sidebars/ -->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
-<meta name="author"
-	content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.88.1">
-<title>Fixed top navbar example · Bootstrap v5.1</title>
-
-<link rel="canonical"
-	href="https://getbootstrap.com/docs/5.1/examples/navbar-fixed/">
-
-<!-- Bootstrap core CSS -->
-<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
-
+<title>Northwind Traders</title>
 
 <style>
 .bd-placeholder-img {
@@ -31,55 +22,84 @@
 		font-size: 3.5rem;
 	}
 }
-
-#intro {
-	background-image:
-		url("/static/images/background/mountain-wallpaper-background-1a.jpg");
-	height: 95vh;
-	margin-top: -5px;
-}
 </style>
 
-<!-- Custom styles for this template -->
-<link rel="stylesheet" th:href="@{/css/navbar-top-fixed.css}">
-<link rel="stylesheet" th:href="@{/css/list-groups.css}">
+<div th:replace="fragments/links-css :: linksCss"></div>
+
 </head>
 <body>
+	<main>
+		<div class="container-fluid">
+			<div th:replace="modal/employee/company :: div"></div>
+			<div th:replace="modal/employee/privilege :: div"></div>
+			<div class="row" id="navBarRow">
+				<div class="col-12" id="navBarCol">
+					<div th:replace="fragments/navbar :: nav"></div>
+				</div>
+			</div>
+			<div class="row border">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-2 bg-light border border-primary pb-3"
+							id="leftSideBar">
+							<div th:replace="fragments/sideMenuLeft :: div"></div>
+						</div>
+						<div class="col-8 border border-primary mt-5 pt-4">
+							<h3>
+								<span th:text="${TITLE}"></span>
+							</h3>
+							<table class="table" id="dataTable">
+								<thead>
+									<tr>
+										<th scope="col">Name</th>
+										<th scope="col">Job Title</th>
+										<th scope="col">Notes</th>
+										<th scope="col">Links</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="e : ${Employees}">
+										<td><span th:text="${e.getFirstName()}"></span> &nbsp; <span
+											th:text="${e.getLastName()}"></span></td>
+										<td th:text="${e.getJobTitle()}"></td>
+										<td><span th:text="${e.getNotes()}"></span></td>
+										<td>
+											<div>
+												<a
+													th:href="'/modal/show?entity=company&id=' + ${e.getLinks().getLink('company').getId()}"
+													data-bs-toggle="modal"
+													th:attr="data-bs-target='#staticBackdropCompany-' + ${e.getLinks().getLink('company').getId()}"><span
+													th:text="${e.getLinks().getLink('company').getLabel()}"></span></a>
+											</div>
+											<div>
+												<a
+													th:href="'/modal/show?entity=privilege&id=' + ${e.getLinks().getLink('privilege').getId()}"
+													data-bs-toggle="modal"
+													th:attr="data-bs-target='#staticBackdropPrivilege-' + ${e.getLinks().getLink('privilege').getId()}"><span
+													th:text="${e.getLinks().getLink('privilege').getLabel()}"></span></a>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="col-2 bg-light border border-primary pb-3"
+							id="rightSideBar">
+							<div th:replace="fragments/sideMenuRight :: div"></div>
+						</div>
+					</div>
 
-	<div th:replace="fragments/navbar :: nav"></div>
 
-	<main class="flex-shrink-0">
-
-		<div class="container-lg">
-
-			<table class="table">
-				<thead>
-					<tr>
-						<th scope="col">Name</th>
-						<th scope="col">Job Title</th>
-						<th scope="col">Company</th>
-						<th scope="col">Notes</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr th:each="emloyee : ${employees}">
-						<td><span th:text="${emloyee.getFirstName()}"></span>
-							&nbsp;
-							<span th:text="${emloyee.getLastName()}"></span>
-						</td>
-						<td th:text="${emloyee.getJobTitle()}"></td>
-						<td th:text="${emloyee.getCompany().getName()}"></td>
-						<td>
-							<span th:text="${emloyee.getNotes()}"></span>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
+				</div>
+				<div class="row" id="footerRow">
+					<div class="col-12" id="footerCol">
+						<div th:replace="fragments/footer :: footer"></div>
+					</div>
+				</div>
+			</div>
 	</main>
 
-	<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+	<div th:replace="fragments/links-js :: linksJs"></div>
 
-	<div class="container " th:replace="fragments/footer :: footer"></div>
 </body>
 </html>

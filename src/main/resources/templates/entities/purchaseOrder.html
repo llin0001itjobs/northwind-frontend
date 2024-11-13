@@ -1,21 +1,13 @@
-<!doctype html>
+
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://getbootstrap.com/docs/5.0/examples/sidebars/ -->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
-<meta name="author"
-	content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-<meta name="generator" content="Hugo 0.88.1">
-<title>Fixed top navbar example · Bootstrap v5.1</title>
-
-<link rel="canonical"
-	href="https://getbootstrap.com/docs/5.1/examples/navbar-fixed/">
-
-<!-- Bootstrap core CSS -->
-<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
-
+<title>Northwind Traders</title>
 
 <style>
 .bd-placeholder-img {
@@ -31,53 +23,116 @@
 		font-size: 3.5rem;
 	}
 }
-
-#intro {
-	background-image:
-		url("/static/images/background/mountain-wallpaper-background-1a.jpg");
-	height: 95vh;
-	margin-top: -5px;
-}
 </style>
 
-<!-- Custom styles for this template -->
-<link rel="stylesheet" th:href="@{/css/navbar-top-fixed.css}">
-<link rel="stylesheet" th:href="@{/css/list-groups.css}">
+<div th:replace="fragments/links-css :: linksCss"></div>
+
+
 </head>
 <body>
+	<main>
+		<div class="container-fluid">
+			<div th:replace="modal/purchaseOrder/approvedBy :: div"></div>
+			<div th:replace="modal/purchaseOrder/createdBy :: div"></div>
+			<div th:replace="modal/purchaseOrder/orderStatus :: div"></div>
+			<div th:replace="modal/purchaseOrder/submittedBy :: div"></div>
+			<div th:replace="modal/purchaseOrder/supplier :: div"></div>
+			<div class="row" id="navBarRow">
+				<div class="col-12" id="navBarCol">
+					<div th:replace="fragments/navbar :: nav"></div>
+				</div>
+			</div>
+			<div class="row border">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-2 bg-light border border-primary pb-3"
+							id="leftSideBar">
+							<div th:replace="fragments/sideMenuLeft :: div"></div>
+						</div>
+						<div class="col-8 border border-primary mt-5 pt-4">
+							<h3>
+								<span th:text="${TITLE}"></span>
+							</h3>
+							<table class="table" id="dataTable">
+								<thead>
+									<tr>
+										<th scope="col">Approved Date</th>
+										<th scope="col">Submitted Date</th>
+										<th scope="col">Creation Date</th>
+										<th scope="col">Expected Date</th>
+										<th scope="col">Links</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="p : ${PurchaseOrders}">
+										<td><span th:text="${p.getApprovedDate()}"></span></td>
+										<td><span th:text="${p.getSubmittedDate()}"></span></td>
+										<td><span th:text="${p.getCreationDate()}"></span></td>
+										<td><span th:text="${p.getExpectedDate()}"></span></td>
+										<td>
+											<div>
+												<a
+													th:href="'/modal/show?entity=orderStatus&id=' + ${p.getLinks().getLink('orderStatus').getId()}"
+													data-bs-toggle="modal"
+													th:attr="data-bs-target='#staticBackdropOrderStatus-' + ${p.getLinks().getLink('orderStatus').getId()}"><span
+													th:text="${p.getLinks().getLink('orderStatus').getLabel()}"></span></a>
+											</div>
+											<div
+												th:with="isNullId=${p.getLinks().getLink('supplier').getId() == null}">
+												<a th:if="${!isNullId}"
+													th:href="'/modal/show?entity=supplier&id=' + ${p.getLinks().getLink('supplier').getId()}"
+													data-bs-toggle="modal"
+													th:attr="data-bs-target='#staticBackdropSupplier-' + ${p.getLinks().getLink('supplier').getId()}"><span
+													th:text="${p.getLinks().getLink('supplier').getLabel()}"></span></a>
+											</div>
+											<div
+												th:with="isNullId=${p.getLinks().getLink('approvedBy').getId() == null}">
+												<a th:if="${!isNullId}"
+													th:href="'/modal/show?entity=approvedBy&id=' + ${p.getLinks().getLink('approvedBy').getId()}"
+													data-bs-toggle="modal"
+													th:attr="data-bs-target='#staticBackdropApprovedBy-' + ${p.getLinks().getLink('approvedBy').getId()}"><span
+													th:text="${p.getLinks().getLink('approvedBy').getLabel()}"></span></a>
+											</div>
+											<div
+												th:with="isNullId=${p.getLinks().getLink('createdBy').getId() == null}">
+												<a th:if="${!isNullId}"
+													th:href="'/modal/show?entity=createdBy&id=' + ${p.getLinks().getLink('createdBy').getId()}"
+													data-bs-toggle="modal"
+													th:attr="data-bs-target='#staticBackdropCreatedBy-' + ${p.getLinks().getLink('createdBy').getId()}"><span
+													th:text="${p.getLinks().getLink('createdBy').getLabel()}"></span></a>
+											</div>
+											<div
+												th:with="isNullId=${p.getLinks().getLink('submittedBy').getId() == null}">
+												<a th:if="${!isNullId}"
+													th:href="'/modal/show?entity=submittedBy&id=' + ${p.getLinks().getLink('submittedBy').getId()}"
+													data-bs-toggle="modal"
+													th:attr="data-bs-target='#staticBackdropSubmittedBy-' + ${p.getLinks().getLink('submittedBy').getId()}"><span
+													th:text="${p.getLinks().getLink('submittedBy').getLabel()}"></span></a>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
 
-	<div th:replace="fragments/navbar :: nav"></div>
+						</div>
+						<div class="col-2 bg-light border border-primary pb-3"
+							id="rightSideBar">
+							<div th:replace="fragments/sideMenuRight :: div"></div>
+						</div>
+					</div>
 
-	<main class="flex-shrink-0">
 
-		<div class="container-lg">
-
-			<table class="table">
-				<thead>
-					<tr>
-						<th scope="col">approved Date</th>
-						<th scope="col">submitted Date</th>
-						<th scope="col">creation Date</th>
-						<th scope="col">expected Date</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr th:each="c : ${purchaseOrders}">
-						<td><span th:text="${c.getApprovedDate()}"></span>
-						</td>
-						<td>
-							<span th:text="${c.getSubmittedDate()}"></span>
-						</td>
-						<td th:text="${c.getCreationDate()}"></td>
-						<td th:text="${c.getExpectedDate()}"></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
+				</div>
+				<div class="row" id="footerRow">
+					<div class="col-12" id="footerCol">
+						<div th:replace="fragments/footer :: footer"></div>
+					</div>
+				</div>
+			</div>
 	</main>
 
-	<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+	<div th:replace="fragments/links-js :: linksJs"></div>
 
-	<div class="container " th:replace="fragments/footer :: footer"></div>
 </body>
 </html>
+

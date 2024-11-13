@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://getbootstrap.com/docs/5.0/examples/sidebars/ -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<title>Northwind Traders</title>
+
+<style>
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+@media ( min-width : 768px) {
+	.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
+}
+</style>
+
+<div th:replace="fragments/links-css :: linksCss"></div>
+</head>
+<body>
+	<main>
+		<div class="container-fluid">
+			<div class="row" id="navBarRow">
+				<div class="col-12" id="navBarCol">
+					<div th:replace="fragments/navbar :: nav"></div>
+				</div>
+			</div>
+			<div class="row border">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-2 bg-light border border-primary pb-3"
+							id="leftSideBar">
+							<div th:replace="fragments/sideMenuLeft :: div"></div>
+						</div>
+						<div class="col-8 border border-primary mt-5 pt-4">
+							<h3>
+								<span th:text="${TITLE}"></span>
+							</h3>
+							<div id="carouselExampleCaptions" class="carousel slide"
+								data-bs-ride="carousel">
+								<div class="carousel-indicators">
+									<button type="button" data-bs-target="#carouselExampleCaptions"
+										data-bs-slide-to="0" class="active" aria-current="true"
+										aria-label="Inventory Transaction Type"></button>
+									<button type="button" data-bs-target="#carouselExampleCaptions"
+										data-bs-slide-to="1" aria-label="Order Detail Status"></button>
+									<button type="button" data-bs-target="#carouselExampleCaptions"
+										data-bs-slide-to="2" aria-label="Order Status"></button>
+									<button type="button" data-bs-target="#carouselExampleCaptions"
+										data-bs-slide-to="3" aria-label="Order Tax Status"></button>
+									<button type="button" data-bs-target="#carouselExampleCaptions"
+										data-bs-slide-to="4" aria-label="Payment Type"></button>		
+									<button type="button" data-bs-target="#carouselExampleCaptions"
+										data-bs-slide-to="5" aria-label="Purchase Order Status"></button>
+									<button type="button" data-bs-target="#carouselExampleCaptions"
+										data-bs-slide-to="6" aria-label="Type State"></button>	
+								</div>
+								<div class="carousel-inner">
+									<div class="carousel-item active">
+										<table>
+											<thead>
+												<tr>
+													<th scope="col">Type Name</th>
+												</tr>
+											</thead>
+											<tbody class="font-data">
+												<tr th:each="i : ${InventoryTransactionTypes}">
+													<td><span th:text="${i.getTypeName()}"></span></td>
+												</tr>
+											</tbody>
+										</table>
+										<div class="carousel-caption d-none d-md-block">
+											<h5>Inventory Transaction Type</h5>
+										</div>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<table>
+										<thead>
+											<tr>
+												<th scope="col">Status Name</th>
+											</tr>
+										</thead>
+										<tbody class="font-data">
+											<tr th:each="o : ${OrderDetailStatuses}">
+												<td><span th:text="${o.getStatusName()}"></span></td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="carousel-caption d-none d-md-block">
+										<h5>Order Detail Status</h5>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<table>
+										<thead>
+											<tr>
+												<th scope="col">Status Name</th>
+											</tr>
+										</thead>
+										<tbody class="font-data">
+											<tr th:each="o : ${OrderStatuses}">
+												<td><span th:text="${o.getStatusName()}"></span></td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="carousel-caption d-none d-md-block">
+										<h5>Order Status</h5>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<table>
+										<thead>
+											<tr>
+												<th scope="col">Status Name</th>
+											</tr>
+										</thead>
+										<tbody class="font-data">
+											<tr th:each="o : ${OrderTaxStatuses}">
+												<td><span th:text="${o.getStatusName()}"></span></td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="carousel-caption d-none d-md-block">
+										<h5>Order Tax Status</h5>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<table>
+										<thead>
+											<tr>
+												<th scope="col">Payment Type</th>
+											</tr>
+										</thead>
+										<tbody class="font-data">
+											<tr th:each="p : ${PaymentTypes}">
+												<td><span th:text="${p.getDescription()}"></span></td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="carousel-caption d-none d-md-block">
+										<h5>Payment Type</h5>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<table>
+										<thead>
+											<tr>
+												<th scope="col">Status Name</th>
+											</tr>
+										</thead>
+										<tbody class="font-data">
+											<tr th:each="p : ${PurchaseOrderStatuses}">
+												<td><span th:text="${p.getStatus()}"></span></td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="carousel-caption d-none d-md-block">
+										<h5>Purchase Order Status</h5>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<table>
+										<thead>
+											<tr>
+												<th scope="col-2">Code</th>
+												<th scope="col">Description</th>
+											</tr>
+										</thead>
+										<tbody class="font-data">
+											<tr th:each="t : ${TypeStates}">
+												<td><span th:text="${t.getCode()}"></span></td>
+												<td><span th:text="${t.getDescription()}"></span></td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="carousel-caption d-none d-md-block">
+										<h5>Type State</h5>
+									</div>
+								</div>
+							</div>
+							<button class="carousel-control-prev" type="button"
+								data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+							<button class="carousel-control-next" type="button"
+								data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+					</div>
+					<div class="col-2 bg-light border border-primary pb-3"
+						id="rightSideBar">
+						<div th:replace="fragments/sideMenuRight :: div"></div>
+					</div>
+				</div>
+			</div>
+			<div class="row" id="footerRow">
+				<div class="col-12" id="footerCol">
+					<div th:replace="fragments/footer :: footer"></div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<div th:replace="fragments/links-js :: linksJs"></div>
+
+</body>
+</html>
