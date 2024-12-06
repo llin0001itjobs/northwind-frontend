@@ -32,7 +32,7 @@
 <body>
 	<main>
 		<div class="container-fluid">
-			<!-- div th:replace="modal/product/supplier :: div"></div -->
+			<div th:replace="modal/product/supplier :: div"></div>
 			<div class="row" id="navBarRow">
 				<div class="col-12" id="navBarCol">
 					<div th:replace="fragments/navbar :: nav"></div>
@@ -54,9 +54,11 @@
 									<tr>
 										<th scope="col">Product Code</th>
 										<th scope="col">Product Name</th>
-										<th scope="col">Description</th>
+										<th scope="col">Category</th>
 										<th scope="col">Standard Cost</th>
 										<th scope="col">List Price</th>
+										<th scope="col">Quantity Per Unit</th>
+										<th scope="col">Minimum Reorder Quantity</th>
 										<th scope="col">Links</th>
 									</tr>
 								</thead>
@@ -64,11 +66,21 @@
 									<tr th:each="p : ${Products}">
 										<td><span th:text="${p.getProductCode()}"></span></td>
 										<td><span th:text="${p.getProductName()}"></span></td>
-										<td th:text="${p.getDescription()}"></td>
-										<td th:text="${p.getStandardCost()}"></td>
-										<td th:text="${p.getListPrice()}"></td>
+										<td><span th:text="${p.getCategory()}"></span></td>
+										<td><span th:text="${p.getStandardCost()}"></span></td>
+										<td><span th:text="${p.getListPrice()}"></span></td>
+										<td><span th:text="${p.getQuantityPerUnit()}"></span></td>
+										<td><span th:text="${p.getMinimumReorderQuantity()}"></span></td>
 										<td>
-
+											<div th:each="l: ${p.getLinks()}">
+												<div
+													th:with="isNullId=${l.getLink('supplier').getId() == null}">
+													<a th:if="${!isNullId}"
+														th:href="'/modal/show?entity=supplier&id=' + ${l.getLink('supplier').getId()}"
+														data-bs-toggle="modal"
+														th:attr="data-bs-target='#staticBackdropSupplier-' + ${p.getId()}">supplier</a>
+												</div>
+											</div>
 										</td>
 									</tr>
 								</tbody>

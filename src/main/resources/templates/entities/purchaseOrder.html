@@ -59,16 +59,18 @@
 										<th scope="col">Approved Date</th>
 										<th scope="col">Submitted Date</th>
 										<th scope="col">Creation Date</th>
-										<th scope="col">Expected Date</th>
 										<th scope="col">Links</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr th:each="p : ${PurchaseOrders}">
-										<td><span th:text="${p.getApprovedDate()}"></span></td>
-										<td><span th:text="${p.getSubmittedDate()}"></span></td>
-										<td><span th:text="${p.getCreationDate()}"></span></td>
-										<td><span th:text="${p.getExpectedDate()}"></span></td>
+
+										<td><span
+											th:text="${#temporals.format(p.getApprovedDate(), 'dd-MM-yyyy HH:mm')}"></span></td>
+										<td><span
+											th:text="${#temporals.format(p.getSubmittedDate(), 'dd-MM-yyyy HH:mm')}"></span></td>
+										<td><span
+											th:text="${#temporals.format(p.getCreationDate(), 'dd-MM-yyyy HH:mm')}"></span></td>
 										<td>
 											<div>
 												<a
@@ -131,7 +133,7 @@
 			</div>
 	</main>
 
-	<div th:replace="fragments/links-js :: linksJs"></div>
+	<div th:replace="fragments/links-js-page-length-6 :: linksJs"></div>
 
 </body>
 </html>

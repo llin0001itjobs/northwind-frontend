@@ -27,7 +27,6 @@
 
 <div th:replace="fragments/links-css :: linksCss"></div>
 
-
 </head>
 <body>
 	<main>
@@ -61,8 +60,8 @@
 								</thead>
 								<tbody>
 									<tr th:each="i : ${Invoices}">
-										<td><span th:text="${i.getInvoiceDate()}"></span></td>
-										<td><span th:text="${i.getDueDate()}"></span></td>
+										<td><span th:text="${#temporals.format(i.getInvoiceDate(), 'dd-MM-yyyy HH:mm')}"></span></td>
+										<td><span th:text="${#temporals.format(i.getDueDate(), 'dd-MM-yyyy HH:mm')}"></span></td>
 										<td><span th:text="${i.getTax()}"></span></td>
 										<td><span th:text="${i.getAmountDue()}"></span></td>
 										<td>

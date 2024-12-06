@@ -30,8 +30,8 @@
 <body>
 	<main>
 		<div class="container-fluid">
-			<div th:replace="modal/supplier/company :: div"></div>		
-			<div th:replace="modal/supplier/product :: div"></div>		
+			<div th:replace="modal/supplier/company :: div"></div>
+			<div th:replace="modal/supplier/product :: div"></div>
 			<div class="row" id="navBarRow">
 				<div class="col-12" id="navBarCol">
 					<div th:replace="fragments/navbar :: nav"></div>
@@ -67,17 +67,18 @@
 													<a
 														th:href="'/modal/show?entity=company&id=' + ${l.getLink('company').getId()}"
 														data-bs-toggle="modal"
-														th:attr="data-bs-target='#staticBackdropCompany-' + ${l.getLink('company').getId()}"><span
-														th:text="${l.getLink('company').getLabel()}"></span></a>
-												</div>											
+														th:attr="data-bs-target='#staticBackdropCompany-' + ${l.getLink('company').getId()}">
+														company</a>
+												</div>
 												<div>
 													<a
 														th:href="'/modal/show?entity=product&id=' + ${l.getLink('product').getId()}"
 														data-bs-toggle="modal"
-														th:attr="data-bs-target='#staticBackdropProduct-' + ${l.getLink('product').getId()}"><span
-														th:text="${l.getLink('product').getLabel()}"></span></a>
+														th:attr="data-bs-target='#staticBackdropProduct-' + ${s.getId()}">
+														products</a>
 												</div>
 											</div>
+
 										</td>
 									</tr>
 								</tbody>

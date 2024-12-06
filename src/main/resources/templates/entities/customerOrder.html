@@ -64,9 +64,9 @@
 								</thead>
 								<tbody>
 									<tr th:each="c : ${CustomerOrders}">
-										<td><span th:text="${c.getOrderDate()}"></span></td>
-										<td><span th:text="${c.getPaidDate()}"></span></td>
-										<td><span th:text="${c.getShippedDate()}"></span></td>
+										<td><span th:text="${#temporals.format(c.getOrderDate(), 'dd-MM-yyyy HH:mm')}"></span></td>
+										<td><span th:text="${#temporals.format(c.getPaidDate(), 'dd-MM-yyyy HH:mm')}"></span></td>
+										<td><span th:text="${#temporals.format(c.getShippedDate(), 'dd-MM-yyyy HH:mm')}"></span></td>
 										<td>
 											<div>
 												<a
@@ -107,7 +107,6 @@
 													th:text="${c.getLinks().getLink('orderTaxStatus').getLabel()}"></span></a>
 											</div>
 										</td>
-
 									</tr>
 								</tbody>
 							</table>
@@ -128,7 +127,7 @@
 			</div>
 	</main>
 
-	<div th:replace="fragments/links-js :: linksJs"></div>
+	<div th:replace="fragments/links-js-page-length-7 :: linksJs"></div>
 
 </body>
 </html>

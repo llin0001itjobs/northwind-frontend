@@ -45,9 +45,9 @@
 								<tr th:each="c : ${Customers}">
 									<td><span th:text="${c.getFirstName()}"></span> &nbsp; <span
 										th:text="${c.getLastName()}"></span></td>
-									<td th:text="${c.getJobTitle()}"></td>
+									<td><span th:text="${c.getJobTitle()}"></span></td>
 									<td>
-										<div class="overflow-scroll" th:text="${c.getNotes()}"></div>
+										<span th:text="${c.getNotes()}"></span>
 									</td>
 									<td>
 										<div>

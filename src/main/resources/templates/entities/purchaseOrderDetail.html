@@ -33,10 +33,11 @@
 	<main>
 		<div class="container-fluid">
 			<div th:replace="modal/purchaseOrderDetail/customerOrder :: div"></div>
-			<div th:replace="modal/purchaseOrderDetail/inventoryTransaction :: div"></div>
+			<div
+				th:replace="modal/purchaseOrderDetail/inventoryTransaction :: div"></div>
 			<div th:replace="modal/purchaseOrderDetail/orderStatus :: div"></div>
 			<div th:replace="modal/purchaseOrderDetail/product :: div"></div>
-			<div th:replace="modal/purchaseOrderDetail/purchaseOrder :: div"></div>			
+			<div th:replace="modal/purchaseOrderDetail/purchaseOrder :: div"></div>
 			<div class="row" id="navBarRow">
 				<div class="col-12" id="navBarCol">
 					<div th:replace="fragments/navbar :: nav"></div>
@@ -56,27 +57,21 @@
 							<table class="table" id="dataTable">
 								<thead>
 									<tr>
-										<th scope="col">Quantity</th>
-										<th scope="col">Unit Cost</th>
 										<th scope="col">Date Received</th>
+										<th scope="col">Unit Cost</th>
+										<th scope="col">Quantity</th>
 										<th scope="col">Posted To Inventory</th>
 										<th scope="col">Links</th>
 									</tr>
 								</thead>
 								<tbody>
-									<tr th:each="p : ${purchaseOrderDetails}">
+									<tr th:each="p : ${PurchaseOrderDetails}">
+										<td><span
+											th:text="${#temporals.format(p.getDateReceived(), 'dd-MM-yyyy HH:mm')}"></span></td>
+										<td><span th:text="${p.getUnitCost()}"></span></td>									
 										<td><span th:text="${p.getQuantity()}"></span></td>
-										<td><span th:text="${p.getUnitCost()}"></span></td>
-										<td><span th:text="${p.getDateReceived()}"></span></td>
 										<td><span th:text="${p.isPostedToInventory()}"></span></td>
-										<td>
-											<div>
-												<a
-													th:href="'/modal/show?entity=orderStatus&id=' + ${p.getLinks().getLink('orderStatus').getId()}"
-													data-bs-toggle="modal"
-													th:attr="data-bs-target='#staticBackdropOrderStatus-' + ${p.getLinks().getLink('orderStatus').getId()}"><span
-													th:text="${p.getLinks().getLink('orderStatus').getLabel()}"></span></a>
-											</div>
+										<td>									
 											<div
 												th:with="isNullId=${p.getLinks().getLink('inventoryTransaction').getId() == null}">
 												<a th:if="${!isNullId}"
@@ -93,6 +88,14 @@
 													th:attr="data-bs-target='#staticBackdropProduct-' + ${p.getLinks().getLink('product').getId()}"><span
 													th:text="${p.getLinks().getLink('product').getLabel()}"></span></a>
 											</div>
+											<div
+												th:with="isNullId=${p.getLinks().getLink('purchaseOrder').getId() == null}">
+												<a th:if="${!isNullId}"
+													th:href="'/modal/show?entity=purchaseOrder&id=' + ${p.getLinks().getLink('purchaseOrder').getId()}"
+													data-bs-toggle="modal"
+													th:attr="data-bs-target='#staticBackdropPurchaseOrder-' + ${p.getLinks().getLink('purchaseOrder').getId()}"><span
+													th:text="${p.getLinks().getLink('purchaseOrder').getLabel()}"></span></a>
+											</div>											
 										</td>
 									</tr>
 								</tbody>
@@ -114,7 +117,7 @@
 			</div>
 	</main>
 
-	<div th:replace="fragments/links-js :: linksJs"></div>
+	<div th:replace="fragments/links-js-page-length-7 :: linksJs"></div>
 
 </body>
 </html>

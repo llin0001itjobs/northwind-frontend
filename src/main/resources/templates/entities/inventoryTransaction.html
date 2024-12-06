@@ -67,9 +67,8 @@
 									<tr th:each="i : ${InventoryTransactions}">
 										<td><span th:text="${i.getTransactionCreatedDate()}"></span></td>
 										<td><span th:text="${i.getTransactionModifiedDate()}"></span></td>
-										<td th:text="${i.getQuantity()}"></td>
-										<td><textarea rows="5" cols="60"
-												th:text="${i.getComments()}"></textarea></td>
+										<td><span th:text="${i.getQuantity()}"></span></td>
+										<td><span th:text="${i.getComments()}"></span></td>
 										<td>
 											<div>
 												<a
