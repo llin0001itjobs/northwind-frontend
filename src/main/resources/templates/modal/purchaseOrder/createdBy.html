@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<div th:each="e : ${Employees}" class="modal fade"
+	data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+	th:attr="id='staticBackdropCreatedBy-' + ${e.getId()}, aria-labelledby='staticBackdropCreatedByLabel-' + ${e.getId()}"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title"
+					th:attr="id='staticBackdropCreatedByLabel-' + ${e.getId()}">
+					Employee</span>
+				</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"
+					aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<dl class="row">
+					<dt class="col">Name</dt>
+					<dd class="col">
+						<span th:text="${e.getFirstName()}"></span> &nbsp; <span
+							th:text="${e.getLastName()}"></span>
+					</dd>
+				</dl>
+				<dl class="row">
+					<dt class="col">Job Title</dt>				
+					<dd class="col">
+						<span th:text="${e.getJobTitle()}"></span>
+					</dd>
+				</dl>			
+				<dl class="row">
+					<dt class="col">Notes</dt>					
+					<dd class="col">
+						<span th:text="${e.getNotes()}"></span>					
+					</dd>
+				</dl>	
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary"
+					data-bs-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+

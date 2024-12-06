@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<div>
+	<div th:each="p : ${PurchaseOrders}" class="modal fade"
+		data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+		th:attr="id='staticBackdropPurchaseOrder-' + ${p.getId()}, aria-labelledby='staticBackdropPurchaseOrderLabel-' + ${p.getId()}"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title"
+						th:attr="id='staticBackdropPurchaseOrderLabel-' + ${p.getId()}">
+						Purchase Order</span>
+					</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<dl class="row">
+						<dt class="col">Approved Date</dt>
+						<dd class="col">
+							<span
+								th:text="${#temporals.format(p.getApprovedDate(),  'dd-MM-yyyy HH:mm')}"></span>
+						</dd>
+					</dl>
+					<dl class="row">
+						<dt class="col">Submitted Date</dt>
+						<dd class="col">
+							<span
+								th:text="${#temporals.format(p.getSubmittedDate(), 'dd-MM-yyyy HH:mm')}"></span>
+						</dd>
+					</dl>
+					<dl class="row">
+						<dt class="col">Creation Date</dt>
+						<dd class="col">
+							<span
+								th:text="${#temporals.format(p.getCreationDate(),  'dd-MM-yyyy HH:mm')}"></span>
+						</dd>
+					</dl>
+					<dl class="row">
+						<dt class="col">Expected Date</dt>
+						<dd class="col">
+							<span
+								th:text="${#temporals.format(p.getExpectedDate(),  'dd-MM-yyyy HH:mm')}"></span>
+						</dd>
+					</dl>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+

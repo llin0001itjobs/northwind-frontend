@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<div th:each="c : ${Customers}" class="modal fade"
+	data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+	th:attr="id='staticBackdropCustomer-' + ${c.getId()}, aria-labelledby='staticBackdropCustomerLabel-' + ${c.getId()}"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title"
+					th:attr="id='staticBackdropCustomerLabel-' + ${c.getId()}">
+					Customer</span>
+				</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"
+					aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<dl class="row">
+					<dt class="col">Name</dt>
+					<dd class="col">
+						<span th:text="${c.getFirstName()}"></span> &nbsp; <span
+							th:text="${c.getLastName()}"></span>
+					</dd>
+				</dl>
+				<dl class="row">
+					<dt class="col">Job Title</dt>				
+					<dd class="col">
+						<span th:text="${c.getJobTitle()}"></span>
+					</dd>
+				</dl>
+				<dl class="row">
+					<dt class="col">Notes</dt>					
+					<dd class="col">
+						<span th:text="${c.getNotes()}"></span>					
+					</dd>
+				</dl>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary"
+					data-bs-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+

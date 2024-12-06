@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<div>
+	<div th:each="i : ${InventoryTransactionTypes}" class="modal fade"
+		data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+		th:attr="id='staticBackdropInventoryTransactionType-' + ${i.getId()}, aria-labelledby='staticBackdropInventoryTransactionTypeLabel-' + ${i.getId()}"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title"
+						th:attr="id='staticBackdropInventoryTransactionTypeLabel-' + ${i.getId()}">
+						Inventory Transaction Type</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<dl class="row">
+						<dt class="col">Type Name</dt>
+						<dd class="col">
+							<span th:text="${i.getTypeName()}"></span>
+						</dd>
+					</dl>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

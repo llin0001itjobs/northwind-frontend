@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<div>
+	<div th:each="p : ${Products}" class="modal modal-lg fade"
+		data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+		th:attr="id='staticBackdropSupplier-' + ${p.getId()}, aria-labelledby='staticBackdropSupplierLabel-' + ${p.getId()}"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title"
+						th:attr="id='staticBackdropSupplierLabel-' + ${p.getId()}">
+						Supplier</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<table class="table modal-table">
+						<thead>
+							<tr>
+								<th class="col">Name</span></th>
+								<th class="col">Job Title</th>
+								<th class="col">Email Address</th>
+								<th class="col">Phone Number</th>
+								<th class="col">City State</th>
+								<th class="col">Zip Code</th>
+							</tr>
+						</thead>
+
+						<tbody th:with="isNullSuppliers=${p.getSuppliers() == null}, 
+                				  isNullSupplierList=${p.getSuppliers() != null && 
+                					    p.getSuppliers().getSuppliers() == null}">
+							<!-- Only render if suppliers are available -->
+							<tr th:if="${!isNullSuppliers && !isNullSupplierList}" 
+							    th:each="s : ${p.getSuppliers().getSuppliers()}">
+								<td class="col"><span th:text="${s.getFirstName()}" />&nbsp;
+									<span th:text="${s.getLastName()}" /></td>
+								<td class="col"><span th:text="${s.getJobTitle()}" /></td>
+								<td class="col"><span th:text="${s.getEmailAddress()}" /></td>
+								<td class="col"><span th:text="${s.getBusinessPhone()}" /></td>
+								<td class="col"><span th:text="${s.getCity()}" />,&nbsp;<span
+									th:text="${s.getStateProvince()}" /></td>
+								<td class="col"><span th:text="${s.getZipPostalCode()}" /></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

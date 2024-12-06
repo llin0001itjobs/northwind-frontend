@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<div th:each="p : ${Products}" class="modal fade"
+	data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+	th:attr="id='staticBackdropProduct-' + ${p.getId()}, aria-labelledby='staticBackdropProductLabel-' + ${p.getId()}"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title"
+					th:attr="id='staticBackdropProductLabel-' + ${p.getId()}">
+					Product</span>
+				</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"
+					aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<dl class="row">
+					<dt class="col">Product Code</dt>
+					<dd class="col">
+						<span th:text="${p.getProductCode()}"></span>
+					</dd>
+				</dl>
+				<dl class="row">
+					<dt class="col">Product Name</dt>
+					<dd class="col">
+						<span th:text="${p.getProductName()}"></span>
+					</dd>
+				</dl>
+				<dl class="row">
+					<dt class="col">Category</dt>
+					<dd class="col">
+						<span th:text="${p.getCategory()}"></span>
+					</dd>
+				</dl>
+				<dl class="row">
+					<dt class="col">Standard Cost</dt>
+					<dd class="col">
+						<span th:text="${p.getStandardCost()}"></span>
+					</dd>
+				</dl>
+				<dl class="row">
+					<dt class="col">List Price</dt>
+					<dd class="col">
+						<span th:text="${p.getListPrice()}"></span>
+					</dd>
+				</dl>
+				<dl class="row">
+					<dt class="col">Quantity Per Unit</dt>
+					<dd class="col">
+						<span th:text="${p.getQuantityPerUnit()}"></span>
+					</dd>
+				</dl>
+				<dl class="row">
+					<dt class="col">Minimum Reorder Quantity</dt>
+					<dd class="col">
+						<span th:text="${p.getMinimumReorderQuantity()}"></span>
+					</dd>
+				</dl>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary"
+					data-bs-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+

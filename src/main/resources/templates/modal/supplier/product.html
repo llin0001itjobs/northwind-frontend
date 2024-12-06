@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<div th:each="s : ${Suppliers}" class="modal modal-xl fade"
+	data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+	th:attr="id='staticBackdropProduct-' + ${s.getId()}, aria-labelledby='staticBackdropProductLabel-' + ${s.getId()}"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title"
+					th:attr="id='staticBackdropProductLabel-' + ${s.getId()}">
+					Product</span>
+				</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"
+					aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<table class="table modal-table">
+					<thead>
+						<tr>
+							<th scope="col">Product Code</th>
+							<th scope="col">Product Name</th>
+							<th scope="col">Category</th>
+							<th scope="col">Standard Cost</th>
+							<th scope="col">List Price</th>
+							<th scope="col">Quantity Per Unit</th>
+							<th scope="col">Minimum Reorder Quantity</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="p : ${s.getProducts().getProducts()}">
+							<td><span th:text="${p.getProductCode()}"></span></td>
+							<td><span th:text="${p.getProductName()}"></span></td>
+							<td><span th:text="${p.getCategory()}"></span></td>
+							<td><span th:text="${p.getStandardCost()}"></span></td>
+							<td><span th:text="${p.getListPrice()}"></span></td>
+							<td><span th:text="${p.getQuantityPerUnit()}"></span></td>
+							<td><span th:text="${p.getMinimumReorderQuantity()}"></span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary"
+					data-bs-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
