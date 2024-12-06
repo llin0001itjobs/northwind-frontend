@@ -1,10 +1,8 @@
 package org.llin.demo.northwind.controller;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
-import org.llin.demo.northwind.model.api.core.PurchaseOrderDetail;
-import org.llin.demo.northwind.util.XsltTransformer;
+import org.llin.demo.northwind._Classes;
+import org.llin.demo.northwind._Titles;
+import org.llin.demo.northwind.model.BaseObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,33 +10,21 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/purchaseOrderDetail")
-public class PurchaseOrderDetailController<T extends PurchaseOrderDetail> extends BaseController<T> {
-	
-	private static final String XSLT = "./xslt/purchaseOrderDetail.xslt";	
-	private static final String JSON = "./xslt/sample/purchaseOrderDetail.json";
-	private PurchaseOrderDetail[] purchaseOrderDetails = {};
-		
-	@SuppressWarnings("unchecked")
-	public PurchaseOrderDetailController() {	
-		_type = (Class<T[]>) purchaseOrderDetails.getClass();
-		_xsltTransformer = new XsltTransformer(BaseController.class.getResourceAsStream(XSLT));
-		_jsonReader = new BufferedReader(new InputStreamReader(BaseController.class.getResourceAsStream(JSON)));
-	}
+public class PurchaseOrderDetailController<T extends BaseObject> extends _BaseController<T> implements _Classes, _Titles {
 
 	@GetMapping("/list")
 	public ModelAndView getAllPurchaseOrderDetails() {
-		ModelAndView mv = new ModelAndView(ENTITIES_PAGE);
-		mv.addObject(ENTITIES, getAllObjects("purchaseOrderDetail"));
-		mv.addObject(TITLE, "Purchase Order Detail");
-		return mv;
+		handleRequest();
+		modelAndView.addObject(PURCHASE_ORDER_DETAILS,modelViewCache.getObjectArray(PURCHASE_ORDER_DETAIL));
+		modelAndView.addObject(CUSTOMER_ORDERS,modelViewCache.getObjectArray(CUSTOMER_ORDER));
+		modelAndView.addObject(INVENTORY_TRANSACTIONS,modelViewCache.getObjectArray(INVENTORY_TRANSACTION));
+		modelAndView.addObject(ORDER_STATUSES,modelViewCache.getObjectArray(ORDER_STATUS));
+		modelAndView.addObject(PRODUCTS,modelViewCache.getObjectArray(PRODUCT));
+		modelAndView.addObject(PURCHASE_ORDERS,modelViewCache.getObjectArray(PURCHASE_ORDER));
+		modelAndView.addObject(TITLE, TITLE_PURCHASE_ORDER_DETAIL);
+		modelAndView.setViewName("entities/purchaseOrderDetail");
+		return modelAndView;
 	}                         
-
-	@Override
-	void loadConfigList() {
-		_configList.add("InventoryTransaction");
-		_configList.add("Product");		
-		_configList.add("PurchaseOrder");		
-	}
 
 }
 

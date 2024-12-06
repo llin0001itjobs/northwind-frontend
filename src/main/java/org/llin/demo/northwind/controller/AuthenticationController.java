@@ -1,10 +1,8 @@
 package org.llin.demo.northwind.controller;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
-import org.llin.demo.northwind.model.api.core.Authentication;
-import org.llin.demo.northwind.util.XsltTransformer;
+import org.llin.demo.northwind._Classes;
+import org.llin.demo.northwind._Titles;
+import org.llin.demo.northwind.model.BaseObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,30 +10,17 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/authentication")
-public class AuthenticationController<T extends Authentication> extends BaseController<T> {
-	
-	private static final String XSLT = "./xslt/authentication.xslt";
-	private static final String JSON = "./xslt/sample/authentication.json";
-	private Authentication[] authentications = {};
-	
-	@SuppressWarnings("unchecked")
-	public AuthenticationController() {
-		_type = (Class<T[]>) authentications.getClass();		
-		_xsltTransformer = new XsltTransformer(BaseController.class.getResourceAsStream(XSLT));		
-		_jsonReader = new BufferedReader(new InputStreamReader(BaseController.class.getResourceAsStream(JSON)));
-	}
-	
+public class AuthenticationController<T extends BaseObject> extends _BaseController<T> implements _Classes, _Titles {
+
 	@GetMapping("/list")
 	public ModelAndView getAllAuthentications() {
-		ModelAndView mv = new ModelAndView(ENTITIES_PAGE);
-		mv.addObject(ENTITIES, getAllObjects("authentication"));
-		mv.addObject(TITLE, "Authentication");
-		return mv;
+		handleRequest();
+		modelAndView.addObject(AUTHENTICATION,modelViewCache.getObjectArray(AUTHENTICATION));		    
+		modelAndView.addObject(TITLE, TITLE_AUTHENTICATION);	
+		modelAndView.setViewName("entities/authentication");
+		return modelAndView;
 	}
 
-	@Override
-	void loadConfigList() {
-		//do nothing
-	}
+
 
 }

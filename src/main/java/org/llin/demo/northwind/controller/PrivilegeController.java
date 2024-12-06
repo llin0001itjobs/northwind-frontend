@@ -9,16 +9,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/role")
-public class RoleController<T extends BaseObject> extends _BaseController<T> implements _Classes, _Titles {
-		
+@RequestMapping("/privilege")
+public class PrivilegeController<T extends BaseObject> extends _BaseController<T> implements _Classes, _Titles {
+
 	@GetMapping("/list")
-	public ModelAndView getAllRoles() {
+	public ModelAndView getAllPrivilege() {
 		handleRequest();
-		modelAndView.addObject(ROLES,modelViewCache.getObjectArray(ROLE));
-		modelAndView.addObject(TITLE, TITLE_ROLE);
-		modelAndView.setViewName("entities/role");
+		modelAndView.addObject(PRIVILEGES,modelViewCache.getObjectArray(PRIVILEGE));
+		modelAndView.addObject(TITLE, TITLE_PRIVILEGE);
+		modelAndView.setViewName("entities/privilege");
 		return modelAndView;
 	}
+	
+}
 
-}	

@@ -1,10 +1,8 @@
 package org.llin.demo.northwind.controller;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
-import org.llin.demo.northwind.model.api.core.Supplier;
-import org.llin.demo.northwind.util.XsltTransformer;
+import org.llin.demo.northwind._Classes;
+import org.llin.demo.northwind._Titles;
+import org.llin.demo.northwind.model.BaseObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,29 +10,17 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/supplier")
-public class SupplierController<T extends Supplier> extends BaseController<T> {
-
-	private static final String XSLT = "./xslt/supplier.xslt";
-	private static final String JSON = "./xslt/sample/supplier.json";
-	private Supplier[] suppliers = {};
-	
-	@SuppressWarnings("unchecked")
-	public SupplierController() {
-		_type = (Class<T[]>) suppliers.getClass();
-		_xsltTransformer = new XsltTransformer(BaseController.class.getResourceAsStream(XSLT));	
-		_jsonReader = new BufferedReader(new InputStreamReader(BaseController.class.getResourceAsStream(JSON)));
-	}
+public class SupplierController<T extends BaseObject> extends _BaseController<T> implements _Classes, _Titles {
 
 	@GetMapping("/list")
 	public ModelAndView getAllSuppliers() {
-		ModelAndView mv = new ModelAndView(ENTITIES_PAGE);
-		mv.addObject(ENTITIES, getAllObjects("supplier"));
-		mv.addObject(TITLE, "Supplier");
-		return mv;
+		handleRequest();
+		modelAndView.addObject(SUPPLIERS,modelViewCache.getObjectArray(SUPPLIER));
+		modelAndView.addObject(COMPANIES,modelViewCache.getObjectArray(COMPANY));
+		modelAndView.addObject(PRODUCTS,modelViewCache.getObjectArray(PRODUCT));
+		modelAndView.addObject(TITLE, TITLE_SUPPLIER);
+		modelAndView.setViewName("entities/supplier");
+		return modelAndView;
 	}
 
-	@Override
-	void loadConfigList() {
-		_configList.add("Company");
-	}
 }

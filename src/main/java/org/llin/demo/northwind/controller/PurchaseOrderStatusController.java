@@ -1,10 +1,8 @@
 package org.llin.demo.northwind.controller;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
-import org.llin.demo.northwind.model.api.core.PurchaseOrderStatus;
-import org.llin.demo.northwind.util.XsltTransformer;
+import org.llin.demo.northwind._Classes;
+import org.llin.demo.northwind._Titles;
+import org.llin.demo.northwind.model.BaseObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,31 +10,17 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/purchaseOrderStatus")
-public class PurchaseOrderStatusController<T extends PurchaseOrderStatus> extends BaseController<T> {
+public class PurchaseOrderStatusController<T extends BaseObject> extends _BaseController<T> implements _Classes, _Titles {
 	
-	private static final String XSLT = "./xslt/purchaseOrderStatus.xslt";	
-	private static final String JSON = "./xslt/sample/purchaseOrderStatus.json";
-	private PurchaseOrderStatus[] purchaseOrderStatuses = {};
-		
-	@SuppressWarnings("unchecked")
-	public PurchaseOrderStatusController() {	
-		_type = (Class<T[]>) purchaseOrderStatuses.getClass();
-		_xsltTransformer = new XsltTransformer(BaseController.class.getResourceAsStream(XSLT));
-		_jsonReader = new BufferedReader(new InputStreamReader(BaseController.class.getResourceAsStream(JSON)));
-	}
-
 	@GetMapping("/list")
 	public ModelAndView getAllPurchaseOrderStatuses() {
-		ModelAndView mv = new ModelAndView(ENTITIES_PAGE);
-		mv.addObject(ENTITIES, getAllObjects("purchaseOrderStatus"));
-		mv.addObject(TITLE, "Purchase Order Status");
-		return mv;
+		handleRequest();
+		modelAndView.addObject(PURCHASE_ORDER_STATUSES,modelViewCache.getObjectArray(PURCHASE_ORDER_STATUS));
+		modelAndView.addObject(TITLE, TITLE_PURCHASE_ORDER_STATUS);
+		modelAndView.setViewName("entities/purchaseOrderStatus");
+		return modelAndView;
 	}                         
 
-	@Override
-	void loadConfigList() {
-		
-	}
 
 }
 
