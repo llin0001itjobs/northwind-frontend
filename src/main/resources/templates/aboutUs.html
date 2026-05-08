@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://getbootstrap.com/docs/5.0/examples/sidebars/ -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<title>Northwind Traders - About Us</title>
+
+<th:block th:replace="fragments/links-css :: linksCss"></th:block>
+
+</head>
+<body>
+	<div class="container-fluid h-100">
+		<div class="row" id="navBarRow">
+			<div class="col-12" id="navBarCol">
+				<div th:replace="fragments/navbar :: nav"></div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="row vh-100">
+				<div class="col-2 bg-light border border-primary" id="leftSideBar">
+					<div th:replace="fragments/sideMenuLeftEmpty :: div"></div>
+				</div>
+				<div class="col-8 border border-primary mt-5 pt-4">
+					<div class="header">
+						<h1>About Us</h1>
+					</div>
+					<div class="section" id="company-overview">
+						<h2>Company Overview</h2>
+						<p>At Northwind Enterprises, we take pride in providing an
+							extensive range of high-quality food products designed to meet
+							the diverse needs of our customers. Our product lineup includes
+							everything from baked goods and beverages to canned meats,
+							snacks, and dairy products. Whether you're looking for nutritious
+							grains, delicious jams and preserves, or savory sauces, we have
+							something for every taste and occasion. Our catalog is carefully
+							curated to ensure that we offer only the best products, sourced
+							from trusted suppliers around the world.</p>
+					</div>
+
+					<div class="section" id="mission-values">
+						<h2>Mission and Values</h2>
+						<p>Our mission is to provide exceptional food products with
+							reliability and excellent service. We are committed to
+							maintaining the highest standards in quality, efficiency, and
+							transparency. By leveraging our sophisticated database management
+							system, we ensure seamless operations, fast order fulfillment,
+							and a transparent experience for all customers. We value
+							collaboration, both with our customers and our suppliers, and
+							continuously strive to adapt and grow with the market’s
+							ever-evolving needs.</p>
+					</div>
+
+					<div class="section" id="customer-centric">
+						<h2>Customer-Centric Approach</h2>
+						<p>At Northwind Enterprises, customer satisfaction is our top
+							priority. We have built a robust system to ensure that every
+							order is handled with precision and care. Our detailed tracking
+							of orders, payment types, and inventory transactions ensures that
+							we deliver the best possible service, from the moment an order is
+							placed to the final delivery. By maintaining clear communication
+							and transparent processes, we aim to provide an exceptional
+							experience for every customer.</p>
+					</div>
+
+					<div class="section" id="social-and-environmental-responsibility">
+						<h2>Social and Environmental Responsibility</h2>
+						<p>We are deeply committed to social and environmental
+							responsibility. At Northwind Enterprises, we prioritize
+							responsible sourcing of our products, ensuring that we work with
+							suppliers who align with our high standards of ethical practices.
+							We also strive to reduce our environmental impact through
+							efficient inventory and shipping processes. Our dedication to
+							sustainability extends across our entire supply chain, and we are
+							continuously exploring new ways to improve our environmental
+							footprint while supporting the communities in which we operate.</p>
+					</div>
+				</div>
+				<div class="col-2 bg-light border border-primary" id="rightSideBar">
+					<div th:replace="fragments/sideMenuRight :: div"></div>
+				</div>
+			</div>
+
+			<div class="row" id="footerRow">
+				<div class="col-12" id="footerCol">
+					<div th:replace="fragments/footer :: footer"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div th:replace="fragments/links-js :: linksJs"></div>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<title>Northwind Traders</title>
+
+<!-- Bootstrap core CSS -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	th:attr="integrity='sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9'"
+	th:attr="crossorigin='anonymous'">
+
+<style>
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+@media ( min-width : 768px) {
+	.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
+}
+
+.custom-bg {
+	background-size: cover;
+	background-image: url("/background/abstract-background-322.jpg")
+}
+
+.footer-container {
+	position: relative;
+}
+</style>
+
+<!-- Custom styles for this template -->
+<link th:href="@{/css/navbar-top-fixed.css}" rel="stylesheet">
+</head>
+
+<body class="custom-bg container-fluid vh-100">
+
+	<div th:replace="fragments/navbar :: nav"></div>
+
+	<div class="container overflow-auto border mb-2 font-data">
+		<div class="lead">Lorem ipsum dolor sit amet, consectetur
+			adipiscing elit. Praesent pellentesque sapien tortor, vitae euismod
+			dolor aliquet cursus. Nullam eget diam quam. Donec a ipsum dolor.
+			Vestibulum non ultrices dui. Integer eget quam fermentum, posuere
+			mauris in, luctus eros. Proin convallis semper augue, ut euismod
+			metus mollis ac. Duis id odio viverra, vehicula eros pharetra,
+			malesuada ligula. Curabitur id lectus vitae sapien semper suscipit
+			quis at eros.</div>
+		<div class="p-3">Suspendisse tempus nisi et ligula aliquam
+			lobortis. Aenean metus sapien, porttitor a fermentum in, aliquam ac
+			risus. Nunc viverra est malesuada ullamcorper aliquam. Praesent ut
+			enim tempus neque ornare congue. Duis euismod eget arcu ac imperdiet.
+			Phasellus sollicitudin sit amet velit vitae varius. Integer eu
+			efficitur nisi. Nullam vitae ultricies mauris. Morbi egestas nec
+			turpis sit amet aliquam. Donec blandit mollis urna sed ullamcorper.
+			Vivamus vestibulum vestibulum metus, id aliquet lacus feugiat vel.
+			Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+			posuere cubilia curae; Duis id ultricies tellus. Donec neque mi,
+			mattis hendrerit vehicula ac, convallis pellentesque ligula.</div>
+		<div class="p-3">Sed quis sem nisi. Nulla volutpat pulvinar
+			libero sit amet ultrices. Vestibulum mauris lacus, commodo quis
+			dictum eget, posuere ut arcu. Donec vitae est velit. Class aptent
+			taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+			himenaeos. Donec varius lacus eget mollis faucibus. Lorem ipsum dolor
+			sit amet, consectetur adipiscing elit. Pellentesque sagittis nisi
+			vitae sem euismod suscipit.</div>
+		<div class="p-3">Mauris tortor ex, sollicitudin at dolor eget,
+			porta dapibus odio. Phasellus convallis augue eget augue interdum, id
+			elementum libero malesuada. Suspendisse in vulputate tortor. Nullam
+			at condimentum lectus. Vivamus dapibus lacinia interdum. Sed
+			ullamcorper vestibulum est, sed faucibus lorem elementum lacinia.
+			Aenean congue pharetra sapien eget finibus. Quisque neque metus,
+			ullamcorper vitae dolor eu, efficitur tempor arcu. Nulla cursus
+			tortor nunc, pretium venenatis magna semper hendrerit. Nulla vel eros
+			eu leo mollis tincidunt. Etiam interdum a erat vel laoreet. Vivamus
+			lobortis sollicitudin nisl eget suscipit.</div>
+		<div class="p-3">Vestibulum fermentum ut tellus vitae efficitur.
+			Ut porta ac leo sit amet consectetur. Nunc a mi eu libero sodales
+			tempor. Mauris posuere nisl id justo sollicitudin molestie. In hac
+			habitasse platea dictumst. Vestibulum eu imperdiet tellus. Phasellus
+			a finibus leo, vel dictum metus. Vestibulum tristique quam consequat
+			quam faucibus molestie condimentum a erat. Quisque molestie, lorem
+			viverra elementum mollis, enim arcu cursus lorem, ac blandit tellus
+			sapien non orci. Quisque ut neque erat. Duis consectetur bibendum
+			ornare. Cras auctor finibus mi vitae sodales. Phasellus lobortis
+			tempus lacus, vitae tempus quam venenatis quis. Sed pretium varius
+			posuere. Praesent fringilla laoreet mi id tincidunt. Fusce orci
+			tellus, pharetra interdum lorem quis, ullamcorper hendrerit turpis.</div>
+		<div class="p-3">Suspendisse maximus luctus enim in blandit. In
+			elementum, enim sit amet gravida vulputate, sapien lectus ornare
+			quam, sed commodo mi nisi vitae nulla. Nullam sapien augue, vulputate
+			varius consequat sit amet, egestas in arcu. Curabitur enim ipsum,
+			egestas ut ultricies a, viverra vitae dolor. Curabitur rutrum elit
+			eget sollicitudin dictum. Duis porta congue dolor et volutpat. Etiam
+			accumsan volutpat nisi. Etiam blandit, leo sit amet rutrum lacinia,
+			massa eros convallis orci, vel sodales augue felis ac nisl. Praesent
+			feugiat vulputate lobortis. Morbi luctus finibus aliquet. Nullam quis
+			nibh eget eros ultricies lobortis sed id tellus. Nulla ut odio non
+			leo aliquam dignissim. Etiam mattis mi ac turpis ultrices imperdiet.
+			Pellentesque ut velit nec mi volutpat sodales. Donec bibendum
+			vehicula nisl vitae ultrices.</div>
+		<div class="p-3">Mauris eu orci non ligula varius rhoncus.
+			Aenean egestas pharetra elit eget mattis. Mauris eu sem quis nisi
+			consectetur iaculis porttitor eget tortor. Nam et arcu dictum, mattis
+			sapien vel, feugiat tellus. Cras sit amet rutrum metus. Donec
+			tristique magna id mi ornare mattis. Phasellus imperdiet lacus a
+			mauris gravida ultricies. Pellentesque dapibus tempor dolor vel
+			congue. Aenean fringilla consectetur justo, a tempus mi lobortis et.
+			Proin congue finibus arcu, vel pretium ante suscipit ultricies. Proin
+			a eros nulla. In dapibus placerat tortor eu mollis. Fusce
+			pellentesque, orci ac euismod hendrerit, elit velit iaculis diam,
+			eget venenatis quam tellus a leo. Donec massa tellus, posuere ac
+			lorem eget, pellentesque aliquet lorem. Nulla facilisi.</div>
+		<div class="p-3">Vivamus commodo eget quam ac dapibus. In
+			tincidunt ornare pretium. Aenean eu fringilla diam, eget elementum
+			lacus. Nulla velit arcu, scelerisque consequat sollicitudin nec,
+			suscipit a nisi. Maecenas in ante at velit sodales sodales. Duis id
+			rhoncus quam. Pellentesque pulvinar, urna sed interdum euismod, ex
+			massa aliquam massa, vel luctus libero nisi euismod dolor. Nullam non
+			volutpat ex, vel tristique mi. Vestibulum id augue iaculis, auctor
+			dui nec, pharetra nisl. Nam porta lectus dictum efficitur volutpat.
+			Mauris eget congue tellus. Sed efficitur eros sit amet fermentum
+			eleifend. Phasellus luctus congue quam, a vehicula ante. Aliquam
+			vulputate dolor massa, et egestas leo facilisis ac.</div>
+		<div class="p-3">Vestibulum ante augue, efficitur feugiat velit
+			ultricies, mattis condimentum urna. Aenean scelerisque, nisi at
+			porttitor faucibus, justo justo vestibulum dolor, molestie imperdiet
+			arcu ligula eu libero. Suspendisse et faucibus massa. Etiam ultrices
+			sed metus ut vehicula. In bibendum rutrum vehicula. Maecenas
+			facilisis lectus eros, quis molestie eros vestibulum quis. Integer
+			commodo molestie metus eget bibendum. Morbi ante lectus, tempus
+			faucibus laoreet quis, lacinia id orci. Etiam blandit semper metus.
+			Integer vehicula sagittis urna, id sollicitudin sapien dictum et.
+			Proin maximus luctus sem vitae porttitor. Nam vestibulum nulla tempor
+			iaculis ullamcorper. Vestibulum et eros est. In ac urna aliquet,
+			aliquam nisl id, dictum mauris. Duis sit amet sagittis est. Aenean
+			eget dolor porttitor, venenatis mauris nec, accumsan dolor.</div>
+		<div class="p-3">Fusce fringilla vulputate volutpat. Maecenas
+			venenatis turpis ac mi ultrices, auctor imperdiet tellus tempor.
+			Vestibulum in mattis arcu. Aliquam lobortis arcu ut enim volutpat,
+			sit amet euismod mauris vestibulum. Nullam accumsan urna justo, id
+			gravida diam iaculis eget. Donec faucibus pulvinar lorem, non feugiat
+			ipsum imperdiet nec. Curabitur pharetra ornare metus, sit amet
+			venenatis erat pellentesque eu. Nulla ac odio eu dolor sagittis
+			faucibus quis et nunc. Aenean faucibus tellus dolor, pharetra
+			dignissim lectus dignissim in. Quisque sagittis elementum ante, at
+			varius dolor finibus vitae.</div>
+		<div class="p-3">Curabitur placerat, est vel vehicula lobortis,
+			ligula diam convallis nisi, rutrum fringilla nisl purus vel est. In
+			hac habitasse platea dictumst. Suspendisse a dapibus eros.
+			Suspendisse fermentum placerat lectus, consectetur fermentum ante
+			congue id. Nulla facilisi. Vivamus pretium leo sit amet nulla
+			sagittis gravida. Aenean cursus est sit amet porttitor commodo.
+			Integer eget risus placerat, tempus risus iaculis, fringilla justo.
+			Maecenas mauris odio, ultrices non augue sed, pulvinar imperdiet
+			sapien. Duis quis sollicitudin quam. Aenean ut accumsan mauris. Nunc
+			eget dictum nulla. Etiam ipsum felis, commodo at ex sit amet,
+			tincidunt fringilla ligula. Vestibulum semper imperdiet libero vel
+			varius. Donec faucibus tempor semper.</div>
+	</div>
+
+	<div class="container footer-container">
+		<div th:replace="fragments/footer :: footer"></div>
+	</div>
+	<div th:replace="fragments/script :: div"></div>
+</body>
+
+</html>

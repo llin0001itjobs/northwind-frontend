@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://getbootstrap.com/docs/5.0/examples/sidebars/ -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<title>Northwind Traders</title>
+
+<style>
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+@media ( min-width : 768px) {
+	.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
+}
+</style>
+
+<th:block th:replace="fragments/links-css :: linksCss"></th:block>
+
+</head>
+<body>
+	<main>
+		<div class="container-fluid">
+			<div th:replace="modal/child/employee/company :: div"></div>
+			<div th:replace="modal/child/employee/privilege :: div"></div>
+			<div class="row" id="navBarRow">
+				<div class="col-12" id="navBarCol">
+					<div th:replace="fragments/navbar :: nav"></div>
+				</div>
+			</div>
+			<div class="row border">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-2 bg-light border border-primary pb-3"
+							id="leftSideBar">
+							<div th:replace="fragments/sideMenuLeftEntities :: div"></div>
+						</div>
+						<div class="col-8 border border-primary mt-5 pt-4">
+							<h3>
+								<span th:text="${TITLE}"></span>
+							</h3>
+							<table class="table" id="dataTable">
+								<thead>
+									<tr>
+										<th scope="col">Name</th>
+										<th scope="col">Job Title</th>
+										<th scope="col">Notes</th>
+										<th scope="col">Links</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="e : ${Employees}">
+										<td><span th:text="${e.getFirstName()}"></span> &nbsp; <span
+											th:text="${e.getLastName()}"></span></td>
+										<td th:text="${e.getJobTitle()}"></td>
+										<td><span th:text="${e.getNotes()}"></span></td>
+										<td>
+											<div>
+												<a
+													th:href="'/modal/show?entity=company&id=' + ${e.getLinks().getLink('company').getId()}"
+													data-bs-toggle="modal"
+													th:attr="data-bs-target='#modalCompany-' + ${e.getLinks().getLink('company').getId()}"><span
+													th:text="${e.getLinks().getLink('company').getLabel()}"></span></a>
+											</div>
+											<div>
+												<a
+													th:href="'/modal/show?entity=privilege&id=' + ${e.getLinks().getLink('privilege').getId()}"
+													data-bs-toggle="modal"
+													th:attr="data-bs-target='#modalPrivilege-' + ${e.getLinks().getLink('privilege').getId()}"><span
+													th:text="${e.getLinks().getLink('privilege').getLabel()}"></span></a>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="col-2 bg-light border border-primary pb-3"
+							id="rightSideBar">
+							<div th:replace="fragments/sideMenuRight :: div"></div>
+						</div>
+					</div>
+
+
+				</div>
+				<div class="row" id="footerRow">
+					<div class="col-12" id="footerCol">
+						<div th:replace="fragments/footer :: footer"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<div th:replace="fragments/links-js :: linksJs"></div>
+
+</body>
+</html>

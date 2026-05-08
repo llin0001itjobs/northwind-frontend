@@ -1,0 +1,44 @@
+<!doctype html>
+<nav
+	class="navbar navbar-expand-md navbar-dark fixed-top bg-dark border border-primary">
+
+	<div class="container-fluid">
+		<a class="navbar-brand" th:href="@{/}">NorthWind</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+			data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+			<ul class="navbar-nav me-auto mb-2 mb-md-0">
+				<li class="nav-item"><a id="nav-item-home" class="nav-link"
+					th:classappend="${ACTIVE_NAV_ITEM} == 'nav-item-home' ? 'active' : ''"
+					th:attr="aria-current=${ACTIVE_NAV_ITEM} == 'nav-item-home' ? 'page' : ''"
+					th:href="@{/}">Home</a></li>
+				<li class="nav-item"><a id="nav-item-entities" class="nav-link"
+					th:classappend="${ACTIVE_NAV_ITEM} == 'nav-item-entities' ? 'active' : ''"
+					th:attr="aria-current=${ACTIVE_NAV_ITEM} == 'nav-item-entities' ? 'page' : ''"
+					th:href="@{/company/list}">Entities</a></li>
+				<li class="nav-item"><a id="nav-item-reports" class="nav-link"
+					th:classappend="${ACTIVE_NAV_ITEM} == 'nav-item-reports' ? 'active' : ''"
+					th:attr="aria-current=${ACTIVE_NAV_ITEM} == 'nav-item-reports' ? 'page' : ''"
+					th:href="@{/reports/main}">Reports</a></li>
+				<li class="nav-item"><a id="nav-item-aboutUs" class="nav-link"
+					th:classappend="${ACTIVE_NAV_ITEM} == 'nav-item-aboutUs' ? 'active' : ''"
+					th:attr="aria-current=${ACTIVE_NAV_ITEM} == 'nav-item-aboutUs' ? 'page' : ''"
+					th:href="@{/aboutUs}">About Us</a></li>
+				<li class="nav-item"><a id="nav-item-help" class="nav-link"
+					th:classappend="${ACTIVE_NAV_ITEM} == 'nav-item-help' ? 'active' : ''"
+					th:attr="aria-current=${ACTIVE_NAV_ITEM} == 'nav-item-help' ? 'page' : ''"				
+					th:href="@{/help/main}">Help</a></li>
+			</ul>
+			<form class="d-flex" th:action="@{/search}" method="post">
+				<input class="form-control me-2" type="search" placeholder="Search"
+					aria-label="Search">
+				<button class="btn btn-outline-success" type="submit">Search</button>
+			</form>
+		</div>
+	</div>
+
+</nav>
+
