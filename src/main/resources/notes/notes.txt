@@ -1,0 +1,7 @@
+keytool -export -alias tomcat -file server.crt -keystore keystore.p12
+keytool -import -v -trustcacerts -alias tomcat -file server.crt -keystore client-truststore.jks
+keytool -list -v -keystore client-truststore.jks
+
+keytool -list -v -keystore "C:/Program Files/Java/jre-1.8/lib/security/cacerts"
+
+
