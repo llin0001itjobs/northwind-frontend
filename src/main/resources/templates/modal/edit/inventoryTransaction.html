@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<div class="modal fade">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title"
+					th:attr="id='editInventoryTransaction-' + ${InventoryTransaction.getId()}">
+					Inventory Transaction
+				</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"
+					aria-label="Close"></button>
+				<div class="modal-body">
+					<div class="row align-items-end">
+						<div class="col-2">Created Date</div>
+						<div class="col-10">
+							<input type="date" readonly="readonly"
+								th:value="${InventoryTransaction.getCreatedDate()}"
+								th:field="*{createdDate}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Modified Date</div>
+						<div class="col-10">
+							<input type="date" readonly="readonly"
+								th:value="${InventoryTransaction.getModifiedDate()}"
+								th:field="*{modifiedDate}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Quantity</div>
+						<div class="col-10">
+							<input type="number" step="1.0"
+								th:value="${InventoryTransaction.getQuantity()}"
+								th:field="*{quantity}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Comments</div>
+						<div class="col-10">
+							<input type="text"
+								th:value="${InventoryTransaction.getComments()}"
+								th:field="*{comments}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Inventory Transaction Type</div>
+						<div class="col-10">
+							<select
+								th:value="${InventoryTransaction.getInventoryTransactionType()}"
+								th:field="*{inventoryTransactionType}">
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

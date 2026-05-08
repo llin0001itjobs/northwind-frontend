@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<div class="modal fade">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title"
+					th:attr="id='editInvoice-' + ${Invoice.getId()}">
+					Invoice
+				</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"
+					aria-label="Close"></button>
+				<div class="modal-body">
+					<div class="row align-items-end">
+						<div class="col-2">Invoice Date</div>
+						<div class="col-10">
+							<input type="date" th:value="${Invoice.getInvoiceDate()}"
+								th:field="*{invoiceDate}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Due Date</div>
+						<div class="col-10">
+							<input type="date" th:value="${Invoice.getDueDate()}"
+								th:field="*{dueDate}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Tax</div>
+						<div class="col-10">
+							<input type="number" step="0.1" th:value="${Invoice.getTax()}"
+								th:field="*{tax}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Shipping</div>
+						<div class="col-10">
+							<input type="number" step="0.1"
+								th:value="${Invoice.getShipping()}" th:field="*{shipping}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Amount Due</div>
+						<div class="col-10">
+							<input type="number" step="0.1"
+								th:value="${Invoice.getAmountDue()}" th:field="*{amountDue}" />
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+

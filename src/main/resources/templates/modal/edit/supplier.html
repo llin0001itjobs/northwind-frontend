@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<div class="modal fade">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title"
+					th:attr="id='editSupplier-' + ${Supplier.getId()}">
+					Supplier
+				</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"
+					aria-label="Close"></button>
+			<div class="modal-header">
+				<h5 class="modal-title"
+					th:attr="id='editEmployee-' + ${Supplier.getId()}">
+					Employee</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"
+					aria-label="Close"></button>
+				<div class="modal-body">
+					<div class="row align-items-end">
+						<div class="col-2">First Name</div>
+						<div class="col-10">
+							<input type="text" th:value="${Supplier.getFirstName()}"
+								th:field="*{firstName}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Last Name</div>
+						<div class="col-10">
+							<input type="text" th:value="${Supplier.getLastName()}"
+								th:field="*{lastName}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Email Address</div>
+						<div class="col-10">
+							<input type="text" th:value="${Supplier.getEmailAddress()}"
+								th:field="*{emailAddress}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Last Name</div>
+						<div class="col-10">
+							<input type="text" th:value="${Supplier.getLastName()}"
+								th:field="*{lastName}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Job Title</div>
+						<div class="col-10">
+							<input type="text" th:value="${Supplier.getJobTitle()}}"
+								th:field="*{jobTitle}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Business Phone</div>
+						<div class="col-10">
+							<input type="text" th:value="${Supplier.getBusinessPhone()}"
+								th:field="*{businessPhone}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Home Phone</div>
+						<div class="col-10">
+							<input type="text" th:value="${Supplier.getHomePhone()}"
+								th:field="*{homePhone}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Mobile Phone</div>
+						<div class="col-10">
+							<input type="text" th:value="${Supplier.getMobilePhone()}"
+								th:field="*{nobilePhone}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Fax Number</div>
+						<div class="col-10">
+							<input type="text" th:value="${Supplier.getFaxNumber()}"
+								th:field="*{faxNumber}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Address 1</div>
+						<div class="col-10">
+							<input type="text" th:value="${Supplier.getAddress1()}"
+								th:field="*{address1}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Address 2</div>
+						<div class="col-10">
+							<input type="text" th:value="${Supplier.getAddress2()}"
+								th:field="*{address2}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">City</div>
+						<div class="col-10">
+							<input type="text" th:value="${Supplier.getCity()}"
+								th:field="*{city}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">State Province</div>
+						<div class="col-10">
+							<input type="text" th:value="${Supplier.geStateProvince()}"
+								th:field="*{stateProvince}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Zip Postal Code</div>
+						<div class="col-10">
+							<input type="text" th:value="${Supplier.getZipPostalCode()}"
+								th:field="*{zipPostalCode}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Country Region</div>
+						<div class="col-10">
+							<input type="text" th:value="${Supplier.geCountryRegion()}"
+								th:field="*{countryRegion}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Notes</div>
+						<div class="col-10">
+							<input type="text" th:value="${Supplier.getNotes()}"
+								th:field="*{notes}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Web Site Title</div>
+						<div class="col-10">
+							<input type="text" th:value="${Supplier.getWebSiteTitle()}"
+								th:field="*{webSiteTitle}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Web Site Url</div>
+						<div class="col-10">
+							<input type="text" th:value="${Supplier.getWebSiteUrl()}"
+								th:field="*{webSiteUrl}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Portrait Path</div>
+						<div class="col-10">
+							<input type="text" th:value="${Supplier.gePortraitPath()}"
+								th:field="*{portraitPath}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Portrait Title</div>
+						<div class="col-10">
+							<input type="text" th:value="${Supplier.getPortraitTitle()}"
+								th:field="*{portraitTitle}" />
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>

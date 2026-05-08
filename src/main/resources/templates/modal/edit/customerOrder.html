@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<div class="modal fade">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title"
+					th:attr="id='editCustomerOrder-' + ${CustomerOrder.getId()}">
+					Customer Order
+				</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"
+					aria-label="Close"></button>
+				<div class="modal-body">
+					<div class="row align-items-end">
+						<div class="col-2">Name</div>
+						<div class="col-10">
+							<input type="text" th:value="${CustomerOrder.getShipName()}"
+								th:field="*{shipName}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Address</div>
+						<div class="col-10">
+							<input type="text" th:value="${CustomerOrder.getShipAddress()}"
+								th:field="*{shipAddress}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">City</div>
+						<div class="col-10">
+							<input type="text" th:value="${CustomerOrder.getShipCity()}"
+								th:field="*{shipCity}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">State Province</div>
+						<div class="col-10">
+							<input type="text"
+								th:value="${CustomerOrder.getShipStateProvince()}"
+								th:field="*{shipStateProvince}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Zip Postal Code</div>
+						<div class="col-10">
+							<input type="text"
+								th:value="${CustomerOrder.getShipZipPostalCode()}"
+								th:field="*{shipZipPostalCode}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Country Region</div>
+						<div class="col-10">
+							<input type="text"
+								th:value="${CustomerOrder.getShipCountryRegion()}"
+								th:field="*{shipCountryRegion}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Shipping Fee</div>
+						<div class="col-10">
+							<input type="number" step="0.1"
+								th:value="${CustomerOrder.getShippingFee()}"
+								th:field="*{shippingFee}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Order Date</div>
+						<div class="col-10">
+							<input type="date" th:value="${CustomerOrder.getOrderDate()}"
+								th:field="*{orderDate}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Paid Date</div>
+						<div class="col-10">
+							<input type="date" th:value="${CustomerOrder.getPaidDate()}"
+								th:field="*{paidDate}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Shipped Date</div>
+						<div class="col-10">
+							<input type="date" th:value="${CustomerOrder.getShippedDate()}"
+								th:field="*{shippedDate}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Taxes</div>
+						<div class="col-10">
+							<input type="number" step="0.1"
+								th:value="${CustomerOrder.getTaxes()}" th:field="*{taxes}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Payment Type</div>
+						<div class="col-10">
+							<input type="date" th:value="${CustomerOrder.getPaymentType()}"
+								th:field="*{paymentType}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">notes</div>
+						<div class="col-10">
+							<input type="text" th:value="${CustomerOrder.getNotes()}"
+								th:field="*{notes}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Tax Rate</div>
+						<div class="col-10">
+							<input type="number" step="0.1"
+								th:value="${CustomerOrder.getTaxRate()}" th:field="taxRate" />
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+

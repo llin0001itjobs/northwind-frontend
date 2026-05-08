@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<div class="modal fade">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title"
+					th:attr="id='editPurchaseOrder-' + ${PurchaseOrder.getId()}">
+					Purchase Order
+				</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"
+					aria-label="Close"></button>
+				<div class="modal-body">
+					<div class="row align-items-end">
+						<div class="col-2">Approved Date</div>
+						<div class="col-10">
+							<input type="date" th:value="${PurchaseOrder.getApprovedDate()}"
+								th:field="*{approvedDate}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Submitted Date</div>
+						<div class="col-10">
+							<input type="date" th:value="${PurchaseOrder.getSubmittedDate()}"
+								th:field="*{submittedDate}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Creation Date</div>
+						<div class="col-10">
+							<input type="date" th:value="${PurchaseOrder.getCreationDate()}"
+								th:field="*{creationDate}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Expected Date</div>
+						<div class="col-10">
+							<input type="date" th:value="${PurchaseOrder.getExpectedDate()}"
+								th:field="*{expectedDate}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Payment Date</div>
+						<div class="col-10">
+							<input type="date" th:value="${PurchaseOrder.getPaymentDate()}"
+								th:field="*{paymentDate}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Shipping Fee</div>
+						<div class="col-10">
+							<input type="number" step="0.1"
+								th:value="${PurchaseOrder.getShippingFee()}" th:field="*{shippingFee}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Taxes</div>
+						<div class="col-10">
+							<input type="number" step="0.1" th:value="${PurchaseOrder.getTaxes()}"
+								th:field="*{taxes}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Payment Amount</div>
+						<div class="col-10">
+							<input type="number" step="0.1"
+								th:value="${PurchaseOrder.getPaymentAmount()}"
+								th:field="*{paymentAmount}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Payment Amount</div>
+						<div class="col-10">
+							<input type="text" th:value="${PurchaseOrder.getPaymentAmount()}"
+								th:field="*{paymentMethod}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Notes</div>
+						<div class="col-10">
+							<input type="text" th:value="${PurchaseOrder.getNotes()}"
+								th:field="*{notes}" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Approved By</div>
+						<div class="col-10">
+							<select th:value="${PurchaseOrder.getApprovedBy()}"
+								th:field="*{approvedBy}">
+							</select>
+						</div>
+					</div>				
+					<div class="row align-items-end">
+						<div class="col-2">Created By</div>
+						<div class="col-10">
+							<select th:value="${PurchaseOrder.getCreatedBy()}"
+								th:field="*{createdBy}">
+							</select>
+						</div>
+					</div>			
+					<div class="row align-items-end">
+						<div class="col-2">Submitted By</div>
+						<div class="col-10">
+							<select th:value="${PurchaseOrder.getSubmittedBy()}"
+								th:field="*{submittedBy}">
+							</select>
+						</div>
+					</div>															
+					<div class="row align-items-end">
+						<div class="col-2">Order Status</div>
+						<div class="col-10">
+							<select th:value="${PurchaseOrder.getOrderStatus()}"
+								th:field="*{orderStatus}">
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

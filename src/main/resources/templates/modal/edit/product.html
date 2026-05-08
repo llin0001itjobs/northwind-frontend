@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<div class="modal fade">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title"
+					th:attr="id='editProduct-' + ${Product.getId()}">
+					Product
+				</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"
+					aria-label="Close"></button>
+				<div class="modal-body">
+					<form th:object="${Product}" th:action="@{/save}" method="post">
+						<div class="row align-items-end">
+							<div class="col-2">Product Code</div>
+							<div class="col-10">
+								<select th:field="*{Product.productCode}">
+									<option value="">Please select a Product Code</option>
+									<option th:each="p : ${ProductCodes}" th:value="${p.code}"
+										th:text="${p.code}"></option>
+								</select>
+							</div>
+						</div>
+						<div class="row align-items-end">
+							<div class="col-2">Category</div>
+							<div class="col-10">
+								<select th:field="*{Product.category}">
+									<option value="">Please select a Product Code</option>
+									<option th:each="p : ${Categories}" th:value="${p.category}"
+										th:text="${p.category}"></option>
+								</select>
+							</div>
+						</div>
+						<div class="row align-items-end">
+							<div class="col-2">Standard Cost</div>
+							<div class="col-10">
+								<input type="number" step="0.1"
+									th:value="${Product.getStandardCost()}"
+									th:field="*{standardCost}" />
+							</div>
+						</div>
+						<div class="row align-items-end">
+							<div class="col-2">List Price</div>
+							<div class="col-10">
+								<input type="number" step="0.1"
+									th:value="${Product.getListPrice()}" th:field="*{listPrice}" />
+							</div>
+						</div>
+						<div class="row align-items-end">
+							<div class="col-2">Quantity Per Unit</div>
+							<div class="col-10">
+								<input type="number" step="1"
+									th:value="${Product.getQuantityPerUnit()}"
+									th:field="*{quantityPerUnit}" />
+							</div>
+						</div>
+						<div class="row align-items-end">
+							<div class="col-2">Minimum Reorder Quantity</div>
+							<div class="col-10">
+								<input type="number" step="1"
+									th:value="${Product.getMinimumReorderQuantity()}"
+									th:field="*{minimumReorderQuantity}" />
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
