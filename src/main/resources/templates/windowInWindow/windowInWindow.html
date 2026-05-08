@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Window</title>
+    <style>
+        .window {
+            width: 600px;
+            height: 400px;
+            border: 1px solid #ccc;
+            background: #fff;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            user-select: none;
+        }
+        .titlebar {
+            background: #0078D7;
+            color: white;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .buttons {
+            display: flex;
+            gap: 5px;
+        }
+        .button {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .minimizeWindow { background-image: url('default-color-win-size-min.png'); }
+        .maximizeWindow { background-image: url('default-color-win-size-max.png'); }
+		.defaultSizeWindow { background-image: url('default-color-win-size-default.png'); }
+        .closeWindow { background-image: url('default-color-win-close.png'); }
+        .content {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="window" id="customWindow">
+        <div class="titlebar">
+            <span>Custom Window</span>
+            <div class="buttons">
+                <div id="ctrlMin" class="button minimizeWindow" onclick="minimizeWindow()"></div>
+                <div id="ctrlMax" class="button maximizeWindow" onclick="toggleMaximizeWindow()"></div>
+                <div id="ctrlCls" class="button closeWindow" onclick="closeWindow()"></div>
+            </div>
+        </div>
+        <div id="cntMain" class="content">
+            <h1>Hello, World!</h1>
+            <p>This is a custom window inside the browser.</p>
+        </div>
+    </div>
+Given this javascript const ctrlMaxEl = document.getElementById("ctrlMax");  
+
+How do I append and remove a class value from class attribute?
+    <script>
+        const windowEl = document.getElementById("customWindow");
+		const ctrlMaxEl = document.getElementById("ctrlMax");
+		const cntMainEl = document.getElementById("cntMain");
+		
+        let isMaximized = false;
+
+        function minimizeWindow() {
+		    windowEl.style.width = "200px";
+            windowEl.style.height = "50px";
+            windowEl.style.top = "50px";
+            windowEl.style.left = "50px";
+			ctrlMaxEl.classList.remove("maximizeWindow");
+			ctrlMaxEl.classList.add("defaultSizeWindow");
+            cntMainEl.style.display = "none";
+			isMaximized = true;
+        }
+
+        function toggleMaximizeWindow() {
+            if (isMaximized) {
+                windowEl.style.width = "600px";
+                windowEl.style.height = "400px";
+                windowEl.style.top = "50px";
+                windowEl.style.left = "50px";
+				ctrlMaxEl.classList.remove("defaultSizeWindow");
+				ctrlMaxEl.classList.add("maximizeWindow");
+				cntMainEl.style.display = "block";
+            } else {
+                windowEl.style.width = "100%";
+                windowEl.style.height = "100%";
+                windowEl.style.top = "0";
+                windowEl.style.left = "0";
+				ctrlMaxEl.classList.remove("maximizeWindow");
+				ctrlMaxEl.classList.add("defaultSizeWindow");
+				cntMainEl.style.display = "block";
+            }
+            isMaximized = !isMaximized;
+        }
+
+        function closeWindow() {
+            windowEl.remove(); // Removes the window from the DOM
+        }
+
+        // Optional: Make the window draggable
+        let isDragging = false;
+        let currentX;
+        let currentY;
+
+        windowEl.querySelector(".titlebar").addEventListener("mousedown", (e) => {
+            isDragging = true;
+            currentX = e.clientX - windowEl.offsetLeft;
+            currentY = e.clientY - windowEl.offsetTop;
+        });
+
+        document.addEventListener("mousemove", (e) => {
+            if (isDragging && !isMaximized) {
+                windowEl.style.left = (e.clientX - currentX) + "px";
+                windowEl.style.top = (e.clientY - currentY) + "px";
+            }
+        });
+
+        document.addEventListener("mouseup", () => {
+            isDragging = false;
+        });
+    </script>
+</body>
+</html>
