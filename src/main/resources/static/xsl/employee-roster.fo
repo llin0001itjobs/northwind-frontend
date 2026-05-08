@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?><fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<fo:layout-master-set>
+<fo:simple-page-master margin-right="1.0cm" margin-left="1.0cm" margin-bottom="0.7cm" margin-top="0.7cm" page-width="27.94cm" page-height="21.59cm" master-name="first-page">
+<fo:region-body border-color="gray" border-style="solid" border-width="0.5pt" margin-top="0.1cm"/>
+<fo:region-before extent="0.1cm"/>
+<fo:region-after extent="0.1cm"/>
+</fo:simple-page-master>
+<fo:simple-page-master margin-right="1.0cm" margin-left="1.0cm" margin-bottom="0.7cm" margin-top="0.7cm" page-width="27.94cm" page-height="21.59cm" master-name="other-pages">
+<fo:region-body border-color="gray" border-style="solid" border-width="0.5pt" margin-top="0.1cm"/>
+<fo:region-before extent="0.1cm"/>
+<fo:region-after extent="0.1cm"/>
+</fo:simple-page-master>
+<fo:page-sequence-master master-name="document">
+<fo:repeatable-page-master-alternatives>
+<fo:conditional-page-master-reference page-position="first" master-reference="first-page"/>
+<fo:conditional-page-master-reference master-reference="other-pages"/>
+</fo:repeatable-page-master-alternatives>
+</fo:page-sequence-master>
+</fo:layout-master-set>
+<fo:page-sequence master-reference="document">
+<fo:flow flow-name="xsl-region-body">
+<fo:table border-collapse="separate" width="100%" table-layout="fixed">
+<fo:table-column column-width="37mm"/>
+<fo:table-column column-width="37mm"/>
+<fo:table-column column-width="37mm"/>
+<fo:table-column column-width="37mm"/>
+<fo:table-column column-width="37mm"/>
+<fo:table-column column-width="37mm"/>
+<fo:table-column column-width="37mm"/>
+<fo:table-body>
+<fo:table-row>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/simpsons/Patty_Bouvier.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Patty Bouvier</fo:block>
+<fo:block font-size="9pt" text-align="center">Clerk</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/simpsons/Homer_Simpson.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Homer Simpson</fo:block>
+<fo:block font-size="9pt" text-align="center">Safety Inspector</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/simpsons/Lisa_Simpson.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Lisa Simpson</fo:block>
+<fo:block font-size="9pt" text-align="center">Student</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/simpsons/Maggie_Simpson.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Maggie Simpson</fo:block>
+<fo:block font-size="9pt" text-align="center">Kid</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/simpsons/Selma_Bouvier.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Selma Bouvier</fo:block>
+<fo:block font-size="9pt" text-align="center">Clerk</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/simpsons/Ned_Flanders.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Ned Flanders</fo:block>
+<fo:block font-size="9pt" text-align="center">Owner</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="none">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/simpsons/Edna_Krabappel.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Edna Krabappel</fo:block>
+<fo:block font-size="9pt" text-align="center">Teacher</fo:block>
+</fo:table-cell>
+</fo:table-row>
+<fo:table-row>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/simpsons/Bart_Simpson.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Bart Simpson</fo:block>
+<fo:block font-size="9pt" text-align="center">Student</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/simpsons/Marge_Simpson.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Marge Simpson</fo:block>
+<fo:block font-size="9pt" text-align="center">Housewife</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/simpsons/Jacqueline_Bouvier.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Jacqueline Ingrid Bouvier</fo:block>
+<fo:block font-size="9pt" text-align="center">Grandmother</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/simpsons/Apu_Nahasapeemapetilon.png&#10;&#9;&#9;&#9;"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Apu Nahasapeemapetilon</fo:block>
+<fo:block font-size="9pt" text-align="center">Owner</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/simpsons/Barney_Gumble.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Barnard Arnold ' Barney' Gumble</fo:block>
+<fo:block font-size="9pt" text-align="center">Drunk</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/simpsons/Carl_Carlson.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Carl Carlson</fo:block>
+<fo:block font-size="9pt" text-align="center">Operator</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="none">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/simpsons/Tapped_Out_Unlock_Krusty.png&#10;&#9;&#9;&#9;"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Krusty the Clown</fo:block>
+<fo:block font-size="9pt" text-align="center">Television Clown</fo:block>
+</fo:table-cell>
+</fo:table-row>
+<fo:table-row>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/simpsons/Lenny_Leonard.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Lenny Leonard</fo:block>
+<fo:block font-size="9pt" text-align="center">Operator</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/simpsons/Elizabeth_Hoover.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Elizabeth Hoover</fo:block>
+<fo:block font-size="9pt" text-align="center">Teacher</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/simpsons/Milhouse_Van_Houten.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Milhouse Van Houten</fo:block>
+<fo:block font-size="9pt" text-align="center">Student</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/simpsons/Moe_Szyslak.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Moe Szyslak</fo:block>
+<fo:block font-size="9pt" text-align="center">Owner</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/simpsons/Montgomery_Burns.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Mr. Burns</fo:block>
+<fo:block font-size="9pt" text-align="center">Owner, CEO, President</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/simpsons/Nelson_Muntz.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Nelson Muntz</fo:block>
+<fo:block font-size="9pt" text-align="center">Student</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="none">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/simpsons/Waylon_Smithers.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Waylon Smithers</fo:block>
+<fo:block font-size="9pt" text-align="center">Personal Assistant</fo:block>
+</fo:table-cell>
+</fo:table-row>
+<fo:table-row>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/futurama/Philip_J_Fry.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Philip J Fry</fo:block>
+<fo:block font-size="9pt" text-align="center">Pilot</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/futurama/Leela_Turanga.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Leela Turanga</fo:block>
+<fo:block font-size="9pt" text-align="center">Spaceship Captain</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/futurama/Bender_Bending.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Bender Bending Rodriguez</fo:block>
+<fo:block font-size="9pt" text-align="center">Chef</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/futurama/Professor_Farnsworth.png&#10;&#9;&#9;&#9;"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Professor Farnsworth</fo:block>
+<fo:block font-size="9pt" text-align="center">Professor</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/futurama/Zoidberg.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Dr. Zoidberg</fo:block>
+<fo:block font-size="9pt" text-align="center">Staff Doctor</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/futurama/Amy_Wong.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Amy Wong</fo:block>
+<fo:block font-size="9pt" text-align="center">Intern</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="none">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/futurama/Hermes_Conrad.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Hermes Conrad</fo:block>
+<fo:block font-size="9pt" text-align="center">Accountant</fo:block>
+</fo:table-cell>
+</fo:table-row>
+<fo:table-row>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/futurama/Zapp_Brannigan.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Zapp Brannigan</fo:block>
+<fo:block font-size="9pt" text-align="center">General</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/futurama/Kif_Kroker.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Kif Kroker</fo:block>
+<fo:block font-size="9pt" text-align="center">Fourth Lieutenant</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/futurama/Lord_Nibbler.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Lord Nibbler</fo:block>
+<fo:block font-size="9pt" text-align="center">Pet</fo:block>
+</fo:table-cell>
+<fo:table-cell padding-bottom="0.3cm" padding-top="0.3cm" display-align="after" border-right="0.5pt solid gray">
+<fo:block font-size="9pt" text-align="center">
+<fo:external-graphic scaling="uniform" content-height="50mm" content-width="30mm" src="src/main/resources/static/images/groenig/futurama/Scruffy.png"/>
+</fo:block>
+<fo:block font-weight="bold" font-size="9pt" text-align="center">Scruffy</fo:block>
+<fo:block font-size="9pt" text-align="center">Janitor</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block/>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block/>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block/>
+</fo:table-cell>
+</fo:table-row>
+</fo:table-body>
+</fo:table>
+</fo:flow>
+</fo:page-sequence>
+</fo:root>

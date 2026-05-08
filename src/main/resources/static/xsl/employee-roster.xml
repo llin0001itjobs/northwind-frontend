@@ -1,0 +1,1916 @@
+	<Employees>
+		<item>
+			<lastName>Bouvier</lastName>
+			<firstName>Patty</firstName>
+			<emailAddress>nancy@northwindtraders.com</emailAddress>
+			<jobTitle>Clerk</jobTitle>
+			<businessPhone>4255550100</businessPhone>
+			<homePhone>4255550102</homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber>4255550103</faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city>Springfield</city>
+			<stateProvince>WA</stateProvince>
+			<zipPostalCode>99999</zipPostalCode>
+			<countryRegion>USA</countryRegion>
+			<notes>Twin sister of Selma and older sister of Marge.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/simpsons/Patty_Bouvier.png</portraitPath>
+			<portraitTitle>Patty Bouvier</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/1</href>
+					</self>
+					<company>
+						<id>3</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/1/company?id=3
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/1/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/1</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Simpson</lastName>
+			<firstName>Homer</firstName>
+			<emailAddress>andrew@northwindtraders.com</emailAddress>
+			<jobTitle>Safety Inspector</jobTitle>
+			<businessPhone>4255550777</businessPhone>
+			<homePhone>4255550199</homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber>4255550888</faxNumber>
+			<address1>742 Evergreen Terrace</address1>
+			<address2>Suite 5</address2>
+			<city>Bellevue</city>
+			<stateProvince>WA</stateProvince>
+			<zipPostalCode>99999</zipPostalCode>
+			<countryRegion>USA</countryRegion>
+			<notes>Homer is one of the most influential characters in the history
+				of television, and is widely considered to be an American cultural
+				icon.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/simpsons/Homer_Simpson.png</portraitPath>
+			<portraitTitle>Homer Simpson</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/2</href>
+					</self>
+					<company>
+						<id>4</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/2/company?id=4
+						</href>
+					</company>
+					<privilege>
+						<id>2</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/2/privilege?id=2
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/2</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Simpson</lastName>
+			<firstName>Lisa Marie</firstName>
+			<emailAddress>jan@northwindtraders.com</emailAddress>
+			<jobTitle>Student</jobTitle>
+			<businessPhone>4255550100</businessPhone>
+			<homePhone>4255550102</homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber>4255550103</faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city>Redmond</city>
+			<stateProvince>WA</stateProvince>
+			<zipPostalCode>99999</zipPostalCode>
+			<countryRegion>USA</countryRegion>
+			<notes>Was hired as a sales associate and was promoted to sales
+				representative.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/simpsons/Lisa_Simpson.png</portraitPath>
+			<portraitTitle>Lisa Simpson</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/3</href>
+					</self>
+					<company>
+						<id>2</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/3/company?id=2
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/3/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/3</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Simpson</lastName>
+			<firstName>Margaret Evelyn ' Maggie' </firstName>
+			<emailAddress>mariya@northwindtraders.com</emailAddress>
+			<jobTitle>Kid</jobTitle>
+			<businessPhone>4255550100</businessPhone>
+			<homePhone>4255550102</homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber>4255550103</faxNumber>
+			<address1>742 Evergreen Terrace</address1>
+			<address2></address2>
+			<city>Kirkland</city>
+			<stateProvince>WA</stateProvince>
+			<zipPostalCode>99999</zipPostalCode>
+			<countryRegion>USA</countryRegion>
+			<notes>Maggie is the youngest child of Homer and Marge, and sister to
+				Bart and Lisa. She is often seen sucking on her red pacifier and,
+				when she walks, she trips over her clothing and falls on her face.
+			</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/simpsons/Maggie_Simpson.png</portraitPath>
+			<portraitTitle>Maggie Simpson</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/4</href>
+					</self>
+					<company>
+						<id>1</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/4/company?id=1
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/4/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/4</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Bouvier</lastName>
+			<firstName>Selma</firstName>
+			<emailAddress>steven@northwindtraders.com</emailAddress>
+			<jobTitle>Clerk</jobTitle>
+			<businessPhone>4255550100</businessPhone>
+			<homePhone>4255550102</homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber>4255550103</faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city>Springfield</city>
+			<stateProvince>WA</stateProvince>
+			<zipPostalCode>99999</zipPostalCode>
+			<countryRegion>USA</countryRegion>
+			<notes>Twin sister of Patty and older sister of Marge.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/simpsons/Selma_Bouvier.png</portraitPath>
+			<portraitTitle>Selma Bouvier</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/5</href>
+					</self>
+					<company>
+						<id>3</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/5/company?id=3
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/5/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/5</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Flanders</lastName>
+			<firstName>Ned</firstName>
+			<emailAddress>michael@northwindtraders.com</emailAddress>
+			<jobTitle>Owner</jobTitle>
+			<businessPhone>4255550100</businessPhone>
+			<homePhone>4255550102</homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber>4255550103</faxNumber>
+			<address1>744 Evergreen Terrace</address1>
+			<address2></address2>
+			<city>Redmond</city>
+			<stateProvince>WA</stateProvince>
+			<zipPostalCode>99999</zipPostalCode>
+			<countryRegion>USA</countryRegion>
+			<notes>animated television series The Simpsons. He is voiced by Harry
+				Shearer, and first appeared in the series premiere episode '
+				Simpsons Roasting on an Open Fire' . He is the extremely religious,
+				good-natured, cheery next-door neighbor to the Simpson family and is
+				generally envied and loathed by Homer Simpson. A devout Evangelical
+				Christian with an annoyingly perfect family, he is among the
+				friendliest and most compassionate of Springfield's residents and is
+				generally considered a pillar of the Springfield community.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/simpsons/Ned_Flanders.png</portraitPath>
+			<portraitTitle>Ned Flanders</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/6</href>
+					</self>
+					<company>
+						<id>8</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/6/company?id=8
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/6/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/6</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Krabappel</lastName>
+			<firstName>Edna</firstName>
+			<emailAddress>robert@northwindtraders.com</emailAddress>
+			<jobTitle>Teacher</jobTitle>
+			<businessPhone>4255550100</businessPhone>
+			<homePhone>4255550102</homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber>4255550103</faxNumber>
+			<address1>744 Evergreen Terrace</address1>
+			<address2></address2>
+			<city>Seattle</city>
+			<stateProvince>WA</stateProvince>
+			<zipPostalCode>99999</zipPostalCode>
+			<countryRegion>USA</countryRegion>
+			<notes>She is the teacher of Bart Simpson's 4th grade class at
+				Springfield Elementary School. In later seasons, she is married to
+				Ned Flanders.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/simpsons/Edna_Krabappel.png</portraitPath>
+			<portraitTitle>Edna Krabappel</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/7</href>
+					</self>
+					<company>
+						<id>2</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/7/company?id=2
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/7/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/7</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Simpson</lastName>
+			<firstName>Bartholomew JoJo ' Bart' </firstName>
+			<emailAddress>laura@northwindtraders.com</emailAddress>
+			<jobTitle>Student</jobTitle>
+			<businessPhone>4255550100</businessPhone>
+			<homePhone>4255550102</homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber>4255550103</faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city>Redmond</city>
+			<stateProvince>WA</stateProvince>
+			<zipPostalCode>99999</zipPostalCode>
+			<countryRegion>USA</countryRegion>
+			<notes>Hallmarks of the character include his chalkboard gags in the
+				opening sequence; his prank calls to Moe; and his catchphrases ' Eat
+				my shorts' , ' Ay, caramba!' , and ' Don't have a cow man!' .
+			</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/simpsons/Bart_Simpson.png</portraitPath>
+			<portraitTitle>Bart Simpson</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/8</href>
+					</self>
+					<company>
+						<id>2</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/8/company?id=2
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/8/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/8</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Simpson</lastName>
+			<firstName>Marjorie Jacqueline ' Marge' </firstName>
+			<emailAddress>anne@northwindtraders.com</emailAddress>
+			<jobTitle>Housewife</jobTitle>
+			<businessPhone>4255550100</businessPhone>
+			<homePhone>4255550102</homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber>4255550103</faxNumber>
+			<address1>742 Evergreen Terrace</address1>
+			<address2></address2>
+			<city>Seattle</city>
+			<stateProvince>WA</stateProvince>
+			<zipPostalCode>99999</zipPostalCode>
+			<countryRegion>USA</countryRegion>
+			<notes>Marge's distinctive blue beehive hairstyle was inspired by a
+				combination of the Bride's in Bride of Frankenstein and the style
+				that Margaret Groening wore in the 1960s.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/simpsons/Marge_Simpson.png</portraitPath>
+			<portraitTitle>Marge Simpson</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/9</href>
+					</self>
+					<company>
+						<id>1</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/9/company?id=1
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/9/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/9</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Bouvier</lastName>
+			<firstName>Jacqueline Ingrid</firstName>
+			<emailAddress></emailAddress>
+			<jobTitle>Grandmother</jobTitle>
+			<businessPhone></businessPhone>
+			<homePhone></homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber></faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city>Springfield</city>
+			<stateProvince>WA</stateProvince>
+			<zipPostalCode></zipPostalCode>
+			<countryRegion />
+			<notes>Although it seems that she disapproves of Marge's marriage to
+				Homer, stating that he is never to address her as ' Mom' , she has
+				shown that she does tolerate Homer a lot more than her elder
+				daughters.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/simpsons/Jacqueline_Bouvier.png</portraitPath>
+			<portraitTitle>Jacqueline Ingrid Bouvier</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/10</href>
+					</self>
+					<company>
+						<id>1</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/10/company?id=1
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/10/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/10</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Nahasapeemapetilon</lastName>
+			<firstName>Apu</firstName>
+			<emailAddress></emailAddress>
+			<jobTitle>Owner</jobTitle>
+			<businessPhone></businessPhone>
+			<homePhone></homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber></faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city>Springfield</city>
+			<stateProvince>WA</stateProvince>
+			<zipPostalCode>98006</zipPostalCode>
+			<countryRegion />
+			<notes>He is the Indian immigrant proprietor of the Kwik-E-Mart, a
+				popular convenience store in Springfield, and is best known for his
+				catchphrase, ' Thank you, come again' .</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/simpsons/Apu_Nahasapeemapetilon.png
+			</portraitPath>
+			<portraitTitle>Apu Nahasapeemapetilon</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/11</href>
+					</self>
+					<company>
+						<id>6</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/11/company?id=6
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/11/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/11</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Gumble</lastName>
+			<firstName>Barnard Arnold ' Barney' </firstName>
+			<emailAddress></emailAddress>
+			<jobTitle>Drunk</jobTitle>
+			<businessPhone></businessPhone>
+			<homePhone></homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber></faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city>Springfield</city>
+			<stateProvince>WA</stateProvince>
+			<zipPostalCode>98006</zipPostalCode>
+			<countryRegion />
+			<notes>He is the town drunk of Springfield and Homer Simpson's best
+				friend. His desperation for alcohol is a frequent butt of jokes on
+				the show. Barney sobered up in the episode ' Days of Wine and
+				D'oh'ses' , which was co-written by Castellaneta, and stayed sober
+				for several seasons.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/simpsons/Barney_Gumble.png</portraitPath>
+			<portraitTitle>Barnard Arnold ' Barney' Gumble</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/12</href>
+					</self>
+					<company>
+						<id>5</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/12/company?id=5
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/12/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/12</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Carlson</lastName>
+			<firstName>Carlton ' Carl' </firstName>
+			<emailAddress></emailAddress>
+			<jobTitle>Operator</jobTitle>
+			<businessPhone></businessPhone>
+			<homePhone></homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber></faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city></city>
+			<stateProvince></stateProvince>
+			<zipPostalCode></zipPostalCode>
+			<countryRegion />
+			<notes>Along with Lenny, Carl is Homer's friend and co-worker
+				(sometimes identified as his supervisor at the Nuclear Power Plant.
+				He likes to call himself ' an urban Lenny.' He attended Springfield
+				A&amp;M University. Carl is an Icelandic-African American, with a
+				master's degree in nuclear physics, fond of bowling and drinking at
+				Moe's Tavern.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/simpsons/Carl_Carlson.png</portraitPath>
+			<portraitTitle>Carl Carlson</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/15</href>
+					</self>
+					<company>
+						<id>4</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/15/company?id=4
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/15/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/15</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName></lastName>
+			<firstName>Krusty the Clown</firstName>
+			<emailAddress></emailAddress>
+			<jobTitle>Television Clown</jobTitle>
+			<businessPhone></businessPhone>
+			<homePhone></homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber></faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city>Springfield</city>
+			<stateProvince>WA</stateProvince>
+			<zipPostalCode>98006</zipPostalCode>
+			<countryRegion />
+			<notes>Krusty was created by cartoonist Matt Groening and partially
+				inspired by Rusty Nails, a television clown from Groening's hometown
+				of Portland, Oregon. He was designed to look like Homer Simpson with
+				clown makeup, with the original idea being that Bart worships a
+				television clown who was actually his own father in disguise.
+			</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/simpsons/Tapped_Out_Unlock_Krusty.png
+			</portraitPath>
+			<portraitTitle>Krusty the Clown</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/16</href>
+					</self>
+					<company>
+						<id>12</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/16/company?id=12
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/16/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/16</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Leonard</lastName>
+			<firstName>Lenford ' Lenny' </firstName>
+			<emailAddress></emailAddress>
+			<jobTitle>Operator</jobTitle>
+			<businessPhone></businessPhone>
+			<homePhone></homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber></faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city>Springfield</city>
+			<stateProvince>WA</stateProvince>
+			<zipPostalCode>98006</zipPostalCode>
+			<countryRegion />
+			<notes>He works at the Springfield Nuclear Power Plant and possesses
+				a master's degree in nuclear physics, but he is often portrayed as a
+				blue-collar working man.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/simpsons/Lenny_Leonard.png</portraitPath>
+			<portraitTitle>Lenny Leonard</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/17</href>
+					</self>
+					<company>
+						<id>4</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/17/company?id=4
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/17/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/17</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Hoover</lastName>
+			<firstName>Elizabeth</firstName>
+			<emailAddress></emailAddress>
+			<jobTitle>Teacher</jobTitle>
+			<businessPhone></businessPhone>
+			<homePhone></homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber></faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city>Springfield</city>
+			<stateProvince>WA</stateProvince>
+			<zipPostalCode>98006</zipPostalCode>
+			<countryRegion />
+			<notes>Miss Hoover has been worn down by her years in the public
+				school system, and in ' Lisa Gets an 'A'' implies that she
+				frequently drinks during lunch.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/simpsons/Elizabeth_Hoover.png</portraitPath>
+			<portraitTitle>Elizabeth Hoover</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/18</href>
+					</self>
+					<company>
+						<id>2</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/18/company?id=2
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/18/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/18</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Van Houten</lastName>
+			<firstName>Milhouse Mussolini</firstName>
+			<emailAddress></emailAddress>
+			<jobTitle>Student</jobTitle>
+			<businessPhone></businessPhone>
+			<homePhone></homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber></faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city>Springfield</city>
+			<stateProvince>WA</stateProvince>
+			<zipPostalCode>98006</zipPostalCode>
+			<countryRegion />
+			<notes>Milhouse is Bart Simpson's best friend in Mrs. Krabappel's
+				fourth grade class at Springfield Elementary School, is insecure,
+				gullible, and less popular than Bart.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/simpsons/Milhouse_Van_Houten.png</portraitPath>
+			<portraitTitle>Milhouse Van Houten</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/19</href>
+					</self>
+					<company>
+						<id>2</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/19/company?id=2
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/19/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/19</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Szyslak</lastName>
+			<firstName>Morris ' Moe' </firstName>
+			<emailAddress></emailAddress>
+			<jobTitle>Owner</jobTitle>
+			<businessPhone></businessPhone>
+			<homePhone></homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber></faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city>Springfield</city>
+			<stateProvince>WA</stateProvince>
+			<zipPostalCode>98006</zipPostalCode>
+			<countryRegion />
+			<notes>Moe's personality includes a short and violent temper, which
+				has also involved numerous suicide attempts. Other running jokes
+				featuring him include being prank called by Bart Simpson, running
+				illegal activities from his bar, and an ambiguous ethnic origin.
+			</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/simpsons/Moe_Szyslak.png</portraitPath>
+			<portraitTitle>Moe Szyslak</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/20</href>
+					</self>
+					<company>
+						<id>5</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/20/company?id=5
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/20/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/20</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Burns</lastName>
+			<firstName>Charles Montgomery ' Monty' </firstName>
+			<emailAddress></emailAddress>
+			<jobTitle>Owner, CEO, President</jobTitle>
+			<businessPhone></businessPhone>
+			<homePhone></homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber></faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city>Springfield</city>
+			<stateProvince>WA</stateProvince>
+			<zipPostalCode>98006</zipPostalCode>
+			<countryRegion />
+			<notes>Although originally conceived as a one-dimensional, recurring
+				villain who might occasionally enter the Simpsons' lives and wreak
+				some sort of havoc, Mr. Burns' popularity has led to his repeated
+				inclusion in episodes. He is a stereotype of corporate America in
+				his unquenchable desire to increase his own wealth and power,
+				inability to remember his employee' names and lack of concern for
+				their safety and well-being.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/simpsons/Montgomery_Burns.png</portraitPath>
+			<portraitTitle>Mr. Burns</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/21</href>
+					</self>
+					<company>
+						<id>4</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/21/company?id=4
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/21/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/21</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Muntz</lastName>
+			<firstName>Nelson Mandela</firstName>
+			<emailAddress></emailAddress>
+			<jobTitle>Student</jobTitle>
+			<businessPhone></businessPhone>
+			<homePhone></homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber></faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city>Springfield</city>
+			<stateProvince>WA</stateProvince>
+			<zipPostalCode>98006</zipPostalCode>
+			<countryRegion />
+			<notes>Nelson is a student and bully at Springfield Elementary
+				School. He is known to have terrorized virtually every kid in
+				Springfield at one point or another.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/simpsons/Nelson_Muntz.png</portraitPath>
+			<portraitTitle>Nelson Muntz</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/22</href>
+					</self>
+					<company>
+						<id>2</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/22/company?id=2
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/22/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/22</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Smithers Jr.</lastName>
+			<firstName>Waylon J.</firstName>
+			<emailAddress></emailAddress>
+			<jobTitle>Personal Assistant</jobTitle>
+			<businessPhone></businessPhone>
+			<homePhone></homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber></faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city>Springfield</city>
+			<stateProvince>WA</stateProvince>
+			<zipPostalCode>98006</zipPostalCode>
+			<countryRegion />
+			<notes>The idea for Smithers' ambiguous sexual orientation came from
+				Sam Simon, who proposed that Smithers should be gay, but little
+				attention should be drawn to it.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/simpsons/Waylon_Smithers.png</portraitPath>
+			<portraitTitle>Waylon Smithers</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/23</href>
+					</self>
+					<company>
+						<id>4</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/23/company?id=4
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/23/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/23</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Fry</lastName>
+			<firstName>Philip J.</firstName>
+			<emailAddress></emailAddress>
+			<jobTitle>Pilot</jobTitle>
+			<businessPhone></businessPhone>
+			<homePhone></homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber></faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city></city>
+			<stateProvince></stateProvince>
+			<zipPostalCode></zipPostalCode>
+			<countryRegion />
+			<notes>He is the best friend and roommate of Bender and the boyfriend
+				and later husband of Turanga Leela.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/futurama/Philip_J_Fry.png</portraitPath>
+			<portraitTitle>Philip J Fry</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/24</href>
+					</self>
+					<company>
+						<id>7</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/24/company?id=7
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/24/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/24</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Turanga</lastName>
+			<firstName>Leela</firstName>
+			<emailAddress></emailAddress>
+			<jobTitle>Spaceship Captain</jobTitle>
+			<businessPhone></businessPhone>
+			<homePhone></homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber></faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city></city>
+			<stateProvince></stateProvince>
+			<zipPostalCode></zipPostalCode>
+			<countryRegion />
+			<notes>Leela is spaceship captain, pilot, and head of all aviation
+				services on board the Planet Express Ship.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/futurama/Leela_Turanga.png</portraitPath>
+			<portraitTitle>Leela Turanga</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/25</href>
+					</self>
+					<company>
+						<id>7</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/25/company?id=7
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/25/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/25</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Rodriguez</lastName>
+			<firstName>Bender Bending</firstName>
+			<emailAddress></emailAddress>
+			<jobTitle>Chef</jobTitle>
+			<businessPhone></businessPhone>
+			<homePhone></homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber></faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city></city>
+			<stateProvince></stateProvince>
+			<zipPostalCode></zipPostalCode>
+			<countryRegion />
+			<notes>He fulfills a comic, antihero-type role in Futurama and is
+				described by fellow character Leela as an ' alcoholic,
+				whore-mongering, chain-smoking gambler' .</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/futurama/Bender_Bending.png</portraitPath>
+			<portraitTitle>Bender Bending Rodriguez</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/26</href>
+					</self>
+					<company>
+						<id>7</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/26/company?id=7
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/26/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/26</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Farnsworth</lastName>
+			<firstName>Hubert J.</firstName>
+			<emailAddress></emailAddress>
+			<jobTitle>Professor</jobTitle>
+			<businessPhone></businessPhone>
+			<homePhone></homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber></faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city></city>
+			<stateProvince></stateProvince>
+			<zipPostalCode></zipPostalCode>
+			<countryRegion />
+			<notes>He is the great nephew of Philip J. Fry, the series'
+				protagonist. He alternates between intelligence and amoral senility
+				due to his greatly advanced age. He demonstrates a mastery of any
+				field of science necessary for the series' plots, and is suggested
+				to be one of the most brilliant inventors on Earth.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/futurama/Professor_Farnsworth.png
+			</portraitPath>
+			<portraitTitle>Professor Farnsworth</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/27</href>
+					</self>
+					<company>
+						<id>7</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/27/company?id=7
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/27/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/27</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Zoidberg</lastName>
+			<firstName>John A.</firstName>
+			<emailAddress></emailAddress>
+			<jobTitle>Staff Doctor</jobTitle>
+			<businessPhone></businessPhone>
+			<homePhone></homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber></faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city></city>
+			<stateProvince></stateProvince>
+			<zipPostalCode></zipPostalCode>
+			<countryRegion />
+			<notes>His character parodies the supposed wealth and automatic
+				respect of modern doctors - for example, his incompetence at human
+				medicine makes him extremely poor despite his profession, and he is
+				implied to be frequently homeless when not at work.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/futurama/Zoidberg.png</portraitPath>
+			<portraitTitle>Dr. Zoidberg</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/28</href>
+					</self>
+					<company>
+						<id>7</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/28/company?id=7
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/28/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/28</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Wong</lastName>
+			<firstName>Amy</firstName>
+			<emailAddress></emailAddress>
+			<jobTitle>Intern</jobTitle>
+			<businessPhone></businessPhone>
+			<homePhone></homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber></faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city></city>
+			<stateProvince></stateProvince>
+			<zipPostalCode></zipPostalCode>
+			<countryRegion />
+			<notes>She is the ditzy, spoiled daughter of wealthy
+				agriculturalist-industrialist Han Chinese rancher parents who raise
+				buggalo on Mars.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/futurama/Amy_Wong.png</portraitPath>
+			<portraitTitle>Amy Wong</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/29</href>
+					</self>
+					<company>
+						<id>7</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/29/company?id=7
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/29/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/29</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Conrad</lastName>
+			<firstName>Hermes</firstName>
+			<emailAddress></emailAddress>
+			<jobTitle>Accountant</jobTitle>
+			<businessPhone></businessPhone>
+			<homePhone></homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber></faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city></city>
+			<stateProvince></stateProvince>
+			<zipPostalCode></zipPostalCode>
+			<countryRegion />
+			<notes>Hermes is Jamaican Rastafarian and grade 36 Bureaucrat, and
+				proud of it. He works at Planet Express, handling stamping, filing,
+				collating, and accounting.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/futurama/Hermes_Conrad.png</portraitPath>
+			<portraitTitle>Hermes Conrad</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/30</href>
+					</self>
+					<company>
+						<id>7</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/30/company?id=7
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/30/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/30</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Brannigan</lastName>
+			<firstName>Zapp</firstName>
+			<emailAddress></emailAddress>
+			<jobTitle>General</jobTitle>
+			<businessPhone></businessPhone>
+			<homePhone></homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber></faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city></city>
+			<stateProvince></stateProvince>
+			<zipPostalCode></zipPostalCode>
+			<countryRegion />
+			<notes>The show's executive producer David X. Cohen has described
+				Brannigan as ' half Captain Kirk, half actual William
+				Shatner'Brannigan is a 25-Star General in the Democratic Order of
+				Planets, and captain of its flagship, the Nimbus.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/futurama/Zapp_Brannigan.png</portraitPath>
+			<portraitTitle>Zapp Brannigan</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/31</href>
+					</self>
+					<company>
+						<id>11</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/31/company?id=11
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/31/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/31</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName>Kroker</lastName>
+			<firstName>Kif</firstName>
+			<emailAddress></emailAddress>
+			<jobTitle>Fourth Lieutenant</jobTitle>
+			<businessPhone></businessPhone>
+			<homePhone></homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber></faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city></city>
+			<stateProvince></stateProvince>
+			<zipPostalCode></zipPostalCode>
+			<countryRegion />
+			<notes>Lieutenant Kif Kroker is the long-suffering assistant to
+				Captain Zapp Brannigan, and Fourth Lieutenant on the Democratic
+				Order of Planets (DOOP starship Nimbus. Kif is a short and thin
+				green skinned alien crew member.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/futurama/Kif_Kroker.png</portraitPath>
+			<portraitTitle>Kif Kroker</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/32</href>
+					</self>
+					<company>
+						<id>11</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/32/company?id=11
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/32/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/32</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName></lastName>
+			<firstName>Lord Nibbler</firstName>
+			<emailAddress></emailAddress>
+			<jobTitle>Pet</jobTitle>
+			<businessPhone></businessPhone>
+			<homePhone></homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber></faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city></city>
+			<stateProvince></stateProvince>
+			<zipPostalCode></zipPostalCode>
+			<countryRegion />
+			<notes>He masquerades as an innocent, cute and unintelligent pet
+				during most of the series. In reality, he is a highly intelligent
+				Nibblonian and capable of communication, but tries to avoid
+				suspicion while he protects the Earth in general and Fry in
+				particular from the Brainspawn. As with all Nibblonians, Nibbler's
+				feces consist of dark matter, which can be used as starship fuel.
+			</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/futurama/Lord_Nibbler.png</portraitPath>
+			<portraitTitle>Lord Nibbler</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/33</href>
+					</self>
+					<company>
+						<id>1</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/33/company?id=1
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/33/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/33</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+		<item>
+			<lastName></lastName>
+			<firstName>Scruffy</firstName>
+			<emailAddress></emailAddress>
+			<jobTitle>Janitor</jobTitle>
+			<businessPhone></businessPhone>
+			<homePhone></homePhone>
+			<mobilePhone></mobilePhone>
+			<faxNumber></faxNumber>
+			<address1></address1>
+			<address2></address2>
+			<city></city>
+			<stateProvince></stateProvince>
+			<zipPostalCode></zipPostalCode>
+			<countryRegion />
+			<notes>Scruffy generally approaches both his job and the rest of his
+				life with a high level of apparent apathy.</notes>
+			<webSiteTitle></webSiteTitle>
+			<webSiteUrl></webSiteUrl>
+			<portraitPath>groenig/futurama/Scruffy.png</portraitPath>
+			<portraitTitle>Scruffy</portraitTitle>
+			<company />
+			<privilege />
+			<_links>
+				<links>
+					<self>
+						<id />
+						<label>self</label>
+						<href>http://localhost:8080/northwind-data/api/employee/34</href>
+					</self>
+					<company>
+						<id>7</id>
+						<label>company</label>
+						<href>http://localhost:8080/northwind-data/api/employee/34/company?id=7
+						</href>
+					</company>
+					<privilege>
+						<id>1</id>
+						<label>privilege</label>
+						<href>http://localhost:8080/northwind-data/api/employee/34/privilege?id=1
+						</href>
+					</privilege>
+					<employee>
+						<id />
+						<label>employee</label>
+						<href>http://localhost:8080/northwind-data/api/employee/34</href>
+					</employee>
+				</links>
+				<linkObjects />
+				<linkObjectNames />
+				<linkNames>
+					<linkNames>company</linkNames>
+					<linkNames>employee</linkNames>
+					<linkNames>privilege</linkNames>
+					<linkNames>self</linkNames>
+				</linkNames>
+			</_links>
+		</item>
+	</Employees>
