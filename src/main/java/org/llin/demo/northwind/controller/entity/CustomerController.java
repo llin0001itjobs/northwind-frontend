@@ -1,27 +1,40 @@
 package org.llin.demo.northwind.controller.entity;
 
-import org.llin.demo.northwind._Classes_EntityObject;
-import org.llin.demo.northwind._Titles;
-import org.llin.demo.northwind.model.EntityObject;
-import org.springframework.stereotype.Controller;
+import java.util.List;
+
+import org.llin.demo.northwind.dto.CustomerDto;
+import org.llin.demo.northwind.service.CustomerService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
-@RequestMapping("/customer")
-public class CustomerController<T extends EntityObject> extends EntityController<T> implements _Classes_EntityObject, _Titles  {
+import lombok.RequiredArgsConstructor;
 
-	@GetMapping("/list")
-	public ModelAndView getAllCustomers() {
-		handleRequest();
-		modelAndView.addObject(CUSTOMERS, modelViewCache.getObjectArray(CUSTOMER));
-		modelAndView.addObject(COMPANIES, modelViewCache.getObjectArray(COMPANY));
-		modelAndView.addObject(TITLE, TITLE_CUSTOMER);
-		modelAndView.setViewName("entities/customer");
-		return modelAndView;
-	}
+@RestController
+@RequestMapping("/api/customers")
+@RequiredArgsConstructor
+public class CustomerController {
 
+    private final CustomerService customerService;
 
+    @GetMapping("/{id}")
+    public ResponseEntity<CustomerDto> getById(@PathVariable Integer id) {
+        return customerService.findById(id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
+
+    @GetMapping
+    public List<CustomerDto> getAll() {
+        return customerService.findAll();
+    }
+
+    @PostMapping
+    public ResponseEntity<CustomerDto> create(@RequestBody CustomerDto dto) {
+        return ResponseEntity.ok(customerService.create(dto));
+    }
 }
- 

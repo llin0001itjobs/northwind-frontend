@@ -1,0 +1,11 @@
+DELEGATES_PREFERENCE=delegateValidatorList
+USER_BUILD_PREFERENCE=enabledBuildValidatorList
+USER_MANUAL_PREFERENCE=enabledManualValidatorList
+USER_PREFERENCE=overrideGlobalPreferencestruedisableAllValidationfalseversion1.3.100.v202407180051
+disabled=06target
+eclipse.preferences.version=1
+override=true
+suspend=false
+vals/org.eclipse.wst.jsdt.core.JsValidator/groups=0107include01113projectNature134org.eclipse.wst.jsdt.core.jsNature0107include02111contentType134org.eclipse.wst.jsdt.core.jsSourceT07fileext02jsF0107exclude0104file128src/main/resources/static/jsF02
+vals/org.eclipse.wst.jsdt.web.core.JsBatchValidator/global=TT01
+vf.version=3
