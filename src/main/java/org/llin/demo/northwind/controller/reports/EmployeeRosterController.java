@@ -7,10 +7,9 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import org.llin.demo.northwind._Classes_EntityObject;
-import org.llin.demo.northwind.cache.EntityObjectCache;
 import org.llin.demo.northwind.config.PropertiesConfig;
-import org.llin.demo.northwind.model.Employee;
-import org.llin.demo.northwind.model.EntityObject;
+import org.llin.demo.northwind.model.entity.Employee;
+import org.llin.demo.northwind.model.entity.EntityObject;
 import org.llin.demo.northwind.util.ObjectToXmlUtil;
 import org.llin.demo.northwind.util.PdfRenderUtil;
 import org.slf4j.Logger;
@@ -44,9 +43,6 @@ public class EmployeeRosterController<T extends EntityObject> implements _Classe
 	@Autowired
 	private PropertiesConfig propertiesConfig;
 
-	@Autowired
-	private EntityObjectCache<T> entityObjectCache;
-
 	@GetMapping("/show")
 	public ModelAndView showRoster() {
 		ModelAndView mv = new ModelAndView("reports/employee-roster");
@@ -65,19 +61,17 @@ public class EmployeeRosterController<T extends EntityObject> implements _Classe
 	@PreAuthorize("isAuthenticated()")
     public ResponseEntity<byte[]> render(@RequestParam(defaultValue = "attachment") String disposition) {
         try {
-            ObjectToXmlUtil<Employee> objectToXmlUtil = new ObjectToXmlUtil<>();
-            Employee[] employees = (Employee[]) entityObjectCache.getObjectArray(EMPLOYEE);
+            Employee[] employees = null;
             if (employees == null || employees.length == 0) {
                 logger.warn("No employees found in cache for rendering PDF");
                 return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
             }
-            String xmlData = objectToXmlUtil.getXML(employees);
             Resource xslResource = resourceLoader.getResource("classpath:static/xsl/employee-roster.xsl");
             if (!xslResource.exists()) {
                 logger.error("XSL file not found: static/xsl/employee-roster.xsl");
                 return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
             }
-            byte[] ba = PdfRenderUtil.renderFromXml(xslResource.getFile().getPath(), xmlData);
+            byte[] ba = null;
 
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_PDF);
@@ -86,22 +80,18 @@ public class EmployeeRosterController<T extends EntityObject> implements _Classe
             } else {
                 headers.setContentDispositionFormData("attachment", PDF_FILE);
             }
-
             return new ResponseEntity<>(ba, headers, HttpStatus.OK);
-        } catch (IOException e) {
-            logger.error("Failed to render PDF due to I/O error", e);
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            
         } catch (Exception e) {
+        	logger.error("Failed to render PDF due to I/O error", e);
             logger.error("Failed to render PDF", e);
+            //new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
             return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
         }
     }
 
 	private void chunk(ModelAndView mv) {
-	    Employee[] employeesArray = (Employee[]) entityObjectCache.getObjectArray(EMPLOYEE);
-	    if (employeesArray == null) {
-	        employeesArray = new Employee[0];
-	    }
+	    Employee[] employeesArray = null;
 	    List<Employee> employees = Arrays.asList(employeesArray);
 	    int chunkSize = propertiesConfig.getEmployeeChunkSize().intValue();
 	    List<List<Employee>> chunkedEmployees = IntStream.range(0, (employees.size() + chunkSize - 1) / chunkSize)

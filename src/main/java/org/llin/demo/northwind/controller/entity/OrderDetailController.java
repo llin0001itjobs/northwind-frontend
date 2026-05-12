@@ -2,7 +2,15 @@ package org.llin.demo.northwind.controller.entity;
 
 import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
-import org.llin.demo.northwind.model.EntityObject;
+import org.llin.demo.northwind.model.entity.EntityObject;
+import org.llin.demo.northwind.service.entity.CustomerOrderService;
+import org.llin.demo.northwind.service.entity.InventoryTransactionService;
+import org.llin.demo.northwind.service.entity.InventoryTransactionTypeService;
+import org.llin.demo.northwind.service.entity.OrderDetailService;
+import org.llin.demo.northwind.service.entity.OrderStatusService;
+import org.llin.demo.northwind.service.entity.ProductService;
+import org.llin.demo.northwind.service.entity.PurchaseOrderService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,16 +20,39 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/orderDetail")
 public class OrderDetailController<T extends EntityObject> extends EntityController<T> implements _Classes_EntityObject, _Titles {
 
+	private final OrderDetailService orderDetailService;
+	private final CustomerOrderService customerOrderService;
+	private final InventoryTransactionService inventoryTransactionService;
+	private final InventoryTransactionTypeService inventoryTransactionTypeService;
+	private final OrderStatusService orderStatusService;
+	private final ProductService productService;
+	private final PurchaseOrderService purchaseOrderService;
+
+	@Autowired
+	public OrderDetailController(OrderDetailService orderDetailService,
+			CustomerOrderService customerOrderService, InventoryTransactionService inventoryTransactionService,
+			InventoryTransactionTypeService inventoryTransactionTypeService,
+			OrderStatusService orderStatusService, ProductService productService,
+			PurchaseOrderService purchaseOrderService) {
+		this.orderDetailService = orderDetailService;
+		this.customerOrderService = customerOrderService;
+		this.inventoryTransactionService = inventoryTransactionService;
+		this.inventoryTransactionTypeService = inventoryTransactionTypeService;
+		this.orderStatusService = orderStatusService;
+		this.productService = productService;
+		this.purchaseOrderService = purchaseOrderService;
+	}
+	
 	@GetMapping("/list")
 	public ModelAndView getAllOrderDetails() {
 		handleRequest();
-		modelAndView.addObject(ORDER_DETAILS,modelViewCache.getObjectArray(ORDER_DETAIL));
-		modelAndView.addObject(CUSTOMER_ORDERS,modelViewCache.getObjectArray(CUSTOMER_ORDER));
-		modelAndView.addObject(INVENTORY_TRANSACTIONS,modelViewCache.getObjectArray(INVENTORY_TRANSACTION));
-		modelAndView.addObject(INVENTORY_TRANSACTION_TYPES,modelViewCache.getObjectArray(INVENTORY_TRANSACTION_TYPE));
-		modelAndView.addObject(ORDER_STATUSES,modelViewCache.getObjectArray(ORDER_STATUS));
-		modelAndView.addObject(PRODUCTS,modelViewCache.getObjectArray(PRODUCT));
-		modelAndView.addObject(PURCHASE_ORDERS,modelViewCache.getObjectArray(PURCHASE_ORDER));
+		modelAndView.addObject(ORDER_DETAILS,orderDetailService.findAll());
+		modelAndView.addObject(CUSTOMER_ORDERS,customerOrderService.findAll());
+		modelAndView.addObject(INVENTORY_TRANSACTIONS,inventoryTransactionService.findAll());
+		modelAndView.addObject(INVENTORY_TRANSACTION_TYPES,inventoryTransactionTypeService.findAll());
+		modelAndView.addObject(ORDER_STATUSES,orderStatusService.findAll());
+		modelAndView.addObject(PRODUCTS,productService.findAll());
+		modelAndView.addObject(PURCHASE_ORDERS,purchaseOrderService.findAll());
 		modelAndView.addObject(TITLE, TITLE_ORDER_DETAIL);
 		modelAndView.setViewName("entities/orderDetail");
 		return modelAndView;

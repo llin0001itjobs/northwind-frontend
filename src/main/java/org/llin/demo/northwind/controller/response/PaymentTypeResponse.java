@@ -1,7 +1,7 @@
 package org.llin.demo.northwind.controller.response;
 
-import org.llin.demo.northwind.model.EntityObject;
-import org.llin.demo.northwind.model.PaymentType;
+import org.llin.demo.northwind.model.entity.EntityObject;
+import org.llin.demo.northwind.model.entity.PaymentType;
 
 public class PaymentTypeResponse extends BaseResponse {
 

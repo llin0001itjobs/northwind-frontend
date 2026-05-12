@@ -1,14 +1,10 @@
 package org.llin.demo.northwind.controller;
 
-import java.util.List;
-
 import jakarta.annotation.PostConstruct;
 
 import org.llin.demo.northwind._Classes_CustomObject;
 import org.llin.demo.northwind._Classes_EntityObject;
-import org.llin.demo.northwind.cache.CustomSqlCache;
-import org.llin.demo.northwind.model.EntityObject;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.llin.demo.northwind.model.entity.EntityObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,17 +14,11 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/reports")
 public class ReportsController<T extends EntityObject> implements _Classes_EntityObject, _Classes_CustomObject {
 
-	@Autowired
-	private CustomSqlCache customSqlCache;
-
 	private ModelAndView mvReports = new ModelAndView();
 
 	@PostConstruct
 	private void init() {
-		List<String> keys = customSqlCache.getObjectArrayKeys();
-		for (String k : keys) {
-			mvReports.addObject(k, customSqlCache.getCacheObjectArray().get(k));
-		}
+
 	}
 
 	@GetMapping("/main")

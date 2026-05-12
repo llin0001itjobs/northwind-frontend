@@ -1,7 +1,7 @@
 package org.llin.demo.northwind.controller.response;
 
-import org.llin.demo.northwind.model.EntityObject;
-import org.llin.demo.northwind.model.Role;
+import org.llin.demo.northwind.model.entity.EntityObject;
+import org.llin.demo.northwind.model.entity.Role;
 
 public class RoleResponse extends BaseResponse {
 

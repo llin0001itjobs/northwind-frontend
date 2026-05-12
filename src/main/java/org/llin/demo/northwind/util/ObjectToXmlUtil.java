@@ -1,7 +1,7 @@
 package org.llin.demo.northwind.util;
 
-import org.llin.demo.northwind.model.Employee;
-import org.llin.demo.northwind.model.EntityObject;
+import org.llin.demo.northwind.model.entity.Employee;
+import org.llin.demo.northwind.model.entity.EntityObject;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;

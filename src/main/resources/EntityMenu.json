@@ -1,0 +1,96 @@
+{
+  "entities": {
+    "first_order": [
+      {
+        "path": "authentication",
+        "title": "Authentication"
+      },
+      {
+        "path": "company",
+        "title": "Company"
+      },
+      {
+        "path": "customer",
+        "title": "Customer"
+      },
+      {
+        "path": "product",
+        "title": "Product"
+      },
+      {
+        "path": "role",
+        "title": "Role"
+      },
+      {
+        "path": "shipper",
+        "title": "Shipper"
+      },
+      {
+        "path": "supplier",
+        "title": "Supplier"
+      }
+    ],
+    "second_order": [
+      {
+        "path": "employee",
+        "title": "Employee"
+      },
+      {
+        "path": "customerOrder",
+        "title": "Customer Order"
+      },
+      {
+        "path": "invoice",
+        "title": "Invoice"
+      },
+      {
+        "path": "purchaseOrder",
+        "title": "Purchase Order"
+      }
+    ],
+    "third_order": [
+      {
+        "path": "inventoryTransaction",
+        "title": "Inventory Transaction"
+      },
+      {
+        "path": "orderDetail",
+        "title": "Order Detail"
+      },
+      {
+        "path": "purchaseOrderDetail",
+        "title": "Purchase Order Detail"
+      }
+    ],
+    "type": [
+      {
+        "path": "inventoryTransactionType",
+        "title": "Inventory Transaction Type"
+      },
+      {
+        "path": "orderDetailStatus",
+        "title": "Order Detail Status"
+      },      
+      {
+        "path": "orderStatus",
+        "title": "Order Status"
+      },
+      {
+        "path": "orderTaxStatus",
+        "title": "Order Tax Status"
+      },
+      {
+        "path": "paymentType",
+        "title": "Payment Type"
+      },    
+		{
+        "path": "purchaseOrderStatus",
+        "title": "Purchase Order Status"
+      },
+      {
+        "path": "typeState",
+        "title": "Type State"
+      }
+    ]
+  }
+}

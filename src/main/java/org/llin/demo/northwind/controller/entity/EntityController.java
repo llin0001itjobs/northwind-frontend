@@ -1,9 +1,8 @@
 package org.llin.demo.northwind.controller.entity;
 
 import org.llin.demo.northwind._Values;
-import org.llin.demo.northwind.cache.EntityObjectCache;
 import org.llin.demo.northwind.menu.EntityMenuManager;
-import org.llin.demo.northwind.model.EntityObject;
+import org.llin.demo.northwind.model.entity.EntityObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
@@ -14,9 +13,6 @@ public class EntityController<T extends EntityObject> implements _Values {
 	public static final String ACTIVE_NAV_ITEM = "ACTIVE_NAV_ITEM";
 	
 	private boolean isMenuLoaded = false;
-
-	@Autowired
-	EntityObjectCache<T> modelViewCache;
 
 	@Autowired
 	EntityMenuManager entityMapper;

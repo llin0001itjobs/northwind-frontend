@@ -45,6 +45,4 @@ public class MenuEntitiesContainer<T extends MenuEntity> {
 		return "MenuEntitiesContainer [entities=" + entities + "]";
 	}
 
-
-	
 }

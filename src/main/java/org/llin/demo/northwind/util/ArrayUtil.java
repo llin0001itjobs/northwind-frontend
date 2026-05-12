@@ -1,6 +1,6 @@
 package org.llin.demo.northwind.util;
 
-import org.llin.demo.northwind.model.EntityObject;
+import org.llin.demo.northwind.model.entity.EntityObject;
 
 public interface ArrayUtil {
 	

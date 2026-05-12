@@ -1,7 +1,7 @@
 package org.llin.demo.northwind.controller.response;
 
-import org.llin.demo.northwind.model.EntityObject;
-import org.llin.demo.northwind.model.CustomerOrder;
+import org.llin.demo.northwind.model.entity.CustomerOrder;
+import org.llin.demo.northwind.model.entity.EntityObject;
 
 public class CustomerOrderResponse extends BaseResponse {
 

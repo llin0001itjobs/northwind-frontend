@@ -1,7 +1,7 @@
 package org.llin.demo.northwind.controller.response;
 
-import org.llin.demo.northwind.model.Authentication;
-import org.llin.demo.northwind.model.EntityObject;
+import org.llin.demo.northwind.model.entity.Authentication;
+import org.llin.demo.northwind.model.entity.EntityObject;
 
 public class AuthenticationResponse extends BaseResponse {
 
