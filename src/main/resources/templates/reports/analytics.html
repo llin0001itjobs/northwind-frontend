@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NorthWind • Analytics</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+    <style>
+        body { padding-top: 70px; background: #f8f9fa; }
+        .nav-tabs .nav-link { font-weight: 600; }
+        .sub-btn { width: 68px; height: 68px; padding: 4px; border: 2px solid #0d6efd; }
+        .sub-btn.active { background: #0d6efd; color: white; }
+        .chart-container { min-height: 460px; }
+        canvas { max-height: 460px; }
+    </style>
+</head>
+<body>
+
+<!-- Navbar (your existing navbar here) -->
+<!-- ... (copy your navbar from previous version) ... -->
+
+<div class="container mt-4">
+
+    <!-- Tier 1: Main Tabs -->
+    <ul class="nav nav-tabs mb-4" id="mainTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="customerOrder-tab" data-bs-toggle="tab"
+                    data-bs-target="#customerOrder-panel" type="button">📦 Customer Order</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="product-tab" data-bs-toggle="tab"
+                    data-bs-target="#product-panel" type="button">🛒 Product</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="purchaseOrderDetail-tab" data-bs-toggle="tab"
+                    data-bs-target="#purchaseOrderDetail-panel" type="button">📋 Purchase Order Detail</button>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="mainTabContent">
+
+        <!-- ====================== CUSTOMER ORDER ====================== -->
+        <div class="tab-pane fade show active" id="customerOrder-panel">
+            <h4 class="mb-3">Customer Order Analytics</h4>
+            <div class="d-flex gap-3 mb-4" id="co-subbuttons">
+                <!-- populated by JS with 50x50 icons -->
+            </div>
+            <div class="chart-container">
+                <canvas id="co-histogram"></canvas>
+                <canvas id="co-line" class="d-none"></canvas>
+                <canvas id="co-pie" class="d-none"></canvas>
+            </div>
+        </div>
+
+        <!-- ====================== PRODUCT ====================== -->
+        <div class="tab-pane fade" id="product-panel">
+            <h4 class="mb-3">Product Analytics</h4>
+            <div class="d-flex gap-3 mb-4" id="prod-subbuttons">
+                <!-- populated by JS -->
+            </div>
+            <div class="chart-container">
+                <canvas id="prod-histogram"></canvas>
+                <canvas id="prod-line" class="d-none"></canvas>
+                <canvas id="prod-pie" class="d-none"></canvas>
+            </div>
+        </div>
+
+        <!-- ====================== PURCHASE ORDER DETAIL ====================== -->
+        <div class="tab-pane fade" id="purchaseOrderDetail-panel">
+            <h4 class="mb-3">Purchase Order Detail Analytics</h4>
+            <div class="d-flex gap-3 mb-4" id="pod-subbuttons">
+                <!-- populated by JS -->
+            </div>
+            <div class="chart-container">
+                <canvas id="pod-histogram"></canvas>
+                <canvas id="pod-line" class="d-none"></canvas>
+                <canvas id="pod-pie" class="d-none"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script th:inline="javascript">
+/*<![CDATA[*/
+    const matrix = /*[[${matrixAnalytics}]]*/ {};
+
+    let currentCharts = {}; // will hold chart instances
+
+    function destroyChart(canvasId) {
+        if (currentCharts[canvasId]) {
+            currentCharts[canvasId].destroy();
+            delete currentCharts[canvasId];
+        }
+    }
+
+    const chartConfig = {
+        customerOrder: {
+            histogram: { key: 'orderCount', type: 'bar', label: 'Order Count' },
+            line:      { key: 'shippingFees', type: 'line', label: 'Shipping Fees Trend' },
+            pie:       { key: 'status', type: 'pie', label: 'Orders by Status' }
+        },
+        product: {
+            histogram: { key: 'priceRangeListPrice', type: 'bar', label: 'Price Range (List Price)' },
+            line:      { key: 'priceRangeStandardCost', type: 'line', label: 'Price Range (Standard Cost)' },
+            pie:       { key: 'categoryRatios', type: 'pie', label: 'Category Ratios' }
+        },
+        purchaseOrderDetail: {
+            histogram: { key: 'quantityPerUnitCost', type: 'bar', label: 'Quantity Per Unit Cost' },
+            line:      { key: 'shippingFees', type: 'line', label: 'Shipping Fees Trend' },
+            pie:       { key: 'quantityPerUnitCost', type: 'pie', label: 'Quantity Distribution' }
+        }
+    };
+
+    function renderChart(category, chartType) {
+        const config = chartConfig[category][chartType];
+        const dataList = matrix[category][config.key];
+        if (!dataList || !dataList.length) return;
+
+        const canvasId = category === 'customerOrder' ? `co-${chartType}` :
+                         category === 'product' ? `prod-${chartType}` : `pod-${chartType}`;
+
+        destroyChart(canvasId);
+
+        const ctx = document.getElementById(canvasId).getContext('2d');
+        let chartData = { labels: [], values: [] };
+
+        if (chartType === 'pie' || chartType === 'histogram') {
+            chartData.labels = dataList.map(item => item.label || item.labelInt || item.labelDouble || '');
+            chartData.values = dataList.map(item => item.value || item.valueLong || item.valueDouble || 0);
+        } else { // line chart
+            const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+            chartData.labels = dataList.map(item => monthNames[item.label - 1] || item.label || '');
+            chartData.values = dataList.map(item => item.value || item.valueLong || item.valueDouble || 0);
+        }
+
+        const colors = ['#0d6efd', '#198754', '#ffc107', '#dc3545', '#6f42c1', '#fd7e14'];
+
+        currentCharts[canvasId] = new Chart(ctx, {
+            type: config.type,
+            data: {
+                labels: chartData.labels,
+                datasets: [{
+                    label: config.label,
+                    data: chartData.values,
+                    backgroundColor: chartType === 'pie' ? dataList.map((_, i) => colors[i % colors.length]) : 'rgba(13, 110, 253, 0.7)',
+                    borderColor: '#0d6efd',
+                    borderWidth: 2,
+                    tension: 0.3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: chartType !== 'histogram' } }
+            }
+        });
+    }
+
+    function createSubButtons(containerId, category) {
+        const container = document.getElementById(containerId);
+        const types = [
+            { type: 'histogram', icon: '/icons/histogram.png', title: 'Histogram' },
+            { type: 'line',      icon: '/icons/line-chart.png', title: 'Line Chart' },
+            { type: 'pie',       icon: '/icons/pie-chart.png',  title: 'Pie Chart' }
+        ];
+
+        types.forEach(t => {
+            const btn = document.createElement('button');
+            btn.className = `sub-btn btn btn-outline-primary d-flex flex-column align-items-center justify-content-center`;
+            btn.innerHTML = `
+                <img src="${t.icon}" alt="${t.title}" width="50" height="50" class="mb-1">
+                <small>${t.title}</small>
+            `;
+            btn.onclick = () => {
+                // hide all canvases in this category
+                document.querySelectorAll(`#${category}-panel canvas`).forEach(c => c.classList.add('d-none'));
+                // show the selected one
+                const canvasId = category === 'customerOrder' ? `co-${t.type}` :
+                                 category === 'product' ? `prod-${t.type}` : `pod-${t.type}`;
+                document.getElementById(canvasId).classList.remove('d-none');
+
+                renderChart(category, t.type);
+
+                // active style
+                container.querySelectorAll('.sub-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            };
+            container.appendChild(btn);
+        });
+
+        // auto-click first button
+        container.querySelector('.sub-btn').click();
+    }
+
+    // Initialize everything
+    function initializeAnalytics() {
+        createSubButtons('co-subbuttons', 'customerOrder');
+        createSubButtons('prod-subbuttons', 'product');
+        createSubButtons('pod-subbuttons', 'purchaseOrderDetail');
+
+        console.log('%c✅ 2-tier Analytics Dashboard ready (server-side data)', 'color:#0d6efd;font-weight:700');
+    }
+
+    window.onload = initializeAnalytics;
+/*]]>*/
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -3,6 +3,8 @@ package org.llin.demo.northwind.service.entity;
 import java.util.List;
 import java.util.Optional;
 
+import org.llin.demo.northwind.dto.LabelValueLongDto;
+import org.llin.demo.northwind.dto.LabelValueLongValueDoubleDto;
 import org.llin.demo.northwind.dto.ProductDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,6 +34,26 @@ public class ProductService {
         public List<ProductDto> Product;
     }
 
+ 	private static class EmbeddedLabelValueLongValueDoubles {
+		@com.fasterxml.jackson.annotation.JsonProperty("_embedded")
+		public LabelValueLongValueDoubleList LabelValueLongValueDoubles;
+	}
+
+	private static class LabelValueLongValueDoubleList {
+		@com.fasterxml.jackson.annotation.JsonProperty("labelValueLongValueDouble")
+		public List<LabelValueLongValueDoubleDto> LabelValueLongValueDouble;
+	}
+	
+	private static class EmbeddedLabelValueLongs {
+		@com.fasterxml.jackson.annotation.JsonProperty("_embedded")
+		public LabelValueLongList LabelValueLongs;
+	}
+
+	private static class LabelValueLongList {
+		@com.fasterxml.jackson.annotation.JsonProperty("labelValueLong")
+		public List<LabelValueLongDto> LabelValueLong;
+	}
+	
     // ==================================================================
     // Public methods
     // ==================================================================
@@ -85,4 +107,32 @@ public class ProductService {
                 .retrieve()
                 .toBodilessEntity();
     }
+    
+	public List<LabelValueLongValueDoubleDto> categoryRatios() {
+		EmbeddedLabelValueLongValueDoubles response = restClient.get()
+    			.uri("/product/analytics/fee-range-count").retrieve()
+    			.body(EmbeddedLabelValueLongValueDoubles.class);
+    	return response != null && response.LabelValueLongValueDoubles != null && response.LabelValueLongValueDoubles.LabelValueLongValueDouble != null
+				? response.LabelValueLongValueDoubles.LabelValueLongValueDouble
+				: List.of();		
+    }
+	
+	public List<LabelValueLongDto> priceRangePerListPrice() {
+		EmbeddedLabelValueLongs response = restClient.get()
+    			.uri("/product/analytics/price-range-per-list-price").retrieve()
+    			.body(EmbeddedLabelValueLongs.class);
+    	return response != null && response.LabelValueLongs != null && response.LabelValueLongs.LabelValueLong != null
+				? response.LabelValueLongs.LabelValueLong
+				: List.of();		
+	}
+
+	public List<LabelValueLongDto> priceRangePerStandardCost() {
+		EmbeddedLabelValueLongs response = restClient.get()
+    			.uri("/product/analytics/price-range-per-standard-cost").retrieve()
+    			.body(EmbeddedLabelValueLongs.class);
+    	return response != null && response.LabelValueLongs != null && response.LabelValueLongs.LabelValueLong != null
+				? response.LabelValueLongs.LabelValueLong
+				: List.of();		
+	}
+	
 }

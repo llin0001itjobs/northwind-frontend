@@ -36,7 +36,8 @@ public class EntityMenuManager {
         this.addlistSubpath = true;
     }
 
-    @PostConstruct
+    @SuppressWarnings("unchecked")
+	@PostConstruct
     private void mapEntitiesFromResource() {
         if (filesRead) {
             return;
@@ -67,8 +68,6 @@ public class EntityMenuManager {
             mappedEntities.addListSubpathForAll();
 
             filesRead = true;
-
-            System.out.println("✅ EntityMenu.json loaded successfully (" + mappedEntities.getEntities().getFirstOrder().size() + " first-order entities)");
 
         } catch (Exception e) {
             e.printStackTrace();

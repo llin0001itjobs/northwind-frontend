@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import org.llin.demo.northwind._JsonKeys;
 import org.llin.demo.northwind._Values;
-import org.llin.demo.northwind.model.charts.LabelValue;
+import org.llin.demo.northwind.model.analytics.LabelValue;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.core.JsonProcessingException;

@@ -1,61 +1,120 @@
-<!doctype html>
-<div class="container mt-5 pt-2" id="leftSideBar">
-	<div class="pt-3">
-		<h3>Entities</h3>
-		<ul class="list-unstyled pt-3">
-			<li class="mb-1">
-				<button class="btn btn-toggle align-items-center rounded collapsed"
-					data-bs-toggle="collapse" data-bs-target="#fo-collapse"
-					aria-controls="fo-collapse" aria-expanded="false">First
-					Order Entities</button>
-				<div class="collapse" id="fo-collapse">
-					<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
-						th:each="e: ${MENU_FIRST_ORDER}">
-						<li><a th:href="@{/{path}(path=${e.path})}" class="link-dark rounded"><span
-								th:text="${e.title}"></span></a></li>
-					</ul>
-				</div>
-			</li>
-			<li class="mb-1">
-				<button class="btn btn-toggle align-items-center rounded collapsed"
-					data-bs-toggle="collapse" data-bs-target="#so-collapse"
-					aria-controls="so-collapse" aria-expanded="false">Second Order Entities</button>
-				<div class="collapse" id="so-collapse">
-					<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
-						th:each="e: ${MENU_SECOND_ORDER}">
-						<li><a th:href="@{/{path}(path=${e.path})}" class="link-dark rounded"><span
-								th:text="${e.title}"></span></a></li>
-					</ul>
-				</div>
-			</li>
-			<li class="mb-1">
-				<button class="btn btn-toggle align-items-center rounded collapsed"
-					data-bs-toggle="collapse" data-bs-target="#to-collapse"
-					aria-controls="to-collapse" aria-expanded="false">Third
-					Order Entities</button>
-				<div class="collapse" id="to-collapse">
-					<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
-						th:each="e: ${MENU_THIRD_ORDER}">
-						<li><a th:href="@{/{path}(path=${e.path})}" class="link-dark rounded"><span
-								th:text="${e.title}"></span></a></li>
-					</ul>
-				</div>
-			</li>
-			<li class="mb-1">
-				<button class="btn btn-toggle align-items-center rounded collapsed"
-					data-bs-toggle="collapse" data-bs-target="#type-collapse"
-					aria-controls="type-collapse" aria-expanded="false">Type Entities</button>
-				<div class="collapse" id="type-collapse">
-					<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"
-						th:each="e: ${MENU_TYPE}">
-						<li><a th:href="@{/{path}(path=${e.path})}" class="link-dark rounded"><span
-								th:text="${e.title}"></span></a></li>
-					</ul>
-				</div>
-			</li>			
-		</ul>
-	</div>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<!-- 
+    LEFT SIDEBAR FRAGMENT 
+    Save this as: src/main/resources/templates/fragments/left-sidebar.html
+    (or any name you prefer)
+-->
+
+<div class="container mt-5 pt-2" id="sideMenuLeftEntities" th:fragment="sideMenuLeftEntities">
+
+    <!-- Sidebar card / menu container -->
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-dark text-white py-3">
+            <h5 class="mb-0">
+                <i class="bi bi-database me-2"></i>
+                Northwind Entities
+            </h5>
+        </div>
+
+        <div class="card-body p-0">
+
+            <!-- First Order -->
+            <div class="menu-section border-bottom" th:if="${not #lists.isEmpty(mappedEntities.entities.firstOrder)}">
+                <div class="menu-section-title px-3 py-2 fw-bold text-uppercase small text-muted">
+                    <i class="bi bi-1-circle-fill me-1"></i> First Order
+                </div>
+                <ul class="nav flex-column px-2 pb-2">
+                    <li class="nav-item" th:each="entity : ${mappedEntities.entities.firstOrder}">
+                        <a th:href="@{${entity.path}}" class="nav-link">
+                            <i class="bi bi-arrow-right-circle me-2"></i>
+                            <span th:text="${entity.title}"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Second Order -->
+            <div class="menu-section border-bottom" th:if="${not #lists.isEmpty(mappedEntities.entities.secondOrder)}">
+                <div class="menu-section-title px-3 py-2 fw-bold text-uppercase small text-muted">
+                    <i class="bi bi-2-circle-fill me-1"></i> Second Order
+                </div>
+                <ul class="nav flex-column px-2 pb-2">
+                    <li class="nav-item" th:each="entity : ${mappedEntities.entities.secondOrder}">
+                        <a th:href="@{${entity.path}}" class="nav-link">
+                            <i class="bi bi-arrow-right-circle me-2"></i>
+                            <span th:text="${entity.title}"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Third Order -->
+            <div class="menu-section border-bottom" th:if="${not #lists.isEmpty(mappedEntities.entities.thirdOrder)}">
+                <div class="menu-section-title px-3 py-2 fw-bold text-uppercase small text-muted">
+                    <i class="bi bi-3-circle-fill me-1"></i> Third Order
+                </div>
+                <ul class="nav flex-column px-2 pb-2">
+                    <li class="nav-item" th:each="entity : ${mappedEntities.entities.thirdOrder}">
+                        <a th:href="@{${entity.path}}" class="nav-link">
+                            <i class="bi bi-arrow-right-circle me-2"></i>
+                            <span th:text="${entity.title}"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Types & Statuses -->
+            <div class="menu-section" th:if="${not #lists.isEmpty(mappedEntities.entities.type)}">
+                <div class="menu-section-title px-3 py-2 fw-bold text-uppercase small text-muted">
+                    <i class="bi bi-tags-fill me-1"></i> Types &amp; Statuses
+                </div>
+                <ul class="nav flex-column px-2 pb-2">
+                    <li class="nav-item" th:each="entity : ${mappedEntities.entities.type}">
+                        <a th:href="@{${entity.path}}" class="nav-link">
+                            <i class="bi bi-arrow-right-circle me-2"></i>
+                            <span th:text="${entity.title}"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Footer info -->
+        <div class="card-footer bg-light text-center py-2 small text-muted">
+            Powered by 
+            <strong>EntityMenu.json</strong> 
+            <span class="badge bg-secondary ms-1" th:text="'addListSubpath = ' + ${mappedEntities.addlistSubpath}"></span>
+        </div>
+    </div>
+
 </div>
 
-	<script
-		src="https://getbootstrap.com/docs/5.0/examples/sidebars/sidebars.js"></script>
+<!-- 
+    OPTIONAL: Add this CSS once in your main layout (or in a separate CSS file)
+-->
+<style th:if="${true}">
+    #leftSideBar .menu-section-title { 
+        background: #f8f9fa; 
+        border-bottom: 1px solid #dee2e6;
+    }
+    #leftSideBar .nav-link {
+        color: #212529;
+        padding: 0.65rem 1rem;
+        border-radius: 0.375rem;
+        margin: 2px 8px;
+        transition: all 0.2s ease;
+    }
+    #leftSideBar .nav-link:hover {
+        background-color: #e9ecef;
+        color: #0d6efd;
+        padding-left: 1.5rem;
+    }
+    #leftSideBar .nav-link i {
+        width: 20px;
+    }
+</style>
+
+</html>
