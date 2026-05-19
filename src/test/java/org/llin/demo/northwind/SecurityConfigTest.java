@@ -3,7 +3,9 @@ package org.llin.demo.northwind;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
+import org.llin.demo.northwind.config.PropertyDefaultProperties;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -15,6 +17,7 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.test.util.ReflectionTestUtils;
 
 @SpringBootTest  // loads full application context (including SecurityConfig)
+@EnableConfigurationProperties(PropertyDefaultProperties.class)
 class SecurityConfigTest {
 
     @Autowired

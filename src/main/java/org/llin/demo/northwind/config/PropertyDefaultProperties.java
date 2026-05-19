@@ -13,7 +13,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@SuppressWarnings("unused")
 @ConfigurationProperties(prefix = "")
 @Validated
 @Getter
@@ -37,7 +36,7 @@ public class PropertyDefaultProperties {
     // =============================================================
     // App section
     // =============================================================
-    @lombok.Data
+    @Data
     public static class App {
         @NotNull
         private Mail mail = new Mail();
@@ -77,9 +76,12 @@ public class PropertyDefaultProperties {
         public static class Api {
             private Dogs dogs = new Dogs();
 
-            // "package" is a Java keyword → we use "pkg" (you can keep the original
-            // property keys in application.properties; Spring Boot relaxed binding
-            // still works if you prefer, or rename the keys to app.api.pkg.*)
+            // "package" is a Java keyword → we use "pkg" here.
+            // Update your application.properties to use:
+            //   app.api.pkg.northwind=...
+            //   app.api.pkg.northwind.excluded=...
+            //   app.api.pkg.northwind.sample=...
+            // (Spring Boot relaxed binding does NOT automatically map "package" → "pkg")
             private Pkg pkg = new Pkg();
 
             private Boolean usage;
@@ -123,12 +125,12 @@ public class PropertyDefaultProperties {
     // =============================================================
     // Server section
     // =============================================================
-    @lombok.Data
+    @Data
     public static class Server {
         private Servlet servlet = new Servlet();
         private Integer port;
 
-        @lombok.Data
+        @Data
         public static class Servlet {
             private String contextPath;
         }
@@ -137,7 +139,7 @@ public class PropertyDefaultProperties {
     // =============================================================
     // Spring section
     // =============================================================
-    @lombok.Data
+    @Data
     public static class Spring {
         private Profiles profiles = new Profiles();
         private Datasource datasource = new Datasource();
@@ -148,12 +150,12 @@ public class PropertyDefaultProperties {
         private Mvc mvc = new Mvc();
         private Resources resources = new Resources();
 
-        @lombok.Data
+        @Data
         public static class Profiles {
             private String active;
         }
 
-        @lombok.Data
+        @Data
         public static class Datasource {
             private String driverClassName;
             private String url;
@@ -161,19 +163,19 @@ public class PropertyDefaultProperties {
             private String password;
         }
 
-        @lombok.Data
+        @Data
         public static class Jpa {
             private Boolean showSql;
             private Hibernate hibernate = new Hibernate();
 
-            @lombok.Data
+            @Data
             public static class Hibernate {
                 private String ddlAuto;
                 private Map<String, String> properties = new HashMap<>();
             }
         }
 
-        @lombok.Data
+        @Data
         public static class Mail {
             private String host;
             private Integer port;
@@ -182,34 +184,34 @@ public class PropertyDefaultProperties {
             private Map<String, String> properties = new HashMap<>();
         }
 
-        @lombok.Data
+        @Data
         public static class Security {
             private Boolean debug;
             private User user = new User();
             private OAuth2 oauth2 = new OAuth2();
 
-            @lombok.Data
+            @Data
             public static class User {
                 private String name;
                 private String password;
             }
 
-            @lombok.Data
+            @Data
             public static class OAuth2 {
                 private Client client = new Client();
                 private Provider provider = new Provider();
 
-                @lombok.Data
+                @Data
                 public static class Client {
                     private Registration registration = new Registration();
 
-                    @lombok.Data
+                    @Data
                     public static class Registration {
                         private Github github = new Github();
                         private Google google = new Google();
                         private Facebook facebook = new Facebook();
 
-                        @lombok.Data
+                        @Data
                         public static class Github {
                             private String clientId;
                             private String clientSecret;
@@ -219,7 +221,7 @@ public class PropertyDefaultProperties {
                             private String clientName;
                         }
 
-                        @lombok.Data
+                        @Data
                         public static class Google {
                             private String clientId;
                             private String clientSecret;
@@ -227,7 +229,7 @@ public class PropertyDefaultProperties {
                             private String redirectUri;
                         }
 
-                        @lombok.Data
+                        @Data
                         public static class Facebook {
                             private String clientId;
                             private String clientSecret;
@@ -239,11 +241,11 @@ public class PropertyDefaultProperties {
                     }
                 }
 
-                @lombok.Data
+                @Data
                 public static class Provider {
                     private Github github = new Github();
 
-                    @lombok.Data
+                    @Data
                     public static class Github {
                         private String authorizationUri;
                         private String tokenUri;
@@ -254,7 +256,7 @@ public class PropertyDefaultProperties {
             }
         }
 
-        @lombok.Data
+        @Data
         public static class Thymeleaf {
             private String prefix;
             private String suffix;
@@ -262,49 +264,64 @@ public class PropertyDefaultProperties {
             private String encoding;
         }
 
-        @lombok.Data
+        @Data
         public static class Mvc {
             private String staticPathPattern;
         }
 
-        @lombok.Data
+        @Data
         public static class Resources {
             private List<String> staticLocations;
         }
     }
 
     // =============================================================
-    // Logging section
+    // Logging section (now fully supports your application.properties)
     // =============================================================
-    @lombok.Data
+    @Data
     public static class Logging {
         private Map<String, String> log4j = new HashMap<>();
         private Map<String, String> level = new HashMap<>();
+
+        // Added to support: logging.pattern.console=...
+        private Pattern pattern = new Pattern();
+
+        @Data
+        public static class Pattern {
+            private String console;
+        }
     }
 
     // =============================================================
-    // Management section
+    // Management section (now fully supports your application.properties)
     // =============================================================
-    @lombok.Data
+    @Data
     public static class Management {
         private Endpoints endpoints = new Endpoints();
         private Info info = new Info();
 
-        @lombok.Data
+        @Data
         public static class Endpoints {
             private Web web = new Web();
 
-            @lombok.Data
+            @Data
             public static class Web {
-                private List<String> include;
+                // Updated to match the real Spring Boot property path:
+                // management.endpoints.web.exposure.include=...
+                private Exposure exposure = new Exposure();
+
+                @Data
+                public static class Exposure {
+                    private List<String> include;
+                }
             }
         }
 
-        @lombok.Data
+        @Data
         public static class Info {
             private Env env = new Env();
 
-            @lombok.Data
+            @Data
             public static class Env {
                 private Boolean enabled;
             }
