@@ -1,32 +1,16 @@
 package org.llin.demo.northwind.model.entity;
 
 public class Role extends EntityObject {
-	
-	private String name;
+
+	private String type;
 	private String description;
 
-	public Role() {
-		super();
+	public String getType() {
+		return type;
 	}
 
-	public Role(String name) {
-		super();
-		this.name = name;
-		this.description = "";
-	}
-	
-	public Role(String name, String description) {
-		super();
-		this.name = name;
-		this.description = description;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	public String getDescription() {
@@ -39,7 +23,7 @@ public class Role extends EntityObject {
 
 	@Override
 	public String toString() {
-		return "\nRole [name=" + name + ", description=" + description + super.toString() + "]";
+		return "Role [id=" + id + ", type=" + type + ", description=" + description + super.toString() + "]";
 	}
 
 }

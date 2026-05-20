@@ -1,11 +1,12 @@
 package org.llin.demo.northwind.service.entity;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.llin.demo.northwind.dto.RoleDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
-
-import java.util.List;
 
 @Service
 public class RoleService {
@@ -49,6 +50,17 @@ public class RoleService {
                 && response.Roles.Role != null
                     ? response.Roles.Role
                     : List.of();
+    }
+    
+    public Optional<RoleDto> findByRoleType(String type) {
+        if (type == null) return Optional.empty();
+
+        return Optional.ofNullable(
+                restClient.get()
+                        .uri("/user/{id}", type)
+                        .retrieve()
+                        .body(RoleDto.class)
+        );
     }
  
 }

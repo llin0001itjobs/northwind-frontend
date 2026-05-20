@@ -58,6 +58,27 @@ public class UserService {
         );
     }
 
+    public Optional<UserDto> findByEmail(String email) {
+        if (email == null) return Optional.empty();
+
+        return Optional.ofNullable(
+                restClient.get()
+                        .uri("/user/{id}", email)
+                        .retrieve()
+                        .body(UserDto.class)
+        );
+    }  
+    
+    public Optional<UserDto> findByVerificationToken(String token) {
+        if (token == null) return Optional.empty();
+
+        return Optional.ofNullable(
+                restClient.get()
+                        .uri("/user/{id}", token)
+                        .retrieve()
+                        .body(UserDto.class)
+        );
+    }    
     
     /**
      * GET /User  (returns all Users)

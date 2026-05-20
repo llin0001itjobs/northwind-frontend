@@ -5,21 +5,12 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.Test;
 import org.llin.demo.northwind.config.PropertyDefaultProperties;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.mail.javamail.JavaMailSender;
 
-@SpringBootTest
-@EnableConfigurationProperties(PropertyDefaultProperties.class)
-public class TestDefaultProperties {
-
+public class TestDefaultProperties extends BaseNorthwindTest {
+	
     @Autowired
     private PropertyDefaultProperties propertyDefaultProperties;
-
-    @MockBean
-    private JavaMailSender mailSender;   // ← prevents context failure + avoids real emails in tests
-
+    
     @Test
     public void testDefaultPropertyValues() {
         assertNotNull(propertyDefaultProperties.getServer().getPort());
