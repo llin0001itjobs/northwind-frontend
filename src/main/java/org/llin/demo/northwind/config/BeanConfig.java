@@ -11,7 +11,7 @@ public class BeanConfig {
     public RestClient restClient(RestClient.Builder builder) {
         return builder
                 // ←←← Change this to the real base URL of your API
-                .baseUrl("http://localhost:8080")   // example – adjust as needed
+                .baseUrl("http://localhost:8082")   // example – adjust as needed
                 .build();
     }
 }

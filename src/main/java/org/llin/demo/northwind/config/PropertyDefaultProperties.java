@@ -39,20 +39,17 @@ public class PropertyDefaultProperties {
     @Data
     public static class App {
         @NotNull
-        private Mail mail = new Mail();
-
-        @NotNull
         private Api api = new Api();
-
+        
         private Data data = new Data();
-
+        
+        @NotNull
+        private Mail mail = new Mail();
+        
         private View view = new View();
 
         private Integer employeeChunkSize;
-        private String imageBasePath;
-        private String entitiesFileJson;
-        private Boolean entitiesAddListSubpath;
-        private List<String> entitiesCustomSqlKeys;
+        private String imageBasePath;		
 
         @lombok.Data
         public static class Mail {
@@ -76,12 +73,6 @@ public class PropertyDefaultProperties {
         public static class Api {
             private Dogs dogs = new Dogs();
 
-            // "package" is a Java keyword → we use "pkg" here.
-            // Update your application.properties to use:
-            //   app.api.pkg.northwind=...
-            //   app.api.pkg.northwind.excluded=...
-            //   app.api.pkg.northwind.sample=...
-            // (Spring Boot relaxed binding does NOT automatically map "package" → "pkg")
             private Pkg pkg = new Pkg();
 
             private Boolean usage;
@@ -107,7 +98,6 @@ public class PropertyDefaultProperties {
         @lombok.Data
         public static class Data {
             private String apiUri;
-            private String apiUriId;
             private String regexApiUri;
         }
 
@@ -137,14 +127,15 @@ public class PropertyDefaultProperties {
     }
 
     // =============================================================
-    // Spring section
+    // Spring section (now includes spring.main from test profile)
     // =============================================================
     @Data
     public static class Spring {
         private Profiles profiles = new Profiles();
+        private Main main = new Main();                    // spring.main.allow-bean-definition-overriding
         private Datasource datasource = new Datasource();
         private Jpa jpa = new Jpa();
-        private Mail mail = new Mail();           // spring.mail
+        private Mail mail = new Mail(); // spring.mail
         private Security security = new Security();
         private Thymeleaf thymeleaf = new Thymeleaf();
         private Mvc mvc = new Mvc();
@@ -153,6 +144,11 @@ public class PropertyDefaultProperties {
         @Data
         public static class Profiles {
             private String active;
+        }
+
+        @Data
+        public static class Main {
+            private Boolean allowBeanDefinitionOverriding;
         }
 
         @Data
@@ -166,8 +162,10 @@ public class PropertyDefaultProperties {
         @Data
         public static class Jpa {
             private Boolean showSql;
+            private String databasePlatform;
+            
             private Hibernate hibernate = new Hibernate();
-
+                        
             @Data
             public static class Hibernate {
                 private String ddlAuto;
@@ -276,14 +274,14 @@ public class PropertyDefaultProperties {
     }
 
     // =============================================================
-    // Logging section (now fully supports your application.properties)
+    // Logging section (fully supports logging.level.*, logging.pattern.console, etc.)
     // =============================================================
     @Data
     public static class Logging {
         private Map<String, String> log4j = new HashMap<>();
         private Map<String, String> level = new HashMap<>();
 
-        // Added to support: logging.pattern.console=...
+        // Supports: logging.pattern.console=...
         private Pattern pattern = new Pattern();
 
         @Data
@@ -293,7 +291,7 @@ public class PropertyDefaultProperties {
     }
 
     // =============================================================
-    // Management section (now fully supports your application.properties)
+    // Management section (fully supports management.endpoints.web.exposure.include, etc.)
     // =============================================================
     @Data
     public static class Management {
@@ -306,8 +304,6 @@ public class PropertyDefaultProperties {
 
             @Data
             public static class Web {
-                // Updated to match the real Spring Boot property path:
-                // management.endpoints.web.exposure.include=...
                 private Exposure exposure = new Exposure();
 
                 @Data

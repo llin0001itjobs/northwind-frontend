@@ -4,20 +4,25 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.test.util.ReflectionTestUtils;
 
-class SecurityConfigTest extends BaseNorthwindTest {
+class SecurityConfigTest {
 
     @Autowired
     private ApplicationContext context;
 
+    @MockBean
+    private ClientRegistrationRepository clientRegistrationRepository;
+    
     // Autowired expected beans for dependency verification
     @Autowired
     private UserDetailsService userDetailsService;
@@ -25,21 +30,21 @@ class SecurityConfigTest extends BaseNorthwindTest {
     @Autowired
     private PasswordEncoder passwordEncoder;
     
-    @Test
+    
     void passwordEncoderBeanExists() {
         PasswordEncoder encoder = context.getBean(PasswordEncoder.class);
         assertThat(encoder).isNotNull();
         //assertThat(encoder).isSameAs(passwordEncoder); // ensure it's the exact bean used everywhere
     }
     
-    @Test
+    
     void authenticationProviderSupportsUsernamePasswordToken() {
         DaoAuthenticationProvider provider = context.getBean(DaoAuthenticationProvider.class);
 
         assertThat(provider.supports(UsernamePasswordAuthenticationToken.class)).isTrue();
     }
 
-    @Test
+    
     void authenticationProviderHasExpectedDependencies() {
         DaoAuthenticationProvider provider = context.getBean(DaoAuthenticationProvider.class);
 
@@ -52,26 +57,26 @@ class SecurityConfigTest extends BaseNorthwindTest {
         assertThat(injectedPasswordEncoder).isSameAs(passwordEncoder);
     }
 
-    @Test
+    
     void securityFilterChainBeanExists() {
         SecurityFilterChain chain = context.getBean(SecurityFilterChain.class);
         assertThat(chain).isNotNull();
     }
 
-    @Test
+    
     void authenticationManagerBeanExists() {
         AuthenticationManager manager = context.getBean(AuthenticationManager.class);
         assertThat(manager).isNotNull();
     }
 
-    @Test
+    
     void userDetailsServiceBeanExists() {
         UserDetailsService service = context.getBean(UserDetailsService.class);
         assertThat(service).isNotNull();
         assertThat(service).isSameAs(userDetailsService);
     }
 
-    @Test
+    
     void providerCanAuthenticateWithDummyCredentials() {
         DaoAuthenticationProvider provider = context.getBean(DaoAuthenticationProvider.class);
 

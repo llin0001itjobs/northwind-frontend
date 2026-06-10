@@ -35,8 +35,8 @@ public class LoginController {
 
 	@PostConstruct
 	private void init() {
-		subjectVerified = props.getApp().getMail().getSubject().getVerified();
-		textVerified = props.getApp().getMail().getText().getVerified();
+		//subjectVerified = props.getApp().getMail().getSubject().getVerified();
+		//textVerified = props.getApp().getMail().getText().getVerified();
 	}
 
 	@GetMapping("/login")

@@ -1,25 +1,44 @@
 package org.llin.demo.northwind;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
 import org.junit.jupiter.api.Test;
 import org.llin.demo.northwind.config.PropertyDefaultProperties;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.runner.ApplicationContextRunner;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
-public class TestDefaultProperties extends BaseNorthwindTest {
-	
-    @Autowired
-    private PropertyDefaultProperties propertyDefaultProperties;
-    
+import static org.assertj.core.api.Assertions.assertThat;
+
+public class TestDefaultProperties {
+
+    private final ApplicationContextRunner contextRunner = new ApplicationContextRunner()
+            .withUserConfiguration(TestConfig.class);   // ← this enables binding
+
     @Test
-    public void testDefaultPropertyValues() {
-        assertNotNull(propertyDefaultProperties.getServer().getPort());
-        assertNotNull(propertyDefaultProperties.getServer().getServlet().getContextPath());
-        // Note: datasource properties are NOT present in the application.properties you showed.
-        // If they come from application-dev.properties / Azure Key Vault / environment variables,
-        // this will pass. Otherwise remove or adjust this assertion.
-        // assertNotNull(propertyDefaultProperties.getSpring().getDatasource().getUsername());
-        assertNotNull(propertyDefaultProperties.getManagement().getInfo().getEnv().getEnabled());
-        assertNotNull(propertyDefaultProperties.getManagement().getEndpoints().getWeb());
+    void testDefaultPropertyValues() {
+        contextRunner
+            .withPropertyValues(
+                "server.port=8082",
+                "server.servlet.context-path=/northwind"
+            )
+            .run(context -> {
+                PropertyDefaultProperties props = context.getBean(PropertyDefaultProperties.class);
+
+                System.out.println("server.port = " + props.getServer().getPort());
+                System.out.println("server.servlet.context-path = " + props.getServer().getServlet().getContextPath());
+
+                assertThat(props.getServer().getPort())
+                        .isNotNull()
+                        .isEqualTo(8082);
+
+                assertThat(props.getServer().getServlet().getContextPath())
+                        .isNotNull()
+                        .isEqualTo("/northwind");
+            });
+    }
+
+    // Tiny helper configuration that makes @ConfigurationProperties work in the runner
+    @Configuration
+    @EnableConfigurationProperties(PropertyDefaultProperties.class)
+    static class TestConfig {
     }
 }

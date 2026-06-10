@@ -19,7 +19,7 @@ import jakarta.mail.MessagingException;
 import jakarta.validation.Valid;
 
 @Controller
-public class ForgotConstroller {
+public class ForgotController {
 
 	@Autowired
 	private UserService userService;

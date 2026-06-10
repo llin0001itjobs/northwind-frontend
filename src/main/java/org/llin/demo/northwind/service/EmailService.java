@@ -30,7 +30,7 @@ public class EmailService {
     @PostConstruct
     private void init() {
         // Pull the from-address from our centralized configuration (no more @Value placeholder issues)
-        this.emailFrom = propertyDefaultProperties.getSpring().getMail().getUsername();
+        //this.emailFrom = propertyDefaultProperties.getSpring().getMail().getUsername();
     }
 
     // Send a simple text email
