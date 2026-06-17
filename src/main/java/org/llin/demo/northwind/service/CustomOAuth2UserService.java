@@ -28,122 +28,127 @@ import org.springframework.stereotype.Service;
 @Service
 public class CustomOAuth2UserService extends DefaultOAuth2UserService {
 
-	@Autowired
-	private UserService userService;
+    @Autowired
+    private UserService userService;
 
-	@Autowired
-	private RoleService roleService;
+    @Autowired
+    private RoleService roleService;
 
-	public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {
-	    OAuth2User oAuth2User = super.loadUser(userRequest);
+    @Override
+    public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {
 
-	    String userNameAttribute = userRequest.getClientRegistration().getProviderDetails()
-	            .getUserInfoEndpoint().getUserNameAttributeName();
+        OAuth2User oAuth2User = super.loadUser(userRequest);
 
-	    Map<String, Object> attributes = oAuth2User.getAttributes();
-	    String provider = userRequest.getClientRegistration().getRegistrationId();
+        String userNameAttribute = userRequest.getClientRegistration().getProviderDetails()
+                .getUserInfoEndpoint().getUserNameAttributeName();
 
-	    String email = extractEmail(attributes, provider);
-	    if (email == null) {
-	        throw new OAuth2AuthenticationException("Email not found from OAuth2 provider");
-	    }
+        Map<String, Object> attributes = oAuth2User.getAttributes();
+        String provider = userRequest.getClientRegistration().getRegistrationId();
 
-	    Optional<UserDto> optUserDto = userService.findByEmail(email);
-	    Optional<RoleDto> optRoleDto;
-	    User user;
-	    List<Role> list = new ArrayList<>();
-	    if (optUserDto.isEmpty()) {
-	        user = new User();
-	        user.setUsername(generateUsername(attributes, provider));
-	        user.setEmail(email);
-	        user.setPassword(UUID.randomUUID().toString());
-	        user.setEnabled(true);
-	        user.setEmailVerified(true);
-	        user.setVerificationToken(UUID.randomUUID().toString());
+        String email = extractEmail(attributes, provider);
+        if (email == null) {
+            throw new OAuth2AuthenticationException("Email not found from OAuth2 provider");
+        }
 
-	        // ←←← CRITICAL: safely get or create role
-	        optRoleDto = roleService.findByRoleType("ROLE_USER");
-	        if (optRoleDto.isEmpty()) {
-	            throw new OAuth2AuthenticationException(
-	                "Default role 'ROLE_USER' not found in database. " +
-	                "Check that RoleSeeder has run or manually insert the role.");
-	        }
-	        list.add(RoleMapper.toEntity(optRoleDto.get()));
-	        user.setRoles(list);
+        Optional<UserDto> optUserDto = userService.findByEmail(email);
+        Optional<RoleDto> optRoleDto;
+        User user;
+        List<Role> list = new ArrayList<>();
 
-	        userService.update(user.getId(), UserMapper.toDto(user));
-	    } else {
-	        user = UserMapper.toEntity(optUserDto.get());
-	    }
+        if (optUserDto.isEmpty()) {
+            // === NEW USER: create and persist properly ===
+            user = new User();
+            user.setUsername(generateUsername(attributes, provider));
+            user.setEmail(email);
+            user.setPassword(UUID.randomUUID().toString());
+            user.setEnabled(true);
+            user.setEmailVerified(true);
+            user.setVerificationToken(UUID.randomUUID().toString());
 
-	    // Extra safety for any legacy users that might have null role
-	    if (user.getRoles().isEmpty()) {
-	    	optRoleDto = roleService.findByRoleType("ROLE_USER");
-	        if (optRoleDto.isPresent()) {
-	        	list.add(RoleMapper.toEntity(optRoleDto.get()));
-	        	user.setRoles(list);
-	        	userService.update(user.getId(), UserMapper.toDto(user));
-	        } else {
-	            throw new OAuth2AuthenticationException("Default role 'ROLE_USER' not found.");
-	        }
-	    }
+            optRoleDto = roleService.findByRoleType("ROLE_USER");
+            if (optRoleDto.isEmpty()) {
+                throw new OAuth2AuthenticationException(
+                    "Default role 'ROLE_USER' not found in database. " +
+                    "Check that RoleSeeder has run or manually insert the role.");
+            }
+            list.add(RoleMapper.toEntity(optRoleDto.get()));
+            user.setRoles(list);
 
-	    OAuth2User oUser = new DefaultOAuth2User(
-	            Collections.singleton(new SimpleGrantedAuthority("ROLE_USER")),
-	            attributes,
-	            userNameAttribute);
+            // IMPORTANT FIX: use save/create instead of update on a non-persisted entity
+            UserDto savedDto = userService.create(UserMapper.toDto(user));  
+            user = UserMapper.toEntity(savedDto);
 
-	    return new CustomOAuth2User(oUser, user);
-	}
-	
-	private String extractEmail(Map<String, Object> attributes, String provider) {
-	    switch (provider.toLowerCase()) {
-	        case "github":
-	            // GitHub often returns null for email when it's set to private
-	            String email = (String) attributes.get("email");
-	            if (email == null || email.trim().isEmpty()) {
-	                String login = (String) attributes.get("login");
-	                if (login != null && !login.trim().isEmpty()) {
-	                    email = login + "@github.com";   // unique placeholder email
-	                }
-	            }
-	            return email;
+        } else {
+            user = UserMapper.toEntity(optUserDto.get());
+        }
 
-	        case "google":
-	            return (String) attributes.get("email");
+        // Extra safety for legacy users with null/empty roles
+        if (user.getRoles() == null || user.getRoles().isEmpty()) {
+            optRoleDto = roleService.findByRoleType("ROLE_USER");
+            if (optRoleDto.isPresent()) {
+                list.clear();
+                list.add(RoleMapper.toEntity(optRoleDto.get()));
+                user.setRoles(list);
+                userService.update(user.getId(), UserMapper.toDto(user));
+            } else {
+                throw new OAuth2AuthenticationException("Default role 'ROLE_USER' not found.");
+            }
+        }
 
-	        case "facebook":
-	            return (String) attributes.get("email");
+        OAuth2User oUser = new DefaultOAuth2User(
+                Collections.singleton(new SimpleGrantedAuthority("ROLE_USER")),
+                attributes,
+                userNameAttribute);
 
-	        default:
-	            return null;
-	    }
-	}
-	
-	private String generateUsername(Map<String, Object> attributes, String provider) {
-	    switch (provider.toLowerCase()) {
-	        case "github":
-	            String login = (String) attributes.get("login");
-	            return (login != null && !login.trim().isEmpty()) ? login : "user_" + UUID.randomUUID().toString().substring(0, 8);
+        return new CustomOAuth2User(oUser, user);
+    }
 
-	        case "google":
-	            String email = (String) attributes.get("email");
-	            if (email != null && !email.trim().isEmpty()) {
-	                return email.split("@")[0];
-	            }
-	            break;
+    private String extractEmail(Map<String, Object> attributes, String provider) {
+        switch (provider.toLowerCase()) {
+            case "github":
+                String email = (String) attributes.get("email");
+                if (email == null || email.trim().isEmpty()) {
+                    String login = (String) attributes.get("login");
+                    if (login != null && !login.trim().isEmpty()) {
+                        email = login + "@github.com";
+                    }
+                }
+                return email;
 
-	        case "facebook":
-	            Object nameObj = attributes.get("name");
-	            if (nameObj != null) {
-	                return nameObj.toString().toLowerCase().replaceAll("\\s+", ".");
-	            }
-	            break;
+            case "google":
+            case "facebook":
+                return (String) attributes.get("email");
 
-	        default:
-	            break;
-	    }
-	    return "user_" + UUID.randomUUID().toString().substring(0, 8);
-	}
-	
+            default:
+                return null;
+        }
+    }
+
+    private String generateUsername(Map<String, Object> attributes, String provider) {
+        switch (provider.toLowerCase()) {
+            case "github":
+                String login = (String) attributes.get("login");
+                return (login != null && !login.trim().isEmpty()) 
+                        ? login 
+                        : "user_" + UUID.randomUUID().toString().substring(0, 8);
+
+            case "google":
+                String email = (String) attributes.get("email");
+                if (email != null && !email.trim().isEmpty()) {
+                    return email.split("@")[0];
+                }
+                break;
+
+            case "facebook":
+                Object nameObj = attributes.get("name");
+                if (nameObj != null) {
+                    return nameObj.toString().toLowerCase().replaceAll("\\s+", ".");
+                }
+                break;
+
+            default:
+                break;
+        }
+        return "user_" + UUID.randomUUID().toString().substring(0, 8);
+    }
 }

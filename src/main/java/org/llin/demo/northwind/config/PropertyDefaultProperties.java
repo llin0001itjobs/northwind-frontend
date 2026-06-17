@@ -20,307 +20,359 @@ import lombok.Setter;
 @NoArgsConstructor
 public class PropertyDefaultProperties {
 
-    @NotNull
-    private App app = new App();
+	@NotNull
+	private App app = new App();
 
-    @NotNull
-    private Server server = new Server();
+	@NotNull
+	private Server server = new Server();
 
-    @NotNull
-    private Spring spring = new Spring();
+	@NotNull
+	private Spring spring = new Spring();
 
-    private Logging logging = new Logging();
+	private Logging logging = new Logging();
 
-    private Management management = new Management();
+	private Management management = new Management();
 
-    // =============================================================
-    // App section
-    // =============================================================
-    @Data
-    public static class App {
-        @NotNull
-        private Api api = new Api();
-        
-        private Data data = new Data();
-        
-        @NotNull
-        private Mail mail = new Mail();
-        
-        private View view = new View();
+	private Github github = new Github();
 
-        private Integer employeeChunkSize;
-        private String imageBasePath;		
+	// =============================================================
+	// App section
+	// =============================================================
+	@Data
+	public static class App {
+		@NotNull
+		private Api api = new Api();
 
-        @lombok.Data
-        public static class Mail {
-            private Subject subject = new Subject();
-            private Text text = new Text();
+		private Data data = new Data();
 
-            @lombok.Data
-            public static class Subject {
-                private String verified;
-                private String registered;
-            }
+		@NotNull
+		private Mail mail = new Mail();
 
-            @lombok.Data
-            public static class Text {
-                private String verified;
-                private String registered;
-            }
-        }
+		private View view = new View();
 
-        @lombok.Data
-        public static class Api {
-            private Dogs dogs = new Dogs();
+		private Integer employeeChunkSize;
+		private String imageBasePath;
 
-            private Pkg pkg = new Pkg();
+		@lombok.Data
+		public static class Mail {
+			private Subject subject = new Subject();
+			private Text text = new Text();
 
-            private Boolean usage;
+			@lombok.Data
+			public static class Subject {
+				private String verified;
+				private String registered;
+			}
 
-            @lombok.Data
-            public static class Dogs {
-                private Images images = new Images();
+			@lombok.Data
+			public static class Text {
+				private String verified;
+				private String registered;
+			}
+		}
 
-                @lombok.Data
-                public static class Images {
-                    private String random;
-                }
-            }
+		@lombok.Data
+		public static class Api {
+			private Dogs dogs = new Dogs();
 
-            @lombok.Data
-            public static class Pkg {
-                private String northwind;
-                private List<String> excluded;
-                private List<Integer> sample;
-            }
-        }
+			private Pkg pkg = new Pkg();
 
-        @lombok.Data
-        public static class Data {
-            private String apiUri;
-            private String regexApiUri;
-        }
+			private Boolean usage;
 
-        @lombok.Data
-        public static class View {
-            private Ellipsis ellipsis = new Ellipsis();
+			@lombok.Data
+			public static class Dogs {
+				private Images images = new Images();
 
-            @lombok.Data
-            public static class Ellipsis {
-                private Integer limit;
-            }
-        }
-    }
+				@lombok.Data
+				public static class Images {
+					private String random;
+				}
+			}
 
-    // =============================================================
-    // Server section
-    // =============================================================
-    @Data
-    public static class Server {
-        private Servlet servlet = new Servlet();
-        private Integer port;
+			@lombok.Data
+			public static class Pkg {
+				private String northwind;
+				private List<String> excluded;
+				private List<Integer> sample;
+			}
+		}
 
-        @Data
-        public static class Servlet {
-            private String contextPath;
-        }
-    }
+		@lombok.Data
+		public static class Data {
+			private String apiUri;
+			private String regexApiUri;
+		}
 
-    // =============================================================
-    // Spring section (now includes spring.main from test profile)
-    // =============================================================
-    @Data
-    public static class Spring {
-        private Profiles profiles = new Profiles();
-        private Main main = new Main();                    // spring.main.allow-bean-definition-overriding
-        private Datasource datasource = new Datasource();
-        private Jpa jpa = new Jpa();
-        private Mail mail = new Mail(); // spring.mail
-        private Security security = new Security();
-        private Thymeleaf thymeleaf = new Thymeleaf();
-        private Mvc mvc = new Mvc();
-        private Resources resources = new Resources();
+		@lombok.Data
+		public static class View {
+			private Ellipsis ellipsis = new Ellipsis();
 
-        @Data
-        public static class Profiles {
-            private String active;
-        }
+			@lombok.Data
+			public static class Ellipsis {
+				private Integer limit;
+			}
+		}
+	}
 
-        @Data
-        public static class Main {
-            private Boolean allowBeanDefinitionOverriding;
-        }
+	// =============================================================
+	// Server section
+	// =============================================================
+	@Data
+	public static class Server {
+		private Servlet servlet = new Servlet();
+		private Integer port;
 
-        @Data
-        public static class Datasource {
-            private String driverClassName;
-            private String url;
-            private String username;
-            private String password;
-        }
+		@Data
+		public static class Servlet {
+			private String contextPath;
+		}
+	}
 
-        @Data
-        public static class Jpa {
-            private Boolean showSql;
-            private String databasePlatform;
-            
-            private Hibernate hibernate = new Hibernate();
-                        
-            @Data
-            public static class Hibernate {
-                private String ddlAuto;
-                private Map<String, String> properties = new HashMap<>();
-            }
-        }
+	// =============================================================
+	// Spring section (now includes spring.main from test profile)
+	// =============================================================
+	@Data
+	public static class Spring {
+		private Profiles profiles = new Profiles();
+		private Main main = new Main(); // spring.main.allow-bean-definition-overriding
+		private Datasource datasource = new Datasource();
+		private Jpa jpa = new Jpa();
+		private Mail mail = new Mail(); // spring.mail
+		private Security security = new Security();
+		private Thymeleaf thymeleaf = new Thymeleaf();
+		private Mvc mvc = new Mvc();
+		private Resources resources = new Resources();
+		private Cloud cloud = new Cloud();
+		private H2 h2 = new H2();
+		
+		@Data
+		public static class Profiles {
+			private String active;
+		}
 
-        @Data
-        public static class Mail {
-            private String host;
-            private Integer port;
-            private String username;
-            private String password;
-            private Map<String, String> properties = new HashMap<>();
-        }
+		@Data
+		public static class Main {
+			private Boolean allowBeanDefinitionOverriding;
+		}
 
-        @Data
-        public static class Security {
-            private Boolean debug;
-            private User user = new User();
-            private OAuth2 oauth2 = new OAuth2();
+		@Data
+		public static class Datasource {
+			private String driverClassName;
+			private String url;
+			private String username;
+			private String password;
+		}
 
-            @Data
-            public static class User {
-                private String name;
-                private String password;
-            }
+		@Data
+		public static class Jpa {
+			private Boolean showSql;
+			private String databasePlatform;
 
-            @Data
-            public static class OAuth2 {
-                private Client client = new Client();
-                private Provider provider = new Provider();
+			private Hibernate hibernate = new Hibernate();
 
-                @Data
-                public static class Client {
-                    private Registration registration = new Registration();
+			@Data
+			public static class Hibernate {
+				private String ddlAuto;
+				private Map<String, String> properties = new HashMap<>();
+			}
+		}
 
-                    @Data
-                    public static class Registration {
-                        private Github github = new Github();
-                        private Google google = new Google();
-                        private Facebook facebook = new Facebook();
+		@Data
+		public static class Mail {
+			private String host;
+			private Integer port;
+			private String username;
+			private String password;
+			private Map<String, String> properties = new HashMap<>();
+		}
 
-                        @Data
-                        public static class Github {
-                            private String clientId;
-                            private String clientSecret;
-                            private List<String> scope;
-                            private String authorizationGrantType;
-                            private String redirectUri;
-                            private String clientName;
-                        }
+		@Data
+		public static class Security {
+			private Boolean debug;
+			private User user = new User();
+			private OAuth2 oauth2 = new OAuth2();
 
-                        @Data
-                        public static class Google {
-                            private String clientId;
-                            private String clientSecret;
-                            private List<String> scope;
-                            private String redirectUri;
-                        }
+			@Data
+			public static class User {
+				private String name;
+				private String password;
+			}
 
-                        @Data
-                        public static class Facebook {
-                            private String clientId;
-                            private String clientSecret;
-                            private List<String> scope;
-                            private String redirectUri;
-                            private String authorizationGrantType;
-                            private String clientName;
-                        }
-                    }
-                }
+			@Data
+			public static class OAuth2 {
+				private Client client = new Client();
+				private Provider provider = new Provider();
 
-                @Data
-                public static class Provider {
-                    private Github github = new Github();
+				@Data
+				public static class Client {
+					private Registration registration = new Registration();
 
-                    @Data
-                    public static class Github {
-                        private String authorizationUri;
-                        private String tokenUri;
-                        private String userInfoUri;
-                        private String userNameAttribute;
-                    }
-                }
-            }
-        }
+					@Data
+					public static class Registration {
+						private Github github = new Github();
+						private Google google = new Google();
+						private Facebook facebook = new Facebook();
 
-        @Data
-        public static class Thymeleaf {
-            private String prefix;
-            private String suffix;
-            private String mode;
-            private String encoding;
-        }
+						@Data
+						public static class Github {
+							private String clientId;
+							private String clientSecret;
+							private List<String> scope;
+							private String authorizationGrantType;
+							private String redirectUri;
+							private String clientName;
+						}
 
-        @Data
-        public static class Mvc {
-            private String staticPathPattern;
-        }
+						@Data
+						public static class Google {
+							private String clientId;
+							private String clientSecret;
+							private List<String> scope;
+							private String redirectUri;
+						}
 
-        @Data
-        public static class Resources {
-            private List<String> staticLocations;
-        }
-    }
+						@Data
+						public static class Facebook {
+							private String clientId;
+							private String clientSecret;
+							private List<String> scope;
+							private String redirectUri;
+							private String authorizationGrantType;
+							private String clientName;
+						}
+					}
+				}
 
-    // =============================================================
-    // Logging section (fully supports logging.level.*, logging.pattern.console, etc.)
-    // =============================================================
-    @Data
-    public static class Logging {
-        private Map<String, String> log4j = new HashMap<>();
-        private Map<String, String> level = new HashMap<>();
+				@Data
+				public static class Provider {
+					private Github github = new Github();
 
-        // Supports: logging.pattern.console=...
-        private Pattern pattern = new Pattern();
+					@Data
+					public static class Github {
+						private String authorizationUri;
+						private String tokenUri;
+						private String userInfoUri;
+						private String userNameAttribute;
+					}
+				}
+			}
+		}
 
-        @Data
-        public static class Pattern {
-            private String console;
-        }
-    }
+		@Data
+		public static class Thymeleaf {
+			private String prefix;
+			private String suffix;
+			private String mode;
+			private String encoding;
+		}
 
-    // =============================================================
-    // Management section (fully supports management.endpoints.web.exposure.include, etc.)
-    // =============================================================
-    @Data
-    public static class Management {
-        private Endpoints endpoints = new Endpoints();
-        private Info info = new Info();
+		@Data
+		public static class Mvc {
+			private String staticPathPattern;
+		}
 
-        @Data
-        public static class Endpoints {
-            private Web web = new Web();
+		@Data
+		public static class Resources {
+			private List<String> staticLocations;
+		}
 
-            @Data
-            public static class Web {
-                private Exposure exposure = new Exposure();
+		@Data
+		public static class Cloud {
+			private Azure azure = new Azure();
 
-                @Data
-                public static class Exposure {
-                    private List<String> include;
-                }
-            }
-        }
+			@Data
+			public static class Azure {
 
-        @Data
-        public static class Info {
-            private Env env = new Env();
+				private Keyvault keyvault = new Keyvault();
 
-            @Data
-            public static class Env {
-                private Boolean enabled;
-            }
-        }
-    }
+				@Data
+				public static class Keyvault {
+					private Secret secret = new Secret();
+
+					@Data
+					public static class Secret {
+						private Boolean enabled;
+						private String propertySourceEnabled;
+					}
+				}
+
+			}
+
+		}
+		
+		@Data
+		public static class H2 {
+			private String consoleEnabled;
+		}
+	}
+
+	// =============================================================
+	// Logging section (fully supports logging.level.*, logging.pattern.console,
+	// etc.)
+	// =============================================================
+	@Data
+	public static class Logging {
+		private Map<String, String> log4j = new HashMap<>();
+		private Map<String, String> level = new HashMap<>();
+
+		// Supports: logging.pattern.console=...
+		private Pattern pattern = new Pattern();
+
+		@Data
+		public static class Pattern {
+			private String console;
+		}
+	}
+
+	// =============================================================
+	// Management section (fully supports management.endpoints.web.exposure.include,
+	// etc.)
+	// =============================================================
+	@Data
+	public static class Management {
+		private Endpoints endpoints = new Endpoints();		
+		private Health health = new Health();
+		private Info info = new Info();
+
+		@Data
+		public static class Endpoints {
+			private Web web = new Web();
+
+			@Data
+			public static class Web {
+				private Exposure exposure = new Exposure();
+
+				@Data
+				public static class Exposure {
+					private List<String> include;
+				}
+			}
+		}
+
+		@Data
+		public static class Health {
+			private Mail mail = new Mail();
+
+			@Data
+			public static class Mail {
+				private Boolean enabled;
+			}
+		}
+		
+		@Data
+		public static class Info {
+			private Env env = new Env();
+
+			@Data
+			public static class Env {
+				private Boolean enabled;
+			}
+		}
+	}
+
+	@Data
+	public static class Github {
+		private String clientId;
+		private String clientSecret;
+	}
 }
