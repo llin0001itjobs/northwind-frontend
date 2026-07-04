@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping
 public class HomeController<T extends EntityObject> extends EntityController<T> {
 		
-    @GetMapping("/")
+    @GetMapping({"", "/"})
     public String index() {
         return "redirect:/login";
     }

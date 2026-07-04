@@ -43,8 +43,10 @@ public class SecurityConfig {
         http.csrf(csrf -> csrf.disable())
             .authenticationProvider(authenticationProvider)   // ← Explicit wiring (recommended)
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/", "/login", "/setPassword", "/verify", 
-                                 "/resources/**", "/css/**", "/js/**", "/images/**").permitAll()
+                .requestMatchers("/", "/forgotUser","/login", "/register",
+                				 "/requestNewPassword","/requestPassword", 
+                				 "/setNewPassword","/setPassword", "/verify", 
+                                 "/css/**", "/js/**", "/images/**").permitAll()
                 .requestMatchers("/user/**").authenticated()
                 .anyRequest().authenticated()
             )
