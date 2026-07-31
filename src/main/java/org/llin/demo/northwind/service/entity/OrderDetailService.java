@@ -1,12 +1,15 @@
 package org.llin.demo.northwind.service.entity;
 
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+
 import org.llin.demo.northwind.dto.OrderDetailDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
-
-import java.util.List;
-import java.util.Optional;
 
 @Service
 public class OrderDetailService {
@@ -41,7 +44,7 @@ public class OrderDetailService {
 
         return Optional.ofNullable(
                 restClient.get()
-                        .uri("/orderDetail/{id}", id)
+                        .uri("/api/orderDetail/{id}", id)
                         .retrieve()
                         .body(OrderDetailDto.class)
         );
@@ -52,7 +55,7 @@ public class OrderDetailService {
      */
     public List<OrderDetailDto> findAll() {
         EmbeddedOrderDetails response = restClient.get()
-                .uri("/orderDetail")
+                .uri("/api/orderDetail")
                 .retrieve()
                 .body(EmbeddedOrderDetails.class);
 
@@ -65,7 +68,7 @@ public class OrderDetailService {
 
     public OrderDetailDto create(OrderDetailDto OrderDetailDto) {
         return restClient.post()
-                .uri("/orderDetail")
+                .uri("/api/orderDetail")
                 .body(OrderDetailDto)
                 .retrieve()
                 .body(OrderDetailDto.class);
@@ -73,7 +76,7 @@ public class OrderDetailService {
 
     public OrderDetailDto update(Integer id, OrderDetailDto OrderDetailDto) {
         return restClient.put()
-                .uri("/orderDetail/{id}", id)
+                .uri("/api/orderDetail/{id}", id)
                 .body(OrderDetailDto)
                 .retrieve()
                 .body(OrderDetailDto.class);
@@ -81,8 +84,70 @@ public class OrderDetailService {
 
     public void deleteById(Integer id) {
         restClient.delete()
-                .uri("/orderDetail/{id}", id)
+                .uri("/api/orderDetail/{id}", id)
                 .retrieve()
                 .toBodilessEntity();
     }
+    
+    public List<OrderDetailDto> findByCustomerOrderId(Integer id) {
+    	return findByObject(id, "id", "findByCustomerOrderId");
+    }
+    
+    public List<OrderDetailDto> findByProductId(Integer id) {
+    	return findByObject(id, "id", "findByProductId");
+    }
+    
+    public List<OrderDetailDto> findByOrderStatusId(Integer id) {
+    	return findByObject(id, "id", "findByOrderStatusId");
+    }
+    
+    public List<OrderDetailDto> findByPurchaseOrderId(Integer id) {
+    	return findByObject(id, "id", "findByPurchaseOrderId");
+    }
+    
+    public List<OrderDetailDto> findByInventoryTransactionId(Integer id) {
+    	return findByObject(id, "id", "findByInventoryTransactionId");	
+    }
+
+    // Numeric ranges
+    public List<OrderDetailDto> findByQuantityBetweenOrderByQuantityAsc(BigDecimal min, BigDecimal max) {
+    	return findWithTwoParameters(min, "min", max, "max", "findByQuantityBetweenOrderByQuantityAsc");
+    }
+    
+    public List<OrderDetailDto> findByUnitPriceBetweenOrderByUnitPriceAsc(BigDecimal min, BigDecimal max) {
+    	return findWithTwoParameters(min, "min", max, "max", "findByUnitPriceBetweenOrderByUnitPriceAsc");
+    }
+    
+    public List<OrderDetailDto> findByDiscountBetweenOrderByDiscountAsc(Double min, Double max) {
+    	return findWithTwoParameters(min, "min", max, "max", "findByDiscountBetweenOrderByDiscountAsc");
+    }
+
+    public List<OrderDetailDto> findByDateAllocatedBetweenOrderByDateAllocatedAsc(LocalDateTime start, LocalDateTime end) {
+    	return findWithTwoParameters(start, "start", end, "end", "findByDateAllocatedBetweenOrderByDateAllocatedAsc");
+    }
+    
+    private List<OrderDetailDto> findByObject(Object o, String label, String path) {
+		if (o  == null) return Collections.emptyList();
+
+		   return Optional.ofNullable(
+		            restClient.get()
+		                    .uri("/api/orderDetail/search/" + path + "?" + label + "={" + label + "}", o)
+		                    .retrieve()
+		                    .body(OrderDetailDto.class)
+		            ) 
+		            .map(Collections::singletonList)
+		            .orElse(Collections.emptyList());
+    }
+    
+    private List<OrderDetailDto> findWithTwoParameters(Object param1, String paramName1, 
+			 											 Object param2, String paramName2, String path) {
+			return restClient.get()
+			.uri(uriBuilder -> uriBuilder.path("/api/orderDetail/search/" + path)
+			.queryParam(paramName1, param1)
+			.queryParam(paramName2, param2)
+			.build())
+			.retrieve()
+			.body(new org.springframework.core.ParameterizedTypeReference<List<OrderDetailDto>>() {});    	
+    }        
+    
 }

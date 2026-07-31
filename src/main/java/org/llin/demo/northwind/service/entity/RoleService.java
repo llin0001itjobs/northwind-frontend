@@ -41,7 +41,7 @@ public class RoleService {
      */
     public List<RoleDto> findAll() {
         EmbeddedRoles response = restClient.get()
-                .uri("/role")
+                .uri("/api/role")
                 .retrieve()
                 .body(EmbeddedRoles.class);
 
@@ -52,12 +52,12 @@ public class RoleService {
                     : List.of();
     }
     
-    public Optional<RoleDto> findByRoleType(String type) {
-        if (type == null) return Optional.empty();
+    public Optional<RoleDto> findByRoleType(String roleType) {
+        if (roleType == null) return Optional.empty();
 
         return Optional.ofNullable(
                 restClient.get()
-                        .uri("/user/{id}", type)
+                        .uri("/api/role/search/findByRoleType?roleType={roleType}", roleType)
                         .retrieve()
                         .body(RoleDto.class)
         );

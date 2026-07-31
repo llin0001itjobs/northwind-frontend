@@ -1,11 +1,12 @@
 package org.llin.demo.northwind.service.entity;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.llin.demo.northwind.dto.InventoryTransactionTypeDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
-
-import java.util.List;
 
 @Service
 public class InventoryTransactionTypeService {
@@ -40,7 +41,7 @@ public class InventoryTransactionTypeService {
      */
     public List<InventoryTransactionTypeDto> findAll() {
         EmbeddedInventoryTransactionTypes response = restClient.get()
-                .uri("/inventoryTransactionType")
+                .uri("/api/inventoryTransactionType")
                 .retrieve()
                 .body(EmbeddedInventoryTransactionTypes.class);
 
@@ -51,5 +52,16 @@ public class InventoryTransactionTypeService {
                     : List.of();
     }
 
+    public Optional<InventoryTransactionTypeDto> findById(Integer id) {
+        if (id == null) return Optional.empty();
+
+        return Optional.ofNullable(
+                restClient.get()
+                        .uri("/api/inventoryTransactionType/{id}", id)
+                        .retrieve()
+                        .body(InventoryTransactionTypeDto.class)
+        );
+    }
+    
 
 }

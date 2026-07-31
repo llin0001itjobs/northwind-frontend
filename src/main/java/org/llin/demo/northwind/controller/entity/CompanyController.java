@@ -12,18 +12,22 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/company")
-public class CompanyController<T extends EntityObject> extends EntityController<T> implements _Classes_EntityObject, _Titles {
+public class CompanyController<T extends EntityObject> extends _EntityController<T> implements _Classes_EntityObject, _Titles {
 				
 	@Autowired
 	private CompanyService service;
 	
 	@GetMapping("/list")
 	public ModelAndView getAllCompanies() {
-		handleRequest();
-		modelAndView.addObject(COMPANIES,service.findAll());
-		modelAndView.addObject(TITLE, TITLE_COMPANY);
-		modelAndView.setViewName("entities/company");
-		return modelAndView;
+		return handelRequest();
 	}
 	
+	private ModelAndView handelRequest() {
+		loadMenu();
+		ModelAndView mv = new ModelAndView(getModelAndView().getView());		
+		mv.addObject(COMPANIES, service.findAll());
+		mv.addObject(TITLE, TITLE_COMPANY);
+		mv.setViewName("entities/company");
+		return mv;		
+	}	
 }

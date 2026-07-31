@@ -24,6 +24,7 @@ public interface _Classes_EntityObject {
 	public static final String SHIPPER = "Shipper";
 	public static final String SUPPLIER = "Supplier";
 	public static final String TYPE_STATE = "TypeState";
+	public static final String USER = "User";
 		
 	public static final String APPROVED_BY = "ApprovedBy";
 	public static final String CREATED_BY = "CreatedBy";
@@ -51,5 +52,5 @@ public interface _Classes_EntityObject {
 	public static final String SHIPPERS = "Shippers";
 	public static final String SUPPLIERS = "Suppliers";
 	public static final String TYPE_STATES = "TypeStates";	
-
+	public static final String USERS = "Users";
 }

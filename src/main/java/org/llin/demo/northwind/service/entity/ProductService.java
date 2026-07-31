@@ -1,5 +1,7 @@
 package org.llin.demo.northwind.service.entity;
 
+import java.math.BigDecimal;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -58,23 +60,12 @@ public class ProductService {
     // Public methods
     // ==================================================================
 
-    public Optional<ProductDto> findById(Integer id) {
-        if (id == null) return Optional.empty();
-
-        return Optional.ofNullable(
-                restClient.get()
-                        .uri("/product/{id}", id)
-                        .retrieve()
-                        .body(ProductDto.class)
-        );
-    }
-
     /**
-     * GET /product  (returns all Products)
+     * GET /api/product  (returns all Products)
      */
     public List<ProductDto> findAll() {
         EmbeddedProducts response = restClient.get()
-                .uri("/product")
+                .uri("/api/product")
                 .retrieve()
                 .body(EmbeddedProducts.class);
 
@@ -85,9 +76,21 @@ public class ProductService {
                     : List.of();
     }
 
+    public Optional<ProductDto> findById(Integer id) {
+        if (id == null) return Optional.empty();
+
+        return Optional.ofNullable(
+                restClient.get()
+                        .uri("/api/product/{id}", id)
+                        .retrieve()
+                        .body(ProductDto.class)
+        );
+    }
+
+    
     public ProductDto create(ProductDto ProductDto) {
         return restClient.post()
-                .uri("/product")
+                .uri("/api/product")
                 .body(ProductDto)
                 .retrieve()
                 .body(ProductDto.class);
@@ -95,7 +98,7 @@ public class ProductService {
 
     public ProductDto update(Integer id, ProductDto ProductDto) {
         return restClient.put()
-                .uri("/product/{id}", id)
+                .uri("/api/product/{id}", id)
                 .body(ProductDto)
                 .retrieve()
                 .body(ProductDto.class);
@@ -103,14 +106,14 @@ public class ProductService {
 
     public void deleteById(Integer id) {
         restClient.delete()
-                .uri("/product/{id}", id)
+                .uri("/api/product/{id}", id)
                 .retrieve()
                 .toBodilessEntity();
     }
     
 	public List<LabelValueLongValueDoubleDto> categoryRatios() {
 		EmbeddedLabelValueLongValueDoubles response = restClient.get()
-    			.uri("/product/analytics/fee-range-count").retrieve()
+    			.uri("/api/product/fee-range-count").retrieve()
     			.body(EmbeddedLabelValueLongValueDoubles.class);
     	return response != null && response.LabelValueLongValueDoubles != null && response.LabelValueLongValueDoubles.LabelValueLongValueDouble != null
 				? response.LabelValueLongValueDoubles.LabelValueLongValueDouble
@@ -119,7 +122,7 @@ public class ProductService {
 	
 	public List<LabelValueLongDto> priceRangePerListPrice() {
 		EmbeddedLabelValueLongs response = restClient.get()
-    			.uri("/product/analytics/price-range-per-list-price").retrieve()
+    			.uri("/api/product/price-range-per-list-price").retrieve()
     			.body(EmbeddedLabelValueLongs.class);
     	return response != null && response.LabelValueLongs != null && response.LabelValueLongs.LabelValueLong != null
 				? response.LabelValueLongs.LabelValueLong
@@ -128,11 +131,86 @@ public class ProductService {
 
 	public List<LabelValueLongDto> priceRangePerStandardCost() {
 		EmbeddedLabelValueLongs response = restClient.get()
-    			.uri("/product/analytics/price-range-per-standard-cost").retrieve()
+    			.uri("/api/product/price-range-per-standard-cost").retrieve()
     			.body(EmbeddedLabelValueLongs.class);
     	return response != null && response.LabelValueLongs != null && response.LabelValueLongs.LabelValueLong != null
 				? response.LabelValueLongs.LabelValueLong
 				: List.of();		
 	}
-	
+ 
+	public List<ProductDto> findByProductCode(String productCode) {
+    	return findByObject(productCode, "productCode", "findByProductCode");
+    }
+    
+	public List<ProductDto> findByProductNameContaining(String productName) {   // most useful    	
+    	return findByObject(productName, "productName", "findByProductNameContaining");
+    }
+    
+	public List<ProductDto> findByCategoryContaining(String category) {
+    	return findByObject(category, "category", "findByCategoryContaining");
+    }
+    
+	public List<ProductDto> findByDescriptionContaining(String description) {
+    	return findByObject(description, "description", "findByDescriptionContaining");
+    }
+
+	public List<ProductDto> findByDiscontinued(Boolean discontinued) {
+    	return findByObject(discontinued, "discontinued", "findByDiscontinued");
+    }
+
+    // Price / level ranges
+	public List<ProductDto> findByStandardCostBetweenOrderByStandardCostAsc(BigDecimal min, BigDecimal max) {
+    	return findWithTwoParameters(min, "min", max, "max", 
+				"findByStandardCostBetweenOrderByStandardCostAsc");       	
+    }
+    
+	public List<ProductDto> findByListPriceBetweenOrderByListPriceAsc(BigDecimal min, BigDecimal max) {
+    	return findWithTwoParameters(min, "min", max, "max", 
+				"findByListPriceBetweenOrderByListPriceAsc");    	
+    }
+    
+	public List<ProductDto> findByReorderLevelBetweenOrderByReorderLevelAsc(Integer min, Integer max) {
+    	return findWithTwoParameters(min, "min", max, "max", 
+				"findByReorderLevelBetweenOrderByReorderLevelAsc");    	
+    }
+    
+	public List<ProductDto> findByTargetLevelBetweenOrderByTargetLevelAsc(Integer min, Integer max) {
+    	return findWithTwoParameters(min, "min", max, "max", 
+				"findByTargetLevelBetweenOrderByTargetLevelAsc");    	
+    }
+    
+	public List<ProductDto> findByMinimumReorderQuantityBetweenOrderByMinimumReorderQuantityAsc(Integer min, Integer max) {
+    	return findWithTwoParameters(min, "min", max, "max", 
+    								"findByMinimumReorderQuantityBetweenOrderByMinimumReorderQuantityAsc");
+    }
+
+    // Combined examples
+	public List<ProductDto> findByCategoryAndDiscontinued(String category, Boolean discontinued) {
+    	return findWithTwoParameters(category, "category", discontinued, "discontinued", "findByCategoryAndDiscontinued");
+    }
+    
+    private List<ProductDto> findByObject(Object o, String label, String path) {
+		if (o  == null) return Collections.emptyList();
+
+		   return Optional.ofNullable(
+		            restClient.get()
+		                    .uri("/api/product/search/" + path + "?" + label + "={" + label + "}", o)
+		                    .retrieve()
+		                    .body(ProductDto.class)
+		            ) 
+		            .map(Collections::singletonList)
+		            .orElse(Collections.emptyList());
+    }
+    
+    private List<ProductDto> findWithTwoParameters(Object param1, String paramName1, 
+			 											 Object param2, String paramName2, String path) {
+			return restClient.get()
+			.uri(uriBuilder -> uriBuilder.path("/api/product/search/" + path)
+			.queryParam(paramName1, param1)
+			.queryParam(paramName2, param2)
+			.build())
+			.retrieve()
+			.body(new org.springframework.core.ParameterizedTypeReference<List<ProductDto>>() {});    	
+    }
+    
 }

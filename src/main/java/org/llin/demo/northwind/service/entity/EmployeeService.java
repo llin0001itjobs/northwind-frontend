@@ -1,5 +1,6 @@
 package org.llin.demo.northwind.service.entity;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -41,7 +42,7 @@ public class EmployeeService {
 
         return Optional.ofNullable(
                 restClient.get()
-                        .uri("/employee/{id}", id)
+                        .uri("/api/employee/{id}", id)
                         .retrieve()
                         .body(EmployeeDto.class)
         );
@@ -52,7 +53,7 @@ public class EmployeeService {
      */
     public List<EmployeeDto> findAll() {
         EmbeddedEmployees response = restClient.get()
-                .uri("/employee")
+                .uri("/api/employee")
                 .retrieve()
                 .body(EmbeddedEmployees.class);
 
@@ -65,7 +66,7 @@ public class EmployeeService {
 
     public EmployeeDto create(EmployeeDto EmployeeDto) {
         return restClient.post()
-                .uri("/employee")
+                .uri("/api/employee")
                 .body(EmployeeDto)
                 .retrieve()
                 .body(EmployeeDto.class);
@@ -73,7 +74,7 @@ public class EmployeeService {
 
     public EmployeeDto update(Integer id, EmployeeDto EmployeeDto) {
         return restClient.put()
-                .uri("/employee/{id}", id)
+                .uri("/api/employee/{id}", id)
                 .body(EmployeeDto)
                 .retrieve()
                 .body(EmployeeDto.class);
@@ -81,8 +82,46 @@ public class EmployeeService {
 
     public void deleteById(Integer id) {
         restClient.delete()
-                .uri("/employee/{id}", id)
+                .uri("/api/employee/{id}", id)
                 .retrieve()
                 .toBodilessEntity();
     }
+    
+    public List<EmployeeDto> findAllByLastName(String lastName) {
+		return findByObject(lastName,"lastName","findAllByLastName");
+	}
+	
+	public List<EmployeeDto> findByJobTitle(String jobTitle) {
+		return findByObject(jobTitle,"jobTitle","findByJobTitle");
+	}
+	
+	public List<EmployeeDto> findByEmailAddress(String emailAddress) {
+		return findByObject(emailAddress,"emailAddress","findByEmailAddress");	
+	}
+	
+	public List<EmployeeDto> findByLastNameContaining(String lastName) {        // LIKE '%value%'
+		return findByObject(lastName,"lastName","findByLastNameContaining");		
+	}
+	
+	public List<EmployeeDto> findByFirstNameContaining(String firstName) {
+		return findByObject(firstName,"firstName","findByFirstNameContaining");		
+	}
+	
+	public List<EmployeeDto> findByJobTitleContaining(String jobTitle) {
+		return findByObject(jobTitle,"jobTitle","findByJobTitleContaining");
+	}
+	
+    private List<EmployeeDto> findByObject(Object o, String label, String path) {
+		if (o  == null) return Collections.emptyList();
+
+		   return Optional.ofNullable(
+		            restClient.get()
+		                    .uri("/api/employee/search/" + path + "?" + label + "={" + label + "}", o)
+		                    .retrieve()
+		                    .body(EmployeeDto.class)
+		            ) 
+		            .map(Collections::singletonList)
+		            .orElse(Collections.emptyList());
+    }
+    
 }

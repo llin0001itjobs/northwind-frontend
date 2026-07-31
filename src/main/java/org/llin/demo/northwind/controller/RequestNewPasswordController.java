@@ -6,8 +6,8 @@ import org.llin.demo.northwind.dto.UserDto;
 import org.llin.demo.northwind.form.NewPasswordForm;
 import org.llin.demo.northwind.form.RequestNewPasswordForm;
 import org.llin.demo.northwind.model.entity.User;
-import org.llin.demo.northwind.model.entity.util.UserMapper;
 import org.llin.demo.northwind.service.entity.UserService;
+import org.llin.demo.northwind.service.entity.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -29,6 +29,9 @@ public class RequestNewPasswordController {
 	
 	@Autowired
 	private UserService userService;
+
+	@Autowired
+	private UserMapper userMapper;
 	
 	@GetMapping("/requestNewPassword")
 	public String requestNewPassword(@ModelAttribute("requestNewPasswordForm") RequestNewPasswordForm form) {
@@ -93,10 +96,10 @@ public class RequestNewPasswordController {
 		UserDto userDto = optUserDto.get();
 		
 		User user = new User();
-		user = UserMapper.toEntity(userDto);
+		user = userMapper.toEntity(userDto);
 		user.setPassword(passwordEncoder.encode(form.getNewPassword()));
 		
-		userService.update(userDto.id(), UserMapper.toDto(user));
+		userService.update(userDto.id(), userMapper.toDto(user));
 
 		return "redirect:/login?passwordReset=true";		
 	}

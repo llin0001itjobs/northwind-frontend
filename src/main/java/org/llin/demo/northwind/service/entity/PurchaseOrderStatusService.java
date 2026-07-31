@@ -1,11 +1,12 @@
 package org.llin.demo.northwind.service.entity;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.llin.demo.northwind.dto.PurchaseOrderStatusDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
-
-import java.util.List;
 
 @Service
 public class PurchaseOrderStatusService {
@@ -40,7 +41,7 @@ public class PurchaseOrderStatusService {
      */
     public List<PurchaseOrderStatusDto> findAll() {
         EmbeddedPurchaseOrderStatuss response = restClient.get()
-                .uri("/purchaseOrderStatus")
+                .uri("/api/purchaseOrderStatus")
                 .retrieve()
                 .body(EmbeddedPurchaseOrderStatuss.class);
 
@@ -51,4 +52,15 @@ public class PurchaseOrderStatusService {
                     : List.of();
     }
  
+    public Optional<PurchaseOrderStatusDto> findById(Integer id) {
+        if (id == null) return Optional.empty();
+
+        return Optional.ofNullable(
+                restClient.get()
+                        .uri("/api/purchaseOrderStatus/{id}", id)
+                        .retrieve()
+                        .body(PurchaseOrderStatusDto.class)
+        );
+    }
+    
 }

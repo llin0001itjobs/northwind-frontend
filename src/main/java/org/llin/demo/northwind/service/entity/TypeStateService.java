@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TypeStateService {
@@ -40,7 +41,7 @@ public class TypeStateService {
      */
     public List<TypeStateDto> findAll() {
         EmbeddedTypeStates response = restClient.get()
-                .uri("/typeState")
+                .uri("/api/typeState")
                 .retrieve()
                 .body(EmbeddedTypeStates.class);
 
@@ -51,4 +52,15 @@ public class TypeStateService {
                     : List.of();
     }
  
+    public Optional<TypeStateDto> findById(Integer id) {
+        if (id == null) return Optional.empty();
+
+        return Optional.ofNullable(
+                restClient.get()
+                        .uri("/api/typeState/{id}", id)
+                        .retrieve()
+                        .body(TypeStateDto.class)
+        );
+    }
+        
 }

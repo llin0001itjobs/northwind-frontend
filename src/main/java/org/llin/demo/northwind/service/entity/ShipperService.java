@@ -1,5 +1,6 @@
 package org.llin.demo.northwind.service.entity;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -36,23 +37,12 @@ public class ShipperService {
     // Public methods
     // ==================================================================
 
-    public Optional<ShipperDto> findById(Integer id) {
-        if (id == null) return Optional.empty();
-
-        return Optional.ofNullable(
-                restClient.get()
-                        .uri("/shipper/{id}", id)
-                        .retrieve()
-                        .body(ShipperDto.class)
-        );
-    }
-
     /**
      * GET /Shipper  (returns all Shippers)
      */
     public List<ShipperDto> findAll() {
         EmbeddedShippers response = restClient.get()
-                .uri("/shipper")
+                .uri("/api/shipper")
                 .retrieve()
                 .body(EmbeddedShippers.class);
 
@@ -63,9 +53,20 @@ public class ShipperService {
                     : List.of();
     }
 
+    public Optional<ShipperDto> findById(Integer id) {
+        if (id == null) return Optional.empty();
+
+        return Optional.ofNullable(
+                restClient.get()
+                        .uri("/api/shipper/{id}", id)
+                        .retrieve()
+                        .body(ShipperDto.class)
+        );
+    }
+
     public ShipperDto create(ShipperDto ShipperDto) {
         return restClient.post()
-                .uri("/shipper")
+                .uri("/api/shipper")
                 .body(ShipperDto)
                 .retrieve()
                 .body(ShipperDto.class);
@@ -73,7 +74,7 @@ public class ShipperService {
 
     public ShipperDto update(Integer id, ShipperDto ShipperDto) {
         return restClient.put()
-                .uri("/shipper/{id}", id)
+                .uri("/api/shipper/{id}", id)
                 .body(ShipperDto)
                 .retrieve()
                 .body(ShipperDto.class);
@@ -81,8 +82,46 @@ public class ShipperService {
 
     public void deleteById(Integer id) {
         restClient.delete()
-                .uri("/shipper/{id}", id)
+                .uri("/api/shipper/{id}", id)
                 .retrieve()
                 .toBodilessEntity();
     }
+    
+    public List<ShipperDto> findAllByLastName(String lastName) {
+    	return findByObject(lastName, "lastName", "findAllByLastName");    	
+    }
+    
+    public List<ShipperDto> findByJobTitle(String jobTitle) {
+    	return findByObject(jobTitle, "jobTitle", "findByJobTitle"); 
+    }
+    
+    public List<ShipperDto> findByEmailAddress(String emailAddress) {
+    	return findByObject(emailAddress, "emailAddress", "findByEmailAddress");    	
+    }
+	
+    public List<ShipperDto> findByLastNameContaining(String lastName) {
+    	return findByObject(lastName, "lastName", "findByLastNameContaining");    	
+    }
+    
+    public List<ShipperDto> findByFirstNameContaining(String firstName) {
+    	return findByObject(firstName, "firstName", "findByFirstNameContaining");
+    }
+    
+    public List<ShipperDto> findByJobTitleContaining(String jobTitle) {
+    	return findByObject(jobTitle, "jobTitle", "findByJobTitleContaining");
+    }
+    
+    private List<ShipperDto> findByObject(Object o, String label, String path) {
+		if (o  == null) return Collections.emptyList();
+
+		   return Optional.ofNullable(
+		            restClient.get()
+		                    .uri("/api/shipper/search/" + path + "?" + label + "={" + label + "}", o)
+		                    .retrieve()
+		                    .body(ShipperDto.class)
+		            ) 
+		            .map(Collections::singletonList)
+		            .orElse(Collections.emptyList());
+    }
+	
 }

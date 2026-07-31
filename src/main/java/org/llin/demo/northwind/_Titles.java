@@ -24,8 +24,7 @@ public interface _Titles {
 	public static final String TITLE_SHIPPER = "Shipper";
 	public static final String TITLE_SUPPLIER = "Supplier";
 	public static final String TITLE_TYPE_STATE = "Type State";
-	public static final String TITLE_TYPE = "Types";	
-
-
-
+	public static final String TITLE_TYPE = "Types";
+	public static final String TITLE_USER = "User";
+	
 }

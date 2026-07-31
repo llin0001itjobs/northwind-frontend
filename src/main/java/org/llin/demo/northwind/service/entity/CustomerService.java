@@ -1,12 +1,13 @@
 package org.llin.demo.northwind.service.entity;
 
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+
 import org.llin.demo.northwind.dto.CustomerDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
-
-import java.util.List;
-import java.util.Optional;
 
 @Service
 public class CustomerService {
@@ -41,7 +42,7 @@ public class CustomerService {
 
         return Optional.ofNullable(
                 restClient.get()
-                        .uri("/customer/{id}", id)
+                        .uri("/api/customer/{id}", id)
                         .retrieve()
                         .body(CustomerDto.class)
         );
@@ -52,7 +53,7 @@ public class CustomerService {
      */
     public List<CustomerDto> findAll() {
         EmbeddedCustomers response = restClient.get()
-                .uri("/customer")
+                .uri("/api/customer")
                 .retrieve()
                 .body(EmbeddedCustomers.class);
 
@@ -65,7 +66,7 @@ public class CustomerService {
 
     public CustomerDto create(CustomerDto customerDto) {
         return restClient.post()
-                .uri("/customer")
+                .uri("/api/customer")
                 .body(customerDto)
                 .retrieve()
                 .body(CustomerDto.class);
@@ -73,7 +74,7 @@ public class CustomerService {
 
     public CustomerDto update(Integer id, CustomerDto customerDto) {
         return restClient.put()
-                .uri("/customer/{id}", id)
+                .uri("/api/customer/{id}", id)
                 .body(customerDto)
                 .retrieve()
                 .body(CustomerDto.class);
@@ -81,8 +82,45 @@ public class CustomerService {
 
     public void deleteById(Integer id) {
         restClient.delete()
-                .uri("/customer/{id}", id)
+                .uri("/api/customer/{id}", id)
                 .retrieve()
                 .toBodilessEntity();
+    }
+    
+    public List<CustomerDto> findAllByLastName(String lastName) {
+		return findByObject(lastName,"lastName","findAllByLastName");
+	}
+	
+    public List<CustomerDto> findByJobTitle(String jobTitle) {
+		return findByObject(jobTitle,"jobTitle","findByJobTitle");
+	}
+	
+    public List<CustomerDto> findByEmailAddress(String emailAddress) {
+		return findByObject(emailAddress,"emailAddress","findByEmailAddress"); 
+	}
+	
+    public List<CustomerDto> findByLastNameContaining(String lastName) {        // LIKE '%value%'
+		return findByObject(lastName,"lastName","findByLastNameContaining");
+	}
+	
+    public List<CustomerDto> findByFirstNameContaining(String firstName) {
+		return findByObject(firstName,"firstName","findByFirstNameContaining");
+	}
+	
+    public List<CustomerDto> findByJobTitleContaining(String jobTitle) {
+		return findByObject(jobTitle,"jobTitle","findByJobTitleContaining");
+	}
+	
+    private List<CustomerDto> findByObject(Object o, String label, String path) {
+		if (o  == null) return Collections.emptyList();
+
+		   return Optional.ofNullable(
+		            restClient.get()
+		                    .uri("/api/customer/search/" + path + "?" + label + "={" + label + "}", o)
+		                    .retrieve()
+		                    .body(CustomerDto.class)
+		            ) 
+		            .map(Collections::singletonList)
+		            .orElse(Collections.emptyList());
     }
 }

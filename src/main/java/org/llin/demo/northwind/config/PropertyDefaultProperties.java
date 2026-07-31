@@ -48,11 +48,18 @@ public class PropertyDefaultProperties {
 		@NotNull
 		private Mail mail = new Mail();
 
+		private Security security = new Security();
+				
 		private View view = new View();
 
 		private Integer employeeChunkSize;
 		private String imageBasePath;
 
+		@lombok.Data
+		public static class Security {
+			private String rememberMeSecret;						
+		}
+		
 		@lombok.Data
 		public static class Mail {
 			private Subject subject = new Subject();
@@ -135,16 +142,13 @@ public class PropertyDefaultProperties {
 	public static class Spring {
 		private Profiles profiles = new Profiles();
 		private Main main = new Main(); // spring.main.allow-bean-definition-overriding
-		private Datasource datasource = new Datasource();
-		private Jpa jpa = new Jpa();
 		private Mail mail = new Mail(); // spring.mail
 		private Security security = new Security();
 		private Thymeleaf thymeleaf = new Thymeleaf();
 		private Mvc mvc = new Mvc();
 		private Resources resources = new Resources();
 		private Cloud cloud = new Cloud();
-		private H2 h2 = new H2();
-		
+				
 		@Data
 		public static class Profiles {
 			private String active;
@@ -153,28 +157,6 @@ public class PropertyDefaultProperties {
 		@Data
 		public static class Main {
 			private Boolean allowBeanDefinitionOverriding;
-		}
-
-		@Data
-		public static class Datasource {
-			private String driverClassName;
-			private String url;
-			private String username;
-			private String password;
-		}
-
-		@Data
-		public static class Jpa {
-			private Boolean showSql;
-			private String databasePlatform;
-
-			private Hibernate hibernate = new Hibernate();
-
-			@Data
-			public static class Hibernate {
-				private String ddlAuto;
-				private Map<String, String> properties = new HashMap<>();
-			}
 		}
 
 		@Data
@@ -300,10 +282,6 @@ public class PropertyDefaultProperties {
 
 		}
 		
-		@Data
-		public static class H2 {
-			private String consoleEnabled;
-		}
 	}
 
 	// =============================================================

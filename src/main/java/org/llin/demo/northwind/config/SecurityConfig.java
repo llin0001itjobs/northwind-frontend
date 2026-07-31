@@ -1,6 +1,7 @@
 package org.llin.demo.northwind.config;
 
 import org.llin.demo.northwind.service.CustomOAuth2UserService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -16,6 +17,12 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class SecurityConfig {
 
+    @Value("${app.security.remember-me.secret}")
+    private String rememberMeSecret;
+   
+    public SecurityConfig() {
+    }
+	
 	@Bean
 	public AuthenticationManager authenticationManager(org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration authenticationConfiguration) throws Exception {
 	    return authenticationConfiguration.getAuthenticationManager();
@@ -26,6 +33,8 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
+    // ✂️ RESTTEMPLATE BEAN REMOVED FROM HERE - IT ALREADY LIVES IN WEBCONFIG
+    
     @Bean
     public DaoAuthenticationProvider authenticationProvider(UserDetailsService userDetailsService,
                                                             PasswordEncoder passwordEncoder) {
@@ -38,10 +47,11 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http,
                                                    DaoAuthenticationProvider authenticationProvider,
-                                                   CustomOAuth2UserService oAuth2UserService) throws Exception {
+                                                   CustomOAuth2UserService oAuth2UserService,
+                                                   UserDetailsService userDetailsService) throws Exception {
 
         http.csrf(csrf -> csrf.disable())
-            .authenticationProvider(authenticationProvider)   // ← Explicit wiring (recommended)
+            .authenticationProvider(authenticationProvider)
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/", "/forgotUser","/login", "/register",
                 				 "/requestNewPassword","/requestPassword", 
@@ -60,6 +70,11 @@ public class SecurityConfig {
                 .defaultSuccessUrl("/home", true)
                 .userInfoEndpoint(userInfo -> userInfo.userService(oAuth2UserService))
             )
+            .rememberMe(rememberMe -> rememberMe
+                    .userDetailsService(userDetailsService)
+                    .tokenValiditySeconds(1209600) 
+                    .key(rememberMeSecret)
+             )
             .logout(logout -> logout
                 .logoutUrl("/logout")
                 .logoutSuccessUrl("/")

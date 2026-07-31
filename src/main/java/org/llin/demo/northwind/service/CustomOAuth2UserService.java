@@ -12,10 +12,10 @@ import org.llin.demo.northwind.dto.UserDto;
 import org.llin.demo.northwind.model.entity.CustomOAuth2User;
 import org.llin.demo.northwind.model.entity.Role;
 import org.llin.demo.northwind.model.entity.User;
-import org.llin.demo.northwind.model.entity.util.RoleMapper;
-import org.llin.demo.northwind.model.entity.util.UserMapper;
 import org.llin.demo.northwind.service.entity.RoleService;
 import org.llin.demo.northwind.service.entity.UserService;
+import org.llin.demo.northwind.service.entity.mapper.RoleMapper;
+import org.llin.demo.northwind.service.entity.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
@@ -32,7 +32,13 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
     private UserService userService;
 
     @Autowired
+    private UserMapper userMapper;
+    
+    @Autowired
     private RoleService roleService;
+    
+    @Autowired
+    private RoleMapper roleMapper;
 
     @Override
     public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {
@@ -65,38 +71,38 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
             user.setEmailVerified(true);
             user.setVerificationToken(UUID.randomUUID().toString());
 
-            optRoleDto = roleService.findByRoleType("ROLE_USER");
+            optRoleDto = roleService.findByRoleType("USER");
             if (optRoleDto.isEmpty()) {
                 throw new OAuth2AuthenticationException(
-                    "Default role 'ROLE_USER' not found in database. " +
+                    "Default role 'USER' not found in database. " +
                     "Check that RoleSeeder has run or manually insert the role.");
             }
-            list.add(RoleMapper.toEntity(optRoleDto.get()));
+            list.add(roleMapper.toEntity(optRoleDto.get()));
             user.setRoles(list);
 
             // IMPORTANT FIX: use save/create instead of update on a non-persisted entity
-            UserDto savedDto = userService.create(UserMapper.toDto(user));  
-            user = UserMapper.toEntity(savedDto);
+            UserDto savedDto = userService.create(userMapper.toDto(user));  
+            user = userMapper.toEntity(savedDto);
 
         } else {
-            user = UserMapper.toEntity(optUserDto.get());
+            user = userMapper.toEntity(optUserDto.get());
         }
 
         // Extra safety for legacy users with null/empty roles
         if (user.getRoles() == null || user.getRoles().isEmpty()) {
-            optRoleDto = roleService.findByRoleType("ROLE_USER");
+            optRoleDto = roleService.findByRoleType("USER");
             if (optRoleDto.isPresent()) {
                 list.clear();
-                list.add(RoleMapper.toEntity(optRoleDto.get()));
+                list.add(roleMapper.toEntity(optRoleDto.get()));
                 user.setRoles(list);
-                userService.update(user.getId(), UserMapper.toDto(user));
+                userService.update(user.getId(), userMapper.toDto(user));
             } else {
                 throw new OAuth2AuthenticationException("Default role 'ROLE_USER' not found.");
             }
         }
 
         OAuth2User oUser = new DefaultOAuth2User(
-                Collections.singleton(new SimpleGrantedAuthority("ROLE_USER")),
+                Collections.singleton(new SimpleGrantedAuthority("USER")),
                 attributes,
                 userNameAttribute);
 

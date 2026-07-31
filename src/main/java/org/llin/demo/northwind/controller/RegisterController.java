@@ -6,11 +6,10 @@ import java.util.UUID;
 
 import org.llin.demo.northwind.model.entity.Role;
 import org.llin.demo.northwind.model.entity.User;
-import org.llin.demo.northwind.model.entity.util.UserMapper;
 import org.llin.demo.northwind.service.EmailService;
 import org.llin.demo.northwind.service.entity.UserService;
+import org.llin.demo.northwind.service.entity.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,7 +26,10 @@ public class RegisterController {
 
 	@Autowired
 	private UserService userService;
-		
+	
+	@Autowired
+    private UserMapper userMapper; // Inject the interface
+    
 	@Autowired
 	private EmailService emailService;
 
@@ -90,7 +92,7 @@ public class RegisterController {
 	    user.setEmailVerified(false);
 	    user.setVerificationToken(UUID.randomUUID().toString());
 
-	    userService.create(UserMapper.toDto(user));
+	    userService.create(userMapper.toDto(user));
 
 	    // Send verification email (your existing code)
 	    String verificationLink = "http://localhost:8080/browser-dom/verify?token=" + user.getVerificationToken();

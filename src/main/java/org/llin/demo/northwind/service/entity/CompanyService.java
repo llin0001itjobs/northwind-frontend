@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CompanyService {
@@ -40,7 +41,7 @@ public class CompanyService {
      */
     public List<CompanyDto> findAll() {
         EmbeddedCompanies response = restClient.get()
-                .uri("/company")
+                .uri("/api/company")
                 .retrieve()
                 .body(EmbeddedCompanies.class);
 
@@ -51,5 +52,38 @@ public class CompanyService {
                     : List.of();
     }
 
+    public Optional<CompanyDto> findById(Integer id) {
+        if (id == null) return Optional.empty();
+
+        return Optional.ofNullable(
+                restClient.get()
+                        .uri("/api/company/{id}", id)
+                        .retrieve()
+                        .body(CompanyDto.class)
+        );
+    }
+    
+    public CompanyDto create(CompanyDto companyDto) {
+        return restClient.post()
+                .uri("/api/company/{id}")
+                .body(companyDto)
+                .retrieve()
+                .body(CompanyDto.class);
+    }
+
+    public CompanyDto update(Integer id, CompanyDto companyDto) {
+        return restClient.put()
+                .uri("/api/company/{id}", id)
+                .body(companyDto)
+                .retrieve()
+                .body(CompanyDto.class);
+    }
+
+    public void deleteById(Integer id) {
+        restClient.delete()
+                .uri("/api/company/{id}", id)
+                .retrieve()
+                .toBodilessEntity();
+    }
 
 }

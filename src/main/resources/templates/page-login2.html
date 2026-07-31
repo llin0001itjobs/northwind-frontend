@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org" xmlns:sec="http://thymeleaf.org/extras/spring-security">
+<!-- page-login.html -->
+<head>
+    <meta charset="utf-8">
+    <title>sign in</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <style>
+        .login-card {
+            min-width: 300px;
+            max-width: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column align-items-center justify-content-center vh-100 bg-light">
+
+    <!-- Main Content Container -->
+    <div class="login-card p-3 my-auto">
+        <!-- Status Message -->
+        <div th:if="${message}" class="alert alert-success text-center mb-4">
+            <p th:text="${message}" class="m-0"></p>
+        </div>
+
+        <!-- sign in form -->
+        <form class="form-signin" method="post" th:action="@{/login}" th:object="${user}">
+            <h2 class="form-signin-heading text-center mb-4">sign in</h2>
+            
+            <div class="mb-3">
+                <label for="username" class="visually-hidden">user</label>
+                <input type="text" id="username" th:field="*{username}" class="form-control" placeholder="username" required autofocus>
+            </div>
+            
+            <div class="mb-3">
+                <label for="password" class="visually-hidden">password</label>
+                <input type="password" id="password" th:field="*{password}" class="form-control" placeholder="password" 
+                required pattern="^(?=.*[a-z])(?=.*[a-z])(?=.*\d).{8,}$" 
+                           title="must contain at least 1 uppercase letter, 1 lowercase letter, 1 number, and be 8+ characters long.">
+            </div>
+            
+            <input type="hidden" id="email" th:field="*{email}">
+            <sec:csrfinput />
+            
+            <div class="row g-2">
+                <div class="col">
+                    <button type="submit" class="btn btn-secondary w-100" value="cancel">cancel</button>
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-primary w-100" value="signin">sign in</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Help Links -->
+        <div class="row mt-4">
+            <div class="col text-center">
+                <a th:href="@{/forgotuser}" class="d-block mb-1">forgot user?</a>
+                <a th:href="@{/forgotpassword}" class="d-block">forgot password?</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Fragment -->
+    <div class="container footer-container mt-auto pb-3">
+        <div th:replace="~{fragments/footer :: footer}"></div>
+    </div>
+
+    <!-- Script Fragment -->
+    <div th:replace="~{fragments/script :: div}"></div>
+
+</body>
+</html>
