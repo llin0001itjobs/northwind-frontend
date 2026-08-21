@@ -6,7 +6,7 @@ import org.llin.demo.northwind.dto.OrderDetailStatusDto;
 import org.llin.demo.northwind.model.entity.OrderDetailStatus;
 import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "spring")
+@Mapper(config = _CentralConfig.class, componentModel = "spring")
 public interface OrderDetailStatusMapper {
 	OrderDetailStatusDto toDto(OrderDetailStatus orderDetailStatus);
 	List<OrderDetailStatusDto> toDtoList(List<OrderDetailStatus> orderDetailStatus);

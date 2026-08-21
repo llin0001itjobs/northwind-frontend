@@ -2,8 +2,6 @@ package org.llin.demo.northwind.menu;
 
 import java.io.InputStream;
 
-import jakarta.annotation.PostConstruct;
-
 import org.llin.demo.northwind.config.PropertiesConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
@@ -11,6 +9,8 @@ import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import jakarta.annotation.PostConstruct;
 
 /**
  * Sets up the data structure to display entities

@@ -210,8 +210,20 @@
 							<artifactId>lombok</artifactId>
 							<version>1.18.34</version>
 						</path>
+						<!-- Lombok ↔ MapStruct binding (recommended) -->
+						<path>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok-mapstruct-binding</artifactId>
+							<version>0.2.0</version>
+						</path>
+						<!-- MapStruct processor -->
+						<path>
+							<groupId>org.mapstruct</groupId>
+							<artifactId>mapstruct-processor</artifactId>
+							<version>1.6.3</version>
+						</path>						
 					</annotationProcessorPaths>
-				</configuration>
+				</configuration>				
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

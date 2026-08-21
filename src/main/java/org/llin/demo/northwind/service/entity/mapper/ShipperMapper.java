@@ -6,7 +6,7 @@ import org.llin.demo.northwind.dto.ShipperDto;
 import org.llin.demo.northwind.model.entity.Shipper;
 import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "spring") 
+@Mapper(config = _CentralConfig.class, componentModel = "spring") 
 public interface ShipperMapper {
 	ShipperDto toDto(Shipper shipper);
 	List<ShipperDto> toDtoList(List<Shipper> shippers);

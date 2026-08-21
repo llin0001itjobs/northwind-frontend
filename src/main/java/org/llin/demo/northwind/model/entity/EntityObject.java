@@ -28,7 +28,15 @@ public class EntityObject implements Comparable<Object>, _Values {
 
 	@JsonIgnore
 	@JacksonXmlProperty(isAttribute = true)	
-	int id;
+	protected int id;
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 	
 	@JsonProperty("_links")
 	@JsonDeserialize(using = LinksDeserializer.class)
@@ -80,13 +88,7 @@ public class EntityObject implements Comparable<Object>, _Values {
 		this.abridgedNotes = abridgedNotes;
 	}
 
-	public int getId() {
-		return id;
-	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
 	
 	@Override
 	public String toString() {

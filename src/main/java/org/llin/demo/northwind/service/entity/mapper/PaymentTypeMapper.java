@@ -6,7 +6,7 @@ import org.llin.demo.northwind.dto.PaymentTypeDto;
 import org.llin.demo.northwind.model.entity.PaymentType;
 import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "spring") 
+@Mapper(config = _CentralConfig.class, componentModel = "spring")
 public interface PaymentTypeMapper {
 	PaymentTypeDto toDto(PaymentType paymentType);
 	List<PaymentTypeDto> toDtoList(List<PaymentType> paymentTypes);

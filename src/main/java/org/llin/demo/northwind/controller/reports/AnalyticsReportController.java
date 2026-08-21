@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import lombok.RequiredArgsConstructor;
 
 @Controller
-@RequestMapping("/reports")
+@RequestMapping("/analytics")
 @RequiredArgsConstructor
 public class AnalyticsReportController {
 
@@ -23,7 +23,7 @@ public class AnalyticsReportController {
     private final ProductService productService;
     private final PurchaseOrderDetailService purchaseOrderDetailService;
 
-    @GetMapping("/analytics")
+    @GetMapping("/reports")
     public String showAnalytics(Model model) {
 
         // === Fetch all data server-side ===

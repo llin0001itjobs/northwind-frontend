@@ -6,7 +6,7 @@ import org.llin.demo.northwind.dto.CompanyDto;
 import org.llin.demo.northwind.model.entity.Company;
 import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "spring")
+@Mapper(config = _CentralConfig.class, componentModel = "spring")
 public interface CompanyMapper {
 	CompanyDto toDto(Company company);
 	List<CompanyDto> toDtoList(List<Company> company);

@@ -6,7 +6,7 @@ import org.llin.demo.northwind.dto.InventoryTransactionTypeDto;
 import org.llin.demo.northwind.model.entity.InventoryTransactionType;
 import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "spring") 
+@Mapper(config = _CentralConfig.class, componentModel = "spring") 
 public interface InventoryTransactionTypeMapper {
 	InventoryTransactionTypeDto toDto(InventoryTransactionType inventoryTransactionType);
 	List<InventoryTransactionTypeDto> toDtoList(List<InventoryTransactionType> inventoryTransactionTypes);

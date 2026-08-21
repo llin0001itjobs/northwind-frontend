@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/api/analytics/customer-order")
+@RequestMapping("/analytics/customer-order")
 @RequiredArgsConstructor
 public class CustomerOrderAnalyticsController {
 

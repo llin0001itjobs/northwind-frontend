@@ -11,8 +11,6 @@ import org.springframework.web.servlet.ModelAndView;
 public class _EntityController<T extends EntityObject> implements _Values {
 
 	public static final String ACTIVE_NAV_ITEM = "ACTIVE_NAV_ITEM";
-	
-	private boolean isMenuLoaded = false;
 
 	@Autowired
 	EntityMenuManager entityMapper;
@@ -24,14 +22,11 @@ public class _EntityController<T extends EntityObject> implements _Values {
 	}
 
 	public void loadMenu() {
-		if (!isMenuLoaded) {
-			modelAndView.addObject(ACTIVE_NAV_ITEM, "nav-item-entities");
-			modelAndView.addObject(MENU_FIRST_ORDER, entityMapper.getMappedEntities().getEntities().getFirstOrder());
-			modelAndView.addObject(MENU_SECOND_ORDER, entityMapper.getMappedEntities().getEntities().getSecondOrder());
-			modelAndView.addObject(MENU_THIRD_ORDER, entityMapper.getMappedEntities().getEntities().getThirdOrder());
-			modelAndView.addObject(MENU_TYPE, entityMapper.getMappedEntities().getEntities().getType());
-			isMenuLoaded = true;
-		}
+		modelAndView.addObject(ACTIVE_NAV_ITEM, "nav-item-entities");
+		modelAndView.addObject(MENU_FIRST_ORDER, entityMapper.getMappedEntities().getEntities().getFirstOrder());
+		modelAndView.addObject(MENU_SECOND_ORDER, entityMapper.getMappedEntities().getEntities().getSecondOrder());
+		modelAndView.addObject(MENU_THIRD_ORDER, entityMapper.getMappedEntities().getEntities().getThirdOrder());
+		modelAndView.addObject(MENU_TYPE, entityMapper.getMappedEntities().getEntities().getType());
 	}
 
 }

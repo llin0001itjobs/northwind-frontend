@@ -6,7 +6,7 @@ import org.llin.demo.northwind.dto.PurchaseOrderStatusDto;
 import org.llin.demo.northwind.model.entity.PurchaseOrderStatus;
 import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "spring") 
+@Mapper(config = _CentralConfig.class, componentModel = "spring") 
 public interface PurchaseOrderStatusMapper {
 	PurchaseOrderStatusDto toDto(PurchaseOrderStatus purchaseOrderStatus);
 	List<PurchaseOrderStatusDto> toDtoList(List<PurchaseOrderStatus> purchaseOrderStatuss);

@@ -2,9 +2,9 @@ package org.llin.demo.northwind.config;
 
 import java.time.OffsetDateTime;
 
+import com.azure.core.credential.AccessToken;
 import com.azure.core.credential.TokenCredential;
 import com.azure.core.credential.TokenRequestContext;
-import com.azure.core.credential.AccessToken;          
 
 import reactor.core.publisher.Mono;
 

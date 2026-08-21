@@ -6,10 +6,16 @@ import org.llin.demo.northwind.dto.InventoryTransactionDto;
 import org.llin.demo.northwind.model.entity.InventoryTransaction;
 import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "spring")
+@Mapper(		config = _CentralConfig.class, 
+		componentModel = "spring",
+				uses = {
+						CustomerOrderMapper.class,
+						ProductMapper.class,      
+						InventoryTransactionTypeMapper.class,
+						PurchaseOrderMapper.class
+				    })
 public interface InventoryTransactionMapper {
 	InventoryTransactionDto toDto(InventoryTransaction inventoryTransaction);
 	List<InventoryTransactionDto> toDtoList(List<InventoryTransaction> inventoryTransaction);
 	InventoryTransaction toEntity(InventoryTransactionDto inventoryTransactionDto);
 }
-

@@ -6,7 +6,7 @@ import org.llin.demo.northwind.dto.CustomerOrderDto;
 import org.llin.demo.northwind.model.entity.CustomerOrder;
 import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "spring")
+@Mapper(config = _CentralConfig.class, componentModel = "spring")
 public interface CustomerOrderMapper {
 	CustomerOrderDto toDto(CustomerOrder customerOrder);
 	List<CustomerOrderDto> toDtoList(List<CustomerOrder> customerOrder);

@@ -9,12 +9,13 @@ import org.llin.demo.northwind.dto.UserDto;
 import org.llin.demo.northwind.model.entity.User;
 import org.mapstruct.Mapper;
 
-// Optional: if you have a RoleMapper, import it too
-// import org.llin.demo.northwind.model.mapper.RoleMapper;
-
-@Mapper(componentModel = "spring") 
+@Mapper(	config = _CentralConfig.class, 
+	componentModel = "spring", 
+			  uses = {RoleMapper.class}) 
 public interface UserMapper {
-	UserDto toDto(User user);
+	
+	UserDto toDto(User user);   
 	List<UserDto> toDtoList(List<User> users);	
     User toEntity(UserDto userDto);
+    
 }
