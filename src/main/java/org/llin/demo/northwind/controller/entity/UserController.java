@@ -32,7 +32,7 @@ public class UserController<T extends EntityObject> extends _EntityController<T>
 		return createDefaultModelAndView();
 	}
 
-	@GetMapping("/{name}")
+	@GetMapping("/findByUsername/{name}")
 	public ModelAndView findByUsername(@PathVariable String name) {
 		ModelAndView mav = createDefaultModelAndView();
 		Optional<UserDto> opt = service.findByUsername(name);
@@ -47,7 +47,7 @@ public class UserController<T extends EntityObject> extends _EntityController<T>
 		return mav;
 	}
 
-	@GetMapping("/{email}")
+	@GetMapping("/findByEmail/{email}")
 	public ModelAndView findByEmail(@PathVariable String email) {
 		ModelAndView mav = createDefaultModelAndView();
 		Optional<UserDto> opt = service.findByEmail(email);
@@ -62,7 +62,7 @@ public class UserController<T extends EntityObject> extends _EntityController<T>
 		return mav;
 	}
 
-	@GetMapping("/{email}")
+	@GetMapping("/findByVerificationToken/{token}")
 	public ModelAndView findByVerificationToken(@PathVariable String token) {
 		ModelAndView mav = createDefaultModelAndView();
 		Optional<UserDto> opt = service.findByVerificationToken(token);
