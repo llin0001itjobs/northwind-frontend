@@ -95,7 +95,7 @@ public class RegisterController {
 	    userService.create(userMapper.toDto(user));
 
 	    // Send verification email (your existing code)
-	    String verificationLink = "http://localhost:8080/browser-dom/verify?token=" + user.getVerificationToken();
+	    String verificationLink = "http://localhost:8081/northwind/verify?token=" + user.getVerificationToken();
 	    String verificationText = "Please verify your email by clicking this link: " + verificationLink;
 
 	    try {
