@@ -1,4 +1,4 @@
-<!doctype html>
+!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
@@ -38,7 +38,7 @@
 
 <body class="custom-bg container-fluid vh-100">
 
-	<div th:replace="fragments/navbar :: nav"></div>
+	<div th:replace="~{fragments/navbar :: nav}"></div>
 
 	<div class="container overflow-auto border mb-2 font-data">
 		<div class="lead">Lorem ipsum dolor sit amet, consectetur
@@ -163,9 +163,9 @@
 	</div>
 
 	<div class="container footer-container">
-		<div th:replace="fragments/footer :: footer"></div>
+		<div th:replace="~{fragments/footer :: footer}"></div>
 	</div>
-	<div th:replace="fragments/script :: div"></div>
+	<div th:replace="~{fragments/script :: div}"></div>
 </body>
 
 </html>
