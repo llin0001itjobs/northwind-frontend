@@ -41,7 +41,7 @@ public class CompanyService {
      */
     public List<CompanyDto> findAll() {
         EmbeddedCompanies response = restClient.get()
-                .uri("/api/company")
+                .uri("company")
                 .retrieve()
                 .body(EmbeddedCompanies.class);
 
@@ -57,7 +57,7 @@ public class CompanyService {
 
         return Optional.ofNullable(
                 restClient.get()
-                        .uri("/api/company/{id}", id)
+                        .uri("company/{id}", id)
                         .retrieve()
                         .body(CompanyDto.class)
         );
@@ -65,7 +65,7 @@ public class CompanyService {
     
     public CompanyDto create(CompanyDto companyDto) {
         return restClient.post()
-                .uri("/api/company/{id}")
+                .uri("company/{id}")
                 .body(companyDto)
                 .retrieve()
                 .body(CompanyDto.class);
@@ -73,7 +73,7 @@ public class CompanyService {
 
     public CompanyDto update(Integer id, CompanyDto companyDto) {
         return restClient.put()
-                .uri("/api/company/{id}", id)
+                .uri("company/{id}", id)
                 .body(companyDto)
                 .retrieve()
                 .body(CompanyDto.class);
@@ -81,7 +81,7 @@ public class CompanyService {
 
     public void deleteById(Integer id) {
         restClient.delete()
-                .uri("/api/company/{id}", id)
+                .uri("company/{id}", id)
                 .retrieve()
                 .toBodilessEntity();
     }

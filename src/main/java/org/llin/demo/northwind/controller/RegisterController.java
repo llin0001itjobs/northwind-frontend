@@ -61,10 +61,10 @@ public class RegisterController {
 
 	    // === NEW: Duplicate username / email check ===
 	    if (!result.hasErrors()) {   // only check if basic validation passed
-	        if (userService.findByUsername(user.getUsername()).isPresent()) {
+	        if (!userService.findByUsername(user.getUsername()).isEmpty()) {
 	            result.rejectValue("username", "username.exists", "Username is already taken");
 	        }
-	        if (userService.findByEmail(user.getEmail()).isPresent()) {
+	        if (!userService.findByEmail(user.getEmail()).isEmpty()) {
 	            result.rejectValue("email", "email.exists", "Email is already registered");
 	        }
 	    }

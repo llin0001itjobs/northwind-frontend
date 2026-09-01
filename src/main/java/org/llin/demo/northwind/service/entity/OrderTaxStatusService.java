@@ -38,7 +38,7 @@ public class OrderTaxStatusService {
 
     public List<OrderTaxStatusDto> findAll() {
         EmbeddedTypeStates response = restClient.get()
-                .uri("/api/orderTaxStatus")
+                .uri("orderTaxStatus")
                 .retrieve()
                 .body(EmbeddedTypeStates.class);
 
@@ -54,7 +54,7 @@ public class OrderTaxStatusService {
 
         return Optional.ofNullable(
                 restClient.get()
-                        .uri("/api/orderTaxStatus/{id}", id)
+                        .uri("orderTaxStatus/{id}", id)
                         .retrieve()
                         .body(OrderTaxStatusDto.class)
         );

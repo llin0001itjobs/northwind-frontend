@@ -41,7 +41,7 @@ public class TypeStateService {
      */
     public List<TypeStateDto> findAll() {
         EmbeddedTypeStates response = restClient.get()
-                .uri("/api/typeState")
+                .uri("typeState")
                 .retrieve()
                 .body(EmbeddedTypeStates.class);
 
@@ -57,7 +57,7 @@ public class TypeStateService {
 
         return Optional.ofNullable(
                 restClient.get()
-                        .uri("/api/typeState/{id}", id)
+                        .uri("typeState/{id}", id)
                         .retrieve()
                         .body(TypeStateDto.class)
         );

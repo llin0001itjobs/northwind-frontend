@@ -6,7 +6,9 @@ import java.util.Optional;
 
 import org.llin.demo.northwind.dto.CustomerDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClient;
 
 @Service
@@ -42,7 +44,7 @@ public class CustomerService {
 
         return Optional.ofNullable(
                 restClient.get()
-                        .uri("/api/customer/{id}", id)
+                        .uri("customer/{id}", id)
                         .retrieve()
                         .body(CustomerDto.class)
         );
@@ -53,7 +55,7 @@ public class CustomerService {
      */
     public List<CustomerDto> findAll() {
         EmbeddedCustomers response = restClient.get()
-                .uri("/api/customer")
+                .uri("customer")
                 .retrieve()
                 .body(EmbeddedCustomers.class);
 
@@ -66,7 +68,7 @@ public class CustomerService {
 
     public CustomerDto create(CustomerDto customerDto) {
         return restClient.post()
-                .uri("/api/customer")
+                .uri("customer")
                 .body(customerDto)
                 .retrieve()
                 .body(CustomerDto.class);
@@ -74,7 +76,7 @@ public class CustomerService {
 
     public CustomerDto update(Integer id, CustomerDto customerDto) {
         return restClient.put()
-                .uri("/api/customer/{id}", id)
+                .uri("customer/{id}", id)
                 .body(customerDto)
                 .retrieve()
                 .body(CustomerDto.class);
@@ -82,7 +84,7 @@ public class CustomerService {
 
     public void deleteById(Integer id) {
         restClient.delete()
-                .uri("/api/customer/{id}", id)
+                .uri("customer/{id}", id)
                 .retrieve()
                 .toBodilessEntity();
     }
@@ -111,16 +113,20 @@ public class CustomerService {
 		return findByObject(jobTitle,"jobTitle","findByJobTitleContaining");
 	}
 	
-    private List<CustomerDto> findByObject(Object o, String label, String path) {
-		if (o  == null) return Collections.emptyList();
+	private List<CustomerDto> findByObject(Object value, String paramName, String searchMethod) {
+		if (value == null) {
+			return Collections.emptyList();
+		}
 
-		   return Optional.ofNullable(
-		            restClient.get()
-		                    .uri("/api/customer/search/" + path + "?" + label + "={" + label + "}", o)
-		                    .retrieve()
-		                    .body(CustomerDto.class)
-		            ) 
-		            .map(Collections::singletonList)
-		            .orElse(Collections.emptyList());
-    }
+		try {
+			return restClient.get().uri(uriBuilder -> uriBuilder
+					.path("customer/search/{method}")
+					.queryParam(paramName, value)
+					.build(searchMethod)).retrieve()
+					.body(new ParameterizedTypeReference<List<CustomerDto>>() {
+					});
+		} catch (HttpClientErrorException.NotFound e) {
+			return Collections.emptyList();
+		}
+	}
 }

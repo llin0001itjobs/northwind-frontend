@@ -6,7 +6,9 @@ import java.util.Optional;
 
 import org.llin.demo.northwind.dto.SupplierDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClient;
 
 @Service
@@ -29,7 +31,7 @@ public class SupplierService {
     }
 
     private static class SupplierList {
-        @com.fasterxml.jackson.annotation.JsonProperty("upplier")
+        @com.fasterxml.jackson.annotation.JsonProperty("supplier")
         public List<SupplierDto> Supplier;
     }
 
@@ -41,7 +43,7 @@ public class SupplierService {
      */
     public List<SupplierDto> findAll() {
         EmbeddedSuppliers response = restClient.get()
-                .uri("/api/supplier")
+                .uri("supplier")
                 .retrieve()
                 .body(EmbeddedSuppliers.class);
 
@@ -57,7 +59,7 @@ public class SupplierService {
 
         return Optional.ofNullable(
                 restClient.get()
-                        .uri("/api/supplier/{id}", id)
+                        .uri("supplier/{id}", id)
                         .retrieve()
                         .body(SupplierDto.class)
         );
@@ -65,7 +67,7 @@ public class SupplierService {
 
     public SupplierDto create(SupplierDto SupplierDto) {
         return restClient.post()
-                .uri("/api/supplier")
+                .uri("supplier")
                 .body(SupplierDto)
                 .retrieve()
                 .body(SupplierDto.class);
@@ -73,7 +75,7 @@ public class SupplierService {
 
     public SupplierDto update(Integer id, SupplierDto SupplierDto) {
         return restClient.put()
-                .uri("/api/supplier/{id}", id)
+                .uri("supplier/{id}", id)
                 .body(SupplierDto)
                 .retrieve()
                 .body(SupplierDto.class);
@@ -81,7 +83,7 @@ public class SupplierService {
 
     public void deleteById(Integer id) {
         restClient.delete()
-                .uri("/api/supplier/{id}", id)
+                .uri("supplier/{id}", id)
                 .retrieve()
                 .toBodilessEntity();
     }
@@ -109,18 +111,23 @@ public class SupplierService {
     public List<SupplierDto> findByJobTitleContaining(String jobTitle) {
     	return findByObject(jobTitle, "jobTitle", "findByJobTitleContaining");
     }
-    
-    private List<SupplierDto> findByObject(Object o, String label, String path) {
-		if (o  == null) return Collections.emptyList();
+        
+    private List<SupplierDto> findByObject(Object value, String paramName, String searchMethod) {
+        if (value == null) {
+            return Collections.emptyList();
+        }
 
-		   return Optional.ofNullable(
-		            restClient.get()
-		                    .uri("/api/supplier/search/" + path + "?" + label + "={" + label + "}", o)
-		                    .retrieve()
-		                    .body(SupplierDto.class)
-		            ) 
-		            .map(Collections::singletonList)
-		            .orElse(Collections.emptyList());
+        try {
+            return restClient.get()
+                    .uri(uriBuilder -> uriBuilder
+                            .path("supplier/search/{method}")
+                            .queryParam(paramName, value)
+                            .build(searchMethod))
+                    .retrieve()
+                    .body(new ParameterizedTypeReference<List<SupplierDto>>() {});
+        } catch (HttpClientErrorException.NotFound e) {
+            return Collections.emptyList();
+        }
     }
     
 }

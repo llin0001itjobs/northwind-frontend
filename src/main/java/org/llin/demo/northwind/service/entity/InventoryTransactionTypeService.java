@@ -37,11 +37,11 @@ public class InventoryTransactionTypeService {
     // ==================================================================
 
     /**
-     * GET /InventoryTransactionType  (returns all InventoryTransactionTypes)
+     * GET /inventoryTransactionType  (returns all InventoryTransactionTypes)
      */
     public List<InventoryTransactionTypeDto> findAll() {
         EmbeddedInventoryTransactionTypes response = restClient.get()
-                .uri("/api/inventoryTransactionType")
+                .uri("inventoryTransactionType")
                 .retrieve()
                 .body(EmbeddedInventoryTransactionTypes.class);
 
@@ -57,7 +57,7 @@ public class InventoryTransactionTypeService {
 
         return Optional.ofNullable(
                 restClient.get()
-                        .uri("/api/inventoryTransactionType/{id}", id)
+                        .uri("inventoryTransactionType/{id}", id)
                         .retrieve()
                         .body(InventoryTransactionTypeDto.class)
         );

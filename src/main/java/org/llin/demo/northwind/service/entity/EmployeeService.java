@@ -6,7 +6,9 @@ import java.util.Optional;
 
 import org.llin.demo.northwind.dto.EmployeeDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClient;
 
 @Service
@@ -42,18 +44,18 @@ public class EmployeeService {
 
         return Optional.ofNullable(
                 restClient.get()
-                        .uri("/api/employee/{id}", id)
+                        .uri("employee/{id}", id)
                         .retrieve()
                         .body(EmployeeDto.class)
         );
     }
 
     /**
-     * GET /Employee  (returns all Employees)
+     * GET /employee  (returns all Employees)
      */
     public List<EmployeeDto> findAll() {
         EmbeddedEmployees response = restClient.get()
-                .uri("/api/employee")
+                .uri("employee")
                 .retrieve()
                 .body(EmbeddedEmployees.class);
 
@@ -66,7 +68,7 @@ public class EmployeeService {
 
     public EmployeeDto create(EmployeeDto EmployeeDto) {
         return restClient.post()
-                .uri("/api/employee")
+                .uri("employee")
                 .body(EmployeeDto)
                 .retrieve()
                 .body(EmployeeDto.class);
@@ -74,7 +76,7 @@ public class EmployeeService {
 
     public EmployeeDto update(Integer id, EmployeeDto EmployeeDto) {
         return restClient.put()
-                .uri("/api/employee/{id}", id)
+                .uri("employee/{id}", id)
                 .body(EmployeeDto)
                 .retrieve()
                 .body(EmployeeDto.class);
@@ -82,7 +84,7 @@ public class EmployeeService {
 
     public void deleteById(Integer id) {
         restClient.delete()
-                .uri("/api/employee/{id}", id)
+                .uri("employee/{id}", id)
                 .retrieve()
                 .toBodilessEntity();
     }
@@ -111,17 +113,21 @@ public class EmployeeService {
 		return findByObject(jobTitle,"jobTitle","findByJobTitleContaining");
 	}
 	
-    private List<EmployeeDto> findByObject(Object o, String label, String path) {
-		if (o  == null) return Collections.emptyList();
+	private List<EmployeeDto> findByObject(Object value, String paramName, String searchMethod) {
+		if (value == null) {
+			return Collections.emptyList();
+		}
 
-		   return Optional.ofNullable(
-		            restClient.get()
-		                    .uri("/api/employee/search/" + path + "?" + label + "={" + label + "}", o)
-		                    .retrieve()
-		                    .body(EmployeeDto.class)
-		            ) 
-		            .map(Collections::singletonList)
-		            .orElse(Collections.emptyList());
-    }
+		try {
+			return restClient.get().uri(uriBuilder -> uriBuilder
+					.path("employee/search/{method}")
+					.queryParam(paramName, value)
+					.build(searchMethod)).retrieve()
+					.body(new ParameterizedTypeReference<List<EmployeeDto>>() {
+					});
+		} catch (HttpClientErrorException.NotFound e) {
+			return Collections.emptyList();
+		}
+	}
     
 }

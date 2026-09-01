@@ -10,7 +10,9 @@ import org.llin.demo.northwind.dto.LabelDoubleValueLongDto;
 import org.llin.demo.northwind.dto.LabelValueLongDto;
 import org.llin.demo.northwind.dto.PurchaseOrderDetailDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClient;
 
 @Service
@@ -67,14 +69,14 @@ public class PurchaseOrderDetailService {
 			return Optional.empty();
 
 		return Optional.ofNullable(
-				restClient.get().uri("/api/purchaseOrderDetail/{id}", id).retrieve().body(PurchaseOrderDetailDto.class));
+				restClient.get().uri("purchaseOrderDetail/{id}", id).retrieve().body(PurchaseOrderDetailDto.class));
 	}
 
 	/**
-	 * GET /api/purchaseOrderDetail (returns all PurchaseOrderDetails)
+	 * GET purchaseOrderDetail (returns all PurchaseOrderDetails)
 	 */
 	public List<PurchaseOrderDetailDto> findAll() {
-		EmbeddedPurchaseOrderDetails response = restClient.get().uri("/api/purchaseOrderDetail").retrieve()
+		EmbeddedPurchaseOrderDetails response = restClient.get().uri("purchaseOrderDetail").retrieve()
 				.body(EmbeddedPurchaseOrderDetails.class);
 
 		return response != null && response.PurchaseOrderDetails != null
@@ -84,22 +86,22 @@ public class PurchaseOrderDetailService {
 	}
 
 	public PurchaseOrderDetailDto create(PurchaseOrderDetailDto PurchaseOrderDetailDto) {
-		return restClient.post().uri("/api/purchaseOrderDetail").body(PurchaseOrderDetailDto).retrieve()
+		return restClient.post().uri("purchaseOrderDetail").body(PurchaseOrderDetailDto).retrieve()
 				.body(PurchaseOrderDetailDto.class);
 	}
 
 	public PurchaseOrderDetailDto update(Integer id, PurchaseOrderDetailDto PurchaseOrderDetailDto) {
-		return restClient.put().uri("/api/purchaseOrderDetail/{id}", id).body(PurchaseOrderDetailDto).retrieve()
+		return restClient.put().uri("purchaseOrderDetail/{id}", id).body(PurchaseOrderDetailDto).retrieve()
 				.body(PurchaseOrderDetailDto.class);
 	}
 
 	public void deleteById(Integer id) {
-		restClient.delete().uri("/api/purchaseOrderDetail/{id}", id).retrieve().toBodilessEntity();
+		restClient.delete().uri("purchaseOrderDetail/{id}", id).retrieve().toBodilessEntity();
 	}
 	
 	public List<LabelValueLongDto> shippingFeePerMonth() {
 		EmbeddedLabelValueLongs response = restClient.get()
-    			.uri("/api/purchaseOrderDetail/shipping-fee-per-month").retrieve()
+    			.uri("purchaseOrderDetail/shipping-fee-per-month").retrieve()
     			.body(EmbeddedLabelValueLongs.class);
     	return response != null && response.LabelValueLongs != null && response.LabelValueLongs.LabelValueLong != null
 				? response.LabelValueLongs.LabelValueLong
@@ -108,7 +110,7 @@ public class PurchaseOrderDetailService {
 	
 	public List<LabelDoubleValueLongDto> quantityPerUnitCost() {
 		EmbeddedLabelDoubleValueLongs response = restClient.get()
-    			.uri("/api/purchaseOrderDetail/quantity-per-unit-cost").retrieve()
+    			.uri("purchaseOrderDetail/quantity-per-unit-cost").retrieve()
     			.body(EmbeddedLabelDoubleValueLongs.class);
     	return response != null && response.LabelDoubleValueLongs != null && response.LabelDoubleValueLongs.LabelDoubleValueLong != null
 				? response.LabelDoubleValueLongs.LabelDoubleValueLong
@@ -143,28 +145,37 @@ public class PurchaseOrderDetailService {
     	return findByObject(postedToInventory, "postedToInventory", "findByPostedToInventory");
     }
     
-    private List<PurchaseOrderDetailDto> findByObject(Object o, String label, String path) {
-		if (o  == null) return Collections.emptyList();
+    private List<PurchaseOrderDetailDto> findByObject(Object value, String paramName, String searchMethod) {
+        if (value == null) {
+            return Collections.emptyList();
+        }
 
-		   return Optional.ofNullable(
-		            restClient.get()
-		                    .uri("/api/purchaseOrderDetail/search/" + path + "?" + label + "={" + label + "}", o)
-		                    .retrieve()
-		                    .body(PurchaseOrderDetailDto.class)
-		            ) 
-		            .map(Collections::singletonList)
-		            .orElse(Collections.emptyList());
+        try {
+            return restClient.get()
+                    .uri(uriBuilder -> uriBuilder
+                            .path("purchaseOrderDetail/search/{method}")
+                            .queryParam(paramName, value)
+                            .build(searchMethod))
+                    .retrieve()
+                    .body(new ParameterizedTypeReference<List<PurchaseOrderDetailDto>>() {});
+        } catch (HttpClientErrorException.NotFound e) {
+            return Collections.emptyList();
+        }
     }
     
     private List<PurchaseOrderDetailDto> findWithTwoParameters(Object param1, String paramName1, 
 			 											 	   Object param2, String paramName2, String path) {
+        try {
 			return restClient.get()
-			.uri(uriBuilder -> uriBuilder.path("/api/purchaseOrderDetail/search/" + path)
+			.uri(uriBuilder -> uriBuilder.path("purchaseOrderDetail/search/" + path)
 			.queryParam(paramName1, param1)
 			.queryParam(paramName2, param2)
 			.build())
 			.retrieve()
-			.body(new org.springframework.core.ParameterizedTypeReference<List<PurchaseOrderDetailDto>>() {});    	
+			.body(new ParameterizedTypeReference<List<PurchaseOrderDetailDto>>() {});
+        } catch (HttpClientErrorException.NotFound e) {
+            return Collections.emptyList();
+        }			
     }
     
 }

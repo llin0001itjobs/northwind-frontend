@@ -41,7 +41,7 @@ public class OrderDetailStatusService {
      */
     public List<OrderDetailStatusDto> findAll() {
         EmbeddedOrderDetailStatuses response = restClient.get()
-                .uri("/api/orderDetailStatus")
+                .uri("orderDetailStatus")
                 .retrieve()
                 .body(EmbeddedOrderDetailStatuses.class);
 
@@ -57,7 +57,7 @@ public class OrderDetailStatusService {
 
         return Optional.ofNullable(
                 restClient.get()
-                        .uri("/api/orderDetailStatus/{id}", id)
+                        .uri("orderDetailStatus/{id}", id)
                         .retrieve()
                         .body(OrderDetailStatusDto.class)
         );

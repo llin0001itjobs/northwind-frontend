@@ -8,7 +8,9 @@ import java.util.Optional;
 
 import org.llin.demo.northwind.dto.PurchaseOrderDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClient;
 
 @Service
@@ -43,14 +45,14 @@ public class PurchaseOrderService {
 			return Optional.empty();
 
 		return Optional
-				.ofNullable(restClient.get().uri("/api/purchaseOrder/{id}", id).retrieve().body(PurchaseOrderDto.class));
+				.ofNullable(restClient.get().uri("purchaseOrder/{id}", id).retrieve().body(PurchaseOrderDto.class));
 	}
 
 	/**
 	 * GET /purchaseOrder (returns all PurchaseOrders)
 	 */
 	public List<PurchaseOrderDto> findAll() {
-		EmbeddedPurchaseOrders response = restClient.get().uri("/api/purchaseOrder").retrieve()
+		EmbeddedPurchaseOrders response = restClient.get().uri("purchaseOrder").retrieve()
 				.body(EmbeddedPurchaseOrders.class);
 
 		return response != null && response.PurchaseOrders != null && response.PurchaseOrders.PurchaseOrder != null
@@ -59,16 +61,16 @@ public class PurchaseOrderService {
 	}
 
 	public PurchaseOrderDto create(PurchaseOrderDto PurchaseOrderDto) {
-		return restClient.post().uri("/api/purchaseOrder").body(PurchaseOrderDto).retrieve().body(PurchaseOrderDto.class);
+		return restClient.post().uri("purchaseOrder").body(PurchaseOrderDto).retrieve().body(PurchaseOrderDto.class);
 	}
 
 	public PurchaseOrderDto update(Integer id, PurchaseOrderDto PurchaseOrderDto) {
-		return restClient.put().uri("/api/purchaseOrder/{id}", id).body(PurchaseOrderDto).retrieve()
+		return restClient.put().uri("purchaseOrder/{id}", id).body(PurchaseOrderDto).retrieve()
 				.body(PurchaseOrderDto.class);
 	}
 
 	public void deleteById(Integer id) {
-		restClient.delete().uri("/api/purchaseOrder/{id}", id).retrieve().toBodilessEntity();
+		restClient.delete().uri("purchaseOrder/{id}", id).retrieve().toBodilessEntity();
 	}
 	
 	public List<PurchaseOrderDto> findBySupplierId(Integer id) {
@@ -125,28 +127,37 @@ public class PurchaseOrderService {
 		return findByObject(notes, "notes", "findByNotesContaining");
 	}
 	
-    private List<PurchaseOrderDto> findByObject(Object o, String label, String path) {
-		if (o  == null) return Collections.emptyList();
+    private List<PurchaseOrderDto> findByObject(Object value, String paramName, String searchMethod) {
+        if (value == null) {
+            return Collections.emptyList();
+        }
 
-		   return Optional.ofNullable(
-		            restClient.get()
-		                    .uri("/api/purchaseOrder/search/" + path + "?" + label + "={" + label + "}", o)
-		                    .retrieve()
-		                    .body(PurchaseOrderDto.class)
-		            ) 
-		            .map(Collections::singletonList)
-		            .orElse(Collections.emptyList());
+        try {
+            return restClient.get()
+                    .uri(uriBuilder -> uriBuilder
+                            .path("purchaseOrder/search/{method}")
+                            .queryParam(paramName, value)
+                            .build(searchMethod))
+                    .retrieve()
+                    .body(new ParameterizedTypeReference<List<PurchaseOrderDto>>() {});
+        } catch (HttpClientErrorException.NotFound e) {
+            return Collections.emptyList();
+        }
     }
     
     private List<PurchaseOrderDto> findWithTwoParameters(Object param1, String paramName1, 
-			 											 	   Object param2, String paramName2, String path) {
+			 											 Object param2, String paramName2, String path) {
+        try {    	
 			return restClient.get()
-			.uri(uriBuilder -> uriBuilder.path("/api/purchaseOrder/search/" + path)
+			.uri(uriBuilder -> uriBuilder.path("purchaseOrder/search/" + path)
 			.queryParam(paramName1, param1)
 			.queryParam(paramName2, param2)
 			.build())
 			.retrieve()
-			.body(new org.springframework.core.ParameterizedTypeReference<List<PurchaseOrderDto>>() {});    	
+			.body(new ParameterizedTypeReference<List<PurchaseOrderDto>>() {});
+        } catch (HttpClientErrorException.NotFound e) {
+            return Collections.emptyList();
+        }			
     }	
     
 }

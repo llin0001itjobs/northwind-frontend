@@ -8,7 +8,9 @@ import java.util.Optional;
 
 import org.llin.demo.northwind.dto.OrderDetailDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClient;
 
 @Service
@@ -44,18 +46,18 @@ public class OrderDetailService {
 
         return Optional.ofNullable(
                 restClient.get()
-                        .uri("/api/orderDetail/{id}", id)
+                        .uri("orderDetail/{id}", id)
                         .retrieve()
                         .body(OrderDetailDto.class)
         );
     }
 
     /**
-     * GET /OrderDetail  (returns all OrderDetails)
+     * GET /orderDetail  (returns all OrderDetails)
      */
     public List<OrderDetailDto> findAll() {
         EmbeddedOrderDetails response = restClient.get()
-                .uri("/api/orderDetail")
+                .uri("orderDetail")
                 .retrieve()
                 .body(EmbeddedOrderDetails.class);
 
@@ -68,7 +70,7 @@ public class OrderDetailService {
 
     public OrderDetailDto create(OrderDetailDto OrderDetailDto) {
         return restClient.post()
-                .uri("/api/orderDetail")
+                .uri("orderDetail")
                 .body(OrderDetailDto)
                 .retrieve()
                 .body(OrderDetailDto.class);
@@ -76,7 +78,7 @@ public class OrderDetailService {
 
     public OrderDetailDto update(Integer id, OrderDetailDto OrderDetailDto) {
         return restClient.put()
-                .uri("/api/orderDetail/{id}", id)
+                .uri("orderDetail/{id}", id)
                 .body(OrderDetailDto)
                 .retrieve()
                 .body(OrderDetailDto.class);
@@ -84,7 +86,7 @@ public class OrderDetailService {
 
     public void deleteById(Integer id) {
         restClient.delete()
-                .uri("/api/orderDetail/{id}", id)
+                .uri("orderDetail/{id}", id)
                 .retrieve()
                 .toBodilessEntity();
     }
@@ -126,28 +128,37 @@ public class OrderDetailService {
     	return findWithTwoParameters(start, "start", end, "end", "findByDateAllocatedBetweenOrderByDateAllocatedAsc");
     }
     
-    private List<OrderDetailDto> findByObject(Object o, String label, String path) {
-		if (o  == null) return Collections.emptyList();
+	private List<OrderDetailDto> findByObject(Object value, String paramName, String searchMethod) {
+		if (value == null) {
+			return Collections.emptyList();
+		}
 
-		   return Optional.ofNullable(
-		            restClient.get()
-		                    .uri("/api/orderDetail/search/" + path + "?" + label + "={" + label + "}", o)
-		                    .retrieve()
-		                    .body(OrderDetailDto.class)
-		            ) 
-		            .map(Collections::singletonList)
-		            .orElse(Collections.emptyList());
-    }
+		try {
+			return restClient.get().uri(uriBuilder -> uriBuilder
+					.path("orderDetail/search/{method}")
+					.queryParam(paramName, value)
+					.build(searchMethod)).retrieve()
+					.body(new ParameterizedTypeReference<List<OrderDetailDto>>() {
+					});
+		} catch (HttpClientErrorException.NotFound e) {
+			return Collections.emptyList();
+		}
+	}
     
-    private List<OrderDetailDto> findWithTwoParameters(Object param1, String paramName1, 
-			 											 Object param2, String paramName2, String path) {
+	private List<OrderDetailDto> findWithTwoParameters(Object param1, String paramName1, 
+													   Object param2, String paramName2,
+													   				  String path) {
+		try {
 			return restClient.get()
-			.uri(uriBuilder -> uriBuilder.path("/api/orderDetail/search/" + path)
-			.queryParam(paramName1, param1)
-			.queryParam(paramName2, param2)
-			.build())
-			.retrieve()
-			.body(new org.springframework.core.ParameterizedTypeReference<List<OrderDetailDto>>() {});    	
-    }        
+					.uri(uriBuilder -> uriBuilder
+							.path("orderDetail/search/" + path)
+							.queryParam(paramName1, param1)
+							.queryParam(paramName2, param2).build())
+					.retrieve().body(new ParameterizedTypeReference<List<OrderDetailDto>>() {
+					});
+		} catch (HttpClientErrorException.NotFound e) {
+			return Collections.emptyList();
+		}
+	}       
     
 }

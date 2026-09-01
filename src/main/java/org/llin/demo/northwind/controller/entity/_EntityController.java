@@ -5,9 +5,11 @@ import org.llin.demo.northwind.menu.EntityMenuManager;
 import org.llin.demo.northwind.model.entity.EntityObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+@RequestMapping("/entity")
 public class _EntityController<T extends EntityObject> implements _Values {
 
 	public static final String ACTIVE_NAV_ITEM = "ACTIVE_NAV_ITEM";

@@ -1,6 +1,6 @@
 package org.llin.demo.northwind.controller;
 
-import java.util.Optional;
+import java.util.List;
 
 import org.llin.demo.northwind.dto.UserDto;
 import org.llin.demo.northwind.form.NewPasswordForm;
@@ -49,13 +49,13 @@ public class RequestNewPasswordController {
 			return "redirect:/login";
 		}
 
-		Optional<UserDto> optDto = userService.findByUsername(form.getUserName());
-		if (!optDto.isPresent()) {
+		List<UserDto> list = userService.findByUsername(form.getUserName());
+		if (list.isEmpty()) {
 			result.rejectValue("userName", "user.not.exists", "User does not exist.");
 			return "page-set-new-password-request";
 		}
 	    NewPasswordForm npForm = new NewPasswordForm();
-	    npForm.setUsername(optDto.get().username());
+	    npForm.setUsername(list.get(0).username());
 
 	    // This is the key change
 	    redirectAttributes.addFlashAttribute("newPasswordForm", npForm);
@@ -92,8 +92,8 @@ public class RequestNewPasswordController {
 			return "page-set-new-password";
 		}
 		
-		Optional<UserDto> optUserDto = userService.findByUsername(form.getUsername());
-		UserDto userDto = optUserDto.get();
+		List<UserDto> list = userService.findByUsername(form.getUsername());
+		UserDto userDto = list.get(0);
 		
 		User user = new User();
 		user = userMapper.toEntity(userDto);

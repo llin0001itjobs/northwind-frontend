@@ -33,7 +33,7 @@ public class CustomerController<T extends EntityObject> extends _EntityControlle
         this.companyService = companyService; 
     }
 
-    @GetMapping
+    @GetMapping("/list")
     public ModelAndView getAllCustomers() {
         return createDefaultModelAndView();
     }

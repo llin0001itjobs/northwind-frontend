@@ -1,14 +1,16 @@
 package org.llin.demo.northwind.service.entity;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
 import org.llin.demo.northwind.dto.ShipperDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClient;
-
 @Service
 public class ShipperService {
 
@@ -42,7 +44,7 @@ public class ShipperService {
      */
     public List<ShipperDto> findAll() {
         EmbeddedShippers response = restClient.get()
-                .uri("/api/shipper")
+                .uri("shipper")
                 .retrieve()
                 .body(EmbeddedShippers.class);
 
@@ -58,7 +60,7 @@ public class ShipperService {
 
         return Optional.ofNullable(
                 restClient.get()
-                        .uri("/api/shipper/{id}", id)
+                        .uri("shipper/{id}", id)
                         .retrieve()
                         .body(ShipperDto.class)
         );
@@ -66,7 +68,7 @@ public class ShipperService {
 
     public ShipperDto create(ShipperDto ShipperDto) {
         return restClient.post()
-                .uri("/api/shipper")
+                .uri("shipper")
                 .body(ShipperDto)
                 .retrieve()
                 .body(ShipperDto.class);
@@ -74,7 +76,7 @@ public class ShipperService {
 
     public ShipperDto update(Integer id, ShipperDto ShipperDto) {
         return restClient.put()
-                .uri("/api/shipper/{id}", id)
+                .uri("shipper/{id}", id)
                 .body(ShipperDto)
                 .retrieve()
                 .body(ShipperDto.class);
@@ -82,7 +84,7 @@ public class ShipperService {
 
     public void deleteById(Integer id) {
         restClient.delete()
-                .uri("/api/shipper/{id}", id)
+                .uri("shipper/{id}", id)
                 .retrieve()
                 .toBodilessEntity();
     }
@@ -111,17 +113,22 @@ public class ShipperService {
     	return findByObject(jobTitle, "jobTitle", "findByJobTitleContaining");
     }
     
-    private List<ShipperDto> findByObject(Object o, String label, String path) {
-		if (o  == null) return Collections.emptyList();
+    private List<ShipperDto> findByObject(Object value, String paramName, String searchMethod) {
+        if (value == null) {
+            return Collections.emptyList();
+        }
 
-		   return Optional.ofNullable(
-		            restClient.get()
-		                    .uri("/api/shipper/search/" + path + "?" + label + "={" + label + "}", o)
-		                    .retrieve()
-		                    .body(ShipperDto.class)
-		            ) 
-		            .map(Collections::singletonList)
-		            .orElse(Collections.emptyList());
+        try {
+            return restClient.get()
+                    .uri(uriBuilder -> uriBuilder
+                            .path("shipper/search/{method}")
+                            .queryParam(paramName, value)
+                            .build(searchMethod))
+                    .retrieve()
+                    .body(new ParameterizedTypeReference<List<ShipperDto>>() {});
+        } catch (HttpClientErrorException.NotFound e) {
+            return new ArrayList<>();
+        }
     }
 	
 }

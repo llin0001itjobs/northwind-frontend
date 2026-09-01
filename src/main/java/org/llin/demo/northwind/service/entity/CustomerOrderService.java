@@ -13,6 +13,7 @@ import org.llin.demo.northwind.dto.LabelValueLongDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClient;
 
 @Service
@@ -58,7 +59,7 @@ public class CustomerOrderService {
 		@com.fasterxml.jackson.annotation.JsonProperty("labelIntValueDouble")
 		public List<LabelIntValueDoubleDto> LabelIntValueDouble;
 	}
-	
+
 	private static class EmbeddedLabelIntValueLongs {
 		@com.fasterxml.jackson.annotation.JsonProperty("_embedded")
 		public LabelIntValueLongList LabelIntValueLongs;
@@ -68,13 +69,13 @@ public class CustomerOrderService {
 		@com.fasterxml.jackson.annotation.JsonProperty("labelIntValueLong")
 		public List<LabelIntValueLongDto> LabelIntValueLong;
 	}
-	
+
 	// ==================================================================
 	// Public methods
 	// ==================================================================
 
 	public List<CustomerOrderDto> findAll() {
-		EmbeddedCustomerOrders response = restClient.get().uri("/api/customerOrder").retrieve()
+		EmbeddedCustomerOrders response = restClient.get().uri("customerOrder").retrieve()
 				.body(EmbeddedCustomerOrders.class);
 
 		return response != null && response.CustomerOrders != null && response.CustomerOrders.CustomerOrder != null
@@ -87,264 +88,265 @@ public class CustomerOrderService {
 			return Optional.empty();
 
 		return Optional
-				.ofNullable(restClient.get()
-							.uri("/api/customerOrder/{id}", id)
-							.retrieve()
-							.body(CustomerOrderDto.class));
+				.ofNullable(restClient.get().uri("customerOrder/{id}", id).retrieve().body(CustomerOrderDto.class));
 	}
-	
+
 	public CustomerOrderDto create(CustomerOrderDto CustomerOrderDto) {
-		return restClient.post()
-				.uri("/api/customerOrder")
-				.body(CustomerOrderDto)
-				.retrieve()
-				.body(CustomerOrderDto.class);
+		return restClient.post().uri("customerOrder").body(CustomerOrderDto).retrieve().body(CustomerOrderDto.class);
 	}
 
 	public CustomerOrderDto update(Integer id, CustomerOrderDto CustomerOrderDto) {
-		return restClient.put()
-				.uri("/api/customerOrder/{id}", id)
-				.body(CustomerOrderDto).retrieve()
+		return restClient.put().uri("customerOrder/{id}", id).body(CustomerOrderDto).retrieve()
 				.body(CustomerOrderDto.class);
 	}
 
 	public void deleteById(Integer id) {
-			   restClient.delete()
-					.uri("/api/customerOrder/{id}", id)
-					.retrieve()
-					.toBodilessEntity();
+		restClient.delete().uri("customerOrder/{id}", id).retrieve().toBodilessEntity();
 	}
 
 	public List<LabelValueLongDto> feeRangePerCount() {
-		EmbeddedLabelValueLongs response = restClient.get()
-    			.uri("/api/customerOrder/search/fee-range-count").retrieve()
-    			.body(EmbeddedLabelValueLongs.class);
-    	return response != null && response.LabelValueLongs != null && response.LabelValueLongs.LabelValueLong != null
+		EmbeddedLabelValueLongs response = restClient.get().uri("customerOrder/search/fee-range-count").retrieve()
+				.body(EmbeddedLabelValueLongs.class);
+		return response != null && response.LabelValueLongs != null && response.LabelValueLongs.LabelValueLong != null
 				? response.LabelValueLongs.LabelValueLong
-				: List.of();		
-    }
+				: List.of();
+	}
 
 	public List<LabelIntValueDoubleDto> shippingFeePerMonth() {
-		EmbeddedLabelIntValueDoubles response = restClient.get()
-    			.uri("/api/customerOrder/search/shipping-fee-month").retrieve()
-    			.body(EmbeddedLabelIntValueDoubles.class);
-    	return response != null && response.LabelIntValueDoubles != null && response.LabelIntValueDoubles.LabelIntValueDouble != null
-				? response.LabelIntValueDoubles.LabelIntValueDouble
-				: List.of();		
-    }
-	
+		EmbeddedLabelIntValueDoubles response = restClient.get().uri("customerOrder/search/shipping-fee-month")
+				.retrieve().body(EmbeddedLabelIntValueDoubles.class);
+		return response != null && response.LabelIntValueDoubles != null
+				&& response.LabelIntValueDoubles.LabelIntValueDouble != null
+						? response.LabelIntValueDoubles.LabelIntValueDouble
+						: List.of();
+	}
+
 	public List<LabelIntValueLongDto> orderCountPerMonth() {
-		EmbeddedLabelIntValueLongs response = restClient.get()
-    			.uri("/api/customerOrder/search/order-count-month").retrieve()
-    			.body(EmbeddedLabelIntValueLongs.class);
-    	return response != null && response.LabelIntValueLongs != null && response.LabelIntValueLongs.LabelIntValueLong != null
-				? response.LabelIntValueLongs.LabelIntValueLong
-				: List.of();		
-    }
-	
+		EmbeddedLabelIntValueLongs response = restClient.get().uri("customerOrder/search/order-count-month").retrieve()
+				.body(EmbeddedLabelIntValueLongs.class);
+		return response != null && response.LabelIntValueLongs != null
+				&& response.LabelIntValueLongs.LabelIntValueLong != null ? response.LabelIntValueLongs.LabelIntValueLong
+						: List.of();
+	}
+
 	public List<LabelValueLongDto> ordersByStatus() {
-		EmbeddedLabelValueLongs response = restClient.get()
-    			.uri("/api/customerOrder/search/by-status").retrieve()
-    			.body(EmbeddedLabelValueLongs.class);
-    	return response != null && response.LabelValueLongs != null && response.LabelValueLongs.LabelValueLong != null
+		EmbeddedLabelValueLongs response = restClient.get().uri("customerOrder/search/by-status").retrieve()
+				.body(EmbeddedLabelValueLongs.class);
+		return response != null && response.LabelValueLongs != null && response.LabelValueLongs.LabelValueLong != null
 				? response.LabelValueLongs.LabelValueLong
-				: List.of();		
-    }
-    
+				: List.of();
+	}
+
 	public List<CustomerOrderDto> findByCustomerId(Integer id) {
 		return findByObject(id, "id", "findByCustomerId");
 	}
 
 	// Optional: sort by most recent orders
 	public List<CustomerOrderDto> findByCustomerIdOrderByOrderDateDesc(Integer customerId) {
-    	return findByObject(customerId, "customerId", "findByCustomerIdOrderByOrderDateDesc");
-    }
-    
-	public List<CustomerOrderDto> findByCustomerIdAndShipCityContaining(
-            Integer customerId, String shipCity) {
-    	return findWithTwoParameters(customerId, "customerId", shipCity, "shipCity", "findByCustomerIdAndShipCityContaining");
-    }
-    
+		return findByObject(customerId, "customerId", "findByCustomerIdOrderByOrderDateDesc");
+	}
+
+	public List<CustomerOrderDto> findByCustomerIdAndShipCityContaining(Integer customerId, String shipCity) {
+		return findWithTwoParameters(customerId, "customerId", shipCity, "shipCity",
+				"findByCustomerIdAndShipCityContaining");
+	}
+
 	public List<CustomerOrderDto> findByEmployeeId(Integer id) {
 		return findByObject(id, "id", "findByEmployeeId");
 	}
 
 	public List<CustomerOrderDto> findByShipperId(Integer id) {
-		return findByObject(id,"id", "findByShipperId");
+		return findByObject(id, "id", "findByShipperId");
 	}
-	
+
 	public List<CustomerOrderDto> findByOrderStatusId(Integer id) {
-		return findByObject(id,"id", "findByOrderStatusId");
+		return findByObject(id, "id", "findByOrderStatusId");
 	}
 
 	public List<CustomerOrderDto> findByOrderTaxStatusId(Integer id) {
-		return findByObject(id,"id", "findByOrderTaxStatusId");				
+		return findByObject(id, "id", "findByOrderTaxStatusId");
 	}
-	    
-	public List<CustomerOrderDto> findByShipName(String shipName) {    	  
+
+	public List<CustomerOrderDto> findByShipName(String shipName) {
 		return findByObject(shipName, "shipName", "findByShipName");
-    }
-	
-	public List<CustomerOrderDto> findByShipNameContaining(String shipName) {    	  
+	}
+
+	public List<CustomerOrderDto> findByShipNameContaining(String shipName) {
 		return findByObject(shipName, "shipName", "findByShipNameContaining");
-    }
-	
-	public List<CustomerOrderDto> findByShipCity(String shipCity) {    	  
+	}
+
+	public List<CustomerOrderDto> findByShipCity(String shipCity) {
 		return findByObject(shipCity, "shipCity", "findByShipCity");
-    }
-	
-	public List<CustomerOrderDto> findByShipCityContaining(String shipCity) {    	  
+	}
+
+	public List<CustomerOrderDto> findByShipCityContaining(String shipCity) {
 		return findByObject(shipCity, "shipCity", "findByShipCityContaining");
-    }
-	
-	public List<CustomerOrderDto> findByShipStateProvince(String shipStateProvince) {    	  
+	}
+
+	public List<CustomerOrderDto> findByShipStateProvince(String shipStateProvince) {
 		return findByObject(shipStateProvince, "shipStateProvince", "findByShipStateProvince");
-    }
+	}
 
-	public List<CustomerOrderDto> findByShipStateProvinceContaining(String shipStateProvince) {    	  
+	public List<CustomerOrderDto> findByShipStateProvinceContaining(String shipStateProvince) {
 		return findByObject(shipStateProvince, "shipStateProvince", "findByShipStateProvinceContaining");
-    }
-	
-	public List<CustomerOrderDto> findByShipCountryRegion(String shipCountryRegion) {    	  
-		   return findByObject(shipCountryRegion, "shipCountryRegion", "findByShipCountryRegion");
-    }
-	
-	public List<CustomerOrderDto> findByShipCountryRegionContaining(String shipCountryRegion) {    	  
-		   return findByObject(shipCountryRegion, "shipCountryRegion", "findByShipCountryRegionContaining");
 	}
-	
-	public List<CustomerOrderDto> findByNotesContaining(String notes) {    	  
-		   return findByObject(notes, "notes", "findByNotesContaining");
+
+	public List<CustomerOrderDto> findByShipCountryRegion(String shipCountryRegion) {
+		return findByObject(shipCountryRegion, "shipCountryRegion", "findByShipCountryRegion");
 	}
-	
-	public List<CustomerOrderDto> findByPaymentType(String paymentType) {    	  
-		   return findByObject(paymentType, "paymentType", "findByPaymentType");
-	} 
-        
-	public List<CustomerOrderDto> findByOrderDateBetweenOrderByOrderDateAsc(
-            LocalDateTime startDate, LocalDateTime endDate) {
-    	return findWithTwoParameters(startDate, "startDate", endDate, "endDate", "findByOrderDateBetweenOrderByOrderDateAsc");
-    }
 
-	public List<CustomerOrderDto> findByShippedDateBetweenOrderByShippedDateAsc(
-            LocalDateTime startDate, LocalDateTime endDate) {
-    	return findWithTwoParameters(startDate, "startDate", endDate, "endDate", "findByShippedDateBetweenOrderByShippedDateAsc");
-    }
+	public List<CustomerOrderDto> findByShipCountryRegionContaining(String shipCountryRegion) {
+		return findByObject(shipCountryRegion, "shipCountryRegion", "findByShipCountryRegionContaining");
+	}
 
-	public List<CustomerOrderDto> findByPaidDateBetweenOrderByPaidDateAsc(
-            LocalDateTime startDate, LocalDateTime endDate) {
-    	return findWithTwoParameters(startDate, "startDate", endDate, "endDate", "findByPaidDateBetweenOrderByPaidDateAsc");
-    }
-        
-    // Single-date helpers
+	public List<CustomerOrderDto> findByNotesContaining(String notes) {
+		return findByObject(notes, "notes", "findByNotesContaining");
+	}
+
+	public List<CustomerOrderDto> findByPaymentType(String paymentType) {
+		return findByObject(paymentType, "paymentType", "findByPaymentType");
+	}
+
+	public List<CustomerOrderDto> findByOrderDateBetweenOrderByOrderDateAsc(LocalDateTime startDate,
+			LocalDateTime endDate) {
+		return findWithTwoParameters(startDate, "startDate", endDate, "endDate",
+				"findByOrderDateBetweenOrderByOrderDateAsc");
+	}
+
+	public List<CustomerOrderDto> findByShippedDateBetweenOrderByShippedDateAsc(LocalDateTime startDate,
+			LocalDateTime endDate) {
+		return findWithTwoParameters(startDate, "startDate", endDate, "endDate",
+				"findByShippedDateBetweenOrderByShippedDateAsc");
+	}
+
+	public List<CustomerOrderDto> findByPaidDateBetweenOrderByPaidDateAsc(LocalDateTime startDate,
+			LocalDateTime endDate) {
+		return findWithTwoParameters(startDate, "startDate", endDate, "endDate",
+				"findByPaidDateBetweenOrderByPaidDateAsc");
+	}
+
+	// Single-date helpers
 	public List<CustomerOrderDto> findByOrderDateAfterOrderByOrderDateAsc(LocalDateTime date) {
-    	return findByObject(date,"date","findByOrderDateAfterOrderByOrderDateAsc");
-    }
-    
+		return findByObject(date, "date", "findByOrderDateAfterOrderByOrderDateAsc");
+	}
+
 	public List<CustomerOrderDto> findByShippedDateIsNull() { // not yet shipped
-    	return findByNull("findByShippedDateIsNull");
-    }
-	
-	public List<CustomerOrderDto> findByPaidDateIsNull() {	   // not yet paid
-    	return findByNull("findByPaidDateIsNull");
-    }
-    
-    // === Money / numeric ranges ===
-	public List<CustomerOrderDto> findByShippingFeeBetweenOrderByShippingFeeAsc(
-            BigDecimal minFee, BigDecimal maxFee) {
-    	return findWithTwoParameters(minFee, "minFee", maxFee, "maxFee", "findByShippingFeeBetweenOrderByShippingFeeAsc");
-    }
+		return findByNull("findByShippedDateIsNull");
+	}
 
-	public List<CustomerOrderDto> findByTaxesBetweenOrderByTaxesAsc(
-            BigDecimal minTax, BigDecimal maxTax) {
-    	return findWithTwoParameters(minTax, "minTax", maxTax, "maxTax", "findByTaxesBetweenOrderByTaxesAsc"); 
-    }
+	public List<CustomerOrderDto> findByPaidDateIsNull() { // not yet paid
+		return findByNull("findByPaidDateIsNull");
+	}
 
-	public List<CustomerOrderDto> findByTaxRateBetweenOrderByTaxRateAsc(
-    		BigDecimal minRate, BigDecimal maxRate) {
-    	return findWithTwoParameters(minRate, "minRate", maxRate, "maxRate", "findByTaxRateBetweenOrderByTaxRateAsc");
-    }
+	// === Money / numeric ranges ===
+	public List<CustomerOrderDto> findByShippingFeeBetweenOrderByShippingFeeAsc(BigDecimal minFee, BigDecimal maxFee) {
+		return findWithTwoParameters(minFee, "minFee", maxFee, "maxFee",
+				"findByShippingFeeBetweenOrderByShippingFeeAsc");
+	}
+
+	public List<CustomerOrderDto> findByTaxesBetweenOrderByTaxesAsc(BigDecimal minTax, BigDecimal maxTax) {
+		return findWithTwoParameters(minTax, "minTax", maxTax, "maxTax", "findByTaxesBetweenOrderByTaxesAsc");
+	}
+
+	public List<CustomerOrderDto> findByTaxRateBetweenOrderByTaxRateAsc(BigDecimal minRate, BigDecimal maxRate) {
+		return findWithTwoParameters(minRate, "minRate", maxRate, "maxRate", "findByTaxRateBetweenOrderByTaxRateAsc");
+	}
 
 	public List<CustomerOrderDto> findByCustomerIdAndOrderStatusId(Integer customerId, Integer statusId) {
-    	return findWithTwoParameters(customerId, "customerId", statusId, "statusId", "findByCustomerIdAndOrderStatusId");
-    }
-    
-	public List<CustomerOrderDto> findByOrderDateBetweenAndOrderStatusIdOrderByOrderDateAsc(
-            LocalDateTime startDate, LocalDateTime endDate, Integer statusId) {
-    	return findWithThreeParameters(startDate,"startDate",endDate, "endDate", statusId, "statusId",
-    								   "findByOrderDateBetweenAndOrderStatusIdOrderByOrderDateAsc");
-    }
-    
+		return findWithTwoParameters(customerId, "customerId", statusId, "statusId",
+				"findByCustomerIdAndOrderStatusId");
+	}
+
+	public List<CustomerOrderDto> findByOrderDateBetweenAndOrderStatusIdOrderByOrderDateAsc(LocalDateTime startDate,
+			LocalDateTime endDate, Integer statusId) {
+		return findWithThreeParameters(startDate, "startDate", endDate, "endDate", statusId, "statusId",
+				"findByOrderDateBetweenAndOrderStatusIdOrderByOrderDateAsc");
+	}
+
 	public List<CustomerOrderDto> findByOrderStatusIdAndPaidDateIsNull(Integer statusId) { // pending payment
-    	return findByObjectAndNullField(statusId, "statusId","findByOrderStatusIdAndPaidDateIsNull");    	
-    }
-        
-    private List<CustomerOrderDto> findByNull(String path) {
+		return findByObjectAndNullField(statusId, "statusId", "findByOrderStatusIdAndPaidDateIsNull");
+	}
 
-        // Basic safety check for the path variable
-        if (path == null || path.isEmpty()) {
-            return Collections.emptyList();
-        }
+	private List<CustomerOrderDto> findByNull(String path) {
+	    if (path == null || path.isEmpty()) {
+	        return Collections.emptyList();
+	    }
 
-        List<CustomerOrderDto> response = restClient.get()
-                .uri("/api/customerOrder/search/" + path)
-                .retrieve()
-                .body(new ParameterizedTypeReference<List<CustomerOrderDto>>() {});
+	    try {
+	        return restClient.get()
+	                .uri(uriBuilder -> uriBuilder
+	                        .path("customerOrder/search/" + path)
+	                        .build())
+	                .retrieve()
+	                .body(new ParameterizedTypeReference<List<CustomerOrderDto>>() {});
+	    } catch (HttpClientErrorException.NotFound e) {
+	        return Collections.emptyList();
+	    }
+	}
 
-        return response != null ? response : Collections.emptyList();
-    }
-    
-    private List<CustomerOrderDto> findByObject(Object o, String label, String path) {
-		if (o  == null) return Collections.emptyList();
+	private List<CustomerOrderDto> findByObject(Object value, String paramName, String searchMethod) {
+		if (value == null) {
+			return Collections.emptyList();
+		}
 
-		   return Optional.ofNullable(
-		            restClient.get()
-		                    .uri("/api/customerOrder/search/" + path + "?" + label + "={" + label + "}", o)
-		                    .retrieve()
-		                    .body(CustomerOrderDto.class)
-		            ) 
-		            .map(Collections::singletonList)
-		            .orElse(Collections.emptyList());
-    }
-    
- // 2. The generic helper method
-    private List<CustomerOrderDto> findByObjectAndNullField(Object param, String paramLabel, String path) {
-        // Return empty early if the status ID is missing
-        if (param == null) {
-            return Collections.emptyList();
-        }
+		try {
+			return restClient.get()
+					.uri(uriBuilder -> uriBuilder.path("customerOrder/search/{method}").queryParam(paramName, value)
+							.build(searchMethod))
+					.retrieve().body(new ParameterizedTypeReference<List<CustomerOrderDto>>() {
+					});
+		} catch (HttpClientErrorException.NotFound e) {
+			return Collections.emptyList();
+		}
+	}
 
-        List<CustomerOrderDto> response = restClient.get()
-                .uri("/api/customerOrder/search/" + path + "?" + paramLabel + "={" + paramLabel + "}", param)
-                .retrieve()
-                .body(new ParameterizedTypeReference<List<CustomerOrderDto>>() {});
+	private List<CustomerOrderDto> findByObjectAndNullField(Object param, String paramLabel, String path) {
+	    if (param == null) {
+	        return Collections.emptyList();
+	    }
 
-        return response != null ? response : Collections.emptyList();
-    }
-    
-    private List<CustomerOrderDto> findWithThreeParameters(Object param1, String paramName1, 
-    												       Object param2, String paramName2, 
-    													   Object param3, String paramName3, String path) {
-        return restClient.get()
-                .uri(uriBuilder -> uriBuilder.path("/api/customerOrder/search/" + path)
-                        .queryParam(paramName1, param1)
-                        .queryParam(paramName2, param2)
-                        .queryParam(paramName3, param3)
-                        .build())
-                .retrieve()
-                .body(new org.springframework.core.ParameterizedTypeReference<List<CustomerOrderDto>>() {});    	
-    }
-    
-    private List<CustomerOrderDto> findWithTwoParameters(Object param1, String paramName1, 
-    													 Object param2, String paramName2, String path) {
-        return restClient.get()
-                .uri(uriBuilder -> uriBuilder.path("/api/customerOrder/search/" + path)
-                        .queryParam(paramName1, param1)
-                        .queryParam(paramName2, param2)
-                        .build())
-                .retrieve()
-                .body(new org.springframework.core.ParameterizedTypeReference<List<CustomerOrderDto>>() {});    	
-    }
-    
-    
+	    try {
+	        return restClient.get()
+	                .uri(uriBuilder -> uriBuilder
+	                        .path("customerOrder/search/" + path)
+	                        .queryParam(paramLabel, param)
+	                        .build())
+	                .retrieve()
+	                .body(new ParameterizedTypeReference<List<CustomerOrderDto>>() {});
+	    } catch (HttpClientErrorException.NotFound e) {
+	        return Collections.emptyList();
+	    }
+	}
+
+	private List<CustomerOrderDto> findWithTwoParameters(Object param1, String paramName1, Object param2, String paramName2,
+			String path) {
+		try {
+			return restClient.get()
+					.uri(uriBuilder -> uriBuilder
+					.path("customerOrder/search/" + path)
+					.queryParam(paramName1, param1)
+					.queryParam(paramName2, param2).build())
+					.retrieve().body(new ParameterizedTypeReference<List<CustomerOrderDto>>() {
+					});
+		} catch (HttpClientErrorException.NotFound e) {
+			return Collections.emptyList();
+		}
+	}
+
+	private List<CustomerOrderDto> findWithThreeParameters(Object param1, String paramName1, Object param2, String paramName2,
+			Object param3, String paramName3, String path) {
+		try {
+			return restClient.get()
+					.uri(uriBuilder -> uriBuilder
+					.path("customerOrder/search/" + path)
+					.queryParam(paramName1, param1)
+					.queryParam(paramName2, param2)
+					.queryParam(paramName3, param3).build())
+					.retrieve().body(new ParameterizedTypeReference<List<CustomerOrderDto>>() {
+					});
+		} catch (HttpClientErrorException.NotFound e) {
+			return Collections.emptyList();
+		}
+	}
+
 }

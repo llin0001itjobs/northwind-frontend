@@ -8,7 +8,9 @@ import java.util.Optional;
 
 import org.llin.demo.northwind.dto.InvoiceDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClient;
 
 @Service
@@ -44,7 +46,7 @@ public class InvoiceService {
 
         return Optional.ofNullable(
                 restClient.get()
-                        .uri("/api/invoice/{id}", id)
+                        .uri("invoice/{id}", id)
                         .retrieve()
                         .body(InvoiceDto.class)
         );
@@ -55,7 +57,7 @@ public class InvoiceService {
      */
     public List<InvoiceDto> findAll() {
         EmbeddedInvoices response = restClient.get()
-                .uri("/api/invoice")
+                .uri("invoice")
                 .retrieve()
                 .body(EmbeddedInvoices.class);
 
@@ -68,7 +70,7 @@ public class InvoiceService {
 
     public InvoiceDto create(InvoiceDto InvoiceDto) {
         return restClient.post()
-                .uri("/api/invoice")
+                .uri("invoice")
                 .body(InvoiceDto)
                 .retrieve()
                 .body(InvoiceDto.class);
@@ -76,7 +78,7 @@ public class InvoiceService {
 
     public InvoiceDto update(Integer id, InvoiceDto InvoiceDto) {
         return restClient.put()
-                .uri("/api/invoice/{id}", id)
+                .uri("invoice/{id}", id)
                 .body(InvoiceDto)
                 .retrieve()
                 .body(InvoiceDto.class);
@@ -84,7 +86,7 @@ public class InvoiceService {
 
     public void deleteById(Integer id) {
         restClient.delete()
-                .uri("/api/invoice/{id}", id)
+                .uri("invoice/{id}", id)
                 .retrieve()
                 .toBodilessEntity();
     }
@@ -154,41 +156,53 @@ public class InvoiceService {
     	return findByObject(amount, "amount", "findByAmountDueLessThanOrderByAmountDueAsc");
     }
     
-    private List<InvoiceDto> findByObject(Object o, String label, String path) {
-		if (o  == null) return Collections.emptyList();
+	private List<InvoiceDto> findByObject(Object value, String paramName, String searchMethod) {
+		if (value == null) {
+			return Collections.emptyList();
+		}
 
-		   return Optional.ofNullable(
-		            restClient.get()
-		                    .uri("/api/invoice/search/" + path + "?" + label + "={" + label + "}", o)
-		                    .retrieve()
-		                    .body(InvoiceDto.class)
-		            ) 
-		            .map(Collections::singletonList)
-		            .orElse(Collections.emptyList());
-    }
+		try {
+			return restClient.get().uri(uriBuilder -> uriBuilder
+					.path("invoice/search/{method}")
+					.queryParam(paramName, value)
+					.build(searchMethod)).retrieve()
+					.body(new ParameterizedTypeReference<List<InvoiceDto>>() {
+					});
+		} catch (HttpClientErrorException.NotFound e) {
+			return Collections.emptyList();
+		}
+	}
     
-    private List<InvoiceDto> findWithTwoParameters(Object param1, String paramName1, 
-			 											 Object param2, String paramName2, String path) {
+	private List<InvoiceDto> findWithTwoParameters(Object param1, String paramName1, 
+												   Object param2, String paramName2, String path) {
+		try {
 			return restClient.get()
-			.uri(uriBuilder -> uriBuilder.path("/api/invoice/search/" + path)
-			.queryParam(paramName1, param1)
-			.queryParam(paramName2, param2)
-			.build())
-			.retrieve()
-			.body(new org.springframework.core.ParameterizedTypeReference<List<InvoiceDto>>() {});    	
-    }    
+					.uri(uriBuilder -> uriBuilder
+							.path("invoice/search/" + path)
+							.queryParam(paramName1, param1)
+							.queryParam(paramName2, param2).build())
+					.retrieve().body(new ParameterizedTypeReference<List<InvoiceDto>>() {
+					});
+		} catch (HttpClientErrorException.NotFound e) {
+			return Collections.emptyList();
+		}
+	}  
     
     private List<InvoiceDto> findWithThreeParameters(Object param1, String paramName1, 
-		       Object param2, String paramName2, 
-			   Object param3, String paramName3, String path) {
-		return restClient.get()
-		.uri(uriBuilder -> uriBuilder.path("/api/invoice/search/" + path)
-		.queryParam(paramName1, param1)
-		.queryParam(paramName2, param2)
-		.queryParam(paramName3, param3)
-		.build())
-		.retrieve()
-		.body(new org.springframework.core.ParameterizedTypeReference<List<InvoiceDto>>() {});    	
+		       										 Object param2, String paramName2, 
+		       										 Object param3, String paramName3, String path) {
+		try {
+			return restClient.get()
+					.uri(uriBuilder -> uriBuilder
+							.path("invoice/search/" + path)
+							.queryParam(paramName1, param1)
+							.queryParam(paramName2, param2)
+							.queryParam(paramName3, param3).build())
+					.retrieve().body(new ParameterizedTypeReference<List<InvoiceDto>>() {
+					});
+		} catch (HttpClientErrorException.NotFound e) {
+			return Collections.emptyList();
+		}    	
     }
     
 }

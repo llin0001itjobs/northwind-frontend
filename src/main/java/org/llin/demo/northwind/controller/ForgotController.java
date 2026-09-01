@@ -1,6 +1,6 @@
 package org.llin.demo.northwind.controller;
 
-import java.util.Optional;
+import java.util.List;
 
 import org.llin.demo.northwind.dto.UserDto;
 import org.llin.demo.northwind.form.ForgotUserForm;
@@ -44,13 +44,13 @@ public class ForgotController {
 			return "page-forgot-user"; // redisplay form with errors
 		}
 
-		Optional<UserDto> dtoOptional = userService.findByEmail(form.getEmail());
-		if (!dtoOptional.isPresent()) {
+		List<UserDto> list = userService.findByEmail(form.getEmail());
+		if (list.isEmpty()) {
 			result.rejectValue("email", "email.not.exists", "Email does not exist.");
 			return "page-forgot-user";
 		}
 
-		UserDto dto = dtoOptional.get(); // ← fetch real user
+		UserDto dto = list.get(0); // ← fetch real user
 
 		try {
 			emailService.sendHtmlEmail(form.getEmail(), "This is your Username",

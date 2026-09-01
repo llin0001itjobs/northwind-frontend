@@ -37,11 +37,11 @@ public class PaymentTypeService {
     // ==================================================================
 
     /**
-     * GET /Role  (returns all Roles)
+     * GET /paymentType  (returns all PaymentTypes)
      */
     public List<PaymentTypeDto> findAll() {
     	EmbeddedPaymentTypes response = restClient.get()
-                .uri("/api/paymentType")
+                .uri("paymentType")
                 .retrieve()
                 .body(EmbeddedPaymentTypes.class);
 
@@ -58,7 +58,7 @@ public class PaymentTypeService {
 
         return Optional.ofNullable(
                 restClient.get()
-                        .uri("/api/paymentType/{id}", id)
+                        .uri("paymentType/{id}", id)
                         .retrieve()
                         .body(PaymentTypeDto.class)
         );

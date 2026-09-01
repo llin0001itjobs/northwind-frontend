@@ -41,7 +41,7 @@ public class PurchaseOrderStatusService {
      */
     public List<PurchaseOrderStatusDto> findAll() {
         EmbeddedPurchaseOrderStatuss response = restClient.get()
-                .uri("/api/purchaseOrderStatus")
+                .uri("purchaseOrderStatus")
                 .retrieve()
                 .body(EmbeddedPurchaseOrderStatuss.class);
 
@@ -57,7 +57,7 @@ public class PurchaseOrderStatusService {
 
         return Optional.ofNullable(
                 restClient.get()
-                        .uri("/api/purchaseOrderStatus/{id}", id)
+                        .uri("purchaseOrderStatus/{id}", id)
                         .retrieve()
                         .body(PurchaseOrderStatusDto.class)
         );

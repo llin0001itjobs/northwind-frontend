@@ -22,9 +22,14 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         // Load user from the database
-        UserDto userDto = userService.findByUsername(username)
-                .orElseThrow(() -> new UsernameNotFoundException("User not found: " + username));
-
+        List<UserDto> list = userService.findByUsername(username);
+        
+        if (list.isEmpty()) {
+            throw new UsernameNotFoundException("User not found: " + username);
+        }
+        
+        UserDto userDto = list.get(0);
+        
         // Build authorities (never null!)
         List<SimpleGrantedAuthority> authorities = Collections.emptyList();
 
