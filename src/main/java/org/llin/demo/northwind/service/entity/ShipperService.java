@@ -7,6 +7,7 @@ import java.util.Optional;
 
 import org.llin.demo.northwind.dto.ShipperDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
@@ -17,7 +18,7 @@ public class ShipperService {
     private final RestClient restClient;
 
     @Autowired
-    public ShipperService(RestClient restClient) {
+    public ShipperService(@Qualifier("northwindDataClient") RestClient restClient) {
         this.restClient = restClient;
     }
 

@@ -7,6 +7,7 @@ import java.util.Optional;
 
 import org.llin.demo.northwind.dto.InventoryTransactionDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
@@ -18,7 +19,7 @@ public class InventoryTransactionService {
 	private final RestClient restClient;
 
 	@Autowired
-	public InventoryTransactionService(RestClient restClient) {
+	public InventoryTransactionService(@Qualifier("northwindDataClient") RestClient restClient) {
 		this.restClient = restClient;
 	}
 

@@ -71,10 +71,10 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
             user.setEmailVerified(true);
             user.setVerificationToken(UUID.randomUUID().toString());
 
-            optRoleDto = roleService.findByRoleType("USER");
+            optRoleDto = roleService.findByType("ROLE_USER");
             if (optRoleDto.isEmpty()) {
                 throw new OAuth2AuthenticationException(
-                    "Default role 'USER' not found in database. " +
+                    "Default role 'ROLE_USER' not found in database. " +
                     "Check that RoleSeeder has run or manually insert the role.");
             }
             list.add(roleMapper.toEntity(optRoleDto.get()));
@@ -90,7 +90,7 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
 
         // Extra safety for legacy users with null/empty roles
         if (user.getRoles() == null || user.getRoles().isEmpty()) {
-            optRoleDto = roleService.findByRoleType("USER");
+            optRoleDto = roleService.findByType("ROLE_USER");
             if (optRoleDto.isPresent()) {
                 list.clear();
                 list.add(roleMapper.toEntity(optRoleDto.get()));
@@ -102,7 +102,7 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
         }
 
         OAuth2User oUser = new DefaultOAuth2User(
-                Collections.singleton(new SimpleGrantedAuthority("USER")),
+                Collections.singleton(new SimpleGrantedAuthority("ROLE_USER")),
                 attributes,
                 userNameAttribute);
 

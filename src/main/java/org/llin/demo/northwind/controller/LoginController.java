@@ -58,10 +58,14 @@ public class LoginController {
 		}
 
 		if (error != null) {
-			model.addAttribute("message", "Invalid verification token.");
+			model.addAttribute("message", "Login Failed.");
 		}
-
-		model.addAttribute("user", new User());
+		
+	    if (user.getUsername() == null && user.getPassword() == null) {
+	        model.addAttribute("user", new User());
+	    } else {
+	        model.addAttribute("user", user); // Keeps the values the user typed in
+	    }
 		model.addAttribute("register", register != null); // Still toggles form mode
 		return "page-login";
 	}

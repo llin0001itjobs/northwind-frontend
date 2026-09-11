@@ -8,6 +8,7 @@ import java.util.Optional;
 
 import org.llin.demo.northwind.dto.InvoiceDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
@@ -19,7 +20,7 @@ public class InvoiceService {
     private final RestClient restClient;
 
     @Autowired
-    public InvoiceService(RestClient restClient) {
+    public InvoiceService(@Qualifier("northwindDataClient") RestClient restClient) {
         this.restClient = restClient;
     }
 

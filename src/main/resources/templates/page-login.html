@@ -38,6 +38,10 @@
 					alt="Phone image">
 			</div>
 			<div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+					<div th:if ="${message}">
+						<span th:text="${message}"></span>
+					</div>
+				</th:if>
 				<form class="form-signin" method="post" th:action="@{/login}"
 					th:object="${user}">
 					<!-- Email input -->

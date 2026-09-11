@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.llin.demo.northwind.dto.RoleDto;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
@@ -13,8 +13,7 @@ public class RoleService {
 
     private final RestClient restClient;
 
-    @Autowired
-    public RoleService(RestClient restClient) {
+    public RoleService(@Qualifier("northwindDataClient") RestClient restClient) {
         this.restClient = restClient;
     }
 
@@ -52,14 +51,17 @@ public class RoleService {
                     : List.of();
     }
     
-    public Optional<RoleDto> findByRoleType(String roleType) {
-        if (roleType == null) return Optional.empty();
-
+    public Optional<RoleDto> findByType(String type) {
+        if (type == null) return Optional.empty();
+        
         return Optional.ofNullable(
-                restClient.get()
-                        .uri("role/search/findByRoleType?roleType={roleType}", roleType)
-                        .retrieve()
-                        .body(RoleDto.class)
+            restClient.get()
+                .uri(uriBuilder -> uriBuilder
+                    .path("role/search/findByType")
+                    .queryParam("type", type)
+                    .build())
+                .retrieve()
+                .body(RoleDto.class)
         );
     }
  

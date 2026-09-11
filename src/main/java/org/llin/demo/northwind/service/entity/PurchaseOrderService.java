@@ -8,6 +8,7 @@ import java.util.Optional;
 
 import org.llin.demo.northwind.dto.PurchaseOrderDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
@@ -18,7 +19,7 @@ public class PurchaseOrderService {
 	private final RestClient restClient;
 
 	@Autowired
-	public PurchaseOrderService(RestClient restClient) {
+	public PurchaseOrderService(@Qualifier("northwindDataClient") RestClient restClient) {
 		this.restClient = restClient;
 	}
 

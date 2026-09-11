@@ -11,6 +11,7 @@ import org.llin.demo.northwind.dto.LabelIntValueDoubleDto;
 import org.llin.demo.northwind.dto.LabelIntValueLongDto;
 import org.llin.demo.northwind.dto.LabelValueLongDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
@@ -22,7 +23,7 @@ public class CustomerOrderService {
 	private final RestClient restClient;
 
 	@Autowired
-	public CustomerOrderService(RestClient restClient) {
+	public CustomerOrderService(@Qualifier("northwindDataClient") RestClient restClient) {
 		this.restClient = restClient;
 	}
 

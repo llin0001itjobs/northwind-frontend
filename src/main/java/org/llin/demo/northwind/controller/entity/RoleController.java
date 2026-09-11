@@ -34,7 +34,7 @@ public class RoleController<T extends EntityObject> extends _EntityController<T>
 	@GetMapping("/{type}")
 	public ModelAndView findById(@PathVariable String type) {
 		ModelAndView mav = createDefaultModelAndView();
-		Optional<RoleDto> opt = service.findByRoleType(type);
+		Optional<RoleDto> opt = service.findByType(type);
 
 		if (opt.isPresent()) {
 			mav.addObject(ROLE, opt.get());

@@ -1,9 +1,7 @@
 package org.llin.demo.northwind.service;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
-
 import org.llin.demo.northwind.dto.UserDto;
 import org.llin.demo.northwind.service.entity.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,31 +19,43 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        // Load user from the database
+        // 1. Fetch user collection list matches from backend client mapping
         List<UserDto> list = userService.findByUsername(username);
         
-        if (list.isEmpty()) {
+        if (list == null || list.isEmpty()) {
             throw new UsernameNotFoundException("User not found: " + username);
         }
         
         UserDto userDto = list.get(0);
         
-        // Build authorities (never null!)
-        List<SimpleGrantedAuthority> authorities = Collections.emptyList();
-
-        // Optional enhancement: load roles if your UserDto (or related data) contains them
-
-        if (userDto.roles() != null) {
+        // 2. Build authorities ensuring it defaults safely to ROLE_USER if empty
+        List<SimpleGrantedAuthority> authorities;
+        
+        if (userDto.roles() != null && !userDto.roles().isEmpty()) {
             authorities = userDto.roles().stream()
-                    .map(role -> new SimpleGrantedAuthority(role.type()))
-                    .collect(Collectors.toList());
+                .map(role -> {
+                    String roleName = role.description().toUpperCase();
+                    // Prepend standard Spring prefix convention if missing
+                    if (!roleName.startsWith("ROLE_")) {
+                        roleName = "ROLE_" + roleName;
+                    }
+                    return new SimpleGrantedAuthority(roleName);
+                })
+                .collect(Collectors.toList());
+        } else {
+            // Secure fallback authority: Never pass an empty or null collection to Spring Security
+            authorities = List.of(new SimpleGrantedAuthority("ROLE_USER"));
         }
 
-        // Return a Spring Security User with username, password, and authorities
+        // 3. Return authenticated domain instance context mapping
         return new org.springframework.security.core.userdetails.User(
-                userDto.username(),
-                userDto.password(),
-                authorities   // ← fixed: never null
+            userDto.username(),
+            userDto.password(),
+            userDto.enabled(), // enabled status check verification mapping
+            true,              // accountNonExpired
+            true,              // credentialsNonExpired
+            true,              // accountNonLocked
+            authorities
         );
     }
 }

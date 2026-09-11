@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.llin.demo.northwind.dto.InventoryTransactionTypeDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
@@ -14,7 +15,7 @@ public class InventoryTransactionTypeService {
     private final RestClient restClient;
 
     @Autowired
-    public InventoryTransactionTypeService(RestClient restClient) {
+    public InventoryTransactionTypeService(@Qualifier("northwindDataClient") RestClient restClient) {
         this.restClient = restClient;
     }
 

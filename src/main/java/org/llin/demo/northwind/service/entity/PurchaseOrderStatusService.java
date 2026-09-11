@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.llin.demo.northwind.dto.PurchaseOrderStatusDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
@@ -14,7 +15,7 @@ public class PurchaseOrderStatusService {
     private final RestClient restClient;
 
     @Autowired
-    public PurchaseOrderStatusService(RestClient restClient) {
+    public PurchaseOrderStatusService(@Qualifier("northwindDataClient") RestClient restClient) {
         this.restClient = restClient;
     }
 
