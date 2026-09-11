@@ -1,6 +1,5 @@
 package org.llin.demo.northwind.service.entity;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -56,7 +55,7 @@ public class UserService {
 
 	public UserDto create(UserDto user) throws IllegalStateException {
 		
-		if (findByEmail(user.email()).size() > 0) {
+		if (findByEmail(user.email()).isPresent()) {
 			throw new IllegalStateException("Email is not unique.");
 		}
 		
@@ -121,31 +120,39 @@ public class UserService {
 		restClient.delete().uri("user/{id}", id).retrieve().toBodilessEntity();
 	}
 
-	public List<UserDto> findByUsername(String username) {
-		return findByObject(username, "username", "findByUsername");
+	public Optional<UserDto> findByUsername(String username) {
+	    return findByObject(username, "username", "findByUsername");
 	}
 
-	public List<UserDto> findByEmail(String email) {
-		return findByObject(email, "email", "findByEmail");
+	public Optional<UserDto> findByEmail(String email) {
+	    return findByObject(email, "email", "findByEmail");
 	}
 
-	public List<UserDto> findByVerificationToken(String token) {
-		return findByObject(token, "token", "findByVerificationToken");
+	public Optional<UserDto> findByVerificationToken(String token) {
+	    return findByObject(token, "token", "findByVerificationToken");
 	}
 
-	private List<UserDto> findByObject(Object value, String paramName, String searchMethod) {
-		if (value == null) {
-			return Collections.emptyList();
-		}
+	private Optional<UserDto> findByObject(Object value, String paramName, String searchMethod) {
+	    if (value == null) {
+	        return Optional.empty();
+	    }
 
-		// Deserialize to the EmbeddedUsers container object
-		EmbeddedUsers response = restClient.get().uri(
-				uriBuilder -> uriBuilder.path("user/search/{method}").queryParam(paramName, value).build(searchMethod))
-				.retrieve().body(EmbeddedUsers.class);
+	    try {
+	        // Deserialize directly to the flat UserDto object
+	        UserDto user = restClient.get()
+	                .uri(uriBuilder -> uriBuilder
+	                        .path("user/search/{method}")
+	                        .queryParam(paramName, value)
+	                        .build(searchMethod))
+	                .retrieve()
+	                .body(UserDto.class);
 
-		// Return the list cleanly or an empty list if nothing was found
-		return response != null && response.embedded != null && response.embedded.users != null
-				? response.embedded.users
-				: Collections.emptyList();
+	        return Optional.ofNullable(user);
+	        
+	    } catch (org.springframework.web.client.HttpClientErrorException.NotFound e) {
+	        // Fallback cleanly if the backend returns a 404 Not Found
+	        return Optional.empty();
+	    }
 	}
+
 }

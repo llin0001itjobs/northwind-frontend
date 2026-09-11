@@ -1,6 +1,6 @@
 package org.llin.demo.northwind.controller;
 
-import java.util.List;
+import java.util.Optional;
 
 import org.llin.demo.northwind.config.PropertyDefaultProperties;
 import org.llin.demo.northwind.dto.UserDto;
@@ -87,10 +87,10 @@ public class LoginController {
 	public String verifyEmail(@RequestParam("token") String token) {
 
 		User user = new User();
-		List<UserDto> list = userService.findByVerificationToken(token);
+		Optional<UserDto> optUserDto = userService.findByVerificationToken(token);
 		
-		if (!list.isEmpty()) {
-			UserDto dto = list.get(0);
+		if (optUserDto.isPresent()) {
+			UserDto dto = optUserDto.get();
 			
 			user.setEmail(dto.email());			
 			user.setEnabled(true);

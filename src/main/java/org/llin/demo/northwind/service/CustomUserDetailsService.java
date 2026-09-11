@@ -1,7 +1,9 @@
 package org.llin.demo.northwind.service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
+
 import org.llin.demo.northwind.dto.UserDto;
 import org.llin.demo.northwind.service.entity.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,13 +22,13 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         // 1. Fetch user collection list matches from backend client mapping
-        List<UserDto> list = userService.findByUsername(username);
+        Optional<UserDto> optUserDto = userService.findByUsername(username);
         
-        if (list == null || list.isEmpty()) {
+        if (optUserDto.isEmpty()) {
             throw new UsernameNotFoundException("User not found: " + username);
         }
         
-        UserDto userDto = list.get(0);
+        UserDto userDto = optUserDto.get();
         
         // 2. Build authorities ensuring it defaults safely to ROLE_USER if empty
         List<SimpleGrantedAuthority> authorities;

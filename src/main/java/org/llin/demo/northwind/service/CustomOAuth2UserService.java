@@ -56,12 +56,12 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
             throw new OAuth2AuthenticationException("Email not found from OAuth2 provider");
         }
 
-        List<UserDto> listUserDto = userService.findByEmail(email);
+        Optional<UserDto> optUserDto = userService.findByEmail(email);
         Optional<RoleDto> optRoleDto;
         User user;
         List<Role> list = new ArrayList<>();
 
-        if (listUserDto.isEmpty()) {
+        if (optUserDto.isEmpty()) {
             // === NEW USER: create and persist properly ===
             user = new User();
             user.setUsername(generateUsername(attributes, provider));
@@ -85,7 +85,7 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
             user = userMapper.toEntity(savedDto);
 
         } else {
-            user = userMapper.toEntity(listUserDto.get(0));
+            user = userMapper.toEntity(optUserDto.get());
         }
 
         // Extra safety for legacy users with null/empty roles

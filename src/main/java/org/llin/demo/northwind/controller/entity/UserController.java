@@ -1,6 +1,6 @@
 package org.llin.demo.northwind.controller.entity;
 
-import java.util.List;
+import java.util.Optional;
 
 import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
@@ -35,10 +35,10 @@ public class UserController<T extends EntityObject> extends _EntityController<T>
 	@GetMapping("/findByUsername/{name}")
 	public ModelAndView findByUsername(@PathVariable String name) {
 		ModelAndView mav = createDefaultModelAndView();
-		List<UserDto> list = service.findByUsername(name);
+		Optional<UserDto> optUserDto = service.findByUsername(name);
 
-		if (!list.isEmpty()) {
-			mav.addObject(USER, list);
+		if (optUserDto.isPresent()) {
+			mav.addObject(USER, optUserDto);
 			mav.setViewName("users/detail");
 		} else {
 			mav.setViewName("error/404");
@@ -50,10 +50,10 @@ public class UserController<T extends EntityObject> extends _EntityController<T>
 	@GetMapping("/findByEmail/{email}")
 	public ModelAndView findByEmail(@PathVariable String email) {
 		ModelAndView mav = createDefaultModelAndView();
-		List<UserDto> list = service.findByEmail(email);
+		Optional<UserDto> optUserDto = service.findByEmail(email);
 
-		if (!list.isEmpty()) {
-			mav.addObject(USER, list);
+		if (optUserDto.isPresent()) {
+			mav.addObject(USER, optUserDto);
 			mav.setViewName("users/detail");
 		} else {
 			mav.setViewName("error/404");
@@ -65,10 +65,10 @@ public class UserController<T extends EntityObject> extends _EntityController<T>
 	@GetMapping("/findByVerificationToken/{token}")
 	public ModelAndView findByVerificationToken(@PathVariable String token) {
 		ModelAndView mav = createDefaultModelAndView();
-		List<UserDto> list = service.findByVerificationToken(token);
+		Optional<UserDto> optUserDto = service.findByVerificationToken(token);
 
-		if (!list.isEmpty()) {
-			mav.addObject(USER, list);
+		if (optUserDto.isPresent()) {
+			mav.addObject(USER, optUserDto);
 			mav.setViewName("users/detail");
 		} else {
 			mav.setViewName("error/404");
