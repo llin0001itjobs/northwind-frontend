@@ -4,7 +4,12 @@
 <!-- page-register.html -->
 <meta charset="UTF-8">
 <title>Register User</title>
+<link rel="stylesheet" id="roboto-subset.css-css"
+	href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/mdb5/fonts/roboto-subset.css?ver=3.9.0-update.5"
+	type="text/css" media="all">
 
+<link rel="stylesheet"
+	href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/dist/mdb5/standard/core.min.css">
 <style>
 .container {
 	min-width: 300px;
@@ -12,87 +17,111 @@
 }
 </style>
 </head>
-<body>
-	<div class="container">
-		<div th:if="${message}" class="row alert alert-danger">
-			<p th:text="${message}"></p>
-		</div>
-		<!-- Register Form -->
-		<div class="container" id="formRegister">
-			<form method="post" th:action="@{/register}" th:object="${user}"
-				class="form-register mt-3 needs-validation" novalidate>
-				<h2 class="form-signin-heading">Register User</h2>
+<body
+	class="d-flex flex-column align-items-center justify-content-center vh-100 bg-light">
 
-				<div class="row mt-3">
-					<div class="text-danger" th:if="${#fields.hasErrors('username')}"
-						th:errors="*{username}"></div>
-					<label for="username" class="sr-only screenreader">User</label> <input
-						type="text" id="username" th:field="*{username}"
-						class="form-control" placeholder="User" required>
-				</div>
-				<div class="row mt-3">
-					<div class="text-danger" th:if="${#fields.hasErrors('email')}"
-						th:errors="*{email}"></div>
-					<label for="email" class="sr-only screenreader">Email</label> <input
-						type="email" id="email" th:field="*{email}" class="form-control"
-						placeholder="Email" required>
-				</div>
-				<!-- New Password -->
-				<div class="row mt-3">
-					<div class="text-danger"
-						th:if="${#fields.hasErrors('newPassword')}"
-						th:errors="*{newPassword}"></div>
-					<label for="newPassword" class="sr-only screenreader">New
-						Password <span class="text-danger">*</span>
-					</label>
-					<!-- Bootstrap inline error message -->
-					<div class="invalid-feedback">Must contain at least 12
-						characters, including 1 uppercase letter, 1 lowercase letter, 1
-						number, and 1 special character.</div>
-					<input type="password" id="newPassword" th:field="*{newPassword}"
-						class="form-control" placeholder="New Password" required
-						minlength="12" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
-						title="Must contain at least 12 characters, including 1 uppercase, 1 lowercase, 1 number, and 1 special character (@$!%*?&-).">
+	<!-- Main Content Container -->
+	<section class="w-100 px-4 py-5">
+		<!-- align-items-center vertically aligns the image and form on desktop -->
+		<div class="row d-flex justify-content-center align-items-center">
+
+			<!-- Left Side on Desktop / Top on Mobile -->
+			<div class="col-12 col-md-5 col-lg-5 col-xl-5 mb-4 mb-md-0">
+				<img th:src="@{/images/register.png}" class="img-fluid"
+					alt="Registration image">
+			</div>
+
+			<!-- Right Side on Desktop / Bottom on Mobile Container -->
+			<div class="col-12 col-md-7 col-lg-6 col-xl-5">
+
+				<!-- Messages sit nicely inside the column -->
+				<div th:if="${message}">
+					<span th:text="${message}"></span>
 				</div>
 
-				<!-- Confirm Password -->
-				<div class="row mt-3">
-					<div class="text-danger"
-						th:if="${#fields.hasErrors('confirmPassword')}"
-						th:errors="*{confirmPassword}"></div>
-					<label for="confirmPassword" class="sr-only screenreader">Confirm
-						Password <span class="text-danger">*</span>
-					</label>
-					<!-- Bootstrap inline error message -->
-					<div class="invalid-feedback">Must contain at least 12
-						characters, including 1 uppercase letter, 1 lowercase letter, 1
-						number, and 1 special character.</div>
-					<input type="password" id="confirmPassword"
-						th:field="*{confirmPassword}" class="form-control"
-						placeholder="Confirm Password" required minlength="12"
-						pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
-						title="Must contain at least 12 characters, including 1 uppercase, 1 lowercase, 1 number, and 1 special character (@$!%*?&-).">
-				</div>
-				<div class="row mt-3">
-					<div class="col">
-						<button type="submit" class="btn btn-secondary my-1"
-							value="cancel">Cancel</button>
+				<!-- The form is now properly nested inside the column grid -->
+				<form method="post" th:action="@{/register}" th:object="${user}"
+					class="form-register mt-3 needs-validation" novalidate>
+
+					<h2 class="form-signin-heading">Register User</h2>
+
+					<div class="row mt-3">
+						<div class="text-danger" th:if="${#fields.hasErrors('username')}"
+							th:errors="*{username}"></div>
+						<label for="username" class="sr-only screenreader">User</label> <input
+							type="text" id="username" th:field="*{username}"
+							class="form-control" placeholder="User" required>
 					</div>
-					<div class="col">
-						<button type="submit" class="btn btn-primary my-1" value="done">Done</button>
+					<div class="row mt-3">
+						<div class="text-danger" th:if="${#fields.hasErrors('email')}"
+							th:errors="*{email}"></div>
+						<label for="email" class="sr-only screenreader">Email</label> <input
+							type="email" id="email" th:field="*{email}" class="form-control"
+							placeholder="Email" required>
 					</div>
-				</div>
-				<div class="row">
-					<input type="hidden" th:name="${_csrf.parameterName}"
-						th:value="${_csrf.token}">
-				</div>
-			</form>
+					<!-- New Password -->
+					<div class="row mt-3">
+						<div class="text-danger"
+							th:if="${#fields.hasErrors('newPassword')}"
+							th:errors="*{newPassword}"></div>
+						<label for="newPassword" class="sr-only screenreader">New
+							Password <span class="text-danger">*</span>
+						</label>
+						<!-- Bootstrap inline error message -->
+						<div class="invalid-feedback">Must contain at least 12
+							characters, including 1 uppercase letter, 1 lowercase letter, 1
+							number, and 1 special character.</div>
+						<input type="password" id="newPassword" th:field="*{newPassword}"
+							class="form-control" placeholder="New Password" required
+							minlength="12" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
+							title="Must contain at least 12 characters, including 1 uppercase, 1 lowercase, 1 number, and 1 special character (@$!%*?&-).">
+					</div>
+
+					<!-- Confirm Password -->
+					<div class="row mt-3">
+						<div class="text-danger"
+							th:if="${#fields.hasErrors('confirmPassword')}"
+							th:errors="*{confirmPassword}"></div>
+						<label for="confirmPassword" class="sr-only screenreader">Confirm
+							Password <span class="text-danger">*</span>
+						</label>
+						<!-- Bootstrap inline error message -->
+						<div class="invalid-feedback">Must contain at least 12
+							characters, including 1 uppercase letter, 1 lowercase letter, 1
+							number, and 1 special character.</div>
+						<input type="password" id="confirmPassword"
+							th:field="*{confirmPassword}" class="form-control"
+							placeholder="Confirm Password" required minlength="12"
+							pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
+							title="Must contain at least 12 characters, including 1 uppercase, 1 lowercase, 1 number, and 1 special character (@$!%*?&-).">
+					</div>
+					<div class="row mt-3">
+						<div class="col text-center">
+							<button type="submit" class="btn btn-secondary my-1"
+								value="cancel">Cancel</button>
+						</div>
+						<div class="col text-center">
+							<button type="submit" class="btn btn-primary my-1" value="done">Done</button>
+						</div>
+					</div>
+
+				</form>
+				<!-- 1. Close form first -->
+
+			</div>
+			<!-- 2. Close the responsive layout column last -->
+
 		</div>
+	</section>
+
+
+	<!-- Footer Fragment -->
+	<div class="container footer-container mt-auto pb-3">
+		<div th:replace="~{fragments/footer :: footer}"></div>
 	</div>
-		<div class="container footer-container">
-		<div th:replace="fragments/footer :: footer"></div>
-	</div>
-	<div th:replace="fragments/script :: div"></div>
+
+	<!-- Script Fragment -->
+	<div th:replace="~{fragments/script :: div}"></div>
 </body>
 <script>
 	document.getElementById('confirmPassword').addEventListener('input',

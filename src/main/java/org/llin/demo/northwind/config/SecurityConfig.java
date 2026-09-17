@@ -53,6 +53,12 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable())
             .authenticationProvider(authenticationProvider) // Register the database custom provider context
             .authorizeHttpRequests(auth -> auth
+            	.requestMatchers(
+            	    "/actuator/**",
+            	    "/actuator/health",
+            	    "/actuator/env",
+            	    "/actuator/configprops")
+            	    .permitAll()
                 .requestMatchers("/", "/forgotUser", "/login", "/register",
                                  "/requestNewPassword", "/requestPassword",
                                  "/setNewPassword", "/setPassword", "/verify",

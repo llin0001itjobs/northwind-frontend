@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import org.llin.demo.northwind.config.PropertyDefaultProperties;
 import org.llin.demo.northwind.model.entity.Role;
 import org.llin.demo.northwind.model.entity.User;
 import org.llin.demo.northwind.service.EmailService;
 import org.llin.demo.northwind.service.entity.UserService;
 import org.llin.demo.northwind.service.entity.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +20,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import jakarta.annotation.PostConstruct;
 import jakarta.mail.MessagingException;
 import jakarta.validation.Valid;
 
@@ -36,6 +39,24 @@ public class RegisterController {
 	@Autowired
     private PasswordEncoder passwordEncoder;
 	
+	@Autowired
+	private PropertyDefaultProperties props;
+		
+    @Value("${spring.mail.host}") String host;
+    @Value("${spring.mail.port}") int port;
+    @Value("${spring.mail.username:}") String username;
+    @Value("${spring.mail.password:}") String password;
+
+    @PostConstruct
+    void dump() {
+        String envUser = System.getenv("SPRING_MAIL_USERNAME");
+        String envPass = System.getenv("SPRING_MAIL_PASSWORD");
+        System.out.println("MAIL host={" + host + "} port={" + port + "} username={" + username + "}");
+        System.out.println("passwordLen={" + password == null ? 0 : password.length() + "}");
+        System.out.println("envUserSet={" + (envUser != null) +"} envPassSet={" + (envPass != null) + "}");
+
+    }
+    
 	@GetMapping("/register")
 	public String showRegisterForm(@ModelAttribute("user") User user) {
 		return "page-register";
@@ -83,7 +104,7 @@ public class RegisterController {
 	    user.setConfirmPassword(null);
 	    
 	    Role role = new Role();
-	    role.setType("USER");
+	    role.setType("ROLE_USER");
 	    List<Role> roles = new ArrayList<>();
 	    roles.add(role);
 	    // Finish registration
@@ -95,7 +116,7 @@ public class RegisterController {
 	    userService.create(userMapper.toDto(user));
 
 	    // Send verification email (your existing code)
-	    String verificationLink = "http://localhost:8081/northwind/verify?token=" + user.getVerificationToken();
+	    String verificationLink = "http://localhost:" + props.getServer().getPort() + "/northwind/verify?token=" + user.getVerificationToken();
 	    String verificationText = "Please verify your email by clicking this link: " + verificationLink;
 
 	    try {

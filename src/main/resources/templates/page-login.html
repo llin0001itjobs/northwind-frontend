@@ -30,30 +30,27 @@
 
 	<!-- Main Content Container -->
 	<section class="w-100 px-4 py-5">
-
-
 		<div class="row d-flex justify-content-center">
-			<div class="col-md-8 col-lg-7 col-xl-6">
+			<!-- Left Side on Desktop / Top on Mobile -->
+			<div class="col-12 col-md-5 col-lg-5 col-xl-5 mb-4 mb-md-0">
 				<img th:src="@{/images/girl_key.png}" class="img-fluid"
-					alt="Phone image">
+					alt="Girl and Key">
 			</div>
-			<div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-					<div th:if ="${message}">
-						<span th:text="${message}"></span>
-					</div>
-				</th:if>
+			<!-- Right Side on Desktop / Bottom on Mobile -->
+			<div class="col-12 col-md-7 col-lg-6 col-xl-5">
+				<div th:if="${message}">
+					<span th:text="${message}"></span>
+				</div>
 				<form class="form-signin" method="post" th:action="@{/login}"
 					th:object="${user}">
 					<!-- Email input -->
 					<div data-mdb-input-init="" class="form-outline mb-4"
-						data-mdb-input-initialized="true">												
-						<input type="text"
-							id="username" class="form-control form-control-lg"
-							data-ddg-inputtype="credentials.username"
-							th:field="*{username}"> 
-						<label
-							class="form-label" for="username" 
-							style="margin-left: 0px;">User / Email address</label>
+						data-mdb-input-initialized="true">
+						<input type="text" id="username"
+							class="form-control form-control-lg"
+							data-ddg-inputtype="credentials.username" th:field="*{username}">
+						<label class="form-label" for="username" style="margin-left: 0px;">User
+							/ Email</label>
 						<div class="form-notch">
 							<div class="form-notch-leading" style="width: 9px;"></div>
 							<div class="form-notch-middle" style="width: 88.8px;"></div>
@@ -77,14 +74,19 @@
 						</div>
 					</div>
 
-					<div class="d-flex justify-content-around align-items-center mb-4">
+					<div class="d-flex justify-content-around align-items-left mb-4">
 						<!-- Checkbox -->
-						<div class="form-check">
+						<div class="col form-check">
 							<input class="form-check-input" type="checkbox" value=""
 								id="rememberMe" checked=""> <label
 								class="form-check-label" for="rememberMe"> Remember me </label>
 						</div>
-						<a th:href="@{/forgotpassword}">Forgot password?</a>
+						<div class="col text-center">
+							<a th:href="@{/forgotpassword}">Forgot password?</a>
+						</div>
+						<div class="col text-center" data-bs-toggle="collapse">
+							<a th:href="@{/register}">Register</a>
+						</div>
 					</div>
 
 					<!-- Submit button -->
@@ -96,18 +98,16 @@
 						<p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
 					</div>
 
-					<a data-mdb-ripple-init="" 
-						th:href="@{/oauth2/authorization/facebook}" 
+					<a data-mdb-ripple-init=""
+						th:href="@{/oauth2/authorization/facebook}"
 						class="btn btn-primary btn-lg btn-block"
 						style="background-color: #3b5998" href="#!" role="button"> <i
 						class="fab fa-facebook-f me-2"></i>Continue with Facebook
-					</a><a data-mdb-ripple-init
-						   th:href="@{/oauth2/authorization/github}"
-						   class="btn btn-primary btn-lg btn-block"
-						   style="background-color: #24292f"
-						   role="button">
-						  <i class="fab fa-github me-2"></i>Continue with GitHub
-						</a>
+					</a><a data-mdb-ripple-init th:href="@{/oauth2/authorization/github}"
+						class="btn btn-primary btn-lg btn-block"
+						style="background-color: #24292f" role="button"> <i
+						class="fab fa-github me-2"></i>Continue with GitHub
+					</a>
 
 				</form>
 			</div>
