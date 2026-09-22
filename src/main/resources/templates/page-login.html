@@ -38,7 +38,7 @@
 			</div>
 			<!-- Right Side on Desktop / Bottom on Mobile -->
 			<div class="col-12 col-md-7 col-lg-6 col-xl-5">
-				<div th:if="${message}">
+				<div class="fw text-danger" th:if="${message}">
 					<span th:text="${message}"></span>
 				</div>
 				<form class="form-signin" method="post" th:action="@{/login}"

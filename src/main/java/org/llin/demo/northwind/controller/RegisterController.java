@@ -119,9 +119,13 @@ public class RegisterController {
 	    String verificationLink = "http://localhost:" + props.getServer().getPort() + "/northwind/verify?token=" + user.getVerificationToken();
 	    String verificationText = "Please verify your email by clicking this link: " + verificationLink;
 
+	 // Format explicitly using structured HTML tags
+	    String htmlContent = "<p>Please verify your email by clicking the link below:</p>"
+	                       + "<p><a href=\"" + verificationLink + "\">Verify Email Address</a></p>";
+
 	    try {
-	        emailService.sendHtmlEmail(user.getEmail(), "Verify Your Email",
-	                emailService.convertToHtml(verificationText));
+	        // Send the raw HTML content directly instead of converting it
+	        emailService.sendHtmlEmail(user.getEmail(), "Verify Your Email", htmlContent);
 	    } catch (MessagingException e) {
 	        e.printStackTrace();
 	    }

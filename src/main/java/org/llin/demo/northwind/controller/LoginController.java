@@ -42,13 +42,13 @@ public class LoginController {
 	@GetMapping("/login")
 	public String handleLogin(@ModelAttribute("user") User user, @RequestParam(required = false) String register,
 			@RequestParam(required = false) String verified, @RequestParam(required = false) String registrationSuccess,
-			@RequestParam(required = false) String error, 
-			@RequestParam(required = false) String passwordReset, Model model) {
+			@RequestParam(required = false) String error, @RequestParam(required = false) String passwordReset,
+			Model model) {
 
 		if (passwordReset != null) {
 			model.addAttribute("message", "Password successfully reset.");
 		}
-		
+
 		if (registrationSuccess != null) {
 			model.addAttribute("message", "Registration successful. Please check your email to verify.");
 		}
@@ -60,16 +60,15 @@ public class LoginController {
 		if (error != null) {
 			model.addAttribute("message", "Login Failed.");
 		}
-		
-	    if (user.getUsername() == null && user.getPassword() == null) {
-	        model.addAttribute("user", new User());
-	    } else {
-	        model.addAttribute("user", user); // Keeps the values the user typed in
-	    }
+
+		if (user.getUsername() == null && user.getPassword() == null) {
+			model.addAttribute("user", new User());
+		} else {
+			model.addAttribute("user", user); // Keeps the values the user typed in
+		}
 		model.addAttribute("register", register != null); // Still toggles form mode
 		return "page-login";
 	}
-
 
 	@PostMapping("/setPassword")
 	public String setPassword(@ModelAttribute("user") User user, @RequestParam(required = false) String success,
@@ -88,17 +87,16 @@ public class LoginController {
 
 		User user = new User();
 		Optional<UserDto> optUserDto = userService.findByVerificationToken(token);
-		
+
 		if (optUserDto.isPresent()) {
 			UserDto dto = optUserDto.get();
-			
-			user.setEmail(dto.email());			
+
+			user.setEmail(dto.email());
 			user.setEnabled(true);
 			user.setEmailVerified(true);
-			user.setVerificationToken(token);			
+			user.setVerificationToken(token);
 			userService.update(dto.id(), dto);
 
-			// Send confirmed email
 			emailService.sendSimpleEmail(dto.email(), subjectVerified, textVerified);
 
 			return "redirect:/login?verified=true";
@@ -107,4 +105,3 @@ public class LoginController {
 	}
 
 }
-
