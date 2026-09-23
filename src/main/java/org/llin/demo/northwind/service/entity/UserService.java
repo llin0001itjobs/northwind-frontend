@@ -66,13 +66,15 @@ public class UserService {
 		payload.put("password", user.password());
 		payload.put("email", user.email());
 		payload.put("enabled", user.enabled());
+		payload.put("emailVerified", user.emailVerified());
+		payload.put("verificationToken", user.verificationToken());
 
 		// 2. Map the roles to pure URI strings instead of full objects
 		if (user.roles() != null) {
 			java.util.List<String> roleUris = user.roles().stream()
 					.map(role -> props.getApp().getData().getApiUri() + "role/" + role.id()) // Make sure this matches
-																								// your exact backend
-																								// role path
+																							 // your exact backend
+																							 // role path
 					.toList();
 			payload.put("roles", roleUris);
 		}
@@ -99,7 +101,9 @@ public class UserService {
 	    payload.put("password", user.password());
 	    payload.put("email", user.email());
 	    payload.put("enabled", user.enabled());
-
+		payload.put("emailVerified", user.emailVerified());
+		payload.put("verificationToken", user.verificationToken());
+		
 	    // 2. Map the roles to pure URI strings instead of full objects
 	    if (user.roles() != null) {
 	        java.util.List<String> roleUris = user.roles().stream()
@@ -128,8 +132,8 @@ public class UserService {
 	    return findByObject(email, "email", "findByEmail");
 	}
 
-	public Optional<UserDto> findByVerificationToken(String token) {
-	    return findByObject(token, "token", "findByVerificationToken");
+	public Optional<UserDto> findByVerificationToken(String verificationToken) {
+	    return findByObject(verificationToken, "verificationToken", "findByVerificationToken");
 	}
 
 	private Optional<UserDto> findByObject(Object value, String paramName, String searchMethod) {

@@ -28,7 +28,9 @@ public class UserDtoDeserializer extends JsonDeserializer<UserDto> {
         String password = node.has("password") ? node.get("password").asText() : "";
         String email = node.has("email") ? node.get("email").asText() : "";
         boolean enabled = node.has("enabled") && node.get("enabled").asBoolean();
-
+        boolean emailVerified = node.has("emailVerified") && node.get("emailVerified").asBoolean();
+        String verificationToken = node.has("verificationToken") ? node.get("verificationToken").asText() : "";
+        
         List<RoleDto> roles = new ArrayList<>();
         
         // Handle incoming data if it contains a nested JSON array format
@@ -44,6 +46,6 @@ public class UserDtoDeserializer extends JsonDeserializer<UserDto> {
             // For now, initializing an empty array ensures parser stability
         }
 
-        return new UserDto(id, roles, username, password, email, enabled);
+        return new UserDto(id, roles, username, password, email, enabled,emailVerified,verificationToken);
     }
 }

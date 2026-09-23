@@ -115,20 +115,19 @@ public class RegisterController {
 
 	    userService.create(userMapper.toDto(user));
 
-	    // Send verification email (your existing code)
+	 // 1. Keep your link generation intact
 	    String verificationLink = "http://localhost:" + props.getServer().getPort() + "/northwind/verify?token=" + user.getVerificationToken();
-	    String verificationText = "Please verify your email by clicking this link: " + verificationLink;
 
-	 // Format explicitly using structured HTML tags
+	    // 2. Fix the HTML template by assigning verificationLink straight into href
 	    String htmlContent = "<p>Please verify your email by clicking the link below:</p>"
-	                       + "<p><a href=\"" + verificationLink + "\">Verify Email Address</a></p>";
+	        + "<p><a href=\"" + verificationLink + "\">Verify Email Address</a></p>";
 
 	    try {
-	        // Send the raw HTML content directly instead of converting it
 	        emailService.sendHtmlEmail(user.getEmail(), "Verify Your Email", htmlContent);
 	    } catch (MessagingException e) {
 	        e.printStackTrace();
 	    }
+
 
 	    return "redirect:/login?registrationSuccess=true";
 	}
