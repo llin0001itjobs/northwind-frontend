@@ -5,7 +5,7 @@ import java.util.Optional;
 import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
 import org.llin.demo.northwind.dto.InventoryTransactionTypeDto;
-import org.llin.demo.northwind.model.entity.EntityObject;
+import org.llin.demo.northwind.model.entity._EntityObject;
 import org.llin.demo.northwind.service.entity.InventoryTransactionTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/inventoryTransactionType")
-public class InventoryTransactionTypeController<T extends EntityObject> extends _EntityController<T> implements _Classes_EntityObject, _Titles {
+@RequestMapping("/entity/inventoryTransactionType")
+public class InventoryTransactionTypeController<T extends _EntityObject> extends _EntityController<T> implements _Classes_EntityObject, _Titles {
 
 	@Autowired
 	private InventoryTransactionTypeService service;
@@ -51,7 +51,7 @@ public class InventoryTransactionTypeController<T extends EntityObject> extends 
 		ModelAndView mv = new ModelAndView(getModelAndView().getView()); 
 		mv.addObject(INVENTORY_TRANSACTION_TYPES,service.findAll());
 		mv.addObject(TITLE, TITLE_INVENTORY_TRANSACTION_TYPE);
-		mv.setViewName("entities/inventoryTransactionType");
+		mv.setViewName("entity/inventoryTransactionType");
 		return mv;		
 	}
 

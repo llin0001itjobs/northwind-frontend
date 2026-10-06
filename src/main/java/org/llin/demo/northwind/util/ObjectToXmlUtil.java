@@ -1,12 +1,12 @@
 package org.llin.demo.northwind.util;
 
 import org.llin.demo.northwind.model.entity.Employee;
-import org.llin.demo.northwind.model.entity.EntityObject;
+import org.llin.demo.northwind.model.entity._EntityObject;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
-public class ObjectToXmlUtil<T extends EntityObject> {
+public class ObjectToXmlUtil<T extends _EntityObject> {
 
 	public String getXML(T[] entityObjects) {
 		// Create XmlMapper

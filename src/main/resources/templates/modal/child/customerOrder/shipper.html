@@ -2,13 +2,12 @@
 <div>
 	<div th:each="s : ${Shippers}" class="modal fade"
 		data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-		th:attr="id='modalShipper-' + ${s.getId()}, aria-labelledby='modalShipperLabel-' + ${s.getId()}"
+		th:attr="id='modalShipper-' + ${s.id}, aria-labelledby='modalShipperLabel-' + ${s.id}"
 		aria-hidden="true">
 		<div class="modal-dialog modal-lg modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title"
-						th:attr="id='modalShipperLabel-' + ${s.getId()}">
+					<h5 class="modal-title" th:attr="id='modalShipperLabel-' + ${s.id}">
 						Shipper</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal"
 						aria-label="Close"></button>
@@ -17,20 +16,20 @@
 					<dl class="row">
 						<dt class="col">Name</dt>
 						<dd class="col">
-							<span th:text="${s.getFirstName()}"></span> &nbsp; <span
-								th:text="${s.getLastName()}"></span>
+							<span th:text="${c.firstName}"></span> &nbsp; <span
+								th:text="${c.lastName}"></span>
 						</dd>
 					</dl>
 					<dl class="row">
 						<dt class="col">Job Title</dt>
 						<dd class="col">
-							<span th:text="${s.getJobTitle()}"></span>
+							<span th:text="${c.jobTitle}"></span>
 						</dd>
 					</dl>
 					<dl class="row">
 						<dt class="col">Notes</dt>
 						<dd class="col">
-							<span th:text="${s.getNotes()}"></span>
+							<span th:text="${c.notes}"></span>
 						</dd>
 					</dl>
 				</div>

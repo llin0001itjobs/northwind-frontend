@@ -29,7 +29,7 @@ public class CompanyService {
     }
 
     private static class CompanyList {
-        @com.fasterxml.jackson.annotation.JsonProperty("company")
+        @com.fasterxml.jackson.annotation.JsonProperty("companies")
         public List<CompanyDto> Company;
     }
 

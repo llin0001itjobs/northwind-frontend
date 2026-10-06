@@ -9,7 +9,7 @@ import org.llin.demo.northwind._Classes_CustomObject;
 import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
 import org.llin.demo.northwind.dto.PurchaseOrderDetailDto;
-import org.llin.demo.northwind.model.entity.EntityObject;
+import org.llin.demo.northwind.model.entity._EntityObject;
 import org.llin.demo.northwind.service.entity.CustomerOrderService;
 import org.llin.demo.northwind.service.entity.InventoryTransactionService;
 import org.llin.demo.northwind.service.entity.OrderStatusService;
@@ -31,8 +31,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/purchaseOrderDetail")
-public class PurchaseOrderDetailController<T extends EntityObject> extends _EntityController<T>
+@RequestMapping("/entity/purchaseOrderDetail")
+public class PurchaseOrderDetailController<T extends _EntityObject> extends _EntityController<T>
 		implements _Classes_CustomObject, _Classes_EntityObject, _Titles {
 
 	private final PurchaseOrderDetailService purchaseOrderDetailService;
@@ -174,7 +174,7 @@ public class PurchaseOrderDetailController<T extends EntityObject> extends _Enti
 		mv.addObject(PRODUCTS, productService.findAll());
 		mv.addObject(PURCHASE_ORDERS, purchaseOrderService.findAll());
 		mv.addObject(TITLE, TITLE_PURCHASE_ORDER_DETAIL);
-		mv.setViewName("entities/purchaseOrderDetail");
+		mv.setViewName("entity/purchaseOrderDetail");
 		return mv;
 	}
 

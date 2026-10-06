@@ -1,6 +1,11 @@
 package org.llin.demo.northwind.menu;
 
+import java.util.List;
+
 public class MenuEntitiesContainer<T extends MenuEntity> {
+	private static final String PATH_ENTITIES = "/entity/";
+	private static final String LIST = "/list";
+	
 	private MenuEntities<T> entities = new MenuEntities<>();
 	private boolean addlistSubpath;
 	
@@ -20,24 +25,28 @@ public class MenuEntitiesContainer<T extends MenuEntity> {
 		this.addlistSubpath = addlistSubpath;
 	}
 	
-	public void addListSubpathForAll() {		
-		for (MenuEntity me : entities.getFirstOrder()) {
-			me.setAddListSubpath(addlistSubpath);
-			me.setPath(me.getPath());			
-		}
-		for (MenuEntity me : entities.getSecondOrder()) {
-			me.setAddListSubpath(addlistSubpath);
-			me.setPath(me.getPath());			
-		}
-		for (MenuEntity me : entities.getThirdOrder()) {
-			me.setAddListSubpath(addlistSubpath);
-			me.setPath(me.getPath());			
-		}		
-		for (MenuEntity me : entities.getType()) {
-			me.setAddListSubpath(addlistSubpath);
-			me.setPath(me.getPath());			
-		}		
-		
+	public void addListSubpathForAll() {
+	    prefix(entities.getFirstOrder());
+	    prefix(entities.getSecondOrder());
+	    prefix(entities.getThirdOrder());
+	    prefix(entities.getType());
+	}
+
+	private void prefix(List<? extends MenuEntity> list) {
+	    for (MenuEntity me : list) {
+	        me.setAddListSubpath(addlistSubpath);
+	        if (!addlistSubpath || me.getPath() == null) {
+	            continue;
+	        }
+	        String path = me.getPath();
+	        if (!path.startsWith(PATH_ENTITIES)) {
+	            path = PATH_ENTITIES + path;
+	        }
+	        if (!path.endsWith(LIST)) {
+	            path = path + LIST;
+	        }
+	        me.setPath(path);
+	    }
 	}
 	
 	@Override

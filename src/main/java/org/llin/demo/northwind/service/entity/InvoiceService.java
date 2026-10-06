@@ -34,7 +34,7 @@ public class InvoiceService {
     }
 
     private static class InvoiceList {
-        @com.fasterxml.jackson.annotation.JsonProperty("invoice")
+        @com.fasterxml.jackson.annotation.JsonProperty("invoices")
         public List<InvoiceDto> Invoice;
     }
 

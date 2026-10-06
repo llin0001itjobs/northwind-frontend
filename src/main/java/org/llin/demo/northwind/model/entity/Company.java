@@ -1,6 +1,6 @@
 package org.llin.demo.northwind.model.entity;
 
-public class Company extends EntityObject {
+public class Company extends _EntityObject {
 			
 	private String name;
 		

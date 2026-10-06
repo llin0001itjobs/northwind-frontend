@@ -1,6 +1,6 @@
 package org.llin.demo.northwind.model.entity;
 
-public class Privilege extends EntityObject {
+public class Privilege extends _EntityObject {
 			
 	private String privilegeName;
 	

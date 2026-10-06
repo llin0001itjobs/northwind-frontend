@@ -33,7 +33,7 @@ public class InventoryTransactionService {
 	}
 
 	private static class InventoryTransactionList {
-		@com.fasterxml.jackson.annotation.JsonProperty("inventoryTransaction")
+		@com.fasterxml.jackson.annotation.JsonProperty("inventoryTransactions")
 		public List<InventoryTransactionDto> InventoryTransaction;
 	}
 

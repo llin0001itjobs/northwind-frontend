@@ -2,20 +2,12 @@ package org.llin.demo.northwind.controller.entity;
 
 import org.llin.demo.northwind._Values;
 import org.llin.demo.northwind.menu.EntityMenuManager;
-import org.llin.demo.northwind.model.entity.EntityObject;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.llin.demo.northwind.model.entity._EntityObject;
 import org.springframework.web.servlet.ModelAndView;
 
-@Controller
-@RequestMapping("/entity")
-public class _EntityController<T extends EntityObject> implements _Values {
+public abstract class _EntityController<T extends _EntityObject> implements _Values {
 
 	public static final String ACTIVE_NAV_ITEM = "ACTIVE_NAV_ITEM";
-
-	@Autowired
-	EntityMenuManager entityMapper;
 
 	ModelAndView modelAndView = new ModelAndView();
 
@@ -24,6 +16,7 @@ public class _EntityController<T extends EntityObject> implements _Values {
 	}
 
 	public void loadMenu() {
+		EntityMenuManager entityMapper = new EntityMenuManager(); 
 		modelAndView.addObject(ACTIVE_NAV_ITEM, "nav-item-entities");
 		modelAndView.addObject(MENU_FIRST_ORDER, entityMapper.getMappedEntities().getEntities().getFirstOrder());
 		modelAndView.addObject(MENU_SECOND_ORDER, entityMapper.getMappedEntities().getEntities().getSecondOrder());

@@ -29,7 +29,7 @@ public class PurchaseOrderStatusService {
     }
 
     private static class PurchaseOrderStatusList {
-        @com.fasterxml.jackson.annotation.JsonProperty("purchaseOrderStatus")
+        @com.fasterxml.jackson.annotation.JsonProperty("purchaseOrderStatuses")
         public List<PurchaseOrderStatusDto> PurchaseOrderStatus;
     }
 

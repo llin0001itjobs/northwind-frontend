@@ -69,12 +69,14 @@ public class PropertyDefaultProperties {
 			public static class Subject {
 				private String verified;
 				private String registered;
+				private String forgotUser;
 			}
 
 			@lombok.Data
 			public static class Text {
 				private String verified;
 				private String registered;
+				private String forgotUser;
 			}
 		}
 

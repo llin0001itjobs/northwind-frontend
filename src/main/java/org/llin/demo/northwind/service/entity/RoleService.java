@@ -27,7 +27,7 @@ public class RoleService {
     }
 
     private static class RoleList {
-        @com.fasterxml.jackson.annotation.JsonProperty("role")
+        @com.fasterxml.jackson.annotation.JsonProperty("roles")
         public List<RoleDto> Role;
     }
 

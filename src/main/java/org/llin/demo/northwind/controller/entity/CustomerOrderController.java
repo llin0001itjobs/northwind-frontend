@@ -6,7 +6,7 @@ import org.llin.demo.northwind._Classes_CustomObject;
 import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
 import org.llin.demo.northwind.dto.CustomerOrderDto;
-import org.llin.demo.northwind.model.entity.EntityObject;
+import org.llin.demo.northwind.model.entity._EntityObject;
 import org.llin.demo.northwind.service.entity.CustomerOrderService;
 import org.llin.demo.northwind.service.entity.CustomerService;
 import org.llin.demo.northwind.service.entity.EmployeeService;
@@ -26,8 +26,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/customerOrder")
-public class CustomerOrderController<T extends EntityObject> extends _EntityController<T>
+@RequestMapping("/entity/customerOrder")
+public class CustomerOrderController<T extends _EntityObject> extends _EntityController<T>
 		implements _Classes_CustomObject, _Classes_EntityObject, _Titles {
 
 	private final CustomerOrderService customerOrderService;
@@ -214,7 +214,7 @@ public class CustomerOrderController<T extends EntityObject> extends _EntityCont
 		modelAndView.addObject(ORDER_STATUSES, orderStatusService.findAll());
 		modelAndView.addObject(ORDER_TAX_STATUSES, orderTaxStatusService.findAll());
 		modelAndView.addObject(TITLE, TITLE_CUSTOMER_ORDER);
-		modelAndView.setViewName("entities/customerOrder");
+		modelAndView.setViewName("entity/customerOrder");
 		return mav;
 	}
 

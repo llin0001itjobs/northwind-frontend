@@ -29,7 +29,7 @@ public class TypeStateService {
     }
 
     private static class TypeStateList {
-        @com.fasterxml.jackson.annotation.JsonProperty("typeState")
+        @com.fasterxml.jackson.annotation.JsonProperty("typeStates")
         public List<TypeStateDto> TypeState;
     }
 

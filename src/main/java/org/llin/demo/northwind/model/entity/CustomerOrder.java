@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 
-public class CustomerOrder extends EntityObject implements _Classes_EntityObject {
+public class CustomerOrder extends _EntityObject implements _Classes_EntityObject {
 			     	
 	private String shipName;
 

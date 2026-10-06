@@ -7,13 +7,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class MenuEntities<T extends MenuEntity> {
 	
-	@JsonProperty("first_order")
 	private List<T> firstOrder = new ArrayList<>();
 	
-	@JsonProperty("second_order")
 	private List<T> secondOrder = new ArrayList<>();
 	
-	@JsonProperty("third_order")
 	private List<T> thirdOrder = new ArrayList<>();
 	
 	@JsonProperty("type")

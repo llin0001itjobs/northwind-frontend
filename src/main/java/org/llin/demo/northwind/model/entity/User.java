@@ -6,7 +6,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
-public class User extends EntityObject {
+public class User extends _EntityObject {
 
     @NotBlank
     @Size(min = 3, max = 32)

@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
 import org.llin.demo.northwind.dto.ShipperDto;
-import org.llin.demo.northwind.model.entity.EntityObject;
+import org.llin.demo.northwind.model.entity._EntityObject;
 import org.llin.demo.northwind.service.entity.CompanyService;
 import org.llin.demo.northwind.service.entity.ShipperService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/shipper")
-public class ShipperController<T extends EntityObject> extends _EntityController<T> implements _Classes_EntityObject, _Titles {
+@RequestMapping("/entity/shipper")
+public class ShipperController<T extends _EntityObject> extends _EntityController<T> implements _Classes_EntityObject, _Titles {
 
 	private final ShipperService shipperService;
 	private final CompanyService companyService;
@@ -103,7 +103,7 @@ public class ShipperController<T extends EntityObject> extends _EntityController
 		mv.addObject(SHIPPERS,shipperService.findAll());
 		mv.addObject(COMPANIES,companyService.findAll());
 		mv.addObject(TITLE, TITLE_SHIPPER);
-		mv.setViewName("entities/shipper");
+		mv.setViewName("entity/shipper");
 		return mv;
 	}
 }

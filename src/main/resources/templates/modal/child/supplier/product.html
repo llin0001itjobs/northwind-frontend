@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <div th:each="s : ${Suppliers}" class="modal modal-xl fade"
 	data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-	th:attr="id='modalProduct-' + ${s.getId()}, aria-labelledby='modalProductLabel-' + ${s.getId()}"
+	th:attr="id='modalProduct-' + ${s.id}, aria-labelledby='modalProductLabel-' + ${s.id}"
 	aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title"
-					th:attr="id='modalProductLabel-' + ${s.getId()}">
+					th:attr="id='modalProductLabel-' + ${s.id}">
 					Product
 				</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal"
@@ -27,14 +27,14 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr th:each="p : ${s.getProducts().getProducts()}">
-							<td><span th:text="${p.getProductCode()}"></span></td>
-							<td><span th:text="${p.getProductName()}"></span></td>
-							<td><span th:text="${p.getCategory()}"></span></td>
-							<td><span th:text="${p.getStandardCost()}"></span></td>
-							<td><span th:text="${p.getListPrice()}"></span></td>
-							<td><span th:text="${p.getQuantityPerUnit()}"></span></td>
-							<td><span th:text="${p.getMinimumReorderQuantity()}"></span></td>
+						<tr th:each="p : ${s.products.products}">
+							<td><span th:text="${p.productCode}"></span></td>
+							<td><span th:text="${p.productName}"></span></td>
+							<td><span th:text="${p.category}"></span></td>
+							<td><span th:text="${p.standardCost}"></span></td>
+							<td><span th:text="${p.listPrice}"></span></td>
+							<td><span th:text="${p.quantityPerUnit}"></span></td>
+							<td><span th:text="${p.minimumReorderQuantity}"></span></td>
 						</tr>
 					</tbody>
 				</table>

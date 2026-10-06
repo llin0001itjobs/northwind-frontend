@@ -35,7 +35,7 @@ public class PurchaseOrderDetailService {
 	}
 
 	private static class PurchaseOrderDetailList {
-		@com.fasterxml.jackson.annotation.JsonProperty("purchaseOrderDetail")
+		@com.fasterxml.jackson.annotation.JsonProperty("purchaseOrderDetails")
 		public List<PurchaseOrderDetailDto> PurchaseOrderDetail;
 	}
 	

@@ -68,7 +68,6 @@ public class EntityMenuManager {
             mappedEntities.addListSubpathForAll();
 
             filesRead = true;
-
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException("Failed to load EntityMenu.json", e);

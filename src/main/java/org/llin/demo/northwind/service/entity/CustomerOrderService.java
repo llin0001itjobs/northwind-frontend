@@ -37,7 +37,7 @@ public class CustomerOrderService {
 	}
 
 	private static class CustomerOrderList {
-		@com.fasterxml.jackson.annotation.JsonProperty("customerOrder")
+		@com.fasterxml.jackson.annotation.JsonProperty("customerOrders")
 		public List<CustomerOrderDto> CustomerOrder;
 	}
 

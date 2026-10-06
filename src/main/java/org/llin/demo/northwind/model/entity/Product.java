@@ -4,9 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.llin.demo.northwind._Classes_EntityObject;
+import org.llin.demo.northwind.model.entity.links.Links;
 import org.llin.demo.northwind.util.StringUtil;
 
-public class Product extends EntityObject implements _Classes_EntityObject {
+public class Product extends _EntityObject implements _Classes_EntityObject {
 	
 	private String productCode;
 

@@ -1,4 +1,4 @@
-package org.llin.demo.northwind.model.entity;
+package org.llin.demo.northwind.model.entity.links;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,13 +9,14 @@ import java.util.TreeSet;
 
 import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._JsonKeys;
+import org.llin.demo.northwind.model.entity._EntityObject;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Links implements _Classes_EntityObject, _JsonKeys {
 	
 	private Map<String, Link> links = new HashMap<>();
-	private Map<String, EntityObject> linkObjects = new HashMap<>();
+	private Map<String, _EntityObject> linkObjects = new HashMap<>();
 	
 	public Links() {
 		super();
@@ -41,11 +42,11 @@ public class Links implements _Classes_EntityObject, _JsonKeys {
         this.links = links;
     }
    
-    public void addLinkObject(String linkName, EntityObject object) {
+    public void addLinkObject(String linkName, _EntityObject object) {
     	linkObjects.put(linkName, object);
     }
     
-    public EntityObject getLinkObject(String linkName) {
+    public _EntityObject getLinkObject(String linkName) {
         return linkObjects.get(linkName);
     }
         
@@ -53,11 +54,11 @@ public class Links implements _Classes_EntityObject, _JsonKeys {
     	return new ArrayList<>(new TreeSet<>(linkObjects.keySet()));
     }
         
-	public Map<String, EntityObject> getLinkObjects() {
+	public Map<String, _EntityObject> getLinkObjects() {
 		return linkObjects;
 	}
 
-	public void setLinkObjects(Map<String, EntityObject> linkObjects) {
+	public void setLinkObjects(Map<String, _EntityObject> linkObjects) {
 		this.linkObjects = linkObjects;
 	}
 	

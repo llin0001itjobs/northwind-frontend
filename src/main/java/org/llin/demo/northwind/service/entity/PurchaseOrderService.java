@@ -33,7 +33,7 @@ public class PurchaseOrderService {
 	}
 
 	private static class PurchaseOrderList {
-		@com.fasterxml.jackson.annotation.JsonProperty("purchaseOrder")
+		@com.fasterxml.jackson.annotation.JsonProperty("purchaseOrders")
 		public List<PurchaseOrderDto> PurchaseOrder;
 	}
 

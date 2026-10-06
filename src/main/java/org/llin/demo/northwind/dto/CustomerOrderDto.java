@@ -2,6 +2,12 @@ package org.llin.demo.northwind.dto;
 
 import java.time.LocalDateTime;
 
+import org.llin.demo.northwind.model.entity.links.Links;
+import org.llin.demo.northwind.model.entity.links.LinksDeserializer;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
 public record CustomerOrderDto(
 		 int id,
 
@@ -27,6 +33,9 @@ public record CustomerOrderDto(
 		 double taxRate,
 
 		 OrderTaxStatusDto orderTaxStatus,
-		 OrderStatusDto orderStatus
+		 OrderStatusDto orderStatus,
+         @JsonProperty("_links")
+         @JsonDeserialize(using = LinksDeserializer.class) 
+         Links links
 		
 ) {}

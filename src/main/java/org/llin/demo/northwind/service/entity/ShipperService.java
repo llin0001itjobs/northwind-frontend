@@ -32,7 +32,7 @@ public class ShipperService {
     }
 
     private static class ShipperList {
-        @com.fasterxml.jackson.annotation.JsonProperty("shipper")
+        @com.fasterxml.jackson.annotation.JsonProperty("shippers")
         public List<ShipperDto> Shipper;
     }
 

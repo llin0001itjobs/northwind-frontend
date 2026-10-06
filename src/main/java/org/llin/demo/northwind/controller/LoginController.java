@@ -1,5 +1,7 @@
 package org.llin.demo.northwind.controller;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 import org.llin.demo.northwind.config.PropertyDefaultProperties;
@@ -40,25 +42,46 @@ public class LoginController {
 	}
 
 	@GetMapping("/login")
-	public String handleLogin(@ModelAttribute("user") User user, @RequestParam(required = false) String register,
-			@RequestParam(required = false) String verified, @RequestParam(required = false) String registrationSuccess,
-			@RequestParam(required = false) String error, @RequestParam(required = false) String passwordReset,
+	public String handleLogin(@ModelAttribute("user") User user, 
+			@RequestParam(required = false) String error,
+			@RequestParam(required = false) String invalidToken,
+			@RequestParam(required = false) String passwordReset,
+			@RequestParam(required = false) String register,
+			@RequestParam(required = false) String registrationSuccess,
+			@RequestParam(required = false) String usernameSent,
+			@RequestParam(required = false) String verified, 
+			 
 			Model model) {
 
+		Map<String,String> map = new HashMap<>();
+		
+		if (error != null) {			
+			map.put("loginFailed","Login Failed. Try again.");
+			model.addAttribute("message", map);
+		}
+		
+		if (invalidToken != null) {			
+			map.put("invalidToken","Token is invalid.");
+			model.addAttribute("message", map);
+		}
+		
 		if (passwordReset != null) {
-			model.addAttribute("message", "Password successfully reset.");
+			map.put("passwordReset", "Password successfully reset.");
+			model.addAttribute("message", map);
 		}
 
 		if (registrationSuccess != null) {
-			model.addAttribute("message", "Registration successful. Please check your email to verify.");
+			map.put("registrationSuccessful","Registration successful. Please check your email to verify.");
+			model.addAttribute("message", map);
 		}
-
+		if (usernameSent != null) {
+		    map.put("usernameSent", "If that email is on file, the username was sent.");
+		    model.addAttribute("message", map);
+		}
+		
 		if (verified != null) {
-			model.addAttribute("message", "Email verified. Please log in.");
-		}
-
-		if (error != null) {
-			model.addAttribute("message", "Login Failed.");
+			map.put("verified","Email verified. Please log in.");
+			model.addAttribute("message", map);
 		}
 
 		if (user.getUsername() == null && user.getPassword() == null) {
@@ -84,24 +107,26 @@ public class LoginController {
 
 	@GetMapping("/verify")
 	public String verifyEmail(@RequestParam("token") String token) {
+	    Optional<UserDto> optUserDto = userService.findByVerificationToken(token);
+	    if (optUserDto.isEmpty()) {
+	        return "redirect:/login?invalidToken=true";
+	    }
 
-		User user = new User();
-		Optional<UserDto> optUserDto = userService.findByVerificationToken(token);
+	    UserDto dto = optUserDto.get();
+	    UserDto verified = new UserDto(
+	            dto.id(),
+	            dto.roles(),
+	            dto.username(),
+	            dto.password(),
+	            dto.email(),
+	            true,   // enabled
+	            true,   // emailVerified
+	            null    // consume the token
+	    );
 
-		if (optUserDto.isPresent()) {
-			UserDto dto = optUserDto.get();
-
-			user.setEmail(dto.email());
-			user.setEnabled(true);
-			user.setEmailVerified(true);
-			user.setVerificationToken(token);
-			userService.update(dto.id(), dto);
-
-			emailService.sendSimpleEmail(dto.email(), subjectVerified, textVerified);
-
-			return "redirect:/login?verified=true";
-		}
-		return "redirect:/login?error=invalidToken";
+	    userService.update(dto.id(), verified);
+	    emailService.sendSimpleEmail(dto.email(), subjectVerified, textVerified);
+	    return "redirect:/login?verified=true";
 	}
 
 }

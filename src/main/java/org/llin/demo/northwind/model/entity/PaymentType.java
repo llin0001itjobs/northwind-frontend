@@ -1,6 +1,6 @@
 package org.llin.demo.northwind.model.entity;
 
-public class PaymentType extends EntityObject {
+public class PaymentType extends _EntityObject {
 	
 	private String type;
 	private String description;

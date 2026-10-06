@@ -2,13 +2,13 @@
 <div>
 	<div th:each="c : ${CustomerOrders}" class="modal fade"
 		data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-		th:attr="id='modalCustomerOrder-' + ${c.getId()}, aria-labelledby='modalCustomerOrderLabel-' + ${c.getId()}"
+		th:attr="id='modalCustomerOrder-' + ${c.id}, aria-labelledby='modalCustomerOrderLabel-' + ${c.id}"
 		aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title"
-						th:attr="id='modalCustomerOrderLabel-' + ${c.getId()}">
+						th:attr="id='modalCustomerOrderLabel-' + ${c.id}">
 						Customer Order</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal"
 						aria-label="Close"></button>
@@ -18,21 +18,21 @@
 						<dt class="col">Order Date</dt>
 						<dd class="col">
 							<span
-								th:text="${#temporals.format(c.getOrderDate(), 'dd-MM-yyyy HH:mm')}"></span>
+								th:text="${#temporals.format(c.orderDate, 'dd-MM-yyyy HH:mm')}"></span>
 						</dd>
 					</dl>
 					<dl class="row">
 						<dt class="col">Paid Date</dt>
 						<dd class="col">
 							<span
-								th:text="${#temporals.format(c.getPaidDate(), 'dd-MM-yyyy HH:mm')}"></span>
+								th:text="${#temporals.format(c.paidDate, 'dd-MM-yyyy HH:mm')}"></span>
 						</dd>
 					</dl>
 					<dl class="row">
 						<dt class="col">Shipped Date</dt>
 						<dd class="col">
 							<span
-								th:text="${#temporals.format(c.getShippedDate(), 'dd-MM-yyyy HH:mm')}"></span>
+								th:text="${#temporals.format(c.shippedDate, 'dd-MM-yyyy HH:mm')}"></span>
 						</dd>
 					</dl>
 				</div>

@@ -1,6 +1,6 @@
 package org.llin.demo.northwind.model.entity;
 
-public class Authentication extends EntityObject {
+public class Authentication extends _EntityObject {
 
 	private String roleType;
 	private String userName;

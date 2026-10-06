@@ -5,7 +5,7 @@ import java.util.Optional;
 import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
 import org.llin.demo.northwind.dto.OrderTaxStatusDto;
-import org.llin.demo.northwind.model.entity.EntityObject;
+import org.llin.demo.northwind.model.entity._EntityObject;
 import org.llin.demo.northwind.service.entity.OrderTaxStatusService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/orderTaxStatus")
-public class OrderTaxStatusController<T extends EntityObject> extends _EntityController<T> implements _Classes_EntityObject, _Titles {
+@RequestMapping("/entity/orderTaxStatus")
+public class OrderTaxStatusController<T extends _EntityObject> extends _EntityController<T> implements _Classes_EntityObject, _Titles {
 	
 	private final OrderTaxStatusService service;
 	
@@ -50,7 +50,7 @@ public class OrderTaxStatusController<T extends EntityObject> extends _EntityCon
 		ModelAndView mv = new ModelAndView(getModelAndView().getView());			
 		mv.addObject(ORDER_TAX_STATUSES,service.findAll());
 		mv.addObject(TITLE, TITLE_ORDER_TAX_STATUS);
-		mv.setViewName("entities/orderTaxStatus");
+		mv.setViewName("entity/orderTaxStatus");
 		return mv;		
 	}
 	

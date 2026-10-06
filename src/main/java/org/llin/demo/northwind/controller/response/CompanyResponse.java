@@ -1,7 +1,7 @@
 package org.llin.demo.northwind.controller.response;
 
 import org.llin.demo.northwind.model.entity.Company;
-import org.llin.demo.northwind.model.entity.EntityObject;
+import org.llin.demo.northwind.model.entity._EntityObject;
 
 public class CompanyResponse extends BaseResponse {
 	
@@ -16,7 +16,7 @@ public class CompanyResponse extends BaseResponse {
 	}
 
 	@Override
-	public EntityObject[] getResponse() {
+	public _EntityObject[] getResponse() {
 		return companies;
 	}
 

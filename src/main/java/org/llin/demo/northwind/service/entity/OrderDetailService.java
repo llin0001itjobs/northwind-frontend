@@ -34,7 +34,7 @@ public class OrderDetailService {
     }
 
     private static class OrderDetailList {
-        @com.fasterxml.jackson.annotation.JsonProperty("orderDetail")
+        @com.fasterxml.jackson.annotation.JsonProperty("orderDetails")
         public List<OrderDetailDto> OrderDetail;
     }
 

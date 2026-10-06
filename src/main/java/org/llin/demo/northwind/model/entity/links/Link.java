@@ -1,4 +1,4 @@
-package org.llin.demo.northwind.model.entity;
+package org.llin.demo.northwind.model.entity.links;
 
 public class Link {
 

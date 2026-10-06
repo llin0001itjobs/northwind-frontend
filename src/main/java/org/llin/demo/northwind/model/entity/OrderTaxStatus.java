@@ -1,6 +1,6 @@
 package org.llin.demo.northwind.model.entity;
 
-public class OrderTaxStatus extends EntityObject {
+public class OrderTaxStatus extends _EntityObject {
 	
 	private String taxStatusName;
 

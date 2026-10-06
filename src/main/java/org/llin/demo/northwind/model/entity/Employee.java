@@ -7,7 +7,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 @Component
 @JacksonXmlRootElement(localName = "employee")
-public class Employee extends EntityObject implements _Classes_EntityObject {
+public class Employee extends _EntityObject implements _Classes_EntityObject {
 		
 	private String lastName;
 

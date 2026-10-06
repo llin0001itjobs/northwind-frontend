@@ -1,6 +1,6 @@
 package org.llin.demo.northwind.model.entity;
 
-public class InventoryTransactionType extends EntityObject {
+public class InventoryTransactionType extends _EntityObject {
 	
 	private String typeName;
 

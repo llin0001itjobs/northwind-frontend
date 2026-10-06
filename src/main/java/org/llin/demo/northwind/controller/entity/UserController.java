@@ -5,18 +5,23 @@ import java.util.Optional;
 import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
 import org.llin.demo.northwind.dto.UserDto;
-import org.llin.demo.northwind.model.entity.EntityObject;
+import org.llin.demo.northwind.model.entity._EntityObject;
 import org.llin.demo.northwind.service.entity.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/user")
-public class UserController<T extends EntityObject> extends _EntityController<T>
+@RequestMapping("/entity/user")
+public class UserController<T extends _EntityObject> extends _EntityController<T>
 		implements _Classes_EntityObject, _Titles {
 
 	@Autowired
@@ -32,6 +37,37 @@ public class UserController<T extends EntityObject> extends _EntityController<T>
 		return createDefaultModelAndView();
 	}
 
+    @GetMapping("/{id}")
+    public ModelAndView findById(@PathVariable Integer id) {
+    	ModelAndView mav = createDefaultModelAndView();
+        Optional<UserDto> optUserDto = service.findById(id);
+        
+        if (optUserDto.isPresent()) {
+            mav.addObject(CUSTOMER, optUserDto.get());
+            mav.setViewName("customers/detail");
+        } else {
+            mav.setViewName("error/404");
+        }
+        
+        return mav;      	
+    }
+    
+    @PostMapping
+    public ResponseEntity<UserDto> create(@RequestBody UserDto dto) {    	
+        return ResponseEntity.ok(service.create(dto));
+    }
+    
+    @PutMapping
+    public ResponseEntity<UserDto> update(@RequestBody UserDto dto) {
+        return ResponseEntity.ok(service.update(dto.id(), dto));
+    }
+
+    @DeleteMapping
+    public ResponseEntity<UserDto> delete(@RequestBody UserDto dto) {
+    	service.deleteById(dto.id());
+        return ResponseEntity.ok(dto);
+    }
+     
 	@GetMapping("/findByUsername/{name}")
 	public ModelAndView findByUsername(@PathVariable String name) {
 		ModelAndView mav = createDefaultModelAndView();
@@ -82,7 +118,7 @@ public class UserController<T extends EntityObject> extends _EntityController<T>
 		ModelAndView mv = new ModelAndView(getModelAndView().getView());
 		mv.addObject(USERS, service.findAll());
 		mv.addObject(TITLE, TITLE_USER);
-		mv.setViewName("entities/role");
+		mv.setViewName("entity/role");
 		return mv;
 	}
 }

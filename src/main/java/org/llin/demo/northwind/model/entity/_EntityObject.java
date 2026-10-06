@@ -1,13 +1,15 @@
 package org.llin.demo.northwind.model.entity;
 
 import org.llin.demo.northwind._Values;
+import org.llin.demo.northwind.model.entity.links.Links;
+import org.llin.demo.northwind.model.entity.links.LinksDeserializer;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
-public class EntityObject implements Comparable<Object>, _Values {
+public class _EntityObject implements Comparable<Object>, _Values {
 			
 	private Links links = new Links();
 	

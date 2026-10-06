@@ -12,6 +12,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClient;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+
 @Service
 public class CustomerService {
 
@@ -26,16 +31,17 @@ public class CustomerService {
     // Helper classes for HAL _embedded wrapper (placed at class level)
     // ==================================================================
 
+    @JsonIgnoreProperties(ignoreUnknown = true)
     private static class EmbeddedCustomers {
-        @com.fasterxml.jackson.annotation.JsonProperty("_embedded")
+        @JsonProperty("_embedded")
         public CustomerList customers;
     }
 
+    @JsonIgnoreProperties(ignoreUnknown = true)
     private static class CustomerList {
-        @com.fasterxml.jackson.annotation.JsonProperty("customer")
+        @JsonProperty("customers")
         public List<CustomerDto> customer;
     }
-
     // ==================================================================
     // Public methods
     // ==================================================================
@@ -53,18 +59,22 @@ public class CustomerService {
 
     /**
      * GET /customer  (returns all customers)
+     * @throws JsonProcessingException 
+     * @throws JsonMappingException 
      */
     public List<CustomerDto> findAll() {
-        EmbeddedCustomers response = restClient.get()
+    	EmbeddedCustomers response= restClient.get()
                 .uri("customer")
                 .retrieve()
                 .body(EmbeddedCustomers.class);
 
-        return response != null 
-                && response.customers != null 
+        List<CustomerDto> customers = response != null
+                && response.customers != null
                 && response.customers.customer != null
                     ? response.customers.customer
                     : List.of();
+
+        return customers;
     }
 
     public CustomerDto create(CustomerDto customerDto) {

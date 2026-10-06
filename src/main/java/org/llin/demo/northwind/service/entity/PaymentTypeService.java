@@ -29,7 +29,7 @@ public class PaymentTypeService {
     }
 
     private static class PaymentTypeList {
-        @com.fasterxml.jackson.annotation.JsonProperty("paymentType")
+        @com.fasterxml.jackson.annotation.JsonProperty("paymentTypes")
         public List<PaymentTypeDto> PaymentType;
     }
 

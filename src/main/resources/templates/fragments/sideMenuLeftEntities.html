@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
 <!-- 
-    LEFT SIDEBAR FRAGMENT 
-    Save this as: src/main/resources/templates/fragments/left-sidebar.html
-    (or any name you prefer)
+    OPTIONAL: Add this CSS once in your main layout (or in a separate CSS file)
 -->
 
 <div class="container mt-5 pt-2" id="sideMenuLeftEntities" th:fragment="sideMenuLeftEntities">
@@ -21,13 +18,14 @@
         <div class="card-body p-0">
 
             <!-- First Order -->
-            <div class="menu-section border-bottom" th:if="${not #lists.isEmpty(mappedEntities.entities.firstOrder)}">
+            <div class="menu-section border-bottom" th:if="${mappedEntities?.entities?.firstOrder != null 
+            											and !#lists.isEmpty(mappedEntities.entities.firstOrder)}">
                 <div class="menu-section-title px-3 py-2 fw-bold text-uppercase small text-muted">
                     <i class="bi bi-1-circle-fill me-1"></i> First Order
                 </div>
                 <ul class="nav flex-column px-2 pb-2">
                     <li class="nav-item" th:each="entity : ${mappedEntities.entities.firstOrder}">
-                        <a th:href="@{${entity.path}}" class="nav-link">
+                        <a th:href="@{'/entity/' + ${entity.path} + '/list'}" class="nav-link">
                             <i class="bi bi-arrow-right-circle me-2"></i>
                             <span th:text="${entity.title}"></span>
                         </a>
@@ -36,13 +34,14 @@
             </div>
 
             <!-- Second Order -->
-            <div class="menu-section border-bottom" th:if="${not #lists.isEmpty(mappedEntities.entities.secondOrder)}">
+            <div class="menu-section border-bottom" th:if="${mappedEntities?.entities?.secondOrder != null 
+            										  and !#lists.isEmpty(mappedEntities.entities.secondOrder)}">
                 <div class="menu-section-title px-3 py-2 fw-bold text-uppercase small text-muted">
                     <i class="bi bi-2-circle-fill me-1"></i> Second Order
                 </div>
                 <ul class="nav flex-column px-2 pb-2">
                     <li class="nav-item" th:each="entity : ${mappedEntities.entities.secondOrder}">
-                        <a th:href="@{${entity.path}}" class="nav-link">
+                        <a th:href="@{'/entity/' + ${entity.path} + '/list'}" class="nav-link">
                             <i class="bi bi-arrow-right-circle me-2"></i>
                             <span th:text="${entity.title}"></span>
                         </a>
@@ -51,13 +50,14 @@
             </div>
 
             <!-- Third Order -->
-            <div class="menu-section border-bottom" th:if="${not #lists.isEmpty(mappedEntities.entities.thirdOrder)}">
+            <div class="menu-section border-bottom" th:if="${mappedEntities?.entities?.thirdOrder != null 
+            										  and !#lists.isEmpty(mappedEntities.entities.thirdOrder)}">
                 <div class="menu-section-title px-3 py-2 fw-bold text-uppercase small text-muted">
                     <i class="bi bi-3-circle-fill me-1"></i> Third Order
                 </div>
                 <ul class="nav flex-column px-2 pb-2">
                     <li class="nav-item" th:each="entity : ${mappedEntities.entities.thirdOrder}">
-                        <a th:href="@{${entity.path}}" class="nav-link">
+                        <a th:href="@{'/entity/' + ${entity.path} + '/list'}" class="nav-link">
                             <i class="bi bi-arrow-right-circle me-2"></i>
                             <span th:text="${entity.title}"></span>
                         </a>
@@ -66,13 +66,14 @@
             </div>
 
             <!-- Types & Statuses -->
-            <div class="menu-section" th:if="${not #lists.isEmpty(mappedEntities.entities.type)}">
+            <div class="menu-section" th:if="${mappedEntities?.entities?.type != null 
+            							  and !#lists.isEmpty(mappedEntities.entities.type)}">
                 <div class="menu-section-title px-3 py-2 fw-bold text-uppercase small text-muted">
                     <i class="bi bi-tags-fill me-1"></i> Types &amp; Statuses
                 </div>
                 <ul class="nav flex-column px-2 pb-2">
                     <li class="nav-item" th:each="entity : ${mappedEntities.entities.type}">
-                        <a th:href="@{${entity.path}}" class="nav-link">
+                        <a th:href="@{'/entity/' + ${entity.path} + '/list'}" class="nav-link">
                             <i class="bi bi-arrow-right-circle me-2"></i>
                             <span th:text="${entity.title}"></span>
                         </a>
@@ -91,30 +92,5 @@
     </div>
 
 </div>
-
-<!-- 
-    OPTIONAL: Add this CSS once in your main layout (or in a separate CSS file)
--->
-<style th:if="${true}">
-    #leftSideBar .menu-section-title { 
-        background: #f8f9fa; 
-        border-bottom: 1px solid #dee2e6;
-    }
-    #leftSideBar .nav-link {
-        color: #212529;
-        padding: 0.65rem 1rem;
-        border-radius: 0.375rem;
-        margin: 2px 8px;
-        transition: all 0.2s ease;
-    }
-    #leftSideBar .nav-link:hover {
-        background-color: #e9ecef;
-        color: #0d6efd;
-        padding-left: 1.5rem;
-    }
-    #leftSideBar .nav-link i {
-        width: 20px;
-    }
-</style>
 
 </html>

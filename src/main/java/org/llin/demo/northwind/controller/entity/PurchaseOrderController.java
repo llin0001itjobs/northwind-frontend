@@ -8,7 +8,7 @@ import java.util.Optional;
 import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
 import org.llin.demo.northwind.dto.PurchaseOrderDto;
-import org.llin.demo.northwind.model.entity.EntityObject;
+import org.llin.demo.northwind.model.entity._EntityObject;
 import org.llin.demo.northwind.service.entity.EmployeeService;
 import org.llin.demo.northwind.service.entity.OrderStatusService;
 import org.llin.demo.northwind.service.entity.PurchaseOrderService;
@@ -28,8 +28,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/purchaseOrder")
-public class PurchaseOrderController<T extends EntityObject> extends _EntityController<T>
+@RequestMapping("/entity/purchaseOrder")
+public class PurchaseOrderController<T extends _EntityObject> extends _EntityController<T>
 		implements _Classes_EntityObject, _Titles {
 
 	private final PurchaseOrderService purchaseOrderService;
@@ -231,7 +231,7 @@ public class PurchaseOrderController<T extends EntityObject> extends _EntityCont
 		mv.addObject(SUPPLIERS, supplierService.findAll());
 		mv.addObject(ORDER_STATUSES, orderStatusService.findAll());
 		mv.addObject(TITLE, TITLE_PURCHASE_ORDER);
-		mv.setViewName("entities/purchaseOrder");
+		mv.setViewName("entity/purchaseOrder");
 		return mv;
 	}
 

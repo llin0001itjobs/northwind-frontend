@@ -2,7 +2,7 @@ package org.llin.demo.northwind.controller.entity;
 
 import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
-import org.llin.demo.northwind.model.entity.EntityObject;
+import org.llin.demo.northwind.model.entity._EntityObject;
 import org.llin.demo.northwind.service.entity.CompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/company")
-public class CompanyController<T extends EntityObject> extends _EntityController<T> implements _Classes_EntityObject, _Titles {
+@RequestMapping("/entity/company")
+public class CompanyController<T extends _EntityObject> extends _EntityController<T> implements _Classes_EntityObject, _Titles {
 				
 	@Autowired
 	private CompanyService service;
@@ -27,7 +27,7 @@ public class CompanyController<T extends EntityObject> extends _EntityController
 		ModelAndView mv = new ModelAndView(getModelAndView().getView());		
 		mv.addObject(COMPANIES, service.findAll());
 		mv.addObject(TITLE, TITLE_COMPANY);
-		mv.setViewName("entities/company");
+		mv.setViewName("entity/company");
 		return mv;		
 	}	
 }

@@ -3,7 +3,7 @@ package org.llin.demo.northwind.model.entity;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TypeState extends EntityObject {
+public class TypeState extends _EntityObject {
 	
 	private String code;
 

@@ -2,13 +2,13 @@
 <div>
 	<div th:each="p : ${Products}" class="modal modal-lg fade"
 		data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-		th:attr="id='modalSupplier-' + ${p.getId()}, aria-labelledby='modalSupplierLabel-' + ${p.getId()}"
+		th:attr="id='modalSupplier-' + ${p.id}, aria-labelledby='modalSupplierLabel-' + ${p.id}"
 		aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title"
-						th:attr="id='modalSupplierLabel-' + ${p.getId()}">
+						th:attr="id='modalSupplierLabel-' + ${p.id}">
 						Supplier</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal"
 						aria-label="Close"></button>
@@ -26,19 +26,19 @@
 							</tr>
 						</thead>
 
-						<tbody th:with="isNullSuppliers=${p.getSuppliers() == null}, 
-                				  isNullSupplierList=${p.getSuppliers() != null && 
-                					    p.getSuppliers().getSuppliers() == null}">
+						<tbody th:with="isNullSuppliers=${p.suppliers == null}, 
+                				  isNullSupplierList=${p.suppliers != null && 
+                					    p.getSuppliers.suppliers == null}">
 							<!-- Only render if suppliers are available -->
 							<tr th:if="${!isNullSuppliers && !isNullSupplierList}" 
-							    th:each="s : ${p.getSuppliers().getSuppliers()}">
-								<td class="col"><span th:text="${s.getFirstName()}">&nbsp;</span>
-								<td class="col"><span th:text="${s.getJobTitle()}"></span></td>
-								<td class="col"><span th:text="${s.getEmailAddress()}"></span></td>
-								<td class="col"><span th:text="${s.getBusinessPhone()}"></span></td>
-								<td class="col"><span th:text="${s.getCity()}">,&nbsp;</span><span
-									th:text="${s.getStateProvince()}"></span></td>
-								<td class="col"><span th:text="${s.getZipPostalCode()}"></span></td>
+							    th:each="s : ${p.suppliers.suppliers}">
+								<td class="col"><span th:text="${s.firstName}">&nbsp;</span>
+								<td class="col"><span th:text="${s.jobTitle}"></span></td>
+								<td class="col"><span th:text="${s.emailAddress}"></span></td>
+								<td class="col"><span th:text="${s.businessPhone}"></span></td>
+								<td class="col"><span th:text="${s.city}">,&nbsp;</span><span
+									th:text="${s.stateProvince}"></span></td>
+								<td class="col"><span th:text="${s.zipPostalCode}"></span></td>
 							</tr>
 						</tbody>
 					</table>

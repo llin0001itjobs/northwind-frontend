@@ -1,7 +1,7 @@
 package org.llin.demo.northwind.controller;
 
 import org.llin.demo.northwind._Values;
-import org.llin.demo.northwind.model.entity.EntityObject;
+import org.llin.demo.northwind.model.entity._EntityObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/modal")
-public class ModalController<T extends EntityObject> implements _Values {
+public class ModalController<T extends _EntityObject> implements _Values {
 
 	@RequestMapping("/show")
 	public ModelAndView show(@RequestParam String entity, @RequestParam(name = "id") String csvId) {

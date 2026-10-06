@@ -23,7 +23,13 @@ public class UserDtoDeserializer extends JsonDeserializer<UserDto> {
         ObjectMapper mapper = (ObjectMapper) jp.getCodec();
         JsonNode node = mapper.readTree(jp);
 
-        int id = node.has("id") ? node.get("id").asInt() : 0;
+        int id = 0;
+        if (node.has("id") && !node.get("id").isNull()) {
+            id = node.get("id").asInt();
+        } else if (node.has("_links") && node.get("_links").has("self")) {
+            String href = node.get("_links").get("self").get("href").asText();
+            id = Integer.parseInt(href.substring(href.lastIndexOf('/') + 1));
+        }
         String username = node.has("username") ? node.get("username").asText() : "";
         String password = node.has("password") ? node.get("password").asText() : "";
         String email = node.has("email") ? node.get("email").asText() : "";

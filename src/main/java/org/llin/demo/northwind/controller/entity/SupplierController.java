@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
 import org.llin.demo.northwind.dto.SupplierDto;
-import org.llin.demo.northwind.model.entity.EntityObject;
+import org.llin.demo.northwind.model.entity._EntityObject;
 import org.llin.demo.northwind.service.entity.CompanyService;
 import org.llin.demo.northwind.service.entity.ProductService;
 import org.llin.demo.northwind.service.entity.SupplierService;
@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/supplier")
-public class SupplierController<T extends EntityObject> extends _EntityController<T>
+@RequestMapping("/entity/supplier")
+public class SupplierController<T extends _EntityObject> extends _EntityController<T>
 		implements _Classes_EntityObject, _Titles {
 
 	private final SupplierService supplierService;
@@ -109,7 +109,7 @@ public class SupplierController<T extends EntityObject> extends _EntityControlle
 		mv.addObject(COMPANIES, companyService.findAll());
 		mv.addObject(PRODUCTS, productService.findAll());
 		mv.addObject(TITLE, TITLE_SUPPLIER);
-		mv.setViewName("entities/supplier");
+		mv.setViewName("entity/supplier");
 		return mv;		
 	}
 }

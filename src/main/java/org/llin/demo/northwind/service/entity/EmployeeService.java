@@ -32,7 +32,7 @@ public class EmployeeService {
     }
 
     private static class EmployeeList {
-        @com.fasterxml.jackson.annotation.JsonProperty("employee")
+        @com.fasterxml.jackson.annotation.JsonProperty("employees")
         public List<EmployeeDto> Employee;
     }
 

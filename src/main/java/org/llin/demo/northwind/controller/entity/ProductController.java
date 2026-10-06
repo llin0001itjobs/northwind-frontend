@@ -10,7 +10,7 @@ import org.llin.demo.northwind._Titles;
 import org.llin.demo.northwind.dto.LabelValueLongDto;
 import org.llin.demo.northwind.dto.LabelValueLongValueDoubleDto;
 import org.llin.demo.northwind.dto.ProductDto;
-import org.llin.demo.northwind.model.entity.EntityObject;
+import org.llin.demo.northwind.model.entity._EntityObject;
 import org.llin.demo.northwind.service.entity.ProductService;
 import org.llin.demo.northwind.service.entity.SupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,8 +27,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/product")
-public class ProductController<T extends EntityObject> extends _EntityController<T>
+@RequestMapping("/entity/product")
+public class ProductController<T extends _EntityObject> extends _EntityController<T>
 		implements _Classes_CustomObject, _Classes_EntityObject, _Titles {
 
 	private final ProductService productService;
@@ -220,7 +220,7 @@ public class ProductController<T extends EntityObject> extends _EntityController
 		mv.addObject(PRODUCTS, productService.findAll());
 		mv.addObject(SUPPLIERS, supplierService.findAll());
 		mv.addObject(TITLE, TITLE_PRODUCT);
-		mv.setViewName("entities/product");
+		mv.setViewName("entity/product");
 		return mv;
 	}
 }

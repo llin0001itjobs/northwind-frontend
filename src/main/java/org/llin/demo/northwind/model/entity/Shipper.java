@@ -2,7 +2,7 @@ package org.llin.demo.northwind.model.entity;
 
 import org.llin.demo.northwind._Classes_EntityObject;
 
-public class Shipper extends EntityObject implements _Classes_EntityObject {
+public class Shipper extends _EntityObject implements _Classes_EntityObject {
 
 	private Company company;
 	

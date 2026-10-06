@@ -7,7 +7,7 @@ import java.util.Optional;
 import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
 import org.llin.demo.northwind.dto.InventoryTransactionDto;
-import org.llin.demo.northwind.model.entity.EntityObject;
+import org.llin.demo.northwind.model.entity._EntityObject;
 import org.llin.demo.northwind.service.entity.CustomerOrderService;
 import org.llin.demo.northwind.service.entity.InventoryTransactionService;
 import org.llin.demo.northwind.service.entity.InventoryTransactionTypeService;
@@ -28,8 +28,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/inventoryTransaction")
-public class InventoryTransactionController<T extends EntityObject> extends _EntityController<T> implements _Classes_EntityObject, _Titles {
+@RequestMapping("/entity/inventoryTransaction")
+public class InventoryTransactionController<T extends _EntityObject> extends _EntityController<T> implements _Classes_EntityObject, _Titles {
 	
 	private final InventoryTransactionService inventoryTransactionService;
 	private final CustomerOrderService customerOrderService;	
@@ -172,7 +172,7 @@ public class InventoryTransactionController<T extends EntityObject> extends _Ent
 		mv.addObject(PURCHASE_ORDERS,purchaseOrderService.findAll());
 		mv.addObject(INVENTORY_TRANSACTION_TYPES,inventoryTransactionTypeService.findAll());
 		mv.addObject(TITLE, TITLE_INVENTORY_TRANSACTION); 
-		mv.setViewName("entities/inventoryTransaction");
+		mv.setViewName("entity/inventoryTransaction");
 		return mv;		
 	}
 	

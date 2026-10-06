@@ -2,13 +2,13 @@
 <div>
 	<div th:each="o : ${OrderStatuses}" class="modal fade"
 		data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-		th:attr="id='modalOrderStatus-' + ${o.getId()}, aria-labelledby='modalOrderStatusLabel-' + ${o.getId()}"
+		th:attr="id='modalOrderStatus-' + ${o.id}, aria-labelledby='modalOrderStatusLabel-' + ${o.id}"
 		aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title"
-						th:attr="id='modalOrderStatusLabel-' + ${o.getId()}">
+						th:attr="id='modalOrderStatusLabel-' + ${o.id}">
 						OrderStatus</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal"
 						aria-label="Close"></button>
@@ -17,9 +17,9 @@
 					<dl class="row">
 						<dt class="col">Status</dt>
 						<dd class="col">
-							<span th:text="${o.getStatusName()}"></span>
+							<span th:text="${o.statusName}"></span>
 						</dd>
-					</dl>					
+					</dl>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary"

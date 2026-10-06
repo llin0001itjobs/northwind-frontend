@@ -1,7 +1,9 @@
 package org.llin.demo.northwind.controller;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 import org.llin.demo.northwind.config.PropertyDefaultProperties;
@@ -92,7 +94,8 @@ public class RegisterController {
 
 	    // 3. If ANY errors (including duplicates), show the form again
 	    if (result.hasErrors()) {
-	        model.addAttribute("message", "Please correct the errors below.");
+	    	Map<String,String> map = new HashMap<>();
+	        model.addAttribute("message", map.put("errors", "Please correct the errors below."));
 	        return "page-register";
 	    }
 

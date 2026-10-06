@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
 import org.llin.demo.northwind.dto.CustomerDto;
-import org.llin.demo.northwind.model.entity.EntityObject;
+import org.llin.demo.northwind.model.entity._EntityObject;
 import org.llin.demo.northwind.service.entity.CompanyService;
 import org.llin.demo.northwind.service.entity.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +22,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 @RestController
-@RequestMapping("/customer")
-public class CustomerController<T extends EntityObject> extends _EntityController<T> implements _Classes_EntityObject, _Titles {
+@RequestMapping("/entity/customer")
+public class CustomerController<T extends _EntityObject> extends _EntityController<T> implements _Classes_EntityObject, _Titles {
     private final CustomerService customerService;
 	private final CompanyService companyService;
 	
@@ -125,7 +125,7 @@ public class CustomerController<T extends EntityObject> extends _EntityControlle
         ModelAndView mav = new ModelAndView(getModelAndView().getView());		
         mav.addObject(CUSTOMERS, customerService.findAll());
         mav.addObject(COMPANIES, companyService.findAll());
-        mav.setViewName("entities/customer");
+        mav.setViewName("entity/customer");
         
         return mav;
     }  

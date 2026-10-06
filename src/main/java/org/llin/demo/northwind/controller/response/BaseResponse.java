@@ -1,10 +1,10 @@
 package org.llin.demo.northwind.controller.response;
 
-import org.llin.demo.northwind.model.entity.EntityObject;
+import org.llin.demo.northwind.model.entity._EntityObject;
 
 public abstract class BaseResponse {
 
-	public abstract EntityObject[] getResponse();
+	public abstract _EntityObject[] getResponse();
 
 	@Override
 	public String toString() {

@@ -1,6 +1,6 @@
 package org.llin.demo.northwind.model.entity;
 
-public class Role extends EntityObject {
+public class Role extends _EntityObject {
 
 	private String type;
 	private String description;

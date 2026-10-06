@@ -29,7 +29,7 @@ public class InventoryTransactionTypeService {
     }
 
     private static class InventoryTransactionTypeList {
-        @com.fasterxml.jackson.annotation.JsonProperty("inventoryTransactionType")
+        @com.fasterxml.jackson.annotation.JsonProperty("inventoryTransactionTypes")
         public List<InventoryTransactionTypeDto> InventoryTransactionType;
     }
 

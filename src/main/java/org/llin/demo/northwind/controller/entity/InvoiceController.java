@@ -8,7 +8,7 @@ import java.util.Optional;
 import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
 import org.llin.demo.northwind.dto.InvoiceDto;
-import org.llin.demo.northwind.model.entity.EntityObject;
+import org.llin.demo.northwind.model.entity._EntityObject;
 import org.llin.demo.northwind.service.entity.CustomerOrderService;
 import org.llin.demo.northwind.service.entity.InvoiceService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,8 +26,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/invoice")
-public class InvoiceController<T extends EntityObject> extends _EntityController<T> implements _Classes_EntityObject, _Titles {
+@RequestMapping("/entity/invoice")
+public class InvoiceController<T extends _EntityObject> extends _EntityController<T> implements _Classes_EntityObject, _Titles {
 
 	private final InvoiceService invoiceService;
 	private final CustomerOrderService customerOrderService;
@@ -208,7 +208,7 @@ public class InvoiceController<T extends EntityObject> extends _EntityController
 		mv.addObject(INVOICES,        invoiceService.findAll());
 		mv.addObject(CUSTOMER_ORDERS, customerOrderService.findAll());	
 		mv.addObject(TITLE, TITLE_INVOICE);
-		mv.setViewName("entities/invoice");
+		mv.setViewName("entity/invoice");
 		return mv;		
 	}
 }

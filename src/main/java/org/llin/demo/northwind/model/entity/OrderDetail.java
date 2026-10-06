@@ -6,7 +6,7 @@ import org.llin.demo.northwind._Classes_EntityObject;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-public class OrderDetail extends EntityObject implements _Classes_EntityObject {
+public class OrderDetail extends _EntityObject implements _Classes_EntityObject {
 	
 	private double quantity;
 

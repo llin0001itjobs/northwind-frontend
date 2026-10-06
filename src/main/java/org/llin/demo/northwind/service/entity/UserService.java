@@ -105,13 +105,15 @@ public class UserService {
 		payload.put("verificationToken", user.verificationToken());
 		
 	    // 2. Map the roles to pure URI strings instead of full objects
-	    if (user.roles() != null) {
-	        java.util.List<String> roleUris = user.roles().stream()
-	            .map(role -> props.getApp().getData().getApiUri() + "role/" + role.id())
-	            .toList();
-	        payload.put("roles", roleUris);
-	    }
+		if (user.roles() != null && !user.roles().isEmpty()) {
+		    payload.put("roles", user.roles().stream()
+		            .filter(role -> role.id() > 0)
+		            .map(role -> props.getApp().getData().getApiUri() + "role/" + role.id())
+		            .toList());
+		}
 
+	    System.out.println("VERIFY id=" + user.id() + " email=" + user.email());
+	    
 	    // 3. Send the custom payload map via PUT
 	    return restClient.put()
 	        .uri("user/{id}", id)

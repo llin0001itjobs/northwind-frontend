@@ -2,13 +2,13 @@
 <div>
 	<div th:each="i : ${InventoryTransactionTypes}" class="modal fade"
 		data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-		th:attr="id='modalInventoryTransactionType-' + ${i.getId()}, aria-labelledby='modalInventoryTransactionTypeLabel-' + ${i.getId()}"
+		th:attr="id='modalInventoryTransactionType-' + ${i.id}, aria-labelledby='modalInventoryTransactionTypeLabel-' + ${i.id}"
 		aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title"
-						th:attr="id='modalInventoryTransactionTypeLabel-' + ${i.getId()}">
+						th:attr="id='modalInventoryTransactionTypeLabel-' + ${i.id}">
 						Inventory Transaction Type</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal"
 						aria-label="Close"></button>
@@ -17,7 +17,7 @@
 					<dl class="row">
 						<dt class="col">Type Name</dt>
 						<dd class="col">
-							<span th:text="${i.getTypeName()}"></span>
+							<span th:text="${i.typeName}"></span>
 						</dd>
 					</dl>
 				</div>

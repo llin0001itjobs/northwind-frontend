@@ -9,7 +9,7 @@ import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind.config.PropertiesConfig;
 import org.llin.demo.northwind.dto.EmployeeDto;          // ← new import
 import org.llin.demo.northwind.model.entity.Employee;
-import org.llin.demo.northwind.model.entity.EntityObject;
+import org.llin.demo.northwind.model.entity._EntityObject;
 import org.llin.demo.northwind.service.entity.EmployeeService; // ← new import
 import org.llin.demo.northwind.util.ObjectToXmlUtil;
 import org.llin.demo.northwind.util.PdfRenderUtil;
@@ -31,7 +31,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/employee-roster")
-public class EmployeeRosterController<T extends EntityObject> implements _Classes_EntityObject {
+public class EmployeeRosterController<T extends _EntityObject> implements _Classes_EntityObject {
 
     private static final Logger logger = LoggerFactory.getLogger(EmployeeRosterController.class);
 
