@@ -172,6 +172,7 @@ public class InventoryTransactionController<T extends _EntityObject> extends _En
 		mv.addObject(PURCHASE_ORDERS,purchaseOrderService.findAll());
 		mv.addObject(INVENTORY_TRANSACTION_TYPES,inventoryTransactionTypeService.findAll());
 		mv.addObject("activeMenuSection", "fourthOrder");
+		mv.addObject("currentEntityPath", "inventoryTransaction");
 		mv.addObject(TITLE, TITLE_INVENTORY_TRANSACTION); 
 		mv.setViewName("entity/inventoryTransaction");
 		return mv;		

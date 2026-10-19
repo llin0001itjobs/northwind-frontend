@@ -209,6 +209,7 @@ public class InvoiceController<T extends _EntityObject> extends _EntityControlle
 		mv.addObject(CUSTOMER_ORDERS, customerOrderService.findAll());	
 		mv.addObject(TITLE, TITLE_INVOICE);
 		mv.addObject("activeMenuSection", "thirdOrder");
+		mv.addObject("currentEntityPath", "invoice");
 		mv.setViewName("entity/invoice");
 		return mv;		
 	}

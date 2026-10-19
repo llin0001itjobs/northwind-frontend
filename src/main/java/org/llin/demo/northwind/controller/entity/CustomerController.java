@@ -126,6 +126,7 @@ public class CustomerController<T extends _EntityObject> extends _EntityControll
         mv.addObject(CUSTOMERS, customerService.findAll());
         mv.addObject(COMPANIES, companyService.findAll());
         mv.addObject("activeMenuSection", "firstOrder");
+        mv.addObject("currentEntityPath", "customer");
         mv.setViewName("entity/customer");
         
         return mv;

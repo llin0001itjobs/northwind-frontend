@@ -50,6 +50,7 @@ public class OrderStatusController<T extends _EntityObject> extends _EntityContr
 		ModelAndView mv = new ModelAndView(getModelAndView().getView());			
 		mv.addObject(ORDER_STATUSES,service.findAll());
 		mv.addObject("activeMenuSection", "type");
+		mv.addObject("currentEntityPath", "orderStatus");
 		mv.addObject(TITLE, TITLE_ORDER_STATUS);
 		mv.setViewName("entity/orderStatus");
 		return mv;		

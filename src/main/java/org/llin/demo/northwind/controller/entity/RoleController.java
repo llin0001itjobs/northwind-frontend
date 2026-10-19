@@ -52,6 +52,7 @@ public class RoleController<T extends _EntityObject> extends _EntityController<T
 		mv.addObject(ROLES,service.findAll());
 		mv.addObject(TITLE, TITLE_ROLE);
 		mv.addObject("activeMenuSection", "firstOrder");
+		mv.addObject("currentEntityPath", "role");
 		mv.setViewName("entity/role");
 		return mv;		
 	}

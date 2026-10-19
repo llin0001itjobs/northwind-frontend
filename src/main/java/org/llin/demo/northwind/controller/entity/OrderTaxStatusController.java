@@ -16,15 +16,16 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/entity/orderTaxStatus")
-public class OrderTaxStatusController<T extends _EntityObject> extends _EntityController<T> implements _Classes_EntityObject, _Titles {
-	
+public class OrderTaxStatusController<T extends _EntityObject> extends _EntityController<T>
+		implements _Classes_EntityObject, _Titles {
+
 	private final OrderTaxStatusService service;
-	
-    @Autowired
-    public OrderTaxStatusController(OrderTaxStatusService service) { 
-        this.service = service;
-    }
-    
+
+	@Autowired
+	public OrderTaxStatusController(OrderTaxStatusService service) {
+		this.service = service;
+	}
+
 	@GetMapping("/list")
 	public ModelAndView getAllOrderTaxStatuses() {
 		return createDefaultModelAndView();
@@ -44,17 +45,16 @@ public class OrderTaxStatusController<T extends _EntityObject> extends _EntityCo
 
 		return mav;
 	}
-	
+
 	private ModelAndView createDefaultModelAndView() {
 		loadMenu();
-		ModelAndView mv = new ModelAndView(getModelAndView().getView());			
-		mv.addObject(ORDER_TAX_STATUSES,service.findAll());
+		ModelAndView mv = new ModelAndView(getModelAndView().getView());
+		mv.addObject(ORDER_TAX_STATUSES, service.findAll());
 		mv.addObject("activeMenuSection", "type");
+		mv.addObject("currentEntityPath", "orderTaxStatus");
 		mv.addObject(TITLE, TITLE_ORDER_TAX_STATUS);
 		mv.setViewName("entity/orderTaxStatus");
-		return mv;		
+		return mv;
 	}
-	
-}
 
- 
+}

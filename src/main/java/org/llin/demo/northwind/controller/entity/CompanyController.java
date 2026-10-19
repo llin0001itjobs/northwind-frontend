@@ -19,15 +19,16 @@ public class CompanyController<T extends _EntityObject> extends _EntityControlle
 	
 	@GetMapping("/list")
 	public ModelAndView getAllCompanies() {
-		return handelRequest();
+		return createDefaultModelAndView();
 	}
 	
-	private ModelAndView handelRequest() {
+	private ModelAndView createDefaultModelAndView() {
 		loadMenu();
 		ModelAndView mv = new ModelAndView(getModelAndView().getView());		
 		mv.addObject(COMPANIES, service.findAll());
 		mv.addObject(TITLE, TITLE_COMPANY);
 		mv.addObject("activeMenuSection", "firstOrder");
+		mv.addObject("currentEntityPath", "company");		 
 		mv.setViewName("entity/company");
 		return mv;		
 	}	

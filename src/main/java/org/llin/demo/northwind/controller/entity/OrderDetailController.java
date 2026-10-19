@@ -193,6 +193,7 @@ public class OrderDetailController<T extends _EntityObject> extends _EntityContr
 		mv.addObject(PRODUCTS, productService.findAll());
 		mv.addObject(PURCHASE_ORDERS, purchaseOrderService.findAll());
 		mv.addObject("activeMenuSection", "fourthOrder");
+		mv.addObject("currentEntityPath", "orderDetail");
 		mv.addObject(TITLE, TITLE_ORDER_DETAIL);
 		mv.setViewName("entity/orderDetail");
 		return mv;

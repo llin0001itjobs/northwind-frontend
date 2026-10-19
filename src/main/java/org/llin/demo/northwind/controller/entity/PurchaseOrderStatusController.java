@@ -50,6 +50,7 @@ public class PurchaseOrderStatusController<T extends _EntityObject> extends _Ent
 		ModelAndView mv = new ModelAndView(getModelAndView().getView()); 
 		mv.addObject(PURCHASE_ORDER_STATUSES,service.findAll());
 		mv.addObject("activeMenuSection", "type");
+		mv.addObject("currentEntityPath", "purchaseOrderStatus");
 		mv.addObject(TITLE, TITLE_PURCHASE_ORDER_STATUS);
 		mv.setViewName("entity/purchaseOrderStatus");
 		return mv;		

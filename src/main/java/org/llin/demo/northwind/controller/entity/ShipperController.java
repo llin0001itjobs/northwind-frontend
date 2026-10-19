@@ -103,6 +103,7 @@ public class ShipperController<T extends _EntityObject> extends _EntityControlle
 		mv.addObject(SHIPPERS,shipperService.findAll());
 		mv.addObject(COMPANIES,companyService.findAll());
 		mv.addObject("activeMenuSection", "firstOrder");
+		mv.addObject("currentEntityPath", "shipper");
 		mv.addObject(TITLE, TITLE_SHIPPER);
 		mv.setViewName("entity/shipper");
 		return mv;

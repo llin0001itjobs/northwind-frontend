@@ -231,6 +231,7 @@ public class PurchaseOrderController<T extends _EntityObject> extends _EntityCon
 		mv.addObject(SUPPLIERS, supplierService.findAll());
 		mv.addObject(ORDER_STATUSES, orderStatusService.findAll());
 		mv.addObject("activeMenuSection", "thirdOrder");
+		mv.addObject("currentEntityPath", "purchaseOrder");
 		mv.addObject(TITLE, TITLE_PURCHASE_ORDER);
 		mv.setViewName("entity/purchaseOrder");
 		return mv;

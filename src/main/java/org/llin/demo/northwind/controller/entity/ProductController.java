@@ -220,6 +220,7 @@ public class ProductController<T extends _EntityObject> extends _EntityControlle
 		mv.addObject(PRODUCTS, productService.findAll());
 		mv.addObject(SUPPLIERS, supplierService.findAll());
 		mv.addObject("activeMenuSection", "secondOrder");
+		mv.addObject("currentEntityPath", "product");
 		mv.addObject(TITLE, TITLE_PRODUCT);
 		mv.setViewName("entity/product");
 		return mv;

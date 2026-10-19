@@ -215,6 +215,7 @@ public class CustomerOrderController<T extends _EntityObject> extends _EntityCon
 		mv.addObject(ORDER_TAX_STATUSES, orderTaxStatusService.findAll());
 		mv.addObject(TITLE, TITLE_CUSTOMER_ORDER);
 		mv.addObject("activeMenuSection", "thirdOrder");
+		mv.addObject("currentEntityPath", "customerOrder");
 		mv.setViewName("entity/customerOrder");
 		return mv;
 	}

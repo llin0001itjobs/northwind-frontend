@@ -50,6 +50,7 @@ public class TypeStateController<T extends _EntityObject> extends _EntityControl
 		ModelAndView mv = new ModelAndView(getModelAndView().getView()); 
 		mv.addObject(TYPE_STATES, service.findAll());
 		mv.addObject("activeMenuSection", "type");
+		mv.addObject("currentEntityPath", "typeState");
 		mv.addObject(TITLE, TITLE_TYPE_STATE);
 		mv.setViewName("entity/typeState");
 		return mv;		

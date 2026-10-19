@@ -106,6 +106,7 @@ public class EmployeeController<T extends _EntityObject> extends _EntityControll
 		mv.addObject(EMPLOYEES, employeeService.findAll());
 		mv.addObject(COMPANIES, companyService.findAll());
 		mv.addObject("activeMenuSection", "thirdOrder");
+		mv.addObject("currentEntityPath", "employee");
 		mv.setViewName("entity/employee");
 
 		return mv;
