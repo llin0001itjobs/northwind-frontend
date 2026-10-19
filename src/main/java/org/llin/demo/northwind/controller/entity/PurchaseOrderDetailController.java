@@ -173,6 +173,7 @@ public class PurchaseOrderDetailController<T extends _EntityObject> extends _Ent
 		mv.addObject(ORDER_STATUSES, orderStatusService.findAll());
 		mv.addObject(PRODUCTS, productService.findAll());
 		mv.addObject(PURCHASE_ORDERS, purchaseOrderService.findAll());
+		mv.addObject("activeMenuSection", "fourthOrder");
 		mv.addObject(TITLE, TITLE_PURCHASE_ORDER_DETAIL);
 		mv.setViewName("entity/purchaseOrderDetail");
 		return mv;

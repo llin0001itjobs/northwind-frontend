@@ -122,12 +122,13 @@ public class CustomerController<T extends _EntityObject> extends _EntityControll
         loadMenu(); // Assumes this updates state safely or is stateless
         
         // Create a NEW instance every time to ensure thread safety
-        ModelAndView mav = new ModelAndView(getModelAndView().getView());		
-        mav.addObject(CUSTOMERS, customerService.findAll());
-        mav.addObject(COMPANIES, companyService.findAll());
-        mav.setViewName("entity/customer");
+        ModelAndView mv = new ModelAndView(getModelAndView().getView());		
+        mv.addObject(CUSTOMERS, customerService.findAll());
+        mv.addObject(COMPANIES, companyService.findAll());
+        mv.addObject("activeMenuSection", "firstOrder");
+        mv.setViewName("entity/customer");
         
-        return mav;
+        return mv;
     }  
 	
 }

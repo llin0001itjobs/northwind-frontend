@@ -102,12 +102,13 @@ public class EmployeeController<T extends _EntityObject> extends _EntityControll
 		loadMenu(); // Assumes this updates state safely or is stateless
 
 		// Create a NEW instance every time to ensure thread safety
-		ModelAndView mav = new ModelAndView(getModelAndView().getView());
-		mav.addObject(EMPLOYEES, employeeService.findAll());
-		mav.addObject(COMPANIES, companyService.findAll());
-		mav.setViewName("entity/employee");
+		ModelAndView mv = new ModelAndView(getModelAndView().getView());
+		mv.addObject(EMPLOYEES, employeeService.findAll());
+		mv.addObject(COMPANIES, companyService.findAll());
+		mv.addObject("activeMenuSection", "thirdOrder");
+		mv.setViewName("entity/employee");
 
-		return mav;
+		return mv;
 	}
 
 }

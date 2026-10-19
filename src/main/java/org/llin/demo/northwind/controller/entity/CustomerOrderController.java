@@ -206,16 +206,17 @@ public class CustomerOrderController<T extends _EntityObject> extends _EntityCon
 	
 	private ModelAndView createDefaultModelAndView() {
 		loadMenu();
-		ModelAndView mav = new ModelAndView(getModelAndView().getView());
-		modelAndView.addObject(CUSTOMER_ORDERS, customerOrderService.findAll());
-		modelAndView.addObject(CUSTOMERS, customerService.findAll());
-		modelAndView.addObject(EMPLOYEES, employeeService.findAll());
-		modelAndView.addObject(SHIPPERS, shipperService.findAll());
-		modelAndView.addObject(ORDER_STATUSES, orderStatusService.findAll());
-		modelAndView.addObject(ORDER_TAX_STATUSES, orderTaxStatusService.findAll());
-		modelAndView.addObject(TITLE, TITLE_CUSTOMER_ORDER);
-		modelAndView.setViewName("entity/customerOrder");
-		return mav;
+		ModelAndView mv = new ModelAndView(getModelAndView().getView());
+		mv.addObject(CUSTOMER_ORDERS, customerOrderService.findAll());
+		mv.addObject(CUSTOMERS, customerService.findAll());
+		mv.addObject(EMPLOYEES, employeeService.findAll());
+		mv.addObject(SHIPPERS, shipperService.findAll());
+		mv.addObject(ORDER_STATUSES, orderStatusService.findAll());
+		mv.addObject(ORDER_TAX_STATUSES, orderTaxStatusService.findAll());
+		mv.addObject(TITLE, TITLE_CUSTOMER_ORDER);
+		mv.addObject("activeMenuSection", "thirdOrder");
+		mv.setViewName("entity/customerOrder");
+		return mv;
 	}
 
 }

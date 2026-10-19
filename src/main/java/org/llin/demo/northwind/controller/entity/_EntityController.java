@@ -9,7 +9,7 @@ public abstract class _EntityController<T extends _EntityObject> implements _Val
 
 	public static final String ACTIVE_NAV_ITEM = "ACTIVE_NAV_ITEM";
 
-	ModelAndView modelAndView = new ModelAndView();
+	private ModelAndView modelAndView = new ModelAndView();
 
 	public ModelAndView getModelAndView() {
 		return modelAndView;

@@ -50,6 +50,7 @@ public class InventoryTransactionTypeController<T extends _EntityObject> extends
 		loadMenu();
 		ModelAndView mv = new ModelAndView(getModelAndView().getView()); 
 		mv.addObject(INVENTORY_TRANSACTION_TYPES,service.findAll());
+		mv.addObject("activeMenuSection", "type");
 		mv.addObject(TITLE, TITLE_INVENTORY_TRANSACTION_TYPE);
 		mv.setViewName("entity/inventoryTransactionType");
 		return mv;		

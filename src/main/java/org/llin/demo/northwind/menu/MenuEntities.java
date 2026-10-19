@@ -13,6 +13,8 @@ public class MenuEntities<T extends MenuEntity> {
 	
 	private List<T> thirdOrder = new ArrayList<>();
 	
+	private List<T> fourthOrder = new ArrayList<>();
+	
 	@JsonProperty("type")
 	private List<T> type = new ArrayList<>();
 	
@@ -40,6 +42,14 @@ public class MenuEntities<T extends MenuEntity> {
 		this.thirdOrder = thirdOrder;
 	}
 
+	public List<T> getFourthOrder() {
+		return fourthOrder;
+	}
+
+	public void setFourthOrder(List<T> fourthOrder) {
+		this.fourthOrder = fourthOrder;
+	}
+	
 	public List<T> getType() {
 		return type;
 	}
@@ -51,7 +61,9 @@ public class MenuEntities<T extends MenuEntity> {
 	@Override
 	public String toString() {
 		return "MenuEntities [firstOrder=" + firstOrder + ", secondOrder=" + secondOrder + ", thirdOrder="
-				+ thirdOrder + ", type=" + type + "]";
+				+ thirdOrder + ", fourthOrder=" + fourthOrder +", type=" + type + "]";
 	}
+
+
 	
 }

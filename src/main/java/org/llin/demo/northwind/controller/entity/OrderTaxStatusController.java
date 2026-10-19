@@ -49,6 +49,7 @@ public class OrderTaxStatusController<T extends _EntityObject> extends _EntityCo
 		loadMenu();
 		ModelAndView mv = new ModelAndView(getModelAndView().getView());			
 		mv.addObject(ORDER_TAX_STATUSES,service.findAll());
+		mv.addObject("activeMenuSection", "type");
 		mv.addObject(TITLE, TITLE_ORDER_TAX_STATUS);
 		mv.setViewName("entity/orderTaxStatus");
 		return mv;		

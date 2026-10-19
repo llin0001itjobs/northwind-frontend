@@ -27,6 +27,7 @@ public class CompanyController<T extends _EntityObject> extends _EntityControlle
 		ModelAndView mv = new ModelAndView(getModelAndView().getView());		
 		mv.addObject(COMPANIES, service.findAll());
 		mv.addObject(TITLE, TITLE_COMPANY);
+		mv.addObject("activeMenuSection", "firstOrder");
 		mv.setViewName("entity/company");
 		return mv;		
 	}	

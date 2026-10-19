@@ -51,6 +51,7 @@ public class RoleController<T extends _EntityObject> extends _EntityController<T
 		ModelAndView mv = new ModelAndView(getModelAndView().getView()); 
 		mv.addObject(ROLES,service.findAll());
 		mv.addObject(TITLE, TITLE_ROLE);
+		mv.addObject("activeMenuSection", "firstOrder");
 		mv.setViewName("entity/role");
 		return mv;		
 	}

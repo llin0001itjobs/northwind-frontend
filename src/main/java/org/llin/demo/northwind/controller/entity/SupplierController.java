@@ -108,6 +108,7 @@ public class SupplierController<T extends _EntityObject> extends _EntityControll
 		mv.addObject(SUPPLIERS, supplierService.findAll());
 		mv.addObject(COMPANIES, companyService.findAll());
 		mv.addObject(PRODUCTS, productService.findAll());
+		mv.addObject("activeMenuSection", "secondOrder");
 		mv.addObject(TITLE, TITLE_SUPPLIER);
 		mv.setViewName("entity/supplier");
 		return mv;		

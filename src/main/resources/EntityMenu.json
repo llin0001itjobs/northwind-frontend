@@ -10,10 +10,6 @@
         "title": "Customer"
       },
       {
-        "path": "product",
-        "title": "Product"
-      },
-      {
         "path": "role",
         "title": "Role"
       },
@@ -21,20 +17,30 @@
         "path": "shipper",
         "title": "Shipper"
       },
-      {
-        "path": "supplier",
-        "title": "Supplier"
-      }
+	  {
+	    "path": "user",
+	    "title": "User"
+	  }	  
     ],
-    "secondOrder": [
-      {
-        "path": "employee",
-        "title": "Employee"
-      },
+	"secondOrder": [
+	  {
+	    "path": "product",
+	    "title": "Product"
+	  },
+	  {
+	    "path": "supplier",
+	    "title": "Supplier"
+	  }
+	],
+    "thirdOrder": [
       {
         "path": "customerOrder",
         "title": "Customer Order"
       },
+	  {
+	    "path": "employee",
+	    "title": "Employee"
+	  },
       {
         "path": "invoice",
         "title": "Invoice"
@@ -44,7 +50,7 @@
         "title": "Purchase Order"
       }
     ],
-    "thirdOrder": [
+    "fourthOrder": [
       {
         "path": "inventoryTransaction",
         "title": "Inventory Transaction"

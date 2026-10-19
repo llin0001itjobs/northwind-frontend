@@ -117,6 +117,7 @@ public class UserController<T extends _EntityObject> extends _EntityController<T
 		loadMenu();
 		ModelAndView mv = new ModelAndView(getModelAndView().getView());
 		mv.addObject(USERS, service.findAll());
+		mv.addObject("activeMenuSection", "firstOrder");
 		mv.addObject(TITLE, TITLE_USER);
 		mv.setViewName("entity/role");
 		return mv;

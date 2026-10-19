@@ -49,6 +49,7 @@ public class PaymentTypeController<T extends _EntityObject> extends _EntityContr
 		loadMenu();
 		ModelAndView mv = new ModelAndView(getModelAndView().getView()); 
 		mv.addObject(PAYMENT_TYPES,service.findAll());
+		mv.addObject("activeMenuSection", "type");
 		mv.addObject(TITLE, TITLE_PAYMENT_TYPE);
 		mv.setViewName("entity/paymentType");
 		return mv;		

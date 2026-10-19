@@ -49,6 +49,7 @@ public class OrderDetailStatusController<T extends _EntityObject> extends _Entit
 		loadMenu();
 		ModelAndView mv = new ModelAndView(getModelAndView().getView());			
 		mv.addObject(ORDER_DETAIL_STATUSES, service.findAll());
+		mv.addObject("activeMenuSection", "type");
 		mv.addObject(TITLE, TITLE_ORDER_DETAIL_STATUS);
 		mv.setViewName("entity/orderDetailStatus");
 		return mv;		

@@ -24,24 +24,28 @@
 					th:if="${mappedEntities?.entities?.firstOrder != null and !#lists.isEmpty(mappedEntities.entities.firstOrder)}">
 					<h2 class="accordion-header">
 						<button
-							class="accordion-button collapsed px-3 py-2 fw-bold text-uppercase small text-muted"
+							class="accordion-button px-3 py-2 fw-bold text-uppercase small text-muted"
+							th:classappend="${activeMenuSection == 'firstOrder'} ? '' : 'collapsed'"
 							type="button" data-bs-toggle="collapse"
-							data-bs-target="#collapseFirstOrder" aria-expanded="false"
+							data-bs-target="#collapseFirstOrder"
+							th:attr="aria-expanded=${activeMenuSection == 'firstOrder'} ? 'true' : 'false'"
 							aria-controls="collapseFirstOrder">
 							<i class="bi bi-1-circle-fill me-1"></i> First Order
 						</button>
 					</h2>
 					<div id="collapseFirstOrder" class="accordion-collapse collapse"
+						th:classappend="${activeMenuSection == 'firstOrder'} ? 'show' : ''"
 						data-bs-parent="#entitiesAccordion">
 						<div class="accordion-body p-0">
 							<ul class="nav flex-column px-2 pb-2">
 								<li class="nav-item"
 									th:each="entity : ${mappedEntities.entities.firstOrder}">
 									<a th:href="@{'/entity/' + ${entity.path} + '/list'}"
-									class="nav-link"> <i class="bi bi-arrow-right-circle me-2"></i>
-										<span th:text="${entity.title}"></span>
+									class="nav-link"
+									th:classappend="${entity.path == currentEntityPath} ? 'active' : ''">
+										<i class="bi bi-arrow-right-circle me-2"></i> <span
+										th:text="${entity.title}"></span>
 								</a>
-								</li>
 							</ul>
 						</div>
 					</div>
@@ -52,22 +56,27 @@
 					th:if="${mappedEntities?.entities?.secondOrder != null and !#lists.isEmpty(mappedEntities.entities.secondOrder)}">
 					<h2 class="accordion-header">
 						<button
-							class="accordion-button collapsed px-3 py-2 fw-bold text-uppercase small text-muted"
+							class="accordion-button px-3 py-2 fw-bold text-uppercase small text-muted"
+							th:classappend="${activeMenuSection == 'secondOrder'} ? '' : 'collapsed'"
 							type="button" data-bs-toggle="collapse"
-							data-bs-target="#collapseSecondOrder" aria-expanded="false"
+							data-bs-target="#collapseSecondOrder"
+							th:attr="aria-expanded=${activeMenuSection == 'secondOrder'} ? 'true' : 'false'"
 							aria-controls="collapseSecondOrder">
-							<i class="bi bi-2-circle-fill me-1"></i> Second Order
+							<i class="bi bi-1-circle-fill me-1"></i> Second Order
 						</button>
 					</h2>
 					<div id="collapseSecondOrder" class="accordion-collapse collapse"
+						th:classappend="${activeMenuSection == 'secondOrder'} ? 'show' : ''"
 						data-bs-parent="#entitiesAccordion">
 						<div class="accordion-body p-0">
 							<ul class="nav flex-column px-2 pb-2">
 								<li class="nav-item"
 									th:each="entity : ${mappedEntities.entities.secondOrder}">
 									<a th:href="@{'/entity/' + ${entity.path} + '/list'}"
-									class="nav-link"> <i class="bi bi-arrow-right-circle me-2"></i>
-										<span th:text="${entity.title}"></span>
+									class="nav-link"
+									th:classappend="${entity.path == currentEntityPath} ? 'active' : ''">
+										<i class="bi bi-arrow-right-circle me-2"></i> <span
+										th:text="${entity.title}"></span>
 								</a>
 								</li>
 							</ul>
@@ -80,56 +89,95 @@
 					th:if="${mappedEntities?.entities?.thirdOrder != null and !#lists.isEmpty(mappedEntities.entities.thirdOrder)}">
 					<h2 class="accordion-header">
 						<button
-							class="accordion-button collapsed px-3 py-2 fw-bold text-uppercase small text-muted"
+							class="accordion-button px-3 py-2 fw-bold text-uppercase small text-muted"
+							th:classappend="${activeMenuSection == 'thirdOrder'} ? '' : 'collapsed'"
 							type="button" data-bs-toggle="collapse"
-							data-bs-target="#collapseThirdOrder" aria-expanded="false"
+							data-bs-target="#collapseThirdOrder"
+							th:attr="aria-expanded=${activeMenuSection == 'thirdOrder'} ? 'true' : 'false'"
 							aria-controls="collapseThirdOrder">
-							<i class="bi bi-2-circle-fill me-1"></i> Third Order
+							<i class="bi bi-1-circle-fill me-1"></i> Third Order
 						</button>
 					</h2>
 					<div id="collapseThirdOrder" class="accordion-collapse collapse"
+						th:classappend="${activeMenuSection == 'thirdOrder'} ? 'show' : ''"
 						data-bs-parent="#entitiesAccordion">
 						<div class="accordion-body p-0">
 							<ul class="nav flex-column px-2 pb-2">
 								<li class="nav-item"
 									th:each="entity : ${mappedEntities.entities.thirdOrder}">
 									<a th:href="@{'/entity/' + ${entity.path} + '/list'}"
-									class="nav-link"> <i class="bi bi-arrow-right-circle me-2"></i>
-										<span th:text="${entity.title}"></span>
+									class="nav-link"
+									th:classappend="${entity.path == currentEntityPath} ? 'active' : ''">
+										<i class="bi bi-arrow-right-circle me-2"></i> <span
+										th:text="${entity.title}"></span>
 								</a>
 								</li>
 							</ul>
 						</div>
 					</div>
 				</div>
-
-				<!-- Types & Statuses -->
-				<div class="accordion-item menu-section"
-					th:if="${mappedEntities?.entities?.type != null 
-            							  and !#lists.isEmpty(mappedEntities.entities.type)}">
+				<!-- Fourth Order -->
+				<div class="accordion-item menu-section border-bottom"
+					th:if="${mappedEntities?.entities?.fourthOrder != null and !#lists.isEmpty(mappedEntities.entities.fourthOrder)}">
 					<h2 class="accordion-header">
 						<button
-							class="accordion-button collapsed px-3 py-2 fw-bold text-uppercase small text-muted"
+							class="accordion-button px-3 py-2 fw-bold text-uppercase small text-muted"
+							th:classappend="${activeMenuSection == 'fourthOrder'} ? '' : 'collapsed'"
 							type="button" data-bs-toggle="collapse"
-							data-bs-target="#collapseType" aria-expanded="false"
+							data-bs-target="#collapseFourthOrder"
+							th:attr="aria-expanded=${activeMenuSection == 'fourthOrder'} ? 'true' : 'false'"
+							aria-controls="collapseFourthOrder">
+							<i class="bi bi-1-circle-fill me-1"></i> Fourth Order
+						</button>
+					</h2>
+					<div id="collapseFourthOrder" class="accordion-collapse collapse"
+						th:classappend="${activeMenuSection == 'fourthOrder'} ? 'show' : ''"
+						data-bs-parent="#entitiesAccordion">
+						<div class="accordion-body p-0">
+							<ul class="nav flex-column px-2 pb-2">
+								<li class="nav-item"
+									th:each="entity : ${mappedEntities.entities.fourthOrder}">
+									<a th:href="@{'/entity/' + ${entity.path} + '/list'}"
+									class="nav-link"
+									th:classappend="${entity.path == currentEntityPath} ? 'active' : ''">
+										<i class="bi bi-arrow-right-circle me-2"></i> <span
+										th:text="${entity.title}"></span>
+								</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- Types & Statuses -->
+				<div class="accordion-item menu-section border-bottom"
+					th:if="${mappedEntities?.entities?.type != null and !#lists.isEmpty(mappedEntities.entities.type)}">
+					<h2 class="accordion-header">
+						<button
+							class="accordion-button px-3 py-2 fw-bold text-uppercase small text-muted"
+							th:classappend="${activeMenuSection == 'type'} ? '' : 'collapsed'"
+							type="button" data-bs-toggle="collapse"
+							data-bs-target="#collapseType"
+							th:attr="aria-expanded=${activeMenuSection == 'type'} ? 'true' : 'false'"
 							aria-controls="collapseType">
-							<i class="bi bi-2-circle-fill me-1"></i> Types &amp; Statuses
+							<i class="bi bi-1-circle-fill me-1"></i> Types &amp; Statuses
 						</button>
 					</h2>
 					<div id="collapseType" class="accordion-collapse collapse"
+						th:classappend="${activeMenuSection == 'type'} ? 'show' : ''"
 						data-bs-parent="#entitiesAccordion">
 						<div class="accordion-body p-0">
 							<ul class="nav flex-column px-2 pb-2">
 								<li class="nav-item"
 									th:each="entity : ${mappedEntities.entities.type}"><a
 									th:href="@{'/entity/' + ${entity.path} + '/list'}"
-									class="nav-link"> <i class="bi bi-arrow-right-circle me-2"></i>
-										<span th:text="${entity.title}"></span>
+									class="nav-link"
+									th:classappend="${entity.path == currentEntityPath} ? 'active' : ''">
+										<i class="bi bi-arrow-right-circle me-2"></i> <span
+										th:text="${entity.title}"></span>
 								</a></li>
 							</ul>
 						</div>
 					</div>
-
 				</div>
 
 				<!-- Footer info -->
