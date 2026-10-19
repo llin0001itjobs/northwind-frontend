@@ -58,23 +58,23 @@
 								</thead>
 								<tbody>
 									<tr th:each="s : ${Suppliers}">
-										<td><span th:text="${s.getFirstName()}"></span> &nbsp; <span
-											th:text="${s.getLastName()}"></span></td>
-										<td th:text="${s.getJobTitle()}"></td>
+										<td><span th:text="${s.firstName}"></span> &nbsp; <span
+											th:text="${s.lastName}"></span></td>
+										<td th:text="${s.jobTitle}"></td>
 										<td>
-											<div th:each="l: ${s.getLinks()}">
+											<div th:each="l: ${s.links}">
 												<div>
 													<a
-														th:href="'/modal/show?entity=company&id=' + ${l.getLink('company').getId()}"
+														th:href="'/modal/show?entity=company&id=' + ${l.getLink('company').id}"
 														data-bs-toggle="modal"
-														th:attr="data-bs-target='#modalCompany-' + ${l.getLink('company').getId()}">
+														th:attr="data-bs-target='#modalCompany-' + ${l.getLink('company').id}">
 														company</a>
 												</div>
 												<div>
 													<a
-														th:href="'/modal/show?entity=product&id=' + ${l.getLink('product').getId()}"
+														th:href="'/modal/show?entity=product&id=' + ${l.getLink('product').id}"
 														data-bs-toggle="modal"
-														th:attr="data-bs-target='#modalProduct-' + ${s.getId()}">
+														th:attr="data-bs-target='#modalProduct-' + ${s.id}">
 														products</a>
 												</div>
 											</div>

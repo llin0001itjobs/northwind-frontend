@@ -58,8 +58,8 @@
 								</thead>
 								<tbody class="font-data">
 									<tr th:each="r : ${Roles}">
-										<td><span th:text="${r.getType()}"></span></td>
-										<td><span th:text="${r.getDescription()}"></span></td>
+										<td><span th:text="${r.type}"></span></td>
+										<td><span th:text="${r.description}"></span></td>
 									</tr>
 								</tbody>
 							</table>

@@ -56,7 +56,7 @@
 								</thead>
 								<tbody class="font-data">
 									<tr th:each="o : ${OrderTaxStatuses}">
-										<td><span th:text="${o.getTaxStatusName()}"></span></td>
+										<td><span th:text="${o.taxStatusName}"></span></td>
 									</tr>
 								</tbody>
 							</table>

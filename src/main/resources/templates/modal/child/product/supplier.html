@@ -28,7 +28,7 @@
 
 						<tbody th:with="isNullSuppliers=${p.suppliers == null}, 
                 				  isNullSupplierList=${p.suppliers != null && 
-                					    p.getSuppliers.suppliers == null}">
+                					    p.suppliers.suppliers == null}">
 							<!-- Only render if suppliers are available -->
 							<tr th:if="${!isNullSuppliers && !isNullSupplierList}" 
 							    th:each="s : ${p.suppliers.suppliers}">

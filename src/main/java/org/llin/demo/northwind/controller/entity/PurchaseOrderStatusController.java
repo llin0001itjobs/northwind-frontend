@@ -37,7 +37,7 @@ public class PurchaseOrderStatusController<T extends _EntityObject> extends _Ent
 
 		if (opt.isPresent()) {
 			mav.addObject(PURCHASE_ORDER_STATUS, opt.get());
-			mav.setViewName("purchaseOrderStatuss/detail");
+			mav.setViewName("purchaseOrderStatuses/detail");
 		} else {
 			mav.setViewName("error/404");
 		}
@@ -50,7 +50,7 @@ public class PurchaseOrderStatusController<T extends _EntityObject> extends _Ent
 		ModelAndView mv = new ModelAndView(getModelAndView().getView()); 
 		mv.addObject(PURCHASE_ORDER_STATUSES,service.findAll());
 		mv.addObject(TITLE, TITLE_PURCHASE_ORDER_STATUS);
-		mv.setViewName("entity/role");
+		mv.setViewName("entity/purchaseOrderStatus");
 		return mv;		
 	}
 

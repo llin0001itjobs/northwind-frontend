@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <div th:each="e : ${Employees}" class="modal fade"
 	data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-	th:attr="id='modalApprovedBy-' + ${e.id}, aria-labelledby='modalApprovedByLabel-' + ${e.getId()}"
+	th:attr="id='modalApprovedBy-' + ${e.id}, aria-labelledby='modalApprovedByLabel-' + ${e.id}"
 	aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">

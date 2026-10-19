@@ -1,6 +1,6 @@
 package org.llin.demo.northwind.dto;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import org.llin.demo.northwind.model.entity.links.Links;
 import org.llin.demo.northwind.model.entity.links.LinksDeserializer;
@@ -17,14 +17,14 @@ public record PurchaseOrderDto(
 		SupplierDto supplier,
 		OrderStatusDto orderStatus,
 
-		LocalDateTime approvedDate,
-		LocalDateTime submittedDate,
-		LocalDateTime creationDate,
-		LocalDateTime expectedDate,
+		LocalDate approvedDate,
+		LocalDate submittedDate,
+		LocalDate creationDate,
+		LocalDate expectedDate,
 
 		double shippingFee,
 		double taxes,
-		LocalDateTime paymentDate,
+		LocalDate paymentDate,
 		double paymentAmount,
 		String paymentMethod,
 

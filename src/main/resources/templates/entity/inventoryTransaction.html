@@ -68,8 +68,10 @@
 								</thead>
 								<tbody>
 									<tr th:each="i : ${InventoryTransactions}">
-										<td><span th:text="${i.transactionCreatedDate}"></span></td>
-										<td><span th:text="${i.transactionModifiedDate}"></span></td>
+										<td
+											th:text="${i.transactionCreatedDate != null} ? ${#temporals.format(i.transactionCreatedDate, 'MM-dd-yyyy')} : ''"></td>
+										<td
+											th:text="${i.transactionModifiedDate != null} ? ${#temporals.format(i.transactionModifiedDate, 'MM-dd-yyyy')} : ''"></td>
 										<td><span th:text="${i.quantity}"></span></td>
 										<td><span th:text="${i.comments}"></span></td>
 										<td>

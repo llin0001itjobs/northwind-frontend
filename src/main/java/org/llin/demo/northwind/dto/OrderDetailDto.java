@@ -1,6 +1,6 @@
 package org.llin.demo.northwind.dto;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import org.llin.demo.northwind.model.entity.links.Links;
 import org.llin.demo.northwind.model.entity.links.LinksDeserializer;
@@ -20,7 +20,7 @@ public record OrderDetailDto(
 		double quantity,
 		double unitPrice,
 		double discount,
-		LocalDateTime dateAllocated,
+		LocalDate dateAllocated,
 		
         @JsonProperty("_links")
         @JsonDeserialize(using = LinksDeserializer.class) 

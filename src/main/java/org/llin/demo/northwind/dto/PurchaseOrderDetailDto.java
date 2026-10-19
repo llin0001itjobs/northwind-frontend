@@ -1,6 +1,6 @@
 package org.llin.demo.northwind.dto;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import org.llin.demo.northwind.model.entity.links.Links;
 import org.llin.demo.northwind.model.entity.links.LinksDeserializer;
@@ -17,7 +17,7 @@ public record PurchaseOrderDetailDto(
 
 		int quantity,
 		double unitCost,
-		LocalDateTime dateReceived,
+		LocalDate dateReceived,
 		boolean postedToInventory,
 		
         @JsonProperty("_links")

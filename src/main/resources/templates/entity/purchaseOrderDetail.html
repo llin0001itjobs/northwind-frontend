@@ -68,34 +68,34 @@
 								</thead>
 								<tbody>
 									<tr th:each="p : ${PurchaseOrderDetails}">
-										<td><span
-											th:text="${#temporals.format(p.dateReceived, 'dd-MM-yyyy HH:mm')}"></span></td>
+										<td
+											th:text="${p.dateReceived != null} ? ${#temporals.format(p.dateReceived, 'MM-dd-yyyy')} : ''"></td>
 										<td><span th:text="${p.unitCost}"></span></td>
 										<td><span th:text="${p.quantity}"></span></td>
 										<td><span th:text="${p.postedToInventory}"></span></td>
 										<td>
 											<div
-												th:with="isNullId=${p.links.getLink('inventoryTransaction').getId() == null}">
+												th:with="isNullId=${p.links.getLink('inventoryTransaction').id == null}">
 												<a th:if="${!isNullId}"
-													th:href="'/modal/show?entity=inventoryTransaction&id=' + ${p.links.getLink('inventoryTransaction').getId()}"
+													th:href="'/modal/show?entity=inventoryTransaction&id=' + ${p.links.getLink('inventoryTransaction').id}"
 													data-bs-toggle="modal"
-													th:attr="data-bs-target='#modalInventoryTransaction-' + ${p.links.getLink('inventoryTransaction').getId()}"><span
+													th:attr="data-bs-target='#modalInventoryTransaction-' + ${p.links.getLink('inventoryTransaction').id}"><span
 													th:text="${p.links.getLink('inventoryTransaction').label}"></span></a>
 											</div>
 											<div
-												th:with="isNullId=${p.links.getLink('product').getId() == null}">
+												th:with="isNullId=${p.links.getLink('product').id == null}">
 												<a th:if="${!isNullId}"
-													th:href="'/modal/show?entity=product&id=' + ${p.links.getLink('product').getId()}"
+													th:href="'/modal/show?entity=product&id=' + ${p.links.getLink('product').id}"
 													data-bs-toggle="modal"
-													th:attr="data-bs-target='#modalProduct-' + ${p.links.getLink('product').getId()}"><span
+													th:attr="data-bs-target='#modalProduct-' + ${p.links.getLink('product').id}"><span
 													th:text="${p.links.getLink('product').label}"></span></a>
 											</div>
 											<div
-												th:with="isNullId=${p.links.getLink('purchaseOrder').getId() == null}">
+												th:with="isNullId=${p.links.getLink('purchaseOrder').id == null}">
 												<a th:if="${!isNullId}"
-													th:href="'/modal/show?entity=purchaseOrder&id=' + ${p.links.getLink('purchaseOrder').getId()}"
+													th:href="'/modal/show?entity=purchaseOrder&id=' + ${p.links.getLink('purchaseOrder').id}"
 													data-bs-toggle="modal"
-													th:attr="data-bs-target='#modalPurchaseOrder-' + ${p.links.getLink('purchaseOrder').getId()}"><span
+													th:attr="data-bs-target='#modalPurchaseOrder-' + ${p.links.getLink('purchaseOrder').id}"><span
 													th:text="${p.links.getLink('purchaseOrder').label}"></span></a>
 											</div>
 										</td>

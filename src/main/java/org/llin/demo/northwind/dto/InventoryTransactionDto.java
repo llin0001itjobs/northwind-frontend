@@ -1,6 +1,6 @@
 package org.llin.demo.northwind.dto;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import org.llin.demo.northwind.model.entity.links.Links;
 import org.llin.demo.northwind.model.entity.links.LinksDeserializer;
@@ -14,8 +14,8 @@ public record InventoryTransactionDto(
 		ProductDto product,
 		InventoryTransactionTypeDto inventoryTransactionType,
 
-		LocalDateTime transactionCreatedDate,
-		LocalDateTime transactionModifiedDate,
+		LocalDate transactionCreatedDate,
+		LocalDate transactionModifiedDate,
 
 		double quantity,
 		String comments,

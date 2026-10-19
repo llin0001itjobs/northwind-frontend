@@ -66,17 +66,10 @@
 										<td>
 											<div>
 												<a
-													th:href="'/modal/show?entity=company&id=' + ${e.links.getLink('company').getId()}"
+													th:href="'/modal/show?entity=company&id=' + ${e.links.getLink('company').id}"
 													data-bs-toggle="modal"
-													th:attr="data-bs-target='#modalCompany-' + ${e.links.getLink('company').getId()}"><span
+													th:attr="data-bs-target='#modalCompany-' + ${e.links.getLink('company').id}"><span
 													th:text="${e.links.getLink('company').label}"></span></a>
-											</div>
-											<div>
-												<a
-													th:href="'/modal/show?entity=privilege&id=' + ${e.links.getLink('privilege').getId()}"
-													data-bs-toggle="modal"
-													th:attr="data-bs-target='#modalPrivilege-' + ${e.links.getLink('privilege').getId()}"><span
-													th:text="${e.links.getLink('privilege').label}"></span></a>
 											</div>
 										</td>
 									</tr>

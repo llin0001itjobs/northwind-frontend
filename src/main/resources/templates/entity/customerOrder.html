@@ -64,12 +64,12 @@
 								</thead>
 								<tbody>
 									<tr th:each="c : ${CustomerOrders}">
-										<td><span
-											th:text="${#temporals.format(c.orderDate, 'dd-MM-yyyy HH:mm')}"></span></td>
-										<td><span
-											th:text="${#temporals.format(c.getPaidDate, 'dd-MM-yyyy HH:mm')}"></span></td>
-										<td><span
-											th:text="${#temporals.format(c.shippedDate, 'dd-MM-yyyy HH:mm')}"></span></td>
+										<td
+											th:text="${c.orderDate != null} ? ${#temporals.format(c.orderDate, 'MM-dd-yyyy')} : ''"></td>									
+										<td
+											th:text="${c.paidDate != null} ? ${#temporals.format(c.paidDate, 'MM-dd-yyyy')} : ''"></td>
+										<td
+											th:text="${c.shippedDate != null} ? ${#temporals.format(c.shippedDate, 'MM-dd-yyyy')} : ''"></td>
 										<td>
 											<div>
 												<a

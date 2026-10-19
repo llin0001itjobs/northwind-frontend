@@ -32,4 +32,11 @@ public record ProductDto(
     @JsonProperty("_links")
     @JsonDeserialize(using = LinksDeserializer.class) 
     Links links
-) {}
+    
+) {
+    public ProductDto {
+        if (suppliers == null) {
+            suppliers = List.of();
+        }
+    }
+}    

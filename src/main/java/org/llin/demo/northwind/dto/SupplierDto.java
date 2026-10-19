@@ -2,6 +2,12 @@ package org.llin.demo.northwind.dto;
 
 import java.util.List;
 
+import org.llin.demo.northwind.model.entity.links.Links;
+import org.llin.demo.northwind.model.entity.links.LinksDeserializer;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
 public record SupplierDto (
 	    int id,
 
@@ -32,6 +38,15 @@ public record SupplierDto (
 	    String webSiteUrl,
 
 	    String portraitPath,
-	    String portraitTitle
-) {}
+	    String portraitTitle,
+        @JsonProperty("_links")
+        @JsonDeserialize(using = LinksDeserializer.class) 
+        Links links
+) {
+    public SupplierDto {
+        if (products == null) {
+        	products = List.of();
+        }
+    }	
+}
 

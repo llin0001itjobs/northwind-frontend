@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind.model.entity.links.Links;
-import org.llin.demo.northwind.util.StringUtil;
 
 public class Product extends _EntityObject implements _Classes_EntityObject {
 	
@@ -33,23 +32,8 @@ public class Product extends _EntityObject implements _Classes_EntityObject {
 
 	private int resourceId;
 		
-	private Suppliers suppliers;
-			
-	private void csvToArray() {
-		Links links = getLinks();
-		String csvIds = links.getLink("supplier").getId();
-		String[] ids = StringUtil.csvToArray(csvIds);
-		List<Supplier> list = new ArrayList<>();
-		for (String id : ids) {
-			Supplier s = new Supplier();
-			s.setId(Integer.parseInt(id));
-			list.add(s);
-		}
-		Supplier[] array = {};
-		suppliers.setSuppliers(list.toArray(array));
-	}
-	
-	
+	private Suppliers suppliers = new Suppliers();
+		
 	public String getProductCode() {
 		return productCode;
 	}
@@ -147,17 +131,30 @@ public class Product extends _EntityObject implements _Classes_EntityObject {
 	}
 	
 	public Suppliers getSuppliers() {
-		if (suppliers == null) {
-			suppliers = new Suppliers();
-			csvToArray();
-		}		
-		return suppliers;
+	    if (suppliers.getSuppliers() == null || suppliers.getSuppliers().length == 0) {
+	        csvToArray();   // only populate when needed
+	    }
+	    return suppliers;
 	}
 
 	public void setSuppliers(Suppliers suppliers) {
 		this.suppliers = suppliers;
 	}
 
+	private void csvToArray() {
+		List<Supplier> list = new ArrayList<>();
+	    Links links = getLinks();
+	    if (links == null) {
+	        return;
+	    }
+	    var link = links.getLink("supplier");
+	    if (link == null || link.getId() == null) {
+	        return;
+	    }
+	    // … rest of your existing logic
+	    suppliers.setSuppliers(list.toArray(new Supplier[0]));
+	}
+	
 	@Override
 	public String toString() {
 		return "Product [productCode=" + productCode + ", productName=" + productName + ", description=" + description

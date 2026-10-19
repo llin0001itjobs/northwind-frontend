@@ -8,6 +8,8 @@ import java.util.Optional;
 import org.llin.demo.northwind.dto.LabelValueLongDto;
 import org.llin.demo.northwind.dto.LabelValueLongValueDoubleDto;
 import org.llin.demo.northwind.dto.ProductDto;
+import org.llin.demo.northwind.dto.SupplierDto;
+import org.llin.demo.northwind.model.entity.links.Link;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.ParameterizedTypeReference;
@@ -31,12 +33,22 @@ public class ProductService {
 
 	private static class EmbeddedProducts {
 		@com.fasterxml.jackson.annotation.JsonProperty("_embedded")
-		public ProductList Products;
+		public ProductsList products;
 	}
 
-	private static class ProductList {
+	private static class ProductsList {
 		@com.fasterxml.jackson.annotation.JsonProperty("products")
-		public List<ProductDto> Product;
+		public List<ProductDto> products;
+	}
+	
+	private static class EmbeddedSuppliers {
+	    @com.fasterxml.jackson.annotation.JsonProperty("_embedded")
+	    public SuppliersList suppliers;
+	}
+
+	private static class SuppliersList {
+	    @com.fasterxml.jackson.annotation.JsonProperty("suppliers")
+	    public List<SupplierDto> suppliers;
 	}
 
 	private static class EmbeddedLabelValueLongValueDoubles {
@@ -69,8 +81,8 @@ public class ProductService {
 	public List<ProductDto> findAll() {
 		EmbeddedProducts response = restClient.get().uri("product").retrieve().body(EmbeddedProducts.class);
 
-		return response != null && response.Products != null && response.Products.Product != null
-				? response.Products.Product
+		return response != null && response.products != null && response.products.products != null
+				? response.products.products
 				: List.of();
 	}
 
@@ -168,20 +180,33 @@ public class ProductService {
 	}
 
 	private List<ProductDto> findByObject(Object value, String paramName, String searchMethod) {
-		if (value == null) {
-			return Collections.emptyList();
-		}
+	    if (value == null) {
+	        return Collections.emptyList();
+	    }
 
-		try {
-			return restClient.get().uri(uriBuilder -> uriBuilder
-					.path("product/search/{method}")
-					.queryParam(paramName, value)
-					.build(searchMethod)).retrieve()
-					.body(new ParameterizedTypeReference<List<ProductDto>>() {
-					});
-		} catch (HttpClientErrorException.NotFound e) {
-			return Collections.emptyList();
-		}
+	    try {
+	        List<ProductDto> products = restClient.get()
+	                .uri(uriBuilder -> uriBuilder
+	                        .path("product/search/{method}")
+	                        .queryParam(paramName, value)
+	                        .build(searchMethod))
+	                .retrieve()
+	                .body(new ParameterizedTypeReference<List<ProductDto>>() {});
+
+	        if (products == null) {
+	            return List.of();
+	        }
+
+	        // Enrich each product with its suppliers collection
+	        List<ProductDto> enriched = new java.util.ArrayList<>(products.size());
+	        for (ProductDto p : products) {
+	            enriched.add(enrichWithSuppliers(p));
+	        }
+	        return enriched;
+
+	    } catch (HttpClientErrorException.NotFound e) {
+	        return Collections.emptyList();
+	    }
 	}
 
 	private List<ProductDto> findWithTwoParameters(Object param1, String paramName1, Object param2, String paramName2,
@@ -199,4 +224,43 @@ public class ProductService {
 		}
 	}
 
+	private ProductDto enrichWithSuppliers(ProductDto product) {
+	    if (product == null || product.links() == null) {
+	        return product;
+	    }
+
+	    Link suppliersLink = product.links().getLink("suppliers");
+	    if (suppliersLink == null || suppliersLink.getHref() == null) {
+	        return product;
+	    }
+
+	    try {
+	        EmbeddedSuppliers response = restClient.get()
+	                .uri(suppliersLink.getHref())          // full URL from the link
+	                .retrieve()
+	                .body(EmbeddedSuppliers.class);
+
+	        List<SupplierDto> list = (response != null
+	                && response.suppliers != null
+	                && response.suppliers.suppliers != null)
+	                ? response.suppliers.suppliers
+	                : List.of();
+
+	        return withSuppliers(product, list);
+
+	    } catch (HttpClientErrorException e) {
+	        // link missing or 404 → leave suppliers empty
+	        return withSuppliers(product, List.of());
+	    }
+	}
+	
+    // Helper used by your service / ObjectMapper post-processor
+    public ProductDto withSuppliers(ProductDto dto, List<SupplierDto> suppliers) {
+        return new ProductDto(dto.id(), suppliers, dto.productCode(),
+        		dto.productName(), dto.description(),dto.standardCost(),
+        		dto.listPrice(), dto.reorderLevel(), dto.targetLevel(),
+        		dto.quantityPerUnit(), dto.discontinued(),dto.minimumReorderQuantity(),
+        		dto.category(),dto.resourceId(),dto.links());
+    }
+    
 }

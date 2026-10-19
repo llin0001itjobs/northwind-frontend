@@ -58,12 +58,15 @@
 										<th scope="col">Links</th>
 									</tr>
 								</thead>
+
+
+
 								<tbody>
 									<tr th:each="i : ${Invoices}">
-										<td><span
-											th:text="${#temporals.format(i.invoiceDate, 'dd-MM-yyyy HH:mm')}"></span></td>
-										<td><span
-											th:text="${#temporals.format(i.dueDate, 'dd-MM-yyyy HH:mm')}"></span></td>
+										<td
+											th:text="${i.invoiceDate != null} ? ${#temporals.format(i.invoiceDate, 'MM-dd-yyyy')} : ''"></td>
+										<td
+											th:text="${i.dueDate != null} ? ${#temporals.format(i.dueDate, 'MM-dd-yyyy')} : ''"></td>
 										<td><span th:text="${i.tax}"></span></td>
 										<td><span th:text="${i.amountDue}"></span></td>
 										<td>
