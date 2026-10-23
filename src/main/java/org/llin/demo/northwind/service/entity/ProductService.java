@@ -40,15 +40,15 @@ public class ProductService {
 		@com.fasterxml.jackson.annotation.JsonProperty("products")
 		public List<ProductDto> products;
 	}
-	
+
 	private static class EmbeddedSuppliers {
-	    @com.fasterxml.jackson.annotation.JsonProperty("_embedded")
-	    public SuppliersList suppliers;
+		@com.fasterxml.jackson.annotation.JsonProperty("_embedded")
+		public SuppliersList suppliers;
 	}
 
 	private static class SuppliersList {
-	    @com.fasterxml.jackson.annotation.JsonProperty("suppliers")
-	    public List<SupplierDto> suppliers;
+		@com.fasterxml.jackson.annotation.JsonProperty("suppliers")
+		public List<SupplierDto> suppliers;
 	}
 
 	private static class EmbeddedLabelValueLongValueDoubles {
@@ -81,16 +81,20 @@ public class ProductService {
 	public List<ProductDto> findAll() {
 		EmbeddedProducts response = restClient.get().uri("product").retrieve().body(EmbeddedProducts.class);
 
-		return response != null && response.products != null && response.products.products != null
+		List<ProductDto> products = response != null && response.products != null && response.products.products != null
 				? response.products.products
 				: List.of();
+
+		return enrichAll(products);
 	}
 
 	public Optional<ProductDto> findById(Integer id) {
-		if (id == null)
+		if (id == null) {
 			return Optional.empty();
+		}
+		ProductDto product = restClient.get().uri("product/{id}", id).retrieve().body(ProductDto.class);
 
-		return Optional.ofNullable(restClient.get().uri("product/{id}", id).retrieve().body(ProductDto.class));
+		return Optional.ofNullable(enrichWithSuppliers(product));
 	}
 
 	public ProductDto create(ProductDto ProductDto) {
@@ -180,87 +184,98 @@ public class ProductService {
 	}
 
 	private List<ProductDto> findByObject(Object value, String paramName, String searchMethod) {
-	    if (value == null) {
-	        return Collections.emptyList();
-	    }
-
-	    try {
-	        List<ProductDto> products = restClient.get()
-	                .uri(uriBuilder -> uriBuilder
-	                        .path("product/search/{method}")
-	                        .queryParam(paramName, value)
-	                        .build(searchMethod))
-	                .retrieve()
-	                .body(new ParameterizedTypeReference<List<ProductDto>>() {});
-
-	        if (products == null) {
-	            return List.of();
-	        }
-
-	        // Enrich each product with its suppliers collection
-	        List<ProductDto> enriched = new java.util.ArrayList<>(products.size());
-	        for (ProductDto p : products) {
-	            enriched.add(enrichWithSuppliers(p));
-	        }
-	        return enriched;
-
-	    } catch (HttpClientErrorException.NotFound e) {
-	        return Collections.emptyList();
-	    }
-	}
-
-	private List<ProductDto> findWithTwoParameters(Object param1, String paramName1, Object param2, String paramName2,
-			String path) {
+		if (value == null) {
+			return Collections.emptyList();
+		}
 		try {
-			return restClient.get()
-					.uri(uriBuilder -> uriBuilder
-							.path("product/search/" + path)
-							.queryParam(paramName1, param1)
-							.queryParam(paramName2, param2).build())
-					.retrieve().body(new ParameterizedTypeReference<List<ProductDto>>() {
+			List<ProductDto> products = restClient.get().uri(uriBuilder -> uriBuilder.path("product/search/{method}")
+					.queryParam(paramName, value).build(searchMethod)).retrieve()
+					.body(new ParameterizedTypeReference<List<ProductDto>>() {
 					});
+
+			return enrichAll(products);
 		} catch (HttpClientErrorException.NotFound e) {
 			return Collections.emptyList();
 		}
 	}
 
-	private ProductDto enrichWithSuppliers(ProductDto product) {
-	    if (product == null || product.links() == null) {
-	        return product;
-	    }
+	private List<ProductDto> findWithTwoParameters(Object param1, String paramName1, Object param2, String paramName2,
+			String path) {
+		try {
+			List<ProductDto> products = restClient.get()
+					.uri(uriBuilder -> uriBuilder.path("product/search/" + path).queryParam(paramName1, param1)
+							.queryParam(paramName2, param2).build())
+					.retrieve().body(new ParameterizedTypeReference<List<ProductDto>>() {
+					});
 
-	    Link suppliersLink = product.links().getLink("suppliers");
-	    if (suppliersLink == null || suppliersLink.getHref() == null) {
-	        return product;
-	    }
+			return enrichAll(products);
+		} catch (HttpClientErrorException.NotFound e) {
+			return Collections.emptyList();
+		}
+	}
 
-	    try {
-	        EmbeddedSuppliers response = restClient.get()
-	                .uri(suppliersLink.getHref())          // full URL from the link
-	                .retrieve()
-	                .body(EmbeddedSuppliers.class);
+	private List<ProductDto> enrichAll(List<ProductDto> products) {
+		if (products == null || products.isEmpty()) {
+			return List.of();
+		}
+		return products.stream().map(this::enrichWithSuppliers).toList();
+	}
 
-	        List<SupplierDto> list = (response != null
-	                && response.suppliers != null
-	                && response.suppliers.suppliers != null)
-	                ? response.suppliers.suppliers
-	                : List.of();
+	public ProductDto enrichWithSuppliers(ProductDto product) {
+		if (product == null || product.links() == null) {
+			return product;
+		}
 
-	        return withSuppliers(product, list);
+		Link suppliersLink = product.links().getLink("suppliers");
+		if (suppliersLink == null || suppliersLink.getHref() == null) {
+			return product;
+		}
 
-	    } catch (HttpClientErrorException e) {
-	        // link missing or 404 → leave suppliers empty
-	        return withSuppliers(product, List.of());
-	    }
+		try {
+			EmbeddedSuppliers response = restClient.get().uri(suppliersLink.getHref()) // full URL from the link
+					.retrieve().body(EmbeddedSuppliers.class);
+
+			List<SupplierDto> list = (response != null && response.suppliers != null
+					&& response.suppliers.suppliers != null) ? response.suppliers.suppliers : List.of();
+
+			return withSuppliers(product, list);
+
+		} catch (HttpClientErrorException e) {
+			// link missing or 404 → leave suppliers empty
+			return withSuppliers(product, List.of());
+		}
+	}
+
+	// Helper used by your service / ObjectMapper post-processor
+	public ProductDto withSuppliers(ProductDto dto, List<SupplierDto> suppliers) {
+		return new ProductDto(dto.id(), suppliers, dto.productCode(), dto.productName(), dto.description(),
+				dto.standardCost(), dto.listPrice(), dto.reorderLevel(), dto.targetLevel(), dto.quantityPerUnit(),
+				dto.discontinued(), dto.minimumReorderQuantity(), dto.category(), dto.resourceId(), dto.links());
+	}
+		
+	public ProductDto withId(ProductDto p) {
+	    Integer id = extractIdFromSelfLink(p);
+	    if (id == null) return p;
+	    // adjust to match your ProductDto record constructor
+	    return new ProductDto(id, p.suppliers(), p.productCode(), p.productName(),
+	            p.description(), p.standardCost(), p.listPrice(), p.reorderLevel(),
+	            p.targetLevel(), p.quantityPerUnit(), p.discontinued(),
+	            p.minimumReorderQuantity(), p.category(), p.resourceId(), p.links());
 	}
 	
-    // Helper used by your service / ObjectMapper post-processor
-    public ProductDto withSuppliers(ProductDto dto, List<SupplierDto> suppliers) {
-        return new ProductDto(dto.id(), suppliers, dto.productCode(),
-        		dto.productName(), dto.description(),dto.standardCost(),
-        		dto.listPrice(), dto.reorderLevel(), dto.targetLevel(),
-        		dto.quantityPerUnit(), dto.discontinued(),dto.minimumReorderQuantity(),
-        		dto.category(),dto.resourceId(),dto.links());
-    }
-    
+	public Integer extractIdFromSelfLink(ProductDto p) {
+	    if (p == null || p.links() == null) return null;
+	    var self = p.links().getLink("self");
+	    if (self == null || self.getHref() == null) return null;
+	    String href = self.getHref();
+	    int slash = href.lastIndexOf('/');
+	    if (slash < 0) return null;
+	    try {
+	        return Integer.valueOf(href.substring(slash + 1));
+	    } catch (NumberFormatException e) {
+	        return null;
+	    }
+	}
+
+
 }

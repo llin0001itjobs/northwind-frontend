@@ -1,54 +1,61 @@
 <!DOCTYPE html>
-<div>
-	<div th:each="p : ${Products}" class="modal modal-lg fade"
-		data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-		th:attr="id='modalSupplier-' + ${p.id}, aria-labelledby='modalSupplierLabel-' + ${p.id}"
-		aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title"
-						th:attr="id='modalSupplierLabel-' + ${p.id}">
-						Supplier</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal"
-						aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<table class="table modal-table">
-						<thead>
-							<tr>
-								<th class="col">Name</th>
-								<th class="col">Job Title</th>
-								<th class="col">Email Address</th>
-								<th class="col">Phone Number</th>
-								<th class="col">City State</th>
-								<th class="col">Zip Code</th>
-							</tr>
-						</thead>
-
-						<tbody th:with="isNullSuppliers=${p.suppliers == null}, 
-                				  isNullSupplierList=${p.suppliers != null && 
-                					    p.suppliers.suppliers == null}">
-							<!-- Only render if suppliers are available -->
-							<tr th:if="${!isNullSuppliers && !isNullSupplierList}" 
-							    th:each="s : ${p.suppliers.suppliers}">
-								<td class="col"><span th:text="${s.firstName}">&nbsp;</span>
-								<td class="col"><span th:text="${s.jobTitle}"></span></td>
-								<td class="col"><span th:text="${s.emailAddress}"></span></td>
-								<td class="col"><span th:text="${s.businessPhone}"></span></td>
-								<td class="col"><span th:text="${s.city}">,&nbsp;</span><span
-									th:text="${s.stateProvince}"></span></td>
-								<td class="col"><span th:text="${s.zipPostalCode}"></span></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary"
-						data-bs-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
+<!-- modal/child/product/supplier.html -->
+<!-- one modal per product -->
+<div th:each="p : ${Products}"
+     th:if="${p.id != null}"
+     th:attr="id='modalSupplier-' + ${p.id}"
+     class="modal modal-lg fade"
+     data-bs-backdrop="static"
+     data-bs-keyboard="false"
+     tabindex="-1"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"
+                    th:attr="id='modalSupplierLabel-' + ${p.id}">
+                    Suppliers for <span th:text="${p.productName}"></span>
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table modal-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Job Title</th>
+                            <th>Email Address</th>
+                            <th>Phone Number</th>
+                            <th>City State</th>
+                            <th>Zip Code</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="s : ${p.suppliers ?: {}}">
+                            <td>
+                                <span th:text="${s.firstName}"></span>
+                                <span th:text="${s.lastName}"></span>
+                            </td>
+                            <td th:text="${s.jobTitle}"></td>
+                            <td th:text="${s.emailAddress}"></td>
+                            <td th:text="${s.businessPhone}"></td>
+                            <td>
+                                <span th:text="${s.city}"></span>,&nbsp;
+                                <span th:text="${s.stateProvince}"></span>
+                            </td>
+                            <td th:text="${s.zipPostalCode}"></td>
+                        </tr>
+                        <tr th:if="${p.suppliers == null or #lists.isEmpty(p.suppliers)}">
+                            <td colspan="6" class="text-muted">No suppliers</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary"
+                        data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
-

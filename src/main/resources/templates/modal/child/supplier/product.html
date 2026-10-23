@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<div th:each="s : ${Suppliers}" class="modal modal-xl fade"
+<!-- modal/child/supplier/product.html -->
+<!-- one modal per supplier -->
+<div th:each="s : ${Suppliers}" th:if="${s.id != null}"
+	th:attr="id='modalProduct-' + ${s.id}" class="modal modal-lg fade"
 	data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-	th:attr="id='modalProduct-' + ${s.id}, aria-labelledby='modalProductLabel-' + ${s.id}"
 	aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title"
-					th:attr="id='modalProductLabel-' + ${s.id}">
-					Product
+				<h5 class="modal-title" th:attr="id='modalSupplierLabel-' + ${s.id}">
+					Products for <span th:text="${s.company?.name}"></span>
 				</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal"
 					aria-label="Close"></button>
@@ -22,19 +23,18 @@
 							<th scope="col">Category</th>
 							<th scope="col">Standard Cost</th>
 							<th scope="col">List Price</th>
-							<th scope="col">Quantity Per Unit</th>
-							<th scope="col">Minimum Reorder Quantity</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr th:each="p : ${s.products.products}">
+						<tr th:each="p : ${s.products?: {}}">
 							<td><span th:text="${p.productCode}"></span></td>
 							<td><span th:text="${p.productName}"></span></td>
 							<td><span th:text="${p.category}"></span></td>
 							<td><span th:text="${p.standardCost}"></span></td>
 							<td><span th:text="${p.listPrice}"></span></td>
-							<td><span th:text="${p.quantityPerUnit}"></span></td>
-							<td><span th:text="${p.minimumReorderQuantity}"></span></td>
+						</tr>
+						<tr th:if="${s.products == null or #lists.isEmpty(s.products)}">
+							<td colspan="6" class="text-muted">No products</td>
 						</tr>
 					</tbody>
 				</table>
@@ -46,4 +46,3 @@
 		</div>
 	</div>
 </div>
-

@@ -111,8 +111,6 @@ public class UserService {
 		            .map(role -> props.getApp().getData().getApiUri() + "role/" + role.id())
 		            .toList());
 		}
-
-	    System.out.println("VERIFY id=" + user.id() + " email=" + user.email());
 	    
 	    // 3. Send the custom payload map via PUT
 	    return restClient.put()

@@ -1,5 +1,6 @@
 package org.llin.demo.northwind.controller.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -42,10 +43,12 @@ public class SupplierController<T extends _EntityObject> extends _EntityControll
 	@GetMapping("/{id}")
 	public ModelAndView findById(@PathVariable Integer id) {
 		ModelAndView mav = createDefaultModelAndView();
-		Optional<SupplierDto> supplierOpt = supplierService.findById(id);
+		Optional<SupplierDto> opt = supplierService.findById(id);
 
-		if (supplierOpt.isPresent()) {
-			mav.addObject(SUPPLIER, supplierOpt.get());
+		if (opt.isPresent()) {
+			List<SupplierDto> suppliers = new ArrayList<>();
+			suppliers.add(opt.get());
+			mav.addObject(SUPPLIER, enrichAll(suppliers));
 			mav.setViewName("suppliers/detail");
 		} else {
 			mav.setViewName("error/404");
@@ -53,65 +56,96 @@ public class SupplierController<T extends _EntityObject> extends _EntityControll
 
 		return mav;
 	}
-	
-    @GetMapping("/search/findAllByLastName/{lastName}") 
-    public ModelAndView findAllByLastName(@PathVariable String lastName) {
-        ModelAndView mav = createDefaultModelAndView(); 
-        List<SupplierDto> suppliers = supplierService.findAllByLastName(lastName);
-        mav.addObject(SUPPLIERS, suppliers);
-        return mav;    
-    }
 
-    @GetMapping("/search/findByLastNameContaining/{lastName}") 
-    public ModelAndView findByLastNameContaining(@PathVariable String lastName) {
-        ModelAndView mav = createDefaultModelAndView(); // Fresh instance
-        List<SupplierDto> suppliers = supplierService.findByLastNameContaining(lastName);
-        mav.addObject(SUPPLIERS, suppliers);
-        return mav; 
-    }
-    
-    @GetMapping("/search/findByLastNameContaining/{firstName}") 
-    public ModelAndView findByFirstNameContaining(@PathVariable String firstName) {
-        ModelAndView mav = createDefaultModelAndView(); // Fresh instance
-        List<SupplierDto> suppliers = supplierService.findByFirstNameContaining(firstName);
-        mav.addObject(SUPPLIERS, suppliers);
-        return mav;  
-    }
-        
-    @GetMapping("/search/findByJobTitle/{jobTitle}") 
-    public ModelAndView findByJobTitle(@PathVariable String jobTitle) {
-        ModelAndView mav = createDefaultModelAndView(); // Fresh instance
-        List<SupplierDto> suppliers = supplierService.findByJobTitle(jobTitle);
-        mav.addObject(SUPPLIERS, suppliers);
-        return mav; 
-    }
-    
-    @GetMapping("/search/findByJobTitleContaining/{jobTitle}") 
-    public ModelAndView findByJobTitleContaining(@PathVariable String jobTitle) {
-        ModelAndView mav = createDefaultModelAndView(); // Fresh instance
-        List<SupplierDto> suppliers = supplierService.findByJobTitleContaining(jobTitle);
-        mav.addObject(SUPPLIERS, suppliers);
-        return mav;  
-    }
-    
-    @GetMapping("/search/findByEmailAddress/{emailAddress}")
-    public ModelAndView findByEmailAddress(@PathVariable String emailAddress) {
-        ModelAndView mav = createDefaultModelAndView(); // Fresh instance
-        List<SupplierDto> suppliers = supplierService.findByEmailAddress(emailAddress);
-        mav.addObject(SUPPLIERS, suppliers);
-        return mav;  
-    }
-    
+	@GetMapping("/{id}/suppliers")
+	public ModelAndView supplierProducts(@PathVariable Integer id) {
+		ModelAndView mv = createDefaultModelAndView();
+
+		if (id == null || id <= 0) {
+			mv.addObject("showProductModal", false);
+			return mv;
+		}
+
+		supplierService.findById(id).ifPresent(p -> {
+			try {
+				SupplierDto enriched = supplierService.enrichWithProducts(p);
+				mv.addObject("selectedSupplier", enriched);
+				mv.addObject("showProductModal", true);
+			} catch (Exception e) {
+				// log it
+				mv.addObject("showProductModal", false);
+			}
+		});
+
+		return mv;
+	}
+
+	@GetMapping("/search/findAllByLastName/{lastName}")
+	public ModelAndView findAllByLastName(@PathVariable String lastName) {
+		ModelAndView mav = createDefaultModelAndView();
+		List<SupplierDto> suppliers = supplierService.findAllByLastName(lastName);
+		mav.addObject(SUPPLIERS, enrichAll(suppliers));
+		return mav;
+	}
+
+	@GetMapping("/search/findByLastNameContaining/{lastName}")
+	public ModelAndView findByLastNameContaining(@PathVariable String lastName) {
+		ModelAndView mav = createDefaultModelAndView(); // Fresh instance
+		List<SupplierDto> suppliers = supplierService.findByLastNameContaining(lastName);
+		mav.addObject(SUPPLIERS, enrichAll(suppliers));
+		return mav;
+	}
+
+	@GetMapping("/search/findByLastNameContaining/{firstName}")
+	public ModelAndView findByFirstNameContaining(@PathVariable String firstName) {
+		ModelAndView mav = createDefaultModelAndView(); // Fresh instance
+		List<SupplierDto> suppliers = supplierService.findByFirstNameContaining(firstName);
+		mav.addObject(SUPPLIERS, enrichAll(suppliers));
+		return mav;
+	}
+
+	@GetMapping("/search/findByJobTitle/{jobTitle}")
+	public ModelAndView findByJobTitle(@PathVariable String jobTitle) {
+		ModelAndView mav = createDefaultModelAndView(); // Fresh instance
+		List<SupplierDto> suppliers = supplierService.findByJobTitle(jobTitle);
+		mav.addObject(SUPPLIERS, enrichAll(suppliers));
+		return mav;
+	}
+
+	@GetMapping("/search/findByJobTitleContaining/{jobTitle}")
+	public ModelAndView findByJobTitleContaining(@PathVariable String jobTitle) {
+		ModelAndView mav = createDefaultModelAndView(); // Fresh instance
+		List<SupplierDto> suppliers = supplierService.findByJobTitleContaining(jobTitle);
+		mav.addObject(SUPPLIERS, enrichAll(suppliers));
+		return mav;
+	}
+
+	@GetMapping("/search/findByEmailAddress/{emailAddress}")
+	public ModelAndView findByEmailAddress(@PathVariable String emailAddress) {
+		ModelAndView mav = createDefaultModelAndView(); // Fresh instance
+		List<SupplierDto> suppliers = supplierService.findByEmailAddress(emailAddress);
+		mav.addObject(SUPPLIERS, enrichAll(suppliers));
+		return mav;
+	}
+
 	private ModelAndView createDefaultModelAndView() {
 		loadMenu();
-		ModelAndView mv = new ModelAndView(getModelAndView().getView()); 	
-		mv.addObject(SUPPLIERS, supplierService.findAll());
-		mv.addObject(COMPANIES, companyService.findAll());
+		ModelAndView mv = new ModelAndView(getModelAndView().getView());
+		mv.addObject(SUPPLIERS, enrichAll(supplierService.findAll()));
 		mv.addObject(PRODUCTS, productService.findAll());
 		mv.addObject("activeMenuSection", "secondOrder");
 		mv.addObject("currentEntityPath", "supplier");
 		mv.addObject(TITLE, TITLE_SUPPLIER);
 		mv.setViewName("entity/supplier");
-		return mv;		
+		return mv;
 	}
+	
+	private List<SupplierDto> enrichAll(List<SupplierDto> suppliers) {
+		if (suppliers == null || suppliers.isEmpty())
+			return List.of();
+		return suppliers.stream().map(supplierService::withId)
+								 .map(supplierService::enrichWithProducts)
+								 .toList();
+	}
+	
 }

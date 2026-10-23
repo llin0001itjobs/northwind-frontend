@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<!-- saved from url=(0052)https://getbootstrap.com/docs/5.0/examples/sidebars/ -->
+<!-- entity/product.html -->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -23,61 +23,55 @@
 				</div>
 			</div>
 			<div class="row border">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-2 bg-light border border-primary pb-3"
-							id="leftSideBar">
-							<div th:replace="fragments/sideMenuLeftEntities :: div"></div>
-						</div>
-						<div class="col-8 border border-primary mt-5 pt-4">
-							<h3>
-								<span th:text="${TITLE}"></span>
-							</h3>
-							<table class="table" id="dataTable">
-								<thead>
-									<tr>
-										<th scope="col">Product Code</th>
-										<th scope="col">Product Name</th>
-										<th scope="col">Category</th>
-										<th scope="col">Standard Cost</th>
-										<th scope="col">List Price</th>
-										<th scope="col">Quantity Per Unit</th>
-										<th scope="col">Minimum Reorder Quantity</th>
-										<th scope="col">Links</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr th:each="p : ${Products}">
-										<td><span th:text="${p.getProductCode}"></span></td>
-										<td><span th:text="${p.getProductName}"></span></td>
-										<td><span th:text="${p.getCategory}"></span></td>
-										<td><span th:text="${p.getStandardCost}"></span></td>
-										<td><span th:text="${p.getListPrice}"></span></td>
-										<td><span th:text="${p.getQuantityPerUnit}"></span></td>
-										<td><span th:text="${p.getMinimumReorderQuantity}"></span></td>
-										<td>
-											<div th:each="l: ${p.links}">
-												<div
-													th:with="isNullId=${l.getLink('supplier').id == null}">
-													<a th:if="${!isNullId}"
-														th:href="'/modal/show?entity=supplier&id=' + ${l.getLink('supplier').id}"
-														data-bs-toggle="modal"
-														th:attr="data-bs-target='#modalSupplier-' + ${p.id}">supplier</a>
-												</div>
-											</div>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-
-						</div>
-						<div class="col-2 bg-light border border-primary pb-3"
-							id="rightSideBar">
-							<div th:replace="fragments/sideMenuRight :: div"></div>
-						</div>
+				<div class="row">
+					<div class="col-2 bg-light border border-primary pb-3"
+						id="leftSideBar">
+						<div th:replace="fragments/sideMenuLeftEntities :: div"></div>
 					</div>
-
-
+					<div class="col-8 border border-primary mt-5 pt-4">
+						<h3>
+							<span th:text="${TITLE}"></span>
+						</h3>
+						<table class="table" id="dataTable">
+							<thead>
+								<tr>
+									<th scope="col">Product Code</th>
+									<th scope="col">Product Name</th>
+									<th scope="col">Category</th>
+									<th scope="col">Standard Cost</th>
+									<th scope="col">List Price</th>
+									<th scope="col">Quantity Per Unit</th>
+									<th scope="col">Minimum Reorder Quantity</th>
+									<th scope="col">Links</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="p : ${Products}">
+									<td><span th:text="${p.productCode}"></span></td>
+									<td><span th:text="${p.productName}"></span></td>
+									<td><span th:text="${p.category}"></span></td>
+									<td><span th:text="${p.standardCost}"></span></td>
+									<td><span th:text="${p.listPrice}"></span></td>
+									<td><span th:text="${p.quantityPerUnit}"></span></td>
+									<td><span th:text="${p.minimumReorderQuantity}"></span></td>
+									<td>
+										<div th:if="${p.links != null}">
+											<div th:with="supplierLink=${p.links.getLink('suppliers')}">
+												<a th:if="${supplierLink != null}" href="#"
+													data-bs-toggle="modal"
+													th:attr="data-bs-target='#modalSupplier-' + ${p.id}">
+													suppliers</a>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-2 bg-light border border-primary pb-3"
+						id="rightSideBar">
+						<div th:replace="fragments/sideMenuRight :: div"></div>
+					</div>
 				</div>
 				<div class="row" id="footerRow">
 					<div class="col-12" id="footerCol">

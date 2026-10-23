@@ -1,6 +1,7 @@
 package org.llin.demo.northwind.controller.entity;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -67,7 +68,9 @@ public class ProductController<T extends _EntityObject> extends _EntityControlle
 		Optional<ProductDto> opt = productService.findById(id);
 
 		if (opt.isPresent()) {
-			mav.addObject(PRODUCT, opt.get());
+			List<ProductDto> products = new ArrayList<>();
+			products.add(opt.get());
+			mav.addObject(PRODUCT, enrichAll(products));
 			mav.setViewName("products/detail");
 		} else {
 			mav.setViewName("error/404");
@@ -76,6 +79,29 @@ public class ProductController<T extends _EntityObject> extends _EntityControlle
 		return mav;
 	}
 
+	@GetMapping("/{id}/suppliers")
+	public ModelAndView productSuppliers(@PathVariable Integer id) {
+	    ModelAndView mv = createDefaultModelAndView();
+
+	    if (id == null || id <= 0) {
+	        mv.addObject("showSupplierModal", false);
+	        return mv;
+	    }
+
+	    productService.findById(id).ifPresent(p -> {
+	        try {
+	            ProductDto enriched = productService.enrichWithSuppliers(p);
+	            mv.addObject("selectedProduct", enriched);
+	            mv.addObject("showSupplierModal", true);
+	        } catch (Exception e) {
+	            // log it
+	            mv.addObject("showSupplierModal", false);
+	        }
+	    });
+
+	    return mv;
+	}
+	
 	@GetMapping("/search/analytics/categoryRatios")
 	public ModelAndView categoryRatios() {
 		ModelAndView mv = createDefaultModelAndView();
@@ -104,7 +130,7 @@ public class ProductController<T extends _EntityObject> extends _EntityControlle
 	public ModelAndView findByCustomerOrderId(@RequestParam String productCode) {
 		ModelAndView mv = createDefaultModelAndView();
 		List<ProductDto> products = productService.findByProductCode(productCode);
-		mv.addObject(PRODUCTS, products);
+		mv.addObject(PRODUCTS, enrichAll(products));
 		return mv;
 	}
 
@@ -112,7 +138,7 @@ public class ProductController<T extends _EntityObject> extends _EntityControlle
 	public ModelAndView findByProductNameContaining(@RequestParam String productName) {
 		ModelAndView mv = createDefaultModelAndView();
 		List<ProductDto> products = productService.findByProductNameContaining(productName);
-		mv.addObject(PRODUCTS, products);
+		mv.addObject(PRODUCTS, enrichAll(products));
 		return mv;
 	}
 
@@ -120,7 +146,7 @@ public class ProductController<T extends _EntityObject> extends _EntityControlle
 	public ModelAndView findByCategoryContaining(@RequestParam String category) {
 		ModelAndView mv = createDefaultModelAndView();
 		List<ProductDto> products = productService.findByCategoryContaining(category);
-		mv.addObject(PRODUCTS, products);
+		mv.addObject(PRODUCTS, enrichAll(products));
 		return mv;
 	}
 
@@ -128,7 +154,7 @@ public class ProductController<T extends _EntityObject> extends _EntityControlle
 	public ModelAndView findByDescriptionContaining(@RequestParam String description) {
 		ModelAndView mv = createDefaultModelAndView();
 		List<ProductDto> products = productService.findByDescriptionContaining(description);
-		mv.addObject(PRODUCTS, products);
+		mv.addObject(PRODUCTS, enrichAll(products));
 		return mv;
 	}
 
@@ -136,7 +162,7 @@ public class ProductController<T extends _EntityObject> extends _EntityControlle
 	public ModelAndView findByDiscontinued(@RequestParam Boolean discontinued) {
 		ModelAndView mv = createDefaultModelAndView();
 		List<ProductDto> products = productService.findByDiscontinued(discontinued);
-		mv.addObject(PRODUCTS, products);
+		mv.addObject(PRODUCTS, enrichAll(products));
 		return mv;
 	}
 
@@ -148,7 +174,7 @@ public class ProductController<T extends _EntityObject> extends _EntityControlle
 
 		List<ProductDto> products = productService.findByStandardCostBetweenOrderByStandardCostAsc(min, max);
 
-		mv.addObject(PRODUCTS, products);
+		mv.addObject(PRODUCTS, enrichAll(products));
 		return mv;
 	}
 
@@ -160,7 +186,7 @@ public class ProductController<T extends _EntityObject> extends _EntityControlle
 
 		List<ProductDto> products = productService.findByListPriceBetweenOrderByListPriceAsc(min, max);
 
-		mv.addObject(PRODUCTS, products);
+		mv.addObject(PRODUCTS, enrichAll(products));
 		return mv;
 	}
 
@@ -172,7 +198,7 @@ public class ProductController<T extends _EntityObject> extends _EntityControlle
 
 		List<ProductDto> products = productService.findByReorderLevelBetweenOrderByReorderLevelAsc(min, max);
 
-		mv.addObject(PRODUCTS, products);
+		mv.addObject(PRODUCTS, enrichAll(products));
 		return mv;
 	}
 
@@ -184,7 +210,7 @@ public class ProductController<T extends _EntityObject> extends _EntityControlle
 
 		List<ProductDto> products = productService.findByTargetLevelBetweenOrderByTargetLevelAsc(min, max);
 
-		mv.addObject(PRODUCTS, products);
+		mv.addObject(PRODUCTS, enrichAll(products));
 		return mv;
 	}
 
@@ -197,7 +223,7 @@ public class ProductController<T extends _EntityObject> extends _EntityControlle
 		List<ProductDto> products = productService
 				.findByMinimumReorderQuantityBetweenOrderByMinimumReorderQuantityAsc(min, max);
 
-		mv.addObject(PRODUCTS, products);
+		mv.addObject(PRODUCTS, enrichAll(products));
 		return mv;
 	}
 
@@ -210,14 +236,14 @@ public class ProductController<T extends _EntityObject> extends _EntityControlle
 		List<ProductDto> products = productService
 				.findByCategoryAndDiscontinued(category, discontinued);
 
-		mv.addObject(PRODUCTS, products);
+		mv.addObject(PRODUCTS, enrichAll(products));
 		return mv;
 	}
 	
 	private ModelAndView createDefaultModelAndView() {
 		loadMenu();
 		ModelAndView mv = new ModelAndView(getModelAndView().getView());
-		mv.addObject(PRODUCTS, productService.findAll());
+		mv.addObject(PRODUCTS, enrichAll(productService.findAll()));
 		mv.addObject(SUPPLIERS, supplierService.findAll());
 		mv.addObject("activeMenuSection", "secondOrder");
 		mv.addObject("currentEntityPath", "product");
@@ -225,4 +251,14 @@ public class ProductController<T extends _EntityObject> extends _EntityControlle
 		mv.setViewName("entity/product");
 		return mv;
 	}
+	
+	private List<ProductDto> enrichAll(List<ProductDto> products) {
+		 if (products == null || products.isEmpty()) return List.of();
+		 return products.stream()
+		 .map(productService::withId)
+		 .map(productService::enrichWithSuppliers)
+		 .toList();
+		}
+	
+	
 }

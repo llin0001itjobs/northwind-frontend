@@ -49,14 +49,13 @@ public class RegisterController {
     @Value("${spring.mail.username:}") String username;
     @Value("${spring.mail.password:}") String password;
 
-    @PostConstruct
+    //@PostConstruct
     void dump() {
         String envUser = System.getenv("SPRING_MAIL_USERNAME");
         String envPass = System.getenv("SPRING_MAIL_PASSWORD");
         System.out.println("MAIL host={" + host + "} port={" + port + "} username={" + username + "}");
         System.out.println("passwordLen={" + password == null ? 0 : password.length() + "}");
         System.out.println("envUserSet={" + (envUser != null) +"} envPassSet={" + (envPass != null) + "}");
-
     }
     
 	@GetMapping("/register")
