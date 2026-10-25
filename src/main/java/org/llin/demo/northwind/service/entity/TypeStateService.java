@@ -1,7 +1,7 @@
 package org.llin.demo.northwind.service.entity;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import org.llin.demo.northwind.dto.TypeStateDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,15 +53,18 @@ public class TypeStateService {
                     : List.of();
     }
  
-    public Optional<TypeStateDto> findById(Integer id) {
-        if (id == null) return Optional.empty();
+    public List<TypeStateDto> findById(Integer id) {
+		if (id == null)
+			return List.of();
 
-        return Optional.ofNullable(
-                restClient.get()
-                        .uri("typeState/{id}", id)
-                        .retrieve()
-                        .body(TypeStateDto.class)
-        );
+		List<TypeStateDto> list = new ArrayList<>();
+
+		TypeStateDto dto = restClient.get().uri("typeState/{id}", id).retrieve().body(TypeStateDto.class);
+
+		if (dto != null)
+			list.add(dto);
+
+		return list;
     }
         
 }

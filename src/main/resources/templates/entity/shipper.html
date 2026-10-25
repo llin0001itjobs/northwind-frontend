@@ -32,7 +32,6 @@
 <body>
 	<main>
 		<div class="container-fluid">
-			<div th:replace="modal/child/shipper/company :: div"></div>
 			<div class="row" id="navBarRow">
 				<div class="col-12" id="navBarCol">
 					<div th:replace="fragments/navbar :: nav"></div>
@@ -52,28 +51,22 @@
 							<table class="table" id="dataTable">
 								<thead>
 									<tr>
-										<th scope="col">Name</th>
+										<th scope="col">Contact</th>
 										<th scope="col">Job Title</th>
+										<th scope="col">Business Phone</th>
+										<th scope="col">Company</th>
 										<th scope="col">Notes</th>
-										<th scope="col">Links</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr th:each="s : ${Shippers}">
-										<td><span th:text="${s.firstName}"></span> &nbsp; <span
-											th:text="${s.lastName()}"></span></td>
-										<td th:text="${s.jobTitle()}"></td>
+										<td><span
+											th:text="${s.lastName}"></span>, <span th:text="${s.firstName}"></span></td>
+										<td th:text="${s.jobTitle}"></td>
+										<td th:text="${s.businessPhone}"></td>
+										<td th:text="${s.company?.name}"></td>																				
 										<td><textarea rows="6" cols="60" style="resize: none;"
 												th:text="${s.notes}"></textarea></td>
-										<td>
-											<div>
-												<a
-													th:href="'/modal/show?entity=company&id=' + ${s.links.getLink('company').id}"
-													data-bs-toggle="modal"
-													th:attr="data-bs-target='#modalCompany-' + ${s.links.getLink('company').id}"><span
-													th:text="${s.links.getLink('company').label}"></span></a>
-											</div>
-										</td>
 									</tr>
 								</tbody>
 							</table>

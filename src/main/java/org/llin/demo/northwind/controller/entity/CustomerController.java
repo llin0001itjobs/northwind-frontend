@@ -1,13 +1,11 @@
 package org.llin.demo.northwind.controller.entity;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
 import org.llin.demo.northwind.dto.CustomerDto;
 import org.llin.demo.northwind.model.entity._EntityObject;
-import org.llin.demo.northwind.service.entity.CompanyService;
 import org.llin.demo.northwind.service.entity.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -24,13 +22,12 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 @RequestMapping("/entity/customer")
 public class CustomerController<T extends _EntityObject> extends _EntityController<T> implements _Classes_EntityObject, _Titles {
+	
     private final CustomerService customerService;
-	private final CompanyService companyService;
 	
     @Autowired
-    public CustomerController(CustomerService customerService, CompanyService companyService) { 
+    public CustomerController(CustomerService customerService) { 
         this.customerService = customerService;
-        this.companyService = companyService; 
     }
 
     @GetMapping("/list")
@@ -57,17 +54,17 @@ public class CustomerController<T extends _EntityObject> extends _EntityControll
 
     @GetMapping("/{id}")
     public ModelAndView findById(@PathVariable Integer id) {
-    	ModelAndView mav = createDefaultModelAndView();
-        Optional<CustomerDto> customerOpt = customerService.findById(id);
+    	ModelAndView mv = createDefaultModelAndView();
+        List<CustomerDto> list = customerService.findById(id);
         
-        if (customerOpt.isPresent()) {
-            mav.addObject(CUSTOMER, customerOpt.get());
-            mav.setViewName("customers/detail");
+        if (!list.isEmpty()) {
+        	mv.addObject(CUSTOMER, list.get(0));
+        	mv.setViewName("customers/detail");
         } else {
-            mav.setViewName("error/404");
+        	mv.setViewName("error/404");
         }
         
-        return mav;      	
+        return mv;      	
     }
     
     @GetMapping("/search/findAllByLastName/{lastName}") 
@@ -123,8 +120,7 @@ public class CustomerController<T extends _EntityObject> extends _EntityControll
         
         // Create a NEW instance every time to ensure thread safety
         ModelAndView mv = new ModelAndView(getModelAndView().getView());		
-        mv.addObject(CUSTOMERS, customerService.findAll());
-        mv.addObject(COMPANIES, companyService.findAll());
+        mv.addObject(CUSTOMERS, enrichAll(customerService.findAll()));
         mv.addObject("activeMenuSection", "firstOrder");
         mv.addObject("currentEntityPath", "customer");
         mv.setViewName("entity/customer");
@@ -132,4 +128,11 @@ public class CustomerController<T extends _EntityObject> extends _EntityControll
         return mv;
     }  
 	
+	private List<CustomerDto> enrichAll(List<CustomerDto> customers) {
+		if (customers == null || customers.isEmpty())
+			return List.of();
+		return customers.stream().map(customerService::withId)
+								 .toList();
+	}
+
 }

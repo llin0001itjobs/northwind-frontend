@@ -8,7 +8,6 @@ import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
 import org.llin.demo.northwind.dto.SupplierDto;
 import org.llin.demo.northwind.model.entity._EntityObject;
-import org.llin.demo.northwind.service.entity.CompanyService;
 import org.llin.demo.northwind.service.entity.ProductService;
 import org.llin.demo.northwind.service.entity.SupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,14 +23,11 @@ public class SupplierController<T extends _EntityObject> extends _EntityControll
 		implements _Classes_EntityObject, _Titles {
 
 	private final SupplierService supplierService;
-	private final CompanyService companyService;
 	private final ProductService productService;
 
 	@Autowired
-	public SupplierController(SupplierService supplierService, CompanyService companyService,
-			ProductService productService) {
+	public SupplierController(SupplierService supplierService, ProductService productService) {
 		this.supplierService = supplierService;
-		this.companyService = companyService;
 		this.productService = productService;
 	}
 
@@ -139,13 +135,11 @@ public class SupplierController<T extends _EntityObject> extends _EntityControll
 		mv.setViewName("entity/supplier");
 		return mv;
 	}
-	
+
 	private List<SupplierDto> enrichAll(List<SupplierDto> suppliers) {
 		if (suppliers == null || suppliers.isEmpty())
 			return List.of();
-		return suppliers.stream().map(supplierService::withId)
-								 .map(supplierService::enrichWithProducts)
-								 .toList();
+		return suppliers.stream().map(supplierService::withId).map(supplierService::enrichWithProducts).toList();
 	}
-	
+
 }

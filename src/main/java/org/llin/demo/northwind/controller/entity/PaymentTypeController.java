@@ -1,6 +1,6 @@
 package org.llin.demo.northwind.controller.entity;
 
-import java.util.Optional;
+import java.util.List;
 
 import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
@@ -32,17 +32,17 @@ public class PaymentTypeController<T extends _EntityObject> extends _EntityContr
 
 	@GetMapping("/{id}")
 	public ModelAndView findById(@PathVariable Integer id) {
-		ModelAndView mav = createDefaultModelAndView();
-		Optional<PaymentTypeDto> opt = service.findById(id);
+		ModelAndView mv = createDefaultModelAndView();
+		List<PaymentTypeDto> list = service.findById(id);
 
-		if (opt.isPresent()) {
-			mav.addObject(PAYMENT_TYPE, opt.get());
-			mav.setViewName("paymentTypes/detail");
+		if (!list.isEmpty()) {
+			mv.addObject(PAYMENT_TYPE, list.get(0));
+			mv.setViewName("paymentTypes/detail");
 		} else {
-			mav.setViewName("error/404");
+			mv.setViewName("error/404");
 		}
 
-		return mav;
+		return mv;
 	}
 	
 	private ModelAndView createDefaultModelAndView() {

@@ -13,11 +13,11 @@ public record CustomerOrderDto(
 
 		 EmployeeDto employee,
 		 CustomerDto customer,
-
+		 ShipperDto shipper,
+		 
 		 LocalDate orderDate,
 		 LocalDate shippedDate,
-
-		 ShipperDto shipper,
+		 
 		 String shipName,
 		 String shipAddress,
 		 String shipCity,
@@ -27,7 +27,7 @@ public record CustomerOrderDto(
 
 		 double shippingFee,
 		 double taxes,	
-		 String paymentType,
+		 PaymentTypeDto paymentType,
 		 LocalDate paidDate,
 		 String notes,
 		 double taxRate,

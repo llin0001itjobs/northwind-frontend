@@ -18,7 +18,7 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClient;
 
 @Service
-public class ProductService {
+public class ProductService extends _BaseService {
 
 	private final RestClient restClient;
 
@@ -265,16 +265,7 @@ public class ProductService {
 	
 	public Integer extractIdFromSelfLink(ProductDto p) {
 	    if (p == null || p.links() == null) return null;
-	    var self = p.links().getLink("self");
-	    if (self == null || self.getHref() == null) return null;
-	    String href = self.getHref();
-	    int slash = href.lastIndexOf('/');
-	    if (slash < 0) return null;
-	    try {
-	        return Integer.valueOf(href.substring(slash + 1));
-	    } catch (NumberFormatException e) {
-	        return null;
-	    }
+	    return this.extractIdFromSelf(p.links().getLink("self"));
 	}
 
 

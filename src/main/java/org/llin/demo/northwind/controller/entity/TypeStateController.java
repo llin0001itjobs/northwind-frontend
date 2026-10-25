@@ -1,6 +1,6 @@
 package org.llin.demo.northwind.controller.entity;
 
-import java.util.Optional;
+import java.util.List;
 
 import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
@@ -32,17 +32,17 @@ public class TypeStateController<T extends _EntityObject> extends _EntityControl
 		
 	@GetMapping("/{id}")
 	public ModelAndView findById(@PathVariable Integer id) {
-		ModelAndView mav = createDefaultModelAndView();
-		Optional<TypeStateDto> opt = service.findById(id);
+		ModelAndView mv = createDefaultModelAndView();
+		List<TypeStateDto> list = service.findById(id);
 
-		if (opt.isPresent()) {
-			mav.addObject(TYPE_STATE, opt.get());
-			mav.setViewName("typeStates/detail");
+		if (!list.isEmpty()) {
+			mv.addObject(TYPE_STATE, list.get(0));
+			mv.setViewName("typeStates/detail");
 		} else {
-			mav.setViewName("error/404");
+			mv.setViewName("error/404");
 		}
 
-		return mav;
+		return mv;
 	}
 	
 	private ModelAndView createDefaultModelAndView() {

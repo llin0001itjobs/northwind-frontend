@@ -1,6 +1,6 @@
 package org.llin.demo.northwind.controller.entity;
 
-import java.util.Optional;
+import java.util.List;
 
 import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
@@ -33,17 +33,17 @@ public class OrderTaxStatusController<T extends _EntityObject> extends _EntityCo
 
 	@GetMapping("/{id}")
 	public ModelAndView findById(@PathVariable Integer id) {
-		ModelAndView mav = createDefaultModelAndView();
-		Optional<OrderTaxStatusDto> opt = service.findById(id);
+		ModelAndView mv = createDefaultModelAndView();
+		List<OrderTaxStatusDto> list = service.findById(id);
 
-		if (opt.isPresent()) {
-			mav.addObject(ORDER_TAX_STATUS, opt.get());
-			mav.setViewName("orderTaxStatuses/detail");
+		if (!list.isEmpty()) {
+			mv.addObject(ORDER_TAX_STATUS, list.get(0));
+			mv.setViewName("orderTaxStatuses/detail");
 		} else {
-			mav.setViewName("error/404");
+			mv.setViewName("error/404");
 		}
 
-		return mav;
+		return mv;
 	}
 
 	private ModelAndView createDefaultModelAndView() {

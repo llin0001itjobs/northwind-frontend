@@ -1,38 +1,45 @@
 <!DOCTYPE html>
-<div>
-	<div th:each="s : ${Shippers}" class="modal fade"
-		data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-		th:attr="id='modalShipper-' + ${s.id}, aria-labelledby='modalShipperLabel-' + ${s.id}"
-		aria-hidden="true">
-		<div class="modal-dialog modal-lg modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" th:attr="id='modalShipperLabel-' + ${s.id}">
-						Shipper</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal"
-						aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<dl class="row">
-						<dt class="col">Name</dt>
-						<dd class="col">
-							<span th:text="${c.firstName}"></span> &nbsp; <span
-								th:text="${c.lastName}"></span>
-						</dd>
-					</dl>
-					<dl class="row">
-						<dt class="col">Job Title</dt>
-						<dd class="col">
-							<span th:text="${c.jobTitle}"></span>
-						</dd>
-					</dl>
-					<dl class="row">
-						<dt class="col">Notes</dt>
-						<dd class="col">
-							<span th:text="${c.notes}"></span>
-						</dd>
-					</dl>
-				</div>
+<!-- modal/child/customerOrder/shipper.html -->
+<!-- one modal per customerOrder -->
+<div th:each="co : ${CustomerOrders}" th:if="${co.id != null}"
+	th:attr="id='modalShipper-' + ${co.id}" class="modal modal-lg fade"
+	data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title"
+					th:attr="id='modalShipperLabel-' + ${co.id}">
+					Shipper of OrderDate <span th:text="${co.orderDate}"></span>
+				</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"
+					aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<table class="table modal-table">
+					<thead>
+						<tr>
+							<th scope="col-2">Contact</th>
+							<th scope="col-2">Company</th>
+							<th scope="col-2">Job Title</th>
+							<th scope="col-2">Business Phone</th>
+							<th scope="col-2">Mobile Phone</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="s : ${co.shipper ?: {}}">
+							<td><span th:text="${s.lastName}"></span>, <span
+								th:text="${s.firstName}"></span></td>
+							<!--td><span th:text="${c.company.name}"></span></td-->
+							<td><span th:text="${s.jobTitle}"></span></td>
+							<td><span th:text="${s.businessPhone}"></span></td>
+							<td><span th:text="${s.mobilePhone}"></span></td>
+						</tr>
+						<tr th:if="${co.employee == null or #lists.isEmpty(co.employee)}">
+							<td colspan="6" class="text-muted">No Shipper</td>
+						</tr>
+					</tbody>
+				</table>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary"
 						data-bs-dismiss="modal">Close</button>
@@ -40,5 +47,3 @@
 			</div>
 		</div>
 	</div>
-</div>
-

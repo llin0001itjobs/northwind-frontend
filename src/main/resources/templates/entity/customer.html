@@ -10,15 +10,15 @@
 
 <title>Northwind Traders</title>
 
-<th:block th:replace="fragments/links-css :: linksCss"></th:block>
+<th:block th:replace="~{fragments/links-css :: linksCss"></th:block>
 
 </head>
 <body>
 	<div class="container-fluid">
-		<div th:replace="modal/child/customer/company :: div"></div>
+		<div th:replace="~{modal/child/customer/company :: div}"></div>
 		<div class="row" id="navBarRow">
 			<div class="col-12" id="navBarCol">
-				<div th:replace="fragments/navbar :: nav"></div>
+				<div th:replace="fragments/navbar :: nav}"></div>
 			</div>
 		</div>
 		<div class="row border">
@@ -26,7 +26,7 @@
 				<div class="row">
 					<div class="col-2 bg-light border border-primary pb-3"
 						id="leftSideBar">
-						<div th:replace="fragments/sideMenuLeftEntities :: div"></div>
+						<div th:replace="~{fragments/sideMenuLeftEntities :: div}"></div>
 					</div>
 					<div class="col-8 mt-5 pt-4">
 						<h3>
@@ -35,34 +35,28 @@
 						<table class="table" id="dataTable">
 							<thead>
 								<tr>
-									<th scope="col-2">Name</th>
+									<th scope="col-2">Contact</th>
+									<th scope="col-2">Company</th>
 									<th scope="col-2">Job Title</th>
-									<th scope="col-2">Notes</th>
-									<th scope="col-5">Links</th>
+									<th scope="col-2">Business Phone</th>
+									<th scope="col-2">Mobile Phone</th>
 								</tr>
 							</thead>
 							<tbody class="font-data">
 								<tr th:each="c : ${Customers}">
-									<td><span th:text="${c.firstName}"></span> &nbsp; <span
-										th:text="${c.lastName}"></span></td>
+									<td> <span
+										th:text="${c.lastName}"></span>, <span th:text="${c.firstName}"></span> </td>
+									<td><span th:text="${c.company.name}"></span></td>	
 									<td><span th:text="${c.jobTitle}"></span></td>
-									<td><span th:text="${c.notes}"></span></td>
-									<td>
-										<div>
-											<a
-												th:href="'/modal/show?entity=company&id=' + ${c.links.getLink('company').id}"
-												data-bs-toggle="modal"
-												th:attr="data-bs-target='#modalCompany-' + ${c.links.getLink('company').id}"><span
-												th:text="${c.links.getLink('company').label}"></span></a>
-										</div>
-									</td>
+									<td><span th:text="${c.businessPhone}"></span></td>
+									<td><span th:text="${c.mobilePhone}"></span></td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 					<div class="col-2 bg-light border border-primary pb-3"
 						id="rightSideBar">
-						<div th:replace="fragments/sideMenuRight :: div"></div>
+						<div th:replace="~{fragments/sideMenuRight :: div}"></div>
 					</div>
 				</div>
 
@@ -70,12 +64,12 @@
 			</div>
 			<div class="row" id="footerRow">
 				<div class="col-12" id="footerCol">
-					<div th:replace="fragments/footer :: footer"></div>
+					<div th:replace="~{fragments/footer :: footer}"></div>
 				</div>
 			</div>
 		</div>
 
-		<div th:replace="fragments/links-js :: linksJs"></div>
+		<div th:replace="~{fragments/links-js :: linksJs}"></div>
 	</div>
 </body>
 </html>

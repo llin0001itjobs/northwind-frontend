@@ -1,13 +1,11 @@
 package org.llin.demo.northwind.controller.entity;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
 import org.llin.demo.northwind.dto.EmployeeDto;
 import org.llin.demo.northwind.model.entity._EntityObject;
-import org.llin.demo.northwind.service.entity.CompanyService;
 import org.llin.demo.northwind.service.entity.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,12 +20,10 @@ public class EmployeeController<T extends _EntityObject> extends _EntityControll
 		implements _Classes_EntityObject, _Titles {
 
 	private final EmployeeService employeeService;
-	private final CompanyService companyService;
 
 	@Autowired
-	public EmployeeController(EmployeeService employeeService, CompanyService companyService) {
+	public EmployeeController(EmployeeService employeeService) {
 		this.employeeService = employeeService;
-		this.companyService = companyService;
 	}
 
 	@GetMapping("/list")
@@ -37,17 +33,17 @@ public class EmployeeController<T extends _EntityObject> extends _EntityControll
 
 	@GetMapping("/{id}")
 	public ModelAndView findById(@PathVariable Integer id) {
-		ModelAndView mav = createDefaultModelAndView();
-		Optional<EmployeeDto> employeeOpt = employeeService.findById(id);
+		ModelAndView mv = createDefaultModelAndView();
+		List<EmployeeDto> list = employeeService.findById(id);
 
-		if (employeeOpt.isPresent()) {
-			mav.addObject(EMPLOYEE, employeeOpt.get());
-			mav.setViewName("employees/detail");
+		if (!list.isEmpty()) {
+			mv.addObject(EMPLOYEE, list.get(0));
+			mv.setViewName("employees/detail");
 		} else {
-			mav.setViewName("error/404");
+			mv.setViewName("error/404");
 		}
 
-		return mav;
+		return mv;
 	}
 
     @GetMapping("/search/findAllByLastName/{lastName}") 
@@ -103,8 +99,7 @@ public class EmployeeController<T extends _EntityObject> extends _EntityControll
 
 		// Create a NEW instance every time to ensure thread safety
 		ModelAndView mv = new ModelAndView(getModelAndView().getView());
-		mv.addObject(EMPLOYEES, employeeService.findAll());
-		mv.addObject(COMPANIES, companyService.findAll());
+		mv.addObject(EMPLOYEES, enrichAll(employeeService.findAll()));
 		mv.addObject("activeMenuSection", "thirdOrder");
 		mv.addObject("currentEntityPath", "employee");
 		mv.setViewName("entity/employee");
@@ -112,4 +107,10 @@ public class EmployeeController<T extends _EntityObject> extends _EntityControll
 		return mv;
 	}
 
+	private List<EmployeeDto> enrichAll(List<EmployeeDto> employees) {
+		if (employees == null || employees.isEmpty())
+			return List.of();
+		return employees.stream().map(employeeService::withId).toList();
+	}
+	
 }

@@ -32,7 +32,7 @@ public class CustomerOrder extends _EntityObject implements _Classes_EntityObjec
 
 	private double taxes;
 	
-	private String paymentType;
+	private PaymentType paymentType;
 
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
 	private LocalDateTime paidDate;
@@ -130,11 +130,11 @@ public class CustomerOrder extends _EntityObject implements _Classes_EntityObjec
 		this.taxes = taxes;
 	}
 
-	public String getPaymentType() {
+	public PaymentType getPaymentType() {
 		return paymentType;
 	}
 
-	public void setPaymentType(String paymentType) {
+	public void setPaymentType(PaymentType paymentType) {
 		this.paymentType = paymentType;
 	}
 

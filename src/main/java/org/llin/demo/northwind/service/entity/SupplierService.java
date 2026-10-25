@@ -17,7 +17,7 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClient;
 
 @Service
-public class SupplierService {
+public class SupplierService extends _BaseService {
 	
 	private final RestClient restClient;
 
@@ -191,66 +191,17 @@ public class SupplierService {
 				s.zipPostalCode(), s.countryRegion(), s.notes(), s.webSiteTitle(), s.webSiteUrl(), s.portraitPath(),
 				s.portraitTitle(), s.links());
 	}
-
-	public Integer extractIdFromSelfLink(SupplierDto s) {
+	
+	private Integer extractCompanyId(SupplierDto s) {
 		if (s == null || s.links() == null)
 			return null;
-		var self = s.links().getLink("self");
-		if (self == null || self.getHref() == null)
-			return null;
-		String href = self.getHref();
-		int slash = href.lastIndexOf('/');
-		if (slash < 0)
-			return null;
-		try {
-			return Integer.valueOf(href.substring(slash + 1));
-		} catch (NumberFormatException e) {
-			return null;
-		}
+		return extractIdFromLink(s.links().getLink("company"));
 	}
-
-	public Integer extractCompanyId(SupplierDto s) {
+	
+	private Integer extractIdFromSelfLink(SupplierDto s) {
 		if (s == null || s.links() == null)
 			return null;
-
-		// Try the relation named "company"
-		Link companyLink = s.links().getLink("company");
-		if (companyLink == null)
-			return null;
-
-		String href = companyLink.getHref();
-		if (href == null)
-			return null;
-
-		// Case 1: query param ?id=6
-		String idParam = queryParam(href, "id");
-		if (idParam != null) {
-			try {
-				return Integer.valueOf(idParam);
-			} catch (NumberFormatException ignored) {
-			}
-		}
-
-		// Case 2: path segment .../company/6
-		int last = href.lastIndexOf('/');
-		if (last >= 0) {
-			try {
-				return Integer.valueOf(href.substring(last + 1));
-			} catch (NumberFormatException ignored) {
-			}
-		}
-		return null;
+		return extractIdFromSelf(s.links().getLink("self"));
 	}
 
-	private String queryParam(String href, String name) {
-		int q = href.indexOf('?');
-		if (q < 0)
-			return null;
-		for (String part : href.substring(q + 1).split("&")) {
-			String[] pair = part.split("=", 2);
-			if (pair.length == 2 && pair[0].equals(name))
-				return pair[1];
-		}
-		return null;
-	}
 }

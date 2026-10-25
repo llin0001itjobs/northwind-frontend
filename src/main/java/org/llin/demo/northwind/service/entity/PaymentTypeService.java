@@ -1,7 +1,7 @@
 package org.llin.demo.northwind.service.entity;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import org.llin.demo.northwind.dto.PaymentTypeDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,15 +54,18 @@ public class PaymentTypeService {
     }
     
     
-    public Optional<PaymentTypeDto> findById(Integer id) {
-        if (id == null) return Optional.empty();
+    public List<PaymentTypeDto> findById(Integer id) {
+		if (id == null)
+			return List.of();
 
-        return Optional.ofNullable(
-                restClient.get()
-                        .uri("paymentType/{id}", id)
-                        .retrieve()
-                        .body(PaymentTypeDto.class)
-        );
+		List<PaymentTypeDto> list = new ArrayList<>();
+
+		PaymentTypeDto dto = restClient.get().uri("orderStatus/{id}", id).retrieve().body(PaymentTypeDto.class);
+
+		if (dto != null)
+			list.add(dto);
+
+		return list;
     }    
  
 }

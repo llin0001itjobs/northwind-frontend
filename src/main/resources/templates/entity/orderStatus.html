@@ -25,7 +25,7 @@
 }
 </style>
 
-<th:block th:replace="fragments/links-css :: linksCss"></th:block>
+<th:block th:replace="~{fragments/links-css :: linksCss}"></th:block>
 
 
 </head>
@@ -34,7 +34,7 @@
 		<div class="container-fluid">
 			<div class="row" id="navBarRow">
 				<div class="col-12" id="navBarCol">
-					<div th:replace="fragments/navbar :: nav"></div>
+					<div th:replace="~{fragments/navbar :: nav}"></div>
 				</div>
 			</div>
 			<div class="row border">
@@ -42,7 +42,7 @@
 					<div class="row">
 						<div class="col-2 bg-light border border-primary pb-3"
 							id="leftSideBar">
-							<div th:replace="fragments/sideMenuLeftEntities :: div"></div>
+							<div th:replace="~{fragments/sideMenuLeftEntities :: div}"></div>
 						</div>
 						<div class="col-8 border border-primary mt-5 pt-4">
 							<h3>
@@ -63,7 +63,7 @@
 						</div>
 						<div class="col-2 bg-light border border-primary pb-3"
 							id="rightSideBar">
-							<div th:replace="fragments/sideMenuRight :: div"></div>
+							<div th:replace="~{fragments/sideMenuRight :: div}"></div>
 						</div>
 					</div>
 
@@ -71,7 +71,7 @@
 				</div>
 				<div class="row" id="footerRow">
 					<div class="col-12" id="footerCol">
-						<div th:replace="fragments/footer :: footer"></div>
+						<div th:replace="~{fragments/footer :: footer}"></div>
 					</div>
 				</div>
 			</div>
@@ -80,7 +80,7 @@
 
 	</main>
 
-	<div th:replace="fragments/links-js :: linksJs"></div>
+	<div th:replace="~{fragments/links-js :: linksJs}"></div>
 
 </body>
 </html>
