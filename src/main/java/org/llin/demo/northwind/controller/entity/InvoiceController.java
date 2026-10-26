@@ -7,6 +7,7 @@ import java.util.Optional;
 
 import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
+import org.llin.demo.northwind.dto.CustomerOrderDto;
 import org.llin.demo.northwind.dto.InvoiceDto;
 import org.llin.demo.northwind.model.entity._EntityObject;
 import org.llin.demo.northwind.service.entity.CustomerOrderService;
@@ -30,13 +31,10 @@ import org.springframework.web.servlet.ModelAndView;
 public class InvoiceController<T extends _EntityObject> extends _EntityController<T> implements _Classes_EntityObject, _Titles {
 
 	private final InvoiceService invoiceService;
-	private final CustomerOrderService customerOrderService;
 
 	@Autowired
-	public InvoiceController(InvoiceService invoiceService,
-			CustomerOrderService customerOrderService) {
+	public InvoiceController(InvoiceService invoiceService) {
 		this.invoiceService = invoiceService;
-		this.customerOrderService = customerOrderService;
 	}
 	
 	@GetMapping("/list")
@@ -63,17 +61,17 @@ public class InvoiceController<T extends _EntityObject> extends _EntityControlle
 
     @GetMapping("/{id}")
     public ModelAndView findById(@PathVariable Integer id) {
-    	ModelAndView mav = createDefaultModelAndView();
+    	ModelAndView mv = createDefaultModelAndView();
         Optional<InvoiceDto> invoiceOpt = invoiceService.findById(id);
         
         if (invoiceOpt.isPresent()) {
-            mav.addObject(INVOICE, invoiceOpt.get());
-            mav.setViewName("invoices/detail");
+        	mv.addObject(INVOICE, invoiceOpt.get());
+        	mv.setViewName("invoices/detail");
         } else {
-            mav.setViewName("error/404");
+        	mv.setViewName("error/404");
         }
         
-        return mav;      	
+        return mv;      	
     }	
 
     @GetMapping("/search/findByDueDateBetweenOrderByDueDateAsc")
@@ -85,7 +83,7 @@ public class InvoiceController<T extends _EntityObject> extends _EntityControlle
         
         List<InvoiceDto> invoices = invoiceService.findByDueDateBetweenOrderByDueDateAsc(dueDate1, dueDate2);
                 
-        mv.addObject(INVOICES, invoices);
+        mv.addObject(INVOICES, enrichAll(invoices));
         return mv;
     }
     
@@ -98,7 +96,7 @@ public class InvoiceController<T extends _EntityObject> extends _EntityControlle
         
         List<InvoiceDto> invoices = invoiceService.findByInvoiceDateBetweenOrderByInvoiceDateAsc(invoiceDate1, invoiceDate2);
                 
-        mv.addObject(INVOICES, invoices);
+        mv.addObject(INVOICES, enrichAll(invoices));
         return mv;
     }
 
@@ -111,7 +109,7 @@ public class InvoiceController<T extends _EntityObject> extends _EntityControlle
         
         List<InvoiceDto> invoices = invoiceService.findByAmountDueBetweenOrderByAmountDueAsc(amountDue1, amountDue2);
                 
-        mv.addObject(INVOICES, invoices);
+        mv.addObject(INVOICES, enrichAll(invoices));
         return mv;
     }
     
@@ -122,7 +120,7 @@ public class InvoiceController<T extends _EntityObject> extends _EntityControlle
         
         List<InvoiceDto> invoices = invoiceService.findByShippingBetweenOrderByShippingAsc(shipping1, shipping2);
                 
-        mv.addObject(INVOICES, invoices);
+        mv.addObject(INVOICES, enrichAll(invoices));
         return mv;
     }
 
@@ -133,7 +131,7 @@ public class InvoiceController<T extends _EntityObject> extends _EntityControlle
         
         List<InvoiceDto> invoices = invoiceService.findByTaxBetweenOrderByTaxAsc(tax1, tax2);
                 
-        mv.addObject(INVOICES, invoices);
+        mv.addObject(INVOICES, enrichAll(invoices));
         return mv;
     }
           
@@ -141,7 +139,7 @@ public class InvoiceController<T extends _EntityObject> extends _EntityControlle
     public ModelAndView findByCustomerOrderId(@PathVariable Integer id) {
     	ModelAndView mv = createDefaultModelAndView();
     	List<InvoiceDto> invoices = invoiceService.findByCustomerOrderId(id);
-    	mv.addObject(INVOICES, invoices);
+    	mv.addObject(INVOICES, enrichAll(invoices));
         return mv;      	
     }	   
 
@@ -150,7 +148,7 @@ public class InvoiceController<T extends _EntityObject> extends _EntityControlle
     		@RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime date) {
     	ModelAndView mv = createDefaultModelAndView();
     	List<InvoiceDto> invoices = invoiceService.findByInvoiceDateAfterOrderByInvoiceDateAsc(date);
-    	mv.addObject(INVOICES, invoices);
+    	mv.addObject(INVOICES, enrichAll(invoices));
         return mv;      	
     }	   
 
@@ -159,7 +157,7 @@ public class InvoiceController<T extends _EntityObject> extends _EntityControlle
     		@RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime date) {
     	ModelAndView mv = createDefaultModelAndView();
     	List<InvoiceDto> invoices = invoiceService.findByDueDateBeforeOrderByDueDateAsc(date);
-    	mv.addObject(INVOICES, invoices);
+    	mv.addObject(INVOICES, enrichAll(invoices));
         return mv;      	
     }	   
 
@@ -169,7 +167,7 @@ public class InvoiceController<T extends _EntityObject> extends _EntityControlle
     		@RequestParam BigDecimal amountDue) {
     	ModelAndView mv = createDefaultModelAndView();
     	List<InvoiceDto> invoices = invoiceService.findByDueDateBeforeAndAmountDueGreaterThanOrderByDueDateAsc(date, amountDue);
-    	mv.addObject(INVOICES, invoices);
+    	mv.addObject(INVOICES, enrichAll(invoices));
         return mv;      	
     }	   
     
@@ -180,7 +178,7 @@ public class InvoiceController<T extends _EntityObject> extends _EntityControlle
     		@RequestParam BigDecimal minAmount) {
     	ModelAndView mv = createDefaultModelAndView();
     	List<InvoiceDto> invoices = invoiceService.findByInvoiceDateBetweenAndAmountDueGreaterThanOrderByInvoiceDateAsc(startDate, endDate, minAmount);
-    	mv.addObject(INVOICES, invoices);
+    	mv.addObject(INVOICES, enrichAll(invoices));
         return mv;      	
     }       
 
@@ -189,7 +187,7 @@ public class InvoiceController<T extends _EntityObject> extends _EntityControlle
     		@RequestParam BigDecimal amount) {
     	ModelAndView mv = createDefaultModelAndView();
     	List<InvoiceDto> invoices = invoiceService.findByAmountDueGreaterThanOrderByAmountDueDesc(amount);
-    	mv.addObject(INVOICES, invoices);
+    	mv.addObject(INVOICES, enrichAll(invoices));
         return mv;      	
     }       
     
@@ -198,20 +196,35 @@ public class InvoiceController<T extends _EntityObject> extends _EntityControlle
     		@RequestParam BigDecimal amount) {
     	ModelAndView mv = createDefaultModelAndView();
     	List<InvoiceDto> invoices = invoiceService.findByAmountDueLessThanOrderByAmountDueAsc(amount);
-    	mv.addObject(INVOICES, invoices);
+    	mv.addObject(INVOICES, enrichAll(invoices));
         return mv;      	
     }
         
 	private ModelAndView createDefaultModelAndView() {
 		loadMenu();
 		ModelAndView mv = new ModelAndView(getModelAndView().getView());
-		mv.addObject(INVOICES,        invoiceService.findAll());
-		mv.addObject(CUSTOMER_ORDERS, customerOrderService.findAll());	
+		mv.addObject(INVOICES, enrichAll(invoiceService.findAll()));
 		mv.addObject(TITLE, TITLE_INVOICE);
 		mv.addObject("activeMenuSection", "thirdOrder");
 		mv.addObject("currentEntityPath", "invoice");
 		mv.setViewName("entity/invoice");
 		return mv;		
+	}
+	
+	private List<InvoiceDto> enrichAll(List<InvoiceDto> invoices) {
+		if (invoices == null || invoices.isEmpty())
+			return List.of();
+	    return invoices.stream()
+	            .map(invoice -> {
+	                try {
+	                    return invoiceService.enrich(invoice);
+	                } catch (Exception e) {
+	                    // Force a print statements to capture what Eclipse hides
+	                    System.err.println("CRITICAL: Failed to enrich order ID " + invoice.id() + " -> " + e.getMessage());
+	                    return invoice; // Return raw, un-enriched DTO so the page still loads!
+	                }
+	            })
+	            .toList();
 	}
 }
 

@@ -1,12 +1,22 @@
 package org.llin.demo.northwind.service.entity;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
+import org.llin.demo.northwind.dto.CompanyDto;
+import org.llin.demo.northwind.dto.CustomerDto;
+import org.llin.demo.northwind.dto.CustomerOrderDto;
+import org.llin.demo.northwind.dto.EmployeeDto;
 import org.llin.demo.northwind.dto.InvoiceDto;
+import org.llin.demo.northwind.dto.OrderStatusDto;
+import org.llin.demo.northwind.dto.OrderTaxStatusDto;
+import org.llin.demo.northwind.dto.PaymentTypeDto;
+import org.llin.demo.northwind.dto.ShipperDto;
+import org.llin.demo.northwind.dto.SupplierDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.ParameterizedTypeReference;
@@ -15,13 +25,16 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClient;
 
 @Service
-public class InvoiceService {
+public class InvoiceService extends _BaseService {
 
     private final RestClient restClient;
 
+    private final CustomerOrderService customerOrderService;
+    
     @Autowired
-    public InvoiceService(@Qualifier("northwindDataClient") RestClient restClient) {
+    public InvoiceService(@Qualifier("northwindDataClient") RestClient restClient, CustomerOrderService customerOrderService) {
         this.restClient = restClient;
+        this.customerOrderService = customerOrderService;
     }
 
     // ==================================================================
@@ -30,12 +43,12 @@ public class InvoiceService {
 
     private static class EmbeddedInvoices {
         @com.fasterxml.jackson.annotation.JsonProperty("_embedded")
-        public InvoiceList Invoices;
+        public InvoiceList invoices;
     }
 
     private static class InvoiceList {
         @com.fasterxml.jackson.annotation.JsonProperty("invoices")
-        public List<InvoiceDto> Invoice;
+        public List<InvoiceDto> invoices;
     }
 
     // ==================================================================
@@ -63,9 +76,9 @@ public class InvoiceService {
                 .body(EmbeddedInvoices.class);
 
         return response != null 
-                && response.Invoices != null 
-                && response.Invoices.Invoice != null
-                    ? response.Invoices.Invoice
+                && response.invoices != null 
+                && response.invoices.invoices != null
+                    ? response.invoices.invoices
                     : List.of();
     }
 
@@ -206,4 +219,30 @@ public class InvoiceService {
 		}    	
     }
     
+	// Helper used by your service / ObjectMapper post-processor
+	public InvoiceDto enrich(InvoiceDto invDto) {
+		if (invDto == null)
+			return null;
+
+		Integer id = extractIdFromSelfLink(invDto);
+		
+		Optional<CustomerOrderDto> opt = customerOrderService.findById(extractCustomerOrderId(invDto));
+		
+		InvoiceDto dto = new InvoiceDto(id, opt.get(), invDto.invoiceDate(), invDto.dueDate(),
+				invDto.tax(), invDto.shipping(), invDto.amountDue(), invDto.links());
+		
+		return dto;
+	}
+	
+	private Integer extractCustomerOrderId(InvoiceDto i) {
+		if (i == null || i.links() == null)
+			return null;
+		return extractIdFromLink(i.links().getLink("customerOrder"));
+	}
+	
+	private Integer extractIdFromSelfLink(InvoiceDto inv) {
+		if (inv == null || inv.links() == null)
+			return null;
+		return extractIdFromSelf(inv.links().getLink("self"));
+	}
 }

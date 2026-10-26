@@ -30,8 +30,6 @@
 <body>
 	<main>
 		<div class="container-fluid">
-			<div th:replace="~{modal/child/employee/company :: div}"></div>
-			<div th:replace="~{modal/child/employee/privilege :: div}"></div>
 			<div class="row" id="navBarRow">
 				<div class="col-12" id="navBarCol">
 					<div th:replace="~{fragments/navbar :: nav}"></div>
@@ -42,7 +40,7 @@
 					<div class="row">
 						<div class="col-2 bg-light border border-primary pb-3"
 							id="leftSideBar">
-							<div th:replace="~{fragments/sideMenuLeftEntities :: div"></div>
+							<div th:replace="~{fragments/sideMenuLeftEntities :: div}"></div>
 						</div>
 						<div class="col-8 border border-primary mt-5 pt-4">
 							<h3>
@@ -53,25 +51,17 @@
 									<tr>
 										<th scope="col">Name</th>
 										<th scope="col">Job Title</th>
+										<th scope="col">Company</th>
 										<th scope="col">Notes</th>
-										<th scope="col">Links</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr th:each="e : ${Employees}">
 										<td><span th:text="${e.firstName}"></span> &nbsp; <span
 											th:text="${e.lastName}"></span></td>
+										<td th:text="${e.company.name}"></td>
 										<td th:text="${e.jobTitle}"></td>
 										<td><span th:text="${e.notes}"></span></td>
-										<td>
-											<div>
-												<a
-													th:href="'/modal/show?entity=company&id=' + ${e.links.getLink('company').id}"
-													data-bs-toggle="modal"
-													th:attr="data-bs-target='#modalCompany-' + ${e.links.getLink('company').id}"><span
-													th:text="${e.links.getLink('company').label}"></span></a>
-											</div>
-										</td>
 									</tr>
 								</tbody>
 							</table>

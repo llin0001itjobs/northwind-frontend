@@ -9,6 +9,10 @@
         "path": "customer",
         "title": "Customer"
       },
+	  {
+	    "path": "employee",
+	    "title": "Employee"
+	  },
       {
         "path": "role",
         "title": "Role"
@@ -37,10 +41,6 @@
         "path": "customerOrder",
         "title": "Customer Order"
       },
-	  {
-	    "path": "employee",
-	    "title": "Employee"
-	  },
       {
         "path": "invoice",
         "title": "Invoice"

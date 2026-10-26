@@ -33,12 +33,12 @@ public class EmployeeService extends _BaseService {
 
     private static class EmbeddedEmployees {
         @com.fasterxml.jackson.annotation.JsonProperty("_embedded")
-        public EmployeeList Employees;
+        public EmployeeList employees;
     }
 
     private static class EmployeeList {
         @com.fasterxml.jackson.annotation.JsonProperty("employees")
-        public List<EmployeeDto> Employee;
+        public List<EmployeeDto> employees;
     }
 
     // ==================================================================
@@ -70,9 +70,9 @@ public class EmployeeService extends _BaseService {
                 .body(EmbeddedEmployees.class);
 
         return response != null 
-                && response.Employees != null 
-                && response.Employees.Employee != null
-                    ? response.Employees.Employee
+                && response.employees != null 
+                && response.employees.employees != null
+                    ? response.employees.employees
                     : List.of();
     }
 
