@@ -48,10 +48,8 @@
 							<div th:replace="~{fragments/sideMenuLeftEntities :: div}"></div>
 						</div>
 						<div class="col-8 border border-primary mt-5 pt-4">
-							<h3>
-								<span th:text="${TITLE}"></span>
-							</h3>
-							<table class="table" id="dataTable">
+							<h3 th:text="${TITLE} ?: 'Customer Orders'"></h3>
+						<table class="table" id="dataTable" th:if="${CustomerOrders != null and !CustomerOrders.empty}">
 								<thead>
 									<tr>
 										<th scope="col">Order Date</th>
@@ -108,6 +106,7 @@
 									</tr>
 								</tbody>
 							</table>
+							<p th:if="${CustomerOrders == null or CustomerOrders.empty}">No orders found.</p>
 						</div>
 						<div class="col-2 bg-light border border-primary pb-3"
 							id="rightSideBar">

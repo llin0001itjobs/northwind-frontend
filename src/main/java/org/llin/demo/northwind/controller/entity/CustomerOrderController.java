@@ -9,9 +9,6 @@ import org.llin.demo.northwind._Titles;
 import org.llin.demo.northwind.dto.CustomerOrderDto;
 import org.llin.demo.northwind.model.entity._EntityObject;
 import org.llin.demo.northwind.service.entity.CustomerOrderService;
-import org.llin.demo.northwind.service.entity.CustomerService;
-import org.llin.demo.northwind.service.entity.EmployeeService;
-import org.llin.demo.northwind.service.entity.ShipperService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -30,17 +27,10 @@ public class CustomerOrderController<T extends _EntityObject> extends _EntityCon
 		implements _Classes_CustomObject, _Classes_EntityObject, _Titles {
 
 	private final CustomerOrderService customerOrderService;
-	private final CustomerService customerService;
-	private final EmployeeService employeeService;
-	private final ShipperService shipperService;
 
 	@Autowired
-	public CustomerOrderController(CustomerOrderService customerOrderService, CustomerService customerService,
-			EmployeeService employeeService, ShipperService shipperService) {
+	public CustomerOrderController(CustomerOrderService customerOrderService) {
 		this.customerOrderService = customerOrderService;
-		this.customerService = customerService;
-		this.employeeService = employeeService;
-		this.shipperService = shipperService;
 	}
 
 	@PostMapping
@@ -203,9 +193,6 @@ public class CustomerOrderController<T extends _EntityObject> extends _EntityCon
 		loadMenu();
 		ModelAndView mv = new ModelAndView(getModelAndView().getView());
 		mv.addObject(CUSTOMER_ORDERS, enrichAll(customerOrderService.findAll()));
-		mv.addObject(CUSTOMERS, customerService.findAll());
-		mv.addObject(EMPLOYEES, employeeService.findAll());
-		mv.addObject(SHIPPERS, shipperService.findAll());
 		mv.addObject(TITLE, TITLE_CUSTOMER_ORDER);
 		mv.addObject("activeMenuSection", "thirdOrder");
 		mv.addObject("currentEntityPath", "customerOrder");

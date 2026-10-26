@@ -48,8 +48,6 @@ public class Employee extends _EntityObject implements _Classes_EntityObject {
 	private String portraitTitle;
 	
 	private Company company;
-	
-	private Privilege privilege;
 		
 	public String getLastName() {
 		return lastName;
@@ -211,14 +209,6 @@ public class Employee extends _EntityObject implements _Classes_EntityObject {
 		this.company = company;
 	}
 	
-	public Privilege getPrivilege() {
-		return privilege;
-	}
-
-	public void setPrivilege(Privilege privilege) {
-		this.privilege = privilege;
-	}
-
 	@Override
 	public String toString() {
 		return "Employee [lastName=" + lastName + ", firstName=" + firstName + ", emailAddress=" + emailAddress
@@ -227,7 +217,7 @@ public class Employee extends _EntityObject implements _Classes_EntityObject {
 				+ address2 + ", city=" + city + ", stateProvince=" + stateProvince + ", zipPostalCode=" + zipPostalCode
 				+ ", countryRegion=" + countryRegion + ", notes=" + notes + ", webSiteTitle=" + webSiteTitle
 				+ ", webSiteUrl=" + webSiteUrl + ", portraitPath=" + portraitPath + ", portraitTitle=" + portraitTitle
-				+ ", company=" + company + ", privilege=" + privilege + super.toString() + "]";
+				+ ", company=" + company + super.toString() + "]";
 	}
 
 }

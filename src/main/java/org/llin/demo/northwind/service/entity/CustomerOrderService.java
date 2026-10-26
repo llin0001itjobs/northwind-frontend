@@ -368,17 +368,17 @@ public class CustomerOrderService extends _BaseService {
 	}
 
 	// Helper used by your service / ObjectMapper post-processor
-	public CustomerOrderDto withId(CustomerOrderDto cuDto) {
-		if (cuDto == null)
+	public CustomerOrderDto withId(CustomerOrderDto coDto) {
+		if (coDto == null)
 			return null;
 
-		Integer id = extractIdFromSelfLink(cuDto);
-		Integer customerId = extractCustomerId(cuDto);
-		Integer employeeId = extractEmployeeId(cuDto);
-		Integer shipperId = extractShipperId(cuDto);
-		Integer paymentTypeId = extractPaymentTypeId(cuDto);
-		Integer orderStatusId = extractOrderStatusId(cuDto);
-		Integer orderTaxStatusId = extractOrderTaxStatusId(cuDto);
+		Integer id = extractIdFromSelfLink(coDto);
+		Integer customerId = extractCustomerId(coDto);
+		Integer employeeId = extractEmployeeId(coDto);
+		Integer shipperId = extractShipperId(coDto);
+		Integer paymentTypeId = extractPaymentTypeId(coDto);
+		Integer orderStatusId = extractOrderStatusId(coDto);
+		Integer orderTaxStatusId = extractOrderTaxStatusId(coDto);
 
 		CustomerDto cDto = null;
 		if (customerId != null) { //
@@ -443,11 +443,13 @@ public class CustomerOrderService extends _BaseService {
 			List<OrderTaxStatusDto> list = orderTaxStatusService.findById(orderTaxStatusId);
 			orderTaxStatusDto = list.size() > 0 ? list.get(0) : null;
 		}
-
-		return new CustomerOrderDto(id, eDto, cDto, sDto, cuDto.orderDate(), cuDto.shippedDate(),
-				cuDto.shipName(), cuDto.shipAddress(), cuDto.shipCity(), cuDto.shipStateProvince(), cuDto.shipZipPostalCode(),
-				cuDto.shipCountryRegion(), cuDto.shippingFee(), cuDto.taxes(), paymentTypeDto, cuDto.paidDate(), cuDto.notes(),
-				cuDto.taxRate(), orderTaxStatusDto, orderStatusDto, cuDto.links());
+		
+		CustomerOrderDto custOrderDto = new CustomerOrderDto(id, eDto, cDto, sDto, coDto.orderDate(), coDto.shippedDate(),
+				coDto.shipName(), coDto.shipAddress(), coDto.shipCity(), coDto.shipStateProvince(), coDto.shipZipPostalCode(),
+				coDto.shipCountryRegion(), coDto.shippingFee(), coDto.taxes(), paymentTypeDto, coDto.paidDate(), coDto.notes(),
+				coDto.taxRate(), orderTaxStatusDto, orderStatusDto, coDto.links());
+		
+		return custOrderDto;
 	}
 
 	private Integer extractIdFromSelfLink(CustomerOrderDto co) {

@@ -8,8 +8,7 @@
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title"
-					th:attr="id='modalShipperLabel-' + ${co.id}">
+				<h5 class="modal-title" th:attr="id='modalShipperLabel-' + ${co.id}">
 					Shipper of OrderDate <span th:text="${co.orderDate}"></span>
 				</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal"
@@ -27,23 +26,24 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr th:each="s : ${co.shipper ?: {}}">
-							<td><span th:text="${s.lastName}"></span>, <span
-								th:text="${s.firstName}"></span></td>
-							<!--td><span th:text="${c.company.name}"></span></td-->
-							<td><span th:text="${s.jobTitle}"></span></td>
-							<td><span th:text="${s.businessPhone}"></span></td>
-							<td><span th:text="${s.mobilePhone}"></span></td>
+						<tr th:if="${co.shipper != null}">
+							<td><span th:text="${co.shipper.lastName}"></span>, <span
+								th:text="${co.shipper.firstName}"></span></td>
+							<td><span th:text="${co.shipper.company.name}"></span></td>
+							<td><span th:text="${co.shipper.jobTitle}"></span></td>
+							<td><span th:text="${co.shipper.businessPhone}"></span></td>
+							<td><span th:text="${co.shipper.mobilePhone}"></span></td>
 						</tr>
-						<tr th:if="${co.employee == null or #lists.isEmpty(co.employee)}">
+						<tr th:if="${co.shipper == null}">
 							<td colspan="6" class="text-muted">No Shipper</td>
 						</tr>
 					</tbody>
 				</table>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary"
-						data-bs-dismiss="modal">Close</button>
-				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary"
+					data-bs-dismiss="modal">Close</button>
 			</div>
 		</div>
 	</div>
+</div>
