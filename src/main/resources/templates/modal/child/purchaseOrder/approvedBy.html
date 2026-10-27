@@ -30,7 +30,7 @@
 						<tr th:if="${po.approvedBy != null}">
 							<td><span th:text="${po.approvedBy.lastName}"></span>, <span
 								th:text="${po.approvedBy.firstName}"></span></td>
-							<td><span th:text="${po.approvedBy.company.name}"></span></td>
+							<td><span th:text="${po.approvedBy.company?.name}"></span></td>
 							<td><span th:text="${po.approvedBy.jobTitle}"></span></td>
 							<td><span th:text="${po.approvedBy.businessPhone}"></span></td>
 							<td><span th:text="${po.approvedBy.mobilePhone}"></span></td>

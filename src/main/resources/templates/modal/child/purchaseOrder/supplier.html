@@ -1,7 +1,5 @@
-<!DOCTYPE html>
 <!-- modal/child/purchaseOrder/supplier.html -->
-<!-- one modal per purchaseOrder-->
-<div th:each="p : ${PurchaseOrder}"
+<div th:each="p : ${PurchaseOrders}"
      th:if="${p.id != null}"
      th:attr="id='modalSupplier-' + ${p.id}"
      class="modal modal-lg fade"
@@ -9,15 +7,15 @@
      data-bs-keyboard="false"
      tabindex="-1"
      aria-hidden="true">
+
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title"
-                    th:attr="id='modalSupplier-' + ${p.id}">
-                    Supplier of Approved Date <span th:text="${po.approvedDate}"></span>
+                <h5 class="modal-title" th:attr="id='modalSupplier-' + ${p.id}">
+                    Supplier of Approved Date
+                    <span th:text="${p.approvedDate != null} ? ${#temporals.format(p.approvedDate, 'MM-dd-yyyy')} : ''"></span>
                 </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <table class="table modal-table">
@@ -32,10 +30,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr th:if="${p.supplier != null}"
+                        <tr th:if="${p.supplier != null}">
                             <td>
+                                <span th:text="${p.supplier.lastName}"></span>,
                                 <span th:text="${p.supplier.firstName}"></span>
-                                <span th:text="${p.supplier.lastName}"></span>
                             </td>
                             <td th:text="${p.supplier.jobTitle}"></td>
                             <td th:text="${p.supplier.emailAddress}"></td>
@@ -53,8 +51,7 @@
                 </table>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

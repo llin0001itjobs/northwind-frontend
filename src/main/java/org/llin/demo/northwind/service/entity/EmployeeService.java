@@ -46,16 +46,20 @@ public class EmployeeService extends _BaseService {
     // ==================================================================
 
     public Optional<EmployeeDto> findById(Integer id) {
-    	Optional<EmployeeDto> opt = Optional.empty();
-
-		EmployeeDto dto = restClient.get().uri("employee/{id}", id).retrieve().body(EmployeeDto.class);
-
-		if (dto != null)
-			Optional.of(dto);
-
-		return opt;
+        if (id == null) return Optional.empty();
+        try {
+            EmployeeDto dto = restClient.get()
+                .uri("employee/{id}", id)
+                .retrieve()
+                .body(EmployeeDto.class);
+            System.err.println("EmployeeService.findById(" + id + ") → raw dto.id=" + (dto != null ? dto.id() : "null")
+                             + " selfLink=" + (dto != null && dto.links() != null ? dto.links().getLink("self") : "none"));
+            return Optional.ofNullable(dto);
+        } catch (Exception e) {
+            System.err.println("EmployeeService.findById(" + id + ") FAILED: " + e.getMessage());
+            return Optional.empty();
+        }
     }
-
     /**
      * GET /employee  (returns all Employees)
      */

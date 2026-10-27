@@ -69,12 +69,19 @@ public class SupplierService extends _BaseService {
 	}
 
 	public Optional<SupplierDto> findById(Integer id) {
-		if (id == null)
-			return Optional.empty();
-
-		SupplierDto supplier = restClient.get().uri("supplier/{id}", id).retrieve().body(SupplierDto.class);
-
-		return Optional.ofNullable(enrichWithProducts(supplier));
+	    if (id == null) return Optional.empty();
+	    try {
+	    	SupplierDto dto = restClient.get()
+	            .uri("supplier/{id}", id)
+	            .retrieve()
+	            .body(SupplierDto.class);
+	        System.err.println("supplier.findById(" + id + ") → raw dto.id=" + (dto != null ? dto.id() : "null")
+	                         + " selfLink=" + (dto != null && dto.links() != null ? dto.links().getLink("self") : "none"));
+	        return Optional.ofNullable(dto);
+	    } catch (Exception e) {
+	        System.err.println("supplier.findById(" + id + ") FAILED: " + e.getMessage());
+	        return Optional.empty();
+	    }
 	}
 
 	public SupplierDto create(SupplierDto SupplierDto) {

@@ -508,4 +508,5 @@ public class CustomerOrderService extends _BaseService {
 			return null;
 		return extractIdFromLink(s.links().getLink("company"));
 	}
+
 }

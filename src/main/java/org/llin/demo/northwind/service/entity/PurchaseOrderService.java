@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
+import org.llin.demo.northwind.dto.CompanyDto;
 import org.llin.demo.northwind.dto.EmployeeDto;
 import org.llin.demo.northwind.dto.OrderStatusDto;
 import org.llin.demo.northwind.dto.PurchaseOrderDto;
@@ -21,14 +22,16 @@ import org.springframework.web.client.RestClient;
 public class PurchaseOrderService extends _BaseService {
 	private final RestClient restClient;
 
+	private final CompanyService companyService;
 	private final EmployeeService employeeService;
 	private final OrderStatusService orderStatusService;
 	private final SupplierService supplierService;
 
 	@Autowired
-	public PurchaseOrderService(@Qualifier("northwindDataClient") RestClient restClient,
+	public PurchaseOrderService(@Qualifier("northwindDataClient") RestClient restClient, CompanyService companyService,
 			EmployeeService employeeService, OrderStatusService orderStatusService, SupplierService supplierService) {
 		this.restClient = restClient;
+		this.companyService = companyService;
 		this.employeeService = employeeService;
 		this.orderStatusService = orderStatusService;
 		this.supplierService = supplierService;
@@ -173,24 +176,43 @@ public class PurchaseOrderService extends _BaseService {
 	}
 
 	// Helper used by your service / ObjectMapper post-processor
+
 	public PurchaseOrderDto enrich(PurchaseOrderDto dto) {
-		if (dto == null)
-			return null;
+	    if (dto == null) return null;
 
-		Integer id = extractIdFromSelfLink(dto);
-
-		Optional<EmployeeDto> abOpt = employeeService.findById(extractApprovedById(dto));
-		Optional<EmployeeDto> cbOpt = employeeService.findById(extractCreatedById(dto));
-		Optional<EmployeeDto> sbOpt = employeeService.findById(extractSubmittedById(dto));
-		Optional<OrderStatusDto> oOpt = orderStatusService.findById(extractOrderStatusId(dto));
-		Optional<SupplierDto> sOpt = supplierService.findById(extractSupplierId(dto));
-
-		PurchaseOrderDto poDto = new PurchaseOrderDto(id, abOpt.get(), cbOpt.get(), sbOpt.get(),
-				sOpt.get(), oOpt.get(), dto.approvedDate(), dto.submittedDate(), dto.creationDate(),
-				dto.expectedDate(), dto.shippingFee(), dto.taxes(), dto.paymentDate(), dto.paymentAmount(),
-				dto.paymentMethod(), dto.notes(), dto.links());
-
-		return poDto;
+	    Integer id = extractIdFromSelfLink(dto);  // prefer link-based ID
+	    
+	    Optional<EmployeeDto> abOpt = employeeService.findById(extractApprovedById(dto));
+	    Optional<EmployeeDto> cbOpt = employeeService.findById(extractCreatedById(dto));
+	    Optional<EmployeeDto> sbOpt = employeeService.findById(extractSubmittedById(dto));
+	    Optional<OrderStatusDto> osOpt = orderStatusService.findById(extractOrderStatusId(dto));
+	    Optional<SupplierDto> suOpt = supplierService.findById(extractSupplierId(dto));
+	    
+	    EmployeeDto approvedBy = enrichWithCompany(abOpt.orElse(null));
+	    EmployeeDto createdBy  = enrichWithCompany(cbOpt.orElse(null));
+	    EmployeeDto submittedBy = enrichWithCompany(sbOpt.orElse(null));
+	    OrderStatusDto orderStatus = osOpt.orElse(null);
+	    SupplierDto supplier = enrichWithCompany(suOpt.orElse(null));
+			    
+	    return new PurchaseOrderDto(
+	        id != null ? id : dto.id(),   // fallback if extraction fails
+	        approvedBy,
+	        createdBy,
+	        submittedBy,
+	        supplier,
+	        orderStatus,
+	        dto.approvedDate(),
+	        dto.submittedDate(),
+	        dto.creationDate(),
+	        dto.expectedDate(),
+	        dto.shippingFee(),
+	        dto.taxes(),
+	        dto.paymentDate(),
+	        dto.paymentAmount(),
+	        dto.paymentMethod(),
+	        dto.notes(),
+	        dto.links()
+	    );
 	}
 
 	private Integer extractApprovedById(PurchaseOrderDto p) {
@@ -229,4 +251,49 @@ public class PurchaseOrderService extends _BaseService {
 		return extractIdFromSelf(p.links().getLink("self"));
 	}
 
+	private EmployeeDto enrichWithCompany(EmployeeDto dto) {
+		if (dto != null) {
+			if (Integer.valueOf(dto.id()) != null) { //
+				Optional<CompanyDto> cOpt = companyService.findById(extractIdForCompany(dto));
+				CompanyDto companyDto = cOpt.isPresent() ? cOpt.get() : null;
+				if (companyDto != null) {
+					dto = new EmployeeDto(dto.id(), companyDto, dto.lastName(), dto.firstName(), dto.emailAddress(),
+							dto.jobTitle(), dto.jobTitle(), dto.businessPhone(), dto.homePhone(), dto.faxNumber(),
+							dto.address1(), dto.address2(), dto.city(), dto.stateProvince(), dto.zipPostalCode(),
+							dto.countryRegion(), dto.notes(), dto.webSiteTitle(), dto.webSiteUrl(), dto.portraitPath(),
+							dto.portraitTitle(), dto.links());
+				}
+			}
+		}
+		return dto;
+	}
+
+	private SupplierDto enrichWithCompany(SupplierDto dto) {
+		if (dto != null) {
+			if (Integer.valueOf(dto.id()) != null) { //
+				Optional<CompanyDto> cOpt = companyService.findById(extractIdForCompany(dto));
+				CompanyDto companyDto = cOpt.isPresent() ? cOpt.get() : null;
+				if (companyDto != null) {
+					dto = new SupplierDto(dto.id(), companyDto, null, dto.lastName(), dto.firstName(),
+							dto.emailAddress(), dto.jobTitle(), dto.jobTitle(), dto.businessPhone(), dto.homePhone(),
+							dto.faxNumber(), dto.address1(), dto.address2(), dto.city(), dto.stateProvince(),
+							dto.zipPostalCode(), dto.countryRegion(), dto.notes(), dto.webSiteTitle(), dto.webSiteUrl(),
+							dto.portraitPath(), dto.portraitTitle(), dto.links());
+				}
+			}
+		}
+		return dto;
+	}
+
+	private Integer extractIdForCompany(EmployeeDto e) {
+		if (e == null || e.links() == null)
+			return null;
+		return extractIdFromLink(e.links().getLink("company"));
+	}
+
+	private Integer extractIdForCompany(SupplierDto p) {
+		if (p == null || p.links() == null)
+			return null;
+		return extractIdFromLink(p.links().getLink("company"));
+	}
 }

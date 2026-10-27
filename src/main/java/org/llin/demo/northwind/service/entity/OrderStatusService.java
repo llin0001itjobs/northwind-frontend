@@ -50,14 +50,19 @@ public class OrderStatusService {
 	}
 
 	public Optional<OrderStatusDto> findById(Integer id) {
-		Optional<OrderStatusDto> opt = Optional.empty(); 
-
-		OrderStatusDto dto = restClient.get().uri("orderStatus/{id}", id).retrieve().body(OrderStatusDto.class);
-
-		if (dto != null)
-			opt = Optional.of(dto);
-
-		return opt;
+	    if (id == null) return Optional.empty();
+	    try {
+	    	OrderStatusDto dto = restClient.get()
+	            .uri("orderStatus/{id}", id)
+	            .retrieve()
+	            .body(OrderStatusDto.class);
+	        System.err.println("orderStatusService.findById(" + id + ") → raw dto.id=" + (dto != null ? dto.id() : "null")
+	                         + " selfLink=" + (dto != null && dto.links() != null ? dto.links().getLink("self") : "none"));
+	        return Optional.ofNullable(dto);
+	    } catch (Exception e) {
+	        System.err.println("orderStatusService.findById(" + id + ") FAILED: " + e.getMessage());
+	        return Optional.empty();
+	    }
 	}
 
 }
