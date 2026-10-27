@@ -1,8 +1,8 @@
 package org.llin.demo.northwind.service.entity;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 import org.llin.demo.northwind.dto.CompanyDto;
 import org.llin.demo.northwind.dto.EmployeeDto;
@@ -45,19 +45,15 @@ public class EmployeeService extends _BaseService {
     // Public methods
     // ==================================================================
 
-    public List<EmployeeDto> findById(Integer id) {
-        
-		if (id == null)
-			return List.of();
-
-		List<EmployeeDto> list = new ArrayList<>();
+    public Optional<EmployeeDto> findById(Integer id) {
+    	Optional<EmployeeDto> opt = Optional.empty();
 
 		EmployeeDto dto = restClient.get().uri("employee/{id}", id).retrieve().body(EmployeeDto.class);
 
 		if (dto != null)
-			list.add(dto);
+			Optional.of(dto);
 
-		return list;
+		return opt;
     }
 
     /**
@@ -148,9 +144,8 @@ public class EmployeeService extends _BaseService {
 		Integer companyId = extractCompanyId(e);
 		CompanyDto companyDto = null;
 		if (companyId != null) {
-			//
-			List<CompanyDto> list = companyService.findById(companyId);
-			companyDto = list.size() > 0 ? list.get(0) : new CompanyDto(companyId, "", new Links());
+			Optional<CompanyDto> cOpt = companyService.findById(companyId);
+			companyDto = cOpt.isPresent() ? cOpt.get() : new CompanyDto(companyId, "", new Links());
 		}
 
 		return new EmployeeDto(id, // use the extracted id

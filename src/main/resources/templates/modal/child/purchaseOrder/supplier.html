@@ -1,45 +1,61 @@
 <!DOCTYPE html>
-<div>
-	<div th:each="s : ${Suppliers}" class="modal fade"
-		data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-		th:attr="id='modalSupplier-' + ${s.id}, aria-labelledby='modalSupplierLabel-' + ${s.id}"
-		aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title"
-						th:attr="id='modalSupplierLabel-' + ${s.id}">
-						Supplier
-				</h5>
-				<button type="button" class="btn-close" data-bs-dismiss="modal"
-					aria-label="Close"></button>
-			</div>
-			<div class="modal-body">
-				<dl class="row">
-					<dt class="col">Name</dt>
-					<dd class="col">
-						<span th:text="${c.firstName}"></span> &nbsp; <span
-							th:text="${c.lastName}"></span>
-					</dd>
-				</dl>
-				<dl class="row">
-					<dt class="col">Job Title</dt>				
-					<dd class="col">
-						<span th:text="${c.jobTitle}"></span>
-					</dd>
-				</dl>
-				<dl class="row">
-					<dt class="col">Notes</dt>					
-					<dd class="col">
-						<span th:text="${c.notes}"></span>					
-					</dd>
-				</dl>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary"
-					data-bs-dismiss="modal">Close</button>
-			</div>
-		</div>
-	</div>
+<!-- modal/child/purchaseOrder/supplier.html -->
+<!-- one modal per purchaseOrder-->
+<div th:each="p : ${PurchaseOrder}"
+     th:if="${p.id != null}"
+     th:attr="id='modalSupplier-' + ${p.id}"
+     class="modal modal-lg fade"
+     data-bs-backdrop="static"
+     data-bs-keyboard="false"
+     tabindex="-1"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"
+                    th:attr="id='modalSupplier-' + ${p.id}">
+                    Supplier of Approved Date <span th:text="${po.approvedDate}"></span>
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table modal-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Job Title</th>
+                            <th>Email Address</th>
+                            <th>Phone Number</th>
+                            <th>City State</th>
+                            <th>Zip Code</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:if="${p.supplier != null}"
+                            <td>
+                                <span th:text="${p.supplier.firstName}"></span>
+                                <span th:text="${p.supplier.lastName}"></span>
+                            </td>
+                            <td th:text="${p.supplier.jobTitle}"></td>
+                            <td th:text="${p.supplier.emailAddress}"></td>
+                            <td th:text="${p.supplier.businessPhone}"></td>
+                            <td>
+                                <span th:text="${p.supplier.city}"></span>,&nbsp;
+                                <span th:text="${p.supplier.stateProvince}"></span>
+                            </td>
+                            <td th:text="${p.supplier.zipPostalCode}"></td>
+                        </tr>
+                        <tr th:if="${p.supplier == null}">
+                            <td colspan="6" class="text-muted">No Supplier</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary"
+                        data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
-

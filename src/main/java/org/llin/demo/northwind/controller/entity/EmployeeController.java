@@ -1,6 +1,7 @@
 package org.llin.demo.northwind.controller.entity;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
@@ -34,10 +35,10 @@ public class EmployeeController<T extends _EntityObject> extends _EntityControll
 	@GetMapping("/{id}")
 	public ModelAndView findById(@PathVariable Integer id) {
 		ModelAndView mv = createDefaultModelAndView();
-		List<EmployeeDto> list = employeeService.findById(id);
+		Optional<EmployeeDto> opt = employeeService.findById(id);
 
-		if (!list.isEmpty()) {
-			mv.addObject(EMPLOYEE, list.get(0));
+		if (opt.isPresent()) {
+			mv.addObject(EMPLOYEE, opt.get());
 			mv.setViewName("employees/detail");
 		} else {
 			mv.setViewName("error/404");

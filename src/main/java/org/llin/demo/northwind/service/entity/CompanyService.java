@@ -1,7 +1,7 @@
 package org.llin.demo.northwind.service.entity;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.llin.demo.northwind.dto.CompanyDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,16 +54,16 @@ public class CompanyService {
         return enrichAll(list);
     }
 
-    public List<CompanyDto> findById(Integer id) {
-        if (id == null) return List.of();
+    public Optional<CompanyDto> findById(Integer id) {
+        if (id == null) return Optional.empty();
 
-        List<CompanyDto> list = new ArrayList<>();
+        
         CompanyDto dto = restClient.get()
         .uri("company/{id}", id)
         .retrieve()
         .body(CompanyDto.class);
-        list.add(dto);
-        return enrichAll(list);        
+        
+        return enrich(dto);        
     }
     
     public CompanyDto create(CompanyDto companyDto) {
@@ -96,6 +96,13 @@ public class CompanyService {
 		return companies.stream().map(this::withId).toList();
 	}
 	
+    private Optional<CompanyDto> enrich(CompanyDto company) {
+		if (company == null) {
+			return Optional.empty();
+		}
+		return Optional.ofNullable(withId(company));
+	}
+    
 	public CompanyDto withId(CompanyDto c) {
 		if (c == null)
 			return null;

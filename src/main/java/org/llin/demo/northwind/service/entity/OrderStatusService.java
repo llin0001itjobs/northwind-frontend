@@ -1,7 +1,7 @@
 package org.llin.demo.northwind.service.entity;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.llin.demo.northwind.dto.OrderStatusDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,18 +49,15 @@ public class OrderStatusService {
 				: List.of();
 	}
 
-	public List<OrderStatusDto> findById(Integer id) {
-		if (id == null)
-			return List.of();
-
-		List<OrderStatusDto> list = new ArrayList<>();
+	public Optional<OrderStatusDto> findById(Integer id) {
+		Optional<OrderStatusDto> opt = Optional.empty(); 
 
 		OrderStatusDto dto = restClient.get().uri("orderStatus/{id}", id).retrieve().body(OrderStatusDto.class);
 
 		if (dto != null)
-			list.add(dto);
+			opt = Optional.of(dto);
 
-		return list;
+		return opt;
 	}
 
 }

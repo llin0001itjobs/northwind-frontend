@@ -1,38 +1,45 @@
 <!DOCTYPE html>
-<div th:each="e : ${Employees}" class="modal fade"
+<!-- modal/child/purchaseOrder/createdBy.html -->
+<!-- one modal per purchaseOrder -->
+<div th:each="po : ${PurchaseOrders}" th:if="${po.id != null}"
+	th:attr="id='modalCreatedBy-' + ${po.id}" class="modal modal-lg fade"
 	data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-	th:attr="id='modalCreatedBy-' + ${e.id}, aria-labelledby='modalCreatedByLabel-' + ${e.id}"
 	aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title"
-					th:attr="id='modalCreatedByLabel-' + ${e.id}">
-					Employee
+					th:attr="id='modalCreatedBy-' + ${po.id}">
+					Employee of Approved Date <span th:text="${po.approvedDate}"></span>
 				</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal"
 					aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
-				<dl class="row">
-					<dt class="col">Name</dt>
-					<dd class="col">
-						<span th:text="${e.firstName}"></span> &nbsp; <span
-							th:text="${e.lastName}"></span>
-					</dd>
-				</dl>
-				<dl class="row">
-					<dt class="col">Job Title</dt>				
-					<dd class="col">
-						<span th:text="${e.jobTitle}"></span>
-					</dd>
-				</dl>			
-				<dl class="row">
-					<dt class="col">Notes</dt>					
-					<dd class="col">
-						<span th:text="${e.notes}"></span>					
-					</dd>
-				</dl>	
+				<table class="table modal-table">
+					<thead>
+						<tr>
+							<th scope="col-2">Contact</th>
+							<th scope="col-2">Company</th>
+							<th scope="col-2">Job Title</th>
+							<th scope="col-2">Business Phone</th>
+							<th scope="col-2">Mobile Phone</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:if="${po.createdBy != null}">
+							<td><span th:text="${po.createdBy.lastName}"></span>, <span
+								th:text="${po.createdBy.firstName}"></span></td>
+							<td><span th:text="${po.createdBy.company.name}"></span></td>
+							<td><span th:text="${po.createdBy.jobTitle}"></span></td>
+							<td><span th:text="${po.createdBy.businessPhone}"></span></td>
+							<td><span th:text="${po.createdBy.mobilePhone}"></span></td>
+						</tr>
+						<tr th:if="${po.createdBy == null}">
+							<td colspan="6" class="text-muted">No Employee</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary"
@@ -41,5 +48,3 @@
 		</div>
 	</div>
 </div>
-
-

@@ -9,10 +9,7 @@ import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
 import org.llin.demo.northwind.dto.PurchaseOrderDto;
 import org.llin.demo.northwind.model.entity._EntityObject;
-import org.llin.demo.northwind.service.entity.EmployeeService;
-import org.llin.demo.northwind.service.entity.OrderStatusService;
 import org.llin.demo.northwind.service.entity.PurchaseOrderService;
-import org.llin.demo.northwind.service.entity.SupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
@@ -33,17 +30,10 @@ public class PurchaseOrderController<T extends _EntityObject> extends _EntityCon
 		implements _Classes_EntityObject, _Titles {
 
 	private final PurchaseOrderService purchaseOrderService;
-	private final EmployeeService employeeService;
-	private final SupplierService supplierService;
-	private final OrderStatusService orderStatusService;
 
 	@Autowired
-	public PurchaseOrderController(PurchaseOrderService purchaseOrderService, EmployeeService employeeService,
-			SupplierService supplierService, OrderStatusService orderStatusService) {
+	public PurchaseOrderController(PurchaseOrderService purchaseOrderService) {
 		this.purchaseOrderService = purchaseOrderService;
-		this.employeeService = employeeService;
-		this.supplierService = supplierService;
-		this.orderStatusService = orderStatusService;
 	}
 
 	@GetMapping("/list")
@@ -86,7 +76,7 @@ public class PurchaseOrderController<T extends _EntityObject> extends _EntityCon
 	public ModelAndView findBySupplierId(@RequestParam Integer id) {
 		ModelAndView mv = createDefaultModelAndView();
 		List<PurchaseOrderDto> purchaseOrders = purchaseOrderService.findBySupplierId(id);
-		mv.addObject(PURCHASE_ORDERS, purchaseOrders);
+		mv.addObject(PURCHASE_ORDERS, enrichAll(purchaseOrders));
 		return mv;
 	}
 
@@ -94,7 +84,7 @@ public class PurchaseOrderController<T extends _EntityObject> extends _EntityCon
 	public ModelAndView findByCreatedById(@RequestParam Integer id) {
 		ModelAndView mv = createDefaultModelAndView();
 		List<PurchaseOrderDto> purchaseOrders = purchaseOrderService.findByCreatedById(id);
-		mv.addObject(PURCHASE_ORDERS, purchaseOrders);
+		mv.addObject(PURCHASE_ORDERS, enrichAll(purchaseOrders));
 		return mv;
 	}
 
@@ -102,7 +92,7 @@ public class PurchaseOrderController<T extends _EntityObject> extends _EntityCon
 	public ModelAndView findByApprovedById(@RequestParam Integer id) {
 		ModelAndView mv = createDefaultModelAndView();
 		List<PurchaseOrderDto> purchaseOrders = purchaseOrderService.findByApprovedById(id);
-		mv.addObject(PURCHASE_ORDERS, purchaseOrders);
+		mv.addObject(PURCHASE_ORDERS, enrichAll(purchaseOrders));
 		return mv;
 	}
 
@@ -110,7 +100,7 @@ public class PurchaseOrderController<T extends _EntityObject> extends _EntityCon
 	public ModelAndView findBySubmittedById(@RequestParam Integer id) {
 		ModelAndView mv = createDefaultModelAndView();
 		List<PurchaseOrderDto> purchaseOrders = purchaseOrderService.findBySubmittedById(id);
-		mv.addObject(PURCHASE_ORDERS, purchaseOrders);
+		mv.addObject(PURCHASE_ORDERS, enrichAll(purchaseOrders));
 		return mv;
 	}
 
@@ -118,7 +108,7 @@ public class PurchaseOrderController<T extends _EntityObject> extends _EntityCon
 	public ModelAndView findByOrderStatusId(@RequestParam Integer id) {
 		ModelAndView mv = createDefaultModelAndView();
 		List<PurchaseOrderDto> purchaseOrders = purchaseOrderService.findByOrderStatusId(id);
-		mv.addObject(PURCHASE_ORDERS, purchaseOrders);
+		mv.addObject(PURCHASE_ORDERS, enrichAll(purchaseOrders));
 		return mv;
 	}
 
@@ -132,7 +122,7 @@ public class PurchaseOrderController<T extends _EntityObject> extends _EntityCon
 		List<PurchaseOrderDto> purchaseOrders = purchaseOrderService
 				.findByCreationDateBetweenOrderByCreationDateAsc(start, end);
 
-		mv.addObject(PURCHASE_ORDERS, purchaseOrders);
+		mv.addObject(PURCHASE_ORDERS, enrichAll(purchaseOrders));
 		return mv;
 	}
 
@@ -146,7 +136,7 @@ public class PurchaseOrderController<T extends _EntityObject> extends _EntityCon
 		List<PurchaseOrderDto> purchaseOrders = purchaseOrderService
 				.findBySubmittedDateBetweenOrderBySubmittedDateAsc(start, end);
 
-		mv.addObject(PURCHASE_ORDERS, purchaseOrders);
+		mv.addObject(PURCHASE_ORDERS, enrichAll(purchaseOrders));
 		return mv;
 	}
 
@@ -160,7 +150,7 @@ public class PurchaseOrderController<T extends _EntityObject> extends _EntityCon
 		List<PurchaseOrderDto> purchaseOrders = purchaseOrderService
 				.findByExpectedDateBetweenOrderByExpectedDateAsc(start, end);
 
-		mv.addObject(PURCHASE_ORDERS, purchaseOrders);
+		mv.addObject(PURCHASE_ORDERS, enrichAll(purchaseOrders));
 		return mv;
 	}
 
@@ -174,7 +164,7 @@ public class PurchaseOrderController<T extends _EntityObject> extends _EntityCon
 		List<PurchaseOrderDto> purchaseOrders = purchaseOrderService
 				.findByPaymentDateBetweenOrderByPaymentDateAsc(start, end);
 
-		mv.addObject(PURCHASE_ORDERS, purchaseOrders);
+		mv.addObject(PURCHASE_ORDERS, enrichAll(purchaseOrders));
 		return mv;
 	}
 
@@ -187,7 +177,7 @@ public class PurchaseOrderController<T extends _EntityObject> extends _EntityCon
 		List<PurchaseOrderDto> purchaseOrders = purchaseOrderService.findByShippingFeeBetweenOrderByShippingFeeAsc(min,
 				max);
 
-		mv.addObject(PURCHASE_ORDERS, purchaseOrders);
+		mv.addObject(PURCHASE_ORDERS, enrichAll(purchaseOrders));
 		return mv;
 	}
 
@@ -198,7 +188,7 @@ public class PurchaseOrderController<T extends _EntityObject> extends _EntityCon
 
 		List<PurchaseOrderDto> purchaseOrders = purchaseOrderService.findByTaxesBetweenOrderByTaxesAsc(min, max);
 
-		mv.addObject(PURCHASE_ORDERS, purchaseOrders);
+		mv.addObject(PURCHASE_ORDERS, enrichAll(purchaseOrders));
 		return mv;
 	}
 
@@ -211,7 +201,7 @@ public class PurchaseOrderController<T extends _EntityObject> extends _EntityCon
 		List<PurchaseOrderDto> purchaseOrders = purchaseOrderService
 				.findByPaymentAmountBetweenOrderByPaymentAmountAsc(min, max);
 
-		mv.addObject(PURCHASE_ORDERS, purchaseOrders);
+		mv.addObject(PURCHASE_ORDERS, enrichAll(purchaseOrders));
 		return mv;
 	}
 
@@ -219,17 +209,14 @@ public class PurchaseOrderController<T extends _EntityObject> extends _EntityCon
 	public ModelAndView findByNotesContaining(@RequestParam String notes) {
 		ModelAndView mv = createDefaultModelAndView();
 		List<PurchaseOrderDto> purchaseOrders = purchaseOrderService.findByNotesContaining(notes);
-		mv.addObject(PURCHASE_ORDERS, purchaseOrders);
+		mv.addObject(PURCHASE_ORDERS, enrichAll(purchaseOrders));
 		return mv;
 	}
 
 	private ModelAndView createDefaultModelAndView() {
 		loadMenu();
 		ModelAndView mv = new ModelAndView(getModelAndView().getView());
-		mv.addObject(PURCHASE_ORDERS, purchaseOrderService.findAll());
-		mv.addObject(EMPLOYEES, employeeService.findAll());
-		mv.addObject(SUPPLIERS, supplierService.findAll());
-		mv.addObject(ORDER_STATUSES, orderStatusService.findAll());
+		mv.addObject(PURCHASE_ORDERS, enrichAll(purchaseOrderService.findAll()));
 		mv.addObject("activeMenuSection", "thirdOrder");
 		mv.addObject("currentEntityPath", "purchaseOrder");
 		mv.addObject(TITLE, TITLE_PURCHASE_ORDER);
@@ -237,4 +224,20 @@ public class PurchaseOrderController<T extends _EntityObject> extends _EntityCon
 		return mv;
 	}
 
+	private List<PurchaseOrderDto> enrichAll(List<PurchaseOrderDto> purchaseOrders) {
+		
+		if (purchaseOrders == null || purchaseOrders.isEmpty())
+			return List.of();
+	    return purchaseOrders.stream()
+	            .map(purchaseOrder -> {	    
+	            	try {
+	                    return purchaseOrderService.enrich(purchaseOrder);
+	                } catch (Exception e) {
+	                    // Force a print statements to capture what Eclipse hides
+	                    System.err.println("CRITICAL: Failed to enrich order ID " + purchaseOrder.id() + " -> " + e.getMessage());
+	                    return purchaseOrder; // Return raw, un-enriched DTO so the page still loads!
+	                }
+	            })
+	            .toList();
+	}
 }

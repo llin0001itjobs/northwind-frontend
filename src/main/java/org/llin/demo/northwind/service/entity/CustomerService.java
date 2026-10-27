@@ -3,6 +3,7 @@ package org.llin.demo.northwind.service.entity;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 import org.llin.demo.northwind.dto.CompanyDto;
 import org.llin.demo.northwind.dto.CustomerDto;
@@ -139,10 +140,9 @@ public class CustomerService extends _BaseService {
 		Integer id = extractIdFromSelfLink(c);
 		Integer companyId = extractCompanyId(c);
 		CompanyDto companyDto = null;
-		if (companyId != null) {
-			//
-			List<CompanyDto> list = companyService.findById(companyId);
-			companyDto = list.size() > 0 ? list.get(0) : new CompanyDto(companyId, "", new Links());
+		if (companyId != null) {			
+			Optional<CompanyDto> cOpt = companyService.findById(companyId);
+			companyDto = cOpt.isPresent() ? cOpt.get() : new CompanyDto(companyId, "", new Links());
 		}
 
 		return new CustomerDto(id, // use the extracted id

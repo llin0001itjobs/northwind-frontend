@@ -1,14 +1,11 @@
-
 <!DOCTYPE html>
 <!-- saved from url=(0052)https://getbootstrap.com/docs/5.0/examples/sidebars/ -->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <title>Northwind Traders</title>
-
 <style>
 .bd-placeholder-img {
 	font-size: 1.125rem;
@@ -24,22 +21,18 @@
 	}
 }
 </style>
-
-<th:block th:replace="fragments/links-css :: linksCss"></th:block>
-
-
+<th:block th:replace="~{fragments/links-css :: linksCss}"></th:block>
 </head>
 <body>
 	<main>
 		<div class="container-fluid">
-			<div th:replace="modal/child/purchaseOrder/approvedBy :: div"></div>
-			<div th:replace="modal/child/purchaseOrder/createdBy :: div"></div>
-			<div th:replace="modal/child/purchaseOrder/orderStatus :: div"></div>
-			<div th:replace="modal/child/purchaseOrder/submittedBy :: div"></div>
-			<div th:replace="modal/child/purchaseOrder/supplier :: div"></div>
+			<div th:replace="~{modal/child/purchaseOrder/approvedBy :: div}"></div>
+			<div th:replace="~{modal/child/purchaseOrder/createdBy :: div}"></div>
+			<div th:replace="~{modal/child/purchaseOrder/submittedBy :: div}"></div>
+			<div th:replace="~{modal/child/purchaseOrder/supplier :: div}"></div>
 			<div class="row" id="navBarRow">
 				<div class="col-12" id="navBarCol">
-					<div th:replace="fragments/navbar :: nav"></div>
+					<div th:replace="~{fragments/navbar :: nav}"></div>
 				</div>
 			</div>
 			<div class="row border">
@@ -47,7 +40,7 @@
 					<div class="row">
 						<div class="col-2 bg-light border border-primary pb-3"
 							id="leftSideBar">
-							<div th:replace="fragments/sideMenuLeftEntities :: div"></div>
+							<div th:replace="~{fragments/sideMenuLeftEntities :: div}"></div>
 						</div>
 						<div class="col-8 border border-primary mt-5 pt-4">
 							<h3>
@@ -67,74 +60,64 @@
 										<td
 											th:text="${p.approvedDate != null} ? ${#temporals.format(p.approvedDate, 'MM-dd-yyyy')} : ''"></td>
 										<td
-											th:text="${p.submittedDate != null} ? ${#temporals.format(p.submittedDate, 'MM-dd-yyyy')} : ''"></td>										
+											th:text="${p.submittedDate != null} ? ${#temporals.format(p.submittedDate, 'MM-dd-yyyy')} : ''"></td>
 										<td
 											th:text="${p.creationDate != null} ? ${#temporals.format(p.creationDate, 'MM-dd-yyyy')} : ''"></td>
 										<td>
-											<div>
-												<a
-													th:href="'/modal/show?entity=orderStatus&id=' + ${p.links.getLink('orderStatus').id}"
-													data-bs-toggle="modal"
-													th:attr="data-bs-target='#modalOrderStatus-' + ${p.links.getLink('orderStatus').id}"><span
-													th:text="${p.links.getLink('orderStatus').label}"></span></a>
-											</div>
-											<div
-												th:with="isNullId=${p.links.getLink('supplier').id == null}">
-												<a th:if="${!isNullId}"
-													th:href="'/modal/show?entity=supplier&id=' + ${p.links.getLink('supplier').id}"
-													data-bs-toggle="modal"
-													th:attr="data-bs-target='#modalSupplier-' + ${p.links.getLink('supplier').id}"><span
-													th:text="${p.links.getLink('supplier').label}"></span></a>
-											</div>
-											<div
-												th:with="isNullId=${p.links.getLink('approvedBy').id == null}">
-												<a th:if="${!isNullId}"
-													th:href="'/modal/show?entity=approvedBy&id=' + ${p.links.getLink('approvedBy').id}"
-													data-bs-toggle="modal"
-													th:attr="data-bs-target='#modalApprovedBy-' + ${p.links.getLink('approvedBy').id}"><span
-													th:text="${p.links.getLink('approvedBy').label}"></span></a>
-											</div>
-											<div
-												th:with="isNullId=${p.links.getLink('createdBy').id == null}">
-												<a th:if="${!isNullId}"
-													th:href="'/modal/show?entity=createdBy&id=' + ${p.links.getLink('createdBy').id}"
-													data-bs-toggle="modal"
-													th:attr="data-bs-target='#modalCreatedBy-' + ${p.links.getLink('createdBy').id}"><span
-													th:text="${p.links.getLink('createdBy').label}"></span></a>
-											</div>
-											<div
-												th:with="isNullId=${p.links.getLink('submittedBy').id == null}">
-												<a th:if="${!isNullId}"
-													th:href="'/modal/show?entity=submittedBy&id=' + ${p.links.getLink('submittedBy').id}"
-													data-bs-toggle="modal"
-													th:attr="data-bs-target='#modalSubmittedBy-' + ${p.links.getLink('submittedBy').id}"><span
-													th:text="${p.links.getLink('submittedBy').label}"></span></a>
+											<div th:each="l: ${p.links}">
+												<div th:if="${p.links != null}">
+													<div
+														th:with="approvedByLink=${p.links.getLink('approvedBy')}">
+														<a th:if="${approvedByLink != null}" href="#"
+															data-bs-toggle="modal"
+															th:attr="data-bs-target='#modalApprovedBy-' + ${p.id}">
+															Approved By</a> <span th:unless="${approvedByLink != null}"
+															class="text-muted">No Approved By Info</span>
+													</div>
+													<div
+														th:with="createdByLink=${p.links.getLink('createdBy')}">
+														<a th:if="${createdByLink != null}" href="#"
+															data-bs-toggle="modal"
+															th:attr="data-bs-target='#modalCreatedBy-' + ${p.id}">
+															Created By</a> <span th:unless="${createdByLink != null}"
+															class="text-muted">No Created By Info</span>
+													</div>
+													<div
+														th:with="submittedByLink=${p.links.getLink('submittedBy')}">
+														<a th:if="${submittedByLink != null}" href="#"
+															data-bs-toggle="modal"
+															th:attr="data-bs-target='#modalSubmittedBy-' + ${p.id}">
+															Submitted By</a> <span th:unless="${submittedByLink != null}"
+															class="text-muted">No Submitted By Info</span>
+													</div>
+													<div th:with="supplierLink=${p.links.getLink('supplier')}">
+														<a th:if="${supplierLink != null}" href="#"
+															data-bs-toggle="modal"
+															th:attr="data-bs-target='#modalSupplier-' + ${p.id}">
+															Supplier</a> <span th:unless="${supplierLink != null}"
+															class="text-muted">No Supplier Info</span>
+													</div>
+												</div>
 											</div>
 										</td>
 									</tr>
 								</tbody>
 							</table>
-
 						</div>
 						<div class="col-2 bg-light border border-primary pb-3"
 							id="rightSideBar">
-							<div th:replace="fragments/sideMenuRight :: div"></div>
+							<div th:replace="~{fragments/sideMenuRight :: div}"></div>
 						</div>
 					</div>
-
-
 				</div>
 				<div class="row" id="footerRow">
 					<div class="col-12" id="footerCol">
-						<div th:replace="fragments/footer :: footer"></div>
+						<div th:replace="~{fragments/footer :: footer}"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</main>
-
-	<div th:replace="fragments/links-js-page-length-6 :: linksJs"></div>
-
+	<div th:replace="~{fragments/links-js-page-length-6 :: linksJs}"></div>
 </body>
 </html>
-

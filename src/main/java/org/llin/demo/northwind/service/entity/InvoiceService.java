@@ -1,22 +1,13 @@
 package org.llin.demo.northwind.service.entity;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-import org.llin.demo.northwind.dto.CompanyDto;
-import org.llin.demo.northwind.dto.CustomerDto;
 import org.llin.demo.northwind.dto.CustomerOrderDto;
-import org.llin.demo.northwind.dto.EmployeeDto;
 import org.llin.demo.northwind.dto.InvoiceDto;
-import org.llin.demo.northwind.dto.OrderStatusDto;
-import org.llin.demo.northwind.dto.OrderTaxStatusDto;
-import org.llin.demo.northwind.dto.PaymentTypeDto;
-import org.llin.demo.northwind.dto.ShipperDto;
-import org.llin.demo.northwind.dto.SupplierDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.ParameterizedTypeReference;

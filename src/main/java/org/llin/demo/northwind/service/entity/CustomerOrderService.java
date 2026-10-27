@@ -385,9 +385,8 @@ public class CustomerOrderService extends _BaseService {
 			List<CustomerDto> list = customerService.findById(customerId);
 			cDto = list.size() > 0 ? list.get(0) : null;
 			if (cDto != null) {
-				List<CompanyDto> listCompany = null;
-				listCompany = companyService.findById(extractIdForCompany(cDto));
-				CompanyDto companyDto = list.size() > 0 ? listCompany.get(0) : null;
+				Optional<CompanyDto> cOpt  = companyService.findById(extractIdForCompany(cDto));
+				CompanyDto companyDto = cOpt.isPresent() ? cOpt.get() : null;
 				if (companyDto != null) {
 					cDto = new CustomerDto(cDto.id(),companyDto,cDto.lastName(),cDto.firstName(),cDto.emailAddress(),cDto.jobTitle(),cDto.jobTitle(),
 							cDto.businessPhone(),cDto.homePhone(),cDto.faxNumber(),cDto.address1(),cDto.address2(),cDto.city(),cDto.stateProvince(),
@@ -398,12 +397,11 @@ public class CustomerOrderService extends _BaseService {
 		}
 		EmployeeDto eDto = null;
 		if (employeeId != null) { //
-			List<EmployeeDto> list = employeeService.findById(employeeId);
-			eDto = list.size() > 0 ? list.get(0) : null;
+			Optional<EmployeeDto> opt = employeeService.findById(employeeId);
+			eDto = opt.isPresent() ? opt.get() : null;
 			if (eDto != null) {
-				List<CompanyDto> listCompany = null;
-				listCompany = companyService.findById(extractIdForCompany(eDto));
-				CompanyDto companyDto = list.size() > 0 ? listCompany.get(0) : null;
+				Optional<CompanyDto> cOpt = companyService.findById(extractIdForCompany(eDto));
+				CompanyDto companyDto = cOpt.isPresent() ? cOpt.get() : null;
 				if (companyDto != null) {
 					eDto = new EmployeeDto(eDto.id(),companyDto,eDto.lastName(),eDto.firstName(),eDto.emailAddress(),eDto.jobTitle(),eDto.jobTitle(),
 							eDto.businessPhone(),eDto.homePhone(),eDto.faxNumber(),eDto.address1(),eDto.address2(),eDto.city(),eDto.stateProvince(),
@@ -417,9 +415,8 @@ public class CustomerOrderService extends _BaseService {
 			List<ShipperDto> list = shipperService.findById(shipperId);
 			sDto = list.size() > 0 ? list.get(0) : null;
 			if (sDto != null) {
-				List<CompanyDto> listCompany = null;
-				listCompany = companyService.findById(extractIdForCompany(sDto));
-				CompanyDto companyDto = list.size() > 0 ? listCompany.get(0) : null;
+				Optional<CompanyDto> cOpt = companyService.findById(extractIdForCompany(sDto));
+				CompanyDto companyDto = cOpt.isPresent() ? cOpt.get() : null;
 				if (companyDto != null) {
 					sDto = new ShipperDto(sDto.id(),companyDto,sDto.lastName(),sDto.firstName(),sDto.emailAddress(),sDto.jobTitle(),sDto.jobTitle(),
 							sDto.businessPhone(),sDto.homePhone(),sDto.faxNumber(),sDto.address1(),sDto.address2(),sDto.city(),sDto.stateProvince(),
@@ -435,8 +432,8 @@ public class CustomerOrderService extends _BaseService {
 		}
 		OrderStatusDto orderStatusDto = null;
 		if (orderStatusId != null) { //
-			List<OrderStatusDto> list = orderStatusService.findById(orderStatusId);
-			orderStatusDto = list.size() > 0 ? list.get(0) : null;
+			Optional<OrderStatusDto> opt = orderStatusService.findById(orderStatusId);
+			orderStatusDto = opt.isPresent() ? opt.get() : null;
 		}
 		OrderTaxStatusDto orderTaxStatusDto = null;
 		if (orderTaxStatusId != null) { //

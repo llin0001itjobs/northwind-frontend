@@ -180,9 +180,8 @@ public class SupplierService extends _BaseService {
 		Integer companyId = extractCompanyId(s);
 		CompanyDto companyDto = null;
 		if (companyId != null) {
-			// 
-			List<CompanyDto>list = companyService.findById(companyId);
-			companyDto = list.size() > 0 ? list.get(0) : new CompanyDto(companyId,"", new Links());
+			Optional<CompanyDto> cOpt = companyService.findById(companyId);
+			companyDto = cOpt.isPresent() ? cOpt.get() : new CompanyDto(companyId, "", new Links());
 		}
 
 		return new SupplierDto(id, // use the extracted id

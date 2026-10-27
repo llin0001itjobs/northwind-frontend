@@ -6,7 +6,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
+import org.llin.demo.northwind.dto.EmployeeDto;
+import org.llin.demo.northwind.dto.OrderStatusDto;
 import org.llin.demo.northwind.dto.PurchaseOrderDto;
+import org.llin.demo.northwind.dto.SupplierDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.ParameterizedTypeReference;
@@ -15,12 +18,20 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClient;
 
 @Service
-public class PurchaseOrderService {
+public class PurchaseOrderService extends _BaseService {
 	private final RestClient restClient;
 
+	private final EmployeeService employeeService;
+	private final OrderStatusService orderStatusService;
+	private final SupplierService supplierService;
+
 	@Autowired
-	public PurchaseOrderService(@Qualifier("northwindDataClient") RestClient restClient) {
+	public PurchaseOrderService(@Qualifier("northwindDataClient") RestClient restClient,
+			EmployeeService employeeService, OrderStatusService orderStatusService, SupplierService supplierService) {
 		this.restClient = restClient;
+		this.employeeService = employeeService;
+		this.orderStatusService = orderStatusService;
+		this.supplierService = supplierService;
 	}
 
 	// ==================================================================
@@ -29,12 +40,12 @@ public class PurchaseOrderService {
 
 	private static class EmbeddedPurchaseOrders {
 		@com.fasterxml.jackson.annotation.JsonProperty("_embedded")
-		public PurchaseOrderList PurchaseOrders;
+		public PurchaseOrderList purchaseOrders;
 	}
 
 	private static class PurchaseOrderList {
 		@com.fasterxml.jackson.annotation.JsonProperty("purchaseOrders")
-		public List<PurchaseOrderDto> PurchaseOrder;
+		public List<PurchaseOrderDto> purchaseOrders;
 	}
 
 	// ==================================================================
@@ -56,8 +67,8 @@ public class PurchaseOrderService {
 		EmbeddedPurchaseOrders response = restClient.get().uri("purchaseOrder").retrieve()
 				.body(EmbeddedPurchaseOrders.class);
 
-		return response != null && response.PurchaseOrders != null && response.PurchaseOrders.PurchaseOrder != null
-				? response.PurchaseOrders.PurchaseOrder
+		return response != null && response.purchaseOrders != null && response.purchaseOrders.purchaseOrders != null
+				? response.purchaseOrders.purchaseOrders
 				: List.of();
 	}
 
@@ -73,53 +84,57 @@ public class PurchaseOrderService {
 	public void deleteById(Integer id) {
 		restClient.delete().uri("purchaseOrder/{id}", id).retrieve().toBodilessEntity();
 	}
-	
+
 	public List<PurchaseOrderDto> findBySupplierId(Integer id) {
 		return findByObject(id, "id", "findBySupplierId");
 	}
-	
+
 	public List<PurchaseOrderDto> findByCreatedById(Integer id) {
 		return findByObject(id, "id", "findByCreatedById");
 	}
-	
+
 	public List<PurchaseOrderDto> findByApprovedById(Integer id) {
 		return findByObject(id, "id", "findByApprovedById");
 	}
-	
-	public List<PurchaseOrderDto> findBySubmittedById(Integer id){
+
+	public List<PurchaseOrderDto> findBySubmittedById(Integer id) {
 		return findByObject(id, "id", "findBySubmittedById");
 	}
-	
+
 	public List<PurchaseOrderDto> findByOrderStatusId(Integer id) {
-		return findByObject(id, "id", "findByOrderStatusId");		
+		return findByObject(id, "id", "findByOrderStatusId");
 	}
 
-    // Date ranges (very common for PO reports)
-	public List<PurchaseOrderDto> findByCreationDateBetweenOrderByCreationDateAsc(LocalDateTime start, LocalDateTime end) {
+	// Date ranges (very common for PO reports)
+	public List<PurchaseOrderDto> findByCreationDateBetweenOrderByCreationDateAsc(LocalDateTime start,
+			LocalDateTime end) {
 		return findWithTwoParameters(start, "start", end, "end", "findByCreationDateBetweenOrderByCreationDateAsc");
 	}
-	
-	public List<PurchaseOrderDto> findBySubmittedDateBetweenOrderBySubmittedDateAsc(LocalDateTime start, LocalDateTime end) {
+
+	public List<PurchaseOrderDto> findBySubmittedDateBetweenOrderBySubmittedDateAsc(LocalDateTime start,
+			LocalDateTime end) {
 		return findWithTwoParameters(start, "start", end, "end", "findBySubmittedDateBetweenOrderBySubmittedDateAsc");
 	}
-	
-	public List<PurchaseOrderDto> findByExpectedDateBetweenOrderByExpectedDateAsc(LocalDateTime start, LocalDateTime end) {
+
+	public List<PurchaseOrderDto> findByExpectedDateBetweenOrderByExpectedDateAsc(LocalDateTime start,
+			LocalDateTime end) {
 		return findWithTwoParameters(start, "start", end, "end", "findByExpectedDateBetweenOrderByExpectedDateAsc");
 	}
-	
-	public List<PurchaseOrderDto> findByPaymentDateBetweenOrderByPaymentDateAsc(LocalDateTime start, LocalDateTime end) {
+
+	public List<PurchaseOrderDto> findByPaymentDateBetweenOrderByPaymentDateAsc(LocalDateTime start,
+			LocalDateTime end) {
 		return findWithTwoParameters(start, "start", end, "end", "findByPaymentDateBetweenOrderByPaymentDateAsc");
 	}
 
-    // Money ranges
+	// Money ranges
 	public List<PurchaseOrderDto> findByShippingFeeBetweenOrderByShippingFeeAsc(BigDecimal min, BigDecimal max) {
 		return findWithTwoParameters(min, "min", max, "max", "findByShippingFeeBetweenOrderByShippingFeeAsc");
 	}
-	
+
 	public List<PurchaseOrderDto> findByTaxesBetweenOrderByTaxesAsc(BigDecimal min, BigDecimal max) {
 		return findWithTwoParameters(min, "min", max, "max", "findByTaxesBetweenOrderByTaxesAsc");
 	}
-	
+
 	public List<PurchaseOrderDto> findByPaymentAmountBetweenOrderByPaymentAmountAsc(BigDecimal min, BigDecimal max) {
 		return findWithTwoParameters(min, "min", max, "max", "findByPaymentAmountBetweenOrderByPaymentAmountAsc");
 	}
@@ -127,38 +142,91 @@ public class PurchaseOrderService {
 	public List<PurchaseOrderDto> findByNotesContaining(String notes) {
 		return findByObject(notes, "notes", "findByNotesContaining");
 	}
-	
-    private List<PurchaseOrderDto> findByObject(Object value, String paramName, String searchMethod) {
-        if (value == null) {
-            return Collections.emptyList();
-        }
 
-        try {
-            return restClient.get()
-                    .uri(uriBuilder -> uriBuilder
-                            .path("purchaseOrder/search/{method}")
-                            .queryParam(paramName, value)
-                            .build(searchMethod))
-                    .retrieve()
-                    .body(new ParameterizedTypeReference<List<PurchaseOrderDto>>() {});
-        } catch (HttpClientErrorException.NotFound e) {
-            return Collections.emptyList();
-        }
-    }
-    
-    private List<PurchaseOrderDto> findWithTwoParameters(Object param1, String paramName1, 
-			 											 Object param2, String paramName2, String path) {
-        try {    	
+	private List<PurchaseOrderDto> findByObject(Object value, String paramName, String searchMethod) {
+		if (value == null) {
+			return Collections.emptyList();
+		}
+
+		try {
 			return restClient.get()
-			.uri(uriBuilder -> uriBuilder.path("purchaseOrder/search/" + path)
-			.queryParam(paramName1, param1)
-			.queryParam(paramName2, param2)
-			.build())
-			.retrieve()
-			.body(new ParameterizedTypeReference<List<PurchaseOrderDto>>() {});
-        } catch (HttpClientErrorException.NotFound e) {
-            return Collections.emptyList();
-        }			
-    }	
-    
+					.uri(uriBuilder -> uriBuilder.path("purchaseOrder/search/{method}").queryParam(paramName, value)
+							.build(searchMethod))
+					.retrieve().body(new ParameterizedTypeReference<List<PurchaseOrderDto>>() {
+					});
+		} catch (HttpClientErrorException.NotFound e) {
+			return Collections.emptyList();
+		}
+	}
+
+	private List<PurchaseOrderDto> findWithTwoParameters(Object param1, String paramName1, Object param2,
+			String paramName2, String path) {
+		try {
+			return restClient.get()
+					.uri(uriBuilder -> uriBuilder.path("purchaseOrder/search/" + path).queryParam(paramName1, param1)
+							.queryParam(paramName2, param2).build())
+					.retrieve().body(new ParameterizedTypeReference<List<PurchaseOrderDto>>() {
+					});
+		} catch (HttpClientErrorException.NotFound e) {
+			return Collections.emptyList();
+		}
+	}
+
+	// Helper used by your service / ObjectMapper post-processor
+	public PurchaseOrderDto enrich(PurchaseOrderDto dto) {
+		if (dto == null)
+			return null;
+
+		Integer id = extractIdFromSelfLink(dto);
+
+		Optional<EmployeeDto> abOpt = employeeService.findById(extractApprovedById(dto));
+		Optional<EmployeeDto> cbOpt = employeeService.findById(extractCreatedById(dto));
+		Optional<EmployeeDto> sbOpt = employeeService.findById(extractSubmittedById(dto));
+		Optional<OrderStatusDto> oOpt = orderStatusService.findById(extractOrderStatusId(dto));
+		Optional<SupplierDto> sOpt = supplierService.findById(extractSupplierId(dto));
+
+		PurchaseOrderDto poDto = new PurchaseOrderDto(id, abOpt.get(), cbOpt.get(), sbOpt.get(),
+				sOpt.get(), oOpt.get(), dto.approvedDate(), dto.submittedDate(), dto.creationDate(),
+				dto.expectedDate(), dto.shippingFee(), dto.taxes(), dto.paymentDate(), dto.paymentAmount(),
+				dto.paymentMethod(), dto.notes(), dto.links());
+
+		return poDto;
+	}
+
+	private Integer extractApprovedById(PurchaseOrderDto p) {
+		if (p == null || p.links() == null)
+			return null;
+		return extractIdFromLink(p.links().getLink("approvedBy"));
+	}
+
+	private Integer extractCreatedById(PurchaseOrderDto p) {
+		if (p == null || p.links() == null)
+			return null;
+		return extractIdFromLink(p.links().getLink("createdBy"));
+	}
+
+	private Integer extractSubmittedById(PurchaseOrderDto p) {
+		if (p == null || p.links() == null)
+			return null;
+		return extractIdFromLink(p.links().getLink("submittedBy"));
+	}
+
+	private Integer extractOrderStatusId(PurchaseOrderDto p) {
+		if (p == null || p.links() == null)
+			return null;
+		return extractIdFromLink(p.links().getLink("orderStatus"));
+	}
+
+	private Integer extractSupplierId(PurchaseOrderDto p) {
+		if (p == null || p.links() == null)
+			return null;
+		return extractIdFromLink(p.links().getLink("supplier"));
+	}
+
+	private Integer extractIdFromSelfLink(PurchaseOrderDto p) {
+		if (p == null || p.links() == null)
+			return null;
+		return extractIdFromSelf(p.links().getLink("self"));
+	}
+
 }
