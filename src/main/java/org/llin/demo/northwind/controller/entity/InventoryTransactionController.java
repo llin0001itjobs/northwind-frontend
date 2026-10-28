@@ -8,11 +8,7 @@ import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
 import org.llin.demo.northwind.dto.InventoryTransactionDto;
 import org.llin.demo.northwind.model.entity._EntityObject;
-import org.llin.demo.northwind.service.entity.CustomerOrderService;
 import org.llin.demo.northwind.service.entity.InventoryTransactionService;
-import org.llin.demo.northwind.service.entity.InventoryTransactionTypeService;
-import org.llin.demo.northwind.service.entity.ProductService;
-import org.llin.demo.northwind.service.entity.PurchaseOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
@@ -32,21 +28,10 @@ import org.springframework.web.servlet.ModelAndView;
 public class InventoryTransactionController<T extends _EntityObject> extends _EntityController<T> implements _Classes_EntityObject, _Titles {
 	
 	private final InventoryTransactionService inventoryTransactionService;
-	private final CustomerOrderService customerOrderService;	
-	private final ProductService productService;
-	private final PurchaseOrderService purchaseOrderService;
-	private final InventoryTransactionTypeService inventoryTransactionTypeService;
 
 	@Autowired
-	public InventoryTransactionController(InventoryTransactionService inventoryTransactionService,
-			CustomerOrderService customerOrderService, 
-			ProductService productService,
-			PurchaseOrderService purchaseOrderService, InventoryTransactionTypeService inventoryTransactionTypeService) {
-		this.inventoryTransactionService = inventoryTransactionService;
-		this.customerOrderService = customerOrderService;		
-		this.productService = productService;
-		this.purchaseOrderService = purchaseOrderService;
-		this.inventoryTransactionTypeService = inventoryTransactionTypeService;
+	public InventoryTransactionController(InventoryTransactionService inventoryTransactionService) {
+		this.inventoryTransactionService=inventoryTransactionService;
 	}
 		
 	@GetMapping("/list")
@@ -73,51 +58,62 @@ public class InventoryTransactionController<T extends _EntityObject> extends _En
 
     @GetMapping("/{id}")
     public ModelAndView findById(@PathVariable Integer id) {
-    	ModelAndView mav = createDefaultModelAndView();
+    	ModelAndView mv = createDefaultModelAndView();
         Optional<InventoryTransactionDto> inventoryTransactionOpt = inventoryTransactionService.findById(id);
         
         if (inventoryTransactionOpt.isPresent()) {
-            mav.addObject(INVENTORY_TRANSACTION, inventoryTransactionOpt.get());
-            mav.setViewName("inventoryTransactions/detail");
+        	mv.addObject(INVENTORY_TRANSACTION, inventoryTransactionOpt.get());
+        	mv.setViewName("inventoryTransactions/detail");
         } else {
-            mav.setViewName("error/404");
+        	mv.setViewName("error/404");
         }
         
-        return mav;      	
+        return mv;      	
     }	
     
     @GetMapping("/search/findByInventoryTransactionTypeId?id={id}")
     public ModelAndView findByInventoryTransactionTypeId(@PathVariable Integer id) {
     	ModelAndView mv = createDefaultModelAndView();
-    	mv.addObject(INVENTORY_TRANSACTION, inventoryTransactionService.findByInventoryTransactionTypeId(id));
+    	List<InventoryTransactionDto> transactions = inventoryTransactionService.findByInventoryTransactionTypeId(id);
+    	mv.addObject(INVENTORY_TRANSACTION, enrichAll(transactions));
+
     	return mv;
     }
     
     @GetMapping("/search/findByProductId?id={id}")
     public ModelAndView findByProductId(@PathVariable Integer id) {
     	ModelAndView mv = createDefaultModelAndView();
-    	mv.addObject(INVENTORY_TRANSACTION, inventoryTransactionService.findByProductId(id));
+    	List<InventoryTransactionDto> transactions = inventoryTransactionService.findByProductId(id);
+    	mv.addObject(INVENTORY_TRANSACTION, enrichAll(transactions));
+
     	return mv;
     }
     
     @GetMapping("/search/findByPurchaseOrderId?id={id}")
     public ModelAndView findByPurchaseOrderId(@PathVariable Integer id) {
     	ModelAndView mv = createDefaultModelAndView();
-    	mv.addObject(INVENTORY_TRANSACTION, inventoryTransactionService.findByPurchaseOrderId(id));
+    	List<InventoryTransactionDto> transactions = inventoryTransactionService.findByPurchaseOrderId(id);
+    	mv.addObject(INVENTORY_TRANSACTION, enrichAll(transactions));
     	return mv;
     }    
  
     @GetMapping("/search/findByCustomerOrderId?id={id}")
     public ModelAndView findByCustomerOrderId(@PathVariable Integer id) {
     	ModelAndView mv = createDefaultModelAndView();
-    	mv.addObject(INVENTORY_TRANSACTION, inventoryTransactionService.findByCustomerOrderId(id));
+        List<InventoryTransactionDto> transactions = inventoryTransactionService.
+        		findByCustomerOrderId(id);
+    	mv.addObject(INVENTORY_TRANSACTION, enrichAll(transactions));
     	return mv;
     }    
 
     @GetMapping("/search/findByCommentsContaining?comments={comments}")
     public ModelAndView findByCommentsContaining(@PathVariable String comments) {
     	ModelAndView mv = createDefaultModelAndView();
-    	mv.addObject(INVENTORY_TRANSACTION, inventoryTransactionService.findByCommentsContaining(comments));
+    	
+        List<InventoryTransactionDto> transactions = inventoryTransactionService
+                .findByCommentsContaining(comments);
+        
+    	mv.addObject(INVENTORY_TRANSACTION, enrichAll(transactions));
     	return mv;
     }    
 
@@ -131,7 +127,7 @@ public class InventoryTransactionController<T extends _EntityObject> extends _En
         List<InventoryTransactionDto> transactions = inventoryTransactionService
                 .getInventoryTransactionsByTransactionCreatedDateBetween(start, end);
                 
-        mv.addObject(INVENTORY_TRANSACTION, transactions);
+        mv.addObject(INVENTORY_TRANSACTION, enrichAll(transactions));
         return mv;
     }
 
@@ -145,7 +141,7 @@ public class InventoryTransactionController<T extends _EntityObject> extends _En
         List<InventoryTransactionDto> transactions = inventoryTransactionService
                 .getInventoryTransactionsByTransactionCreatedDateBetween(start, end);
                 
-        mv.addObject(INVENTORY_TRANSACTION, transactions);
+        mv.addObject(INVENTORY_TRANSACTION, enrichAll(transactions));
         return mv;
     }
 
@@ -159,23 +155,36 @@ public class InventoryTransactionController<T extends _EntityObject> extends _En
         List<InventoryTransactionDto> transactions = inventoryTransactionService
                 .getInventoryTransactionsByQuantityBetween(minQty, maxQty);
                 
-        mv.addObject(INVENTORY_TRANSACTION, transactions);
+        mv.addObject(INVENTORY_TRANSACTION, enrichAll(transactions));
         return mv;
     }
         
 	private ModelAndView createDefaultModelAndView() {
 		loadMenu();
 		ModelAndView mv = new ModelAndView(getModelAndView().getView());
-		mv.addObject(INVENTORY_TRANSACTIONS,inventoryTransactionService.findAll());
-		mv.addObject(CUSTOMER_ORDERS,customerOrderService.findAll());	
-		mv.addObject(PRODUCTS,productService.findAll());
-		mv.addObject(PURCHASE_ORDERS,purchaseOrderService.findAll());
-		mv.addObject(INVENTORY_TRANSACTION_TYPES,inventoryTransactionTypeService.findAll());
+		mv.addObject(INVENTORY_TRANSACTIONS, enrichAll(inventoryTransactionService.findAll()));
 		mv.addObject("activeMenuSection", "fourthOrder");
 		mv.addObject("currentEntityPath", "inventoryTransaction");
 		mv.addObject(TITLE, TITLE_INVENTORY_TRANSACTION); 
 		mv.setViewName("entity/inventoryTransaction");
 		return mv;		
+	}
+	
+	private List<InventoryTransactionDto> enrichAll(List<InventoryTransactionDto> inventoryTransactions) {
+		
+		if (inventoryTransactions == null || inventoryTransactions.isEmpty())
+			return List.of();
+	    return inventoryTransactions.stream()
+	            .map(inventoryTransaction -> {	    
+	            	try {
+	                    return inventoryTransactionService.enrich(inventoryTransaction);
+	                } catch (Exception e) {
+	                    // Force a print statements to capture what Eclipse hides
+	                    System.err.println("CRITICAL: Failed to enrich order ID " + inventoryTransaction.id() + " -> " + e.getMessage());
+	                    return inventoryTransaction; // Return raw, un-enriched DTO so the page still loads!
+	                }
+	            })
+	            .toList();
 	}
 	
 }

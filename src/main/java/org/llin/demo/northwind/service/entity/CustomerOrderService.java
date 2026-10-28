@@ -382,8 +382,8 @@ public class CustomerOrderService extends _BaseService {
 
 		CustomerDto cDto = null;
 		if (customerId != null) { //
-			List<CustomerDto> list = customerService.findById(customerId);
-			cDto = list.size() > 0 ? list.get(0) : null;
+			Optional<CustomerDto> opt = customerService.findById(customerId);
+			cDto = opt.isPresent() ? opt.get() : null;
 			if (cDto != null) {
 				Optional<CompanyDto> cOpt  = companyService.findById(extractIdForCompany(cDto));
 				CompanyDto companyDto = cOpt.isPresent() ? cOpt.get() : null;

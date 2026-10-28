@@ -1,6 +1,5 @@
 package org.llin.demo.northwind.service.entity;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -52,18 +51,13 @@ public class CustomerService extends _BaseService {
 	// Public methods
 	// ==================================================================
 
-	public List<CustomerDto> findById(Integer id) {
+	public Optional<CustomerDto> findById(Integer id) {
 		if (id == null)
-			return List.of();
-
-		List<CustomerDto> list = new ArrayList<>();
+			return Optional.empty();
 
 		CustomerDto dto = restClient.get().uri("customer/{id}", id).retrieve().body(CustomerDto.class);
-
-		if (dto != null)
-			list.add(dto);
-
-		return list;
+			
+		return Optional.of(dto);
 	}
 
 	/**

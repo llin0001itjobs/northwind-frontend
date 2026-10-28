@@ -1,61 +1,43 @@
 <!DOCTYPE html>
-<div th:each="p : ${Products}" class="modal fade"
+<!-- modal/child/inventoryTransaction/product.html -->
+<!-- one modal per inventoryTransaction -->
+<div th:each="i : ${InventoryTransactions}" th:if="${i.id != null}"
+	th:attr="id='modalProduct-' + ${i.id}" class="modal modal-lg fade"
 	data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-	th:attr="id='modalProduct-' + ${p.id}, aria-labelledby='modalProductLabel-' + ${p.id}"
 	aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title"
-					th:attr="id='modalProductLabel-' + ${p.id}">
-					Product
+				<h5 class="modal-title" th:attr="id='modalSupplierLabel-' + ${i.id}">
+					Product of Created Date <span th:text="${i.transactionCreatedDate}"></span>
 				</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal"
 					aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
-				<dl class="row">
-					<dt class="col">Product Code</dt>
-					<dd class="col">
-						<span th:text="${p.productCode}"></span>
-					</dd>
-				</dl>
-				<dl class="row">
-					<dt class="col">Product Name</dt>
-					<dd class="col">
-						<span th:text="${p.productName}"></span>
-					</dd>
-				</dl>
-				<dl class="row">
-					<dt class="col">Category</dt>
-					<dd class="col">
-						<span th:text="${p.category}"></span>
-					</dd>
-				</dl>
-				<dl class="row">
-					<dt class="col">Standard Cost</dt>
-					<dd class="col">
-						<span th:text="${p.standardCost}"></span>
-					</dd>
-				</dl>
-				<dl class="row">
-					<dt class="col">List Price</dt>
-					<dd class="col">
-						<span th:text="${p.listPrice}"></span>
-					</dd>
-				</dl>
-				<dl class="row">
-					<dt class="col">Quantity Per Unit</dt>
-					<dd class="col">
-						<span th:text="${p.quantityPerUnit}"></span>
-					</dd>
-				</dl>
-				<dl class="row">
-					<dt class="col">Minimum Reorder Quantity</dt>
-					<dd class="col">
-						<span th:text="${p.minimumReorderQuantity}"></span>
-					</dd>
-				</dl>
+				<table class="table modal-table">
+					<thead>
+						<tr>
+							<th scope="col">Product Code</th>
+							<th scope="col">Product Name</th>
+							<th scope="col">Category</th>
+							<th scope="col">Standard Cost</th>
+							<th scope="col">List Price</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:if="${i.product != null}">
+							<td><span th:text="${i.product.productCode}"></span></td>
+							<td><span th:text="${i.product.productName}"></span></td>
+							<td><span th:text="${i.product.category}"></span></td>
+							<td><span th:text="${i.product.standardCost}"></span></td>
+							<td><span th:text="${i.product.listPrice}"></span></td>
+						</tr>
+						<tr th:if="${i.product == null}">
+							<td colspan="6" class="text-muted">No Product</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary"
@@ -64,4 +46,3 @@
 		</div>
 	</div>
 </div>
-
