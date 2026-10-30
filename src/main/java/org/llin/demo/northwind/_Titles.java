@@ -22,6 +22,7 @@ public interface _Titles {
 	public static final String TITLE_PURCHASE_ORDER_STATUS = "Purchase Order Status";
 	public static final String TITLE_ROLE = "Role";
 	public static final String TITLE_SHIPPER = "Shipper";
+	public static final String TITLE_TYPE_STATUS_AND_TYPE = "Status And Type";
 	public static final String TITLE_SUPPLIER = "Supplier";
 	public static final String TITLE_TYPE_STATE = "Type State";
 	public static final String TITLE_TYPE = "Types";

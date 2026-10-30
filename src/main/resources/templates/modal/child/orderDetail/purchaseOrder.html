@@ -1,56 +1,47 @@
 <!DOCTYPE html>
-<div>
-	<div th:each="p : ${PurchaseOrders}" class="modal fade"
-		data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-		th:attr="id='modalPurchaseOrder-' + ${p.id}, aria-labelledby='modalPurchaseOrderLabel-' + ${p.id}"
-		aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title"
-						th:attr="id='modalPurchaseOrderLabel-' + ${p.id}">
-						Purchase Order
-					</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal"
-						aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<dl class="row">
-						<dt class="col">Approved Date</dt>
-						<dd class="col">
-							<span
-								th:text="${#temporals.format(p.approvedDate,  'dd-MM-yyyy HH:mm')}"></span>
-						</dd>
-					</dl>
-					<dl class="row">
-						<dt class="col">Submitted Date</dt>
-						<dd class="col">
-							<span
-								th:text="${#temporals.format(p.submittedDate, 'dd-MM-yyyy HH:mm')}"></span>
-						</dd>
-					</dl>
-					<dl class="row">
-						<dt class="col">Creation Date</dt>
-						<dd class="col">
-							<span
-								th:text="${#temporals.format(p.creationDate,  'dd-MM-yyyy HH:mm')}"></span>
-						</dd>
-					</dl>
-					<dl class="row">
-						<dt class="col">Expected Date</dt>
-						<dd class="col">
-							<span
-								th:text="${#temporals.format(p.expectedDate,  'dd-MM-yyyy HH:mm')}"></span>
-						</dd>
-					</dl>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary"
-						data-bs-dismiss="modal">Close</button>
-				</div>
+<!-- modal/child/orderDetail/purchaseOrder.html -->
+<!-- one modal per orderDetail -->
+<div th:each="o : ${OrderDetails}" th:if="${o.id != null}"
+	th:attr="id='modalPurchaseOrder-' + ${o.id}"
+	class="modal modal-lg fade" data-bs-backdrop="static"
+	data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" th:attr="id='modalPurchaseOrder-' + ${o.id}">
+					Purchase Order of Date Allocated<span th:text="${o.dateAllocated}"></span>
+				</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"
+					aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<table class="table modal-table">
+					<thead>
+						<tr>
+							<th scope="col">Approved Date</th>
+							<th scope="col">Submitted Date</th>
+							<th scope="col">Creation Date</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:if="${o.purchaseOrder != null}">
+							<td><span
+								th:text="${#temporals.format(o.purchaseOrder.approvedDate, 'dd-MM-yyyy HH:mm')}"></span></td>
+							<td><span
+								th:text="${#temporals.format(o.purchaseOrder.submittedDate, 'dd-MM-yyyy HH:mm')}"></span</td>
+							<td><span
+								th:text="${#temporals.format(o.purchaseOrder.creationDate, 'dd-MM-yyyy HH:mm')}"></span></td>
+						</tr>
+						<tr th:if="${o.purchaseOrder == null}">
+							<td colspan="6" class="text-muted">No Purchase Order</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary"
+					data-bs-dismiss="modal">Close</button>
 			</div>
 		</div>
 	</div>
 </div>
-
-

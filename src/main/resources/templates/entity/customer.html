@@ -10,7 +10,7 @@
 
 <title>Northwind Traders</title>
 
-<th:block th:replace="~{fragments/links-css :: linksCss"></th:block>
+<th:block th:replace="~{fragments/links-css :: linksCss}"></th:block>
 
 </head>
 <body>
@@ -18,7 +18,7 @@
 		<div th:replace="~{modal/child/customer/company :: div}"></div>
 		<div class="row" id="navBarRow">
 			<div class="col-12" id="navBarCol">
-				<div th:replace="fragments/navbar :: nav}"></div>
+				<div th:replace="~{fragments/navbar :: nav}"></div>
 			</div>
 		</div>
 		<div class="row border">

@@ -162,7 +162,8 @@ public class InventoryTransactionController<T extends _EntityObject> extends _En
 	private ModelAndView createDefaultModelAndView() {
 		loadMenu();
 		ModelAndView mv = new ModelAndView(getModelAndView().getView());
-		mv.addObject(INVENTORY_TRANSACTIONS, enrichAll(inventoryTransactionService.findAll()));
+		List<InventoryTransactionDto> list = enrichAll(inventoryTransactionService.findAll());
+		mv.addObject(INVENTORY_TRANSACTIONS, list);
 		mv.addObject("activeMenuSection", "fourthOrder");
 		mv.addObject("currentEntityPath", "inventoryTransaction");
 		mv.addObject(TITLE, TITLE_INVENTORY_TRANSACTION); 

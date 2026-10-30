@@ -111,7 +111,7 @@ public class EmployeeController<T extends _EntityObject> extends _EntityControll
 	private List<EmployeeDto> enrichAll(List<EmployeeDto> employees) {
 		if (employees == null || employees.isEmpty())
 			return List.of();
-		return employees.stream().map(employeeService::withId).toList();
+		return employees.stream().map(employeeService::enrich).toList();
 	}
 	
 }

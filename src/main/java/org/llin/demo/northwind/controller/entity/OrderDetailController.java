@@ -9,13 +9,7 @@ import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
 import org.llin.demo.northwind.dto.OrderDetailDto;
 import org.llin.demo.northwind.model.entity._EntityObject;
-import org.llin.demo.northwind.service.entity.CustomerOrderService;
-import org.llin.demo.northwind.service.entity.InventoryTransactionService;
-import org.llin.demo.northwind.service.entity.InventoryTransactionTypeService;
 import org.llin.demo.northwind.service.entity.OrderDetailService;
-import org.llin.demo.northwind.service.entity.OrderStatusService;
-import org.llin.demo.northwind.service.entity.ProductService;
-import org.llin.demo.northwind.service.entity.PurchaseOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
@@ -36,25 +30,10 @@ public class OrderDetailController<T extends _EntityObject> extends _EntityContr
 		implements _Classes_EntityObject, _Titles {
 
 	private final OrderDetailService orderDetailService;
-	private final CustomerOrderService customerOrderService;
-	private final InventoryTransactionService inventoryTransactionService;
-	private final InventoryTransactionTypeService inventoryTransactionTypeService;
-	private final OrderStatusService orderStatusService;
-	private final ProductService productService;
-	private final PurchaseOrderService purchaseOrderService;
 
 	@Autowired
-	public OrderDetailController(OrderDetailService orderDetailService, CustomerOrderService customerOrderService,
-			InventoryTransactionService inventoryTransactionService,
-			InventoryTransactionTypeService inventoryTransactionTypeService, OrderStatusService orderStatusService,
-			ProductService productService, PurchaseOrderService purchaseOrderService) {
+	public OrderDetailController(OrderDetailService orderDetailService) {
 		this.orderDetailService = orderDetailService;
-		this.customerOrderService = customerOrderService;
-		this.inventoryTransactionService = inventoryTransactionService;
-		this.inventoryTransactionTypeService = inventoryTransactionTypeService;
-		this.orderStatusService = orderStatusService;
-		this.productService = productService;
-		this.purchaseOrderService = purchaseOrderService;
 	}
 
 	@GetMapping("/list")
@@ -97,7 +76,7 @@ public class OrderDetailController<T extends _EntityObject> extends _EntityContr
 	public ModelAndView findByCustomerOrderId(@RequestParam Integer id) {
 		ModelAndView mv = createDefaultModelAndView();
 		List<OrderDetailDto> orderDetails = orderDetailService.findByCustomerOrderId(id);
-		mv.addObject(ORDER_DETAILS, orderDetails);
+		mv.addObject(ORDER_DETAILS, enrichAll(orderDetails));
 		return mv;
 	}
 
@@ -105,7 +84,7 @@ public class OrderDetailController<T extends _EntityObject> extends _EntityContr
 	public ModelAndView findByProductId(@RequestParam Integer id) {
 		ModelAndView mv = createDefaultModelAndView();
 		List<OrderDetailDto> orderDetails = orderDetailService.findByProductId(id);
-		mv.addObject(ORDER_DETAILS, orderDetails);
+		mv.addObject(ORDER_DETAILS, enrichAll(orderDetails));
 		return mv;
 	}
 
@@ -113,7 +92,7 @@ public class OrderDetailController<T extends _EntityObject> extends _EntityContr
 	public ModelAndView findByOrderStatusId(@RequestParam Integer id) {
 		ModelAndView mv = createDefaultModelAndView();
 		List<OrderDetailDto> orderDetails = orderDetailService.findByOrderStatusId(id);
-		mv.addObject(ORDER_DETAILS, orderDetails);
+		mv.addObject(ORDER_DETAILS, enrichAll(orderDetails));
 		return mv;
 	}
 
@@ -121,7 +100,7 @@ public class OrderDetailController<T extends _EntityObject> extends _EntityContr
 	public ModelAndView findByPurchaseOrderId(@RequestParam Integer id) {
 		ModelAndView mv = createDefaultModelAndView();
 		List<OrderDetailDto> orderDetails = orderDetailService.findByPurchaseOrderId(id);
-		mv.addObject(ORDER_DETAILS, orderDetails);
+		mv.addObject(ORDER_DETAILS, enrichAll(orderDetails));
 		return mv;
 	}
 
@@ -129,7 +108,7 @@ public class OrderDetailController<T extends _EntityObject> extends _EntityContr
 	public ModelAndView findByInventoryTransactionId(@RequestParam Integer id) {
 		ModelAndView mv = createDefaultModelAndView();
 		List<OrderDetailDto> orderDetails = orderDetailService.findByInventoryTransactionId(id);
-		mv.addObject(ORDER_DETAILS, orderDetails);
+		mv.addObject(ORDER_DETAILS, enrichAll(orderDetails));
 		return mv;
 	}
 
@@ -141,7 +120,7 @@ public class OrderDetailController<T extends _EntityObject> extends _EntityContr
 
 		List<OrderDetailDto> orderDetails = orderDetailService.findByQuantityBetweenOrderByQuantityAsc(min, max);
 
-		mv.addObject(ORDER_DETAILS, orderDetails);
+		mv.addObject(ORDER_DETAILS, enrichAll(orderDetails));
 		return mv;
 	}
 
@@ -153,7 +132,7 @@ public class OrderDetailController<T extends _EntityObject> extends _EntityContr
 
 		List<OrderDetailDto> orderDetails = orderDetailService.findByUnitPriceBetweenOrderByUnitPriceAsc(min, max);
 
-		mv.addObject(ORDER_DETAILS, orderDetails);
+		mv.addObject(ORDER_DETAILS, enrichAll(orderDetails));
 		return mv;
 	}
 
@@ -164,7 +143,7 @@ public class OrderDetailController<T extends _EntityObject> extends _EntityContr
 
 		List<OrderDetailDto> orderDetails = orderDetailService.findByDiscountBetweenOrderByDiscountAsc(min, max);
 
-		mv.addObject(ORDER_DETAILS, orderDetails);
+		mv.addObject(ORDER_DETAILS, enrichAll(orderDetails));
 		return mv;
 	}
 
@@ -185,18 +164,28 @@ public class OrderDetailController<T extends _EntityObject> extends _EntityContr
 	private ModelAndView createDefaultModelAndView() {
 		loadMenu();
 		ModelAndView mv = new ModelAndView(getModelAndView().getView());
-		mv.addObject(ORDER_DETAILS, orderDetailService.findAll());
-		mv.addObject(CUSTOMER_ORDERS, customerOrderService.findAll());
-		mv.addObject(INVENTORY_TRANSACTIONS, inventoryTransactionService.findAll());
-		mv.addObject(INVENTORY_TRANSACTION_TYPES, inventoryTransactionTypeService.findAll());
-		mv.addObject(ORDER_STATUSES, orderStatusService.findAll());
-		mv.addObject(PRODUCTS, productService.findAll());
-		mv.addObject(PURCHASE_ORDERS, purchaseOrderService.findAll());
+		mv.addObject(ORDER_DETAILS, enrichAll(orderDetailService.findAll()));
 		mv.addObject("activeMenuSection", "fourthOrder");
 		mv.addObject("currentEntityPath", "orderDetail");
 		mv.addObject(TITLE, TITLE_ORDER_DETAIL);
 		mv.setViewName("entity/orderDetail");
 		return mv;
+	}
+
+	private List<OrderDetailDto> enrichAll(List<OrderDetailDto> orderDetails) {
+
+		if (orderDetails == null || orderDetails.isEmpty())
+			return List.of();
+		return orderDetails.stream().map(orderDetail -> {
+			try {
+				return orderDetailService.enrich(orderDetail);
+			} catch (Exception e) {
+				// Force a print statements to capture what Eclipse hides
+				System.err.println(
+						"CRITICAL: Failed to enrich order ID " + orderDetail.id() + " -> " + e.getMessage());
+				return orderDetail; // Return raw, un-enriched DTO so the page still loads!
+			}
+		}).toList();
 	}
 
 }

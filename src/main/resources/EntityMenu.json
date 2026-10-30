@@ -66,32 +66,8 @@
     ],
     "type": [
       {
-        "path": "inventoryTransactionType",
-        "title": "Inventory Transaction Type"
-      },
-      {
-        "path": "orderDetailStatus",
-        "title": "Order Detail Status"
-      },      
-      {
-        "path": "orderStatus",
-        "title": "Order Status"
-      },
-      {
-        "path": "orderTaxStatus",
-        "title": "Order Tax Status"
-      },
-      {
-        "path": "paymentType",
-        "title": "Payment Type"
-      },    
-		{
-        "path": "purchaseOrderStatus",
-        "title": "Purchase Order Status"
-      },
-      {
-        "path": "typeState",
-        "title": "Type State"
+        "path": "statusAndType",
+        "title": "Status and Type"
       }
     ]
   }

@@ -12,11 +12,11 @@ public record OrderDetailDto(
 		int id,
 
 		CustomerOrderDto customerOrder,
-		ProductDto product,
+		InventoryTransactionDto inventoryTransaction,
 		OrderStatusDto orderStatus,
+		ProductDto product,		
 		PurchaseOrderDto purchaseOrder,
-		InventoryTransactionTypeDto inventoryTransaction,
-
+		
 		double quantity,
 		double unitPrice,
 		double discount,

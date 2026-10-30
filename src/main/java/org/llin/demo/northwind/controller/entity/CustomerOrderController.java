@@ -206,7 +206,7 @@ public class CustomerOrderController<T extends _EntityObject> extends _EntityCon
 	    return customerOrders.stream()
 	            .map(order -> {
 	                try {
-	                    return customerOrderService.withId(order);
+	                    return customerOrderService.enrich(order);
 	                } catch (Exception e) {
 	                    // Force a print statements to capture what Eclipse hides
 	                    System.err.println("CRITICAL: Failed to enrich order ID " + order.id() + " -> " + e.getMessage());

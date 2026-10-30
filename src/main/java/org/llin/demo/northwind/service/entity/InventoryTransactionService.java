@@ -157,7 +157,7 @@ public class InventoryTransactionService extends _BaseService {
 			return Collections.emptyList();
 		}
 	}
-	
+
 	public InventoryTransactionDto enrich(InventoryTransactionDto dto) {
 	    if (dto == null) return null;
 
@@ -168,49 +168,57 @@ public class InventoryTransactionService extends _BaseService {
 	    Optional<ProductDto> prOpt = productService.findById(extractProductId(dto));
 	    Optional<PurchaseOrderDto> poOpt = purchaseOrderService.findById(extractPurchaseOrderId(dto));
 	    
-	    CustomerOrderDto customerOrder = coOpt.orElse(null);  
+	    CustomerOrderDto customerOrder = customerOrderService.enrich(coOpt.orElse(null));  
 	    InventoryTransactionTypeDto inventoryTransactionType = ittOpt.orElse(null);
-	    ProductDto product = prOpt.orElse(null);
-	    PurchaseOrderDto purchaseOrder = poOpt.orElse(null);
-			    
-	    return new InventoryTransactionDto(
-	        id != null ? id : dto.id(),   // fallback if extraction fails
-	        		product,
-	        		inventoryTransactionType,
-	        		dto.transactionCreatedDate(),
-	        		dto.transactionModifiedDate(),
-	        		dto.quantity(),
-	        		dto.comments(),
-	        		customerOrder,
-	        		purchaseOrder,
-	        dto.links()
-	    );
+	    ProductDto product = productService.enrich(prOpt.orElse(null));
+	    PurchaseOrderDto purchaseOrder = purchaseOrderService.enrich(poOpt.orElse(null));
+			   
+	    dto = new InventoryTransactionDto(
+		        id != null ? id : dto.id(),   // fallback if extraction fails
+		        		product,
+		        		inventoryTransactionType,
+		        		dto.transactionCreatedDate(),
+		        		dto.transactionModifiedDate(),
+		        		dto.quantity(),
+		        		dto.comments(),
+		        		customerOrder,
+		        		purchaseOrder,
+		        dto.links());
+	    return dto; 
 	}
-	
+
 	private Integer extractCustomerOrderId(InventoryTransactionDto i) {
 		if (i == null || i.links() == null)
 			return null;
-		return extractIdFromLink(i.links().getLink("customerOrder"));
+		Integer ii = extractIdFromLink(i.links().getLink("customerOrder"));
+		i.links().getLink("customerOrder").setId(ii == null ? null : ii.toString());
+		return ii;
 	}
 
 	private Integer extractInventoryTransactionTypeId(InventoryTransactionDto i) {
 		if (i == null || i.links() == null)
 			return null;
-		return extractIdFromLink(i.links().getLink("transactionType"));
+		Integer ii = extractIdFromLink(i.links().getLink("transactionType"));
+		i.links().getLink("transactionType").setId(ii == null ? null : ii.toString());
+		return ii;
 	}
 
 	private Integer extractProductId(InventoryTransactionDto i) {
 		if (i == null || i.links() == null)
 			return null;
-		return extractIdFromLink(i.links().getLink("product"));
+		Integer ii = extractIdFromLink(i.links().getLink("product"));
+		i.links().getLink("product").setId(ii == null ? null : ii.toString());
+		return ii;
 	}
 
 	private Integer extractPurchaseOrderId(InventoryTransactionDto i) {
 		if (i == null || i.links() == null)
 			return null;
-		return extractIdFromLink(i.links().getLink("purchaseOrder"));
+		Integer ii = extractIdFromLink(i.links().getLink("purchaseOrder"));
+		i.links().getLink("purchaseOrder").setId(ii == null ? null : ii.toString());
+		return ii;
 	}
-	
+
 	private Integer extractIdFromSelfLink(InventoryTransactionDto p) {
 		if (p == null || p.links() == null)
 			return null;

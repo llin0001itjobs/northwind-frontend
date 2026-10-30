@@ -10,12 +10,7 @@ import org.llin.demo.northwind._Classes_EntityObject;
 import org.llin.demo.northwind._Titles;
 import org.llin.demo.northwind.dto.PurchaseOrderDetailDto;
 import org.llin.demo.northwind.model.entity._EntityObject;
-import org.llin.demo.northwind.service.entity.CustomerOrderService;
-import org.llin.demo.northwind.service.entity.InventoryTransactionService;
-import org.llin.demo.northwind.service.entity.OrderStatusService;
-import org.llin.demo.northwind.service.entity.ProductService;
 import org.llin.demo.northwind.service.entity.PurchaseOrderDetailService;
-import org.llin.demo.northwind.service.entity.PurchaseOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
@@ -36,23 +31,10 @@ public class PurchaseOrderDetailController<T extends _EntityObject> extends _Ent
 		implements _Classes_CustomObject, _Classes_EntityObject, _Titles {
 
 	private final PurchaseOrderDetailService purchaseOrderDetailService;
-	private final CustomerOrderService customerOrderService;
-	private final InventoryTransactionService inventoryTransactionService;
-	private final OrderStatusService orderStatusService;
-	private final ProductService productService;
-	private final PurchaseOrderService purchaseOrderService;
 
 	@Autowired
-	public PurchaseOrderDetailController(PurchaseOrderDetailService purchaseOrderDetailService,
-			CustomerOrderService customerOrderService, InventoryTransactionService inventoryTransactionService,
-			OrderStatusService orderStatusService, ProductService productService,
-			PurchaseOrderService purchaseOrderService) {
+	public PurchaseOrderDetailController(PurchaseOrderDetailService purchaseOrderDetailService) {
 		this.purchaseOrderDetailService = purchaseOrderDetailService;
-		this.customerOrderService = customerOrderService;
-		this.inventoryTransactionService = inventoryTransactionService;
-		this.orderStatusService = orderStatusService;
-		this.productService = productService;
-		this.purchaseOrderService = purchaseOrderService;
 	}
 
 	@GetMapping("/list")
@@ -95,7 +77,7 @@ public class PurchaseOrderDetailController<T extends _EntityObject> extends _Ent
 	public ModelAndView findByPurchaseOrderId(@RequestParam Integer id) {
 		ModelAndView mv = createDefaultModelAndView();
 		List<PurchaseOrderDetailDto> purchaseOrderDetails = purchaseOrderDetailService.findByPurchaseOrderId(id);
-		mv.addObject(PURCHASE_ORDER_DETAILS, purchaseOrderDetails);
+		mv.addObject(PURCHASE_ORDER_DETAILS, enrichAll(purchaseOrderDetails));
 		return mv;
 	}
 
@@ -103,7 +85,7 @@ public class PurchaseOrderDetailController<T extends _EntityObject> extends _Ent
 	public ModelAndView findByProductId(@RequestParam Integer id) {
 		ModelAndView mv = createDefaultModelAndView();
 		List<PurchaseOrderDetailDto> purchaseOrderDetails = purchaseOrderDetailService.findByProductId(id);
-		mv.addObject(PURCHASE_ORDER_DETAILS, purchaseOrderDetails);
+		mv.addObject(PURCHASE_ORDER_DETAILS, enrichAll(purchaseOrderDetails));
 		return mv;
 	}
 
@@ -111,7 +93,7 @@ public class PurchaseOrderDetailController<T extends _EntityObject> extends _Ent
 	public ModelAndView findByInventoryTransactionId(@RequestParam Integer id) {
 		ModelAndView mv = createDefaultModelAndView();
 		List<PurchaseOrderDetailDto> purchaseOrderDetails = purchaseOrderDetailService.findByInventoryTransactionId(id);
-		mv.addObject(PURCHASE_ORDER_DETAILS, purchaseOrderDetails);
+		mv.addObject(PURCHASE_ORDER_DETAILS, enrichAll(purchaseOrderDetails));
 		return mv;
 	}
 
@@ -124,7 +106,7 @@ public class PurchaseOrderDetailController<T extends _EntityObject> extends _Ent
 		List<PurchaseOrderDetailDto> purchaseOrderDetails = purchaseOrderDetailService
 				.findByQuantityBetweenOrderByQuantityAsc(min, max);
 
-		mv.addObject(PURCHASE_ORDER_DETAILS, purchaseOrderDetails);
+		mv.addObject(PURCHASE_ORDER_DETAILS, enrichAll(purchaseOrderDetails));
 		return mv;
 	}
 
@@ -137,7 +119,7 @@ public class PurchaseOrderDetailController<T extends _EntityObject> extends _Ent
 		List<PurchaseOrderDetailDto> purchaseOrderDetails = purchaseOrderDetailService
 				.findByUnitCostBetweenOrderByUnitCostAsc(min, max);
 
-		mv.addObject(PURCHASE_ORDER_DETAILS, purchaseOrderDetails);
+		mv.addObject(PURCHASE_ORDER_DETAILS, enrichAll(purchaseOrderDetails));
 		return mv;
 	}
 
@@ -151,7 +133,7 @@ public class PurchaseOrderDetailController<T extends _EntityObject> extends _Ent
 		List<PurchaseOrderDetailDto> purchaseOrderDetails = purchaseOrderDetailService
 				.findByDateReceivedBetweenOrderByDateReceivedAsc(start, end);
 
-		mv.addObject(PURCHASE_ORDER_DETAILS, purchaseOrderDetails);
+		mv.addObject(PURCHASE_ORDER_DETAILS, enrichAll(purchaseOrderDetails));
 		return mv;
 	}
 
@@ -160,19 +142,14 @@ public class PurchaseOrderDetailController<T extends _EntityObject> extends _Ent
 		ModelAndView mv = createDefaultModelAndView();
 		List<PurchaseOrderDetailDto> purchaseOrderDetails = purchaseOrderDetailService
 				.findByPostedToInventory(postedToInventory);
-		mv.addObject(PURCHASE_ORDER_DETAILS, purchaseOrderDetails);
+		mv.addObject(PURCHASE_ORDER_DETAILS, enrichAll(purchaseOrderDetails));
 		return mv;
 	}
 
 	private ModelAndView createDefaultModelAndView() {
 		loadMenu();
 		ModelAndView mv = new ModelAndView(getModelAndView().getView());
-		mv.addObject(PURCHASE_ORDER_DETAILS, purchaseOrderDetailService.findAll());
-		mv.addObject(CUSTOMER_ORDERS, customerOrderService.findAll());
-		mv.addObject(INVENTORY_TRANSACTIONS, inventoryTransactionService.findAll());
-		mv.addObject(ORDER_STATUSES, orderStatusService.findAll());
-		mv.addObject(PRODUCTS, productService.findAll());
-		mv.addObject(PURCHASE_ORDERS, purchaseOrderService.findAll());
+		mv.addObject(PURCHASE_ORDER_DETAILS, enrichAll(purchaseOrderDetailService.findAll()));
 		mv.addObject("activeMenuSection", "fourthOrder");
 		mv.addObject("currentEntityPath", "purchaseOrderDetail");
 		mv.addObject(TITLE, TITLE_PURCHASE_ORDER_DETAIL);
@@ -180,4 +157,20 @@ public class PurchaseOrderDetailController<T extends _EntityObject> extends _Ent
 		return mv;
 	}
 
+	private List<PurchaseOrderDetailDto> enrichAll(List<PurchaseOrderDetailDto> purchaseOrderDetails) {
+
+		if (purchaseOrderDetails == null || purchaseOrderDetails.isEmpty())
+			return List.of();
+		return purchaseOrderDetails.stream().map(purchaseOrderDetail -> {
+			try {
+				return purchaseOrderDetailService.enrich(purchaseOrderDetail);
+			} catch (Exception e) {
+				// Force a print statements to capture what Eclipse hides
+				System.err.println(
+						"CRITICAL: Failed to enrich ID " + purchaseOrderDetail.id() + " -> " + e.getMessage());
+				return purchaseOrderDetail; // Return raw, un-enriched DTO so the page still loads!
+			}
+		}).toList();
+	}
+	
 }

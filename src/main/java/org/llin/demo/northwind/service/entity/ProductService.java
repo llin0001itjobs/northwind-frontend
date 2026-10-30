@@ -253,7 +253,7 @@ public class ProductService extends _BaseService {
 				dto.discontinued(), dto.minimumReorderQuantity(), dto.category(), dto.resourceId(), dto.links());
 	}
 		
-	public ProductDto withId(ProductDto p) {
+	public ProductDto enrich(ProductDto p) {
 	    Integer id = extractIdFromSelfLink(p);
 	    if (id == null) return p;
 	    // adjust to match your ProductDto record constructor
@@ -263,7 +263,7 @@ public class ProductService extends _BaseService {
 	            p.minimumReorderQuantity(), p.category(), p.resourceId(), p.links());
 	}
 	
-	public Integer extractIdFromSelfLink(ProductDto p) {
+	private Integer extractIdFromSelfLink(ProductDto p) {
 	    if (p == null || p.links() == null) return null;
 	    return this.extractIdFromSelf(p.links().getLink("self"));
 	}

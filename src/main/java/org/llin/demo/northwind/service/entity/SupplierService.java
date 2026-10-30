@@ -75,8 +75,6 @@ public class SupplierService extends _BaseService {
 	            .uri("supplier/{id}", id)
 	            .retrieve()
 	            .body(SupplierDto.class);
-	        System.err.println("supplier.findById(" + id + ") → raw dto.id=" + (dto != null ? dto.id() : "null")
-	                         + " selfLink=" + (dto != null && dto.links() != null ? dto.links().getLink("self") : "none"));
 	        return Optional.ofNullable(dto);
 	    } catch (Exception e) {
 	        System.err.println("supplier.findById(" + id + ") FAILED: " + e.getMessage());
@@ -179,7 +177,7 @@ public class SupplierService extends _BaseService {
 		return supplier;
 	}
 
-	public SupplierDto withId(SupplierDto s) {
+	public SupplierDto enrich(SupplierDto s) {
 		if (s == null)
 			return null;
 

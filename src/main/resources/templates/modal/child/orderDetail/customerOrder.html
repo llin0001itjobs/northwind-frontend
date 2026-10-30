@@ -1,45 +1,46 @@
 <!DOCTYPE html>
-<div>
-	<div th:each="c : ${CustomerOrders}" class="modal fade"
-		data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-		th:attr="id='modalCustomerOrder-' + ${c.id}, aria-labelledby='modalCustomerOrderLabel-' + ${c.id}"
-		aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title"
-						th:attr="id='modalCustomerOrderLabel-' + ${c.id}">
-						Customer Order</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal"
-						aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<dl class="row">
-						<dt class="col">Order Date</dt>
-						<dd class="col">
-							<span
-								th:text="${#temporals.format(c.orderDate, 'dd-MM-yyyy HH:mm')}"></span>
-						</dd>
-					</dl>
-					<dl class="row">
-						<dt class="col">Paid Date</dt>
-						<dd class="col">
-							<span
-								th:text="${#temporals.format(c.paidDate, 'dd-MM-yyyy HH:mm')}"></span>
-						</dd>
-					</dl>
-					<dl class="row">
-						<dt class="col">Shipped Date</dt>
-						<dd class="col">
-							<span
-								th:text="${#temporals.format(c.shippedDate, 'dd-MM-yyyy HH:mm')}"></span>
-						</dd>
-					</dl>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary"
-						data-bs-dismiss="modal">Close</button>
-				</div>
+<!-- modal/child/orderDetail/customerOrder.html -->
+<!-- one modal per orderDetail -->
+<div th:each="o : ${OrderDetails}" th:if="${o.id != null}"
+	th:attr="id='modalCustomerOrder-' + ${o.id}"
+	class="modal modal-lg fade" data-bs-backdrop="static"
+	data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" th:attr="id='modalCustomerOrder-' + ${o.id}">
+					Customer Order of Date Allocated<span th:text="${o.dateAllocated}"></span>
+				</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"
+					aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<table class="table modal-table">
+					<thead>
+						<tr>
+							<th scope="col-2">Order Date</th>
+							<th scope="col-2">Paid Date</th>
+							<th scope="col-2">Shipped Date</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:if="${o.customerOrder != null}">
+							<td><span
+								th:text="${#temporals.format(o.customerOrder.orderDate, 'dd-MM-yyyy HH:mm')}"></span></td>
+							<td><span
+								th:text="${#temporals.format(o.customerOrder.paidDate, 'dd-MM-yyyy HH:mm')}"></span</td>
+							<td><span
+								th:text="${#temporals.format(o.customerOrder.shippedDate, 'dd-MM-yyyy HH:mm')}"></span></td>
+						</tr>
+						<tr th:if="${o.customerOrder == null}">
+							<td colspan="6" class="text-muted">No Customer Order</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary"
+					data-bs-dismiss="modal">Close</button>
 			</div>
 		</div>
 	</div>

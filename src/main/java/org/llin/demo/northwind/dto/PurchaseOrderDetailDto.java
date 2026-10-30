@@ -8,19 +8,19 @@ import org.llin.demo.northwind.model.entity.links.LinksDeserializer;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-public record PurchaseOrderDetailDto(
-		int id,
+public record PurchaseOrderDetailDto(int id,
 
+		InventoryTransactionDto inventoryTransaction, 
+		ProductDto product, 
 		PurchaseOrderDto purchaseOrder,
-		ProductDto product,
-		InventoryTransactionTypeDto inventoryTransaction,
 
-		int quantity,
-		double unitCost,
-		LocalDate dateReceived,
+		int quantity, 
+		double unitCost, 
+		LocalDate dateReceived, 
 		boolean postedToInventory,
 		
         @JsonProperty("_links")
         @JsonDeserialize(using = LinksDeserializer.class) 
-        Links linkss
+        Links links
+
 ) {}

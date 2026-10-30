@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Northwind Traders – Types &amp; Statuses</title>
+<style>
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	user-select: none;
+}
+
+@media ( min-width : 768px) {
+	.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
+}
+
+.status-card {
+	min-height: 220px;
+}
+</style>
+<th:block th:replace="~{fragments/links-css :: linksCss}"></th:block>
+</head>
+<body>
+	<main>
+		<div class="container-fluid">
+			<div class="row" id="navBarRow">
+				<div class="col-12" id="navBarCol">
+					<div th:replace="~{fragments/navbar :: nav}"></div>
+				</div>
+			</div>
+
+			<div class="row border">
+				<div class="container-fluid">
+					<div class="row">
+						<!-- Left sidebar -->
+						<div class="col-2 bg-light border border-primary pb-3"
+							id="leftSideBar">
+							<div th:replace="~{fragments/sideMenuLeftEntities :: div}"></div>
+						</div>
+
+						<!-- Main content: 3×2 grid of lists -->
+						<div class="col-8 border border-primary mt-5 pt-4">
+							<h3 class="mb-4">
+								<span th:text="${TITLE}"></span>
+							</h3>
+							<p class="text-muted small">Reference lists only. New values
+								may be inserted solely by a DBA after a formal management
+								request. Existing values are never updated or deleted.</p>
+
+							<div class="row">
+								<!-- 1. Inventory Transaction Type -->
+								<div class="col-md-4 mb-4">
+									<div class="card status-card">
+										<div class="card-header">Inventory Transaction Type</div>
+										<ul class="list-group list-group-flush">
+											<li class="list-group-item"
+												th:each="i : ${InventoryTransactionTypes}"
+												th:text="${i.typeName}">Type</li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- 2. Order Detail Status -->
+								<div class="col-md-4 mb-4">
+									<div class="card status-card">
+										<div class="card-header">Order Detail Status</div>
+										<ul class="list-group list-group-flush">
+											<li class="list-group-item"
+												th:each="o : ${OrderDetailStatuses}"
+												th:text="${o.statusName}">Status</li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- 3. Order Status -->
+								<div class="col-md-4 mb-4">
+									<div class="card status-card">
+										<div class="card-header">Order Status</div>
+										<ul class="list-group list-group-flush">
+											<li class="list-group-item" th:each="o : ${OrderStatuses}"
+												th:text="${o.statusName}">Status</li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- 4. Order Tax Status -->
+								<div class="col-md-4 mb-4">
+									<div class="card status-card">
+										<div class="card-header">Order Tax Status</div>
+										<ul class="list-group list-group-flush">
+											<li class="list-group-item" th:each="o : ${OrderTaxStatuses}"
+												th:text="${o.taxStatusName}">Tax Status</li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- 5. Payment Type -->
+								<div class="col-md-4 mb-4">
+									<div class="card status-card">
+										<div class="card-header">Payment Type</div>
+										<ul class="list-group list-group-flush">
+											<li class="list-group-item" th:each="p : ${PaymentTypes}"
+												th:text="${p.description}">Payment</li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- 6. Purchase Order Status -->
+								<div class="col-md-4 mb-4">
+									<div class="card status-card">
+										<div class="card-header">Purchase Order Status</div>
+										<ul class="list-group list-group-flush">
+											<li class="list-group-item"
+												th:each="p : ${PurchaseOrderStatuses}" th:text="${p.status}">Status</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Right sidebar -->
+						<div class="col-2 bg-light border border-primary pb-3"
+							id="rightSideBar">
+							<div th:replace="~{fragments/sideMenuRight :: div}"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row" id="footerRow">
+				<div class="col-12" id="footerCol">
+					<div th:replace="~{fragments/footer :: footer}"></div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<div th:replace="~{fragments/links-js :: linksJs}"></div>
+</body>
+</html>

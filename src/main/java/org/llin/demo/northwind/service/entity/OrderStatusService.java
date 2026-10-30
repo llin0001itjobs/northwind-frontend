@@ -56,8 +56,6 @@ public class OrderStatusService {
 	            .uri("orderStatus/{id}", id)
 	            .retrieve()
 	            .body(OrderStatusDto.class);
-	        System.err.println("orderStatusService.findById(" + id + ") → raw dto.id=" + (dto != null ? dto.id() : "null")
-	                         + " selfLink=" + (dto != null && dto.links() != null ? dto.links().getLink("self") : "none"));
 	        return Optional.ofNullable(dto);
 	    } catch (Exception e) {
 	        System.err.println("orderStatusService.findById(" + id + ") FAILED: " + e.getMessage());

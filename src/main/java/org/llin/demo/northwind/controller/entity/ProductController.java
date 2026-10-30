@@ -255,7 +255,7 @@ public class ProductController<T extends _EntityObject> extends _EntityControlle
 	private List<ProductDto> enrichAll(List<ProductDto> products) {
 		 if (products == null || products.isEmpty()) return List.of();
 		 return products.stream()
-		 .map(productService::withId)
+		 .map(productService::enrich)
 		 .map(productService::enrichWithSuppliers)
 		 .toList();
 		}

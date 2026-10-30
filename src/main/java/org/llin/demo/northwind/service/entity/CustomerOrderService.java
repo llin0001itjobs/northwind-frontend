@@ -368,7 +368,7 @@ public class CustomerOrderService extends _BaseService {
 	}
 
 	// Helper used by your service / ObjectMapper post-processor
-	public CustomerOrderDto withId(CustomerOrderDto coDto) {
+	public CustomerOrderDto enrich(CustomerOrderDto coDto) {
 		if (coDto == null)
 			return null;
 
@@ -425,6 +425,7 @@ public class CustomerOrderService extends _BaseService {
 				}
 			}
 		}
+		
 		PaymentTypeDto paymentTypeDto = null;
 		if (paymentTypeId != null) { //
 			List<PaymentTypeDto> list = paymentTypeService.findById(paymentTypeId);
@@ -458,19 +459,25 @@ public class CustomerOrderService extends _BaseService {
 	private Integer extractCustomerId(CustomerOrderDto co) {
 		if (co == null || co.links() == null)
 			return null;
-		return extractIdFromLink(co.links().getLink("customer"));
+		Integer ii = extractIdFromLink(co.links().getLink("customer"));
+		co.links().getLink("customer").setId(ii == null ? null : ii.toString());
+		return ii;
 	}
 
 	private Integer extractEmployeeId(CustomerOrderDto co) {
 		if (co == null || co.links() == null)
 			return null;
-		return extractIdFromLink(co.links().getLink("employee"));
+		Integer ii = extractIdFromLink(co.links().getLink("employee"));
+		co.links().getLink("employee").setId(ii == null ? null : ii.toString());
+		return ii;
 	}
 
 	private Integer extractShipperId(CustomerOrderDto co) {
 		if (co == null || co.links() == null)
 			return null;
-		return extractIdFromLink(co.links().getLink("shipper"));
+		Integer ii = extractIdFromLink(co.links().getLink("shipper"));
+		co.links().getLink("shipper").setId(ii == null ? null : ii.toString());
+		return ii;		
 	}
 
 	private Integer extractPaymentTypeId(CustomerOrderDto co) {

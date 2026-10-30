@@ -71,10 +71,10 @@
 												<div th:if="${i.links != null}">
 													<div
 														th:with="customerOrderLink=${i.links.getLink('customerOrder')}">
-														<a th:if="${customerOrderLink != null}" href="#"
+														<a th:if="${customerOrderLink.id != null}" href="#"
 															data-bs-toggle="modal"
 															th:attr="data-bs-target='#modalCustomerOrder-' + ${i.id}">
-															customer order</a> <span th:unless="${customerLink == null}"
+															customer order</a> <span th:unless="${customerOrderLink.id != null}"
 															class="text-muted">No Customer Order Info</span>
 													</div>
 												</div>

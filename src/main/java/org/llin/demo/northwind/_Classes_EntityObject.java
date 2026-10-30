@@ -23,7 +23,6 @@ public interface _Classes_EntityObject {
 	public static final String ROLE = "Role";
 	public static final String SHIPPER = "Shipper";
 	public static final String SUPPLIER = "Supplier";
-	public static final String TYPE_STATE = "TypeState";
 	public static final String USER = "User";
 		
 	public static final String APPROVED_BY = "ApprovedBy";

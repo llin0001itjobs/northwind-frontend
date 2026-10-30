@@ -218,8 +218,9 @@ public class InvoiceService extends _BaseService {
 		Integer id = extractIdFromSelfLink(invDto);
 		
 		Optional<CustomerOrderDto> opt = customerOrderService.findById(extractCustomerOrderId(invDto));
-		
-		InvoiceDto dto = new InvoiceDto(id, opt.get(), invDto.invoiceDate(), invDto.dueDate(),
+		CustomerOrderDto coDto = customerOrderService.enrich(opt.orElse(null));
+				
+		InvoiceDto dto = new InvoiceDto(id, coDto, invDto.invoiceDate(), invDto.dueDate(),
 				invDto.tax(), invDto.shipping(), invDto.amountDue(), invDto.links());
 		
 		return dto;
@@ -228,7 +229,9 @@ public class InvoiceService extends _BaseService {
 	private Integer extractCustomerOrderId(InvoiceDto i) {
 		if (i == null || i.links() == null)
 			return null;
-		return extractIdFromLink(i.links().getLink("customerOrder"));
+		Integer ii = extractIdFromLink(i.links().getLink("customerOrder"));
+		i.links().getLink("customerOrder").setId(ii == null ? null : ii.toString());
+		return ii;
 	}
 	
 	private Integer extractIdFromSelfLink(InvoiceDto inv) {

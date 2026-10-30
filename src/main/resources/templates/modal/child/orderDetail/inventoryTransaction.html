@@ -1,52 +1,50 @@
 <!DOCTYPE html>
-<div>
-	<div th:each="i : ${InventoryTransactions}" class="modal fade"
-		data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-		th:attr="id='modalInventoryTransaction-' + ${i.id}, aria-labelledby='modalInventoryTransactionLabel-' + ${i.id}"
-		aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title"
-						th:attr="id='modalInventoryTransactionLabel-' + ${i.id}">
-						Inventory Transaction</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal"
-						aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<dl class="row">
-						<dt class="col">Created Date</dt>
-						<dd class="col">
-							<span
-								th:text="${#temporals.format(i.transactionCreatedDate, 'dd-MM-yyyy HH:mm')}"></span>
-						</dd>
-					</dl>
-					<dl class="row">
-						<dt class="col">Modified Date</dt>
-						<dd class="col">
-							<span
-								th:text="${#temporals.format(i.transactionModifiedDate, 'dd-MM-yyyy HH:mm')}"></span>
-						</dd>
-					</dl>
-					<dl class="row">
-						<dt class="col">Quantity</dt>
-						<dd class="col">
-							<span th:text="${i.quantity}"></span>
-						</dd>
-					</dl>
-					<dl class="row">
-						<dt class="col">Comments</dt>
-						<dd class="col">
-							<span th:text="${i.comments}"></span>
-						</dd>
-					</dl>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary"
-						data-bs-dismiss="modal">Close</button>
-				</div>
+<!-- modal/child/purchaseOrderDetail/inventoryTransaction.html -->
+<!-- one modal per purchaseOrderDetail -->
+<div th:each="p : ${PurchaseOrderDetails}" th:if="${p.id != null}"
+	th:attr="id='modalInventoryTransaction-' + ${p.id}"
+	class="modal modal-lg fade" data-bs-backdrop="static"
+	data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title"
+					th:attr="id='modalInventoryTransaction-' + ${p.id}">
+					Inventory Transaction of Date Allocated<span
+						th:text="${p.dateAllocated}"></span>
+				</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"
+					aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<table class="table modal-table">
+					<thead>
+						<tr>
+							<th scope="col">Created Date</th>
+							<th scope="col">Modified Date</th>
+							<th scope="col">Type</th>
+							<th scope="col">Quantity</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:if="${p.inventoryTransaction != null}">
+							<td><span
+								th:text="${#temporals.format(p.inventoryTransaction.transactionCreatedDate, 'dd-MM-yyyy HH:mm')}"></span></td>
+							<td><span
+								th:text="${#temporals.format(p.inventoryTransaction.transactionModifiedDate, 'dd-MM-yyyy HH:mm')}"></span></td>
+							<td><span th:if="${p.inventoryTransaction.inventoryTransactionType != null}" th:text="${p.inventoryTransaction.inventoryTransactionType.typeName}"></span></td>
+							<td><span th:text="${p.inventoryTransaction.quantity}"></span</td>
+						</tr>
+						<tr th:if="${p.inventoryTransaction == null}">
+							<td colspan="6" class="text-muted">No Inventory Transaction</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary"
+					data-bs-dismiss="modal">Close</button>
 			</div>
 		</div>
 	</div>
 </div>
-

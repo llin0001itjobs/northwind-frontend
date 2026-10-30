@@ -71,7 +71,8 @@
 											th:text="${i.transactionCreatedDate != null} ? ${#temporals.format(i.transactionCreatedDate, 'MM-dd-yyyy')} : ''"></td>
 										<td
 											th:text="${i.transactionModifiedDate != null} ? ${#temporals.format(i.transactionModifiedDate, 'MM-dd-yyyy')} : ''"></td>
-										<td><span th:text="${i.inventoryTransactionType.typeName}"></span></td>
+										<td><span
+											th:text="${i.inventoryTransactionType.typeName}"></span></td>
 										<td><span th:text="${i.quantity}"></span></td>
 										<td><span th:text="${i.comments}"></span></td>
 										<td>
@@ -79,30 +80,31 @@
 												<div th:if="${i.links != null}">
 													<div
 														th:with="customerOrderLink=${i.links.getLink('customerOrder')}">
-														<a th:if="${customerOrderLink != null}" href="#"
+														<a th:if="${customerOrderLink.id != null}" href="#"
 															data-bs-toggle="modal"
 															th:attr="data-bs-target='#modalCustomerOrder-' + ${i.id}">
 															Customer Order</a> <span
-															th:unless="${customerOrderLink != null}"
+															th:unless="${customerOrderLink.id != null}"
 															class="text-muted">No Customer Order Info</span>
 													</div>
 													<div th:with="productLink=${i.links.getLink('product')}">
-														<a th:if="${productLink != null}" href="#"
+														<a th:if="${productLink.id != null}" href="#"
 															data-bs-toggle="modal"
 															th:attr="data-bs-target='#modalProduct-' + ${i.id}">
-															Product</a> <span th:unless="${productLink != null}"
+															Product</a> <span th:unless="${productLink.id != null}"
 															class="text-muted">No Product Info</span>
 													</div>
 													<div
 														th:with="purchaseOrderLink=${i.links.getLink('purchaseOrder')}">
-														<a th:if="${purchaseOrderLink != null}" href="#"
+														<a th:if="${purchaseOrderLink.id != null}" href="#"
 															data-bs-toggle="modal"
 															th:attr="data-bs-target='#modalPurchaseOrder-' + ${i.id}">
 															Purchase Order</a> <span
-															th:unless="${purchaseOrderLink != null}"
+															th:unless="${purchaseOrderLink.id != null}"
 															class="text-muted">No Purchase Order Info</span>
 													</div>
 												</div>
+											</div>
 										</td>
 									</tr>
 								</tbody>

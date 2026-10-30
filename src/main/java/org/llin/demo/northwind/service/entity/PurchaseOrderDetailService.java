@@ -6,9 +6,12 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
+import org.llin.demo.northwind.dto.InventoryTransactionDto;
 import org.llin.demo.northwind.dto.LabelDoubleValueLongDto;
 import org.llin.demo.northwind.dto.LabelValueLongDto;
+import org.llin.demo.northwind.dto.ProductDto;
 import org.llin.demo.northwind.dto.PurchaseOrderDetailDto;
+import org.llin.demo.northwind.dto.PurchaseOrderDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.ParameterizedTypeReference;
@@ -17,12 +20,20 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestClient;
 
 @Service
-public class PurchaseOrderDetailService {
+public class PurchaseOrderDetailService extends _BaseService {
 	private final RestClient restClient;
 
+	private final InventoryTransactionService inventoryTransactionService;
+	private final ProductService productService;
+	private final PurchaseOrderService purchaseOrderService;
+	
 	@Autowired
-	public PurchaseOrderDetailService(@Qualifier("northwindDataClient") RestClient restClient) {
+	public PurchaseOrderDetailService(@Qualifier("northwindDataClient") RestClient restClient, InventoryTransactionService inventoryTransactionService,
+			ProductService productService, PurchaseOrderService purchaseOrderService) {	
 		this.restClient = restClient;
+		this.inventoryTransactionService = inventoryTransactionService;
+		this.productService = productService;
+		this.purchaseOrderService = purchaseOrderService;
 	}
 
 	// ==================================================================
@@ -179,4 +190,53 @@ public class PurchaseOrderDetailService {
         }			
     }
     
+	public PurchaseOrderDetailDto enrich(PurchaseOrderDetailDto dto) {
+		if (dto == null)
+			return null;
+
+		Integer id = extractIdFromSelfLink(dto); // prefer link-based ID
+
+		Optional<InventoryTransactionDto> itOpt = inventoryTransactionService
+				.findById(extractInventoryTransactionId(dto));
+		Optional<ProductDto> prOpt = productService.findById(extractProductId(dto));
+		Optional<PurchaseOrderDto> poOpt = purchaseOrderService.findById(extractPurchaseOrderId(dto));
+
+		InventoryTransactionDto inventoryTransaction = inventoryTransactionService.enrich(itOpt.orElse(null));
+		ProductDto product = productService.enrich(prOpt.orElse(null));
+		PurchaseOrderDto purchaseOrder = purchaseOrderService.enrich(poOpt.orElse(null));
+		
+		return new PurchaseOrderDetailDto(id != null ? id : dto.id(), 
+				inventoryTransaction,  product, purchaseOrder, dto.quantity(),
+				dto.unitCost(), dto.dateReceived(), dto.postedToInventory(), dto.links());
+	}
+	
+	private Integer extractInventoryTransactionId(PurchaseOrderDetailDto p) {
+		if (p == null || p.links() == null)
+			return null;
+		Integer ii = extractIdFromLink(p.links().getLink("inventoryTransaction"));
+		p.links().getLink("inventoryTransaction").setId(ii == null ? null : ii.toString());
+		return ii;		
+	}
+	
+	private Integer extractProductId(PurchaseOrderDetailDto p) {
+		if (p == null || p.links() == null)
+			return null;
+		Integer ii = extractIdFromLink(p.links().getLink("product"));
+		p.links().getLink("product").setId(ii == null ? null : ii.toString());
+		return ii;			
+	}
+
+	private Integer extractPurchaseOrderId(PurchaseOrderDetailDto p) {
+		if (p == null || p.links() == null)
+			return null;
+		Integer ii = extractIdFromLink(p.links().getLink("purchaseOrder"));
+		p.links().getLink("purchaseOrder").setId(ii == null ? null : ii.toString());
+		return ii;				
+	}
+
+	private Integer extractIdFromSelfLink(PurchaseOrderDetailDto p) {
+		if (p == null || p.links() == null)
+			return null;
+		return extractIdFromSelf(p.links().getLink("self"));
+	}
 }

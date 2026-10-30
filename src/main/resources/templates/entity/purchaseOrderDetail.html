@@ -25,7 +25,7 @@
 }
 </style>
 
-<th:block th:replace="fragments/links-css :: linksCss"></th:block>
+<th:block th:replace="~{fragments/links-css :: linksCss}"></th:block>
 
 
 </head>
@@ -33,16 +33,13 @@
 	<main>
 		<div class="container-fluid">
 			<div
-				th:replace="modal/child/purchaseOrderDetail/customerOrder :: div"></div>
+				th:replace="~{modal/child/purchaseOrderDetail/inventoryTransaction :: div}"></div>
+			<div th:replace="~{modal/child/purchaseOrderDetail/product :: div}"></div>
 			<div
-				th:replace="modal/child/purchaseOrderDetail/inventoryTransaction :: div"></div>
-			<div th:replace="modal/child/purchaseOrderDetail/orderStatus :: div"></div>
-			<div th:replace="modal/child/purchaseOrderDetail/product :: div"></div>
-			<div
-				th:replace="modal/child/purchaseOrderDetail/purchaseOrder :: div"></div>
+				th:replace="~{modal/child/purchaseOrderDetail/purchaseOrder :: div}"></div>
 			<div class="row" id="navBarRow">
 				<div class="col-12" id="navBarCol">
-					<div th:replace="fragments/navbar :: nav"></div>
+					<div th:replace="~{fragments/navbar :: nav}"></div>
 				</div>
 			</div>
 			<div class="row border">
@@ -50,7 +47,7 @@
 					<div class="row">
 						<div class="col-2 bg-light border border-primary pb-3"
 							id="leftSideBar">
-							<div th:replace="fragments/sideMenuLeftEntities :: div"></div>
+							<div th:replace="~{fragments/sideMenuLeftEntities :: div}"></div>
 						</div>
 						<div class="col-8 border border-primary mt-5 pt-4">
 							<h3>
@@ -74,29 +71,34 @@
 										<td><span th:text="${p.quantity}"></span></td>
 										<td><span th:text="${p.postedToInventory}"></span></td>
 										<td>
-											<div
-												th:with="isNullId=${p.links.getLink('inventoryTransaction').id == null}">
-												<a th:if="${!isNullId}"
-													th:href="'/modal/show?entity=inventoryTransaction&id=' + ${p.links.getLink('inventoryTransaction').id}"
-													data-bs-toggle="modal"
-													th:attr="data-bs-target='#modalInventoryTransaction-' + ${p.links.getLink('inventoryTransaction').id}"><span
-													th:text="${p.links.getLink('inventoryTransaction').label}"></span></a>
-											</div>
-											<div
-												th:with="isNullId=${p.links.getLink('product').id == null}">
-												<a th:if="${!isNullId}"
-													th:href="'/modal/show?entity=product&id=' + ${p.links.getLink('product').id}"
-													data-bs-toggle="modal"
-													th:attr="data-bs-target='#modalProduct-' + ${p.links.getLink('product').id}"><span
-													th:text="${p.links.getLink('product').label}"></span></a>
-											</div>
-											<div
-												th:with="isNullId=${p.links.getLink('purchaseOrder').id == null}">
-												<a th:if="${!isNullId}"
-													th:href="'/modal/show?entity=purchaseOrder&id=' + ${p.links.getLink('purchaseOrder').id}"
-													data-bs-toggle="modal"
-													th:attr="data-bs-target='#modalPurchaseOrder-' + ${p.links.getLink('purchaseOrder').id}"><span
-													th:text="${p.links.getLink('purchaseOrder').label}"></span></a>
+											<div th:each="l: ${p.links}">
+												<div th:if="${p.links != null}">
+													<div
+														th:with="inventoryTransactionLink=${p.links.getLink('inventoryTransaction')}">
+														<a th:if="${inventoryTransactionLink.id != null}" href="#"
+															data-bs-toggle="modal"
+															th:attr="data-bs-target='#modalInventoryTransaction-' + ${p.id}">
+															Inventory Transaction</a> <span
+															th:unless="${inventoryTransactionLink.id != null}"
+															class="text-muted">No Inventory Transaction Info</span>
+													</div>													
+													<div th:with="productLink=${p.links.getLink('product')}">
+														<a th:if="${productLink.id != null}" href="#"
+															data-bs-toggle="modal"
+															th:attr="data-bs-target='#modalProduct-' + ${p.id}">
+															Product</a> <span th:unless="${productLink.id != null}"
+															class="text-muted">No Product Info</span>
+													</div>
+													<div
+														th:with="purchaseOrderLink=${p.links.getLink('purchaseOrder')}">
+														<a th:if="${purchaseOrderLink.id != null}" href="#"
+															data-bs-toggle="modal"
+															th:attr="data-bs-target='#modalPurchaseOrder-' + ${p.id}">
+															Purchase Order</a> <span
+															th:unless="${purchaseOrderLink.id != null}"
+															class="text-muted">No Purchase Order Info</span>
+													</div>
+												</div>
 											</div>
 										</td>
 									</tr>
@@ -105,7 +107,7 @@
 						</div>
 						<div class="col-2 bg-light border border-primary pb-3"
 							id="rightSideBar">
-							<div th:replace="fragments/sideMenuRight :: div"></div>
+							<div th:replace="~{fragments/sideMenuRight :: div}"></div>
 						</div>
 					</div>
 
@@ -113,14 +115,14 @@
 				</div>
 				<div class="row" id="footerRow">
 					<div class="col-12" id="footerCol">
-						<div th:replace="fragments/footer :: footer"></div>
+						<div th:replace="~{fragments/footer :: footer}"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</main>
 
-	<div th:replace="fragments/links-js-page-length-7 :: linksJs"></div>
+	<div th:replace="~{fragments/links-js-page-length-7 :: linksJs}"></div>
 
 </body>
 </html>

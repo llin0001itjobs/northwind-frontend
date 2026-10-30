@@ -75,29 +75,29 @@
 											<div th:each="l: ${co.links}">
 												<div th:if="${co.links != null}">
 													<div th:with="customerLink=${co.links.getLink('customer')}">
-														<a th:if="${customerLink != null}" href="#"
+														<a th:if="${customerLink.id != null}" href="#"
 															data-bs-toggle="modal"
 															th:attr="data-bs-target='#modalCustomer-' + ${co.id}">
 															customer</a>
-														<span th:unless="${customerLink != null}"
+														<span th:unless="${customerLink.id != null}"
 															class="text-muted">No Customer Info</span>
 													</div>
 													<div th:with="employeeLink=${co.links.getLink('employee')}">
-														<a th:if="${employeeLink != null}" href="#"
+														<a th:if="${employeeLink.id != null}" href="#"
 															data-bs-toggle="modal"
 															th:attr="data-bs-target='#modalEmployee-' + ${co.id}">
 															employee</a>
-														<span th:unless="${employeeLink != null}"
+														<span th:unless="${employeeLink.id != null}"
 															class="text-muted">No Employee Info</span>
 													</div>
 													<div th:with="shipperLink=${co.links.getLink('shipper')}">
-														<a th:if="${shipperLink != null}" href="#"
+														<a th:if="${shipperLink.id != null}" href="#"
 															data-bs-toggle="modal"
 															th:attr="data-bs-target='#modalShipper-' + ${co.id}">
 															shipper</a>
 															
 													
-														<span th:unless="${shipperLink != null}"
+														<span th:unless="${shipperLink.id != null}"
 															class="text-muted">No Shipper Info</span>
 													</div>												
 												</div>

@@ -52,8 +52,6 @@ public class EmployeeService extends _BaseService {
                 .uri("employee/{id}", id)
                 .retrieve()
                 .body(EmployeeDto.class);
-            System.err.println("EmployeeService.findById(" + id + ") → raw dto.id=" + (dto != null ? dto.id() : "null")
-                             + " selfLink=" + (dto != null && dto.links() != null ? dto.links().getLink("self") : "none"));
             return Optional.ofNullable(dto);
         } catch (Exception e) {
             System.err.println("EmployeeService.findById(" + id + ") FAILED: " + e.getMessage());
@@ -140,7 +138,7 @@ public class EmployeeService extends _BaseService {
 		}
 	}
 
-	public EmployeeDto withId(EmployeeDto e) {
+	public EmployeeDto enrich(EmployeeDto e) {
 		if (e == null)
 			return null;
 

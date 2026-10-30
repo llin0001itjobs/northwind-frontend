@@ -139,7 +139,7 @@ public class SupplierController<T extends _EntityObject> extends _EntityControll
 	private List<SupplierDto> enrichAll(List<SupplierDto> suppliers) {
 		if (suppliers == null || suppliers.isEmpty())
 			return List.of();
-		return suppliers.stream().map(supplierService::withId).map(supplierService::enrichWithProducts).toList();
+		return suppliers.stream().map(supplierService::enrich).map(supplierService::enrichWithProducts).toList();
 	}
 
 }
