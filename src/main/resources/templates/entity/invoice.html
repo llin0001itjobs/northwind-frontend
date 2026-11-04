@@ -64,8 +64,10 @@
 											th:text="${i.invoiceDate != null} ? ${#temporals.format(i.invoiceDate, 'MM-dd-yyyy')} : ''"></td>
 										<td
 											th:text="${i.dueDate != null} ? ${#temporals.format(i.dueDate, 'MM-dd-yyyy')} : ''"></td>
-										<td><span th:text="${i.tax}"></span></td>
-										<td><span th:text="${i.amountDue}"></span></td>
+										<td
+											th:text="${i.tax != null && i.tax != 0} ? ${#numbers.formatDecimal(i.tax, 1, 2)} : ''"></td>
+										<td
+											th:text="${i.amountDue != null && i.amountDue != 0} ? ${#numbers.formatDecimal(i.amountDue, 1, 2)} : ''"></td>
 										<td>
 											<div th:each="l: ${i.links}">
 												<div th:if="${i.links != null}">
@@ -74,7 +76,8 @@
 														<a th:if="${customerOrderLink.id != null}" href="#"
 															data-bs-toggle="modal"
 															th:attr="data-bs-target='#modalCustomerOrder-' + ${i.id}">
-															customer order</a> <span th:unless="${customerOrderLink.id != null}"
+															customer order</a> <span
+															th:unless="${customerOrderLink.id != null}"
 															class="text-muted">No Customer Order Info</span>
 													</div>
 												</div>

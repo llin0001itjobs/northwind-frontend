@@ -53,7 +53,7 @@
 							<h3>
 								<span th:text="${TITLE}"></span>
 							</h3>
-							<table class="table" id="dataTable">
+							<table class="table" id="dataTable" th:data-page-length="${_PAGE_LENGTH ?: 8}">
 								<thead>
 									<tr>
 										<th scope="col">Date Received</th>
@@ -71,16 +71,16 @@
 										<td><span th:text="${p.quantity}"></span></td>
 										<td><span th:text="${p.postedToInventory}"></span></td>
 										<td>
-											<div th:each="l: ${p.links}">
+											<div class="modal-anchor" th:each="l: ${p.links}">
 												<div th:if="${p.links != null}">
-													<div
+													<div 
 														th:with="inventoryTransactionLink=${p.links.getLink('inventoryTransaction')}">
 														<a th:if="${inventoryTransactionLink.id != null}" href="#"
 															data-bs-toggle="modal"
 															th:attr="data-bs-target='#modalInventoryTransaction-' + ${p.id}">
 															Inventory Transaction</a> <span
 															th:unless="${inventoryTransactionLink.id != null}"
-															class="text-muted">No Inventory Transaction Info</span>
+															class="text-muted ">No Inventory Transaction Info</span>
 													</div>													
 													<div th:with="productLink=${p.links.getLink('product')}">
 														<a th:if="${productLink.id != null}" href="#"
@@ -122,7 +122,7 @@
 		</div>
 	</main>
 
-	<div th:replace="~{fragments/links-js-page-length-7 :: linksJs}"></div>
+	<div th:replace="~{fragments/links-js :: linksJs}"></div>
 
 </body>
 </html>

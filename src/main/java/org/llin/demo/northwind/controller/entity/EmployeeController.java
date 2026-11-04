@@ -101,8 +101,9 @@ public class EmployeeController<T extends _EntityObject> extends _EntityControll
 		// Create a NEW instance every time to ensure thread safety
 		ModelAndView mv = new ModelAndView(getModelAndView().getView());
 		mv.addObject(EMPLOYEES, enrichAll(employeeService.findAll()));
-		mv.addObject("activeMenuSection", "thirdOrder");
+		mv.addObject("activeMenuSection", "firstOrder");
 		mv.addObject("currentEntityPath", "employee");
+		mv.addObject(TITLE, TITLE_EMPLOYEE);
 		mv.setViewName("entity/employee");
 
 		return mv;

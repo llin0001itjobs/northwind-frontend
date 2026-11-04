@@ -4,7 +4,8 @@ font-data {
 
 #dataTable {
 	font-size:0.8em;
-	height: 540px; 
+	height: 540px;
+ 
 }
 
 .bd-placeholder-img {
@@ -27,4 +28,11 @@ font-data {
 }
 .accordion-button:focus {
   box-shadow: none;
+}
+.modal-anchor {
+	font-size: 0.7rem;
+}
+
+.row.mt-2.justify-content-between {
+	 padding-bottom: 12px;	
 }

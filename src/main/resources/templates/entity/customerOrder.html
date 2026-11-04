@@ -49,12 +49,12 @@
 						</div>
 						<div class="col-8 border border-primary mt-5 pt-4">
 							<h3 th:text="${TITLE} ?: 'Customer Orders'"></h3>
-						<table class="table" id="dataTable" th:if="${CustomerOrders != null and !CustomerOrders.empty}">
+						<table class="table" id="dataTable" th:if="${CustomerOrders != null and !CustomerOrders.empty}" th:data-page-length="${_PAGE_LENGTH ?: 8}">
 								<thead>
 									<tr>
 										<th scope="col">Order Date</th>
 										<th scope="col">Paid Date</th>
-										<th scope="col">Phone</th>
+										<th scope="col">Shipped Date</th>
 										<th scope="col">Contact</th>
 										<th scope="col">City</th>
 										<th scope="col">State</th>
@@ -72,7 +72,7 @@
 										<td><span th:text="${co.shipStateProvince}"></span></td>
 										<td><span th:text="${co.orderStatus.statusName}"></span></td>									
 										<td>
-											<div th:each="l: ${co.links}">
+											<div  class="modal-anchor" 	th:each="l: ${co.links}">
 												<div th:if="${co.links != null}">
 													<div th:with="customerLink=${co.links.getLink('customer')}">
 														<a th:if="${customerLink.id != null}" href="#"
@@ -125,6 +125,9 @@
 		</div>
 	</main>
 
+	<script>
+		var _PAGE_LENGTH = 9;
+	</script>
 	<div th:replace="~{fragments/links-js :: linksJs}"></div>
 </body>
 </html>

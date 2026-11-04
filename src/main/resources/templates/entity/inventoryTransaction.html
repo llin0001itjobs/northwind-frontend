@@ -54,7 +54,7 @@
 							<h3>
 								<span th:text="${TITLE}"></span>
 							</h3>
-							<table class="table" id="dataTable">
+							<table class="table" id="dataTable" th:data-page-length="${_PAGE_LENGTH ?: 8}">
 								<thead>
 									<tr>
 										<th scope="col">Created Date</th>
@@ -73,12 +73,12 @@
 											th:text="${i.transactionModifiedDate != null} ? ${#temporals.format(i.transactionModifiedDate, 'MM-dd-yyyy')} : ''"></td>
 										<td><span
 											th:text="${i.inventoryTransactionType.typeName}"></span></td>
-										<td><span th:text="${i.quantity}"></span></td>
-										<td><span th:text="${i.comments}"></span></td>
+										<td	th:text="${i.quantity != null && i.quantity != 0} ? ${#numbers.formatDecimal(i.quantity, 1, 2)} : ''"></td>										
+										<td th:text="${i.comments} ?: ''"></td>										
 										<td>
-											<div th:each="l: ${i.links}">
+											<div class="modal-anchor"  th:each="l: ${i.links}">
 												<div th:if="${i.links != null}">
-													<div
+													<div class="modal-anchor" 
 														th:with="customerOrderLink=${i.links.getLink('customerOrder')}">
 														<a th:if="${customerOrderLink.id != null}" href="#"
 															data-bs-toggle="modal"
