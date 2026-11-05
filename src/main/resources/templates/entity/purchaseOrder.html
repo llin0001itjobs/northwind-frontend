@@ -58,11 +58,11 @@
 								<tbody>
 									<tr th:each="p : ${PurchaseOrders}">
 										<td
-											th:text="${p.approvedDate != null} ? ${#temporals.format(p.approvedDate, 'MM-dd-yyyy')} : ''"></td>
+											th:text="${p.approvedDate != null} ? ${#temporals.format(p.approvedDate, 'yyyy-MM-dd')} : ''"></td>
 										<td
-											th:text="${p.submittedDate != null} ? ${#temporals.format(p.submittedDate, 'MM-dd-yyyy')} : ''"></td>
+											th:text="${p.submittedDate != null} ? ${#temporals.format(p.submittedDate, 'yyyy-MM-dd')} : ''"></td>
 										<td
-											th:text="${p.creationDate != null} ? ${#temporals.format(p.creationDate, 'MM-dd-yyyy')} : ''"></td>
+											th:text="${p.creationDate != null} ? ${#temporals.format(p.creationDate, 'yyyy-MM-dd')} : ''"></td>
 										<td>
 											<div class="modal-anchor" th:each="l: ${p.links}">
 												<div th:if="${p.links != null}">

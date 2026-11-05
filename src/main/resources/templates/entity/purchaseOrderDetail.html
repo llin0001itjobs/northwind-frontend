@@ -66,7 +66,7 @@
 								<tbody>
 									<tr th:each="p : ${PurchaseOrderDetails}">
 										<td
-											th:text="${p.dateReceived != null} ? ${#temporals.format(p.dateReceived, 'MM-dd-yyyy')} : ''"></td>
+											th:text="${p.dateReceived != null} ? ${#temporals.format(p.dateReceived, 'yyyy-MM-dd')} : ''"></td>
 										<td><span th:text="${p.unitCost}"></span></td>
 										<td><span th:text="${p.quantity}"></span></td>
 										<td><span th:text="${p.postedToInventory}"></span></td>

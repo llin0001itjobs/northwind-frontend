@@ -70,7 +70,7 @@
 										<td th:text="${o.discount != null && o.discount != 0} ? ${#numbers.formatDecimal(o.discount, 1, 2)} : ''"></td>
 										<td><span th:text="${o.orderStatus?.statusName}"></span></td>
 										<td
-											th:text="${o.dateAllocated != null} ? ${#temporals.format(o.dateAllocated, 'MM-dd-yyyy')} : ''"></td>										
+											th:text="${o.dateAllocated != null} ? ${#temporals.format(o.dateAllocated, 'yyyy-MM-dd')} : ''"></td>										
 										<td>
 											<div class="modal-anchor" th:each="l: ${o.links}">
 												<div th:if="${o.links != null}">

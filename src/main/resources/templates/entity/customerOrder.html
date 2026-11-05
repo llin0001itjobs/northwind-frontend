@@ -64,9 +64,10 @@
 								</thead>
 								<tbody>
 									<tr th:each="co : ${CustomerOrders}">
-										<td><span th:text="${co.orderDate}"></span></td>
-										<td><span th:text="${co.paidDate}"></span></td>
-										<td><span th:text="${co.shippedDate}"></span></td>
+									
+										<td><span th:text="${co.orderDate != null} ? ${#temporals.format(co.orderDate, 'yyyy-MM-dd')} : ''"></span></td>										
+										<td><span th:text="${co.paidDate != null} ? ${#temporals.format(co.paidDate, 'yyyy-MM-dd')} : ''"></span></td>
+										<td><span th:text="${co.shippedDate != null} ? ${#temporals.format(co.shippedDate, 'yyyy-MM-dd')} : ''"></span>
 										<td><span th:text="${co.shipName}"></span></td>
 										<td><span th:text="${co.shipCity}"></span></td>
 										<td><span th:text="${co.shipStateProvince}"></span></td>

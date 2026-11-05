@@ -27,7 +27,6 @@ public record ProductDto(
 	boolean discontinued,
 	int minimumReorderQuantity,
 	String category,
-	int resourceId,
 	
     @JsonProperty("_links")
     @JsonDeserialize(using = LinksDeserializer.class) 

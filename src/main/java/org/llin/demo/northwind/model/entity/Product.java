@@ -29,8 +29,6 @@ public class Product extends _EntityObject implements _Classes_EntityObject {
 	private Integer minimumReorderQuantity;
 
 	private String category;
-
-	private int resourceId;
 		
 	private Suppliers suppliers = new Suppliers();
 		
@@ -121,14 +119,6 @@ public class Product extends _EntityObject implements _Classes_EntityObject {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-
-	public int getResourceId() {
-		return resourceId;
-	}
-
-	public void setResourceId(int resourceId) {
-		this.resourceId = resourceId;
-	}
 	
 	public Suppliers getSuppliers() {
 	    if (suppliers.getSuppliers() == null || suppliers.getSuppliers().length == 0) {
@@ -161,7 +151,7 @@ public class Product extends _EntityObject implements _Classes_EntityObject {
 				+ ", standardCost=" + standardCost + ", listPrice=" + listPrice + ", reorderLevel=" + reorderLevel
 				+ ", targetLevel=" + targetLevel + ", quantityPerUnit=" + quantityPerUnit + ", discontinued="
 				+ discontinued + ", minimumReorderQuantity=" + minimumReorderQuantity + ", category=" + category
-				+ ", resourceId=" + resourceId + ", suppliers=" + suppliers + super.toString() + "]";
+				+ ", suppliers=" + suppliers + super.toString() + "]";
 	}
 	
 	

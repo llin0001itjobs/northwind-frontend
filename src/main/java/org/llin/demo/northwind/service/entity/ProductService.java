@@ -250,7 +250,7 @@ public class ProductService extends _BaseService {
 	public ProductDto withSuppliers(ProductDto dto, List<SupplierDto> suppliers) {
 		return new ProductDto(dto.id(), suppliers, dto.productCode(), dto.productName(), dto.description(),
 				dto.standardCost(), dto.listPrice(), dto.reorderLevel(), dto.targetLevel(), dto.quantityPerUnit(),
-				dto.discontinued(), dto.minimumReorderQuantity(), dto.category(), dto.resourceId(), dto.links());
+				dto.discontinued(), dto.minimumReorderQuantity(), dto.category(), dto.links());
 	}
 		
 	public ProductDto enrich(ProductDto p) {
@@ -260,7 +260,7 @@ public class ProductService extends _BaseService {
 	    return new ProductDto(id, p.suppliers(), p.productCode(), p.productName(),
 	            p.description(), p.standardCost(), p.listPrice(), p.reorderLevel(),
 	            p.targetLevel(), p.quantityPerUnit(), p.discontinued(),
-	            p.minimumReorderQuantity(), p.category(), p.resourceId(), p.links());
+	            p.minimumReorderQuantity(), p.category(),p.links());
 	}
 	
 	private Integer extractIdFromSelfLink(ProductDto p) {

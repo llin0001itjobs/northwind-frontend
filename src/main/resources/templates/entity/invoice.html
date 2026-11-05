@@ -61,9 +61,9 @@
 								<tbody>
 									<tr th:each="i : ${Invoices}">
 										<td
-											th:text="${i.invoiceDate != null} ? ${#temporals.format(i.invoiceDate, 'MM-dd-yyyy')} : ''"></td>
+											th:text="${i.invoiceDate != null} ? ${#temporals.format(i.invoiceDate, 'yyyy-MM-dd')} : ''"></td>
 										<td
-											th:text="${i.dueDate != null} ? ${#temporals.format(i.dueDate, 'MM-dd-yyyy')} : ''"></td>
+											th:text="${i.dueDate != null} ? ${#temporals.format(i.dueDate, 'yyyy-MM-dd')} : ''"></td>
 										<td
 											th:text="${i.tax != null && i.tax != 0} ? ${#numbers.formatDecimal(i.tax, 1, 2)} : ''"></td>
 										<td
