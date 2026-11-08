@@ -49,7 +49,11 @@
 						</div>
 						<div class="col-8 border border-primary mt-5 pt-4">
 							<h3 th:text="${TITLE} ?: 'Customer Orders'"></h3>
-						<table class="table" id="dataTable" th:if="${CustomerOrders != null and !CustomerOrders.empty}" th:data-page-length="${_PAGE_LENGTH ?: 8}">
+							<table
+								class="table table-striped table-borderless fw-normal pb-1 small mb-0 w-100"
+								id="dataTable"
+								th:if="${CustomerOrders != null and !CustomerOrders.empty}"
+								th:data-page-length="${_PAGE_LENGTH ?: 8}">
 								<thead>
 									<tr>
 										<th scope="col">Order Date</th>
@@ -64,54 +68,57 @@
 								</thead>
 								<tbody>
 									<tr th:each="co : ${CustomerOrders}">
-									
-										<td><span th:text="${co.orderDate != null} ? ${#temporals.format(co.orderDate, 'yyyy-MM-dd')} : ''"></span></td>										
-										<td><span th:text="${co.paidDate != null} ? ${#temporals.format(co.paidDate, 'yyyy-MM-dd')} : ''"></span></td>
-										<td><span th:text="${co.shippedDate != null} ? ${#temporals.format(co.shippedDate, 'yyyy-MM-dd')} : ''"></span>
+
+										<td><span
+											th:text="${co.orderDate != null} ? ${#temporals.format(co.orderDate, 'yyyy-MM-dd')} : ''"></span></td>
+										<td><span
+											th:text="${co.paidDate != null} ? ${#temporals.format(co.paidDate, 'yyyy-MM-dd')} : ''"></span></td>
+										<td><span
+											th:text="${co.shippedDate != null} ? ${#temporals.format(co.shippedDate, 'yyyy-MM-dd')} : ''"></span>
 										<td><span th:text="${co.shipName}"></span></td>
 										<td><span th:text="${co.shipCity}"></span></td>
 										<td><span th:text="${co.shipStateProvince}"></span></td>
-										<td><span th:text="${co.orderStatus.statusName}"></span></td>									
+										<td><span th:text="${co.orderStatus.statusName}"></span></td>
 										<td>
-											<div  class="modal-anchor" 	th:each="l: ${co.links}">
+											<div class="modal-anchor" th:each="l: ${co.links}">
 												<div th:if="${co.links != null}">
 													<div th:with="customerLink=${co.links.getLink('customer')}">
 														<a th:if="${customerLink.id != null}" href="#"
 															data-bs-toggle="modal"
 															th:attr="data-bs-target='#modalCustomer-' + ${co.id}">
-															customer</a>
-														<span th:unless="${customerLink.id != null}"
+															customer</a> <span th:unless="${customerLink.id != null}"
 															class="text-muted">No Customer Info</span>
 													</div>
 													<div th:with="employeeLink=${co.links.getLink('employee')}">
 														<a th:if="${employeeLink.id != null}" href="#"
 															data-bs-toggle="modal"
 															th:attr="data-bs-target='#modalEmployee-' + ${co.id}">
-															employee</a>
-														<span th:unless="${employeeLink.id != null}"
+															employee</a> <span th:unless="${employeeLink.id != null}"
 															class="text-muted">No Employee Info</span>
 													</div>
 													<div th:with="shipperLink=${co.links.getLink('shipper')}">
 														<a th:if="${shipperLink.id != null}" href="#"
 															data-bs-toggle="modal"
 															th:attr="data-bs-target='#modalShipper-' + ${co.id}">
-															shipper</a>
-															
-													
-														<span th:unless="${shipperLink.id != null}"
+															shipper</a> <span th:unless="${shipperLink.id != null}"
 															class="text-muted">No Shipper Info</span>
-													</div>												
+													</div>
 												</div>
 											</div>
 										</td>
 									</tr>
 								</tbody>
 							</table>
-							<p th:if="${CustomerOrders == null or CustomerOrders.empty}">No orders found.</p>
+							<p th:if="${CustomerOrders == null or CustomerOrders.empty}">No
+								orders found.</p>
+							<!-- Keep the Thymeleaf fragment markup hidden inside a template tag so DataTables can grab it via JS -->
+							<template id="crudButtonsTemplate">
+								<div th:replace="~{fragments/topMenuCRUD :: topMenuCRUD}"></div>
+							</template>
 						</div>
-						<div class="col-2 bg-light border border-primary pb-3"
+						<div class="col-2 bg-light border border-primary"
 							id="rightSideBar">
-							<div th:replace="~{fragments/sideMenuRight :: div}"></div>
+							<div th:replace="~{fragments/sideMenuRight :: sideMenuRight}"></div>
 						</div>
 					</div>
 

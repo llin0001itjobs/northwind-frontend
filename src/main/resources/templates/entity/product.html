@@ -32,7 +32,9 @@
 						<h3>
 							<span th:text="${TITLE}"></span>
 						</h3>
-						<table class="table" id="dataTable">
+						<table
+							class="table table-striped table-borderless fw-normal pb-1 small mb-0 w-100"
+							id="dataTable">
 							<thead>
 								<tr>
 									<th scope="col">Product Code</th>
@@ -67,6 +69,10 @@
 								</tr>
 							</tbody>
 						</table>
+						<!-- Keep the Thymeleaf fragment markup hidden inside a template tag so DataTables can grab it via JS -->
+						<template id="crudButtonsTemplate">
+							<div th:replace="~{fragments/topMenuCRUD :: topMenuCRUD}"></div>
+						</template>
 					</div>
 					<div class="col-2 bg-light border border-primary pb-3"
 						id="rightSideBar">
