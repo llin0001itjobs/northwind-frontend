@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-<!-- /templates/entity/company.html -->
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <title>Northwind Traders</title>
-
 <th:block th:replace="~{fragments/links-css :: linksCss}"></th:block>
-
 </head>
 <body>
 	<div class="container-fluid h-100">
@@ -18,43 +14,49 @@
 				<div th:replace="~{fragments/navbar :: nav}"></div>
 			</div>
 		</div>
-
 		<div class="row">
 			<div class="col-2 bg-light border border-primary" id="leftSideBar">
-				<div th:replace="~{fragments/sideMenuLeftEntities :: sideMenuLeftEntities}"></div>
+				<div
+					th:replace="~{fragments/sideMenuLeftEntities :: sideMenuLeftEntities}"></div>
 			</div>
-
 			<div class="col-8 border border-primary mt-5 pt-4">
 				<h3>
 					<span th:text="${TITLE}"></span>
 				</h3>
-				<table class="table fw-normal pb-1 small" id="dataTable">
-					<thead>
+
+				<!-- Keep this container completely clean. Let DataTables 2.x inject everything naturally -->
+				<table
+					class="table table-striped table-borderless fw-normal pb-1 small mb-0 w-100"
+					id="dataTable">
+					<thead class="border-top border-bottom border-secondary">
 						<tr>
-							<th scope="col">Name</th>
+							<th scope="col" class="py-2">Name</th>
 						</tr>
 					</thead>
 					<tbody class="font-data">
 						<tr th:each="c : ${Companies}">
-							<td><span th:text="${c.name}"></span></td>
+							<td class="py-2"><span th:text="${c.name}"></span></td>
 						</tr>
 					</tbody>
 				</table>
+
+				<!-- Keep the Thymeleaf fragment markup hidden inside a template tag so DataTables can grab it via JS -->
+				<template id="crudButtonsTemplate">
+					<div th:replace="~{fragments/topMenuCRUD :: topMenuCRUD}"></div>
+				</template>
 			</div>
 			<div class="col-2 bg-light border border-primary" id="rightSideBar">
 				<div th:replace="~{fragments/sideMenuRight :: sideMenuRight}"></div>
 			</div>
 		</div>
 
-		<div class="row" id="footerRow">
-			<div class="col-12" id="footerCol">
-				<div th:replace="~{fragments/footer :: footer}"></div>
-			</div>
+	</div>
+	<div class="row" id="footerRow">
+		<div class="col-12" id="footerCol">
+			<div th:replace="~{fragments/footer :: footer}"></div>
 		</div>
 	</div>
-
+	</div>
 	<div th:replace="~{fragments/links-js :: linksJs}"></div>
-
 </body>
 </html>
-

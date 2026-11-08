@@ -41,17 +41,34 @@
 	<script th:inline="none">
 		console.log('init running');
 		if ($('#dataTable').length) {
-		    var table = $('#dataTable');
-		    table.DataTable({
-		        pageLength : table.data('page-length') || 10,
-		        lengthChange : false,
-		        searching : true,
-		        order : [ [ 0, 'desc' ] ],
-		        columnDefs : [ {
-		            targets : -1,
-		            orderable : false
-		        } ]
-		    });
+			var table = $('#dataTable');
+			var crudButtonsHtml = $('#crudButtonsTemplate').html() || '';
+
+			table
+					.DataTable({
+						pageLength : table.data('page-length') || 10,
+						lengthChange : false,
+						searching : true,
+						order : [ [ 0, 'desc' ] ],
+						columnDefs : [ {
+							targets : -1,
+							orderable : false
+						} ],
+						layout : {
+							topStart : null,
+							topEnd : [
+									'search',
+									function(settings) {
+										// Custom node for the CRUD buttons
+										var container = document
+												.createElement('div');
+										container.id = 'topMenuCRUDBar';
+										container.className = 'd-inline-flex align-items-center ms-2';
+										container.innerHTML = crudButtonsHtml;
+										return container;
+									} ]
+						}
+					});
 		}
 	</script>
 </div>

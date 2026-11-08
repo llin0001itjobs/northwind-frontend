@@ -1,0 +1,85 @@
+/* Container block frame mapping out borders without clipping content */
+/* Container framing */
+/* Make the top layout row full-width and push its content hard right */
+.dt-container {
+	border: 1px solid #dee2e6;
+	padding: 0.75rem 0.75rem 0.5rem 0.75rem;
+	/* reduce right padding if needed */
+	background-color: #fff;
+	border-radius: 0.25rem;
+}
+
+.dt-container .dt-layout-row {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+	margin: 0 0 0.5rem 0;
+	padding: 0;
+}
+
+.dt-layout-end, .dt-layout-cell.dt-layout-end {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin-left: auto;
+	margin-right: 0 !important;
+	padding-right: 0 !important;
+	gap: 0.35rem;
+	width: auto;
+	flex: 0 0 auto;
+}
+
+.dt-search {
+	display: flex;
+	align-items: center;
+	margin: 0;
+	flex: 0 0 auto;
+}
+
+.dt-search label {
+	margin: 0 0.35rem 0 0;
+	white-space: nowrap;
+}
+
+.dt-search input {
+	width: 150px !important;
+	margin: 0;
+}
+
+#topMenuCRUDBar {
+	display: inline-flex;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+#topMenuCRUDBar .btn-group, #topMenuCRUDBar .btn {
+	margin: 0;
+}
+
+/* Bottom layout row – remove extra space under the table */
+.dt-container .dt-layout-row:last-child,
+.dt-container .dt-layout-row.dt-layout-table + .dt-layout-row {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+/* The cell that contains the pagination */
+.dt-layout-end .dt-paging,
+.dt-paging {
+  margin: 0;
+  padding: 0;
+}
+
+.dt-paging .page-link {
+  padding: 0.25rem 0.5rem;   /* smaller buttons if desired */
+  font-size: 0.875rem;
+}
+
+.dt-layout-end.col-md-auto.ms-auto .dt-paging {
+  margin-right: 1rem !important;
+}
+
+
