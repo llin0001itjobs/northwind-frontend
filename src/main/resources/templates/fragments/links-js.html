@@ -43,15 +43,14 @@
 		if ($('#dataTable').length) {
 			var table = $('#dataTable');
 			var crudButtonsHtml = $('#crudButtonsTemplate').html() || '';
-
-			table
-					.DataTable({
+				table
+				.DataTable({
 						pageLength : table.data('page-length') || 10,
 						lengthChange : false,
 						searching : true,
-						order : [ [ 0, 'desc' ] ],
+						order : [ [ 1, 'asc' ] ], // Updated to sort by 2nd column 'Name' (index 1) in ascending order
 						columnDefs : [ {
-							targets : -1,
+							targets : 0, // Updated to disable sorting on the radio button column (index 0)
 							orderable : false
 						} ],
 						layout : {
@@ -71,4 +70,5 @@
 					});
 		}
 	</script>
+
 </div>

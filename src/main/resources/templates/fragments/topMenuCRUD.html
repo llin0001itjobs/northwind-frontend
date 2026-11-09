@@ -1,12 +1,17 @@
 <!doctype html>
 <!-- /templates/fragments/topMenuCRUD.html -->
-<div id="topMenuCRUD" th:fragment="topMenuCRUD" class="d-inline-flex align-items-center">
+<div id="topMenuCRUD" th:fragment="topMenuCRUD"
+	class="d-inline-flex align-items-center">
 	<div class="btn-toolbar mb-2 mb-md-0">
 		<div class="btn-group me-2">
-			<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-			<button type="button" class="btn btn-sm btn-outline-secondary">Add</button>
-			<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-			<button type="button" class="btn btn-sm btn-outline-secondary">Del</button>			
+			<button type="button" data-action="view"
+				class="btn btn-sm btn-primary">View</button>
+			<button type="button" data-action="add"
+				class="btn btn-sm btn-success">Add</button>
+			<button type="button" data-action="edit"
+				class="btn btn-sm btn-warning">Edit</button>
+			<button type="button" data-action="del" 
+				class="btn btn-sm btn-danger">Del</button>
 		</div>
 	</div>
 </div>
