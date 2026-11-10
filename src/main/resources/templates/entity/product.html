@@ -37,6 +37,7 @@
 							id="dataTable">
 							<thead>
 								<tr>
+									<th scope="col" class="col-1">&nbsp;</th>
 									<th scope="col">Product Code</th>
 									<th scope="col">Product Name</th>
 									<th scope="col">Category</th>
@@ -44,11 +45,14 @@
 									<th scope="col">List Price</th>
 									<th scope="col">Quantity Per Unit</th>
 									<th scope="col">Minimum Reorder Quantity</th>
-									<th scope="col">Links</th>
+									<th scope="col" class="col-2">Links</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr th:each="p : ${Products}">
+								<tr th:each="p, status : ${Products}">
+									<td class="py-2"><input type="radio" th:name="radioId"
+										th:id="|radioId_${p.id}|" th:value="${p.id}"
+										th:checked="${status.index == 0}"></input></td>
 									<td><span th:text="${p.productCode}"></span></td>
 									<td><span th:text="${p.productName}"></span></td>
 									<td><span th:text="${p.category}"></span></td>

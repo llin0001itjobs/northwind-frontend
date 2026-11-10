@@ -43,8 +43,8 @@
 		if ($('#dataTable').length) {
 			var table = $('#dataTable');
 			var crudButtonsHtml = $('#crudButtonsTemplate').html() || '';
-				table
-				.DataTable({
+			table
+					.DataTable({
 						pageLength : table.data('page-length') || 10,
 						lengthChange : false,
 						searching : true,
@@ -69,6 +69,42 @@
 						}
 					});
 		}
+	</script>
+
+	<script>
+		function onClickCRUD(e) {
+			// e can be the button element (if you pass `this`) or the event object
+			const button = e.target ? e.target : e;
+			const buttonName = button.dataset.action || button.id
+					|| button.textContent.trim();
+
+			// Get the currently selected radio
+			const selectedRadio = document
+					.querySelector('input[name="radioId"]:checked');
+			const selectedId = selectedRadio ? selectedRadio.value : null;
+			const radioId = selectedRadio ? selectedRadio.id : null;
+
+			console.log({
+				button : buttonName,
+				selectedId : selectedId,
+				radioId : radioId
+			});
+
+			// Optional: show an alert while you debug
+			alert(`Button: ${buttonName}\nSelected ID: ${selectedId || 'none'}\nRadio ID: ${radioId || 'none'}`);
+		}
+
+		document.addEventListener('click', function(e) {
+			const btn = e.target.closest('[data-action]'); // or closest('button')
+			if (!btn)
+				return;
+
+			// Only react to the four CRUD buttons
+			const action = btn.dataset.action;
+			if ([ 'view', 'add', 'edit', 'del' ].includes(action)) {
+				onClickCRUD(btn); // or onClickCRUD(e) if you prefer the event object
+			}
+		});
 	</script>
 
 </div>

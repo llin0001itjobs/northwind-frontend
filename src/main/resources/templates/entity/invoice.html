@@ -53,6 +53,7 @@
 								id="dataTable">
 								<thead>
 									<tr>
+										<th scope="col" class="col-1">&nbsp;</th>
 										<th scope="col">Invoice Date</th>
 										<th scope="col">Due Date</th>
 										<th scope="col">Tax</th>
@@ -61,7 +62,10 @@
 									</tr>
 								</thead>
 								<tbody>
-									<tr th:each="i : ${Invoices}">
+									<tr th:each="i, status : ${Invoices}">
+										<td class="py-2"><input type="radio" th:name="radioId"
+											th:id="|radioId_${i.id}|" th:value="${i.id}"
+											th:checked="${status.index == 0}"></input></td>
 										<td
 											th:text="${i.invoiceDate != null} ? ${#temporals.format(i.invoiceDate, 'yyyy-MM-dd')} : ''"></td>
 										<td

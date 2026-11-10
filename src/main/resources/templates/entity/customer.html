@@ -37,15 +37,19 @@
 							id="dataTable">
 							<thead>
 								<tr>
-									<th scope="col-2">Contact</th>
-									<th scope="col-2">Company</th>
-									<th scope="col-2">Job Title</th>
-									<th scope="col-2">Business Phone</th>
-									<th scope="col-2">Mobile Phone</th>
+									<th scope="col" class="col-1">&nbsp;</th>
+									<th scope="col" class="col-2">Contact</th>
+									<th scope="col" class="col-2">Company</th>
+									<th scope="col" class="col-3">Job Title</th>
+									<th scope="col" class="col-2">Business Phone</th>
+									<th scope="col" class="col-2">Mobile Phone</th>
 								</tr>
 							</thead>
 							<tbody class="font-data">
-								<tr th:each="c : ${Customers}">
+								<tr th:each="c, status : ${Customers}">
+									<td class="py-2"><input type="radio" th:name="radioId"
+										th:id="|radioId_${c.id}|" th:value="${c.id}"
+										th:checked="${status.index == 0}"></input></td>
 									<td><span th:text="${c.lastName}"></span>, <span
 										th:text="${c.firstName}"></span></td>
 									<td><span th:text="${c.company.name}"></span></td>

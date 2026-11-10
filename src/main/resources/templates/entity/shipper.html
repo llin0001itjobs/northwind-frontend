@@ -53,6 +53,7 @@
 								id="dataTable">
 								<thead>
 									<tr>
+										<th scope="col" class="col-1">&nbsp;</th>
 										<th scope="col">Contact</th>
 										<th scope="col">Job Title</th>
 										<th scope="col">Business Phone</th>
@@ -61,12 +62,15 @@
 									</tr>
 								</thead>
 								<tbody>
-									<tr th:each="s : ${Shippers}">
-										<td><span
-											th:text="${s.lastName}"></span>, <span th:text="${s.firstName}"></span></td>
+									<tr th:each="s, status : ${Shippers}">
+										<td class="py-2"><input type="radio" th:name="radioId"
+											th:id="|radioId_${s.id}|" th:value="${s.id}"
+											th:checked="${status.index == 0}"></input></td>
+										<td><span th:text="${s.lastName}"></span>, <span
+											th:text="${s.firstName}"></span></td>
 										<td th:text="${s.jobTitle}"></td>
 										<td th:text="${s.businessPhone}"></td>
-										<td th:text="${s.company?.name}"></td>																				
+										<td th:text="${s.company?.name}"></td>
 										<td><textarea rows="6" cols="60" style="resize: none;"
 												th:text="${s.notes}"></textarea></td>
 									</tr>

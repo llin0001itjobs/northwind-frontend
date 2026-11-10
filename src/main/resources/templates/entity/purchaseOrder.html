@@ -51,14 +51,18 @@
 								id="dataTable" th:data-page-length="${_PAGE_LENGTH ?: 6}">
 								<thead>
 									<tr>
+										<th scope="col" class="col-1">&nbsp;</th>
 										<th scope="col">Approved Date</th>
 										<th scope="col">Submitted Date</th>
 										<th scope="col">Creation Date</th>
-										<th scope="col">Links</th>
+										<th scope="col" class="col-2">Links</th>
 									</tr>
 								</thead>
 								<tbody>
-									<tr th:each="p : ${PurchaseOrders}">
+									<tr th:each="p, status : ${PurchaseOrders}">
+										<td class="py-2"><input type="radio" th:name="radioId"
+											th:id="|radioId_${p.id}|" th:value="${p.id}"
+											th:checked="${status.index == 0}"></input></td>
 										<td
 											th:text="${p.approvedDate != null} ? ${#temporals.format(p.approvedDate, 'yyyy-MM-dd')} : ''"></td>
 										<td

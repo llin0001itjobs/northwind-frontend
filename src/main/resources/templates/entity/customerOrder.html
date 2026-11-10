@@ -56,6 +56,7 @@
 								th:data-page-length="${_PAGE_LENGTH ?: 8}">
 								<thead>
 									<tr>
+										<th scope="col" class="col-1">&nbsp;</th>
 										<th scope="col">Order Date</th>
 										<th scope="col">Paid Date</th>
 										<th scope="col">Shipped Date</th>
@@ -67,8 +68,10 @@
 									</tr>
 								</thead>
 								<tbody>
-									<tr th:each="co : ${CustomerOrders}">
-
+									<tr th:each="co, status : ${CustomerOrders}">
+									<td class="py-2"><input type="radio" th:name="radioId"
+										th:id="|radioId_${co.id}|" th:value="${co.id}"
+										th:checked="${status.index == 0}"></input></td>
 										<td><span
 											th:text="${co.orderDate != null} ? ${#temporals.format(co.orderDate, 'yyyy-MM-dd')} : ''"></span></td>
 										<td><span

@@ -33,7 +33,8 @@
 	<main>
 		<div class="container-fluid">
 			<div th:replace="~{modal/child/orderDetail/customerOrder :: div}"></div>
-			<div th:replace="~{modal/child/orderDetail/inventoryTransaction :: div}"></div>			
+			<div
+				th:replace="~{modal/child/orderDetail/inventoryTransaction :: div}"></div>
 			<div th:replace="~{modal/child/orderDetail/product :: div}"></div>
 			<div th:replace="~{modal/child/orderDetail/purchaseOrder :: div}"></div>
 			<div class="row" id="navBarRow">
@@ -57,26 +58,32 @@
 								id="dataTable" th:data-page-length="${_PAGE_LENGTH ?: 6}">
 								<thead>
 									<tr>
-										<th scope="col">Quantity</th>
-										<th scope="col">Unit Price</th>
-										<th scope="col">Discount</th>
-										<th scope="col">Order Status</th>										
-										<th scope="col">Date Allocated</th>
-										<th scope="col">Links</th>
+										<th scope="col" class="col-1">&nbsp;</th>
+										<th scope="col" class="col-1">Quantity</th>
+										<th scope="col" class="col-2">Unit Price</th>
+										<th scope="col" class="col-2">Discount</th>
+										<th scope="col" class="col-2">Order Status</th>
+										<th scope="col" class="col-2">Date Allocated</th>
+										<th scope="col" class="col-2">Links</th>
 									</tr>
 								</thead>
 								<tbody>
-									<tr th:each="o : ${OrderDetails}">
+									<tr th:each="o, status : ${OrderDetails}">
+										<td class="py-2"><input type="radio" th:name="radioId"
+											th:id="|radioId_${o.id}|" th:value="${o.id}"
+											th:checked="${status.index == 0}"></input></td>
 										<td><span th:text="${o.quantity}"></span></td>
-										<td th:text="${o.unitPrice != null && o.unitPrice != 0} ? ${#numbers.formatDecimal(o.unitPrice, 1, 2)} : ''"></td>
-										<td th:text="${o.discount != null && o.discount != 0} ? ${#numbers.formatDecimal(o.discount, 1, 2)} : ''"></td>
+										<td
+											th:text="${o.unitPrice != null && o.unitPrice != 0} ? ${#numbers.formatDecimal(o.unitPrice, 1, 2)} : ''"></td>
+										<td
+											th:text="${o.discount != null && o.discount != 0} ? ${#numbers.formatDecimal(o.discount, 1, 2)} : ''"></td>
 										<td><span th:text="${o.orderStatus?.statusName}"></span></td>
 										<td
-											th:text="${o.dateAllocated != null} ? ${#temporals.format(o.dateAllocated, 'yyyy-MM-dd')} : ''"></td>										
+											th:text="${o.dateAllocated != null} ? ${#temporals.format(o.dateAllocated, 'yyyy-MM-dd')} : ''"></td>
 										<td>
 											<div class="modal-anchor" th:each="l: ${o.links}">
 												<div th:if="${o.links != null}">
-													<div 
+													<div
 														th:with="customerOrderLink=${o.links.getLink('customerOrder')}">
 														<a th:if="${customerOrderLink.id != null}" href="#"
 															data-bs-toggle="modal"
@@ -93,7 +100,7 @@
 															Inventory Transaction</a> <span
 															th:unless="${inventoryTransactionLink.id != null}"
 															class="text-muted">No Inventory Transaction Info</span>
-													</div>													
+													</div>
 													<div th:with="productLink=${o.links.getLink('product')}">
 														<a th:if="${productLink.id != null}" href="#"
 															data-bs-toggle="modal"
@@ -116,7 +123,7 @@
 									</tr>
 								</tbody>
 							</table>
-						<!-- Keep the Thymeleaf fragment markup hidden inside a template tag so DataTables can grab it via JS -->
+							<!-- Keep the Thymeleaf fragment markup hidden inside a template tag so DataTables can grab it via JS -->
 							<template id="crudButtonsTemplate">
 								<div th:replace="~{fragments/topMenuCRUD :: topMenuCRUD}"></div>
 							</template>

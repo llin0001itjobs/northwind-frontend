@@ -58,15 +58,19 @@
 								id="dataTable" th:data-page-length="${_PAGE_LENGTH ?: 8}">
 								<thead>
 									<tr>
+										<th scope="col" class="col-1">&nbsp;</th>
 										<th scope="col">Date Received</th>
 										<th scope="col">Unit Cost</th>
 										<th scope="col">Quantity</th>
 										<th scope="col">Posted To Inventory</th>
-										<th scope="col">Links</th>
+										<th scope="col" class="col-2">Links</th>
 									</tr>
 								</thead>
 								<tbody>
-									<tr th:each="p : ${PurchaseOrderDetails}">
+									<tr th:each="p, status : ${PurchaseOrderDetails}">
+										<td class="py-2"><input type="radio" th:name="radioId"
+											th:id="|radioId_${p.id}|" th:value="${p.id}"
+											th:checked="${status.index == 0}"></input></td>
 										<td
 											th:text="${p.dateReceived != null} ? ${#temporals.format(p.dateReceived, 'yyyy-MM-dd')} : ''"></td>
 										<td><span th:text="${p.unitCost}"></span></td>
@@ -75,7 +79,7 @@
 										<td>
 											<div class="modal-anchor" th:each="l: ${p.links}">
 												<div th:if="${p.links != null}">
-													<div 
+													<div
 														th:with="inventoryTransactionLink=${p.links.getLink('inventoryTransaction')}">
 														<a th:if="${inventoryTransactionLink.id != null}" href="#"
 															data-bs-toggle="modal"
@@ -83,7 +87,7 @@
 															Inventory Transaction</a> <span
 															th:unless="${inventoryTransactionLink.id != null}"
 															class="text-muted ">No Inventory Transaction Info</span>
-													</div>													
+													</div>
 													<div th:with="productLink=${p.links.getLink('product')}">
 														<a th:if="${productLink.id != null}" href="#"
 															data-bs-toggle="modal"
