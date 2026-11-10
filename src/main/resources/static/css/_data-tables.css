@@ -82,4 +82,12 @@
   margin-right: 1rem !important;
 }
 
+#dataTable th:not(:first-child),
+#dataTable td:not(:first-child) {
+  border-left: 1px solid #dee2e6; /* Bootstrap’s default light gray / $gray-300 */
+}
 
+
+#dataTable {
+  border: 1px solid #dee2e6; /* Bootstrap’s default light gray / $gray-300 */
+}

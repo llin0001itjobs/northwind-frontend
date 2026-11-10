@@ -69,7 +69,7 @@
 								</thead>
 								<tbody>
 									<tr th:each="o, status : ${OrderDetails}">
-										<td class="py-2"><input type="radio" th:name="radioId"
+										<td class="py-2 text-center"><input type="radio" th:name="radioId"
 											th:id="|radioId_${o.id}|" th:value="${o.id}"
 											th:checked="${status.index == 0}"></input></td>
 										<td><span th:text="${o.quantity}"></span></td>
