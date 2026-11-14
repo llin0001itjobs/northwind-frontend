@@ -170,6 +170,62 @@
 				onClickCRUD(btn); // or onClickCRUD(e) if you prefer the event object
 			}
 		});
+		
+		// Shared submit handler for all entity modals
+		document.addEventListener('click', async function (e) {
+		  var btn = e.target.closest('.post-entity');
+		  if (!btn) return;
+		
+		  var form = btn.closest('form');
+		  if (!form) return;
+		
+		  var method = (form.getAttribute('method') || 'POST').toUpperCase();
+		  var modalEl = form.closest('.modal');
+		  var entityIdEl = form.querySelector('.entity-id');
+		  var entityId = entityIdEl ? entityIdEl.value : null;
+		
+		  // View: just close
+		  if (method === 'GET') {
+		    var modalInstance = bootstrap.Modal.getInstance(modalEl);
+		    if (modalInstance) modalInstance.hide();
+		    return;
+		  }
+		
+		  // Entity-specific DTO builder
+		  var builders = window.entityDtoBuilders || {};
+		  var builder = builders[form.dataset.entityType];
+		  if (!builder) {
+		    console.error('No DTO builder registered for', form.dataset.entityType);
+		    return;
+		  }
+		
+		  var dto = builder(form);
+		  if (!dto) return;
+		
+		  var baseUrl = form.dataset.baseUrl || '/entity/customer';
+		  var url = method === 'DELETE' ? baseUrl + '/' + entityId : baseUrl;
+		
+		  var fetchOptions = {
+		    method: method,
+		    headers: { 'Content-Type': 'application/json' }
+		  };
+		  if (method !== 'DELETE') {
+		    fetchOptions.body = JSON.stringify(dto);
+		  }
+		
+		  try {
+		    var resp = await fetch(url, fetchOptions);
+		    if (resp.ok) {
+		      var inst = bootstrap.Modal.getInstance(modalEl);
+		      if (inst) inst.hide();
+		      location.reload();
+		    } else {
+		      console.error(method + ' failed', resp.status);
+		    }
+		  } catch (err) {
+		    console.error(err);
+		  }
+		});
 	</script>
 
 

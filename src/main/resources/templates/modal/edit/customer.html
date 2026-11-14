@@ -167,62 +167,32 @@
 </div>
 
 <script>
-
-	document.querySelectorAll(classSelector).forEach(function(btn) {
-	    btn.addEventListener('click', async function(e) {
-	        const form = e.target.closest('form');
-	        const method = (form.getAttribute('method') || 'POST').toUpperCase();
-	        const entityId = form.querySelector('.entity-id').value;
-	
-	        // If viewing, simply close the modal without sending a request
-	        if (method === 'GET') {
-	            bootstrap.Modal.getInstance(form.closest('.modal')).hide();
-	            return;
-	        }
-	
-	        const dto = {
-	            id: entityId,
-	            firstName: form.querySelector('.first-name').value,
-	            lastName: form.querySelector('.last-name').value,
-	            emailAddress: form.querySelector('.email-address').value,
-	            jobTitle: form.querySelector('.job-title').value,
-	            businessPhone: form.querySelector('.business-phone').value,
-	            homePhone: form.querySelector('.home-phone').value,
-	            mobilePhone: form.querySelector('.mobile-phone').value,
-	            faxNumber: form.querySelector('.fax-number').value,
-	            address1: form.querySelector('.address1').value,
-	            address2: form.querySelector('.address2').value,
-	            city: form.querySelector('.city').value,
-	            stateProvince: form.querySelector('.state-province').value,
-	            zipPostalCode: form.querySelector('.zip-postal-code').value,
-	            countryRegion: form.querySelector('.country-region').value,
-	            notes: form.querySelector('.notes').value,
-	            webSiteTitle: form.querySelector('.web-site-title').value,
-	            webSiteUrl: form.querySelector('.web-site-url').value,
-	            portraitPath: form.querySelector('.portrait-path').value,
-	            portraitTitle: form.querySelector('.portrait-title').value
-	        };
-	
-	        // Append ID to URL for DELETE, or send JSON body for POST/PUT
-	        const url = method === 'DELETE' ? `/entity/customer/${customerId}` : '/entity/customer';
-	        const fetchOptions = {
-	            method: method,
-	            headers: { 'Content-Type': 'application/json' }
-	        };
-	
-	        if (method !== 'DELETE') {
-	            fetchOptions.body = JSON.stringify(dto);
-	        }
-	
-	        const resp = await fetch(url, fetchOptions);
-	        if (resp.ok) {
-	            bootstrap.Modal.getInstance(form.closest('.modal')).hide();
-	            location.reload(); 
-	        } else {
-	            console.error(`${method} failed`, resp.status);
-	        }
-	    });
-	});
+	window.entityDtoBuilders = window.entityDtoBuilders || {};
+	window.entityDtoBuilders.customer = function (form) {
+	  return {
+	    id: form.querySelector('.entity-id').value ? form.querySelector('.entity-id').value : null,
+	    firstName: form.querySelector('.first-name')?.value,
+	    lastName: form.querySelector('.last-name')?.value,
+	    emailAddress: form.querySelector('.email-address')?.value,
+	    jobTitle: form.querySelector('.job-title')?.value,
+	    businessPhone: form.querySelector('.business-phone')?.value,
+	    homePhone: form.querySelector('.home-phone')?.value,
+	    mobilePhone: form.querySelector('.mobile-phone')?.value,
+	    faxNumber: form.querySelector('.fax-number')?.value,
+	    address1: form.querySelector('.address1')?.value,
+	    address2: form.querySelector('.address2')?.value,
+	    city: form.querySelector('.city')?.value,
+	    stateProvince: form.querySelector('.state-province')?.value,
+	    zipPostalCode: form.querySelector('.zip-postal-code')?.value,
+	    countryRegion: form.querySelector('.country-region')?.value,
+	    notes: form.querySelector('.notes')?.value,
+	    webSiteTitle: form.querySelector('.web-site-title')?.value,
+	    webSiteUrl: form.querySelector('.web-site-url')?.value,
+	    portraitPath: form.querySelector('.portrait-path')?.value,
+	    portraitTitle: form.querySelector('.portrait-title')?.value
+	  };
+	};
+</script>
 	
 	
 </script>
