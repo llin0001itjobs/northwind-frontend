@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<div class="modal fade">
+<div th:each="c : ${Companies}" class="modal fade">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title"
-					th:attr="id='editCompany-' + ${Company.getId()}">
+					th:attr="id='editCompany-' + ${c.id}">
 					Company
 				</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal"
@@ -13,7 +13,7 @@
 					<div class="row align-items-end">
 						<div class="col-2">Name</div>
 						<div class="col-10">
-							<input type="text" th:value="${Company.getName()}" th:field="*{name}"/>
+							<input type="text" th:value="${c.name}" th:field="*{name}"/>
 						</div>
 					</div>
 				</div>

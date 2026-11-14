@@ -127,7 +127,7 @@ public class CustomerService extends _BaseService {
 		}
 	}
 
-	public CustomerDto withId(CustomerDto c) {
+	public CustomerDto enrich(CustomerDto c) {
 		if (c == null)
 			return null;
 

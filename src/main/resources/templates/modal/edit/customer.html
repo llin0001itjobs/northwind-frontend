@@ -1,143 +1,228 @@
 <!DOCTYPE html>
-<div class="modal fade">
+<!-- /templates/modal/edit/customer.html -->
+<div th:each="c : ${Customers}" th:if="${c.id != null}"
+	th:attr="id='modalEditCustomer-' + ${c.id}"
+	th:fragment="modalEditCustomer" class="modal modal-lg fade"
+	data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+	aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title"
-					th:attr="id='editCustomer-' + ${Customer.getId()}">
-					Customer
-				</h5>
+					th:attr="id='modalEditCustomerLabel-' + ${c.id}">Customer</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal"
 					aria-label="Close"></button>
-				<div class="modal-body">
+			</div>
+			<div class="modal-body">
+				<form th:id="|form-${c.id}|" th:action="@{/entity/customer}"
+					method="post">
+					<input type="hidden" th:value="${c.id}" th:id="|customer-${c.id}|"
+						class="entity-id" />
 					<div class="row align-items-end">
 						<div class="col-2">First Name</div>
 						<div class="col-10">
-							<input type="text" th:value="${Customer.getFirstName()}" th:field="*{firstName}" />
+							<input type="text" th:value="${c.firstName}"
+								class="first-name form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Last Name</div>
 						<div class="col-10">
-							<input type="text" th:value="${Customer.getLastName()}" th:field="*{lastName}" />
+							<input type="text" th:value="${c.lastName}"
+								class="last-name form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Email Address</div>
 						<div class="col-10">
-							<input type="text" th:value="${Customer.getEmailAddress()}" th:field="*{emailAddress}" />
+							<input type="text" th:value="${c.emailAddress}"
+								class="email-address form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
-						<div class="col-2">Last Name</div>
-						<div class="col-10">
-							<input type="text" th:value="${Customer.getLastName()}" th:field="*{lastName}" />
-						</div>
-					</div>					
-					<div class="row align-items-end">
 						<div class="col-2">Job Title</div>
 						<div class="col-10">
-							<input type="text" th:value="${Customer.getJobTitle()}}" th:field="*{jobTitle}" />
+							<input type="text" th:value="${c.jobTitle}"
+								class="job-title form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Business Phone</div>
 						<div class="col-10">
-							<input type="text" th:value="${Customer.getBusinessPhone()}" th:field="*{businessPhone}" />
+							<input type="text" th:value="${c.businessPhone}"
+								class="business-phone form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Home Phone</div>
 						<div class="col-10">
-							<input type="text" th:value="${Customer.getHomePhone()}" th:field="*{homePhone}" />
+							<input type="text" th:value="${c.homePhone}"
+								class="home-phone form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Mobile Phone</div>
 						<div class="col-10">
-							<input type="text" th:value="${Customer.getMobilePhone()}" th:field="*{nobilePhone}" />
+							<input type="text" th:value="${c.mobilePhone}"
+								class="mobile-phone form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Fax Number</div>
 						<div class="col-10">
-							<input type="text" th:value="${Customer.getFaxNumber()}" th:field="*{faxNumber}" />
+							<input type="text" th:value="${c.faxNumber}"
+								class="fax-number form-control" />
 						</div>
-					</div>						
+					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Address 1</div>
 						<div class="col-10">
-							<input type="text" th:value="${Customer.getAddress1()}" th:field="*{address1}" />
+							<input type="text" th:value="${c.address1}"
+								class="address1 form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Address 2</div>
 						<div class="col-10">
-							<input type="text" th:value="${Customer.getAddress2()}" th:field="*{address2}" />
+							<input type="text" th:value="${c.address2}"
+								class="address2 form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">City</div>
 						<div class="col-10">
-							<input type="text" th:value="${Customer.getCity()}" th:field="*{city}" />
+							<input type="text" th:value="${c.city}" class="city form-control" />
 						</div>
-					</div>			
+					</div>
 					<div class="row align-items-end">
 						<div class="col-2">State Province</div>
 						<div class="col-10">
-							<input type="text" th:value="${Customer.geStateProvince()}" th:field="*{stateProvince}" />
+							<input type="text" th:value="${c.stateProvince}"
+								class="state-province form-control" />
 						</div>
-					</div>	
+					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Zip Postal Code</div>
 						<div class="col-10">
-							<input type="text" th:value="${Customer.getZipPostalCode()}" th:field="*{zipPostalCode}" />
+							<input type="text" th:value="${c.zipPostalCode}"
+								class="zip-postal-code form-control" />
 						</div>
-					</div>			
+					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Country Region</div>
 						<div class="col-10">
-							<input type="text" th:value="${Customer.geCountryRegion()}" th:field="*{countryRegion}" />
+							<input type="text" th:value="${c.countryRegion}"
+								class="country-region form-control" />
 						</div>
-					</div>							
+					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Notes</div>
 						<div class="col-10">
-							<input type="text" th:value="${Customer.getNotes()}" th:field="*{notes}" />
+							<input type="text" th:value="${c.notes}"
+								class="notes form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Web Site Title</div>
 						<div class="col-10">
-							<input type="text" th:value="${Customer.getWebSiteTitle()}" th:field="*{webSiteTitle}" />
+							<input type="text" th:value="${c.webSiteTitle}"
+								class="web-site-title form-control" />
 						</div>
-					</div>	
+					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Web Site Url</div>
 						<div class="col-10">
-							<input type="text" th:value="${Customer.getWebSiteUrl()}" th:field="*{webSiteUrl}" />
+							<input type="text" th:value="${c.webSiteUrl}"
+								class="web-site-url form-control" />
 						</div>
-					</div>			
+					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Portrait Path</div>
 						<div class="col-10">
-							<input type="text" th:value="${Customer.gePortraitPath()}" th:field="*{portraitPath}" />
+							<input type="text" th:value="${c.portraitPath}"
+								class="portrait-path form-control" />
 						</div>
-					</div>							
+					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Portrait Title</div>
 						<div class="col-10">
-							<input type="text" th:value="${Customer.getPortraitTitle()}" th:field="*{portraitTitle}" />
+							<input type="text" th:value="${c.portraitTitle}"
+								class="portrait-title form-control" />
 						</div>
-					</div>									
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary"
-						data-bs-dismiss="modal">Close</button>
-				</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<button type="button" class="btn btn-secondary post-customer">Submit</button>
+						</div>
+						<div class="col">
+							<button type="button" class="btn btn-secondary"
+								data-bs-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</form>
 			</div>
+
 		</div>
 	</div>
 </div>
 
+<script>
 
+	document.querySelectorAll(classSelector).forEach(function(btn) {
+	    btn.addEventListener('click', async function(e) {
+	        const form = e.target.closest('form');
+	        const method = (form.getAttribute('method') || 'POST').toUpperCase();
+	        const entityId = form.querySelector('.entity-id').value;
+	
+	        // If viewing, simply close the modal without sending a request
+	        if (method === 'GET') {
+	            bootstrap.Modal.getInstance(form.closest('.modal')).hide();
+	            return;
+	        }
+	
+	        const dto = {
+	            id: entityId,
+	            firstName: form.querySelector('.first-name').value,
+	            lastName: form.querySelector('.last-name').value,
+	            emailAddress: form.querySelector('.email-address').value,
+	            jobTitle: form.querySelector('.job-title').value,
+	            businessPhone: form.querySelector('.business-phone').value,
+	            homePhone: form.querySelector('.home-phone').value,
+	            mobilePhone: form.querySelector('.mobile-phone').value,
+	            faxNumber: form.querySelector('.fax-number').value,
+	            address1: form.querySelector('.address1').value,
+	            address2: form.querySelector('.address2').value,
+	            city: form.querySelector('.city').value,
+	            stateProvince: form.querySelector('.state-province').value,
+	            zipPostalCode: form.querySelector('.zip-postal-code').value,
+	            countryRegion: form.querySelector('.country-region').value,
+	            notes: form.querySelector('.notes').value,
+	            webSiteTitle: form.querySelector('.web-site-title').value,
+	            webSiteUrl: form.querySelector('.web-site-url').value,
+	            portraitPath: form.querySelector('.portrait-path').value,
+	            portraitTitle: form.querySelector('.portrait-title').value
+	        };
+	
+	        // Append ID to URL for DELETE, or send JSON body for POST/PUT
+	        const url = method === 'DELETE' ? `/entity/customer/${customerId}` : '/entity/customer';
+	        const fetchOptions = {
+	            method: method,
+	            headers: { 'Content-Type': 'application/json' }
+	        };
+	
+	        if (method !== 'DELETE') {
+	            fetchOptions.body = JSON.stringify(dto);
+	        }
+	
+	        const resp = await fetch(url, fetchOptions);
+	        if (resp.ok) {
+	            bootstrap.Modal.getInstance(form.closest('.modal')).hide();
+	            location.reload(); 
+	        } else {
+	            console.error(`${method} failed`, resp.status);
+	        }
+	    });
+	});
+	
+	
+</script>

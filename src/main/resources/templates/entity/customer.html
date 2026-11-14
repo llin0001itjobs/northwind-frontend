@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+<!-- /teamplates/entity/customer.html -->
 <!-- saved from url=(0052)https://getbootstrap.com/docs/5.0/examples/sidebars/ -->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -15,7 +16,7 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<div th:replace="~{modal/child/customer/company :: div}"></div>
+		<div th:replace="~{modal/edit/customer :: modalEditCustomer}"></div>
 		<div class="row" id="navBarRow">
 			<div class="col-12" id="navBarCol">
 				<div th:replace="~{fragments/navbar :: nav}"></div>
@@ -55,7 +56,7 @@
 									<td><span th:text="${c.company.name}"></span></td>
 									<td><span th:text="${c.jobTitle}"></span></td>
 									<td><span th:text="${c.businessPhone}"></span></td>
-									<td><span th:text="${c.mobilePhone}"></span></td>
+									<td><span th:text="${c.mobilePhone}"></span></td>								
 								</tr>
 							</tbody>
 						</table>

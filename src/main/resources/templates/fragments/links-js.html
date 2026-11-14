@@ -73,25 +73,90 @@
 
 	<script>
 		function onClickCRUD(e) {
-			// e can be the button element (if you pass `this`) or the event object
 			const button = e.target ? e.target : e;
-			const buttonName = button.dataset.action || button.id
+			const action = button.dataset.action || button.id
 					|| button.textContent.trim();
-
-			// Get the currently selected radio
 			const selectedRadio = document
 					.querySelector('input[name="radioId"]:checked');
 			const selectedId = selectedRadio ? selectedRadio.value : null;
-			const radioId = selectedRadio ? selectedRadio.id : null;
 
-			console.log({
-				button : buttonName,
-				selectedId : selectedId,
-				radioId : radioId
+			// Require a selection only for view, edit, and del (allow 'add' without selection)
+			if (!selectedId && [ 'view', 'edit', 'del' ].includes(action)) {
+				alert('Please make a selection first');
+				return;
+			}
+
+			const modalId = 'modalEditCustomer-' + (selectedId || 'new');
+			const modalEl = document.getElementById(modalId);
+			if (!modalEl) {
+				console.warn('Modal not found:', modalId);
+				return;
+			}
+
+			// Store original title once
+			if (!modalEl.dataset.baseTitle) {
+				const titleEl = modalEl.querySelector('.modal-title');
+				modalEl.dataset.baseTitle = titleEl ? titleEl.textContent
+						.trim() : '';
+			}
+			const baseTitle = modalEl.dataset.baseTitle;
+
+			// Map actions to display labels and HTTP methods
+			const actionConfig = {
+				add : {
+					label : 'Add',
+					method : 'post'
+				},
+				view : {
+					label : 'View',
+					method : 'get'
+				},
+				edit : {
+					label : 'Edit',
+					method : 'put'
+				},
+				del : {
+					label : 'Delete',
+					method : 'delete'
+				}
+			}[action] || {
+				label : 'Submit',
+				method : 'post'
+			};
+
+			// Pass data to modal
+			modalEl.dataset.action = action;
+			modalEl.dataset.customerId = selectedId || '';
+
+			// 1. Update Modal Title
+			const title = modalEl.querySelector('.modal-title');
+			if (title) {
+				title.textContent = `${actionConfig.label} ${baseTitle}`;
+			}
+
+			// 2. Update Form Method Attribute
+			const form = modalEl.querySelector('form');
+			if (form) {
+				form.setAttribute('method', actionConfig.method);
+			}
+
+			// 3. Update Submit Button Text/Value
+			const submitBtn = modalEl.querySelector('.post-customer');
+			if (submitBtn) {
+				submitBtn.textContent = actionConfig.label;
+				submitBtn.value = actionConfig.label;
+			}
+
+			// 4. Read-only for view / delete
+			const isReadOnly = ['view', 'del'].includes(action);
+			modalEl.querySelectorAll('input.form-control').forEach(input => {
+			  input.readOnly = isReadOnly;
+			  // optional: visual cue
+			  input.classList.toggle('bg-light', isReadOnly);
 			});
 
-			// Optional: show an alert while you debug
-			alert(`Button: ${buttonName}\nSelected ID: ${selectedId || 'none'}\nRadio ID: ${radioId || 'none'}`);
+			const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+			modal.show();
 		}
 
 		document.addEventListener('click', function(e) {
@@ -106,5 +171,7 @@
 			}
 		});
 	</script>
+
+
 
 </div>

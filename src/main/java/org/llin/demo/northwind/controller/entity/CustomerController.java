@@ -129,12 +129,21 @@ public class CustomerController<T extends _EntityObject> extends _EntityControll
         
         return mv;
     }  
-	
+
 	private List<CustomerDto> enrichAll(List<CustomerDto> customers) {
 		if (customers == null || customers.isEmpty())
 			return List.of();
-		return customers.stream().map(customerService::withId)
-								 .toList();
+	    return customers.stream()
+	            .map(customer -> {
+	                try {
+	                    return customerService.enrich(customer);
+	                } catch (Exception e) {
+	                    // Force a print statements to capture what Eclipse hides
+	                    System.err.println("CRITICAL: Failed to enrich order ID " + customer.id() + " -> " + e.getMessage());
+	                    return customer; // Return raw, un-enriched DTO so the page still loads!
+	                }
+	            })
+	            .toList();
 	}
 
 }

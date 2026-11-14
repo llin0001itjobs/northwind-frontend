@@ -52,7 +52,7 @@
 								<thead>
 									<tr>
 										<th scope="col" class="col-1">&nbsp;</th>
-										<th scope="col">Name</th>
+										<th scope="col" class="col-3">Name</th>
 										<th scope="col">Job Title</th>
 										<th scope="col">Company</th>
 										<th scope="col">Notes</th>
@@ -60,9 +60,9 @@
 								</thead>
 								<tbody>
 									<tr th:each="e, status : ${Employees}">
-									<td class="py-2 text-center"><input type="radio" th:name="radioId"
-										th:id="|radioId_${e.id}|" th:value="${e.id}"
-										th:checked="${status.index == 0}"></input></td>									
+										<td class="py-2 text-center"><input type="radio"
+											th:name="radioId" th:id="|radioId_${e.id}|"
+											th:value="${e.id}" th:checked="${status.index == 0}"></input></td>
 										<td><span th:text="${e.firstName}"></span> &nbsp; <span
 											th:text="${e.lastName}"></span></td>
 										<td th:text="${e.company.name}"></td>
