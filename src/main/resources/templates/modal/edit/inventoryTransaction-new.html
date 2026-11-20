@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- /templates/modal/edit/inventoryTransaction-new.html -->
+<div class="modal fade">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title"
+					id="modalEditInventoryTransaction-new">
+					Inventory Transaction</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"
+					aria-label="Close"></button>
+				<div class="modal-body">
+					<div class="row align-items-end">
+						<div class="col-2">Created Date</div>
+						<div class="col-10">
+							<input type="date" readonly="readonly" name="createdDate"
+								class="createdDate form-control" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Modified Date</div>
+						<div class="col-10">
+							<input type="date" readonly="readonly" name="modifiedDate"
+								class="modifiedDate form-control" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Quantity</div>
+						<div class="col-10">
+							<input type="number" step="1.0" name="quantity"
+								class="quantity form-control" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Comments</div>
+						<div class="col-10">
+							<input type="text" name="comments"
+								class="comments form-control" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Inventory Transaction Type</div>
+						<div class="col-10">
+							<select name="inventoryTransactionType"
+								class="inventory-transaction-type form-control">
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	

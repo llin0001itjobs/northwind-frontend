@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- /templates/modal/edit/customerOrder-new.html -->
+<div id="modalEditCustomer-new" th:fragment="modalEditCustomer-new"
+	class="modal modal-lg fade" data-bs-backdrop="static"
+	data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="modalEditCustomerLabel-new">Customer</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"
+					aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<form id="form-customerOrder-new" th:action="@{/entity/customerOrder"
+					method="post">
+					<input type="hidden" name="id" value="0" class="entity-id" />		
+					<div class="row align-items-end">
+						<div class="col-2">Ship Name</div>
+						<div class="col-10">
+							<input type="text" name="shipName"
+								class="first-name form-control" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Address</div>
+						<div class="col-10">
+							<input type="text" name="shipAddress"
+								class="ship-address form-control" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">City</div>
+						<div class="col-10">
+							<input type="text" name="shipCity"
+								class="ship-city form-control" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">State Province</div>
+						<div class="col-10">
+							<input type="text" name="shipStateProvince"
+								class="ship-state-province form-control" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Zip Postal Code</div>
+						<div class="col-10">
+							<input type="text" name="shipZipPostalCode"
+								class="ship-zip-postal-code form-control" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Country Region</div>
+						<div class="col-10">
+							<input type="text" name="shipCountryRegion"
+								class="ship-country-region form-control" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Shipping Fee</div>
+						<div class="col-10">
+							<input type="number" step="0.1" name="shippingFee"
+								class="shipping-fee form-control" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Order Date</div>
+						<div class="col-10">
+							<input type="date" name="orderDate"
+								class="shipping-orderDate form-control" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Paid Date</div>
+						<div class="col-10">
+							<input type="date" name="paidDate"
+								class="shipping-paidDate form-control" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Shipped Date</div>
+						<div class="col-10">
+							<input type="date" name="shippedDate"
+								class="shippedDate form-control" />						
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Taxes</div>
+						<div class="col-10">
+							<input type="number" step="0.1" name="taxes"
+								class="taxes form-control" />						
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Payment Type</div>
+						<div class="col-10">
+							<input type="date" name="paymentType"
+								class="paymentType form-control" />								
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Notes</div>
+						<div class="col-10">
+							<input type="text" name="notes"
+								class="notes form-control" />								
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Tax Rate</div>
+						<div class="col-10">
+							<input type="number" step="0.1" name="taxRate"
+								class="taxRate form-control" />								
+						</div>
+					</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary"
+					data-bs-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+

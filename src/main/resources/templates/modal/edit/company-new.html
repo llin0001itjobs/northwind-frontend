@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- /templates/modal/edit/company-new.html -->
+<div id="modalEditCompany-new" th:fragment="modalEditCompany-new"
+	class="modal modal-lg fade" data-bs-backdrop="static"
+	data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="modalEditCompanyLabel-new">Company</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"
+					aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<form id="form-company-new" action="/entity/company" method="post"
+					data-entity-type="company" data-base-url="/entity/company">
+					<input type="hidden" id="company-new" class="entity-id" value="" />
+
+					<div class="row align-items-end mb-2">
+						<div class="col-2">Name</div>
+						<div class="col-10">
+							<input type="text" name="name" class="name form-control" />
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col">
+							<button type="button" class="btn btn-secondary post-entity">Submit</button>
+						</div>
+						<div class="col">
+							<button type="button" class="btn btn-secondary"
+								data-bs-dismiss="modal">Close</button>
+						</div>
+					</div>					
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script th:inline="none">
+	window.entityDtoBuilders = window.entityDtoBuilders || {};
+	window.entityDtoBuilders.company = function(form) {
+		var nameEl = form.querySelector('.name');
+		return {
+			id : form.querySelector('.entity-id') ? form
+					.querySelector('.entity-id').value
+					|| null : null,
+			name : nameEl ? nameEl.value : null
+		};
+	};
+</script>

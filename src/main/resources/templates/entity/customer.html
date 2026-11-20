@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<!-- /teamplates/entity/customer.html -->
+<!-- /templates/entity/customer.html -->
 <!-- saved from url=(0052)https://getbootstrap.com/docs/5.0/examples/sidebars/ -->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -16,6 +16,7 @@
 </head>
 <body>
 	<div class="container-fluid">
+		<div th:replace="~{modal/edit/customer-new :: modalEditCustomer-new}"></div>
 		<div th:replace="~{modal/edit/customer :: modalEditCustomer}"></div>
 		<div class="row" id="navBarRow">
 			<div class="col-12" id="navBarCol">
@@ -35,7 +36,7 @@
 						</h3>
 						<table
 							class="table table-striped table-borderless fw-normal pb-1 small mb-0 w-100"
-							id="dataTable">
+							id="dataTable" data-entity-type="Customer">
 							<thead>
 								<tr>
 									<th scope="col" class="col-1">&nbsp;</th>

@@ -1,48 +1,51 @@
 <!DOCTYPE html>
-<div class="modal fade">
+<!-- /templates/modal/edit/invoice.html -->
+<div th:each="i : ${Invoices}" th:if="${i.id != null}"
+	th:attr="id='modalEditInvoice-' + ${i.id}"
+	th:fragment="modalEditInvoice" class="modal modal-lg fade"
+	data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+	aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title"
-					th:attr="id='editInvoice-' + ${Invoice.getId()}">
-					Invoice
-				</h5>
+				<h5 class="modal-title" th:attr="id='editInvoice-' + ${i.id}">
+					Invoice</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal"
 					aria-label="Close"></button>
 				<div class="modal-body">
 					<div class="row align-items-end">
 						<div class="col-2">Invoice Date</div>
 						<div class="col-10">
-							<input type="date" th:value="${Invoice.getInvoiceDate()}"
-								th:field="*{invoiceDate}" />
+							<input type="date" th:value="${i.invoiceDate}"
+								class="invoice-date form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Due Date</div>
 						<div class="col-10">
-							<input type="date" th:value="${Invoice.getDueDate()}"
-								th:field="*{dueDate}" />
+							<input type="date" th:value="${i.dueDate}"
+								class="due-date form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Tax</div>
 						<div class="col-10">
-							<input type="number" step="0.1" th:value="${Invoice.getTax()}"
-								th:field="*{tax}" />
+							<input type="number" step="0.1" th:value="${i.tax}"
+								class="tax form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Shipping</div>
 						<div class="col-10">
-							<input type="number" step="0.1"
-								th:value="${Invoice.getShipping()}" th:field="*{shipping}" />
+							<input type="number" step="0.1" th:value="${i.shipping}"
+								class="shipping form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Amount Due</div>
 						<div class="col-10">
-							<input type="number" step="0.1"
-								th:value="${Invoice.getAmountDue()}" th:field="*{amountDue}" />
+							<input type="number" step="0.1" th:value="${i.amountDue}"
+								class="amount-due form-control" />
 						</div>
 					</div>
 				</div>
@@ -54,5 +57,18 @@
 		</div>
 	</div>
 </div>
+<script>
+	window.entityDtoBuilders = window.entityDtoBuilders || {};
+	window.entityDtoBuilders.customerOrder = function (form) {
+	  return {   
+	    id: form.querySelector('.entity-id')?.value,
+   		invoiceDate: form.querySelector('.invoice-date')?.value,  
+   		dueDate: form.querySelector('.due-date')?.value,
+   		tax: form.querySelector('.tax')?.value,
+   		shipping: form.querySelector('.shipping')?.value,
+   		amountDue: form.querySelector('.amount-due')?.value
+	  };
+	};
+</script>
 
 

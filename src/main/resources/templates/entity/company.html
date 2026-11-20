@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- /templates/entity/company.html -->
 <html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -9,6 +10,9 @@
 </head>
 <body>
 	<div class="container-fluid h-100">
+		<div th:replace="~{modal/edit/company-new :: modalEditCompany-new}"></div>
+		<div th:replace="~{modal/edit/company :: modalEditCompany}"></div>
+				
 		<div class="row" id="navBarRow">
 			<div class="col-12" id="navBarCol">
 				<div th:replace="~{fragments/navbar :: nav}"></div>
@@ -27,7 +31,7 @@
 				<!-- Keep this container completely clean. Let DataTables 2.x inject everything naturally -->
 				<table
 					class="table table-striped table-borderless fw-normal pb-1 small mb-0 w-100"
-					id="dataTable">
+					id="dataTable" data-entity-type="Company">
 					<thead class="border-top border-bottom border-secondary">
 						<tr>
 							<th scope="col" class="col-1">&nbsp;</th>

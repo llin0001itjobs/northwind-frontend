@@ -15,7 +15,7 @@
 			</div>
 			<div class="modal-body">
 				<form th:id="|form-${c.id}|" th:action="@{/entity/customer}"
-					method="post">
+					method="post" data-entity-type="customer" class="post-entity">
 					<input type="hidden" th:value="${c.id}" th:id="|customer-${c.id}|"
 						class="entity-id" />
 					<div class="row align-items-end">
@@ -152,7 +152,7 @@
 					</div>
 					<div class="row">
 						<div class="col">
-							<button type="button" class="btn btn-secondary post-customer">Submit</button>
+							<button type="button" class="btn btn-secondary post-entity">Submit</button>
 						</div>
 						<div class="col">
 							<button type="button" class="btn btn-secondary"
@@ -170,7 +170,7 @@
 	window.entityDtoBuilders = window.entityDtoBuilders || {};
 	window.entityDtoBuilders.customer = function (form) {
 	  return {
-	    id: form.querySelector('.entity-id').value ? form.querySelector('.entity-id').value : null,
+	    id: form.querySelector('.entity-id')?.value,
 	    firstName: form.querySelector('.first-name')?.value,
 	    lastName: form.querySelector('.last-name')?.value,
 	    emailAddress: form.querySelector('.email-address')?.value,
@@ -192,7 +192,4 @@
 	    portraitTitle: form.querySelector('.portrait-title')?.value
 	  };
 	};
-</script>
-	
-	
 </script>

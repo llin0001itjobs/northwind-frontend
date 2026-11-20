@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<div class="modal fade">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title"
+					id="modalEditInvoice-new">Invoice</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"
+					aria-label="Close"></button>
+				<div class="modal-body">
+					<div class="row align-items-end">
+						<div class="col-2">Invoice Date</div>
+						<div class="col-10">
+							<input type="date" name="invoiceDate"
+								class="invoice-date form-control" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Due Date</div>
+						<div class="col-10">
+							<input type="date" name="dueDate" class="due-date form-control" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Tax</div>
+						<div class="col-10">
+							<input type="number" step="0.1" name="tax"
+								class="tax form-control" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Shipping</div>
+						<div class="col-10">
+							<input type="number" step="0.1" name="shipping"
+								class="shipping form-control" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Amount Due</div>
+						<div class="col-10">
+							<input type="number" step="0.1" name="amountDue"
+								class="amount-due form-control" />
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+

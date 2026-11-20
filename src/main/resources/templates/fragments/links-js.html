@@ -73,34 +73,53 @@
 
 	<script>
 		function onClickCRUD(e) {
+			
 			const button = e.target ? e.target : e;
-			const action = button.dataset.action || button.id
-					|| button.textContent.trim();
-			const selectedRadio = document
-					.querySelector('input[name="radioId"]:checked');
+			const action = button.dataset.action || button.id || button.textContent.trim();
+
+			const selectedRadio = document.querySelector('input[name="radioId"]:checked');
 			const selectedId = selectedRadio ? selectedRadio.value : null;
 
-			// Require a selection only for view, edit, and del (allow 'add' without selection)
-			if (!selectedId && [ 'view', 'edit', 'del' ].includes(action)) {
-				alert('Please make a selection first');
-				return;
+			alert(action);
+			  if (!selectedId && ['view', 'edit', 'del'].includes(action)) {
+			    alert('Please make a selection first');
+			    return;
+			  }
+
+			  // Get entity type from the table (or body, or a data attribute on the buttons)
+			const rawType = document.querySelector('#dataTable')?.dataset.entityType || 'customer';
+			const entityType = rawType.charAt(0).toUpperCase() + rawType.slice(1);
+
+			
+			let modalId;
+			if (action === 'add') {
+			  // Always use the dedicated new modal
+			  modalId = 'modalEdit' + entityType + '-new';
+			} else {
+			  // View / Edit / Delete need a selected row
+			  if (!selectedId) {
+			    alert('Please select a row first');
+			    return;
+			  }
+			  modalId = 'modalEdit' + entityType + '-' + selectedId;
 			}
 
-			const modalId = 'modalEditCustomer-' + (selectedId || 'new');
 			const modalEl = document.getElementById(modalId);
 			if (!modalEl) {
-				console.warn('Modal not found:', modalId);
-				return;
+			  console.warn('Modal not found:', modalId);
+			  return;
 			}
-
-			// Store original title once
+			
+			
+			// Now safe to use modalEl
 			if (!modalEl.dataset.baseTitle) {
-				const titleEl = modalEl.querySelector('.modal-title');
-				modalEl.dataset.baseTitle = titleEl ? titleEl.textContent
-						.trim() : '';
+			  const titleEl = modalEl.querySelector('.modal-title');
+			  modalEl.dataset.baseTitle = titleEl ? titleEl.textContent.trim() : entityType;
 			}
+			
 			const baseTitle = modalEl.dataset.baseTitle;
 
+			
 			// Map actions to display labels and HTTP methods
 			const actionConfig = {
 				add : {
@@ -141,7 +160,7 @@
 			}
 
 			// 3. Update Submit Button Text/Value
-			const submitBtn = modalEl.querySelector('.post-customer');
+			const submitBtn = modalEl.querySelector('.post-entity:not(form),.post-customer');
 			if (submitBtn) {
 				submitBtn.textContent = actionConfig.label;
 				submitBtn.value = actionConfig.label;
@@ -149,7 +168,7 @@
 
 			// 4. Read-only for view / delete
 			const isReadOnly = ['view', 'del'].includes(action);
-			modalEl.querySelectorAll('input.form-control').forEach(input => {
+			modalEl.querySelectorAll('input.form-control').forEach(function(input) {
 			  input.readOnly = isReadOnly;
 			  // optional: visual cue
 			  input.classList.toggle('bg-light', isReadOnly);
@@ -226,8 +245,30 @@
 		    console.error(err);
 		  }
 		});
+		
+		function toCamelCase(str) {
+			  return str
+			    .trim()
+			    .split(/[\s_-]+/) // Splits by spaces, underscores, or hyphens
+			    .map((word, index) => {
+			      if (index === 0) {
+			        return word.toLowerCase();
+			      }
+			      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+			    })
+			    .join('');
+			}
+		
+		function toCamelCaseNotFirst(str) {
+			  return str
+			    .trim()
+			    .split(/[\s_-]+/) // Splits by spaces, underscores, or hyphens
+			    .map((word, index) => {
+			      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+			    })
+			    .join('');
+			}		
+		
 	</script>
-
-
 
 </div>

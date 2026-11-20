@@ -1,29 +1,44 @@
 <!DOCTYPE html>
-<div th:each="c : ${Companies}" class="modal fade">
+<!-- /templates/modal/edit/company.html -->
+<div th:each="c : ${Companys}" th:if="${c.id != null}"
+	th:attr="id='modalEditCompany-' + ${c.id}"
+	th:fragment="modalEditCompany" class="modal modal-lg fade"
+	data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+	aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title"
-					th:attr="id='editCompany-' + ${c.id}">
-					Company
-				</h5>
+					th:attr="id='modalEditCompanyLabel-' + ${c.id}">Company</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal"
 					aria-label="Close"></button>
-				<div class="modal-body">
+			</div>
+			<div class="modal-body">
+				<form th:id="|form-${c.id}|" th:action="@{/entity/company}" method="post">
+					<input type="hidden" th:value="${c.id}" th:id="|company-${c.id}|"
+						class="entity-id" />
 					<div class="row align-items-end">
 						<div class="col-2">Name</div>
 						<div class="col-10">
-							<input type="text" th:value="${c.name}" th:field="*{name}"/>
+							<input type="text" th:value="${c.name}" class="name form-control" />
 						</div>
 					</div>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary"
-						data-bs-dismiss="modal">Close</button>
-				</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary"
+					data-bs-dismiss="modal">Close</button>
 			</div>
 		</div>
 	</div>
 </div>
-
+<script>
+	window.entityDtoBuilders = window.entityDtoBuilders || {};
+	window.entityDtoBuilders.customer = function (form) {
+	  return {
+	    id: form.querySelector('.entity-id').value ? form.querySelector('.entity-id').value : null,
+	    firstName: form.querySelector('.name').value ? form.querySelector('.name') : null  
+	  };
+	};
+</script>
 

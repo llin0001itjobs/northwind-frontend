@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<div class="modal fade">
+<!-- /templates/modal/edit/purchaseOrderDetail.html -->
+<div th:each="po : ${PurchaseOrderDetails}" th:if="${po.id != null}"
+	th:attr="id='modalEditPurchaseOrderDetail-' + ${po.id}"
+	th:fragment="modalEditPurchaseOrderDetail" class="modal modal-lg fade"
+	data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+	aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title"
-					th:attr="id='editPurchaseOrderDetails-' + ${PurchaseOrderDetails.getId()}">
-					Purchase Order
+				<h5 class="modal-title" th:attr="id='editPurchaseOrderDetail-' + ${po.id}">
+					Purchase Order Detail
 				</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal"
 					aria-label="Close"></button>
@@ -14,31 +18,31 @@
 						<div class="col-2">Date Received</div>
 						<div class="col-10">
 							<input type="date"
-								th:value="${PurchaseOrderDetails.getDateReceived()}"
-								th:field="*{dateReceived}" />
+								th:value="${po.dateReceived}"
+								class="date-received form-control"/>
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Unit Cost</div>
 						<div class="col-10">
 							<input type="number" step="0.1"
-								th:value="${PurchaseOrderDetails.getUnitCost()}"
-								th:field="*{unitCost}" />
+								th:value="${po.unitCost}"
+								class="unit-cost form-control"/>
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Quantity</div>
 						<div class="col-10">
 							<input type="number" step="1"
-								th:value="${PurchaseOrderDetails.getQuantity()}"
-								th:field="*{creationDate}" />
+								th:value="${po.quantity}"
+								class="quantity form-control"/>
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Posted To Inventory</div>
 						<div class="col-10">
-							<select th:value="${PurchaseOrderDetails.getPostedToInventory()}"
-									th:field="*{postedToInventory}">
+							<select th:value="${po.postedToInventory}"
+									class="posted-to-inventory form-control">
 								<option value="false">False</option>
 								<option value="true">True</option>
 							</select>
@@ -53,4 +57,15 @@
 		</div>
 	</div>
 </div>
-
+<script>
+	window.entityDtoBuilders = window.entityDtoBuilders || {};
+	window.entityDtoBuilders.purchaseOrderDetail = function (form) {
+	  return {   
+	    id: form.querySelector('.entity-id')?.value,
+		dateReceived: form.querySelector('.date-received')?.value,    
+		unitCost: form.querySelector('.unit-cost')?.value,
+		quantity: form.querySelector('.quantity')?.value,
+		postedToInventory: form.querySelector('.posted-to-inventory')?.value
+	  };
+	};
+</script>

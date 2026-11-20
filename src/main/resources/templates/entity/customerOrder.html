@@ -32,6 +32,7 @@
 <body>
 	<main>
 		<div class="container-fluid">
+			<div th:replace="~{modal/edit/customerOrder :: modalEditCustomerOrder}"></div>
 			<div th:replace="~{modal/child/customerOrder/customer :: div}"></div>
 			<div th:replace="~{modal/child/customerOrder/employee :: div}"></div>
 			<div th:replace="~{modal/child/customerOrder/shipper :: div}"></div>

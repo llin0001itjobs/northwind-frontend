@@ -1,33 +1,34 @@
 <!DOCTYPE html>
-<div class="modal fade">
-	<div class="modal-dialog modal-dialog-centered">
+<!-- /templates/modal/edit/product.html -->
+<div th:each="p : ${Products}" th:if="${p.id != null}"
+	th:attr="id='modalEditProduct-' + ${p.id}"
+	th:fragment="modalEditProduct" class="modal modal-lg fade"
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title"
-					th:attr="id='editProduct-' + ${Product.getId()}">
-					Product
-				</h5>
+					th:attr="id='modalEditProductLabel-' + ${p.id}">Product</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal"
 					aria-label="Close"></button>
-				<div class="modal-body">
-					<form th:object="${Product}" th:action="@{/save}" method="post">
+			</div>
+			<div class="modal-body">
+				<form th:id="|form-${p.id}|" th:action="@{/entity/Product}" method="post">
 						<div class="row align-items-end">
 							<div class="col-2">Product Code</div>
 							<div class="col-10">
-								<select th:field="*{Product.productCode}">
+								<select th:value="${p.productCode}" class="product-code form-control">
 									<option value="">Please select a Product Code</option>
-									<option th:each="p : ${ProductCodes}" th:value="${p.code}"
-										th:text="${p.code}"></option>
+									<option th:each="co : ${ProductCodes}" th:value="${co.code}"
+										th:text="${co.code}"></option>
 								</select>
 							</div>
 						</div>
 						<div class="row align-items-end">
 							<div class="col-2">Category</div>
 							<div class="col-10">
-								<select th:field="*{Product.category}">
-									<option value="">Please select a Product Code</option>
-									<option th:each="p : ${Categories}" th:value="${p.category}"
-										th:text="${p.category}"></option>
+								<select th:value="${p.category}" class="category form-control"> 
+									<option value="">Please select a Category</option>
+									<option th:each="c : ${Categories}" th:value="${c.category}"
+										th:text="${c.category}"></option>
 								</select>
 							</div>
 						</div>
@@ -35,31 +36,32 @@
 							<div class="col-2">Standard Cost</div>
 							<div class="col-10">
 								<input type="number" step="0.1"
-									th:value="${Product.getStandardCost()}"
-									th:field="*{standardCost}" />
+									th:value="${p.standardCost}"
+									 class="standard-cost form-control" /> 
 							</div>
 						</div>
 						<div class="row align-items-end">
 							<div class="col-2">List Price</div>
 							<div class="col-10">
 								<input type="number" step="0.1"
-									th:value="${Product.getListPrice()}" th:field="*{listPrice}" />
+									th:value="${p.listPrice}" 
+									class="list-price form-control" /> 
 							</div>
 						</div>
 						<div class="row align-items-end">
 							<div class="col-2">Quantity Per Unit</div>
 							<div class="col-10">
 								<input type="number" step="1"
-									th:value="${Product.getQuantityPerUnit()}"
-									th:field="*{quantityPerUnit}" />
+									th:value="${p.quantityPerUnit}"
+									class="quantity-per-unit form-control" /> 
 							</div>
 						</div>
 						<div class="row align-items-end">
 							<div class="col-2">Minimum Reorder Quantity</div>
 							<div class="col-10">
 								<input type="number" step="1"
-									th:value="${Product.getMinimumReorderQuantity()}"
-									th:field="*{minimumReorderQuantity}" />
+									th:value="${p.minimumReorderQuantity}"
+									class="minimum-reorder-quantity form-control" /> 
 							</div>
 						</div>
 					</form>
@@ -72,5 +74,18 @@
 		</div>
 	</div>
 </div>
-
+<script>
+	window.entityDtoBuilders = window.entityDtoBuilders || {};
+	window.entityDtoBuilders.product = function (form) {
+	  return {   
+	    id: form.querySelector('.entity-id')?.value,
+   		productCode: form.querySelector('.product-code')?.value,
+   		category: form.querySelector('.category')?.value,   		
+   		unitPrice: form.querySelector('.unit-price')?.value,    
+		discount: form.querySelector('.discount')?.value,
+		quantityPerUnit: form.querySelector('.quantity-per-unit')?.value,
+		minimumReorderQuantity: form.querySelector('.minimum-reorder-quantity')?.value
+	  };
+	};
+</script>
 
