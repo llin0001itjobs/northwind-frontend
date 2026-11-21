@@ -15,7 +15,7 @@
 			</div>
 			<div class="modal-body">
 				<form th:id="|form-${s.id}|" th:action="@{/entity/shipper}"
-					method="post">
+					method="post" data-entity-type="Shipper" class="post-entity">
 					<input type="hidden" th:value="${s.id}" th:id="|shipper-${s.id}|"
 						class="entity-id" />
 					<div class="row align-items-end">
@@ -150,11 +150,11 @@
 								class="portrait-title form-control" />
 						</div>
 					</div>
-					<div class="row">
-						<div class="col">
-							<button type="button" class="btn btn-secondary post-shipper">Submit</button>
+					<div class="row mt-3">
+						<div class="col-6 text-end pe-2">
+							<button type="button" class="btn btn-secondary post-entity">Submit</button>
 						</div>
-						<div class="col">
+						<div class="col-6 text-start ps-2">
 							<button type="button" class="btn btn-secondary"
 								data-bs-dismiss="modal">Close</button>
 						</div>
@@ -170,8 +170,8 @@
 	window.entityDtoBuilders = window.entityDtoBuilders || {};
 	window.entityDtoBuilders.shipper = function (form) {
 	  return {
-	    id: form.querySelector('.entity-id').value ? form.querySelector('.entity-id').value : null,
-	    firstName: form.querySelector('.first-name').value ? form.querySelector('.first-name').value : null,
+	    id: form.querySelector('.entity-id')?.value,
+	    firstName: form.querySelector('.first-name')?.value,
 	    lastName: form.querySelector('.last-name')?.value,
 	    emailAddress: form.querySelector('.email-address')?.value,
 	    jobTitle: form.querySelector('.job-title')?.value,

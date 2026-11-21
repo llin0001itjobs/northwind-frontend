@@ -32,6 +32,7 @@
 <body>
 	<main>
 		<div class="container-fluid">
+			<div th:replace="~{modal/edit/customerOrder-new :: modalEditCustomerOrder-new}"></div>
 			<div th:replace="~{modal/edit/customerOrder :: modalEditCustomerOrder}"></div>
 			<div th:replace="~{modal/child/customerOrder/customer :: div}"></div>
 			<div th:replace="~{modal/child/customerOrder/employee :: div}"></div>
@@ -46,13 +47,13 @@
 					<div class="row">
 						<div class="col-2 bg-light border border-primary pb-3"
 							id="leftSideBar">
-							<div th:replace="~{fragments/sideMenuLeftEntities :: div}"></div>
+							<div th:replace="~{fragments/sideMenuLeftEntities :: sideMenuLeftEntities}"></div>
 						</div>
 						<div class="col-8 border border-primary mt-5 pt-4">
 							<h3 th:text="${TITLE} ?: 'Customer Orders'"></h3>
 							<table
 								class="table table-striped table-borderless fw-normal pb-1 small mb-0 w-100"
-								id="dataTable"
+								id="dataTable" data-entity-type="CustomerOrder"
 								th:if="${CustomerOrders != null and !CustomerOrders.empty}"
 								th:data-page-length="${_PAGE_LENGTH ?: 8}">
 								<thead>

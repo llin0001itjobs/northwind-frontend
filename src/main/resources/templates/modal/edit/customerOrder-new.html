@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <!-- /templates/modal/edit/customerOrder-new.html -->
-<div id="modalEditCustomer-new" th:fragment="modalEditCustomer-new"
-	class="modal modal-lg fade" data-bs-backdrop="static"
-	data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+<div id="modalEditCustomerOrder-new"
+	th:fragment="modalEditCustomerOrder-new" class="modal modal-lg fade"
+	data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+	aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -11,9 +12,10 @@
 					aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
-				<form id="form-customerOrder-new" th:action="@{/entity/customerOrder"
-					method="post">
-					<input type="hidden" name="id" value="0" class="entity-id" />		
+				<form id="form-customerOrder-new"
+					th:action="@{/entity/customerOrder}" method="post"
+					data-entity-type="CustomerOrder">
+					<input type="hidden" name="id" value="0" class="entity-id" />
 					<div class="row align-items-end">
 						<div class="col-2">Ship Name</div>
 						<div class="col-10">
@@ -31,8 +33,7 @@
 					<div class="row align-items-end">
 						<div class="col-2">City</div>
 						<div class="col-10">
-							<input type="text" name="shipCity"
-								class="ship-city form-control" />
+							<input type="text" name="shipCity" class="ship-city form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
@@ -81,45 +82,49 @@
 						<div class="col-2">Shipped Date</div>
 						<div class="col-10">
 							<input type="date" name="shippedDate"
-								class="shippedDate form-control" />						
+								class="shippedDate form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Taxes</div>
 						<div class="col-10">
 							<input type="number" step="0.1" name="taxes"
-								class="taxes form-control" />						
+								class="taxes form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Payment Type</div>
 						<div class="col-10">
 							<input type="date" name="paymentType"
-								class="paymentType form-control" />								
+								class="paymentType form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Notes</div>
 						<div class="col-10">
-							<input type="text" name="notes"
-								class="notes form-control" />								
+							<input type="text" name="notes" class="notes form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Tax Rate</div>
 						<div class="col-10">
 							<input type="number" step="0.1" name="taxRate"
-								class="taxRate form-control" />								
+								class="taxRate form-control" />
 						</div>
 					</div>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary"
-					data-bs-dismiss="modal">Close</button>
+					<div class="row mt-3">
+						<div class="col-6 text-end pe-2">
+							<button type="button" class="btn btn-secondary post-entity">Submit</button>
+						</div>
+						<div class="col-6 text-start ps-2">
+							<button type="button" class="btn btn-secondary"
+								data-bs-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
-</div>
 </div>
 
 

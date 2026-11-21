@@ -1,160 +1,157 @@
 <!DOCTYPE html>
 <!-- /templates/modal/edit/employee.html -->
-<div th:each="e : ${Employees}" th:if="${e.id != null}"
-	th:attr="id='modalEditEmployee-' + ${e.id}"
-	th:fragment="modalEditEmployee" class="modal modal-lg fade"
-	data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-	aria-hidden="true">
+<div id="modalEditEmployee-new" th:fragment="modalEditEmployee-new"
+	class="modal modal-lg fade" data-bs-backdrop="static"
+	data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title"
-					th:attr="id='modalEditEmployeeLabel-' + ${e.id}">Employee</h5>
+					id="modalEditEmployeeLabel-new">Employee</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal"
 					aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
-				<form th:id="|form-${e.id}|" th:action="@{/entity/employee}"
-					method="post">
-					<input type="hidden" th:value="${e.id}" th:id="|employee-${e.id}|"
-						class="entity-id" />
+				<form id="form-employee-new" th:action="@{/entity/employee}"
+					method="post" data-entity-type="Employee" class="post-entity">
+					<input type="hidden" name="id" value="0" class="entity-id" />
 					<div class="row align-items-end">
 						<div class="col-2">First Name</div>
 						<div class="col-10">
-							<input type="text" th:value="${e.firstName}"
+							<input type="text" name="firstName"
 								class="first-name form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Last Name</div>
 						<div class="col-10">
-							<input type="text" th:value="${e.lastName}"
+							<input type="text" name="lastName"
 								class="last-name form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Email Address</div>
 						<div class="col-10">
-							<input type="text" th:value="${e.emailAddress}"
+							<input type="text" name="emailAddress"
 								class="email-address form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Job Title</div>
 						<div class="col-10">
-							<input type="text" th:value="${e.jobTitle}"
+							<input type="text" name="jobTitle"
 								class="job-title form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Business Phone</div>
 						<div class="col-10">
-							<input type="text" th:value="${e.businessPhone}"
+							<input type="text" name="businessPhone"
 								class="business-phone form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Home Phone</div>
 						<div class="col-10">
-							<input type="text" th:value="${e.homePhone}"
+							<input type="text" name="homePhone"
 								class="home-phone form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Mobile Phone</div>
 						<div class="col-10">
-							<input type="text" th:value="${e.mobilePhone}"
+							<input type="text" name="mobilePhone"
 								class="mobile-phone form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Fax Number</div>
 						<div class="col-10">
-							<input type="text" th:value="${e.faxNumber}"
+							<input type="text" name="faxNumber"
 								class="fax-number form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Address 1</div>
 						<div class="col-10">
-							<input type="text" th:value="${e.address1}"
+							<input type="text" name="address1"
 								class="address1 form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Address 2</div>
 						<div class="col-10">
-							<input type="text" th:value="${e.address2}"
+							<input type="text" name="address2"
 								class="address2 form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">City</div>
 						<div class="col-10">
-							<input type="text" th:value="${e.city}" class="city form-control" />
+							<input type="text" name="city" class="city form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">State Province</div>
 						<div class="col-10">
-							<input type="text" th:value="${e.stateProvince}"
+							<input type="text" name="stateProvince"
 								class="state-province form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Zip Postal Code</div>
 						<div class="col-10">
-							<input type="text" th:value="${e.zipPostalCode}"
+							<input type="text" name="zipPostalCode"
 								class="zip-postal-code form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Country Region</div>
 						<div class="col-10">
-							<input type="text" th:value="${e.countryRegion}"
+							<input type="text" name="countryRegion"
 								class="country-region form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Notes</div>
 						<div class="col-10">
-							<input type="text" th:value="${e.notes}"
+							<input type="text" name="notes"
 								class="notes form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Web Site Title</div>
 						<div class="col-10">
-							<input type="text" th:value="${e.webSiteTitle}"
+							<input type="text" name="webSiteTitle"
 								class="web-site-title form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Web Site Url</div>
 						<div class="col-10">
-							<input type="text" th:value="${e.webSiteUrl}"
+							<input type="text" name="webSiteUrl"
 								class="web-site-url form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Portrait Path</div>
 						<div class="col-10">
-							<input type="text" th:value="${e.portraitPath}"
+							<input type="text" name="portraitPath"
 								class="portrait-path form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Portrait Title</div>
 						<div class="col-10">
-							<input type="text" th:value="${e.portraitTitle}"
+							<input type="text" name="portraitTitle"
 								class="portrait-title form-control" />
 						</div>
 					</div>
-					<div class="row">
-						<div class="col">
-							<button type="button" class="btn btn-secondary post-Employee">Submit</button>
+					<div class="row mt-3">
+						<div class="col-6 text-end pe-2">
+							<button type="button" class="btn btn-secondary post-entity">Submit</button>
 						</div>
-						<div class="col">
+						<div class="col-6 text-start ps-2">
 							<button type="button" class="btn btn-secondary"
 								data-bs-dismiss="modal">Close</button>
 						</div>

@@ -12,149 +12,148 @@
 			</div>
 			<div class="modal-body">
 				<form id="form-supplier-new" th:action="@{/entity/supplier}"
-					method="post">
-					<input type="hidden" value="0" id="supplier-new" class="entity-id" />
+					method="post" data-entity-type="Supplier" class="post-entity">
+					<input type="hidden" name="id" value="0" class="entity-id" />
 					<div class="row align-items-end">
 						<div class="col-2">First Name</div>
 						<div class="col-10">
-							<input type="text" value="firstName"
+							<input type="text" name="firstName"
 								class="first-name form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Last Name</div>
 						<div class="col-10">
-							<input type="text" value="lastName"
+							<input type="text" name="lastName"
 								class="last-name form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Email Address</div>
 						<div class="col-10">
-							<input type="text" value="emailAddress"
+							<input type="text" name="emailAddress"
 								class="email-address form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Job Title</div>
 						<div class="col-10">
-							<input type="text" value="jobTitle"
+							<input type="text" name="jobTitle"
 								class="job-title form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Business Phone</div>
 						<div class="col-10">
-							<input type="text" value="businessPhone"
+							<input type="text" name="businessPhone"
 								class="business-phone form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Home Phone</div>
 						<div class="col-10">
-							<input type="text" value="homePhone"
+							<input type="text" name="homePhone"
 								class="home-phone form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Mobile Phone</div>
 						<div class="col-10">
-							<input type="text" value="mobilePhone"
+							<input type="text" name="mobilePhone"
 								class="mobile-phone form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Fax Number</div>
 						<div class="col-10">
-							<input type="text" value="faxNumber"
+							<input type="text" name="faxNumber"
 								class="fax-number form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Address 1</div>
 						<div class="col-10">
-							<input type="text" value="address1" class="address1 form-control" />
+							<input type="text" name="address1" class="address1 form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Address 2</div>
 						<div class="col-10">
-							<input type="text" value="address2" class="address2 form-control" />
+							<input type="text" name="address2" class="address2 form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">City</div>
 						<div class="col-10">
-							<input type="text" value="city" class="city form-control" />
+							<input type="text" name="city" class="city form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">State Province</div>
 						<div class="col-10">
-							<input type="text" value="stateProvince"
+							<input type="text" name="stateProvince"
 								class="state-province form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Zip Postal Code</div>
 						<div class="col-10">
-							<input type="text" value="zipPostalCode"
+							<input type="text" name="zipPostalCode"
 								class="zip-postal-code form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Country Region</div>
 						<div class="col-10">
-							<input type="text" value="countryRegion"
+							<input type="text" name="countryRegion"
 								class="country-region form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Notes</div>
 						<div class="col-10">
-							<input type="text" value="notes" class="notes form-control" />
+							<input type="text" name="notes" class="notes form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Web Site Title</div>
 						<div class="col-10">
-							<input type="text" value="webSiteTitle"
+							<input type="text" name="webSiteTitle"
 								class="web-site-title form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Web Site Url</div>
 						<div class="col-10">
-							<input type="text" value="webSiteUrl"
+							<input type="text" name="webSiteUrl"
 								class="web-site-url form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Portrait Path</div>
 						<div class="col-10">
-							<input type="text" value="portraitPath"
+							<input type="text" name="portraitPath"
 								class="portrait-path form-control" />
 						</div>
 					</div>
 					<div class="row align-items-end">
 						<div class="col-2">Portrait Title</div>
 						<div class="col-10">
-							<input type="text" value="portraitTitle"
+							<input type="text" name="portraitTitle"
 								class="portrait-title form-control" />
 						</div>
 					</div>
-					<div class="row justify-content-center">
-						<div class="col">
+					<div class="row mt-3">
+						<div class="col-6 text-end pe-2">
 							<button type="button" class="btn btn-secondary post-entity">Submit</button>
 						</div>
-						<div class="col">
+						<div class="col-6 text-start ps-2">
 							<button type="button" class="btn btn-secondary"
 								data-bs-dismiss="modal">Close</button>
 						</div>
 					</div>
 				</form>
 			</div>
-
 		</div>
 	</div>
 </div>

@@ -2,52 +2,69 @@
 <!-- /templates/modal/edit/inventoryTransaction.html -->
 <div th:each="i : ${InventoryTransactions}" th:if="${i.id != null}"
 	th:attr="id='modalEditInventoryTransaction-' + ${i.id}"
-	th:fragment="modalInventoryTransaction" class="modal modal-lg fade"
+	th:fragment="modalEditInventoryTransaction" class="modal modal-lg fade"
 	data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
 	aria-hidden="true">
-	<div class="modal-content">
-		<div class="modal-header">
-			<div class="modal-dialog modal-dialog-centered">
-				<div class="row align-items-end">
-					<div class="col-2">Created Date</div>
-					<div class="col-10">
-						<input type="date" readonly="readonly" th:value="${i.createdDate}"
-							class="createdDate form-control" />
-					</div>
-				</div>
-				<div class="row align-items-end">
-					<div class="col-2">Modified Date</div>
-					<div class="col-10">
-						<input type="date" readonly="readonly" th:value="${i.modifiedDate}"
-							class="modifiedDate form-control" />
-					</div>
-				</div>
-				<div class="row align-items-end">
-					<div class="col-2">Quantity</div>
-					<div class="col-10">
-						<input type="number" step="1.0" th:value="${i.quantity}"
-							class="quantity form-control" />
-					</div>
-				</div>
-				<div class="row align-items-end">
-					<div class="col-2">Comments</div>
-					<div class="col-10">
-						<input type="text" th:value="${i.comments}"
-							class="comments form-control" />
-					</div>
-				</div>
-				<div class="row align-items-end">
-					<div class="col-2">Inventory Transaction Type</div>
-					<div class="col-10">
-						<select th:value="${i.inventoryTransactionType}"
-							class="inventory-transaction-type form-control">
-						</select>
-					</div>
-				</div>
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title"
+					th:attr="id='modalEditInventoryTransactionLabel-' + ${i.id}">InventoryTransaction</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"
+					aria-label="Close"></button>
 			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary"
-					data-bs-dismiss="modal">Close</button>
+			<div class="modal-body">
+				<form th:id="|form-${i.id}|"
+					th:action="@{/entity/inventoryTransaction}" method="post"
+					data-entity-type="InventoryTransaction" class="post-entity">
+					<input type="hidden" th:value="${i.id}"
+						th:id="|inventoryTransaction-${i.id}|" class="entity-id" />
+					<div class="row align-items-end">
+						<div class="col-2">Created Date</div>
+						<div class="col-10">
+							<input type="date" readonly="readonly"
+								th:value="${i.transactionCreatedDate}" class="transactionCreatedDate form-control" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Modified Date</div>
+						<div class="col-10">
+							<input type="date" readonly="readonly"
+								th:value="${i.transactionModifiedDate}" class="transactionModifiedDate form-control" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Quantity</div>
+						<div class="col-10">
+							<input type="number" step="1.0" th:value="${i.quantity}"
+								class="quantity form-control" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Comments</div>
+						<div class="col-10">
+							<input type="text" th:value="${i.comments}"
+								class="comments form-control" />
+						</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Inventory Transaction Type</div>
+						<div class="col-10">
+							<select th:value="${i.inventoryTransactionType}"
+								class="inventory-transaction-type form-control">
+							</select>
+						</div>
+					</div>
+					<div class="row mt-3">
+						<div class="col-6 text-end pe-2">
+							<button type="button" class="btn btn-secondary post-entity">Submit</button>
+						</div>
+						<div class="col-6 text-start ps-2">
+							<button type="button" class="btn btn-secondary"
+								data-bs-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
@@ -57,8 +74,8 @@
 	window.entityDtoBuilders.inventoryTransaction = function (form) {
 	  return {   
 	    id: form.querySelector('.entity-id')?.value,
-	    firstName: form.querySelector('.createdDate')?.value,
-	    lastName: form.querySelector('.modifiedDate')?.value,
+	    firstName: form.querySelector('.transactionCreatedDate')?.value,
+	    lastName: form.querySelector('.transactionModifiedDate')?.value,
 	    emailAddress: form.querySelector('.quantity')?.value,
 	    jobTitle: form.querySelector('.comments')?.value,
 	    businessPhone: form.querySelector('.inventoryTransactionType')?.value

@@ -1,128 +1,129 @@
 <!DOCTYPE html>
 <!-- /templates/modal/edit/purchaseOrder-new.html -->
-<div 
-	id="modalEditPurchaseOrder-new"
-	th:fragment="modalEditPurchaseOrder-new" class="modal modal-lg fade"
-	data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-	aria-hidden="true">
+<div id="modalEditPurchaseOrder-new" th:fragment="modalEditPurchaseOrder-new"
+	class="modal modal-lg fade" data-bs-backdrop="static"
+	data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="editPurchaseOrder-new">
-					Purchase Order</h5>
+				<h5 class="modal-title" id="modalEditPurchaseOrderLabel-new">Purchase Order</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal"
 					aria-label="Close"></button>
-				<div class="modal-body">
-					<form th:id="form-new" th:action="@{/entity/purchaseOrder}"
-						method="post">
-						<div class="row align-items-end">
-							<div class="col-2">Approved Date</div>
-							<div class="col-10">
-								<input type="date" name="approvedDate"
-									class="approved-date form-control" />
-							</div>
+			</div>
+			<div class="modal-body">
+				<form id="form-purchaseOrder-new" th:action="@{/entity/purchaseOrder}"
+					method="post" data-entity-type="PurchaseOrder" class="post-entity">
+					<input type="hidden" name="id" value="0" class="entity-id" />
+					<div class="row align-items-end">
+						<div class="col-2">Approved Date</div>
+						<div class="col-10">
+							<input type="date" name="approvedDate"
+								class="approved-date form-control" />
 						</div>
-						<div class="row align-items-end">
-							<div class="col-2">Submitted Date</div>
-							<div class="col-10">
-								<input type="date" name="submittedDate"
-									class="submitted-date form-control" />
-							</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Submitted Date</div>
+						<div class="col-10">
+							<input type="date" name="submittedDate"
+								class="submitted-date form-control" />
 						</div>
-						<div class="row align-items-end">
-							<div class="col-2">Creation Date</div>
-							<div class="col-10">
-								<input type="date" name="creationDate"
-									class="creation-date form-control" />
-							</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Creation Date</div>
+						<div class="col-10">
+							<input type="date" name="creationDate"
+								class="creation-date form-control" />
 						</div>
-						<div class="row align-items-end">
-							<div class="col-2">Expected Date</div>
-							<div class="col-10">
-								<input type="date" name="expectedDate"
-									class="expected-date form-control" />
-							</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Expected Date</div>
+						<div class="col-10">
+							<input type="date" name="expectedDate"
+								class="expected-date form-control" />
 						</div>
-						<div class="row align-items-end">
-							<div class="col-2">Payment Date</div>
-							<div class="col-10">
-								<input type="date" name="paymentDate"
-									class="payment-date form-control" />
-							</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Payment Date</div>
+						<div class="col-10">
+							<input type="date" name="paymentDate"
+								class="payment-date form-control" />
 						</div>
-						<div class="row align-items-end">
-							<div class="col-2">Shipping Fee</div>
-							<div class="col-10">
-								<input type="number" step="0.1" name="shippingFee"
-									class="shipping-fee form-control" />
-							</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Shipping Fee</div>
+						<div class="col-10">
+							<input type="number" step="0.1" name="shippingFee"
+								class="shipping-fee form-control" />
 						</div>
-						<div class="row align-items-end">
-							<div class="col-2">Taxes</div>
-							<div class="col-10">
-								<input type="number" step="0.1" name="taxes"
-									class="taxes form-control" />
-							</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Taxes</div>
+						<div class="col-10">
+							<input type="number" step="0.1" name="taxes"
+								class="taxes form-control" />
 						</div>
-						<div class="row align-items-end">
-							<div class="col-2">Payment Amount</div>
-							<div class="col-10">
-								<input type="number" step="0.1" name="paymentAmount"
-									class="payment-amount form-control" />
-							</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Payment Amount</div>
+						<div class="col-10">
+							<input type="number" step="0.1" name="paymentAmount"
+								class="payment-amount form-control" />
 						</div>
-						<div class="row align-items-end">
-							<div class="col-2">Payment Amount</div>
-							<div class="col-10">
-								<input type="text" name="paymentMethod"
-									class="payment-method form-control" />
-							</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Payment Amount</div>
+						<div class="col-10">
+							<input type="text" name="paymentMethod"
+								class="payment-method form-control" />
 						</div>
-						<div class="row align-items-end">
-							<div class="col-2">Notes</div>
-							<div class="col-10">
-								<input type="text" name="notes"
-									class="notes form-control" />
-							</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Notes</div>
+						<div class="col-10">
+							<input type="text" name="notes" class="notes form-control" />
 						</div>
-						<div class="row align-items-end">
-							<div class="col-2">Approved By</div>
-							<div class="col-10">
-								<select name="approvedBy"
-									class="approved-by form-control">
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Approved By</div>
+						<div class="col-10">
+							<select name="approvedBy" class="approved-by form-control">
 
-								</select>
-							</div>
+							</select>
 						</div>
-						<div class="row align-items-end">
-							<div class="col-2">Created By</div>
-							<div class="col-10">
-								<select name="createdBy"
-									class="created-by form-control">
-								</select>
-							</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Created By</div>
+						<div class="col-10">
+							<select name="createdBy" class="created-by form-control">
+							</select>
 						</div>
-						<div class="row align-items-end">
-							<div class="col-2">Submitted By</div>
-							<div class="col-10">
-								<select name="submittedBy"
-									class="submitted-by form-control" /> </select>
-							</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Submitted By</div>
+						<div class="col-10">
+							<select name="submittedBy" class="submitted-by form-control" />
+							</select>
 						</div>
-						<div class="row align-items-end">
-							<div class="col-2">Order Status</div>
-							<div class="col-10">
-								<select name="orderStatus"
-									class="order-status form-control" /> </select>
-							</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Order Status</div>
+						<div class="col-10">
+							<select name="orderStatus" class="order-status form-control" />
+							</select>
 						</div>
-					</form>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary"
-						data-bs-dismiss="modal">Close</button>
-				</div>
+					</div>
+					<div class="row mt-3">
+						<div class="col-6 text-end pe-2">
+							<button type="button" class="btn btn-secondary post-entity">Submit</button>
+						</div>
+						<div class="col-6 text-start ps-2">
+							<button type="button" class="btn btn-secondary"
+								data-bs-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
+</div>
 </div>

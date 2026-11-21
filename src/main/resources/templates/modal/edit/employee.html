@@ -15,7 +15,7 @@
 			</div>
 			<div class="modal-body">
 				<form th:id="|form-${e.id}|" th:action="@{/entity/employee}"
-					method="post">
+					method="post" data-entity-type="Employee" class="post-entity">
 					<input type="hidden" th:value="${e.id}" th:id="|employee-${e.id}|"
 						class="entity-id" />
 					<div class="row align-items-end">
@@ -150,11 +150,11 @@
 								class="portrait-title form-control" />
 						</div>
 					</div>
-					<div class="row">
-						<div class="col">
-							<button type="button" class="btn btn-secondary post-Employee">Submit</button>
+					<div class="row mt-3">
+						<div class="col-6 text-end pe-2">
+							<button type="button" class="btn btn-secondary post-entity">Submit</button>
 						</div>
-						<div class="col">
+						<div class="col-6 text-start ps-2">
 							<button type="button" class="btn btn-secondary"
 								data-bs-dismiss="modal">Close</button>
 						</div>

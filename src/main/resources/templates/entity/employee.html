@@ -16,6 +16,7 @@
 </head>
 <body>
 	<div class="container-fluid">
+		<div th:replace="~{modal/edit/employee-new :: modalEditEmployee-new}"></div>
 		<div th:replace="~{modal/edit/employee :: modalEditEmployee}"></div>
 		<div class="row" id="navBarRow">
 			<div class="col-12" id="navBarCol">
@@ -27,7 +28,7 @@
 				<div class="row">
 					<div class="col-2 bg-light border border-primary pb-3"
 						id="leftSideBar">
-						<div th:replace="~{fragments/sideMenuLeftEntities :: div}"></div>
+						<div th:replace="~{fragments/sideMenuLeftEntities :: sideMenuLeftEntities}"></div>
 					</div>
 					<div class="col-8 mt-5 pt-4">
 						<h3>

@@ -3,6 +3,9 @@
 <div th:each="p : ${Products}" th:if="${p.id != null}"
 	th:attr="id='modalEditProduct-' + ${p.id}"
 	th:fragment="modalEditProduct" class="modal modal-lg fade"
+	data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title"
@@ -11,65 +14,70 @@
 					aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
-				<form th:id="|form-${p.id}|" th:action="@{/entity/Product}" method="post">
-						<div class="row align-items-end">
-							<div class="col-2">Product Code</div>
-							<div class="col-10">
-								<select th:value="${p.productCode}" class="product-code form-control">
-									<option value="">Please select a Product Code</option>
-									<option th:each="co : ${ProductCodes}" th:value="${co.code}"
-										th:text="${co.code}"></option>
-								</select>
-							</div>
+				<form th:id="|form-${p.id}|" th:action="@{/entity/product}"
+					method="post" data-entity-type="Product">
+					<input type="hidden" th:value="${p.id}" th:id="|product-${p.id}|"
+						class="entity-id" />
+					<div class="row align-items-end">
+						<div class="col-2">Product Code</div>
+						<div class="col-10">
+							<select th:value="${p.productCode}"
+								class="product-code form-control">
+								<option value="">Please select a Product Code</option>
+								<option th:each="co : ${ProductCodes}" th:value="${co.code}"
+									th:text="${co.code}"></option>
+							</select>
 						</div>
-						<div class="row align-items-end">
-							<div class="col-2">Category</div>
-							<div class="col-10">
-								<select th:value="${p.category}" class="category form-control"> 
-									<option value="">Please select a Category</option>
-									<option th:each="c : ${Categories}" th:value="${c.category}"
-										th:text="${c.category}"></option>
-								</select>
-							</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Category</div>
+						<div class="col-10">
+							<select th:value="${p.category}" class="category form-control">
+								<option value="">Please select a Category</option>
+								<option th:each="c : ${Categories}" th:value="${c.category}"
+									th:text="${c.category}"></option>
+							</select>
 						</div>
-						<div class="row align-items-end">
-							<div class="col-2">Standard Cost</div>
-							<div class="col-10">
-								<input type="number" step="0.1"
-									th:value="${p.standardCost}"
-									 class="standard-cost form-control" /> 
-							</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Standard Cost</div>
+						<div class="col-10">
+							<input type="number" step="0.1" th:value="${p.standardCost}"
+								class="standard-cost form-control" />
 						</div>
-						<div class="row align-items-end">
-							<div class="col-2">List Price</div>
-							<div class="col-10">
-								<input type="number" step="0.1"
-									th:value="${p.listPrice}" 
-									class="list-price form-control" /> 
-							</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">List Price</div>
+						<div class="col-10">
+							<input type="number" step="0.1" th:value="${p.listPrice}"
+								class="list-price form-control" />
 						</div>
-						<div class="row align-items-end">
-							<div class="col-2">Quantity Per Unit</div>
-							<div class="col-10">
-								<input type="number" step="1"
-									th:value="${p.quantityPerUnit}"
-									class="quantity-per-unit form-control" /> 
-							</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Quantity Per Unit</div>
+						<div class="col-10">
+							<input type="number" step="1" th:value="${p.quantityPerUnit}"
+								class="quantity-per-unit form-control" />
 						</div>
-						<div class="row align-items-end">
-							<div class="col-2">Minimum Reorder Quantity</div>
-							<div class="col-10">
-								<input type="number" step="1"
-									th:value="${p.minimumReorderQuantity}"
-									class="minimum-reorder-quantity form-control" /> 
-							</div>
+					</div>
+					<div class="row align-items-end">
+						<div class="col-2">Minimum Reorder Quantity</div>
+						<div class="col-10">
+							<input type="number" step="1"
+								th:value="${p.minimumReorderQuantity}"
+								class="minimum-reorder-quantity form-control" />
 						</div>
-					</form>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary"
-						data-bs-dismiss="modal">Close</button>
-				</div>
+					</div>
+					<div class="row mt-3">
+						<div class="col-6 text-end pe-2">
+							<button type="button" class="btn btn-secondary post-entity">Submit</button>
+						</div>
+						<div class="col-6 text-start ps-2">
+							<button type="button" class="btn btn-secondary"
+								data-bs-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
