@@ -80,11 +80,10 @@
 			const selectedRadio = document.querySelector('input[name="radioId"]:checked');
 			const selectedId = selectedRadio ? selectedRadio.value : null;
 
-			alert(action);
-			  if (!selectedId && ['view', 'edit', 'del'].includes(action)) {
+			if (!selectedId && ['view', 'edit', 'del'].includes(action)) {
 			    alert('Please make a selection first');
 			    return;
-			  }
+			}
 
 			  // Get entity type from the table (or body, or a data attribute on the buttons)
 			const rawType = document.querySelector('#dataTable')?.dataset.entityType || 'customer';

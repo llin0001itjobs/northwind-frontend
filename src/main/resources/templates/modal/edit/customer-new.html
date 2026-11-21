@@ -12,7 +12,7 @@
 			</div>
 			<div class="modal-body">
 				<form id="form-customer-new" th:action="@{/entity/customer}"
-					method="post" data-entity-type="customer" class="post-entity">
+					method="post" data-entity-type="Customer" class="post-entity">
 					<input type="hidden" name="id" value="0" class="entity-id" />
 					<div class="row align-items-end">
 						<div class="col-2">First Name</div>
@@ -141,15 +141,15 @@
 								class="portrait-title form-control" />
 						</div>
 					</div>
-					<div class="row justify-content-center">
-						<div class="col">
+					<div class="row mt-3">
+						<div class="col-6 text-end pe-2">
 							<button type="button" class="btn btn-secondary post-entity">Submit</button>
 						</div>
-						<div class="col">
+						<div class="col-6 text-start ps-2">
 							<button type="button" class="btn btn-secondary"
 								data-bs-dismiss="modal">Close</button>
 						</div>
-					</div>
+					</div>					
 				</form>
 			</div>
 
