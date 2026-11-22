@@ -1,86 +1,140 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <title>Northwind Traders</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<title>Northwind Traders</title>
 
-  <!-- Same stylesheets as page-login.html -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" id="roboto-subset.css-css"
-        href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/mdb5/fonts/roboto-subset.css?ver=3.9.0-update.5"
-        type="text/css" media="all">
-  <link rel="stylesheet"
-        href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/dist/mdb5/standard/core.min.css">
+<!-- Same stylesheets as page-login.html -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" id="roboto-subset.css-css"
+	href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/mdb5/fonts/roboto-subset.css?ver=3.9.0-update.5"
+	type="text/css" media="all">
+<link rel="stylesheet"
+	href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/dist/mdb5/standard/core.min.css">
 
-  <link th:href="@{/css/navbar-top-fixed.css}" rel="stylesheet">
+<link th:href="@{/css/navbar-top-fixed.css}" rel="stylesheet">
 
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-  </style>
+<style>
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+@media ( min-width : 768px) {
+	.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
+}
+</style>
 </head>
 
 <body class="d-flex flex-column align-items-center vh-100 bg-light">
 
-    <!-- Navigation Bar Fragment -->
-    <div th:replace="~{fragments/navbar :: nav}" class="w-100"></div>
+	<!-- Navigation Bar Fragment -->
+	<div th:replace="~{fragments/navbar :: nav}" class="w-100"></div>
 
-    <!-- Main Content Container styled like page-login -->
-    <main class="container overflow-auto my-auto p-4 bg-white rounded shadow-sm" style="max-width: 900px;">
-        
-        <div class="lead mb-4 fw-normal text-muted">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pellentesque sapien tortor, vitae dolor aliquet cursus. Nullam eget diam quam. Donec a ipsum dolor. Vestibulum non ultrices dui. Integer eget quam fermentum, posuere mauris in, luctus eros. Proin convallis semper augue, ut euismod metus mollis ac. Duis id odio viverra, vehicula eros pharetra, malesuada ligula. Curabitur id lectus vitae sapien semper suscipit ac ut quis at eros.
-        </div>
+	<!-- Main Content Container styled like page-login -->
+	<main
+		class="container overflow-auto my-auto p-4 bg-white rounded shadow-sm"
+		style="max-width: 900px;">
 
-        <div class="text-body mb-3">
-            Suspendisse tempus nisi et ligula aliquam lobortis. Aenean metus sapien, porttitor a fermentum in, aliquam risus. Nunc viverra est malesuada ullamcorper aliquam. Praesent imperdiet. enim tempus neque ornare congue. Duis euismod eget arcu ac Phasellus sollicitudin sit amet velit vitae varius. Integer eu efficitur nisi. Nullam vitae ultricies mauris. Morbi egestas nec turpis sit amet aliquam. Donec blandit mollis urna sed ullamcorper. Vivamus vestibulum vestibulum metus, id aliquet lacus feugiat vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis id ultricies tellus. Donec neque mi, mattis hendrerit vehicula ac, convallis pellentesque ligula.
-        </div>
+		<div class="lead mb-4 fw-normal text-muted">
+			Taste the World, Delivered Simply From aromatic chai and rich olive
+			oil to hearty soups, artisan sauces, and pantry staples, Northwind
+			Traders brings carefully selected foods to restaurants, retailers,
+			and home cooks who care about quality.
+			<ul>
+				<li>[Shop Our Products]</li>
+				<li>[Request a Catalog]</li>
+			</ul>
+		</div>
 
-        <div class="text-body mb-3">
-            Sed quis sem nisi. Nulla volutpat pulvinar libero sit amet ultrices. Vestibulum mauris lacus, commodo quis dictum eget, posuere ut arcu. Donec vitae est velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec varius lacus eget mollis faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sagittis nisi vitae sem euismod suscipit.
-        </div>
+		<div class="text-body mb-3">Northwind Traders is a trusted
+			supplier of high-quality specialty foods. We source a diverse range
+			of products—beverages, condiments, dried fruits & nuts, sauces,
+			pastas, canned goods, baked mixes, and more—so our customers can
+			stock their shelves or kitchens with reliable, flavorful options.
+			Whether you’re running a café, a grocery store, or feeding a family,
+			we make it easy to find the right products at competitive prices.</div>
 
-        <div class="text-body mb-3">
-            Mauris tortor ex, sollicitudin at dolor eget, porta dapibus odio. Phasellus convallis augue eget augue interdum, id elementum libero malesuada. Suspendisse in vulputate tortor. Nullam at condimentum lectus. Vivamus dapibus lacinia interdum. Sed ullamcorper vestibulum est, sed faucibus lorem elementum lacinia. Aenean congue pharetra sapien eget finibus. Quisque neque metus, ullamcorper vitae dolor eu, efficitur tempor arcu. Nulla cursus tortor nunc, pretium venenatis magna semper hendrerit. Nulla vel eros eu leo mollis tincidunt. Etiam interdum a erat vel laoreet. Vivamus lobortis sollicitudin nisl eget suscipit.
-        </div>
+		<div class="text-body mb-3">
+			<h3>Featured Products</h3>
+			<ul>
+				<li>Northwind Traders Chai – Aromatic and comforting, perfect
+					for cafés and tea lovers.</li>
+				<li>Northwind Traders Olive Oil – Quality oil for cooking,
+					finishing, and everyday use.`</li>
+				<li>Northwind Traders Boysenberry Spread & Marmalade – Classic
+					preserves that elevate breakfast and baking.</li>
+				<li>Northwind Traders Curry Sauce & Hot Pepper Sauce – Bold
+					flavors ready to enhance any dish.</li>
+				<li>Northwind Traders Gnocchi & Ravioli – Convenient pasta
+					options for quick, satisfying meals.</li>
+				<li>Northwind Traders Coffee & Green Tea – Everyday beverages
+					your customers will reach for again and again.</li>
+				<li>Northwind Traders Clam Chowder, Vegetable Soup & Chicken
+					Soup – Comfort in a can.</li>
+				<li>Northwind Traders Dried Pears, Apples, Walnuts & Almonds –
+					Healthy snacking and baking essentials.</li>
+			</ul>
+		</div>
 
-        <div class="text-body mb-3">
-            Vestibulum fermentum ut tellus vitae efficitur. hac Ut porta ac leo sit amet consectetur. Nunc a mi eu libero sodales tempor. Mauris posuere nisl id justo sollicitudin molestie. In Phasellus habitasse platea dictumst. Vestibulum eu imperdiet tellus. consequat a finibus leo, vel dictum metus. Vestibulum tristique quam lorem quam faucibus molestie condimentum a erat. Quisque molestie, tellus viverra elementum mollis, enim arcu cursus lorem, ac blandit sapien non orci. Quisque ut neque erat. Duis consectetur bibendum ornare. Cras auctor finibus mi vitae sodales. Phasellus lobortis tempus lacus, vitae tempus quam venenatis quis. Sed pretium varius posuere. Praesent fringilla laoreet mi id tincidunt. Fusce orci tellus, pharetra interdum lorem quis, ullamcorper hendrerit turpis.
-        </div>
+		<div class="text-body mb-3">
+			<h3>Shop by Category</h3>
+			<ul>
+				<li>Beverages – Chai, Coffee, Beer, Green Tea, Tea</li>
+				<li>Condiments & Sauces – Syrup, Cajun Seasoning, Mustard,
+					Curry Sauce, Hot Pepper Sauce, Tomato Sauce</li>
+				<li>Jams & Preserves – Boysenberry Spread, Marmalade</li>
+				<li>Dried Fruit & Nuts – Dried Pears, Walnuts, Dried Apples,
+					Almonds, Dried Plums</li>
+				<li>Canned Fruit & Vegetables – Fruit Cocktail, Pears, Peaches,
+					Pineapple, Cherry Pie Filling, Green Beans, Corn, Peas</li>
+				<li>Baked Goods & Mixes – Chocolate Biscuits Mix, Scones,
+					Brownie Mix, Cake Mix</li>
+				<li>Pasta & Grains – Gnocchi, Ravioli, Long Grain Rice</li>
+				<li>Soups & Canned Meats – Clam Chowder, Vegetable Soup,
+					Chicken Soup, Crab Meat, Tuna Fish, Smoked Salmon</li>
+				<li>Other Favorites – Olive Oil, Chocolate, Mozzarella,
+					Granola, Hot Cereal, Potato Chips.</li>
+			</ul>
+			<div class="text-body mb-3">
+				<h3>Why Northwind Traders?</h3>
+				<ul>
+					<li>Wide selection of everyday and specialty items under one
+						roof</li>
+					<li>Consistent quality and reliable supply</li>
+					<li>Products suited for both retail and foodservice</li>
+					<li>Straightforward ordering and support for small-to-medium
+						businesses</li>
+				</ul>
+			</div>
 
-        <div class="text-body mb-3">
-            Suspendisse maximus luctus enim in blandit. In elementum, enim sit amet gravida vulputate, sapien lectus ornare quam, sed commodo mi nisi vitae nulla. Nullam sapien augue, vulputate varius consequat sit amet, egestas in arcu. Curabitur enim ipsum, egestas ut ultricies a, viverra vitae dolor. Curabitur rutrum elit eget sollicitudin dictum. Duis porta congue dolor et volutpat. Etiam accumsan volutpat nisi. Etiam blandit, leo sit amet rutrum lacinia, massa eros convallis orci, vel sodales augue felis ac nisl. Praesent feugiat vulputate lobortis. Morbi luctus finibus aliquet. Nullam quis non nibh eget eros ultricies lobortis sed id tellus. Nulla ut odio imperdiet. leo aliquam dignissim. Etiam mattis mi ac turpis ultrices Pellentesque ut velit nec mi volutpat sodales. Donec bibendum vehicula nisl vitae ultrices.
-        </div>
+			<div class="text-body mb-3">
+				<h3>Call to Action</h3>
+				<div>Ready to stock better products? Browse our full range,
+					request a wholesale quote, or talk to our team about custom orders.</div>
+				<ul>
+					<li>[View All Products]</li>
+					<li>[Contact Us]</li>
+					<li>[Become a Customer]</li>
+				</ul>
 
-        <div class="text-body mb-3">
-            Mauris eu orci non ligula varius rhoncus. Aenean egestas pharetra elit eget mattis. Mauris eu sem quis nisi consectetur iaculis porttitor eget tortor. Nam et arcu dictum, mattis et. sapien vel, feugiat tellus. Cras sit amet rutrum metus. Donec tristique magna id mi ornare mattis. Phasellus imperdiet lacus a mauris gravida ultricies. Pellentesque dapibus tempor dolor vel congue. Aenean fringilla consectetur justo, a tempus mi lobortis Proin Proin congue finibus arcu, vel pretium ante suscipit ultricies. a eros nulla. In dapibus placerat tortor eu mollis. Fusce pellentesque, orci ac euismod hendrerit, elit velit iaculis diam, eget venenatis quam tellus a leo. Donec massa tellus, posuere ac lorem eget, pellentesque aliquet lorem. Nulla facilisi.
-        </div>
+			</div>
+	</main>
 
-        <div class="text-body mb-3">
-            Vivamus commodo eget quam ac dapibus. In elementum tincidunt ornare pretium. Aenean eu fringilla diam, eget lacus. Nulla velit arcu, scelerisque consequat sollicitudin nec, suscipit a nisi. Maecenas in ante at velit sodales sodales. Duis id ex non rhoncus quam. Pellentesque pulvinar, urna sed interdum euismod, massa aliquam massa, vel luctus libero nisi euismod dolor. Nullam volutpat ex, vel tristique mi. Vestibulum id augue iaculis, auctor dui nec, pharetra nisl. Nam porta lectus dictum efficitur volutpat. Mauris eget congue tellus. Sed efficitur eros sit amet fermentum eleifend. Phasellus luctus congue quam, a vehicula ante. Aliquam vulputate dolor massa, et egestas leo facilisis ac.
-        </div>
+	<!-- Footer Fragment aligned to bottom -->
+	<div class="container footer-container mt-auto pb-3">
+		<div th:replace="~{fragments/footer :: footer}"></div>
+	</div>
 
-    </main>
-
-    <!-- Footer Fragment aligned to bottom -->
-    <div class="container footer-container mt-auto pb-3">
-        <div th:replace="~{fragments/footer :: footer}"></div>
-    </div>
-
-    <!-- Script Fragment -->
-    <div th:replace="~{fragments/script :: div}"></div>
+	<!-- Script Fragment -->
+	<div th:replace="~{fragments/script :: div}"></div>
 
 </body>
